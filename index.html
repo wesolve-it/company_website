@@ -9,7 +9,7 @@
   <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
   <script src="./js/navigation.js" defer></script>
 </head>
-<body class="bg-gray-100 text-gray-800">
+<body class="bg-wesolve-gray text-gray-800">
 
   <div>
     <!-- Hero Section -->
@@ -41,38 +41,38 @@
 
  <!-- Customers Section -->
 <div class="bg-green-900 py-6 overflow-hidden">
-  <div class="container mx-auto flex items-center justify-center gap-8">
-    <div class="flex w-full animate-scroll-mobile">
-      <div class="w-20 md:w-28 flex-shrink-0 mx-4">
-        <img src="./assets/img/FCN_Logo.png" alt="1. FCN Logo" class="w-full h-auto" />
+  <div class="container mx-auto flex items-center justify-center">
+    <div class="flex w-full animate-scroll-mobile gap-10 justify-between">
+      <div class="md:w-28 flex-shrink-0 my-auto">
+        <img src="./assets/img/FCN_Logo.png" alt="1. FCN Logo" class="h-20" />
       </div>
-      <div class="w-20 md:w-28 flex-shrink-0 mx-4">
-        <img src="./assets/img/Alfafood_Logo.png" alt="1. FCN Logo" class="w-full h-auto" />
+      <div class="md:w-28 flex-shrink-0 my-auto">
+        <img src="./assets/img/Alfafood_Logo.png" alt="1. FCN Logo" class="h-20" />
       </div>
-      <div class="w-20 md:w-28 flex-shrink-0 mx-4">
-        <img src="./assets/img/1597497751.png" alt="LU-BU Logo" class="w-full h-auto" />
+      <div class="md:w-28 flex-shrink-0 my-auto">
+        <img src="./assets/img/1597497751.png" alt="LU-BU Logo" class="h-12" />
       </div>
-      <div class="w-20 md:w-28 flex-shrink-0 mx-4">
-        <img src="./assets/img/377-5023880.png" alt="Tobias Hermann Logo" class="w-full h-auto" />
+      <div class="md:w-28 flex-shrink-0 my-auto">
+        <img src="./assets/img/377-5023880.png" alt="Tobias Hermann Logo" class="h-12" />
       </div>
-      <div class="w-20 md:w-28 flex-shrink-0 mx-4">
-        <img src="./assets/img/SportWeberLogoNeuklein.3caf40cb13b6ecc9538a.png" alt="Sport Weber Logo" class="w-full h-auto" />
+      <div class="md:w-28 flex-shrink-0">
+        <img src="./assets/img/SportWeberLogoNeuklein.3caf40cb13b6ecc9538a.png" alt="Sport Weber Logo" class="h-12" />
       </div>
       <!-- Duplicate the logos to create a seamless loop -->
-      <div class="w-20 md:w-28 flex-shrink-0 mx-4">
-        <img src="./assets/img/FCN_Logo.png" alt="1. FCN Logo" class="w-full h-auto" />
+      <div class="md:w-28 flex-shrink-0 my-auto lg:hidden">
+        <img src="./assets/img/FCN_Logo.png" alt="1. FCN Logo" class="h-20" />
       </div>
-      <div class="w-20 md:w-28 flex-shrink-0 mx-4">
-        <img src="./assets/img/Alfafood_Logo.png" alt="1. FCN Logo" class="w-full h-auto" />
+      <div class="md:w-28 flex-shrink-0 my-auto lg:hidden">
+        <img src="./assets/img/Alfafood_Logo.png" alt="1. FCN Logo" class="h-20" />
       </div>
-      <div class="w-20 md:w-28 flex-shrink-0 mx-4">
-        <img src="./assets/img/1597497751.png" alt="LU-BU Logo" class="w-full h-auto" />
+      <div class="md:w-28 flex-shrink-0 my-auto lg:hidden">
+        <img src="./assets/img/1597497751.png" alt="LU-BU Logo" class="h-12" />
       </div>
-      <div class="w-20 md:w-28 flex-shrink-0 mx-4">
-        <img src="./assets/img/377-5023880.png" alt="Tobias Hermann Logo" class="w-full h-auto" />
+      <div class="md:w-28 flex-shrink-0 my-auto lg:hidden">
+        <img src="./assets/img/377-5023880.png" alt="Tobias Hermann Logo" class="h-12" />
       </div>
-      <div class="w-20 md:w-28 flex-shrink-0 mx-4">
-        <img src="./assets/img/SportWeberLogoNeuklein.3caf40cb13b6ecc9538a.png" alt="Sport Weber Logo" class="w-full h-auto" />
+      <div class="flex-shrink-0 my-auto lg:hidden">
+        <img src="./assets/img/SportWeberLogoNeuklein.3caf40cb13b6ecc9538a.png" alt="Sport Weber Logo" class="h-20" />
       </div>
     </div>
   </div>
@@ -84,7 +84,7 @@
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-205%);
   }
 }
 
@@ -94,7 +94,7 @@
 
 @media (max-width: 768px) {
   .animate-scroll-mobile {
-    animation: scroll 10s linear infinite;
+    animation: scroll 5s linear infinite;
   }
 }
 </style>
@@ -182,22 +182,25 @@
 
 <!-- Reviews Section -->
 
-  <div>
-    <h3>Wir schätzen die Zusammenarbeit mit Dir sehr...</h3>
-    <p>Deine Zufriedenheit liegt uns am Herzen. Das ist der Grund, wieso wir jeden Tag unser bestes geben und das lieben, was wir tun!</p>
+  <div class="bg-bg-gray mx-4 rounded-md px-4 pt-12 mt-8 mb-16">
+    <h3 class="text-2xl text-white font-semibold text-center mb-4">Wir schätzen die Zusammenarbeit mit Dir sehr...</h3>
+    <p class="text-white">Deine Zufriedenheit liegt uns am Herzen. Das ist der Grund, wieso wir jeden Tag unser bestes geben und das lieben, was wir tun!</p>
 
-    <div class="flex flex-col px-6">
-      <section>
-        <p>Wir vom 1. FC Nürnberg sind sehr zufrieden über die Zusammenarbeit mit wesolve-IT. Durch die Zusammenarbeit sparen wir uns viel Zeit und die Arbeit wird deutlich einfacher. Auch die Zusammenarbeit mit Michael Reinert ist sehr gut. Er ist sehr zuverlässig und hilft sofort, falls es doch einmal Probleme geben sollte.</p>
-        <p>Henrik Brüggen, Vermarktung/Marketing 1.FC Nürnberg</p>
+    <div class="flex flex-col gap-8">
+      <section class="bg-section-gray mt-16 rounded-lg">
+        <img src="./assets/img/FCN_Logo.png" class="h-20 mx-auto mt-6 mb-6" />
+        <p class="text-white px-6 text-sm mb-4">Wir vom 1. FC Nürnberg sind sehr zufrieden über die Zusammenarbeit mit wesolve-IT. Durch die Zusammenarbeit sparen wir uns viel Zeit und die Arbeit wird deutlich einfacher. Auch die Zusammenarbeit mit Michael Reinert ist sehr gut. Er ist sehr zuverlässig und hilft sofort, falls es doch einmal Probleme geben sollte.</p>
+        <p class="text-white px-6 text-sm font-semibold text-center pb-6">Henrik Brüggen, Vermarktung/Marketing 1.FC Nürnberg</p>
       </section>
-      <section>
-        <p>Die Erstellung meiner Webseite war ein absoluter Erfolg! Das Team lieferte nicht nur ein ansprechendes Design, sondern ermöglichte mir auch mühelose Selbstpflege. Perfekte Lösung für mein Business!</p>
-        <p>Roni Burcak, Geschäftsführer Alfafood GmbH</p>
+      <section class="bg-section-gray rounded-lg">
+        <img src="./assets/img/Alfafood_Logo.png" class="h-20 mx-auto mt-6 mb-6" />
+        <p class="text-white px-6 text-sm mb-4">Die Erstellung meiner Webseite war ein absoluter Erfolg! Das Team lieferte nicht nur ein ansprechendes Design, sondern ermöglichte mir auch mühelose Selbstpflege. Perfekte Lösung für mein Business!</p>
+        <p class="text-white px-6 text-sm font-semibold text-center pb-6">Roni Burcak, Geschäftsführer Alfafood GmbH</p>
       </section>
-      <section>
-        <p>Wir haben unseren Rent-Shop zusammen mit wesolve-IT entworfen und sind sehr zufrieden, was Planung und Umsetzung betrifft. Herr Reinert hat bei uns vor Ort unsere Wünsche und Vorstellungen aufgenommen und mit uns durchgesprochen. Er hat uns teilweise auch funktionellere Lösungen gezeigt um uns Schritte zu ersparen. Sport Weber sagt danke und freut sich auf die weitere Zusammenarbeit mit wesolve-IT.</p>
-        <p>Max Schorn, Geschäftsführer Sport-Weber Schnaittach</p>
+      <section class="bg-section-gray rounded-lg mb-16">
+        <img src="./assets/img/maxrundohne-rand.png" class="h-20 mx-auto mt-6 mb-6"/>
+        <p class="text-white px-6 text-sm mb-4">Wir haben unseren Rent-Shop zusammen mit wesolve-IT entworfen und sind sehr zufrieden, was Planung und Umsetzung betrifft. Herr Reinert hat bei uns vor Ort unsere Wünsche und Vorstellungen aufgenommen und mit uns durchgesprochen. Er hat uns teilweise auch funktionellere Lösungen gezeigt um uns Schritte zu ersparen. Sport Weber sagt danke und freut sich auf die weitere Zusammenarbeit mit wesolve-IT.</p>
+        <p class="text-white px-6 text-sm font-semibold text-center pb-6">Max Schorn, Geschäftsführer Sport-Weber Schnaittach</p>
       </section>
     </div>
   </div>
@@ -206,13 +209,15 @@
 
 <!-- Contact Section -->
 
-  <div>
-    <h2>Du willst dein Projekt gemeinsam mit uns umsetzen?</h2>
-    <button>Konaktiere uns!</button>
+  <div class="bg-wesolve-green text-center py-16 px-6">
+    <h2 class="text-3xl text-wesolve-gray font-semibold">Du willst dein Projekt gemeinsam mit uns umsetzen?</h2>
+    <button class="mt-10 bg-wesolve-gray text-wesolve-green py-4 px-8 font-semibold rounded-md">Kontaktiere uns!</button>
   </div>
 
 <!-- End Contact Section -->
 
 </div>
+
+<div id="footer-placeholder"></div>
 </body>
 </html>
