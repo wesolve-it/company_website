@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>wesolve-IT</title>
+  <link href="./dist/styles.css" rel="stylesheet">
+  <script defer src="./js/app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+  <script src="./js/navigation.js" defer></script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+  <div>
+    <!-- Hero Section -->
+  <section class="pt-12 flex flex-col lg:flex-row items-center justify-between max-w-screen-xl mx-auto p-6 bg-wesolve-gray lg:px-16">
+    <!-- Text Section -->
+    <div class="text-left lg:text-left max-w-lg">
+      <p class="text-xs uppercase text-wesolve-green font-semibold">
+        Erfülle deinen Traum eines digitalen Produkts
+      </p>
+      <h1 class="text-3xl lg:text-5xl font-bold text-wesolve-green mt-4">
+        Entwickle dein digitales Produkt, <br>
+        ohne deine Arbeit zu vernachlässigen!
+      </h1>
+      <p class="text-sm text-wesolve-green mt-4">
+        Wir erschaffen zusammen mit Dir deine digitale Erfahrung!
+      </p>
+      <button class="mt-6 px-6 py-3 bg-wesolve-green text-white rounded-md hover:bg-green-800">
+        Kontakt aufnehmen
+      </button>
+    </div>
+
+    <!-- Image Section -->
+    <div class="mt-12 lg:mt-0 lg:ml-10">
+      <img src="./assets/img/V2.svg" alt="Illustration" class="w-full max-w-md lg:max-w-xl">
+    </div>
+  </section>
+
+  <!-- End Hero Section -->
+
+ <!-- Customers Section -->
+<div class="bg-green-900 py-6 overflow-hidden">
+  <div class="container mx-auto flex items-center justify-center gap-8">
+    <div class="flex w-full animate-scroll-mobile">
+      <div class="w-20 md:w-28 flex-shrink-0 mx-4">
+        <img src="./assets/img/FCN_Logo.png" alt="1. FCN Logo" class="w-full h-auto" />
+      </div>
+      <div class="w-20 md:w-28 flex-shrink-0 mx-4">
+        <img src="./assets/img/Alfafood_Logo.png" alt="1. FCN Logo" class="w-full h-auto" />
+      </div>
+      <div class="w-20 md:w-28 flex-shrink-0 mx-4">
+        <img src="./assets/img/1597497751.png" alt="LU-BU Logo" class="w-full h-auto" />
+      </div>
+      <div class="w-20 md:w-28 flex-shrink-0 mx-4">
+        <img src="./assets/img/377-5023880.png" alt="Tobias Hermann Logo" class="w-full h-auto" />
+      </div>
+      <div class="w-20 md:w-28 flex-shrink-0 mx-4">
+        <img src="./assets/img/SportWeberLogoNeuklein.3caf40cb13b6ecc9538a.png" alt="Sport Weber Logo" class="w-full h-auto" />
+      </div>
+      <!-- Duplicate the logos to create a seamless loop -->
+      <div class="w-20 md:w-28 flex-shrink-0 mx-4">
+        <img src="./assets/img/FCN_Logo.png" alt="1. FCN Logo" class="w-full h-auto" />
+      </div>
+      <div class="w-20 md:w-28 flex-shrink-0 mx-4">
+        <img src="./assets/img/Alfafood_Logo.png" alt="1. FCN Logo" class="w-full h-auto" />
+      </div>
+      <div class="w-20 md:w-28 flex-shrink-0 mx-4">
+        <img src="./assets/img/1597497751.png" alt="LU-BU Logo" class="w-full h-auto" />
+      </div>
+      <div class="w-20 md:w-28 flex-shrink-0 mx-4">
+        <img src="./assets/img/377-5023880.png" alt="Tobias Hermann Logo" class="w-full h-auto" />
+      </div>
+      <div class="w-20 md:w-28 flex-shrink-0 mx-4">
+        <img src="./assets/img/SportWeberLogoNeuklein.3caf40cb13b6ecc9538a.png" alt="Sport Weber Logo" class="w-full h-auto" />
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-scroll-mobile {
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .animate-scroll-mobile {
+    animation: scroll 10s linear infinite;
+  }
+}
+</style>
+
+
+  <!-- Features Section -->
+
+  <section class="bg-bg-gray pt-16 px-4 pb-24">
+    <div class="max-w-screen-xl mx-auto">
+      <h2 class="text-wesolve-gray text-3xl text-left">Unser Angebot, damit du dir keine Gedanken machen musst!</h2>
+      <h3 class="text-left text-gray-100 pt-4 pb-12">Wir bieten ein breites Leistungsspektrum, damit du dich voll und ganz auf dein Tagesgeschäft konzentrieren kannst. Die Aufgaben für dein digitales Produkt nehmen wir dir voll und ganz ab.</h3>
+    </div>
+    <div class="flex flex-col md:flex-row gap-8">
+      <div>
+        <section class="bg-section-gray p-6 text-center rounded-md">
+          <img src="./assets/img/Portfolio-website.svg" />
+          <h4 class="text-wesolve-gray text-xl font-semibold mt-12">Digitaler Auftritt</h4>
+          <p class="text-white my-4 text-left">Wir erstellen Dir deinen optimalen Webauftritt für bestmögliche Sichtbarkeit und Wahrnehmung</p>
+        </section>
+        <div class="mt-4 text-center">
+          <button class="bg-wesolve-green py-4 text-white rounded-md px-8 mt-4">Mehr erfahren</button>
+        </div>
+      </div>
+      <div>
+        <section class="bg-section-gray p-6 text-center rounded-md">
+          <img src="./assets/img/Application-development.svg" />
+          <h4 class="text-wesolve-gray text-xl font-semibold mt-12">Wir bringen dich auf die Mobilgeräte der Menschen!</h4>
+          <p class="text-white text-left my-4">Wir entwickeln Apps, die wie dein persönlicher Coach sind, um dich auf dem digitalen Spielfeld zum Sieg zu führen!</p>
+        </section>
+        <div class="mt-4 text-center">
+          <button class="bg-wesolve-green text-white rounded-md px-8 py-4 mt-4">Mehr erfahren</button>
+        </div>
+      </div>
+      <div>
+        <section class="bg-section-gray p-6 text-center rounded-md">
+          <img src="./assets/img/Mobile-search.svg" />
+          <h4 class="text-wesolve-gray text-xl font-semibold mt-12">Google auf die 1?</h4>
+          <p class="text-white text-left my-4">Lass uns deine Webseite optimieren, damit du bei Google ganz oben rangierst und stets einen Schritt voraus bist, wenn es darum geht, deine Konkurrenz zu übertreffen.</p>
+        </section>
+        <div class="mt-4 text-center">
+          <button class="bg-wesolve-green text-white rounded-md px-8 py-4 mt-4">Mehr erfahren</button>
+        </div>
+      </div>
+      <div>
+        <section class="bg-section-gray p-6 text-center rounded-md">
+          <img src="./assets/img/Software-Developer.svg" />
+          <h4 class="text-wesolve-gray text-xl font-semibold mt-12">Individualsoftware</h4>
+          <p class="text-white text-left my-4">Du hast eine Idee, für eine ganz besondere Software? Wir werden sie gemeinsam mit dir Umsetzen.</p>
+        </section>
+        <div class="mt-4 text-center">
+          <button class="bg-wesolve-green text-white rounded-md px-8 py-4 mt-4">Mehr erfahren</button>
+        </div>
+      </div>
+    </div>
+</section>
+
+<!-- Testimonials section -->
+  <div class="bg-wesolve-gray px-4 pt-12 pb-20">
+    <h3 class="text-wesolve-green font-bold text-2xl">Die Zukunft ist jetzt: Erfahre, wie unsere Kunden sie gestalten!</h3>
+    <h4 class="text-wesolve-green pt-2 pb-8">Wir können dir viel erzählen, doch überzeuge dich doch einfach selbst von uns.</h4>
+
+    <div class="flex flex-wrap gap-8">
+      <section class="bg-gray-200 rounded-md">
+        <img src="./assets/img/standing-ipad-mockup-1.png" class="rounded-t-md" />
+        <section class="px-6 my-8">
+          <p class="text-wesolve-green font-semibold text-xl mb-2">1. FC Nürnberg</p>
+          <p>Business Seating App für einen reibungslosen Ablauf am Spieltag im VIP-Bereich.</p>
+          <button class="bg-wesolve-green rounded-md px-8 py-4 text-white mt-8">Erfahre mehr!</button>
+        </section>
+      </section>
+      <section class="bg-gray-200 rounded-md">
+        <img src="./assets/img/exampleImage.png" class="rounded-t-md" />
+        <section class="px-6 my-8">
+          <p class="text-wesolve-green font-semibold text-xl mb-2">Alfafood GmbH</p>
+          <p>Digitaler Webauftritt mit der Möglichkeit, den Inhalt selbst ohne Hilfe dritter zu pflegen.</p>
+          <button class="bg-wesolve-green rounded-md px-8 py-4 text-white mt-8">Mehr erfahren!</button>
+        </section>
+      </section>
+    </div>
+    <section class="text-center">
+      <button class="bg-wesolve-green text-white py-4 px-8 mt-8 rounded-md">Weitere Referenzen</button>
+    </section>
+  </div>
+<!-- End Testimonials section -->
+
+<!-- Reviews Section -->
+
+  <div>
+    <h3>Wir schätzen die Zusammenarbeit mit Dir sehr...</h3>
+    <p>Deine Zufriedenheit liegt uns am Herzen. Das ist der Grund, wieso wir jeden Tag unser bestes geben und das lieben, was wir tun!</p>
+
+    <div class="flex flex-col px-6">
+      <section>
+        <p>Wir vom 1. FC Nürnberg sind sehr zufrieden über die Zusammenarbeit mit wesolve-IT. Durch die Zusammenarbeit sparen wir uns viel Zeit und die Arbeit wird deutlich einfacher. Auch die Zusammenarbeit mit Michael Reinert ist sehr gut. Er ist sehr zuverlässig und hilft sofort, falls es doch einmal Probleme geben sollte.</p>
+        <p>Henrik Brüggen, Vermarktung/Marketing 1.FC Nürnberg</p>
+      </section>
+      <section>
+        <p>Die Erstellung meiner Webseite war ein absoluter Erfolg! Das Team lieferte nicht nur ein ansprechendes Design, sondern ermöglichte mir auch mühelose Selbstpflege. Perfekte Lösung für mein Business!</p>
+        <p>Roni Burcak, Geschäftsführer Alfafood GmbH</p>
+      </section>
+      <section>
+        <p>Wir haben unseren Rent-Shop zusammen mit wesolve-IT entworfen und sind sehr zufrieden, was Planung und Umsetzung betrifft. Herr Reinert hat bei uns vor Ort unsere Wünsche und Vorstellungen aufgenommen und mit uns durchgesprochen. Er hat uns teilweise auch funktionellere Lösungen gezeigt um uns Schritte zu ersparen. Sport Weber sagt danke und freut sich auf die weitere Zusammenarbeit mit wesolve-IT.</p>
+        <p>Max Schorn, Geschäftsführer Sport-Weber Schnaittach</p>
+      </section>
+    </div>
+  </div>
+
+<!-- Ende Reviews Section -->
+
+<!-- Contact Section -->
+
+  <div>
+    <h2>Du willst dein Projekt gemeinsam mit uns umsetzen?</h2>
+    <button>Konaktiere uns!</button>
+  </div>
+
+<!-- End Contact Section -->
+
+</div>
+</body>
+</html>
