@@ -12,7 +12,8 @@ module.exports = {
         'wesolve-green': '#314f3e',
         'wesolve-gray': '#bbbbc1',
         'bg-gray': '#161616',
-        'section-gray': '#282828'
+        'section-gray': '#282828',
+        'nav-gray': '#b9b8be'
       }
     },
   },
