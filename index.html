@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>wesolve-IT</title>
   <link href="./dist/styles.css" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="./assets/img/Wesolveit_loigo.svg" />
   <script defer src="./js/app.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
   <script src="./js/navigation.js" defer></script>
@@ -13,9 +14,9 @@
 
   <div>
     <!-- Hero Section -->
-  <section class="pt-12 flex flex-col lg:flex-row items-center justify-between max-w-screen-xl mx-auto p-6 bg-wesolve-gray lg:px-16">
+  <section class="pt-12 flex flex-col lg:flex-row items-center justify-between max-w-screen-xl mx-auto p-6 xl:px-0 bg-wesolve-gray">
     <!-- Text Section -->
-    <div class="text-left lg:text-left max-w-lg">
+    <div class="text-left lg:text-left">
       <p class="text-xs uppercase text-wesolve-green font-semibold">
         Erfülle deinen Traum eines digitalen Produkts
       </p>
@@ -33,16 +34,16 @@
 
     <!-- Image Section -->
     <div class="mt-12 lg:mt-0 lg:ml-10">
-      <img src="./assets/img/V2.svg" alt="Illustration" class="w-full max-w-md lg:max-w-xl">
+      <img src="./assets/img/V2.svg" alt="Illustration" class="w-full max-w-md md:h-96 lg:max-w-screen-xl">
     </div>
   </section>
 
   <!-- End Hero Section -->
 
  <!-- Customers Section -->
-<div class="bg-green-900 py-6 overflow-hidden">
-  <div class="container mx-auto flex items-center justify-center">
-    <div class="flex w-full animate-scroll-mobile gap-10 justify-between">
+<div class="bg-green-900 py-6 overflow-hidden lg:px-6 xl:px-0">
+  <div class="container mx-auto flex items-center justify-center max-w-screen-xl ">
+    <div class="flex w-full animate-scroll-mobile gap-10 justify-between max-w-screen-xl">
       <div class="md:w-28 flex-shrink-0 my-auto">
         <img src="./assets/img/FCN_Logo.png" alt="1. FCN Logo" class="h-20" />
       </div>
@@ -50,28 +51,28 @@
         <img src="./assets/img/Alfafood_Logo.png" alt="1. FCN Logo" class="h-20" />
       </div>
       <div class="md:w-28 flex-shrink-0 my-auto">
-        <img src="./assets/img/1597497751.png" alt="LU-BU Logo" class="h-12" />
+        <img src="./assets/img/1597497751.png" alt="LU-BU Logo" class="h-12 md:h-8" />
       </div>
       <div class="md:w-28 flex-shrink-0 my-auto">
-        <img src="./assets/img/377-5023880.png" alt="Tobias Hermann Logo" class="h-12" />
+        <img src="./assets/img/377-5023880.png" alt="Tobias Hermann Logo" class="h-12 md:h-8" />
       </div>
       <div class="md:w-28 flex-shrink-0">
         <img src="./assets/img/SportWeberLogoNeuklein.3caf40cb13b6ecc9538a.png" alt="Sport Weber Logo" class="h-12" />
       </div>
       <!-- Duplicate the logos to create a seamless loop -->
-      <div class="md:w-28 flex-shrink-0 my-auto lg:hidden">
+      <div class="md:w-28 flex-shrink-0 my-auto md:hidden">
         <img src="./assets/img/FCN_Logo.png" alt="1. FCN Logo" class="h-20" />
       </div>
-      <div class="md:w-28 flex-shrink-0 my-auto lg:hidden">
+      <div class="md:w-28 flex-shrink-0 my-auto md:hidden">
         <img src="./assets/img/Alfafood_Logo.png" alt="1. FCN Logo" class="h-20" />
       </div>
-      <div class="md:w-28 flex-shrink-0 my-auto lg:hidden">
+      <div class="md:w-28 flex-shrink-0 my-auto md:hidden">
         <img src="./assets/img/1597497751.png" alt="LU-BU Logo" class="h-12" />
       </div>
-      <div class="md:w-28 flex-shrink-0 my-auto lg:hidden">
+      <div class="md:w-28 flex-shrink-0 my-auto md:hidden">
         <img src="./assets/img/377-5023880.png" alt="Tobias Hermann Logo" class="h-12" />
       </div>
-      <div class="flex-shrink-0 my-auto lg:hidden">
+      <div class="flex-shrink-0 my-auto md:hidden">
         <img src="./assets/img/SportWeberLogoNeuklein.3caf40cb13b6ecc9538a.png" alt="Sport Weber Logo" class="h-20" />
       </div>
     </div>
@@ -104,12 +105,12 @@
 
   <section class="bg-bg-gray pt-16 px-4 pb-24">
     <div class="max-w-screen-xl mx-auto">
-      <h2 class="text-wesolve-gray text-3xl text-left">Unser Angebot, damit du dir keine Gedanken machen musst!</h2>
+      <h2 class="text-wesolve-gray text-3xl md:text-4xl text-left">Unser Angebot, damit du dir keine Gedanken machen musst!</h2>
       <h3 class="text-left text-gray-100 pt-4 pb-12">Wir bieten ein breites Leistungsspektrum, damit du dich voll und ganz auf dein Tagesgeschäft konzentrieren kannst. Die Aufgaben für dein digitales Produkt nehmen wir dir voll und ganz ab.</h3>
     </div>
-    <div class="flex flex-col md:flex-row gap-8">
-      <div>
-        <section class="bg-section-gray p-6 text-center rounded-md">
+    <div class="grid gap-8 md:grid-cols-2 xl:grid-cols-4 max-w-screen-xl mx-auto">
+      <div class="flex flex-col h-full">
+        <section class="bg-section-gray p-6 text-center rounded-md flex-grow">
           <img src="./assets/img/Portfolio-website.svg" />
           <h4 class="text-wesolve-gray text-xl font-semibold mt-12">Digitaler Auftritt</h4>
           <p class="text-white my-4 text-left">Wir erstellen Dir deinen optimalen Webauftritt für bestmögliche Sichtbarkeit und Wahrnehmung</p>
@@ -118,8 +119,8 @@
           <button class="bg-wesolve-green py-4 text-white rounded-md px-8 mt-4">Mehr erfahren</button>
         </div>
       </div>
-      <div>
-        <section class="bg-section-gray p-6 text-center rounded-md">
+      <div class="flex flex-col h-full">
+        <section class="bg-section-gray p-6 text-center rounded-md flex-grow">
           <img src="./assets/img/Application-development.svg" />
           <h4 class="text-wesolve-gray text-xl font-semibold mt-12">Wir bringen dich auf die Mobilgeräte der Menschen!</h4>
           <p class="text-white text-left my-4">Wir entwickeln Apps, die wie dein persönlicher Coach sind, um dich auf dem digitalen Spielfeld zum Sieg zu führen!</p>
@@ -128,8 +129,8 @@
           <button class="bg-wesolve-green text-white rounded-md px-8 py-4 mt-4">Mehr erfahren</button>
         </div>
       </div>
-      <div>
-        <section class="bg-section-gray p-6 text-center rounded-md">
+      <div class="flex flex-col h-full">
+        <section class="bg-section-gray p-6 text-center rounded-md flex-grow">
           <img src="./assets/img/Mobile-search.svg" />
           <h4 class="text-wesolve-gray text-xl font-semibold mt-12">Google auf die 1?</h4>
           <p class="text-white text-left my-4">Lass uns deine Webseite optimieren, damit du bei Google ganz oben rangierst und stets einen Schritt voraus bist, wenn es darum geht, deine Konkurrenz zu übertreffen.</p>
@@ -138,8 +139,8 @@
           <button class="bg-wesolve-green text-white rounded-md px-8 py-4 mt-4">Mehr erfahren</button>
         </div>
       </div>
-      <div>
-        <section class="bg-section-gray p-6 text-center rounded-md">
+      <div class="flex flex-col h-full">
+        <section class="bg-section-gray p-6 text-center rounded-md flex-grow">
           <img src="./assets/img/Software-Developer.svg" />
           <h4 class="text-wesolve-gray text-xl font-semibold mt-12">Individualsoftware</h4>
           <p class="text-white text-left my-4">Du hast eine Idee, für eine ganz besondere Software? Wir werden sie gemeinsam mit dir Umsetzen.</p>
@@ -152,11 +153,11 @@
 </section>
 
 <!-- Testimonials section -->
-  <div class="bg-wesolve-gray px-4 pt-12 pb-20">
-    <h3 class="text-wesolve-green font-bold text-2xl">Die Zukunft ist jetzt: Erfahre, wie unsere Kunden sie gestalten!</h3>
+  <div class="bg-wesolve-gray px-4 pt-12 pb-20 max-w-screen-xl mx-auto">
+    <h3 class="text-wesolve-green font-bold text-3xl md:text-4xl">Die Zukunft ist jetzt: Erfahre, wie unsere Kunden sie gestalten!</h3>
     <h4 class="text-wesolve-green pt-2 pb-8">Wir können dir viel erzählen, doch überzeuge dich doch einfach selbst von uns.</h4>
 
-    <div class="flex flex-wrap gap-8">
+    <div class="grid lg:grid-cols-2 gap-8">
       <section class="bg-gray-200 rounded-md">
         <img src="./assets/img/standing-ipad-mockup-1.png" class="rounded-t-md" />
         <section class="px-6 my-8">
@@ -182,12 +183,12 @@
 
 <!-- Reviews Section -->
 
-  <div class="bg-bg-gray mx-4 rounded-md px-4 pt-12 mt-8 mb-16">
+  <div class="bg-bg-gray mx-4 lg:mx-14 lg:px-14 rounded-md px-4 pt-12 mt-8 mb-16 max-w-screen-xl xl:mx-auto">
     <h3 class="text-2xl text-white font-semibold text-center mb-4">Wir schätzen die Zusammenarbeit mit Dir sehr...</h3>
     <p class="text-white">Deine Zufriedenheit liegt uns am Herzen. Das ist der Grund, wieso wir jeden Tag unser bestes geben und das lieben, was wir tun!</p>
 
-    <div class="flex flex-col gap-8">
-      <section class="bg-section-gray mt-16 rounded-lg">
+    <div class="grid gap-8 xl:grid-cols-3 xl:mt-16 xl:pb-16">
+      <section class="bg-section-gray rounded-lg mt-16 xl:mt-0">
         <img src="./assets/img/FCN_Logo.png" class="h-20 mx-auto mt-6 mb-6" />
         <p class="text-white px-6 text-sm mb-4">Wir vom 1. FC Nürnberg sind sehr zufrieden über die Zusammenarbeit mit wesolve-IT. Durch die Zusammenarbeit sparen wir uns viel Zeit und die Arbeit wird deutlich einfacher. Auch die Zusammenarbeit mit Michael Reinert ist sehr gut. Er ist sehr zuverlässig und hilft sofort, falls es doch einmal Probleme geben sollte.</p>
         <p class="text-white px-6 text-sm font-semibold text-center pb-6">Henrik Brüggen, Vermarktung/Marketing 1.FC Nürnberg</p>
@@ -197,7 +198,7 @@
         <p class="text-white px-6 text-sm mb-4">Die Erstellung meiner Webseite war ein absoluter Erfolg! Das Team lieferte nicht nur ein ansprechendes Design, sondern ermöglichte mir auch mühelose Selbstpflege. Perfekte Lösung für mein Business!</p>
         <p class="text-white px-6 text-sm font-semibold text-center pb-6">Roni Burcak, Geschäftsführer Alfafood GmbH</p>
       </section>
-      <section class="bg-section-gray rounded-lg mb-16">
+      <section class="bg-section-gray rounded-lg mb-16 xl:mb-0">
         <img src="./assets/img/maxrundohne-rand.png" class="h-20 mx-auto mt-6 mb-6"/>
         <p class="text-white px-6 text-sm mb-4">Wir haben unseren Rent-Shop zusammen mit wesolve-IT entworfen und sind sehr zufrieden, was Planung und Umsetzung betrifft. Herr Reinert hat bei uns vor Ort unsere Wünsche und Vorstellungen aufgenommen und mit uns durchgesprochen. Er hat uns teilweise auch funktionellere Lösungen gezeigt um uns Schritte zu ersparen. Sport Weber sagt danke und freut sich auf die weitere Zusammenarbeit mit wesolve-IT.</p>
         <p class="text-white px-6 text-sm font-semibold text-center pb-6">Max Schorn, Geschäftsführer Sport-Weber Schnaittach</p>
