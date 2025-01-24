@@ -15,6 +15,10 @@ module.exports = {
         'section-gray': '#282828',
         'nav-gray': '#b9b8be',
         'customer-gray': '#ddd'
+      },
+      fontFamily: {
+        heading: ['"Barlow Condensed"', 'sans-serif'],
+        body: ['Montserrat', 'sans-serif']
       }
     },
   },
