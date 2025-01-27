@@ -621,6 +621,9 @@ video {
 .mb-20 {
   margin-bottom: 5rem;
 }
+.mb-8 {
+  margin-bottom: 2rem;
+}
 .block {
   display: block;
 }
@@ -663,6 +666,15 @@ video {
 .h-2 {
   height: 0.5rem;
 }
+.h-1\/2 {
+  height: 50%;
+}
+.h-10 {
+  height: 2.5rem;
+}
+.h-1 {
+  height: 0.25rem;
+}
 .w-full {
   width: 100%;
 }
@@ -671,6 +683,9 @@ video {
 }
 .w-4\/6 {
   width: 66.666667%;
+}
+.w-5\/6 {
+  width: 83.333333%;
 }
 .max-w-md {
   max-width: 28rem;
@@ -730,6 +745,9 @@ video {
 }
 .gap-8 {
   gap: 2rem;
+}
+.gap-6 {
+  gap: 1.5rem;
 }
 .space-x-4 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
@@ -811,9 +829,17 @@ video {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
 }
+.object-contain {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
 .object-cover {
   -o-object-fit: cover;
      object-fit: cover;
+}
+.object-fill {
+  -o-object-fit: fill;
+     object-fit: fill;
 }
 .p-4 {
   padding: 1rem;
@@ -926,6 +952,10 @@ video {
   font-size: 0.75rem;
   line-height: 1rem;
 }
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
 .font-bold {
   font-weight: 700;
 }
@@ -1015,6 +1045,10 @@ video {
     margin-bottom: 0px;
   }
 
+  .md\:mb-4 {
+    margin-bottom: 1rem;
+  }
+
   .md\:flex {
     display: flex;
   }
@@ -1031,8 +1065,16 @@ video {
     height: 24rem;
   }
 
+  .md\:h-1\/2 {
+    height: 50%;
+  }
+
   .md\:w-28 {
     width: 7rem;
+  }
+
+  .md\:w-5\/6 {
+    width: 83.333333%;
   }
 
   .md\:grid-cols-2 {
@@ -1053,6 +1095,11 @@ video {
     --tw-space-y-reverse: 0;
     margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
     margin-bottom: calc(0px * var(--tw-space-y-reverse));
+  }
+
+  .md\:object-contain {
+    -o-object-fit: contain;
+       object-fit: contain;
   }
 
   .md\:text-4xl {
@@ -1080,6 +1127,14 @@ video {
     height: 20rem;
   }
 
+  .lg\:w-5\/6 {
+    width: 83.333333%;
+  }
+
+  .lg\:w-full {
+    width: 100%;
+  }
+
   .lg\:max-w-screen-xl {
     max-width: 1280px;
   }
@@ -1094,6 +1149,10 @@ video {
 
   .lg\:items-start {
     align-items: flex-start;
+  }
+
+  .lg\:justify-center {
+    justify-content: center;
   }
 
   .lg\:gap-8 {
