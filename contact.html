@@ -1,0 +1,72 @@
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontakt</title>
+  <link href="./dist/styles.css" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="./assets/img/Wesolveit_loigo.svg" />
+  <script defer src="./js/app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+  <script src="./js/navigation.js" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-wesolve-gray">
+  <div class="text-wesolve-green max-w-screen-xl px-4 pt-12 mx-auto">
+    <h1 class="text-3xl font-semibold mb-2">Erzähle uns von deiner neuesten Idee oder lass uns gerne einfach connecten!</h1>
+    <p>Guten Tag! Wir sind dein Partner für innovative Softwarelösungen. Teile uns Deine Anforderungen mit und wir setzen uns umgehend mit Dir in Verbindung, um maßgeschneiderte Lösungen zu besprechen.</p>
+  </div>
+
+  <div class="max-w-screen-md px-4 pt-8 mx-auto pb-20">
+    <form id="contact-form" class="rounded-lg" method="POST" action="/thank-you.html" netlify netlify-honeypot="bot-field">
+      <input type="hidden" name="bot-field">
+      <div class="mb-4">
+        <label for="name" class="block text-wesolve-green font-semibold mb-2">Name <span class="text-red-500">*</span></label>
+        <input type="text" id="name" name="name" required class="w-full p-2 border border-gray-300 rounded-md">
+      </div>
+      <div class="mb-4">
+        <label for="email" class="block text-wesolve-green font-semibold mb-2">Email <span class="text-red-500">*</span></label>
+        <input type="email" id="email" name="email" required class="w-full p-2 border border-gray-300 rounded-md">
+      </div>
+      <div class="mb-4">
+        <label for="telefonnummer" class="block text-wesolve-green font-semibold mb-2">Telefonnummer <span class="text-red-500">*</span></label>
+        <input type="tel" id="telefonnummer" name="telefonnummer" required class="w-full p-2 border border-gray-300 rounded-md">
+      </div>
+      <div class="mb-4">
+        <label for="betreff" class="block text-wesolve-green font-semibold mb-2">Betreff <span class="text-red-500">*</span></label>
+        <input type="text" id="betreff" name="betreff" required class="w-full p-2 border border-gray-300 rounded-md">
+      </div>
+      <div class="mb-4">
+        <label for="nachricht" class="block text-wesolve-green font-semibold mb-2">Nachricht <span class="text-red-500">*</span></label>
+        <textarea id="nachricht" name="nachricht" required class="w-full h-40 p-2 border border-gray-300 rounded-md" placeholder="Erzähle uns über deine Idee, dein Projekt, dein Unternehmen... Wir antworten in der Regel innerhalb der nächsten 24 Stunden."></textarea>
+      </div>
+      <div class="mb-4 flex items-start">
+        <input type="checkbox" id="consent" name="consent" required class="mt-1">
+        <label for="consent" class="ml-2 text-wesolve-green">Mit dem Absenden dieses Formulars, erklären Sie sich damit einverstanden, E-Mail-Kommunikation von uns zu erhalten und verstehen, dass Ihre Kontaktinformationen bei uns gespeichert werden.</label>
+      </div>
+      <div id="error-message" class="text-red-500 mb-4 hidden">Die Checkbox muss angeklickt werden.</div>
+      <div class="text-center">
+        <button type="submit" class="bg-wesolve-green text-white rounded-md px-8 py-4 font-semibold">Senden</button>
+      </div>
+    </form>
+  </div>
+
+  <div class="bg-wesolve-green text-wesolve-gray text-center py-12">
+    <p class="text-3xl font-semibold">Dein Projekt? Unsere Herzensangelegenheit</p>
+  </div>
+
+  <div id="footer-placeholder"></div>
+
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+      const consentCheckbox = document.getElementById('consent');
+      const errorMessage = document.getElementById('error-message');
+      if (!consentCheckbox.checked) {
+        event.preventDefault();
+        errorMessage.classList.remove('hidden');
+      } else {
+        errorMessage.classList.add('hidden');
+      }
+    });
+  </script>
+</body>
+</html>
