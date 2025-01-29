@@ -14,7 +14,8 @@ module.exports = {
         'bg-gray': '#161616',
         'section-gray': '#282828',
         'nav-gray': '#b9b8be',
-        'customer-gray': '#ddd'
+        'customer-gray': '#ddd',
+        'nav-gray': '#ccccd1'
       },
       fontFamily: {
         heading: ['"Barlow Condensed"', 'sans-serif'],
