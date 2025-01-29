@@ -17,10 +17,11 @@
     <!-- Mobile Menu Button -->
     <button 
       @click="open = !open" 
-      class="md:hidden text-wesolve-green"
+      class="md:hidden text-wesolve-green focus:outline-none"
       aria-label="Toggle Navigation"
     >
-      ☰
+      <img x-show="!open" src="./assets/navigation/lines.svg" alt="Open Navigation" class="h-6 w-6">
+      <img x-show="open" src="./assets/navigation/x.svg" alt="Close Menu" class="h-6 w-6">
     </button>
   </div>
 

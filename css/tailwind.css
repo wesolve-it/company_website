@@ -10,3 +10,11 @@
     @apply font-body;
   }
 }
+
+button svg {
+  transition: transform 0.3s ease;
+}
+
+button svg[x-show="open"] {
+  transform: rotate(180deg);
+}
