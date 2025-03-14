@@ -562,9 +562,8 @@ video {
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
-.my-auto {
-  margin-top: auto;
-  margin-bottom: auto;
+.mb-0 {
+  margin-bottom: 0px;
 }
 .mb-1 {
   margin-bottom: 0.25rem;
@@ -632,6 +631,9 @@ video {
 .flex {
   display: flex;
 }
+.inline-flex {
+  display: inline-flex;
+}
 .grid {
   display: grid;
 }
@@ -644,8 +646,14 @@ video {
 .h-12 {
   height: 3rem;
 }
+.h-14 {
+  height: 3.5rem;
+}
 .h-20 {
   height: 5rem;
+}
+.h-32 {
+  height: 8rem;
 }
 .h-40 {
   height: 10rem;
@@ -706,6 +714,19 @@ video {
 .transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
+@keyframes infinite-scroll {
+
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+.animate-infinite-scroll {
+  animation: infinite-scroll 15s linear infinite;
+}
 .list-outside {
   list-style-position: outside;
 }
@@ -718,6 +739,9 @@ video {
 .flex-wrap {
   flex-wrap: wrap;
 }
+.flex-nowrap {
+  flex-wrap: nowrap;
+}
 .items-start {
   align-items: flex-start;
 }
@@ -729,9 +753,6 @@ video {
 }
 .justify-between {
   justify-content: space-between;
-}
-.gap-10 {
-  gap: 2.5rem;
 }
 .gap-12 {
   gap: 3rem;
@@ -754,6 +775,11 @@ video {
   --tw-space-y-reverse: 0;
   margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
+}
+.space-y-4 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1rem * var(--tw-space-y-reverse));
 }
 .overflow-hidden {
   overflow: hidden;
@@ -1084,10 +1110,6 @@ button svg[x-show="open"] {
     height: 50%;
   }
 
-  .md\:h-8 {
-    height: 2rem;
-  }
-
   .md\:h-96 {
     height: 24rem;
   }
@@ -1106,6 +1128,10 @@ button svg[x-show="open"] {
 
   .md\:flex-row {
     flex-direction: row;
+  }
+
+  .md\:justify-start {
+    justify-content: flex-start;
   }
 
   .md\:space-x-4 > :not([hidden]) ~ :not([hidden]) {
@@ -1143,10 +1169,6 @@ button svg[x-show="open"] {
 
   .lg\:h-80 {
     height: 20rem;
-  }
-
-  .lg\:h-full {
-    height: 100%;
   }
 
   .lg\:w-full {
@@ -1189,11 +1211,6 @@ button svg[x-show="open"] {
   .lg\:px-16 {
     padding-left: 4rem;
     padding-right: 4rem;
-  }
-
-  .lg\:px-6 {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
   }
 
   .lg\:text-left {
@@ -1256,5 +1273,26 @@ button svg[x-show="open"] {
   .\32xl\:px-0 {
     padding-left: 0px;
     padding-right: 0px;
+  }
+}
+
+.\[\&_img\]\:max-h-20 img {
+  max-height: 5rem;
+}
+
+.\[\&_img\]\:max-w-none img {
+  max-width: none;
+}
+
+.\[\&_li\]\:mx-6 li {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+@media (min-width: 1024px) {
+
+  .lg\:\[\&_li\]\:mx-14 li {
+    margin-left: 3.5rem;
+    margin-right: 3.5rem;
   }
 }

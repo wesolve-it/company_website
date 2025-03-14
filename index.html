@@ -69,66 +69,42 @@
 
   <!-- End Hero Section -->
 
- <!-- Customers Section -->
-<div class="bg-green-900 py-6 overflow-hidden px-4 lg:px-6 2xl:px-0">
-  <div class="container mx-auto flex items-center justify-center max-w-screen-xl ">
-    <div class="flex w-full animate-scroll-mobile gap-10 justify-between max-w-screen-xl">
-      <div class="md:w-28 flex-shrink-0 my-auto">
-        <img src="./assets/img/FCN_Logo.png" alt="1. FCN Logo" class="h-20 w-20 object-contain" />
-      </div>
-      <div class="md:w-28 flex-shrink-0 my-auto">
-        <img src="./assets/img/Alfafood_Logo.png" alt="Alfafood Logo" class="h-20 w-18 object-contain" />
-      </div>
-      <div class="md:w-28 flex-shrink-0 my-auto">
-        <img src="./assets/img/1597497751.png" alt="LU-BU Logo" class="h-12 md:h-8 lg:h-full lg:w-full object-contain" />
-      </div>
-      <div class="md:w-28 flex-shrink-0 my-auto">
-        <img src="./assets/img/377-5023880.png" alt="Tobias Hermann Logo" class="h-12 md:h-8 lg:h-full lg:w-full " />
-      </div>
-      <div class="md:w-28 flex-shrink-0">
-        <img src="./assets/img/SportWeberLogoNeuklein.3caf40cb13b6ecc9538a.png" alt="Sport Weber Logo" class="h-20 lg:h-full lg:w-full" />
-      </div>
-      <!-- Duplicate the logos to create a seamless loop -->
-      <div class="md:w-28 flex-shrink-0 my-auto md:hidden">
-        <img src="./assets/img/FCN_Logo.png" alt="1. FCN Logo" class="h-20 w-20" />
-      </div>
-      <div class="md:w-28 flex-shrink-0 my-auto md:hidden">
-        <img src="./assets/img/Alfafood_Logo.png" alt="Alfafood Logo" class="h-20 w-18" />
-      </div>
-      <div class="md:w-28 flex-shrink-0 my-auto md:hidden">
-        <img src="./assets/img/1597497751.png" alt="LU-BU Logo" class="h-12" />
-      </div>
-      <div class="md:w-28 flex-shrink-0 my-auto md:hidden">
-        <img src="./assets/img/377-5023880.png" alt="Tobias Hermann Logo" class="h-12" />
-      </div>
-      <div class="flex-shrink-0 my-auto md:hidden">
-        <img src="./assets/img/SportWeberLogoNeuklein.3caf40cb13b6ecc9538a.png" alt="Sport Weber Logo" class="h-20" />
-      </div>
-    </div>
+  <!-- Customeres Selection Infinity Loop -->
+
+  <div 
+  x-data="{}"
+    x-init="$nextTick(() => {
+        let ul = $refs.logos;
+        ul.insertAdjacentHTML('afterend', ul.outerHTML);
+        ul.nextSibling.setAttribute('aria-hidden', 'true');
+    })"
+  class="w-full inline-flex flex-nowrap h-32 bg-wesolve-green mb-0">
+    <ul x-ref="logos" class="flex items-center justify-center md:justify-start [&_li]:mx-6 lg:[&_li]:mx-14 [&_img]:max-w-none [&_img]:max-h-20 animate-infinite-scroll">
+      <li>
+        <img src="./assets/img/FCN_Logo.png" alt="1. FC Nürnberg Logo" />
+      </li>
+      <li>
+        <img src="./assets/img/Alfafood_Logo.png" alt="Alfafood Logo"/>
+      </li>
+      <li>
+        <img src="./assets/img/1597497751.png" alt="LU-BU Logo" class="h-14" />
+      </li>
+      <li>
+        <img src="./assets/img/377-5023880.png" alt="Tobias Herrmann Logo" class="h-14" />
+      </li>
+      <li>
+        <img src="./assets/img/SportWeberLogoNeuklein.3caf40cb13b6ecc9538a.png" alt="Sport Weber Logo" />
+      </li>
+      <li>
+        <img src="./assets/img/rootd-logo.png" alt="Rootd. Logo" class="h-14" />
+      </li>
+      <li>
+        <img src="./assets/img/FullLogo_Transparent_NoBuffer.1a93282d335c16541fb0.png" alt="dieschokoecke Logo" />
+      </li>
+    </ul>
   </div>
-</div>
 
-<style>
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-205%);
-  }
-}
-
-.animate-scroll-mobile {
-  display: flex;
-}
-
-@media (max-width: 768px) {
-  .animate-scroll-mobile {
-    animation: scroll 5s linear infinite;
-  }
-}
-</style>
-
+  <!-- End Customers Selection Infinity Loop -->
 
   <!-- Features Section -->
 
