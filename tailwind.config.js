@@ -22,7 +22,7 @@ module.exports = {
         body: ['Montserrat', 'sans-serif']
       },
       animation: {
-        'infinite-scroll': 'infinite-scroll 15s linear infinite',
+        'infinite-scroll': 'infinite-scroll 30s linear infinite',
       },
       keyframes: {
         'infinite-scroll': {
