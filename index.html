@@ -22,7 +22,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <meta name="description" content="Entwickle dein digitales Produkt mit wesolve-IT. Wir bieten Webentwicklung, App-Entwicklung, SEO und individuelle Softwarelösungen, damit du dich auf dein Tagesgeschäft konzentrieren kannst.">
 </head>
-<body class="bg-wesolve-gray text-gray-800">
+<body class="bg-wesolve-gray ffftext-gray-800">
   <script>
     window.cookieconsent.initialise({
       palette: {
@@ -71,7 +71,86 @@
 
   <!-- Customeres Selection Infinity Loop -->
 
-  <div 
+  <!-- Customers Section -->
+<div class="w-full overflow-hidden h-32 bg-wesolve-green mb-0">
+  <div class="logo-container flex items-center h-full animate-scroll">
+    <div class="logo-track flex items-center">
+      <div class="flex-shrink-0 mx-12">
+        <img src="./assets/img/FCN_Logo.png" alt="1. FC Nürnberg Logo" class="h-20" />
+      </div>
+      <div class="flex-shrink-0 mx-12">
+        <img src="./assets/img/Alfafood_Logo.png" alt="Alfafood Logo" class="h-20" />
+      </div>
+      <div class="flex-shrink-0 mx-12">
+        <img src="./assets/img/1597497751.png" alt="LU-BU Logo" class="h-14" />
+      </div>
+      <div class="flex-shrink-0 mx-12">
+        <img src="./assets/img/377-5023880.png" alt="Tobias Herrmann Logo" class="h-14" />
+      </div>
+      <div class="flex-shrink-0 mx-12">
+        <img src="./assets/img/SportWeberLogoNeuklein.3caf40cb13b6ecc9538a.png" alt="Sport Weber Logo" class="h-20" />
+      </div>
+      <div class="flex-shrink-0 mx-12">
+        <img src="./assets/img/rootd-logo.png" alt="Rootd. Logo" class="h-12" />
+      </div>
+      <div class="flex-shrink-0 mx-12">
+        <img src="./assets/img/FullLogo_Transparent_NoBuffer.1a93282d335c16541fb0.png" alt="dieschokoecke Logo" class="h-16" />
+      </div>
+      <!-- Duplicate the logos to create a seamless loop -->
+      <div class="flex-shrink-0 mx-12">
+        <img src="./assets/img/FCN_Logo.png" alt="1. FC Nürnberg Logo" class="h-20" />
+      </div>
+      <div class="flex-shrink-0 mx-12">
+        <img src="./assets/img/Alfafood_Logo.png" alt="Alfafood Logo" class="h-20" />
+      </div>
+      <div class="flex-shrink-0 mx-12">
+        <img src="./assets/img/1597497751.png" alt="LU-BU Logo" class="h-14" />
+      </div>
+      <div class="flex-shrink-0 mx-12">
+        <img src="./assets/img/377-5023880.png" alt="Tobias Herrmann Logo" class="h-14" />
+      </div>
+      <div class="flex-shrink-0 mx-12">
+        <img src="./assets/img/SportWeberLogoNeuklein.3caf40cb13b6ecc9538a.png" alt="Sport Weber Logo" class="h-20" />
+      </div>
+      <div class="flex-shrink-0 mx-12">
+        <img src="./assets/img/rootd-logo.png" alt="Rootd. Logo" class="h-12" />
+      </div>
+      <div class="flex-shrink-0 mx-12">
+        <img src="./assets/img/FullLogo_Transparent_NoBuffer.1a93282d335c16541fb0.png" alt="dieschokoecke Logo" class="h-16" />
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.logo-container {
+  display: flex;
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+}
+
+.logo-track {
+  display: flex;
+  animation: scroll 20s linear infinite;
+}
+
+@media (max-width: 768px) {
+  .logo-track {
+    animation: scroll 10s linear infinite;
+  }
+}
+</style>
+
+  <!-- <div 
   x-data="{}"
     x-init="$nextTick(() => {
         let ul = $refs.logos;
@@ -102,7 +181,7 @@
         <img src="./assets/img/FullLogo_Transparent_NoBuffer.1a93282d335c16541fb0.png" alt="dieschokoecke Logo" />
       </li>
     </ul>
-  </div>
+  </div> -->
 
   <!-- End Customers Selection Infinity Loop -->
 

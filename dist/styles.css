@@ -562,6 +562,22 @@ video {
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
+.mx-6 {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+.mx-10 {
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
+}
+.mx-32 {
+  margin-left: 8rem;
+  margin-right: 8rem;
+}
+.mx-12 {
+  margin-left: 3rem;
+  margin-right: 3rem;
+}
 .mb-0 {
   margin-bottom: 0px;
 }
@@ -669,6 +685,12 @@ video {
 }
 .h-full {
   height: 100%;
+}
+.h-24 {
+  height: 6rem;
+}
+.h-16 {
+  height: 4rem;
 }
 .min-h-screen {
   min-height: 100vh;
@@ -781,8 +803,17 @@ video {
   margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(1rem * var(--tw-space-y-reverse));
 }
+.overflow-auto {
+  overflow: auto;
+}
 .overflow-hidden {
   overflow: hidden;
+}
+.overflow-clip {
+  overflow: clip;
+}
+.overflow-x-hidden {
+  overflow-x: hidden;
 }
 .rounded-lg {
   border-radius: 0.5rem;
