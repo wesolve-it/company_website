@@ -75,52 +75,72 @@
 <div class="w-full overflow-hidden h-32 bg-wesolve-green mb-0">
   <div class="logo-container flex items-center h-full animate-scroll">
     <div class="logo-track flex items-center">
-      <div class="flex-shrink-0 mx-12">
+      <div class="flex-shrink-0 mx-12 xl:mx-16">
         <img src="./assets/img/FCN_Logo.png" alt="1. FC Nürnberg Logo" class="h-20" />
       </div>
-      <div class="flex-shrink-0 mx-12">
+      <div class="flex-shrink-0 mx-12 xl:mx-16">
         <img src="./assets/img/Alfafood_Logo.png" alt="Alfafood Logo" class="h-20" />
       </div>
-      <div class="flex-shrink-0 mx-12">
+      <div class="flex-shrink-0 mx-12 xl:mx-16">
         <img src="./assets/img/1597497751.png" alt="LU-BU Logo" class="h-14" />
       </div>
-      <div class="flex-shrink-0 mx-12">
+      <div class="flex-shrink-0 mx-12 xl:mx-16">
         <img src="./assets/img/377-5023880.png" alt="Tobias Herrmann Logo" class="h-14" />
       </div>
-      <div class="flex-shrink-0 mx-12">
+      <div class="flex-shrink-0 mx-12 xl:mx-16">
         <img src="./assets/img/SportWeberLogoNeuklein.3caf40cb13b6ecc9538a.png" alt="Sport Weber Logo" class="h-20" />
       </div>
-      <div class="flex-shrink-0 mx-12">
+      <div class="flex-shrink-0 mx-12 xl:mx-16">
         <img src="./assets/img/rootd-logo.png" alt="Rootd. Logo" class="h-12" />
       </div>
-      <div class="flex-shrink-0 mx-12">
+      <div class="flex-shrink-0 mx-12 xl:mx-16">
         <img src="./assets/img/FullLogo_Transparent_NoBuffer.1a93282d335c16541fb0.png" alt="dieschokoecke Logo" class="h-16" />
       </div>
       <!-- Duplicate the logos to create a seamless loop -->
-      <div class="flex-shrink-0 mx-12">
+      <div class="flex-shrink-0 mx-12 xl:mx-16">
         <img src="./assets/img/FCN_Logo.png" alt="1. FC Nürnberg Logo" class="h-20" />
       </div>
-      <div class="flex-shrink-0 mx-12">
+      <div class="flex-shrink-0 mx-12 xl:mx-16">
         <img src="./assets/img/Alfafood_Logo.png" alt="Alfafood Logo" class="h-20" />
       </div>
-      <div class="flex-shrink-0 mx-12">
+      <div class="flex-shrink-0 mx-12 xl:mx-16">
         <img src="./assets/img/1597497751.png" alt="LU-BU Logo" class="h-14" />
       </div>
-      <div class="flex-shrink-0 mx-12">
+      <div class="flex-shrink-0 mx-12 xl:mx-16">
         <img src="./assets/img/377-5023880.png" alt="Tobias Herrmann Logo" class="h-14" />
       </div>
-      <div class="flex-shrink-0 mx-12">
+      <div class="flex-shrink-0 mx-12 xl:mx-16">
         <img src="./assets/img/SportWeberLogoNeuklein.3caf40cb13b6ecc9538a.png" alt="Sport Weber Logo" class="h-20" />
       </div>
-      <div class="flex-shrink-0 mx-12">
+      <div class="flex-shrink-0 mx-12 xl:mx-16">
         <img src="./assets/img/rootd-logo.png" alt="Rootd. Logo" class="h-12" />
       </div>
-      <div class="flex-shrink-0 mx-12">
+      <div class="flex-shrink-0 mx-12 xl:mx-16">
         <img src="./assets/img/FullLogo_Transparent_NoBuffer.1a93282d335c16541fb0.png" alt="dieschokoecke Logo" class="h-16" />
       </div>
     </div>
   </div>
 </div>
+
+<script>
+  window.addEventListener("load", () => {
+    const track = document.querySelector(".logo-track");
+    const container = document.querySelector(".logo-container");
+
+    if (track && container) {
+      const trackWidth = (track.scrollWidth / 2) + 25;
+      track.style.setProperty("--scroll-width", `${trackWidth}px`);
+    };
+  })
+
+  window.addEventListener("resize", () => {
+  const track = document.querySelector(".logo-track");
+  if (track) {
+    const trackWidth = (track.scrollWidth / 2) + 25;
+    track.style.setProperty("--scroll-width", `${trackWidth}px`);
+  }
+});
+</script>
 
 <style>
 @keyframes scroll {
@@ -128,7 +148,7 @@
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-125%);
+    transform: translateX(calc(-1 * var(--scroll-width)));
   }
 }
 
@@ -141,12 +161,7 @@
 .logo-track {
   display: flex;
   animation: scroll 20s linear infinite;
-}
-
-@media (max-width: 768px) {
-  .logo-track {
-    animation: scroll 15s linear infinite;
-  }
+  will-change: transform;
 }
 </style>
 
