@@ -1160,6 +1160,11 @@ button svg[x-show="open"] {
     font-size: 2.25rem;
     line-height: 2.5rem;
   }
+
+  .md\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -1213,6 +1218,16 @@ button svg[x-show="open"] {
     gap: 2rem;
   }
 
+  .lg\:object-cover {
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+
+  .lg\:object-fill {
+    -o-object-fit: fill;
+       object-fit: fill;
+  }
+
   .lg\:px-14 {
     padding-left: 3.5rem;
     padding-right: 3.5rem;
@@ -1231,6 +1246,11 @@ button svg[x-show="open"] {
     font-size: 3rem;
     line-height: 1;
   }
+
+  .lg\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
 }
 
 @media (min-width: 1280px) {
@@ -1243,16 +1263,6 @@ button svg[x-show="open"] {
   .xl\:mx-auto {
     margin-left: auto;
     margin-right: auto;
-  }
-
-  .xl\:mx-1 {
-    margin-left: 0.25rem;
-    margin-right: 0.25rem;
-  }
-
-  .xl\:mx-20 {
-    margin-left: 5rem;
-    margin-right: 5rem;
   }
 
   .xl\:mb-0 {
