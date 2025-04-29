@@ -17,6 +17,7 @@
   <link href="./dist/styles.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
   <link rel="icon" type="image/x-icon" href="./assets/img/Wesolveit_loigo.svg" alt="Logo der Firma wesolve-IT" />
+  <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
   <script type="module" defer src="./js/app.js"></script>
   <script src="./js/navigation.js" defer></script>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
@@ -39,23 +40,23 @@
     });
   </script>
 
-  <div>
+  <div class="bg-wesolve-gray-50 w-full">
     <!-- Hero Section -->
-  <section class="pt-12 flex flex-col lg:flex-row items-center justify-between max-w-screen-xl mx-auto p-6 2xl:px-0 bg-wesolve-gray">
+  <section class="pt-12 flex flex-col lg:flex-row items-center justify-between max-w-screen-xl mx-auto p-6 2xl:px-0 ">
     <!-- Text Section -->
     <div class="text-left lg:text-left">
-      <p class="text-xs uppercase text-wesolve-green font-semibold">
+      <p class="text-xs uppercase text-wesolve-green-500 lg:text-lg font-semibold">
         Erfülle deinen Traum eines digitalen Produkts
       </p>
-      <h1 class="text-3xl lg:text-5xl font-bold text-wesolve-green mt-4">
+      <h1 class="text-3xl lg:text-5xl font-bold text-wesolve-green-700 mt-4">
         Entwickle dein digitales Produkt, <br>
         ohne deine Arbeit zu vernachlässigen!
       </h1>
-      <p class="text-sm text-wesolve-green mt-4">
+      <p class="text-sm text-wesolve-green-700 mt-4 lg:text-base">
         Wir erschaffen zusammen mit Dir deine digitale Erfahrung!
       </p>
-      <a href="./contact.html">
-      <button class="mt-6 px-6 py-3 bg-wesolve-green text-white rounded-md hover:bg-green-800">
+      <a href="/kontakt">
+      <button class="mt-6 px-6 py-3 bg-wesolve-accent-coral-500 hover:bg-wesolve-gray-50 hover:text-wesolve-accent-coral-500 border-wesolve-accent-coral-500 hover:border-wesolve-accent-coral-500 border-2 text-white rounded-md transition-colors duration-300">
         Kontakt aufnehmen
       </button>
     </a>
@@ -63,7 +64,7 @@
 
     <!-- Image Section -->
     <div class="mt-12 lg:mt-0 lg:ml-10">
-      <img src="./assets/img/V2.webp" alt="Illustration mehrerer Programmierer und eine Programmierumgebung im Hintergrund" class="w-full max-w-md md:h-96 lg:max-w-screen-xl">
+      <img src="./assets/img/HeroImage.png" alt="Illustration mehrerer Programmierer und eine Programmierumgebung im Hintergrund" class="w-full max-w-md md:h-96 lg:max-w-screen-xl">
     </div>
   </section>
 
@@ -72,7 +73,7 @@
   <!-- Customeres Selection Infinity Loop -->
 
   <!-- Customers Section -->
-<div class="w-full overflow-hidden h-32 bg-wesolve-green mb-0">
+<div class="w-full overflow-hidden h-32 bg-wesolve-green-500 mb-0">
   <div class="logo-container flex items-center h-full animate-scroll">
     <div class="logo-track flex items-center">
       <div class="flex-shrink-0 mx-12 xl:mx-16">
@@ -156,54 +157,74 @@
 
   <!-- Features Section -->
 
-  <section class="bg-bg-gray pt-16 px-4 pb-24">
+  <section class="bg-wesolve-gray-950 pt-16 px-4 pb-24">
     <div class="max-w-screen-xl mx-auto">
-      <h3 class="text-wesolve-gray font-semibold text-3xl lg:text-4xl text-left">Unser Angebot, damit du dir keine Gedanken machen musst!</h3>
-      <h4 class="text-left text-gray-100 pt-4 pb-12">Wir bieten ein breites Leistungsspektrum, damit du dich voll und ganz auf dein Tagesgeschäft konzentrieren kannst. Die Aufgaben für dein digitales Produkt nehmen wir dir voll und ganz ab.</h4>
+      <h3 class="text-wesolve-gray-50 font-semibold text-3xl lg:text-4xl text-left">Unser Angebot, damit du dir keine Gedanken machen musst!</h3>
+      <h4 class="text-left text-wesolve-gray-50 pt-4 pb-12">Wir bieten ein breites Leistungsspektrum, damit du dich voll und ganz auf dein Tagesgeschäft konzentrieren kannst. Die Aufgaben für dein digitales Produkt nehmen wir dir voll und ganz ab.</h4>
     </div>
     <div class="grid gap-8 md:grid-cols-2 xl:grid-cols-4 max-w-screen-xl mx-auto">
       <div class="flex flex-col h-full">
-        <section class="bg-section-gray p-6 text-center rounded-md flex-grow">
+        <section class="bg-wesolve-gray-900 p-6 text-center rounded-md flex-grow" data-aos="fade-up" data-aos-duration="500" data-aos-offset="300">
           <img src="./assets/img/Portfolio-website.svg" alt="Illustration eines Webdesigns" />
-          <h4 class="text-wesolve-gray text-xl font-semibold mt-12">Digitaler Auftritt</h4>
+          <h4 class="text-wesolve-gray-50 text-xl lg:text-2xl font-semibold mt-12">Digitaler Auftritt</h4>
           <p class="text-white my-4 text-left">Wir erstellen Dir deinen optimalen Webauftritt für bestmögliche Sichtbarkeit und Wahrnehmung</p>
         </section>
         <div class="mt-4 text-center">
-          <a href="./webdevelopment.html">
-          <button class="bg-wesolve-green py-4 text-white rounded-md px-8 mt-4 hover:bg-green-800">Mehr erfahren</button></a>
+          <a href="/leistungen/webentwicklung">
+            <button class="relative py-4 text-white rounded-md px-8 mt-4 border-2 border-wesolve-accent-coral-500 
+                          bg-wesolve-accent-coral-500 hover:bg-section-gray hover:border-wesolve-accent-coral-500 
+                            transition-colors duration-300">
+              Mehr erfahren
+            </button>
+          </a>
         </div>
       </div>
       <div class="flex flex-col h-full">
-        <section class="bg-section-gray p-6 text-center rounded-md flex-grow">
+        <section class="bg-wesolve-gray-900 p-6 text-center rounded-md flex-grow" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="300">
           <img src="./assets/img/Application-development.svg" alt="Illustration von zwei Menschen, die auf einen Bildschirm schauen" />
-          <h4 class="text-wesolve-gray text-xl font-semibold mt-12">Wir bringen dich auf die Mobilgeräte der Menschen!</h4>
+          <h4 class="text-wesolve-gray-50 text-xl lg:text-2xl font-semibold mt-12">Wir bringen dich auf die Mobilgeräte der Menschen!</h4>
           <p class="text-white text-left my-4">Wir entwickeln Apps, die wie dein persönlicher Coach sind, um dich auf dem digitalen Spielfeld zum Sieg zu führen!</p>
         </section>
         <div class="mt-4 text-center">
-          <a href="./appdevelopment.html">
-          <button class="bg-wesolve-green text-white rounded-md px-8 py-4 mt-4 hover:bg-green-800">Mehr erfahren</button></a>
+          <a href="/leistungen/app-entwicklung">
+            <button class="relative py-4 text-white rounded-md px-8 mt-4 border-2 border-wesolve-accent-coral-500 
+                          bg-wesolve-accent-coral-500 hover:bg-section-gray hover:border-wesolve-accent-coral-500 
+                            transition-colors duration-300">
+              Mehr erfahren
+            </button>
+          </a>
         </div>
       </div>
       <div class="flex flex-col h-full">
-        <section class="bg-section-gray p-6 text-center rounded-md flex-grow">
+        <section class="bg-wesolve-gray-900 p-6 text-center rounded-md flex-grow" data-aos="fade-up" data-aos-duration="1500" data-aos-offset="300">
           <img src="./assets/img/Mobile-search.svg" alt="Illustration einer Google Suchanfrage" />
-          <h4 class="text-wesolve-gray text-xl font-semibold mt-12">Google auf die 1?</h4>
+          <h4 class="text-wesolve-gray-50 lg:text-2xl text-xl font-semibold mt-12">Google auf die 1?</h4>
           <p class="text-white text-left my-4">Lass uns deine Webseite optimieren, damit du bei Google ganz oben rangierst und stets einen Schritt voraus bist, wenn es darum geht, deine Konkurrenz zu übertreffen.</p>
         </section>
         <div class="mt-4 text-center">
-          <a href="./seo.html">
-          <button class="bg-wesolve-green text-white rounded-md px-8 py-4 mt-4 hover:bg-green-800">Mehr erfahren</button></a>
+          <a href="/leistungen/suchmaschinenoptimierung">
+            <button class="relative py-4 text-white rounded-md px-8 mt-4 border-2 border-wesolve-accent-coral-500 
+                          bg-wesolve-accent-coral-500 hover:bg-section-gray hover:border-wesolve-accent-coral-500 
+                            transition-colors duration-300">
+              Mehr erfahren
+            </button>
+          </a>
         </div>
       </div>
       <div class="flex flex-col h-full">
-        <section class="bg-section-gray p-6 text-center rounded-md flex-grow">
+        <section class="bg-wesolve-gray-900 p-6 text-center rounded-md flex-grow" data-aos="fade-up" data-aos-duration="2000" data-aos-offset="300">
           <img src="./assets/img/Software-Developer.svg" alt="Illustration eines Programmierers bei der Arbeit" />
-          <h4 class="text-wesolve-gray text-xl font-semibold mt-12">Individualsoftware</h4>
+          <h4 class="text-wesolve-gray-50 lg:text-2xl text-xl font-semibold mt-12">Individualsoftware</h4>
           <p class="text-white text-left my-4">Du hast eine Idee, für eine ganz besondere Software? Wir werden sie gemeinsam mit dir Umsetzen.</p>
         </section>
         <div class="mt-4 text-center">
-          <a href="./individual.html">
-          <button class="bg-wesolve-green text-white rounded-md px-8 py-4 mt-4 hover:bg-green-800">Mehr erfahren</button></a>
+          <a href="/leistungen/individual-software">
+            <button class="relative py-4 text-white rounded-md px-8 mt-4 border-2 border-wesolve-accent-coral-500 
+                          bg-wesolve-accent-coral-500 hover:bg-section-gray hover:border-wesolve-accent-coral-500 
+                            transition-colors duration-300">
+              Mehr erfahren
+            </button>
+          </a>
         </div>
       </div>
     </div>
@@ -211,53 +232,64 @@
 
 <!-- Testimonials section -->
   <div class="bg-wesolve-gray px-4 pt-12 pb-20 max-w-screen-xl mx-auto">
-    <h3 class="text-wesolve-green font-semibold text-3xl lg:text-4xl">Die Zukunft ist jetzt: Erfahre, wie unsere Kunden sie gestalten!</h3>
-    <h4 class="text-wesolve-green pt-2 pb-8">Wir können dir viel erzählen, doch überzeuge dich doch einfach selbst von uns.</h4>
+    <h3 class="text-wesolve-green-700 font-semibold text-3xl lg:text-4xl">Die Zukunft ist jetzt: Erfahre, wie unsere Kunden sie gestalten!</h3>
+    <h4 class="text-wesolve-green-900 pt-2 pb-8">Wir können dir viel erzählen, doch überzeuge dich doch einfach selbst von uns.</h4>
 
     <div class="grid lg:grid-cols-2 gap-8">
-      <section class="bg-gray-200 rounded-md">
+      <section class="bg-wesolve-gray-200 rounded-md" data-aos="fade-right" data-aos-offset="300">
         <img src="./assets/img/standing-ipad-mockup-1.webp" alt="Ein Bild der Applikation auf einem iPad Mockup" class="rounded-t-md lg:w-full lg:object-cover lg:h-80" />
         <section class="px-6 my-8">
-          <p class="text-wesolve-green font-semibold text-xl mb-2 md:text-2xl">1. FC Nürnberg</p>
+          <p class="text-wesolve-green-700 font-semibold text-xl mb-2 md:text-2xl xl:text-3xl">1. FC Nürnberg</p>
           <p>Business Seating App für einen reibungslosen Ablauf am Spieltag im VIP-Bereich.</p>
-          <a href="./nuremberg.html"><button class="bg-wesolve-green rounded-md px-8 py-4 text-white mt-8 hover:bg-green-800">Erfahre mehr!</button></a>
+          <a href="/referenzen/fc-nuernberg">
+            <button class="py-4 text-white rounded-md px-8 mt-8 border-2 border-wesolve-accent-coral-500 
+                          bg-wesolve-accent-coral-500 hover:bg-wesolve-gray-200 hover:border-wesolve-accent-coral-500 hover:text-wesolve-accent-coral-500
+                            transition-colors duration-300">
+              Erfahre mehr!
+            </button>
+          </a>
         </section>
       </section>
-      <section class="bg-gray-200 rounded-md">
+      <section class="bg-wesolve-gray-200 rounded-md" data-aos="fade-left" data-aos-offset="300">
         <img src="./assets/img/exampleImage.webp" alt="Ein Bild der Internetseit von Alfafood" class="rounded-t-md lg:w-full lg:object-cover lg:h-80" />
         <section class="px-6 my-8">
-          <p class="text-wesolve-green font-semibold text-xl mb-2 md:text-2xl">Alfafood GmbH</p>
+          <p class="text-wesolve-green-700 font-semibold text-xl mb-2 md:text-2xl xl:text-3xl">Alfafood GmbH</p>
           <p>Digitaler Webauftritt mit der Möglichkeit, den Inhalt selbst ohne Hilfe dritter zu pflegen.</p>
-          <a href="./alfafood.html">
-          <button class="bg-wesolve-green rounded-md px-8 py-4 text-white mt-8 hover:bg-green-800">Mehr erfahren!</button></a>
+          <a href="/referenzen/alfafood">
+            <button class="py-4 text-white rounded-md px-8 mt-8 border-2 border-wesolve-accent-coral-500 
+            bg-wesolve-accent-coral-500 hover:bg-wesolve-gray-200 hover:border-wesolve-accent-coral-500 hover:text-wesolve-accent-coral-500
+              transition-colors duration-300">
+              Erfahre mehr!
+            </button>
+          </a>
         </section>
       </section>
     </div>
     <section class="text-center">
-      <a href="./customers.html">
-      <button class="bg-wesolve-green text-white py-4 px-8 mt-8 rounded-md hover:bg-green-800">Weitere Referenzen</button></a>
+      <a href="/referenzen">
+      <button class="text-wesolve-accent-coral-500 border-2 border-wesolve-accent-coral-500 py-4 px-8 mt-8 rounded-md hover:bg-wesolve-accent-coral-500 hover:text-wesolve-gray-50 transition-colors duration-300">Weitere Referenzen</button></a>
     </section>
   </div>
 <!-- End Testimonials section -->
 
 <!-- Reviews Section -->
 
-  <div class="bg-bg-gray mx-4 lg:mx-14 lg:px-14 rounded-md px-4 pt-12 mt-8 mb-16 max-w-screen-xl xl:mx-auto">
-    <h3 class="text-3xl lg:text-4xl text-white font-semibold text-center mb-4">Wir schätzen die Zusammenarbeit mit Dir sehr...</h3>
-    <p class="text-white">Deine Zufriedenheit liegt uns am Herzen. Das ist der Grund, wieso wir jeden Tag unser bestes geben und das lieben, was wir tun!</p>
+  <div class="bg-wesolve-gray-950 mx-4 lg:mx-14 lg:px-14 rounded-md px-4 pt-12 mt-8 mb-16 max-w-screen-xl xl:mx-auto">
+    <h3 class="text-3xl lg:text-4xl text-wesolve-gray-50 font-semibold text-center mb-4">Wir schätzen die Zusammenarbeit mit Dir sehr...</h3>
+    <p class="text-white text-center lg:text-lg">Deine Zufriedenheit liegt uns am Herzen. Das ist der Grund, wieso wir jeden Tag unser bestes geben und das lieben, was wir tun!</p>
 
     <div class="grid gap-8 xl:grid-cols-3 xl:mt-16 xl:pb-16">
-      <section class="bg-section-gray rounded-lg mt-16 xl:mt-0">
+      <section class="bg-section-gray rounded-lg mt-16 xl:mt-0" data-aos="zoom-in" data-aos-duration="500" data-aos-offset="300">
         <img src="./assets/img/FCN_Logo.png" alt="1.FC Nürnberg Logo" class="h-20 mx-auto mt-6 mb-6" />
         <p class="text-white px-6 text-sm mb-4">Wir vom 1. FC Nürnberg sind sehr zufrieden über die Zusammenarbeit mit wesolve-IT. Durch die Zusammenarbeit sparen wir uns viel Zeit und die Arbeit wird deutlich einfacher. Auch die Zusammenarbeit mit Michael Reinert ist sehr gut. Er ist sehr zuverlässig und hilft sofort, falls es doch einmal Probleme geben sollte.</p>
         <p class="text-white px-6 text-sm font-semibold text-center pb-6">Henrik Brüggen, Vermarktung/Marketing 1.FC Nürnberg</p>
       </section>
-      <section class="bg-section-gray rounded-lg">
+      <section class="bg-section-gray rounded-lg" data-aos="zoom-in" data-aos-duration="1000" data-aos-offset="300">
         <img src="./assets/img/Alfafood_Logo.png" alt="Alfafood Logo" class="h-20 mx-auto mt-6 mb-6" />
         <p class="text-white px-6 text-sm mb-4">Die Erstellung meiner Webseite war ein absoluter Erfolg! Das Team lieferte nicht nur ein ansprechendes Design, sondern ermöglichte mir auch mühelose Selbstpflege. Perfekte Lösung für mein Business!</p>
         <p class="text-white px-6 text-sm font-semibold text-center pb-6">Roni Burcak, Geschäftsführer Alfafood GmbH</p>
       </section>
-      <section class="bg-section-gray rounded-lg mb-16 xl:mb-0">
+      <section class="bg-section-gray rounded-lg mb-16 xl:mb-0" data-aos="zoom-in" data-aos-duration="1500" data-aos-offset="300">
         <img src="./assets/img/maxrundohne-rand.webp" alt="Bild des Geschäftsführers von Sport-Weber Schnaittach" class="h-20 mx-auto mt-6 mb-6"/>
         <p class="text-white px-6 text-sm mb-4">Wir haben unseren Rent-Shop zusammen mit wesolve-IT entworfen und sind sehr zufrieden, was Planung und Umsetzung betrifft. Herr Reinert hat bei uns vor Ort unsere Wünsche und Vorstellungen aufgenommen und mit uns durchgesprochen. Er hat uns teilweise auch funktionellere Lösungen gezeigt um uns Schritte zu ersparen. Sport Weber sagt danke und freut sich auf die weitere Zusammenarbeit mit wesolve-IT.</p>
         <p class="text-white px-6 text-sm font-semibold text-center pb-6">Max Schorn, Geschäftsführer Sport-Weber Schnaittach</p>
@@ -269,9 +301,9 @@
 
 <!-- Contact Section -->
 
-  <div class="bg-wesolve-green text-center py-16 px-6">
-    <h2 class="text-3xl text-wesolve-gray font-semibold">Du willst dein Projekt gemeinsam mit uns umsetzen?</h2>
-    <a href="./contact.html"><button class="mt-10 bg-wesolve-gray text-wesolve-green py-4 px-8 font-semibold rounded-md">Kontaktiere uns!</button></a>
+  <div class="bg-wesolve-green-500 text-center py-16 px-6">
+    <h2 class="text-2xl xl:text-4xl text-wesolve-gray-50 font-semibold">Du willst dein Projekt gemeinsam mit uns umsetzen?</h2>
+    <a href="/kontakt"><button class="mt-10 bg-wesolve-accent-coral-500 border-wesolve-accent-coral-500 text-wesolve-green border-2 hover:bg-wesolve-green-500 hover:border-wesolve-accent-coral-500 hover:text-wesolve-accent-coral-500 py-4 px-8 font-semibold rounded-md text-wesolve-gray-50 transition-colors duration-300">Kontaktiere uns!</button></a>
   </div>
 
 <!-- End Contact Section -->
@@ -279,5 +311,10 @@
 </div>
 
 <div id="footer-placeholder"></div>
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
 </body>
 </html>
