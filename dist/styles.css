@@ -1102,6 +1102,10 @@ video {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
+.text-wesolve-gray-700 {
+  --tw-text-opacity: 1;
+  color: rgb(127 125 133 / var(--tw-text-opacity, 1));
+}
 .underline {
   text-decoration-line: underline;
 }
