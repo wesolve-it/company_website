@@ -1197,6 +1197,14 @@ video {
   --tw-text-opacity: 1;
   color: rgb(86 85 90 / var(--tw-text-opacity, 1));
 }
+.text-wesolve-accent-50 {
+  --tw-text-opacity: 1;
+  color: rgb(255 250 240 / var(--tw-text-opacity, 1));
+}
+.text-wesolve-accent-coral-50 {
+  --tw-text-opacity: 1;
+  color: rgb(255 241 240 / var(--tw-text-opacity, 1));
+}
 .underline {
   text-decoration-line: underline;
 }
