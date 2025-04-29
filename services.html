@@ -16,121 +16,222 @@
     <h1 class="text-2xl lg:text-4xl text-wesolve-green-700 font-semibold mt-8">Was Du bei uns bekommst, damit Du dich um nichts mehr kümmern musst!</h1>
     <h3 class="text-wesolve-gray-950 lg:text-xl lg:mt-4 lg:mb-12 mt-2 mb-10">Alles rund um Deine Bedürfnisse, damit Du Dich auf dein Kerngeschäft konzentrieren kannst!</h3>
     <div class="grid lg:grid-cols-2 gap-8 mb-16">
+      <!-- Hauptcontainer -->
       <div class="bg-wesolve-gray-200 rounded-md p-6 flex flex-col">
+        
+        <!-- Grid-Bereich: Text + Bild -->
         <div class="grid md:grid-cols-2 gap-4 flex-grow">
-          <div class="flex flex-col">
+          
+          <!-- Textblock -->
+          <div class="flex flex-col lg:mb-12">
             <h2 class="text-2xl font-semibold mb-4 lg:text-3xl text-wesolve-green-700">Webdesign</h2>
-            <ul class="list-disc list-outside pb-4 pl-5 flex-grow text-wesolve-gray-950">
+            <ul class="list-disc list-outside lg:pb-0 pl-5 text-wesolve-gray-950">
               <li>Ansprechendes Design im Firmenstil</li>
               <li>Transparenter Prozess mit Entscheidungsmacht</li>
               <li>Modernes ansprechendes Design</li>
               <li>Modernste Techniken und Richtlinien</li>
             </ul>
-            <div class="flex flex-col lg:flex-row mt-6 lg:space-x-6 space-y-4">
+
+            <!-- Button-Gruppe nur auf mobilen Geräten -->
+            <div class="flex flex-col space-y-4 mt-6 lg:hidden pb-6">
               <a href="./webdesign.html">
                 <button class="w-full bg-wesolve-gray-200 text-wesolve-accent-coral-500 border-wesolve-accent-coral-500 font-semibold border-2 rounded-md px-8 py-4">Mehr Details</button>
               </a>
-              <a href="contact.html" class="w-full">
-                <button class="w-full bg-wesolve-accent-coral-500 font-semibold text-wesolve-gray-50 rounded-md px-8 py-4">Termin vereinbaren</button>
+              <a href="contact.html">
+                <button class="w-full bg-wesolve-accent-coral-500 border-2 border-wesolve-accent-coral-500 font-semibold text-wesolve-gray-50 rounded-md px-8 py-4">Termin vereinbaren</button>
               </a>
             </div>
           </div>
+
+          <!-- Bild -->
           <div class="flex items-center justify-center lg:items-start">
             <img src="./assets/img/Portfolio-website.svg" alt="Webdesign Image" class="rounded-md w-full object-cover mx-auto">
           </div>
         </div>
+
+        <!-- Button-Gruppe auf großen Bildschirmen -->
+        <div class="hidden lg:flex flex-row space-x-6 w-full">
+          <a href="./webdesign.html" class="flex-1">
+            <button class="w-full bg-wesolve-gray-200 text-wesolve-accent-coral-500 border-wesolve-accent-coral-500 font-semibold border-2 rounded-md px-8 py-4">Mehr Details</button>
+          </a>
+          <a href="contact.html" class="flex-1">
+            <button class="w-full bg-wesolve-accent-coral-500 border-2 border-wesolve-accent-coral-500 font-semibold text-wesolve-gray-50 rounded-md px-8 py-4">Termin vereinbaren</button>
+          </a>
+        </div>
       </div>
+
+
+      <!-- Hauptcontainer -->
       <div class="bg-wesolve-gray-200 rounded-md p-6 flex flex-col">
+
+        <!-- Grid-Bereich: Text + Bild -->
         <div class="grid md:grid-cols-2 gap-4 flex-grow">
-          <div class="flex flex-col">
+
+          <!-- Textblock -->
+          <div class="flex flex-col lg:mb-12">
             <h2 class="text-2xl lg:text-3xl text-wesolve-green-700 font-semibold mb-4">Webentwicklung</h2>
-            <ul class="list-disc list-outside pb-4 pl-5 flex-grow text-wesolve-gray-950">
+            <ul class="list-disc list-outside pb-4 pl-5 text-wesolve-gray-950">
               <li>Funktionsfähige Internetseite oder Webapp</li>
               <li>Möglichkeit, den Inhalt selbst zu pflegen</li>
               <li>Keine Abhängigkeit vom Dienstleister</li>
             </ul>
-            <div class="flex flex-col mt-6 space-y-4">
+
+            <!-- Button-Gruppe nur auf mobilen Geräten -->
+            <div class="flex flex-col mt-6 space-y-4 lg:hidden pb-6">
               <a href="./webdevelopment.html" class="w-full">
-                <button class="w-full bg-customer-gray text-wesolve-green border-wesolve-green font-semibold border-2 rounded-md px-8 py-4">Zum Leistungsspektrum</button>
+                <button class="w-full bg-wesolve-gray-200 text-wesolve-accent-coral-500 border-wesolve-accent-coral-500 font-semibold border-2 rounded-md px-8 py-4">Mehr Details</button>
               </a>
               <a href="contact.html" class="w-full">
-                <button class="w-full bg-wesolve-green font-semibold text-white rounded-md px-8 py-4">Termin vereinbaren</button>
+                <button class="w-full bg-wesolve-accent-coral-500 font-semibold text-wesolve-gray-50 border-2 border-wesolve-accent-coral-500 rounded-md px-8 py-4">Termin vereinbaren</button>
               </a>
             </div>
           </div>
+
+          <!-- Bild -->
           <div class="flex items-center justify-center lg:items-start">
             <img src="./assets/img/Software-Developer.svg" alt="Webentwicklung Image" class="rounded-md w-full object-cover mx-auto">
           </div>
         </div>
+
+        <!-- Button-Gruppe auf großen Bildschirmen -->
+        <div class="hidden lg:flex flex-row space-x-6 w-full mt-6">
+          <a href="./webdevelopment.html" class="flex-1">
+            <button class="w-full bg-wesolve-gray-200 text-wesolve-accent-coral-500 border-wesolve-accent-coral-500 font-semibold border-2 rounded-md px-8 py-4">Mehr Details</button>
+          </a>
+          <a href="contact.html" class="flex-1">
+            <button class="w-full bg-wesolve-accent-coral-500 font-semibold border-2 border-wesolve-accent-coral-500 text-wesolve-gray-50 rounded-md px-8 py-4">Termin vereinbaren</button>
+          </a>
+        </div>
       </div>
+
+      <!-- Hauptcontainer -->
       <div class="bg-wesolve-gray-200 rounded-md p-6 flex flex-col">
+        
+        <!-- Grid-Bereich: Text + Bild -->
         <div class="grid md:grid-cols-2 gap-4 flex-grow">
-          <div class="flex flex-col">
-            <h1 class="text-2xl lg:text-3xl font-semibold mb-4 text-wesolve-green-700">App-Entwicklung</h1>
-            <ul class="list-disc list-outside pb-4 pl-5 flex-grow text-wesolve-gray-950">
+          
+          <!-- Textblock -->
+          <div class="flex flex-col lg:mb-12">
+            <h2 class="text-2xl font-semibold mb-4 lg:text-3xl text-wesolve-green-700">App-Entwicklung</h2>
+            <ul class="list-disc list-outside lg:pb-0 pl-5 text-wesolve-gray-950">
               <li>Mobile App für iOS und Android</li>
               <li>Responsiv für Tablet und Smartphone</li>
               <li>Verfügbar im Store ohne Dein zutun</li>
             </ul>
-            <div class="flex flex-col mt-6 space-y-4">
+
+            <!-- Button-Gruppe nur auf mobilen Geräten -->
+            <div class="flex flex-col space-y-4 mt-6 lg:hidden pb-6">
               <a href="./appdevelopment.html" class="w-full">
-                <button class="w-full bg-customer-gray text-wesolve-green border-wesolve-green font-semibold border-2 rounded-md px-8 py-4">Zum Leistungsspektrum</button>
+                <button class="w-full bg-wesolve-gray-200 text-wesolve-accent-coral-500 border-wesolve-accent-coral-500 font-semibold border-2 rounded-md px-8 py-4">Mehr Details</button>
               </a>
               <a href="contact.html" class="w-full">
-                <button class="w-full bg-wesolve-green font-semibold text-white rounded-md px-8 py-4">Termin vereinbaren</button>
+                <button class="w-full bg-wesolve-accent-coral-500 border-2 border-wesolve-accent-coral-500 font-semibold text-wesolve-gray-200 rounded-md px-8 py-4">Termin vereinbaren</button>
               </a>
             </div>
           </div>
+
+          <!-- Bild -->
           <div class="flex items-center justify-center lg:items-start">
             <img src="./assets/img/Application-development.svg" alt="App-Entwicklung Image" class="rounded-md w-full object-cover mx-auto">
           </div>
         </div>
+
+        <!-- Button-Gruppe auf großen Bildschirmen -->
+        <div class="hidden lg:flex flex-row space-x-6 w-full">
+          <a href="./appdevelopment.html" class="flex-1">
+            <button class="w-full bg-wesolve-gray-200 text-wesolve-accent-coral-500 border-wesolve-accent-coral-500 font-semibold border-2 rounded-md px-8 py-4">Mehr Details</button>
+          </a>
+          <a href="contact.html" class="flex-1">
+            <button class="w-full bg-wesolve-accent-coral-500 border-2 border-wesolve-accent-coral-500 font-semibold text-wesolve-gray-50 rounded-md px-8 py-4">Termin vereinbaren</button>
+          </a>
+        </div>
       </div>
+
+
+      <!-- Hauptcontainer -->
       <div class="bg-wesolve-gray-200 rounded-md p-6 flex flex-col">
+        
+        <!-- Grid-Bereich: Text + Bild -->
         <div class="grid md:grid-cols-2 gap-4 flex-grow">
-          <div class="flex flex-col">
-            <h1 class="text-2xl lg:text-3xl font-semibold mb-4 text-wesolve-green-700">Suchmaschinenoptimierung</h1>
-            <ul class="list-disc list-outside pb-4 pl-5 flex-grow text-wesolve-gray-950">
+          
+          <!-- Textblock -->
+          <div class="flex flex-col lg:mb-12">
+            <h2 class="text-2xl font-semibold mb-4 lg:text-3xl text-wesolve-green-700 break-words">Suchmaschinen-Optimierung</h2>
+            <ul class="list-disc list-outside lg:pb-0 pl-5 text-wesolve-gray-950">
               <li>Wir bringen Dich bei Google ganz nach oben</li>
               <li>Optimierungen in enger Zusammenarbeit mit Dir</li>
               <li>Mehr Reichweite über Google</li>
             </ul>
-            <div class="flex flex-col mt-6 space-y-4">
+
+            <!-- Button-Gruppe nur auf mobilen Geräten -->
+            <div class="flex flex-col space-y-4 mt-6 lg:hidden pb-6">
               <a href="./seo.html" class="w-full">
-                <button class="w-full bg-customer-gray text-wesolve-green border-wesolve-green font-semibold border-2 rounded-md px-8 py-4">Zum Leistungsspektrum</button>
+                <button class="w-full bg-wesolve-gray-200 text-wesolve-accent-coral-500 border-wesolve-accent-coral-500 font-semibold border-2 rounded-md px-8 py-4">Mehr Details</button>
               </a>
               <a href="contact.html" class="w-full">
-                <button class="w-full bg-wesolve-green font-semibold text-white rounded-md px-8 py-4">Termin vereinbaren</button>
+                <button class="w-full bg-wesolve-accent-coral-500 border-2 border-wesolve-accent-coral-500 font-semibold text-wesolve-gray-200 rounded-md px-8 py-4">Termin vereinbaren</button>
               </a>
             </div>
           </div>
+
+          <!-- Bild -->
           <div class="flex items-center justify-center lg:items-start">
             <img src="./assets/img/Mobile-search.svg" alt="Suchmaschinenoptimierung Image" class="rounded-md w-full object-cover mx-auto">
           </div>
         </div>
+
+        <!-- Button-Gruppe auf großen Bildschirmen -->
+        <div class="hidden lg:flex flex-row space-x-6 w-full">
+          <a href="./seo.html" class="flex-1">
+            <button class="w-full bg-wesolve-gray-200 text-wesolve-accent-coral-500 border-wesolve-accent-coral-500 font-semibold border-2 rounded-md px-8 py-4">Mehr Details</button>
+          </a>
+          <a href="contact.html" class="flex-1">
+            <button class="w-full bg-wesolve-accent-coral-500 border-2 border-wesolve-accent-coral-500 font-semibold text-wesolve-gray-50 rounded-md px-8 py-4">Termin vereinbaren</button>
+          </a>
+        </div>
       </div>
+
+      <!-- Hauptcontainer -->
       <div class="bg-wesolve-gray-200 rounded-md p-6 flex flex-col">
+        
+        <!-- Grid-Bereich: Text + Bild -->
         <div class="grid md:grid-cols-2 gap-4 flex-grow">
-          <div class="flex flex-col">
-            <h1 class="text-2xl lg:text-3xl font-semibold mb-4 text-wesolve-green-700">Individualsoftware</h1>
-            <ul class="list-disc list-outside pb-4 pl-5 flex-grow text-wesolve-gray-950">
+          
+          <!-- Textblock -->
+          <div class="flex flex-col lg:mb-12">
+            <h2 class="text-2xl font-semibold mb-4 lg:text-3xl text-wesolve-green-700">Individualsoftware</h2>
+            <ul class="list-disc list-outside lg:pb-0 pl-5 text-wesolve-gray-950">
               <li>Du hast einen Wunsch, der oben nicht aufgelistet ist?</li>
               <li>Du möchtest etwas individuelles für dein Unternehmen?</li>
               <li>Dein Wunsch ist kein Online Produkt, sondern eine Software?</li>
               <li>Du möchtest wiederkehrende Prozesse automatisieren?</li>
             </ul>
-            <div class="flex flex-col mt-6 space-y-4">
+
+            <!-- Button-Gruppe nur auf mobilen Geräten -->
+            <div class="flex flex-col space-y-4 mt-6 lg:hidden pb-6">
               <a href="./customsoftware.html" class="w-full">
-                <button class="w-full bg-customer-gray text-wesolve-green border-wesolve-green font-semibold border-2 rounded-md px-8 py-4">Zum Leistungsspektrum</button>
+                <button class="w-full bg-wesolve-gray-200 text-wesolve-accent-coral-500 border-wesolve-accent-coral-500 font-semibold border-2 rounded-md px-8 py-4">Mehr Details</button>
               </a>
               <a href="contact.html" class="w-full">
-                <button class="w-full bg-wesolve-green font-semibold text-white rounded-md px-8 py-4">Termin vereinbaren</button>
+                <button class="w-full bg-wesolve-accent-coral-500 border-2 border-wesolve-accent-coral-500 font-semibold text-wesolve-gray-200 rounded-md px-8 py-4">Termin vereinbaren</button>
               </a>
             </div>
           </div>
+
+          <!-- Bild -->
           <div class="flex items-center justify-center lg:items-start">
             <img src="./assets/img/Portfolio-website.svg" alt="Individualsoftware Image" class="rounded-md w-full object-cover mx-auto">
           </div>
+        </div>
+
+        <!-- Button-Gruppe auf großen Bildschirmen -->
+        <div class="hidden lg:flex flex-row space-x-6 w-full">
+          <a href="./customsoftware.html" class="flex-1">
+            <button class="w-full bg-wesolve-gray-200 text-wesolve-accent-coral-500 border-wesolve-accent-coral-500 font-semibold border-2 rounded-md px-8 py-4">Mehr Details</button>
+          </a>
+          <a href="contact.html" class="flex-1">
+            <button class="w-full bg-wesolve-accent-coral-500 border-2 border-wesolve-accent-coral-500 font-semibold text-wesolve-gray-50 rounded-md px-8 py-4">Termin vereinbaren</button>
+          </a>
         </div>
       </div>
     </div>
