@@ -8,6 +8,7 @@
   <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
   <script src="./js/navigation.js" defer></script>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
 </head>
 <body class="bg-wesolve-gray-50">
   <div class="max-w-screen-xl px-4 mt-8 mb-12 pt-16 mx-auto">
@@ -16,7 +17,7 @@
   </div>
   <div class="max-w-screen-xl px-4 mb-28 mx-auto">
     <section class="grid gap-12 lg:grid-cols-2 lg:gap-8">
-      <div class="flex flex-col h-full">
+      <div class="flex flex-col h-full" data-aos="safe-fade-right" data-aos-duration="800">
         <img src="./assets/img/standing-ipad-mockup-1.png" class="rounded-t-md lg:h-80 w-full object-cover" />
         <div class="bg-wesolve-gray-200 rounded-b-md px-6 py-6 flex-grow">
           <h2 class="text-2xl xl:text-3xl text-wesolve-green-700 font-bold mb-4">1.FC Nürnberg</h2>
@@ -28,7 +29,7 @@
           </div>
         </div>
       </div>
-      <div class="flex flex-col h-full">
+      <div class="flex flex-col h-full" data-aos="safe-fade-left" data-aos-duration="800">
         <img src="./assets/img/exampleImage.png" class="rounded-t-md lg:h-80 w-full object-cover" />
         <div class="bg-wesolve-gray-200 rounded-b-md px-6 py-6 flex-grow">
           <h2 class="text-2xl xl:text-3xl text-wesolve-green-700 font-semibold mb-4">Alfafood</h2>
@@ -40,7 +41,7 @@
           </div>
         </div>
       </div>
-      <div class="flex flex-col h-full">
+      <div class="flex flex-col h-full" data-aos="safe-fade-right" data-aos-duration="800"">
         <img src="./assets/img/Bildschirmfoto-2024-04-30-um-15.05.05.png" class="rounded-t-md lg:h-80 w-full object-cover" />
         <div class="bg-wesolve-gray-200 rounded-b-md px-6 py-6 flex-grow">
           <h2 class="text-2xl xl:text-3xl text-wesolve-green-700 font-semibold mb-4">Sport-Weber Schnaittach</h2>
@@ -52,7 +53,7 @@
           </div>
         </div>
       </div>
-      <div class="flex flex-col h-full">
+      <div class="flex flex-col h-full" data-aos="safe-fade-left" data-aos-duration="800"">
         <img src="./assets/img/Bildschirmfoto-2024-05-27-um-16.46.28.png" class="rounded-t-md lg:h-80 w-full object-cover" />
         <div class="bg-wesolve-gray-200 rounded-b-md px-6 py-6 flex-grow">
           <h2 class="text-2xl xl:text-3xl text-wesolve-green-700 font-semibold mb-4">Tobias Herrmann</h2>
@@ -64,7 +65,7 @@
           </div>
         </div>
       </div>
-      <div class="flex flex-col h-full">
+      <div class="flex flex-col h-full" data-aos="safe-fade-right" data-aos-duration="800">
         <img src="./assets/img/Bildschirmfoto-2024-04-30-um-14.56.41.png" class="rounded-t-md lg:h-80 w-full object-cover" />
         <div class="bg-wesolve-gray-200 rounded-b-md px-6 py-6 flex-grow">
           <h2 class="text-2xl xl:text-3xl text-wesolve-green-700 font-semibold mb-4">LU-BU Asian Food</h2>
@@ -76,19 +77,8 @@
           </div>
         </div>
       </div>
-      <!-- <div class="flex flex-col h-full">
-        <img src="./assets/img/exampleImage.png" class="rounded-t-md lg:h-80 w-full object-cover" />
-        <div class="bg-customer-gray rounded-b-md px-6 py-6 flex-grow">
-          <h2 class="text-3xl text-wesolve-green font-semibold mb-4">Brotkultur-Pur</h2>
-          <h3 class="text-xl font-semibold mb-2">Wordpress Design Anpassungen</h3>
-          <p class="font-semibold">Individualsoftware</p>
-          <div class="text-center">
-            <a href="brotkultur.html">
-            <button class="py-4 px-8 text-customer-gray bg-wesolve-green rounded-lg mt-10 font-semibold">Details</button></a>
-          </div>
-        </div>
-      </div> -->
-      <div class="flex flex-col h-full">
+
+      <div class="flex flex-col h-full" data-aos="safe-fade-left" data-aos-duration="800"">
         <img src="./assets/img/dieschokoecke.png" class="rounded-t-md lg:h-80 w-full object-cover" />
         <div class="bg-wesolve-gray-200 rounded-b-md px-6 py-6 flex-grow">
           <h2 class="text-2xl xl:text-3xl text-wesolve-green-700 font-semibold mb-4">dieschokoecke</h2>
@@ -104,5 +94,9 @@
   </div>
 
   <div id="footer-placeholder"></div>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
 </body>
 </html>
