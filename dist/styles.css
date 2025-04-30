@@ -1146,6 +1146,18 @@ video {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
+.text-wesolve-green-600 {
+  --tw-text-opacity: 1;
+  color: rgb(59 96 74 / var(--tw-text-opacity, 1));
+}
+.text-wesolve-green-800 {
+  --tw-text-opacity: 1;
+  color: rgb(39 62 49 / var(--tw-text-opacity, 1));
+}
+.text-wesolve-gray-800 {
+  --tw-text-opacity: 1;
+  color: rgb(103 103 108 / var(--tw-text-opacity, 1));
+}
 .underline {
   text-decoration-line: underline;
 }
@@ -1493,6 +1505,14 @@ button svg[x-show="open"] {
 
   .xl\:grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .xl\:flex-row {
+    flex-direction: row;
+  }
+
+  .xl\:gap-4 {
+    gap: 1rem;
   }
 
   .xl\:pb-16 {
