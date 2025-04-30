@@ -18,3 +18,40 @@ button svg {
 button svg[x-show="open"] {
   transform: rotate(180deg);
 }
+
+[data-aos="safe-fade-left"] {
+  opacity: 0;
+  transform: translateX(100px); /* statt -100px */
+  transition-property: transform, opacity;
+  transition-duration: 600ms;
+  transition-timing-function: ease-in-out;
+}
+
+[data-aos="safe-fade-left"].aos-animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+[data-aos="safe-fade-right"] {
+  opacity: 0;
+  transform: translateX(-100px); /* statt -100px */
+  transition-property: transform, opacity;
+  transition-duration: 600ms;
+  transition-timing-function: ease-in-out;
+}
+
+[data-aos="safe-fade-right"].aos-animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Mobile: weniger Versatz */
+@media (max-width: 768px) {
+  [data-aos="safe-fade-left"] {
+    transform: translateX(15px);
+  }
+
+  [data-aos="safe-fade-right"] {
+    transform: translateX(-15px);
+  }
+}
