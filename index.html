@@ -32,283 +32,703 @@
   <link rel="preload" as="image" href="./assets/img/HeroImage.webp" />
   <meta name="description" content="Digitale Lösungen für Restaurants, Bäckereien & Cafés. Wir bieten maßgeschneiderte Webseiten, Apps und SEO-Optimierung für mehr Gäste und Umsatz.">
   <meta name="keywords" content="Webentwicklung, App-Entwicklung, SEO, Gastronomie, Restaurant, Bäckerei, Café, digitale Lösungen, Online-Bestellsysteme">
+  <style>
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(-5deg); }
+            50% { transform: translateY(-15px) rotate(-5deg); }
+        }
+        @keyframes floatPhone {
+            0%, 100% { transform: translateY(0px) rotate(8deg); }
+            50% { transform: translateY(-12px) rotate(8deg); }
+        }
+        @keyframes dash {
+            0% { stroke-dashoffset: 1000; }
+            100% { stroke-dashoffset: 0; }
+        }
+        @keyframes pulse-slow {
+            0%, 100% { opacity: 0.3; transform: scale(1); }
+            50% { opacity: 0.6; transform: scale(1.05); }
+        }
+        @keyframes float-up {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .float-tablet { animation: float 4s ease-in-out infinite; }
+        .float-phone { animation: floatPhone 3.5s ease-in-out infinite; }
+        .dash-line {
+            stroke-dasharray: 10 10;
+            animation: dash 30s linear infinite;
+        }
+        .pulse-element { animation: pulse-slow 3s ease-in-out infinite; }
+        .float-up { animation: float-up 4s ease-in-out infinite; }
+        .rotate-slow { animation: rotate 20s linear infinite; }
+    </style>
 </head>
 <body class="bg-wesolve-gray-50 overflow-x-hidden">
       <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PQ4KTLTR"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-  <div class="bg-wesolve-gray-50 w-full pt-12">
+  <div class="bg-gray-900 w-full pt-12">
     <!-- Hero Section -->
-  <section class="pt-12 flex pb-10 flex-col basis-1/2 lg:flex-row items-center justify-between lg:max-w-screen-lg xl:max-w-screen-xl mx-auto p-6 2xl:px-0 ">
-    <!-- Text Section -->
-    <div class="text-left basis-1/2">
-      <p class="text-xs lg:text-sm uppercase text-wesolve-green-500 xl:text-lg font-semibold">
-        Deine Idee verdient ein starkes digitales Zuhause
-      </p>
-      <h1 class="text-3xl lg:text-4xl xl:text-5xl font-bold text-wesolve-green-700 my-4">
-        Digitale Lösungen für Restaurants, Cafés & Bäckereien - Mehr Gäste, mehr Umsatz!
-      </h1>
-      <p class="text-sm lg:text-base text-wesolve-green-700 xl:text-base">
-        Als Gastronom stehen Sie vor der Herausforderung, Ihren Betrieb effizient zu führen und gleichzeitig den steigenden Erwartungen Ihrer Gäste gerecht zu werden. Wir unterstützen Sie dabei mit maßgeschneiderten digitalen Lösungen - von der modernen Webseite bis zum integrierten Online-Bestellsystem.
-      </p>
-      <div class="flex justify-center lg:justify-start">
-      <a href="/kontakt">
-      <button class="mt-8 px-6 py-3 bg-wesolve-accent-coral-500 hover:bg-wesolve-gray-50 hover:text-wesolve-accent-coral-500 border-wesolve-accent-coral-500 hover:border-wesolve-accent-coral-500 border-2 text-white rounded-md transition-colors duration-300">
-        Beratungsgespräch vereinbaren
-      </button>
-    </a>
+  <div class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-slate-900 to-gray-900 py-20 px-4">
+        
+        <!-- Grid Background -->
+        <div class="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f12_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f12_1px,transparent_1px)] bg-[size:3rem_3rem] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_50%,#000_60%,transparent_100%)]"></div>
+        
+        <!-- Decorative Glows -->
+        <div class="absolute top-1/4 left-10 w-96 h-96 bg-gradient-to-br from-blue-600/20 to-purple-600/20 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-1/4 right-10 w-96 h-96 bg-gradient-to-br from-purple-600/20 to-pink-600/20 rounded-full blur-3xl"></div>
+        
+        <div class="max-w-7xl mx-auto text-center relative z-10" x-data="{ show: false }" x-init="setTimeout(() => show = true, 100)">
+            
+            <!-- Floating Tech Elements -->
+            <div class="absolute inset-0 pointer-events-none">
+                <!-- Code Brackets -->
+                <div class="absolute top-20 left-10 text-6xl text-purple-500/30 font-mono pulse-element" x-show="show" x-transition:enter="transition ease-out duration-1000 delay-200" x-transition:enter-start="opacity-0 scale-0" x-transition:enter-end="opacity-100 scale-100">&lt;/&gt;</div>
+                
+                <!-- Terminal Window -->
+                <div class="absolute top-32 right-16 w-48 h-32 bg-gray-800/40 backdrop-blur-sm border border-gray-700/50 rounded-lg p-3 float-up" x-show="show" x-transition:enter="transition ease-out duration-1000 delay-300" x-transition:enter-start="opacity-0 translate-x-20" x-transition:enter-end="opacity-100 translate-x-0">
+                    <div class="flex gap-1.5 mb-2">
+                        <div class="w-2.5 h-2.5 rounded-full bg-red-500/60"></div>
+                        <div class="w-2.5 h-2.5 rounded-full bg-yellow-500/60"></div>
+                        <div class="w-2.5 h-2.5 rounded-full bg-green-500/60"></div>
+                    </div>
+                    <div class="space-y-1.5 font-mono text-xs text-green-400/70">
+                        <div>$ npm run dev</div>
+                        <div class="text-gray-500">Building...</div>
+                        <div class="text-blue-400">✓ Ready in 2s</div>
+                    </div>
+                </div>
+                
+                <!-- API Badge -->
+                <div class="absolute top-1/3 left-20 px-4 py-2 bg-gradient-to-r from-blue-600/20 to-cyan-600/20 border border-blue-500/30 rounded-full text-cyan-400 text-sm font-mono backdrop-blur-sm pulse-element" x-show="show" x-transition:enter="transition ease-out duration-1000 delay-400" x-transition:enter-start="opacity-0 -translate-x-20" x-transition:enter-end="opacity-100 translate-x-0">
+                    API
+                </div>
+                
+                <!-- Gear Icon -->
+                <div class="absolute bottom-1/3 left-32 w-16 h-16 rotate-slow" x-show="show" x-transition:enter="transition ease-out duration-1000 delay-500" x-transition:enter-start="opacity-0 scale-0" x-transition:enter-end="opacity-100 scale-100">
+                    <svg viewBox="0 0 24 24" fill="none" class="text-purple-500/20" stroke="currentColor" stroke-width="1.5">
+                        <path d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z"/>
+                        <path d="M19.622 10.395l-1.097-2.65L20 6l-2-2-1.735 1.483-2.707-1.113L12.935 2h-2.954l-.632 2.401-2.645 1.115L5 4 3 6l1.453 1.789-1.08 2.657L1 11v2l2.401.655L4.49 16.3 3 18l2 2 1.791-1.46 2.606 1.072L10 22h2l.604-2.387 2.651-1.098C16.697 18.831 18 20 18 20l2-2-1.484-1.75 1.098-2.652 2.386-.62V11l-2.378-.605z"/>
+                    </svg>
+                </div>
+                
+                <!-- Database Icon -->
+                <div class="absolute bottom-1/4 right-24 w-12 h-12 pulse-element" x-show="show" x-transition:enter="transition ease-out duration-1000 delay-600" x-transition:enter-start="opacity-0 translate-y-20" x-transition:enter-end="opacity-100 translate-y-0">
+                    <svg viewBox="0 0 24 24" fill="none" class="text-blue-500/30" stroke="currentColor" stroke-width="1.5">
+                        <ellipse cx="12" cy="5" rx="9" ry="3"/>
+                        <path d="M3 5V19C3 20.6569 7.02944 22 12 22C16.9706 22 21 20.6569 21 19V5"/>
+                        <path d="M3 12C3 13.6569 7.02944 15 12 15C16.9706 15 21 13.6569 21 12"/>
+                    </svg>
+                </div>
+                
+                <!-- React Logo -->
+                <div class="absolute top-1/2 right-32 w-14 h-14 rotate-slow" x-show="show" x-transition:enter="transition ease-out duration-1000 delay-700" x-transition:enter-start="opacity-0 scale-0" x-transition:enter-end="opacity-100 scale-100">
+                    <svg viewBox="0 0 24 24" fill="none" class="text-cyan-500/20" stroke="currentColor" stroke-width="1">
+                        <ellipse cx="12" cy="12" rx="10" ry="4"/>
+                        <ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(60 12 12)"/>
+                        <ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(-60 12 12)"/>
+                        <circle cx="12" cy="12" r="2" fill="currentColor"/>
+                    </svg>
+                </div>
+                
+                <!-- Cloud Icon -->
+                <div class="absolute top-1/4 right-1/4 w-16 h-16 float-up" x-show="show" x-transition:enter="transition ease-out duration-1000 delay-800" x-transition:enter-start="opacity-0 -translate-y-20" x-transition:enter-end="opacity-100 translate-y-0">
+                    <svg viewBox="0 0 24 24" fill="none" class="text-indigo-500/20" stroke="currentColor" stroke-width="1.5">
+                        <path d="M18.5 19H6.5C4.01472 19 2 16.9853 2 14.5C2 12.0147 4.01472 10 6.5 10C6.5 7.51472 8.51472 5 11 5C13.4853 5 15.5 7.51472 15.5 10H17.5C19.7091 10 21.5 11.7909 21.5 14C21.5 16.2091 19.7091 18 17.5 18"/>
+                    </svg>
+                </div>
+                
+                <!-- Binary code -->
+                <div class="absolute bottom-1/3 right-1/3 text-3xl text-green-500/20 font-mono pulse-element" x-show="show" x-transition:enter="transition ease-out duration-1000 delay-900" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100">01</div>
+                
+                <!-- Small sparkles -->
+                <div class="absolute top-1/3 right-1/4 w-3 h-3 bg-yellow-400/40 rounded-full pulse-element"></div>
+                <div class="absolute bottom-1/3 left-1/3 w-2 h-2 bg-blue-400/40 rounded-full pulse-element"></div>
+                <div class="absolute top-2/3 right-1/3 w-2.5 h-2.5 bg-purple-400/40 rounded-full pulse-element"></div>
+            </div>
+            
+            <!-- Main Content -->
+            <div class="mb-16">
+                <!-- Headline with decorative elements -->
+                <div class="relative inline-block">
+                    <h1 class="text-6xl sm:text-7xl lg:text-8xl font-bold text-white leading-tight mb-6" x-show="show" x-transition:enter="transition ease-out duration-700" x-transition:enter-start="opacity-0 translate-y-8" x-transition:enter-end="opacity-100 translate-y-0">
+                        <span class="relative inline-block">
+                            Wir entwickeln
+                            <svg class="absolute -top-6 -right-12 w-16 h-16 text-purple-400" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path class="dash-line" d="M20,50 Q30,20 50,30 T80,50" stroke="currentColor" stroke-width="3" fill="none"/>
+                                <circle cx="80" cy="50" r="5" fill="currentColor"/>
+                            </svg>
+                        </span>
+                        <br/>
+                        <span class="relative">
+                            Ihre
+                            <span class="relative inline-block mx-3">
+                                <!-- Tablet Device -->
+                                <span class="inline-block align-middle float-tablet" style="width: 120px; height: 90px; margin: 0 20px;">
+                                    <svg viewBox="0 0 120 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <!-- Tablet body -->
+                                        <rect x="10" y="5" width="100" height="75" rx="8" fill="#1F2937" stroke="#4B5563" stroke-width="2"/>
+                                        <!-- Screen -->
+                                        <rect x="15" y="10" width="90" height="58" rx="4" fill="url(#tablet-gradient)"/>
+                                        <!-- Screen content bars -->
+                                        <rect x="22" y="17" width="35" height="4" rx="2" fill="#8B5CF6" opacity="0.8"/>
+                                        <rect x="22" y="26" width="76" height="3" rx="1.5" fill="#6B7280" opacity="0.5"/>
+                                        <rect x="22" y="33" width="76" height="3" rx="1.5" fill="#6B7280" opacity="0.5"/>
+                                        <rect x="22" y="40" width="55" height="3" rx="1.5" fill="#6B7280" opacity="0.5"/>
+                                        <!-- App icons -->
+                                        <rect x="22" y="50" width="12" height="12" rx="3" fill="#6366F1" opacity="0.6"/>
+                                        <rect x="38" y="50" width="12" height="12" rx="3" fill="#8B5CF6" opacity="0.6"/>
+                                        <rect x="54" y="50" width="12" height="12" rx="3" fill="#A78BFA" opacity="0.6"/>
+                                        <!-- Home button -->
+                                        <circle cx="60" cy="75" r="3" fill="#9CA3AF"/>
+                                        <!-- Glow effect -->
+                                        <rect x="15" y="10" width="90" height="58" rx="4" fill="url(#tablet-glow)" opacity="0.3"/>
+                                        
+                                        <defs>
+                                            <linearGradient id="tablet-gradient" x1="15" y1="10" x2="15" y2="68" gradientUnits="userSpaceOnUse">
+                                                <stop stop-color="#1F2937"/>
+                                                <stop offset="1" stop-color="#111827"/>
+                                            </linearGradient>
+                                            <linearGradient id="tablet-glow" x1="15" y1="10" x2="15" y2="68" gradientUnits="userSpaceOnUse">
+                                                <stop stop-color="#8B5CF6" opacity="0.3"/>
+                                                <stop offset="1" stop-color="transparent"/>
+                                            </linearGradient>
+                                        </defs>
+                                    </svg>
+                                </span>
+                                digitale
+                            </span>
+                            <br/>
+                            <span class="relative inline-block bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 text-transparent bg-clip-text">
+                                Vision
+                                <!-- Phone Device -->
+                                <span class="inline-block align-middle float-phone ml-4" style="width: 60px; height: 110px;">
+                                    <svg viewBox="0 0 60 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <!-- Phone body -->
+                                        <rect x="5" y="5" width="50" height="100" rx="10" fill="#111827" stroke="#374151" stroke-width="2"/>
+                                        <!-- Screen -->
+                                        <rect x="9" y="12" width="42" height="82" rx="6" fill="url(#phone-gradient)"/>
+                                        <!-- Notch -->
+                                        <rect x="22" y="12" width="16" height="4" rx="2" fill="#111827"/>
+                                        <!-- Screen content -->
+                                        <circle cx="30" cy="30" r="8" fill="#60A5FA" opacity="0.5"/>
+                                        <rect x="15" y="44" width="30" height="3" rx="1.5" fill="#6B7280" opacity="0.6"/>
+                                        <rect x="15" y="51" width="25" height="3" rx="1.5" fill="#6B7280" opacity="0.6"/>
+                                        <rect x="15" y="58" width="30" height="3" rx="1.5" fill="#6B7280" opacity="0.6"/>
+                                        <!-- Bottom icons -->
+                                        <circle cx="18" cy="82" r="4" fill="#8B5CF6" opacity="0.6"/>
+                                        <circle cx="30" cy="82" r="4" fill="#6366F1" opacity="0.6"/>
+                                        <circle cx="42" cy="82" r="4" fill="#3B82F6" opacity="0.6"/>
+                                        <!-- Glow effect -->
+                                        <rect x="9" y="12" width="42" height="82" rx="6" fill="url(#phone-glow)" opacity="0.2"/>
+                                        
+                                        <defs>
+                                            <linearGradient id="phone-gradient" x1="9" y1="12" x2="9" y2="94" gradientUnits="userSpaceOnUse">
+                                                <stop stop-color="#1F2937"/>
+                                                <stop offset="1" stop-color="#111827"/>
+                                            </linearGradient>
+                                            <linearGradient id="phone-glow" x1="9" y1="12" x2="9" y2="94" gradientUnits="userSpaceOnUse">
+                                                <stop stop-color="#3B82F6" opacity="0.4"/>
+                                                <stop offset="1" stop-color="transparent"/>
+                                            </linearGradient>
+                                        </defs>
+                                    </svg>
+                                </span>
+                            </span>
+                        </span>
+                    </h1>
+                    
+                    <!-- Sparkle decorations -->
+                    <svg class="absolute -top-8 left-20 w-8 h-8 text-yellow-400 opacity-80" x-show="show" x-transition:enter="transition ease-out duration-500 delay-300" x-transition:enter-start="opacity-0 scale-0" x-transition:enter-end="opacity-100 scale-100" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0L14.59 8.41L23 11L14.59 13.59L12 22L9.41 13.59L1 11L9.41 8.41L12 0Z"/>
+                    </svg>
+                    <svg class="absolute top-12 -right-16 w-6 h-6 text-blue-400 opacity-80" x-show="show" x-transition:enter="transition ease-out duration-500 delay-500" x-transition:enter-start="opacity-0 scale-0" x-transition:enter-end="opacity-100 scale-100" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0L14.59 8.41L23 11L14.59 13.59L12 22L9.41 13.59L1 11L9.41 8.41L12 0Z"/>
+                    </svg>
+                </div>
+                
+                <p class="text-xl sm:text-2xl text-gray-400 max-w-3xl mx-auto mt-8 leading-relaxed" x-show="show" x-transition:enter="transition ease-out duration-700 delay-200" x-transition:enter-start="opacity-0 translate-y-8" x-transition:enter-end="opacity-100 translate-y-0">
+                    Von MVPs bis zur technischen Betreuung – wir verwandeln Ihre Ideen in erfolgreiche digitale Produkte 🚀
+                </p>
+            </div>
+            
+            <!-- CTA Buttons -->
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center" x-show="show" x-transition:enter="transition ease-out duration-700 delay-400" x-transition:enter-start="opacity-0 translate-y-8" x-transition:enter-end="opacity-100 translate-y-0">
+                <button class="px-10 py-5 bg-gradient-to-r from-purple-600 to-blue-600 text-white text-lg font-semibold rounded-full hover:from-purple-500 hover:to-blue-500 transform hover:scale-105 transition-all duration-300 shadow-lg shadow-purple-500/30">
+                    Projekt starten
+                </button>
+                <button class="px-10 py-5 text-white text-lg font-semibold hover:text-gray-300 transition-colors duration-300 underline decoration-2 underline-offset-4 decoration-purple-400">
+                    Mehr erfahren
+                </button>
+            </div>
+            
+        </div>
+        
     </div>
-    </div>
-
-    <!-- Image Section -->
-    <div class="mt-12 lg:mt-0 lg:ml-10 basis-1/2">
-      <img
-          src="./assets/img/HeroImage.webp"
-          alt="Illustration mehrerer Programmierer und eine Programmierumgebung im Hintergrund"
-          class="w-full max-w-md md:h-96 xl:max-w-screen-xl"
-          loading="eager"
-      >
-    </div>
-  </section>
 
   <!-- End Hero Section -->
 
   <!-- Customeres Selection Infinity Loop -->
 
   <!-- Customers Section -->
-<div class="w-full overflow-hidden h-32 bg-wesolve-green-500 mb-0">
-  <div class="logo-container flex items-center h-full animate-scroll">
-    <div class="logo-track flex items-center">
-      <div class="flex-shrink-0 mx-12 xl:mx-16">
-        <img src="./assets/img/FCN_Logo.webp" alt="1. FC Nürnberg Logo" class="h-20" loading="lazy" />
-      </div>
-      <div class="flex-shrink-0 mx-12 xl:mx-16">
-        <img src="./assets/img/Alfafood_Logo.webp" alt="Alfafood Logo" class="h-20" loading="lazy" />
-      </div>
-      <div class="flex-shrink-0 mx-12 xl:mx-16">
-        <img src="./assets/img/1597497751.png" alt="LU-BU Logo" class="h-14" loading="lazy" />
-      </div>
-      <div class="flex-shrink-0 mx-12 xl:mx-16">
-        <img src="./assets/img/FullLogo_Transparent_NoBuffer.1a93282d335c16541fb0.webp" loading="lazy" alt="dieschokoecke Logo" class="h-16" />
-      </div>
-      <div class="flex-shrink-0 mx-12 xl:mx-16">
-        <img src="./assets/img/377-5023880.webp" alt="Tobias Herrmann Logo" class="h-14" loading="lazy" />
-      </div>
-      <div class="flex-shrink-0 mx-12 xl:mx-16">
-        <img src="./assets/img/SportWeberLogoNeuklein.3caf40cb13b6ecc9538a.webp" alt="Sport Weber Logo" class="h-20" loading="lazy" />
-      </div>
-      <div class="flex-shrink-0 mx-12 xl:mx-16">
-        <img src="./assets/img/rootd-logo.webp" alt="Rootd. Logo" class="h-12" loading="lazy" />
-      </div>
-    </div>
-  </div>
-</div>
+<section class="bg-[#020617] py-20 overflow-hidden relative">
+    
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-blue-900/10 via-transparent to-transparent pointer-events-none"></div>
 
-<script>
-  window.addEventListener("load", () => {
-    const track = document.querySelector(".logo-track");
-    const container = document.querySelector(".logo-container");
-
-    if (track && container) {
-      const logos = Array.from(track.children);
-      logos.forEach(logo => {
-        const clone = logo.cloneNode(true);
-        track.appendChild(clone);
-      });
-
-      const trackWidth = (track.scrollWidth / 2) + 25;
-      track.style.setProperty("--scroll-width", `${trackWidth}px`);
-    };
-  })
-
-  window.addEventListener("resize", () => {
-  const track = document.querySelector(".logo-track");
-  if (track) {
-    const trackWidth = (track.scrollWidth / 2) + 25;
-    track.style.setProperty("--scroll-width", `${trackWidth}px`);
-  }
-});
-</script>
-
-<style>
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(calc(-1 * var(--scroll-width)));
-  }
-}
-
-.logo-container {
-  display: flex;
-  overflow: hidden;
-  mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
-}
-
-.logo-track {
-  display: flex;
-  animation: scroll 20s linear infinite;
-  will-change: transform;
-}
-
-.logo-container:hover .logo-track {
-  animation-play-state: paused;
-}
-</style>
-
-
-  <!-- Features Section -->
-
-  <section class="bg-wesolve-gray-950 pt-16 px-4 pb-24">
-    <div class="max-w-screen-xl mx-auto">
-      <h2 class="text-wesolve-gray-50 font-semibold text-3xl lg:text-4xl text-left">Während du deinen Gästen ein Lächeln schenkst, sorgen wir dafür, dass online alles rund läuft.</h2>
-      <h3 class="text-left text-wesolve-gray-50 pt-4 pb-12">Wir übernehmen die digitale Seite deines Geschäfts - vom ersten Entwurf bis zur fertigen Webseite oder App. Du musst dich um nichts kümmern und kannst dich ganz auf dein Tagesgeschäft konzentrieren. Technik, Design, Updates & Support? Machen wir.</h3>
-    </div>
-    <div class="grid gap-8 md:grid-cols-2 xl:grid-cols-4 max-w-screen-xl mx-auto">
-      <div class="flex flex-col h-full">
-        <section class="bg-wesolve-gray-900 p-6 text-center rounded-md flex-grow" data-aos="fade-up" data-aos-duration="500" data-aos-offset="300">
-          <img src="./assets/img/webdevelopment.webp" loading="lazy" alt="Illustration eines Webdesigns" />
-          <h4 class="text-wesolve-gray-50 text-2xl font-semibold mt-12">Deine Webseite - modern, mobil und bereit für neue Gäste</h4>
-          <p class="text-white my-4 text-left">Wir erstellen eine Webseite, die zu dir passt: schnell, ansprechend und für alle Geräte optimiert. Damit potenzielle Kunden sofort wissen, wer du bist und wo sie dich finden.</p>
-        </section>
-        <div class="mt-4 text-center">
-          <a href="/leistungen/webentwicklung">
-            <button class="relative py-4 text-white rounded-md px-8 mt-4 border-2 border-wesolve-accent-coral-500 
-                          bg-wesolve-accent-coral-500 hover:bg-section-gray hover:border-wesolve-accent-coral-500 
-                            transition-colors duration-300">
-              Mehr erfahren
-            </button>
-          </a>
+    <div class="relative z-10">
+        <div class="max-w-7xl mx-auto px-6 mb-12 flex items-center gap-6">
+            <span class="text-slate-500 font-mono text-xs tracking-tighter uppercase">Trusted by</span>
+            <div class="h-[1px] flex-grow bg-gradient-to-r from-slate-800 to-transparent"></div>
         </div>
-      </div>
-      <div class="flex flex-col h-full">
-        <section class="bg-wesolve-gray-900 p-6 text-center flex-grow rounded-md" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="300">
-          <img src="./assets/img/appdevelopment.webp" loading="lazy" alt="Illustration von zwei Menschen, die auf einen Bildschirm schauen" />
-          <h4 class="text-wesolve-gray-50 text-2xl font-semibold mt-12">Deine App - immer dabei, immer aktuell</h4>
-          <p class="text-white text-left my-4 flex-grow">Wir entwickeln maßgeschneiderte Apps, die deine Kunden direkt auf ihren Mobilgeräten erreichen. Ob Bestellungen, Reservierungen oder Informationen, alles ist nur einen Fingertipp entfernt.</p>
-        </section>
-        <div class="mt-4 text-center">
-          <a href="/leistungen/app-entwicklung">
-            <button class="relative py-4 text-white rounded-md px-8 mt-4 border-2 border-wesolve-accent-coral-500 
-                          bg-wesolve-accent-coral-500 hover:bg-section-gray hover:border-wesolve-accent-coral-500 
-                            transition-colors duration-300">
-              Mehr erfahren
-            </button>
-          </a>
+
+        <div class="flex overflow-hidden group select-none mask-fade-edges">
+            <div class="flex items-center space-x-8 animate-infinite-scroll group-hover:paused py-4">
+                
+                <div class="flex-shrink-0 flex items-center justify-center w-48 h-24 bg-slate-900/40 border border-slate-800/50 rounded-2xl backdrop-blur-sm transition-all duration-500 hover:border-blue-500/50 hover:bg-slate-800/60 hover:-translate-y-1">
+                    <img src="./assets/img/FCN_Logo.webp" alt="1. FC Nürnberg" class="h-12 w-auto object-contain filter grayscale brightness-200 contrast-0 hover:contrast-100 hover:grayscale-0 transition-all duration-500" />
+                </div>
+
+                <div class="flex-shrink-0 flex items-center justify-center w-48 h-24 bg-slate-900/40 border border-slate-800/50 rounded-2xl backdrop-blur-sm transition-all duration-500 hover:border-emerald-500/50 hover:bg-slate-800/60 hover:-translate-y-1">
+                    <img src="./assets/img/Alfafood_Logo.webp" alt="Alfafood" class="h-12 w-auto object-contain filter grayscale brightness-200 contrast-0 hover:contrast-100 hover:grayscale-0 transition-all duration-500" />
+                </div>
+
+                <div class="flex-shrink-0 flex items-center justify-center w-48 h-24 bg-slate-900/40 border border-slate-800/50 rounded-2xl backdrop-blur-sm transition-all duration-500 hover:border-purple-500/50 hover:bg-slate-800/60 hover:-translate-y-1">
+                    <img src="./assets/img/1597497751.png" alt="LU-BU" class="h-10 w-auto object-contain filter grayscale brightness-200 contrast-0 hover:contrast-100 hover:grayscale-0 transition-all duration-500" />
+                </div>
+
+                <div class="flex-shrink-0 flex items-center justify-center w-48 h-24 bg-slate-900/40 border border-slate-800/50 rounded-2xl backdrop-blur-sm transition-all duration-500 hover:border-pink-500/50 hover:bg-slate-800/60 hover:-translate-y-1">
+                    <img src="./assets/img/FullLogo_Transparent_NoBuffer.1a93282d335c16541fb0.webp" alt="Schokoecke" class="h-10 w-auto object-contain filter grayscale brightness-200 contrast-0 hover:contrast-100 hover:grayscale-0 transition-all duration-500" />
+                </div>
+
+                <div class="flex-shrink-0 flex items-center justify-center w-48 h-24 bg-slate-900/40 border border-slate-800/50 rounded-2xl backdrop-blur-sm transition-all duration-500 hover:border-amber-500/50 hover:bg-slate-800/60 hover:-translate-y-1">
+                    <img src="./assets/img/SportWeberLogoNeuklein.3caf40cb13b6ecc9538a.webp" alt="Sport Weber" class="h-12 w-auto object-contain filter grayscale brightness-200 contrast-0 hover:contrast-100 hover:grayscale-0 transition-all duration-500" />
+                </div>
+
+                <div class="flex-shrink-0 flex items-center justify-center w-48 h-24 bg-slate-900/40 border border-slate-800/50 rounded-2xl backdrop-blur-sm transition-all duration-500 hover:border-blue-400/50 hover:bg-slate-800/60 hover:-translate-y-1">
+                    <img src="./assets/img/rootd-logo.webp" alt="Rootd" class="h-8 w-auto object-contain filter grayscale brightness-200 contrast-0 hover:contrast-100 hover:grayscale-0 transition-all duration-500" />
+                </div>
+
+                </div>
         </div>
-      </div>
-      <div class="flex flex-col h-full">
-        <section class="bg-wesolve-gray-900 p-6 text-center rounded-md flex-grow" data-aos="fade-up" data-aos-duration="1500" data-aos-offset="300">
-          <img src="./assets/img/seo.webp" loading="lazy" alt="Illustration einer Google Suchanfrage" />
-          <h4 class="text-wesolve-gray-50 text-2xl font-semibold mt-12">Damit dich auch online jeder findet</h4>
-          <p class="text-white text-left my-4">Wir sorgen dafür, dass du bei Google, auf Social Media und in Online-Verzeichnissen sichtbar bist. Damit neue Gäste nicht nur von dir hören, sondern auch bei dir landen.</p>
-        </section>
-        <div class="mt-4 text-center">
-          <a href="/leistungen/suchmaschinenoptimierung">
-            <button class="relative py-4 text-white rounded-md px-8 mt-4 border-2 border-wesolve-accent-coral-500 
-                          bg-wesolve-accent-coral-500 hover:bg-section-gray hover:border-wesolve-accent-coral-500 
-                            transition-colors duration-300">
-              Mehr erfahren
-            </button>
-          </a>
-        </div>
-      </div>
-      <div class="flex flex-col h-full">
-        <section class="bg-wesolve-gray-900 p-6 text-center rounded-md flex-grow" data-aos="fade-up" data-aos-duration="2000" data-aos-offset="300">
-          <img src="./assets/img/individual-software.webp" loading="lazy" alt="Illustration eines Programmierers bei der Arbeit" />
-          <h4 class="text-wesolve-gray-50 text-2xl font-semibold mt-12">Dein digitales Komplettpaket - alles aus einer Hand</h4>
-          <p class="text-white text-left my-4">Ob Webseite, Online-Shop, Hosting oder Support - wir kümmern uns um die komplette technische Umsetzung und Betreuung.</p>
-        </section>
-        <div class="mt-4 text-center">
-          <a href="/leistungen/individual-software">
-            <button class="relative py-4 text-white rounded-md px-8 mt-4 border-2 border-wesolve-accent-coral-500 
-                          bg-wesolve-accent-coral-500 hover:bg-section-gray hover:border-wesolve-accent-coral-500 
-                            transition-colors duration-300">
-              Mehr erfahren
-            </button>
-          </a>
-        </div>
-      </div>
     </div>
 </section>
 
-<!-- Testimonials section -->
-  <div class="bg-wesolve-gray px-4 pt-12 pb-20 max-w-screen-xl mx-auto">
-    <h3 class="text-wesolve-green-700 font-semibold text-3xl lg:text-4xl">Kunden, die den digitalen Wandel leben und ihre Geschichten</h3>
-    <h4 class="text-wesolve-green-900 pt-2 pb-8">Lass dich inspirieren und starte jetzt dein eigenes digitales Projekt mit uns</h4>
+<style>
+    .animate-infinite-scroll {
+        display: flex;
+        width: max-content;
+        animation: infinite-scroll 40s linear infinite;
+    }
 
-    <div class="grid lg:grid-cols-2 gap-8">
-      <section class="bg-wesolve-gray-200 rounded-md" data-aos="safe-fade-right">
-        <img src="./assets/img/standing-ipad-mockup-1.webp" loading="lazy" alt="Ein Bild der Applikation auf einem iPad Mockup" class="rounded-t-md lg:w-full lg:object-cover lg:h-80" />
-        <section class="px-6 my-8">
-          <p class="text-wesolve-green-700 font-semibold text-xl mb-2 md:text-2xl xl:text-3xl">1. FC Nürnberg</p>
-          <p>Business Seating App für einen reibungslosen Ablauf am Spieltag im VIP-Bereich.</p>
-          <a href="/referenzen/fc-nuernberg">
-            <button class="py-4 text-white rounded-md px-8 mt-8 border-2 border-wesolve-accent-coral-500 
-                          bg-wesolve-accent-coral-500 hover:bg-wesolve-gray-200 hover:border-wesolve-accent-coral-500 hover:text-wesolve-accent-coral-500
-                            transition-colors duration-300">
-              Erfahre mehr!
-            </button>
-          </a>
-        </section>
-      </section>
-      <section class="bg-wesolve-gray-200 rounded-md overflow-hidden" data-aos="safe-fade-left">
-        <img src="./assets/img/exampleImage.webp" loading="lazy" alt="Ein Bild der Internetseit von Alfafood" class="rounded-t-md lg:w-full lg:object-cover lg:h-80" />
-        <section class="px-6 my-8">
-          <p class="text-wesolve-green-700 font-semibold text-xl mb-2 md:text-2xl xl:text-3xl">Alfafood GmbH</p>
-          <p>Digitaler Webauftritt mit der Möglichkeit, den Inhalt selbst ohne Hilfe dritter zu pflegen.</p>
-          <a href="/referenzen/alfafood">
-            <button class="py-4 text-white rounded-md px-8 mt-8 border-2 border-wesolve-accent-coral-500 
-            bg-wesolve-accent-coral-500 hover:bg-wesolve-gray-200 hover:border-wesolve-accent-coral-500 hover:text-wesolve-accent-coral-500
-              transition-colors duration-300">
-              Erfahre mehr!
-            </button>
-          </a>
-        </section>
-      </section>
+    @keyframes infinite-scroll {
+        from { transform: translateX(0); }
+        to { transform: translateX(-50%); }
+    }
+
+    .mask-fade-edges {
+        mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+        -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+    }
+
+    .paused {
+        animation-play-state: paused !important;
+    }
+</style>
+
+<script>
+    // Automatisches Duplizieren für nahtlosen Loop
+    document.querySelectorAll('.animate-infinite-scroll').forEach(el => {
+        el.innerHTML += el.innerHTML;
+    });
+</script>
+
+<!-- End Customers Section -->
+
+
+  <!-- Features Section -->
+<section class="bg-slate-50 py-24 px-4 relative overflow-hidden" x-data="{ hoverCard: null }">
+    
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full pointer-events-none">
+        <div class="absolute top-0 left-1/4 w-96 h-96 bg-blue-100/50 rounded-full blur-[120px]"></div>
+        <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-100/50 rounded-full blur-[120px]"></div>
     </div>
-    <section class="text-center">
-      <a href="/referenzen">
-      <button class="text-wesolve-accent-coral-500 border-2 border-wesolve-accent-coral-500 py-4 px-8 mt-8 rounded-md hover:bg-wesolve-accent-coral-500 hover:text-wesolve-gray-50 transition-colors duration-300">Mehr Erfolgsgeschichten</button></a>
-    </section>
-  </div>
+
+    <div class="max-w-7xl mx-auto relative z-10">
+        <div class="text-center mb-20">
+            <span class="inline-block px-4 py-1.5 mb-4 text-sm font-medium tracking-wider text-purple-600 uppercase bg-purple-50 rounded-full">
+                Unsere Expertise
+            </span>
+            <h2 class="text-4xl md:text-6xl font-extrabold text-slate-900 mb-6 tracking-tight">
+                Digitale Exzellenz für <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Ihr Business</span>
+            </h2>
+            <p class="text-lg text-slate-600 max-w-2xl mx-auto">
+                Wir begleiten Sie von der ersten Code-Zeile bis zur globalen Skalierung.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            <div 
+                @mouseenter="hoverCard = 1" @mouseleave="hoverCard = null"
+                class="group relative bg-white/70 backdrop-blur-md border border-slate-200 p-10 rounded-[2.5rem] transition-all duration-500 hover:-translate-y-3 hover:shadow-[0_30px_60px_-15px_rgba(59,130,246,0.2)]"
+            >
+                <div class="relative w-16 h-16 mb-8">
+                    <div class="absolute inset-0 bg-blue-500/20 rounded-2xl rotate-6 group-hover:rotate-12 transition-transform duration-500"></div>
+                    <div class="relative w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-400 rounded-2xl flex items-center justify-center text-white shadow-lg group-hover:scale-110 transition-transform duration-500">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                    </div>
+                </div>
+
+                <h3 class="text-2xl font-bold text-slate-900 mb-4 group-hover:text-blue-600 transition-colors">MVP-Erstellung</h3>
+                <p class="text-slate-600 mb-8 leading-relaxed">
+                    Wir validieren Ihre Geschäftsidee mit einer hochperformanten Erstversion. Schnell, skalierbar und nutzerzentriert.
+                </p>
+
+                <div class="space-y-3 mb-10">
+                    <template x-for="item in ['Rapid Prototyping', 'User Feedback Loops']">
+                        <div class="flex items-center text-sm text-slate-500 font-medium">
+                            <span class="w-5 h-5 mr-3 rounded-full bg-blue-50 text-blue-500 flex items-center justify-center text-[10px]">✓</span>
+                            <span x-text="item"></span>
+                        </div>
+                    </template>
+                </div>
+
+                <button class="w-full py-4 px-6 bg-slate-900 text-white font-bold rounded-2xl group-hover:bg-blue-600 transition-all duration-300 flex items-center justify-center gap-2 overflow-hidden relative">
+                    <span class="relative z-10">Jetzt anfragen</span>
+                    <svg class="w-4 h-4 relative z-10 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                </button>
+            </div>
+
+            <div 
+                @mouseenter="hoverCard = 2" @mouseleave="hoverCard = null"
+                class="group relative bg-white/70 backdrop-blur-md border border-slate-200 p-10 rounded-[2.5rem] transition-all duration-500 hover:-translate-y-3 hover:shadow-[0_30px_60px_-15px_rgba(147,51,234,0.2)]"
+            >
+                <div class="relative w-16 h-16 mb-8">
+                    <div class="absolute inset-0 bg-purple-500/20 rounded-2xl -rotate-6 group-hover:-rotate-12 transition-transform duration-500"></div>
+                    <div class="relative w-16 h-16 bg-gradient-to-br from-purple-600 to-indigo-500 rounded-2xl flex items-center justify-center text-white shadow-lg group-hover:scale-110 transition-transform duration-500">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                    </div>
+                </div>
+
+                <h3 class="text-2xl font-bold text-slate-900 mb-4 group-hover:text-purple-600 transition-colors">Betreuung</h3>
+                <p class="text-slate-600 mb-8 leading-relaxed">
+                    Wir übernehmen die technische Verantwortung. Monitoring, Updates und Support, damit Sie sich auf Ihr Business fokussieren.
+                </p>
+
+                <div class="space-y-3 mb-10">
+                    <template x-for="item in ['Sicherheits-Audits', 'Cloud-Infrastruktur']">
+                        <div class="flex items-center text-sm text-slate-500 font-medium">
+                            <span class="w-5 h-5 mr-3 rounded-full bg-purple-50 text-purple-500 flex items-center justify-center text-[10px]">✓</span>
+                            <span x-text="item"></span>
+                        </div>
+                    </template>
+                </div>
+
+                <button class="w-full py-4 px-6 bg-slate-900 text-white font-bold rounded-2xl group-hover:bg-purple-600 transition-all duration-300 flex items-center justify-center gap-2 shadow-sm">
+                    <span>Details ansehen</span>
+                </button>
+            </div>
+
+            <div 
+                @mouseenter="hoverCard = 3" @mouseleave="hoverCard = null"
+                class="group relative bg-white/70 backdrop-blur-md border border-slate-200 p-10 rounded-[2.5rem] transition-all duration-500 hover:-translate-y-3 hover:shadow-[0_30px_60px_-15px_rgba(236,72,153,0.2)]"
+            >
+                <div class="relative w-16 h-16 mb-8">
+                    <div class="absolute inset-0 bg-pink-500/20 rounded-2xl rotate-3 group-hover:rotate-6 transition-transform duration-500"></div>
+                    <div class="relative w-16 h-16 bg-gradient-to-br from-pink-500 to-rose-400 rounded-2xl flex items-center justify-center text-white shadow-lg group-hover:scale-110 transition-transform duration-500">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+                    </div>
+                </div>
+
+                <h3 class="text-2xl font-bold text-slate-900 mb-4 group-hover:text-pink-600 transition-colors">Refactoring</h3>
+                <p class="text-slate-600 mb-8 leading-relaxed">
+                    Wir räumen technischen Schulden auf. Wir machen Ihren Legacy-Code wieder wartbar, schnell und zukunftssicher.
+                </p>
+
+                <div class="space-y-3 mb-10">
+                    <template x-for="item in ['Performance-Optimierung', 'Clean Code Architektur']">
+                        <div class="flex items-center text-sm text-slate-500 font-medium">
+                            <span class="w-5 h-5 mr-3 rounded-full bg-pink-50 text-pink-500 flex items-center justify-center text-[10px]">✓</span>
+                            <span x-text="item"></span>
+                        </div>
+                    </template>
+                </div>
+
+                <button class="w-full py-4 px-6 bg-slate-900 text-white font-bold rounded-2xl group-hover:bg-pink-600 transition-all duration-300 flex items-center justify-center gap-2">
+                    <span>Code analysieren</span>
+                </button>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- End Features Section -->
+  
+
+<!-- Testimonials section -->
+  <section class="bg-[#020617] py-24 px-4 overflow-hidden" x-data="{ loaded: false }" x-init="setTimeout(() => loaded = true, 200)">
+    <div class="max-w-7xl mx-auto">
+        
+        <div class="mb-16" x-show="loaded" x-transition:enter="transition ease-out duration-700" x-transition:enter-start="opacity-0 translate-y-10" x-transition:enter-end="opacity-100 translate-y-0">
+            <h3 class="text-blue-400 font-bold tracking-widest uppercase text-sm mb-4 flex items-center gap-2">
+                <span class="w-8 h-[1px] bg-blue-400"></span> Success Stories
+            </h3>
+            <h2 class="text-4xl lg:text-6xl font-bold text-white leading-tight">
+                Kunden, die den digitalen Wandel <br/>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400">mit uns leben.</span>
+            </h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-6 gap-6">
+            
+            <div class="md:col-span-4 group relative bg-slate-900/40 border border-slate-800/60 rounded-[2.5rem] overflow-hidden transition-all duration-500 hover:border-blue-500/50 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(59,130,246,0.15)]"
+                 x-show="loaded" x-transition:enter="transition ease-out duration-700 delay-100" x-transition:enter-start="opacity-0 scale-95">
+                <div class="flex flex-col md:flex-row h-full min-h-[400px]">
+                    <div class="p-10 md:w-1/2 flex flex-col justify-center relative z-10">
+                        <p class="text-blue-400 text-xs font-bold uppercase tracking-widest mb-4">Sport & Event</p>
+                        <h3 class="text-3xl font-bold text-white mb-4">1. FC Nürnberg</h3>
+                        <p class="text-slate-400 text-lg leading-relaxed mb-8">Business Seating App für einen reibungslosen Ablauf am Spieltag im VIP-Bereich.</p>
+                        <a href="/referenzen/fc-nuernberg" class="inline-flex items-center justify-center w-fit px-6 py-3 bg-white/10 hover:bg-white hover:text-black text-white font-bold rounded-xl transition-all duration-300 gap-2">
+                            Erfahre mehr
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                        </a>
+                    </div>
+                    <div class="md:w-1/2 relative overflow-hidden h-64 md:h-auto">
+                        <img src="./assets/img/standing-ipad-mockup-1.webp" class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" alt="FCN">
+                        <div class="absolute inset-0 bg-gradient-to-r from-slate-900 via-transparent to-transparent hidden md:block"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="md:col-span-2 group relative bg-slate-900/40 border border-slate-800/60 rounded-[2.5rem] overflow-hidden transition-all duration-500 hover:border-purple-500/50 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(168,85,247,0.15)]"
+                 x-show="loaded" x-transition:enter="transition ease-out duration-700 delay-200" x-transition:enter-start="opacity-0 scale-95">
+                <div class="flex flex-col h-full">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="./assets/img/exampleImage.webp" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" alt="Alfafood">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent"></div>
+                    </div>
+                    <div class="p-10">
+                        <p class="text-purple-400 text-xs font-bold uppercase tracking-widest mb-4">Web & E-Commerce</p>
+                        <h3 class="text-2xl font-bold text-white mb-4">Alfafood GmbH</h3>
+                        <p class="text-slate-400 mb-8">Digitaler Webauftritt mit autonomer Inhaltsverwaltung.</p>
+                        <a href="/referenzen/alfafood" class="inline-flex items-center text-white font-semibold hover:text-purple-400 transition-colors gap-2">
+                            Case Study
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="md:col-span-6 group relative bg-slate-900/40 border border-slate-800/60 rounded-[2.5rem] overflow-hidden transition-all duration-500 hover:border-pink-500/50 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(236,72,153,0.15)]"
+                 x-show="loaded" x-transition:enter="transition ease-out duration-700 delay-300" x-transition:enter-start="opacity-0 scale-95">
+                <div class="p-10 flex flex-col md:flex-row items-center justify-between gap-8">
+                    <div class="max-w-2xl">
+                        <p class="text-pink-400 text-xs font-bold uppercase tracking-widest mb-4">Zukunft gestalten</p>
+                        <h3 class="text-3xl font-bold text-white mb-4">Starten Sie Ihr eigenes Projekt</h3>
+                        <p class="text-slate-400 text-lg">Lassen Sie uns Ihre Vision in eine digitale Erfolgsgeschichte verwandeln. Wir haben noch freie Kapazitäten für Q1/2024.</p>
+                    </div>
+                    <a href="/kontakt" class="whitespace-nowrap px-10 py-5 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-bold rounded-2xl hover:scale-105 transition-transform shadow-lg shadow-purple-500/20">
+                        Jetzt anfragen
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="mt-16 text-center" x-show="loaded" x-transition:enter="transition ease-out duration-700 delay-500" x-transition:enter-start="opacity-0">
+            <a href="/referenzen" class="text-slate-500 hover:text-white transition-colors underline underline-offset-8 decoration-blue-500/50 font-medium">
+                Alle Erfolgsgeschichten ansehen
+            </a>
+        </div>
+    </div>
+</section>
 <!-- End Testimonials section -->
 
 <!-- Reviews Section -->
 
-  <div class="bg-wesolve-gray-950 mx-4 lg:mx-14 lg:px-14 rounded-md px-4 pt-12 mt-8 mb-16 max-w-screen-xl xl:mx-auto">
-    <h3 class="text-3xl lg:text-4xl text-wesolve-gray-50 font-semibold text-center mb-4">Wir schätzen die Zusammenarbeit mit Dir sehr...</h3>
-    <p class="text-white text-center lg:text-lg">Deine Zufriedenheit liegt uns am Herzen. Das ist der Grund, wieso wir jeden Tag unser bestes geben und das lieben, was wir tun!</p>
-
-    <div class="grid gap-8 xl:grid-cols-3 xl:mt-16 xl:pb-16">
-      <section class="bg-wesolve-gray-900 rounded-lg mt-16 xl:mt-0" data-aos="zoom-in" data-aos-duration="500" data-aos-offset="300">
-        <img src="./assets/img/FCN_Logo.webp" loading="lazy" alt="1.FC Nürnberg Logo" class="h-20 mx-auto mt-6 mb-6" />
-        <p class="text-wesolve-gray-50 px-6 text-sm mb-4">Wir vom 1. FC Nürnberg sind sehr zufrieden über die Zusammenarbeit mit wesolve-IT. Durch die Zusammenarbeit sparen wir uns viel Zeit und die Arbeit wird deutlich einfacher. Auch die Zusammenarbeit mit Michael Reinert ist sehr gut. Er ist sehr zuverlässig und hilft sofort, falls es doch einmal Probleme geben sollte.</p>
-        <p class="text-wesolve-gray-50 px-6 text-sm font-semibold text-center pb-6">Henrik Brüggen, Vermarktung/Marketing 1.FC Nürnberg</p>
-      </section>
-      <section class="bg-wesolve-gray-900 rounded-lg" data-aos="zoom-in" data-aos-duration="1000" data-aos-offset="300">
-        <img src="./assets/img/Alfafood_Logo.webp" loading="lazy" alt="Alfafood Logo" class="h-20 mx-auto mt-6 mb-6" />
-        <p class="text-wesolve-gray-50 px-6 text-sm mb-4">Die Erstellung meiner Webseite war ein absoluter Erfolg! Das Team lieferte nicht nur ein ansprechendes Design, sondern ermöglichte mir auch mühelose Selbstpflege. Perfekte Lösung für mein Business!</p>
-        <p class="text-wesolve-gray-50 px-6 text-sm font-semibold text-center pb-6">Roni Burcak, Geschäftsführer Alfafood GmbH</p>
-      </section>
-      <section class="bg-wesolve-gray-900 rounded-lg mb-16 xl:mb-0" data-aos="zoom-in" data-aos-duration="1500" data-aos-offset="300">
-        <img src="./assets/img/maxrundohne-rand.webp" loading="lazy" alt="Bild des Geschäftsführers von Sport-Weber Schnaittach" class="h-20 mx-auto mt-6 mb-6"/>
-        <p class="text-wesolve-gray-50 px-6 text-sm mb-4">Wir haben unseren Rent-Shop zusammen mit wesolve-IT entworfen und sind sehr zufrieden, was Planung und Umsetzung betrifft. Herr Reinert hat bei uns vor Ort unsere Wünsche und Vorstellungen aufgenommen und mit uns durchgesprochen. Er hat uns teilweise auch funktionellere Lösungen gezeigt um uns Schritte zu ersparen. Sport Weber sagt danke und freut sich auf die weitere Zusammenarbeit mit wesolve-IT.</p>
-        <p class="text-wesolve-gray-50 px-6 text-sm font-semibold text-center pb-6">Max Schorn, Geschäftsführer Sport-Weber Schnaittach</p>
-      </section>
+  <section class="bg-white py-24 overflow-hidden relative" x-data="{ hovered: false }">
+    
+    <div class="max-w-7xl mx-auto px-4 mb-20 text-center">
+        <h3 class="text-blue-600 font-bold tracking-[0.2em] uppercase text-xs mb-4">Feedback & Vertrauen</h3>
+        <h2 class="text-4xl lg:text-6xl font-black text-slate-900 mb-6 tracking-tight">
+            Wir schätzen die <br/>
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-purple-600 to-pink-500">Zusammenarbeit</span> mit Dir.
+        </h2>
+        <p class="text-slate-500 text-lg max-w-2xl mx-auto">
+            Deine Zufriedenheit ist unser Antrieb. Hier sind einige Geschichten unserer Partner.
+        </p>
     </div>
-  </div>
+
+    <div class="relative flex flex-col gap-8">
+        
+        <div class="flex space-x-8 animate-marquee whitespace-nowrap" 
+             @mouseenter="hovered = true" @mouseleave="hovered = false"
+             :style="hovered ? 'animation-play-state: paused' : ''">
+            
+            <div class="inline-block w-[450px] whitespace-normal group">
+                <div class="bg-slate-50 border border-slate-100 p-10 rounded-[3rem] relative transition-all duration-500 group-hover:bg-white group-hover:shadow-[0_32px_64px_-16px_rgba(59,130,246,0.1)] group-hover:-translate-y-2">
+                    <div class="absolute top-8 right-10 text-slate-200 group-hover:text-blue-100 transition-colors">
+                        <svg width="40" height="30" viewBox="0 0 40 30" fill="currentColor"><path d="M0 18.2V0h15.2v18.2l-6.1 11.4H2.3L8.4 18.2H0zm24.8 0V0H40v18.2l-6.1 11.4H27.1l6.1-11.4H24.8z"/></svg>
+                    </div>
+                    
+                    <div class="flex items-center gap-4 mb-8">
+                        <div class="w-16 h-16 rounded-2xl bg-white border border-slate-100 flex items-center justify-center p-2 shadow-sm">
+                            <img src="./assets/img/FCN_Logo.webp" class="w-full h-auto grayscale group-hover:grayscale-0 transition-all duration-500" alt="FCN">
+                        </div>
+                        <div>
+                            <div class="flex text-yellow-400 mb-1">
+                                <template x-for="i in 5">
+                                    <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                </template>
+                            </div>
+                            <h4 class="font-bold text-slate-900">1. FC Nürnberg</h4>
+                        </div>
+                    </div>
+                    <p class="text-slate-600 leading-relaxed italic">"Durch die Zusammenarbeit sparen wir uns viel Zeit und die Arbeit wird deutlich einfacher. Michael Reinert ist extrem zuverlässig und hilft sofort."</p>
+                    <div class="mt-8 pt-6 border-t border-slate-100 text-sm font-semibold text-slate-400">Henrik Brüggen • Marketing</div>
+                </div>
+            </div>
+
+            <div class="inline-block w-[450px] whitespace-normal group">
+                <div class="bg-slate-50 border border-slate-100 p-10 rounded-[3rem] relative transition-all duration-500 group-hover:bg-white group-hover:shadow-[0_32px_64px_-16px_rgba(147,51,234,0.1)] group-hover:-translate-y-2">
+                    <div class="absolute top-8 right-10 text-slate-200 group-hover:text-purple-100 transition-colors">
+                        <svg width="40" height="30" viewBox="0 0 40 30" fill="currentColor"><path d="M0 18.2V0h15.2v18.2l-6.1 11.4H2.3L8.4 18.2H0zm24.8 0V0H40v18.2l-6.1 11.4H27.1l6.1-11.4H24.8z"/></svg>
+                    </div>
+                    <div class="flex items-center gap-4 mb-8">
+                        <div class="w-16 h-16 rounded-2xl bg-white border border-slate-100 flex items-center justify-center p-2 shadow-sm">
+                            <img src="./assets/img/Alfafood_Logo.webp" class="w-full h-auto grayscale group-hover:grayscale-0 transition-all duration-500" alt="Alfafood">
+                        </div>
+                        <div>
+                            <div class="flex text-yellow-400 mb-1">
+                                <template x-for="i in 5">
+                                    <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                </template>
+                            </div>
+                            <h4 class="font-bold text-slate-900">Alfafood GmbH</h4>
+                        </div>
+                    </div>
+                    <p class="text-slate-600 leading-relaxed italic">"Die Erstellung meiner Webseite war ein absoluter Erfolg! Das Team lieferte nicht nur ein ansprechendes Design, sondern ermöglichte mir mühelose Selbstpflege."</p>
+                    <div class="mt-8 pt-6 border-t border-slate-100 text-sm font-semibold text-slate-400">Roni Burcak • Geschäftsführer</div>
+                </div>
+            </div>
+
+            <div class="inline-block w-[450px] whitespace-normal group">
+                <div class="bg-slate-50 border border-slate-100 p-10 rounded-[3rem] relative transition-all duration-500 group-hover:bg-white group-hover:shadow-[0_32px_64px_-16px_rgba(236,72,153,0.1)] group-hover:-translate-y-2">
+                    <div class="absolute top-8 right-10 text-slate-200 group-hover:text-pink-100 transition-colors">
+                        <svg width="40" height="30" viewBox="0 0 40 30" fill="currentColor"><path d="M0 18.2V0h15.2v18.2l-6.1 11.4H2.3L8.4 18.2H0zm24.8 0V0H40v18.2l-6.1 11.4H27.1l6.1-11.4H24.8z"/></svg>
+                    </div>
+                    <div class="flex items-center gap-4 mb-8">
+                        <img src="./assets/img/maxrundohne-rand.webp" class="w-16 h-16 rounded-2xl object-cover grayscale group-hover:grayscale-0 transition-all duration-500 shadow-sm" alt="Max Schorn">
+                        <div>
+                            <div class="flex text-yellow-400 mb-1">
+                                <template x-for="i in 5">
+                                    <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                </template>
+                            </div>
+                            <h4 class="font-bold text-slate-900">Sport-Weber</h4>
+                        </div>
+                    </div>
+                    <p class="text-slate-600 leading-relaxed italic">"Wir haben unseren Rent-Shop zusammen entworfen und sind sehr zufrieden. Er hat uns funktionellere Lösungen gezeigt um uns Schritte zu ersparen."</p>
+                    <div class="mt-8 pt-6 border-t border-slate-100 text-sm font-semibold text-slate-400">Max Schorn • Geschäftsführer</div>
+                </div>
+            </div>
+
+            </div>
+
+    </div>
+</section>
+
+<style>
+    @keyframes marquee {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+    }
+    .animate-marquee {
+        animation: marquee 40s linear infinite;
+        width: max-content;
+        display: flex;
+    }
+</style>
+
+<style>
+    @keyframes marquee {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+    }
+    @keyframes marquee-reverse {
+        0% { transform: translateX(-50%); }
+        100% { transform: translateX(0); }
+    }
+    .animate-marquee {
+        display: flex;
+        width: max-content;
+        animation: marquee 40s linear infinite;
+    }
+    .animate-marquee-reverse {
+        display: flex;
+        width: max-content;
+        animation: marquee-reverse 40s linear infinite;
+    }
+    .pause-hover:hover {
+        animation-play-state: paused;
+    }
+</style>
 
 <!-- Ende Reviews Section -->
 
 <!-- Contact Section -->
 
-  <div class="bg-wesolve-green-500 text-center py-16 px-6">
-    <h2 class="text-2xl xl:text-4xl text-wesolve-gray-50 font-semibold">Bereit, dein Restaurant, Café oder deine Bäckerei digital voranzubringen?</h2>
-    <a href="/kontakt"><button class="mt-10 bg-wesolve-accent-coral-500 border-wesolve-accent-coral-500 text-wesolve-green border-2 hover:bg-wesolve-green-500 hover:border-wesolve-accent-coral-500 hover:text-wesolve-accent-coral-500 py-4 px-8 font-semibold rounded-md text-wesolve-gray-50 transition-colors duration-300">Jetzt durchstarten!</button></a>
-  </div>
+  <div class="relative max-w-7xl mx-auto px-4 py-20">
+    <div class="relative overflow-hidden bg-slate-900 rounded-[3rem] border border-slate-800 p-8 md:p-16 shadow-2xl shadow-blue-900/20 text-center">
+        
+        <div class="absolute -top-24 -left-24 w-64 h-64 bg-blue-600 opacity-20 blur-[80px]"></div>
+        <div class="absolute -bottom-24 -right-24 w-64 h-64 bg-purple-600 opacity-20 blur-[80px]"></div>
+
+        <div class="relative z-10 max-w-3xl mx-auto">
+            <span class="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-widest text-blue-400 uppercase bg-blue-400/10 rounded-full border border-blue-400/20">
+                Let's go digital
+            </span>
+
+            <h2 class="text-3xl md:text-5xl font-black text-white mb-8 tracking-tight leading-tight">
+                Bereit, dein Restaurant, Café oder deine Bäckerei <br/>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400">
+                    digital voranzubringen?
+                </span>
+            </h2>
+
+            <p class="text-slate-400 text-lg mb-12 max-w-xl mx-auto">
+                Wir entwickeln individuelle Lösungen, die deinen Arbeitsalltag erleichtern und deine Kunden begeistern.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
+                <a href="/kontakt" class="group relative inline-flex items-center justify-center px-10 py-5 bg-white text-slate-950 font-black rounded-2xl hover:scale-105 transition-all duration-300 shadow-xl overflow-hidden">
+                    <span class="relative z-10 flex items-center gap-2">
+                        Jetzt durchstarten
+                        <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+                    </span>
+                </a>
+
+                <div class="flex items-center gap-3 text-slate-400 text-sm">
+                    <div class="flex -space-x-2">
+                        <div class="w-8 h-8 rounded-full border-2 border-slate-900 bg-blue-500 flex items-center justify-center text-[10px] text-white font-bold">FCN</div>
+                        <div class="w-8 h-8 rounded-full border-2 border-slate-900 bg-purple-500 flex items-center justify-center text-[10px] text-white font-bold">ALF</div>
+                        <div class="w-8 h-8 rounded-full border-2 border-slate-900 bg-slate-700 flex items-center justify-center text-[10px] text-white font-bold">+12</div>
+                    </div>
+                    <span>Bereits 15+ Betriebe digitalisiert</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-blue-500/50 to-transparent"></div>
+    </div>
+</div>
 
 <!-- End Contact Section -->
 

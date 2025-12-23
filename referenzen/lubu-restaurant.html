@@ -1,60 +1,146 @@
+<!DOCTYPE html>
 <html lang="de">
 <head>
-  <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-PQ4KTLTR');</script>
-  <!-- End Google Tag Manager -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LU-BU Restaurant</title>
-  <link href="../dist/styles.css" rel="stylesheet">
-  <link rel="icon" type="image/x-icon" href="../assets/img/Wesolveit_loigo.svg" />
-  <script defer src="../js/app.js"></script>
+  <title>LU-BU Restaurant | Case Study</title>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  
   <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
-  <script src="../js/navigation.js" defer></script>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-</head>
-<body class="bg-wesolve-gray-50">
-  <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PQ4KTLTR"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-  <div class="max-w-screen-xl px-4 mx-auto pt-12">
-    <div class="my-12">
-      <img src="../assets/img/1597497751.png" alt="LU-BU Restauran Logo" class="h-20 mx-auto object-cover" />
-      <p class="text-2xl lg:text-3xl text-center mt-4 text-wesolve-green-700 font-semibold">Catering Platz 1 (Google)</p>
-    </div>
-    <img src="../assets/img/Bildschirmfoto-2024-04-30-um-14.56.41.png" alt="Bild der Applikation" class="rounded-md mb-10 md:w-5/6 md:h-1/2 object-contain mx-auto" />
-    <div class="mb-20">
-      <div class="grid lg:grid-cols-2 gap-8">
-        <div>
-        <h1 class="text-2xl text-wesolve-gray-950 font-semibold mb-2">Projekt</h1>
-        <p class="text-wesolve-gray-950">Für LU-BU haben wir eine Catering Seite erstellt und diese anschließend in der Suchmaschinenoptimierung betreut. Mit dieser sind wir für das Keyword "Sushi Catering Nürnberg" bei Google auf Platz 1 der unbezahlten Ränge. Bei der Erstellung der Seite haben wir uns an den Firmenstil der restlichen Seite orientiert und es in einem einheitlichen Stil gehalten. Den Inhalt haben wir gemeinsam mit dem Kunden erarbeitet und optimiert.</p>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-        <div class="flex flex-col gap-4 w-4/6 my-10 lg:flex-row lg:w-full lg:gap-8">
-          <a href="/referenzen">
-          <button class="border-2 rounded-md text-wesolve-accent-coral-500 border-wesolve-accent-coral-500 py-4 px-8 font-semibold">Mehr Referenzen</button>
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #f8fafc; /* Slate-50 Ersatz */
+      background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+    h1, h2, h3, .font-display {
+      font-family: 'Barlow Condensed', sans-serif;
+    }
+    .glass-card {
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.5);
+    }
+    /* Smooth Scroll */
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+
+<body class="text-slate-800 antialiased overflow-x-hidden">
+  
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PQ4KTLTR"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <div x-data="{ loaded: false }" x-init="setTimeout(() => loaded = true, 100)" class="max-w-screen-xl px-6 mx-auto pt-16 pb-24 relative">
+    
+    <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] bg-rose-200/30 rounded-full blur-3xl -z-10 pointer-events-none"></div>
+
+    <div 
+      class="text-center mb-16 transition-all duration-1000 transform"
+      :class="loaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'"
+    >
+      <div class="relative inline-block group cursor-default">
+        <div class="absolute inset-0 bg-rose-400 rounded-full blur opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
+        <img src="../assets/img/1597497751.png" alt="LU-BU Restaurant Logo" class="relative h-24 mx-auto object-contain drop-shadow-sm transition-transform duration-300 group-hover:scale-105" />
+      </div>
+
+      <div class="mt-6 flex justify-center">
+        <span class="inline-flex items-center px-4 py-2 rounded-full text-sm font-bold bg-emerald-50 text-emerald-700 ring-1 ring-emerald-200 shadow-sm transition-all hover:shadow-md hover:bg-emerald-100 cursor-default">
+          <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          Catering Platz 1 (Google)
+        </span>
+      </div>
+    </div>
+
+    <div 
+      class="relative mb-24 group transition-all duration-1000 delay-200 transform"
+      :class="loaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'"
+    >
+      <div class="absolute inset-0 bg-gradient-to-r from-slate-200 to-slate-100 transform skew-y-3 rounded-3xl -z-10 shadow-lg"></div>
+      
+      <img 
+        src="../assets/img/Bildschirmfoto-2024-04-30-um-14.56.41.png" 
+        alt="Bild der Applikation" 
+        class="rounded-xl shadow-2xl md:w-5/6 object-contain mx-auto border-4 border-white transition-transform duration-500 hover:scale-[1.01]" 
+      />
+    </div>
+
+    <div 
+      class="grid lg:grid-cols-2 gap-10 lg:gap-16 mb-20 transition-all duration-1000 delay-300 transform"
+      :class="loaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'"
+    >
+      
+      <div class="glass-card p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col justify-between">
+        <div>
+          <div class="flex items-center mb-4">
+            <div class="p-2 bg-rose-100 rounded-lg text-rose-500 mr-4">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+            </div>
+            <h1 class="text-3xl font-display font-bold text-slate-900">Das Projekt</h1>
+          </div>
+          
+          <p class="text-slate-600 leading-relaxed mb-8">
+            Für LU-BU haben wir eine maßgeschneiderte Catering-Seite entwickelt und diese anschließend intensiv im Bereich <strong class="text-slate-800">SEO</strong> betreut. Das Ergebnis: <span class="bg-emerald-100 text-emerald-800 px-1 rounded font-semibold">Platz 1</span> bei Google für das Keyword "Sushi Catering Nürnberg".
+          </p>
+          <p class="text-slate-600 leading-relaxed">
+            Das Design orientiert sich strikt am Corporate Identity des Kunden, um ein nahtloses Markenerlebnis zu schaffen. Der Inhalt wurde in enger Kooperation erarbeitet und für maximale Conversion optimiert.
+          </p>
+        </div>
+
+        <div class="flex flex-col sm:flex-row gap-4 mt-10">
+          <a href="/referenzen" class="flex-1">
+            <button class="w-full py-3 px-6 rounded-lg font-semibold border-2 border-rose-500 text-rose-500 hover:bg-rose-50 transition-all duration-300 focus:ring focus:ring-rose-200">
+              Mehr Referenzen
+            </button>
           </a>
-          <a href="/kontakt">
-          <button class="bg-wesolve-accent-coral-500 border-2 border-wesolve-accent-coral-500 font-semibold text-wesolve-gray-50 rounded-md py-4 px-8">Zur Projektanfrage</button>
+          <a href="/kontakt" class="flex-1">
+            <button class="w-full py-3 px-6 rounded-lg font-semibold bg-rose-500 text-white shadow-lg shadow-rose-500/30 hover:bg-rose-600 hover:shadow-rose-500/50 hover:-translate-y-1 transition-all duration-300">
+              Projekt anfragen
+            </button>
           </a>
         </div>
       </div>
-      <div>
-        <h1 class="text-2xl text-wesolve-gray-950 font-semibold mb-2">Kunde</h1>
-        <p class="text-wesolve-gray-950">LU-BU Asian Food ist ein Restauran im Herzen Nürnbergs. Dort kann man eine große Auswahl an köstlichen Asiatischen Spezialitäten genießen.</p>
 
-        <div class="border-t-4 border-wesolve-green mt-6 mb-2"></div>
+      <div class="space-y-8">
+        
+        <div class="glass-card p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 border-l-4 border-emerald-500">
+          <h2 class="text-2xl font-display font-bold text-slate-900 mb-3 flex items-center">
+            <svg class="w-5 h-5 mr-2 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+            Der Kunde
+          </h2>
+          <p class="text-slate-600">
+            LU-BU Asian Food ist ein beliebtes Restaurant im Herzen Nürnbergs. Bekannt für eine exquisite Auswahl an asiatischen Spezialitäten und authentischem Geschmackserlebnis.
+          </p>
+        </div>
 
-        <h1 class="text-wesolve-gray-900 text-2xl">Suchmaschinenoptimierung</h1>
-      </div>
+        <div class="bg-slate-900 text-white p-8 rounded-2xl shadow-xl relative overflow-hidden group">
+          <div class="absolute top-0 right-0 -mr-8 -mt-8 w-32 h-32 bg-emerald-500 rounded-full blur-2xl opacity-20 group-hover:opacity-30 transition-opacity duration-500"></div>
+          
+          <h2 class="text-2xl font-display font-bold mb-3 relative z-10">Suchmaschinenoptimierung</h2>
+          <p class="text-slate-300 relative z-10">
+            Durch gezielte On-Page und Off-Page Optimierung konnten wir die Sichtbarkeit massiv steigern. Ein Beweis dafür, dass gutes Design und technische Exzellenz Hand in Hand gehen.
+          </p>
+          <div class="mt-4 flex items-center text-emerald-400 text-sm font-semibold">
+            <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+            Performance gesteigert
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
 
   <div id="footer-placeholder"></div>
+
+  <script src="../js/navigation.js" defer></script>
 </body>
 </html>

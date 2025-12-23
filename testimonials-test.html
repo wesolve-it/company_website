@@ -1,0 +1,128 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero Banner - Web & App Entwicklung</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(-5deg); }
+            50% { transform: translateY(-15px) rotate(-5deg); }
+        }
+        @keyframes floatPhone {
+            0%, 100% { transform: translateY(0px) rotate(8deg); }
+            50% { transform: translateY(-12px) rotate(8deg); }
+        }
+        @keyframes dash {
+            0% { stroke-dashoffset: 1000; }
+            100% { stroke-dashoffset: 0; }
+        }
+        @keyframes pulse-slow {
+            0%, 100% { opacity: 0.3; transform: scale(1); }
+            50% { opacity: 0.6; transform: scale(1.05); }
+        }
+        @keyframes float-up {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .float-tablet { animation: float 4s ease-in-out infinite; }
+        .float-phone { animation: floatPhone 3.5s ease-in-out infinite; }
+        .dash-line {
+            stroke-dasharray: 10 10;
+            animation: dash 30s linear infinite;
+        }
+        .pulse-element { animation: pulse-slow 3s ease-in-out infinite; }
+        .float-up { animation: float-up 4s ease-in-out infinite; }
+        .rotate-slow { animation: rotate 20s linear infinite; }
+    </style>
+</head>
+<body>
+  <section class="bg-[#0f172a] py-24 px-4 overflow-hidden">
+    <div class="max-w-7xl mx-auto">
+        
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+            <div class="max-w-2xl">
+                <h3 class="text-blue-400 font-bold tracking-widest uppercase text-sm mb-4 flex items-center gap-2">
+                    <span class="w-8 h-[1px] bg-blue-400"></span> Success Stories
+                </h3>
+                <h2 class="text-3xl lg:text-5xl font-bold text-white leading-tight">
+                    Kunden, die den digitalen Wandel mit uns <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">gestalten.</span>
+                </h2>
+            </div>
+            <div class="hidden md:block">
+                <a href="/referenzen" class="group flex items-center gap-3 text-white font-semibold hover:text-blue-400 transition-colors">
+                    Alle Projekte ansehen
+                    <svg class="w-5 h-5 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                </a>
+            </div>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-10">
+            
+            <div class="group relative flex flex-col bg-slate-900/50 border border-slate-800 rounded-[2rem] overflow-hidden hover:border-blue-500/50 transition-all duration-500" data-aos="fade-up">
+                <div class="relative h-80 overflow-hidden">
+                    <img src="./assets/img/standing-ipad-mockup-1.webp" loading="lazy" alt="1. FC Nürnberg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#0f172a] via-transparent to-transparent opacity-60"></div>
+                    
+                    <div class="absolute top-6 left-6 px-4 py-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-white text-xs font-bold uppercase tracking-widest">
+                        Sport & Event
+                    </div>
+                </div>
+                
+                <div class="p-8 lg:p-10 flex flex-col flex-grow">
+                    <h4 class="text-2xl lg:text-3xl font-bold text-white mb-4">1. FC Nürnberg</h4>
+                    <p class="text-slate-400 leading-relaxed mb-8 text-lg">
+                        Effizienz am Spieltag: Eine maßgeschneiderte Business Seating App für reibungslose Abläufe im VIP-Bereich des Stadions.
+                    </p>
+                    
+                    <div class="mt-auto">
+                        <a href="/referenzen/fc-nuernberg" class="inline-flex items-center gap-2 px-6 py-3 bg-white text-slate-900 font-bold rounded-xl hover:bg-blue-500 hover:text-white transition-all duration-300 transform group-hover:shadow-[0_0_20px_rgba(59,130,246,0.4)]">
+                            Projekt Details
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="group relative flex flex-col bg-slate-900/50 border border-slate-800 rounded-[2rem] overflow-hidden hover:border-purple-500/50 transition-all duration-500" data-aos="fade-up" data-aos-delay="200">
+                <div class="relative h-80 overflow-hidden">
+                    <img src="./assets/img/exampleImage.webp" loading="lazy" alt="Alfafood GmbH" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#0f172a] via-transparent to-transparent opacity-60"></div>
+                    
+                    <div class="absolute top-6 left-6 px-4 py-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-white text-xs font-bold uppercase tracking-widest">
+                        E-Commerce & Web
+                    </div>
+                </div>
+                
+                <div class="p-8 lg:p-10 flex flex-col flex-grow">
+                    <h4 class="text-2xl lg:text-3xl font-bold text-white mb-4">Alfafood GmbH</h4>
+                    <p class="text-slate-400 leading-relaxed mb-8 text-lg">
+                        Autonomie im Web: Ein moderner Webauftritt, der es dem Team ermöglicht, Inhalte ohne technische Hilfe blitzschnell zu pflegen.
+                    </p>
+                    
+                    <div class="mt-auto">
+                        <a href="/referenzen/alfafood" class="inline-flex items-center gap-2 px-6 py-3 bg-white text-slate-900 font-bold rounded-xl hover:bg-purple-500 hover:text-white transition-all duration-300 transform group-hover:shadow-[0_0_20px_rgba(168,85,247,0.4)]">
+                            Projekt Details
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="mt-12 text-center md:hidden">
+            <a href="/referenzen" class="text-blue-400 font-bold underline decoration-2 underline-offset-8">Alle Erfolgsgeschichten</a>
+        </div>
+    </div>
+</section>
+</body>
+</html>

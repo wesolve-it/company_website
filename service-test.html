@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Features Section mit Illustrationen</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        // Hier definieren wir Ihre Farben, damit Tailwind sie versteht
+                        primary: '#314f3e', // Dunkelgrün
+                        accent: '#ffc107',  // Gold/Orange
+                    },
+                    animation: {
+                        // Die Animation für die Hintergrund-Blobs
+                        blob: "blob 7s infinite",
+                    },
+                    keyframes: {
+                        blob: {
+                            "0%": { transform: "translate(0px, 0px) scale(1)" },
+                            "33%": { transform: "translate(30px, -50px) scale(1.1)" },
+                            "66%": { transform: "translate(-20px, 20px) scale(0.9)" },
+                            "100%": { transform: "translate(0px, 0px) scale(1)" },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Hilfsklassen für verzögerte Animationen */
+        .animation-delay-2000 { animation-delay: 2s; }
+        .animation-delay-4000 { animation-delay: 4s; }
+    </style>
+</head>
+<body class="bg-white">
+
+    <section class="relative bg-gray-50 py-24 px-4 overflow-hidden">
+        <div class="absolute top-0 left-1/4 w-96 h-96 bg-primary/5 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob"></div>
+        <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-accent/10 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-2000"></div>
+        
+        <div class="relative z-10 max-w-7xl mx-auto">
+            
+            <div class="text-center max-w-3xl mx-auto mb-20">
+                <h2 class="text-4xl md:text-5xl font-bold text-primary mb-6 tracking-tight">
+                    Digitale Lösungen, die <span class="relative inline-block after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-full after:h-3 after:bg-accent/20 after:-rotate-1">begeistern</span>.
+                </h2>
+                <p class="text-xl text-gray-500 leading-relaxed">
+                    Wir verwandeln komplexe Anforderungen in einfache, elegante Nutzererlebnisse. Konzentrieren Sie sich auf Ihr Geschäft – wir kümmern uns um den Rest.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+                
+                <div class="group relative bg-white rounded-3xl shadow-sm hover:shadow-xl hover:shadow-primary/5 transition-all duration-500 overflow-hidden flex flex-col">
+                    <div class="relative h-64 bg-primary/5 flex items-center justify-center overflow-hidden p-6">
+                        <div class="absolute -right-4 -bottom-8 text-9xl font-bold text-primary/10 select-none z-0">01</div>
+                        
+                        <div class="w-full h-full relative z-10 transition-transform duration-500 group-hover:scale-105 origin-bottom">
+                            <svg class="w-full h-auto max-h-full drop-shadow-sm" viewBox="0 0 200 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="10" y="20" width="160" height="120" rx="8" class="fill-white stroke-primary/10" stroke-width="2"/>
+                                <path d="M10 28C10 23.5817 13.5817 20 18 20H162C166.418 20 170 23.5817 170 28V40H10V28Z" class="fill-primary/10"/>
+                                <circle cx="25" cy="30" r="3" class="fill-primary/30"/>
+                                <circle cx="35" cy="30" r="3" class="fill-primary/30"/>
+                                <circle cx="45" cy="30" r="3" class="fill-primary/30"/>
+                                <rect x="30" y="60" width="60" height="60" rx="4" class="fill-primary/10 group-hover:fill-accent/20 transition-colors duration-500"/>
+                                <rect x="100" y="60" width="50" height="10" rx="2" class="fill-primary/20"/>
+                                <rect x="100" y="80" width="40" height="10" rx="2" class="fill-primary/20"/>
+                                <rect x="100" y="100" width="30" height="10" rx="2" class="fill-primary/20"/>
+                                <rect x="140" y="70" width="45" height="80" rx="6" class="fill-white stroke-accent" stroke-width="2" transform="rotate(-12 140 70)"/>
+                                <rect x="148" y="85" width="28" height="50" rx="2" class="fill-accent/10 group-hover:fill-accent/20 transition-colors duration-500" transform="rotate(-12 140 70)"/>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="p-8 flex flex-col flex-grow relative z-10 border-t border-gray-50">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-primary transition-colors duration-300">Webentwicklung</h3>
+                        <p class="text-gray-600 mb-8 leading-relaxed flex-grow">
+                            Responsive Webseiten, die nicht nur gut aussehen, sondern auch performen. Wir schaffen digitale Aushängeschilder, die Besucher in Kunden verwandeln.
+                        </p>
+                        <a href="#" class="inline-flex items-center text-primary font-semibold group-hover:text-accent transition-colors duration-300">
+                            <span>Details ansehen</span>
+                            <svg class="w-5 h-5 ml-2 transform group-hover:translate-x-2 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="group relative bg-white rounded-3xl shadow-sm hover:shadow-xl hover:shadow-primary/5 transition-all duration-500 overflow-hidden flex flex-col">
+                    <div class="relative h-64 bg-accent/5 flex items-center justify-center overflow-hidden p-6">
+                        <div class="absolute -right-4 -bottom-8 text-9xl font-bold text-accent/10 select-none z-0">02</div>
+                        
+                        <div class="w-full h-full relative z-10 transition-transform duration-500 group-hover:scale-105 origin-bottom">
+                            <svg class="w-full h-auto max-h-full drop-shadow-sm" viewBox="0 0 200 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M150 60C150 48.9543 141.046 40 130 40C122.366 40 115.729 44.2702 112.358 50.563C109.883 48.9118 106.927 48 103.75 48C94.7754 48 87.5 55.2754 87.5 64.25C87.5 65.675 87.6831 67.0585 88.0291 68.3864C82.6723 70.3935 78.75 75.5433 78.75 81.625C78.75 89.7011 85.2989 96.25 93.375 96.25H145C156.046 96.25 165 87.2957 165 76.25C165 68.1739 159.11 59.9468 150 60Z" class="fill-primary/5 stroke-primary/10" stroke-width="2"/>
+                                <rect x="50" y="30" width="60" height="110" rx="10" class="fill-white stroke-primary" stroke-width="2"/>
+                                <rect x="55" y="40" width="50" height="90" rx="6" class="fill-accent/10 group-hover:fill-accent/20 transition-colors duration-500"/>
+                                <circle cx="80" cy="60" r="15" class="fill-accent/30"/>
+                                <rect x="65" y="85" width="30" height="8" rx="2" class="fill-primary/20"/>
+                                <rect x="65" y="100" width="30" height="8" rx="2" class="fill-primary/20"/>
+                                <path d="M110 80L125 70" class="stroke-accent" stroke-width="2" stroke-dasharray="4 4"/>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="p-8 flex flex-col flex-grow relative z-10 border-t border-gray-50">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-primary transition-colors duration-300">App Solutions</h3>
+                        <p class="text-gray-600 mb-8 leading-relaxed flex-grow">
+                            Native und hybride Apps, die begeistern. Wir bringen Ihre Geschäftsprozesse und Angebote direkt in die Hosentasche Ihrer Kunden.
+                        </p>
+                        <a href="#" class="inline-flex items-center text-primary font-semibold group-hover:text-accent transition-colors duration-300">
+                            <span>Details ansehen</span>
+                            <svg class="w-5 h-5 ml-2 transform group-hover:translate-x-2 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="group relative bg-white rounded-3xl shadow-sm hover:shadow-xl hover:shadow-primary/5 transition-all duration-500 overflow-hidden flex flex-col">
+                    <div class="relative h-64 bg-primary/5 flex items-center justify-center overflow-hidden p-6">
+                        <div class="absolute -right-4 -bottom-8 text-9xl font-bold text-primary/10 select-none z-0">03</div>
+                        
+                        <div class="w-full h-full relative z-10 transition-transform duration-500 group-hover:scale-105 origin-bottom">
+                            <svg class="w-full h-auto max-h-full drop-shadow-sm" viewBox="0 0 200 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M40 130H160" class="stroke-primary/20" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M40 130V40" class="stroke-primary/20" stroke-width="2" stroke-linecap="round"/>
+                                <rect x="60" y="100" width="20" height="30" rx="2" class="fill-primary/20"/>
+                                <rect x="90" y="80" width="20" height="50" rx="2" class="fill-primary/30"/>
+                                <rect x="120" y="50" width="20" height="80" rx="2" class="fill-accent/80 group-hover:fill-accent transition-colors duration-500"/>
+                                <path d="M150 40L170 20M170 20H155M170 20V35" class="stroke-accent" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M60 95C60 95 90 75 120 45L160 25" class="stroke-accent/50" stroke-width="2" stroke-dasharray="6 6"/>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="p-8 flex flex-col flex-grow relative z-10 border-t border-gray-50">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-primary transition-colors duration-300">Digital Growth</h3>
+                        <p class="text-gray-600 mb-8 leading-relaxed flex-grow">
+                            Mehr als nur Technik. Mit SEO, Hosting und Support sorgen wir für nachhaltiges Wachstum Ihrer digitalen Präsenz.
+                        </p>
+                        <a href="#" class="inline-flex items-center text-primary font-semibold group-hover:text-accent transition-colors duration-300">
+                            <span>Details ansehen</span>
+                            <svg class="w-5 h-5 ml-2 transform group-hover:translate-x-2 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    </body>
+</html>

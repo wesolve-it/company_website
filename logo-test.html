@@ -1,0 +1,110 @@
+<style>
+/* Behalten Sie die Scroll-Animation bei */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-1 * var(--scroll-width)));
+  }
+}
+
+.logo-container {
+  display: flex;
+  overflow: hidden;
+  /* Mask-Effekt beibehalten für den dunklen Hintergrund */
+  mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
+}
+
+.logo-track {
+  display: flex;
+  animation: scroll 25s linear infinite;
+  will-change: transform;
+}
+
+.logo-container:hover .logo-track {
+  animation-play-state: paused;
+}
+
+/* WICHTIG: Die Monochrom-Filter werden entfernt. Die Logos behalten ihre Farben. */
+.logo-track img {
+  /* Hinzufügen einer leichten Transparenz, um sie im dunklen Hintergrund zu "verankern" */
+  opacity: 0.9; 
+  transition: all 0.3s ease-in-out;
+}
+
+/* Beim Hover: Leichter Gold-Glow wird beibehalten, um das festliche Banner-Thema aufzugreifen */
+.logo-track img:hover {
+  opacity: 1;
+  /* Dezenter Gold-Glow, um den festlichen Akzent zu setzen */
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.5); 
+  transform: scale(1.05); /* Weniger aggressiver Zoom */
+}
+
+</style>
+
+<div class="w-full overflow-hidden h-36 bg-gradient-to-r from-gray-900 via-black to-gray-900 shadow-inner shadow-black/50 py-4">
+  <div class="logo-container flex items-center h-full animate-scroll">
+    <div class="logo-track flex items-center">
+      
+      <div class="flex-shrink-0 mx-12 xl:mx-16">
+        <img src="./assets/img/FCN_Logo.webp" alt="1. FC Nürnberg Logo" class="h-20" loading="lazy" />
+      </div>
+      <div class="flex-shrink-0 mx-12 xl:mx-16">
+        <img src="./assets/img/Alfafood_Logo.webp" alt="Alfafood Logo" class="h-20" loading="lazy" />
+      </div>
+      <div class="flex-shrink-0 mx-12 xl:mx-16">
+        <img src="./assets/img/1597497751.png" alt="LU-BU Logo" class="h-14" loading="lazy" />
+      </div>
+      <div class="flex-shrink-0 mx-12 xl:mx-16">
+        <img src="./assets/img/FullLogo_Transparent_NoBuffer.1a93282d335c16541fb0.webp" loading="lazy" alt="dieschokoecke Logo" class="h-16" />
+      </div>
+      <div class="flex-shrink-0 mx-12 xl:mx-16">
+        <img src="./assets/img/377-5023880.webp" alt="Tobias Herrmann Logo" class="h-14" loading="lazy" />
+      </div>
+      <div class="flex-shrink-0 mx-12 xl:mx-16">
+        <img src="./assets/img/SportWeberLogoNeuklein.3caf40cb13b6ecc9538a.webp" alt="Sport Weber Logo" class="h-20" loading="lazy" />
+      </div>
+      <div class="flex-shrink-0 mx-12 xl:mx-16">
+        <img src="./assets/img/rootd-logo.webp" alt="Rootd. Logo" class="h-12" loading="lazy" />
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<script>
+  window.addEventListener("load", () => {
+    const track = document.querySelector(".logo-track");
+    const container = document.querySelector(".logo-container");
+
+    if (track && container) {
+      const logos = Array.from(track.children);
+      // Entfernen Sie alle vorhandenen Clones, falls das Skript mehrmals ausgeführt wird
+      const initialLogoCount = logos.length / 2; 
+      
+      // Nur die ersten (Original-)Logos klonen
+      for (let i = 0; i < initialLogoCount; i++) {
+        const clone = logos[i].cloneNode(true);
+        track.appendChild(clone);
+      }
+
+      // Berechnung der Scroll-Breite
+      const totalWidth = track.scrollWidth;
+      // WICHTIG: Die tatsächliche Breite der Original-Logos ohne Clones
+      const trackWidth = totalWidth / 2; 
+      
+      // Korrigierte CSS Variable setzen
+      track.style.setProperty("--scroll-width", `${trackWidth}px`);
+    };
+  })
+
+  window.addEventListener("resize", () => {
+  const track = document.querySelector(".logo-track");
+  if (track) {
+    // Neuberechnung der Scroll-Breite bei Größenänderung
+    const trackWidth = track.scrollWidth / 2;
+    track.style.setProperty("--scroll-width", `${trackWidth}px`);
+  }
+});
+</script>

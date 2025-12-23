@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edle Schokotrüffel | Handgemachte Genüsse</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Custom Keyframe Animations */
+        @keyframes float-slow {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(2deg); }
+        }
+        @keyframes float-medium {
+            0%, 100% { transform: translateY(0px) rotate(-3deg); }
+            50% { transform: translateY(-15px) rotate(3deg); }
+        }
+        @keyframes drift {
+            0% { transform: translateX(0) translateY(0); opacity: 0; }
+            50% { opacity: 0.8; }
+            100% { transform: translateX(100px) translateY(-50px); opacity: 0; }
+        }
+        @keyframes shine {
+            0% { background-position: -200% center; }
+            100% { background-position: 200% center; }
+        }
+        @keyframes pulse-gold {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.4); }
+            70% { box-shadow: 0 0 0 20px rgba(212, 175, 55, 0); }
+        }
+
+        .font-serif { font-family: 'Playfair Display', serif; }
+        .font-sans { font-family: 'Lato', sans-serif; }
+        
+        .float-slow { animation: float-slow 8s ease-in-out infinite; }
+        .float-medium { animation: float-medium 6s ease-in-out infinite; }
+        
+        /* Gold Gradient Text */
+        .text-gold-gradient {
+            background: linear-gradient(to right, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            background-size: 200% auto;
+            animation: shine 5s linear infinite;
+        }
+
+        /* Chocolate Gradient Background */
+        .bg-choco-gradient {
+            background: radial-gradient(circle at center, #5D4037 0%, #3E2723 60%, #1a100e 100%);
+        }
+
+    /* Custom Keyframe Animations */
+    @keyframes float-slow {
+        0%, 100% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(-20px) rotate(2deg); }
+    }
+    @keyframes float-medium {
+        0%, 100% { transform: translateY(0px) rotate(-3deg); }
+        50% { transform: translateY(-15px) rotate(3deg); }
+    }
+    /* NEU: Für fallenden Schnee/Funkeln */
+    @keyframes snowflake {
+        0% { transform: translateY(-100%) translateX(0); opacity: 0.8; }
+        100% { transform: translateY(100vh) translateX(50px); opacity: 0; }
+    }
+    @keyframes shine {
+        0% { background-position: -200% center; }
+        100% { background-position: 200% center; }
+    }
+    @keyframes pulse-gold {
+        0%, 100% { box-shadow: 0 0 0 0 rgba(255, 215, 0, 0.4); } /* Gold etwas heller gemacht */
+        70% { box-shadow: 0 0 0 20px rgba(255, 215, 0, 0); }
+    }
+
+    .font-serif { font-family: 'Playfair Display', serif; }
+    .font-sans { font-family: 'Lato', sans-serif; }
+    
+    .float-slow { animation: float-slow 8s ease-in-out infinite; }
+    .float-medium { animation: float-medium 6s ease-in-out infinite; }
+    
+    /* Gold Gradient Text - Beibehalten */
+    .text-gold-gradient {
+        background: linear-gradient(to right, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        background-size: 200% auto;
+        animation: shine 5s linear infinite;
+    }
+
+    /* Weihnachtlicher Hintergrund-Gradient (Tiefes Rot/Dunkelgrün) */
+    .bg-xmas-gradient {
+        /* Tiefes, festliches Rot mit leicht braunem Schimmer */
+        background: radial-gradient(circle at center, #8B0000 0%, #6A0000 60%, #4D0000 100%);
+        /* Alternative: Dunkles Tannen-Grün (Auskommentiert) */
+        /* background: radial-gradient(circle at center, #004D00 0%, #003300 60%, #001A00 100%); */
+    }
+    </style>
+</head>
+<body class="bg-[#4D0000] overflow-x-hidden text-white">
+
+    <div class="relative min-h-screen flex items-center justify-center overflow-hidden bg-xmas-gradient py-20 px-4">
+        
+        <div class="absolute inset-0 w-full h-full overflow-hidden pointer-events-none">
+            <div class="absolute w-[2px] h-[2px] bg-white rounded-full opacity-0 blur-[0.5px]" style="top: 5%; left: 10%; animation: snowflake 15s linear infinite 0s;"></div>
+            <div class="absolute w-[1px] h-[1px] bg-white rounded-full opacity-0 blur-[0.5px]" style="top: 15%; left: 30%; animation: snowflake 10s linear infinite 2s;"></div>
+            <div class="absolute w-[3px] h-[3px] bg-white rounded-full opacity-0 blur-[1px]" style="top: 25%; left: 70%; animation: snowflake 20s linear infinite 5s;"></div>
+            <div class="absolute w-[2px] h-[2px] bg-white rounded-full opacity-0 blur-[0.5px]" style="top: 40%; left: 5%; animation: snowflake 12s linear infinite 8s;"></div>
+            <div class="absolute w-[1px] h-[1px] bg-white rounded-full opacity-0 blur-[0.5px]" style="top: 50%; left: 90%; animation: snowflake 18s linear infinite 1s;"></div>
+            <div class="absolute w-[3px] h-[3px] bg-white rounded-full opacity-0 blur-[1px]" style="top: 60%; left: 50%; animation: snowflake 14s linear infinite 6s;"></div>
+            <div class="absolute w-[2px] h-[2px] bg-white rounded-full opacity-0 blur-[0.5px]" style="top: 75%; left: 80%; animation: snowflake 11s linear infinite 3s;"></div>
+            <div class="absolute w-[1px] h-[1px] bg-white rounded-full opacity-0 blur-[0.5px]" style="top: 85%; left: 20%; animation: snowflake 17s linear infinite 4s;"></div>
+
+            <div class="absolute top-1/4 left-1/4 w-2 h-2 bg-yellow-300 rounded-full opacity-0" style="animation: drift 4s infinite ease-in 1s;"></div>
+             <div class="absolute top-3/4 left-1/3 w-1 h-1 bg-yellow-100 rounded-full opacity-0" style="animation: drift 6s infinite ease-in 2s;"></div>
+             <div class="absolute bottom-1/4 right-1/4 w-3 h-3 bg-yellow-500 rounded-full blur-[2px] opacity-0" style="animation: drift 5s infinite ease-in 0.5s;"></div>
+        </div>
+
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-[#880000] rounded-full mix-blend-screen filter blur-3xl opacity-30"></div>
+        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 bg-[#b76e79] rounded-full mix-blend-screen filter blur-3xl opacity-15"></div>
+
+        <div class="max-w-7xl mx-auto text-center relative z-10" x-data="{ show: false }" x-init="setTimeout(() => show = true, 300)">
+            
+            <div class="absolute inset-0 pointer-events-none w-full h-full">
+                <div class="absolute top-10 left-0 lg:left-20 w-24 h-24 text-red-500/20 float-slow hidden md:block"
+                     x-show="show" x-transition:enter="transition duration-1000" x-transition:enter-start="opacity-0 -translate-x-10">
+                     <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27l6.18 3.73-1.64-7.03 5.46-4.73-7.19-.61L12 2 9.29 8.63 2.1 9.24l5.46 4.73-1.64 7.03z"/></svg>
+                </div>
+                
+                <div class="absolute bottom-20 right-0 lg:right-32 w-32 h-32 text-[#d7ccc8]/10 float-medium hidden md:block"
+                     x-show="show" x-transition:enter="transition duration-1000 delay-300" x-transition:enter-start="opacity-0 translate-x-10">
+                     <svg viewBox="0 0 200 200" fill="currentColor">
+                         <path d="M100 20C60 20 20 60 20 100C20 140 50 170 90 178V185C90 190 95 195 100 195C105 195 110 190 110 185V178C150 170 180 140 180 100C180 60 140 20 100 20ZM100 160C66.86 160 40 133.14 40 100C40 66.86 66.86 40 100 40C133.14 40 160 66.86 160 100C160 133.14 133.14 160 100 160Z"/>
+                     </svg>
+                </div>
+            </div>
+
+            <p class="font-sans text-red-400/90 tracking-[0.3em] uppercase text-sm mb-4" 
+                x-show="show" x-transition:enter="transition ease-out duration-700" x-transition:enter-start="opacity-0 translate-y-4">
+                Festliche Genüsse zur Weihnachtszeit
+            </p>
+
+            <h1 class="font-serif text-5xl sm:text-7xl lg:text-8xl text-white leading-tight mb-8" 
+                x-show="show" x-transition:enter="transition ease-out duration-1000 delay-200" x-transition:enter-start="opacity-0 translate-y-8">
+                <span class="block text-[#efebe9]">Weihnachts-</span>
+                <span class="relative inline-block mt-2">
+                    Schokolade
+                    <svg class="absolute w-full h-3 -bottom-2 text-red-500" viewBox="0 0 100 10" preserveAspectRatio="none">
+                        <path d="M0 5 Q 50 10 100 5" stroke="currentColor" stroke-width="2" fill="none" />
+                    </svg>
+                </span> <br/>
+                <span class="text-gold-gradient italic font-light">zauber</span>
+            </h1>
+
+            <p class="font-sans text-lg sm:text-xl text-stone-300 max-w-2xl mx-auto mb-10 leading-relaxed font-light"
+                x-show="show" x-transition:enter="transition ease-out duration-1000 delay-400" x-transition:enter-start="opacity-0 translate-y-8">
+                Die schönsten Geschenke sind die, die auf der Zunge zergehen. <br class="hidden sm:block">
+                Jetzt festliche Trüffel und Pralinen entdecken.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-6 justify-center items-center" 
+                 x-show="show" x-transition:enter="transition ease-out duration-1000 delay-500" x-transition:enter-start="opacity-0 translate-y-8">
+                
+                <a href="#shop" class="group relative px-8 py-4 bg-gradient-to-r from-red-600 to-red-700 rounded-full text-white font-serif tracking-wide shadow-[0_0_20px_rgba(180,83,9,0.3)] hover:shadow-[0_0_30px_rgba(180,83,9,0.5)] transition-all duration-300 transform hover:-translate-y-1 overflow-hidden">
+                    <span class="relative z-10 flex items-center gap-2">
+                        Zum Festtags-Shop
+                        <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                    </span>
+                    <div class="absolute inset-0 bg-gradient-to-r from-red-500 to-red-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </a>
+
+                <a href="#story" class="text-white/80 hover:text-white border-b border-yellow-500/30 hover:border-yellow-400 transition-all duration-300 pb-1 font-sans font-light">
+                    Perfekte Geschenkideen
+                </a>
+            </div>
+
+            <div class="mt-16 flex justify-center gap-8 opacity-70 grayscale hover:grayscale-0 transition-all duration-500"
+                 x-show="show" x-transition:enter="transition ease-in duration-1000 delay-700" x-transition:enter-start="opacity-0">
+                <div class="flex flex-col items-center gap-2">
+                    <div class="w-12 h-12 rounded-full border border-red-700 flex items-center justify-center text-red-400">
+                        <span class="text-xl">🎁</span> </div>
+                    <span class="text-xs text-stone-300 uppercase tracking-wider">Geschenke</span>
+                </div>
+                <div class="flex flex-col items-center gap-2">
+                    <div class="w-12 h-12 rounded-full border border-red-700 flex items-center justify-center text-red-400">
+                        <span class="text-xl">🌟</span> </div>
+                    <span class="text-xs text-stone-300 uppercase tracking-wider">Festlich</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
+</html>

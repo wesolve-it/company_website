@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero Banner - Web & App Entwicklung</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(-5deg); }
+            50% { transform: translateY(-15px) rotate(-5deg); }
+        }
+        @keyframes floatPhone {
+            0%, 100% { transform: translateY(0px) rotate(8deg); }
+            50% { transform: translateY(-12px) rotate(8deg); }
+        }
+        @keyframes dash {
+            0% { stroke-dashoffset: 1000; }
+            100% { stroke-dashoffset: 0; }
+        }
+        @keyframes pulse-slow {
+            0%, 100% { opacity: 0.3; transform: scale(1); }
+            50% { opacity: 0.6; transform: scale(1.05); }
+        }
+        @keyframes float-up {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .float-tablet { animation: float 4s ease-in-out infinite; }
+        .float-phone { animation: floatPhone 3.5s ease-in-out infinite; }
+        .dash-line {
+            stroke-dasharray: 10 10;
+            animation: dash 30s linear infinite;
+        }
+        .pulse-element { animation: pulse-slow 3s ease-in-out infinite; }
+        .float-up { animation: float-up 4s ease-in-out infinite; }
+        .rotate-slow { animation: rotate 20s linear infinite; }
+    </style>
+</head>
+<body class="bg-gray-900">
+    <div class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-slate-900 to-gray-900 py-20 px-4">
+        
+        <!-- Grid Background -->
+        <div class="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f12_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f12_1px,transparent_1px)] bg-[size:3rem_3rem] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_50%,#000_60%,transparent_100%)]"></div>
+        
+        <!-- Decorative Glows -->
+        <div class="absolute top-1/4 left-10 w-96 h-96 bg-gradient-to-br from-blue-600/20 to-purple-600/20 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-1/4 right-10 w-96 h-96 bg-gradient-to-br from-purple-600/20 to-pink-600/20 rounded-full blur-3xl"></div>
+        
+        <div class="max-w-7xl mx-auto text-center relative z-10" x-data="{ show: false }" x-init="setTimeout(() => show = true, 100)">
+            
+            <!-- Floating Tech Elements -->
+            <div class="absolute inset-0 pointer-events-none">
+                <!-- Code Brackets -->
+                <div class="absolute top-20 left-10 text-6xl text-purple-500/30 font-mono pulse-element" x-show="show" x-transition:enter="transition ease-out duration-1000 delay-200" x-transition:enter-start="opacity-0 scale-0" x-transition:enter-end="opacity-100 scale-100">&lt;/&gt;</div>
+                
+                <!-- Terminal Window -->
+                <div class="absolute top-32 right-16 w-48 h-32 bg-gray-800/40 backdrop-blur-sm border border-gray-700/50 rounded-lg p-3 float-up" x-show="show" x-transition:enter="transition ease-out duration-1000 delay-300" x-transition:enter-start="opacity-0 translate-x-20" x-transition:enter-end="opacity-100 translate-x-0">
+                    <div class="flex gap-1.5 mb-2">
+                        <div class="w-2.5 h-2.5 rounded-full bg-red-500/60"></div>
+                        <div class="w-2.5 h-2.5 rounded-full bg-yellow-500/60"></div>
+                        <div class="w-2.5 h-2.5 rounded-full bg-green-500/60"></div>
+                    </div>
+                    <div class="space-y-1.5 font-mono text-xs text-green-400/70">
+                        <div>$ npm run dev</div>
+                        <div class="text-gray-500">Building...</div>
+                        <div class="text-blue-400">✓ Ready in 2s</div>
+                    </div>
+                </div>
+                
+                <!-- API Badge -->
+                <div class="absolute top-1/3 left-20 px-4 py-2 bg-gradient-to-r from-blue-600/20 to-cyan-600/20 border border-blue-500/30 rounded-full text-cyan-400 text-sm font-mono backdrop-blur-sm pulse-element" x-show="show" x-transition:enter="transition ease-out duration-1000 delay-400" x-transition:enter-start="opacity-0 -translate-x-20" x-transition:enter-end="opacity-100 translate-x-0">
+                    API
+                </div>
+                
+                <!-- Gear Icon -->
+                <div class="absolute bottom-1/3 left-32 w-16 h-16 rotate-slow" x-show="show" x-transition:enter="transition ease-out duration-1000 delay-500" x-transition:enter-start="opacity-0 scale-0" x-transition:enter-end="opacity-100 scale-100">
+                    <svg viewBox="0 0 24 24" fill="none" class="text-purple-500/20" stroke="currentColor" stroke-width="1.5">
+                        <path d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z"/>
+                        <path d="M19.622 10.395l-1.097-2.65L20 6l-2-2-1.735 1.483-2.707-1.113L12.935 2h-2.954l-.632 2.401-2.645 1.115L5 4 3 6l1.453 1.789-1.08 2.657L1 11v2l2.401.655L4.49 16.3 3 18l2 2 1.791-1.46 2.606 1.072L10 22h2l.604-2.387 2.651-1.098C16.697 18.831 18 20 18 20l2-2-1.484-1.75 1.098-2.652 2.386-.62V11l-2.378-.605z"/>
+                    </svg>
+                </div>
+                
+                <!-- Database Icon -->
+                <div class="absolute bottom-1/4 right-24 w-12 h-12 pulse-element" x-show="show" x-transition:enter="transition ease-out duration-1000 delay-600" x-transition:enter-start="opacity-0 translate-y-20" x-transition:enter-end="opacity-100 translate-y-0">
+                    <svg viewBox="0 0 24 24" fill="none" class="text-blue-500/30" stroke="currentColor" stroke-width="1.5">
+                        <ellipse cx="12" cy="5" rx="9" ry="3"/>
+                        <path d="M3 5V19C3 20.6569 7.02944 22 12 22C16.9706 22 21 20.6569 21 19V5"/>
+                        <path d="M3 12C3 13.6569 7.02944 15 12 15C16.9706 15 21 13.6569 21 12"/>
+                    </svg>
+                </div>
+                
+                <!-- React Logo -->
+                <div class="absolute top-1/2 right-32 w-14 h-14 rotate-slow" x-show="show" x-transition:enter="transition ease-out duration-1000 delay-700" x-transition:enter-start="opacity-0 scale-0" x-transition:enter-end="opacity-100 scale-100">
+                    <svg viewBox="0 0 24 24" fill="none" class="text-cyan-500/20" stroke="currentColor" stroke-width="1">
+                        <ellipse cx="12" cy="12" rx="10" ry="4"/>
+                        <ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(60 12 12)"/>
+                        <ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(-60 12 12)"/>
+                        <circle cx="12" cy="12" r="2" fill="currentColor"/>
+                    </svg>
+                </div>
+                
+                <!-- Cloud Icon -->
+                <div class="absolute top-1/4 right-1/4 w-16 h-16 float-up" x-show="show" x-transition:enter="transition ease-out duration-1000 delay-800" x-transition:enter-start="opacity-0 -translate-y-20" x-transition:enter-end="opacity-100 translate-y-0">
+                    <svg viewBox="0 0 24 24" fill="none" class="text-indigo-500/20" stroke="currentColor" stroke-width="1.5">
+                        <path d="M18.5 19H6.5C4.01472 19 2 16.9853 2 14.5C2 12.0147 4.01472 10 6.5 10C6.5 7.51472 8.51472 5 11 5C13.4853 5 15.5 7.51472 15.5 10H17.5C19.7091 10 21.5 11.7909 21.5 14C21.5 16.2091 19.7091 18 17.5 18"/>
+                    </svg>
+                </div>
+                
+                <!-- Binary code -->
+                <div class="absolute bottom-1/3 right-1/3 text-3xl text-green-500/20 font-mono pulse-element" x-show="show" x-transition:enter="transition ease-out duration-1000 delay-900" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100">01</div>
+                
+                <!-- Small sparkles -->
+                <div class="absolute top-1/3 right-1/4 w-3 h-3 bg-yellow-400/40 rounded-full pulse-element"></div>
+                <div class="absolute bottom-1/3 left-1/3 w-2 h-2 bg-blue-400/40 rounded-full pulse-element"></div>
+                <div class="absolute top-2/3 right-1/3 w-2.5 h-2.5 bg-purple-400/40 rounded-full pulse-element"></div>
+            </div>
+            
+            <!-- Main Content -->
+            <div class="mb-16">
+                <!-- Headline with decorative elements -->
+                <div class="relative inline-block">
+                    <h1 class="text-6xl sm:text-7xl lg:text-8xl font-bold text-white leading-tight mb-6" x-show="show" x-transition:enter="transition ease-out duration-700" x-transition:enter-start="opacity-0 translate-y-8" x-transition:enter-end="opacity-100 translate-y-0">
+                        <span class="relative inline-block">
+                            Wir entwickeln
+                            <svg class="absolute -top-6 -right-12 w-16 h-16 text-purple-400" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path class="dash-line" d="M20,50 Q30,20 50,30 T80,50" stroke="currentColor" stroke-width="3" fill="none"/>
+                                <circle cx="80" cy="50" r="5" fill="currentColor"/>
+                            </svg>
+                        </span>
+                        <br/>
+                        <span class="relative">
+                            Ihre
+                            <span class="relative inline-block mx-3">
+                                <!-- Tablet Device -->
+                                <span class="inline-block align-middle float-tablet" style="width: 120px; height: 90px; margin: 0 20px;">
+                                    <svg viewBox="0 0 120 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <!-- Tablet body -->
+                                        <rect x="10" y="5" width="100" height="75" rx="8" fill="#1F2937" stroke="#4B5563" stroke-width="2"/>
+                                        <!-- Screen -->
+                                        <rect x="15" y="10" width="90" height="58" rx="4" fill="url(#tablet-gradient)"/>
+                                        <!-- Screen content bars -->
+                                        <rect x="22" y="17" width="35" height="4" rx="2" fill="#8B5CF6" opacity="0.8"/>
+                                        <rect x="22" y="26" width="76" height="3" rx="1.5" fill="#6B7280" opacity="0.5"/>
+                                        <rect x="22" y="33" width="76" height="3" rx="1.5" fill="#6B7280" opacity="0.5"/>
+                                        <rect x="22" y="40" width="55" height="3" rx="1.5" fill="#6B7280" opacity="0.5"/>
+                                        <!-- App icons -->
+                                        <rect x="22" y="50" width="12" height="12" rx="3" fill="#6366F1" opacity="0.6"/>
+                                        <rect x="38" y="50" width="12" height="12" rx="3" fill="#8B5CF6" opacity="0.6"/>
+                                        <rect x="54" y="50" width="12" height="12" rx="3" fill="#A78BFA" opacity="0.6"/>
+                                        <!-- Home button -->
+                                        <circle cx="60" cy="75" r="3" fill="#9CA3AF"/>
+                                        <!-- Glow effect -->
+                                        <rect x="15" y="10" width="90" height="58" rx="4" fill="url(#tablet-glow)" opacity="0.3"/>
+                                        
+                                        <defs>
+                                            <linearGradient id="tablet-gradient" x1="15" y1="10" x2="15" y2="68" gradientUnits="userSpaceOnUse">
+                                                <stop stop-color="#1F2937"/>
+                                                <stop offset="1" stop-color="#111827"/>
+                                            </linearGradient>
+                                            <linearGradient id="tablet-glow" x1="15" y1="10" x2="15" y2="68" gradientUnits="userSpaceOnUse">
+                                                <stop stop-color="#8B5CF6" opacity="0.3"/>
+                                                <stop offset="1" stop-color="transparent"/>
+                                            </linearGradient>
+                                        </defs>
+                                    </svg>
+                                </span>
+                                digitale
+                            </span>
+                            <br/>
+                            <span class="relative inline-block bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 text-transparent bg-clip-text">
+                                Vision
+                                <!-- Phone Device -->
+                                <span class="inline-block align-middle float-phone ml-4" style="width: 60px; height: 110px;">
+                                    <svg viewBox="0 0 60 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <!-- Phone body -->
+                                        <rect x="5" y="5" width="50" height="100" rx="10" fill="#111827" stroke="#374151" stroke-width="2"/>
+                                        <!-- Screen -->
+                                        <rect x="9" y="12" width="42" height="82" rx="6" fill="url(#phone-gradient)"/>
+                                        <!-- Notch -->
+                                        <rect x="22" y="12" width="16" height="4" rx="2" fill="#111827"/>
+                                        <!-- Screen content -->
+                                        <circle cx="30" cy="30" r="8" fill="#60A5FA" opacity="0.5"/>
+                                        <rect x="15" y="44" width="30" height="3" rx="1.5" fill="#6B7280" opacity="0.6"/>
+                                        <rect x="15" y="51" width="25" height="3" rx="1.5" fill="#6B7280" opacity="0.6"/>
+                                        <rect x="15" y="58" width="30" height="3" rx="1.5" fill="#6B7280" opacity="0.6"/>
+                                        <!-- Bottom icons -->
+                                        <circle cx="18" cy="82" r="4" fill="#8B5CF6" opacity="0.6"/>
+                                        <circle cx="30" cy="82" r="4" fill="#6366F1" opacity="0.6"/>
+                                        <circle cx="42" cy="82" r="4" fill="#3B82F6" opacity="0.6"/>
+                                        <!-- Glow effect -->
+                                        <rect x="9" y="12" width="42" height="82" rx="6" fill="url(#phone-glow)" opacity="0.2"/>
+                                        
+                                        <defs>
+                                            <linearGradient id="phone-gradient" x1="9" y1="12" x2="9" y2="94" gradientUnits="userSpaceOnUse">
+                                                <stop stop-color="#1F2937"/>
+                                                <stop offset="1" stop-color="#111827"/>
+                                            </linearGradient>
+                                            <linearGradient id="phone-glow" x1="9" y1="12" x2="9" y2="94" gradientUnits="userSpaceOnUse">
+                                                <stop stop-color="#3B82F6" opacity="0.4"/>
+                                                <stop offset="1" stop-color="transparent"/>
+                                            </linearGradient>
+                                        </defs>
+                                    </svg>
+                                </span>
+                            </span>
+                        </span>
+                    </h1>
+                    
+                    <!-- Sparkle decorations -->
+                    <svg class="absolute -top-8 left-20 w-8 h-8 text-yellow-400 opacity-80" x-show="show" x-transition:enter="transition ease-out duration-500 delay-300" x-transition:enter-start="opacity-0 scale-0" x-transition:enter-end="opacity-100 scale-100" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0L14.59 8.41L23 11L14.59 13.59L12 22L9.41 13.59L1 11L9.41 8.41L12 0Z"/>
+                    </svg>
+                    <svg class="absolute top-12 -right-16 w-6 h-6 text-blue-400 opacity-80" x-show="show" x-transition:enter="transition ease-out duration-500 delay-500" x-transition:enter-start="opacity-0 scale-0" x-transition:enter-end="opacity-100 scale-100" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0L14.59 8.41L23 11L14.59 13.59L12 22L9.41 13.59L1 11L9.41 8.41L12 0Z"/>
+                    </svg>
+                </div>
+                
+                <p class="text-xl sm:text-2xl text-gray-400 max-w-3xl mx-auto mt-8 leading-relaxed" x-show="show" x-transition:enter="transition ease-out duration-700 delay-200" x-transition:enter-start="opacity-0 translate-y-8" x-transition:enter-end="opacity-100 translate-y-0">
+                    Von MVPs bis zur technischen Betreuung – wir verwandeln Ihre Ideen in erfolgreiche digitale Produkte 🚀
+                </p>
+            </div>
+            
+            <!-- CTA Buttons -->
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center" x-show="show" x-transition:enter="transition ease-out duration-700 delay-400" x-transition:enter-start="opacity-0 translate-y-8" x-transition:enter-end="opacity-100 translate-y-0">
+                <button class="px-10 py-5 bg-gradient-to-r from-purple-600 to-blue-600 text-white text-lg font-semibold rounded-full hover:from-purple-500 hover:to-blue-500 transform hover:scale-105 transition-all duration-300 shadow-lg shadow-purple-500/30">
+                    Projekt starten
+                </button>
+                <button class="px-10 py-5 text-white text-lg font-semibold hover:text-gray-300 transition-colors duration-300 underline decoration-2 underline-offset-4 decoration-purple-400">
+                    Mehr erfahren
+                </button>
+            </div>
+            
+        </div>
+        
+    </div>
+
+
+
+
+
+
+    <style>
+    @keyframes blob {
+        0% { transform: translate(0px, 0px) scale(1); }
+        33% { transform: translate(30px, -50px) scale(1.1); }
+        66% { transform: translate(-20px, 20px) scale(0.9); }
+        100% { transform: translate(0px, 0px) scale(1); }
+    }
+    .animate-blob {
+        animation: blob 7s infinite;
+    }
+    .animation-delay-2000 {
+        animation-delay: 2s;
+    }
+    .animation-delay-4000 {
+        animation-delay: 4s;
+    }
+</style>
+
+<section class="relative bg-gray-50 py-24 px-4 overflow-hidden">
+    <div class="absolute top-0 left-1/4 w-96 h-96 bg-primary/5 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob"></div>
+    <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-accent/10 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-2000"></div>
+    
+    <div class="relative z-10 max-w-7xl mx-auto">
+        
+        <div class="text-center max-w-3xl mx-auto mb-20" data-aos="fade-up">
+            <h2 class="text-4xl md:text-5xl font-bold text-primary mb-6 tracking-tight">
+                Digitale Lösungen, die <span class="relative inline-block after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-full after:h-3 after:bg-accent/20 after:-rotate-1">begeistern</span>.
+            </h2>
+            <p class="text-xl text-gray-500 leading-relaxed">
+                Wir verwandeln komplexe Anforderungen in einfache, elegante Nutzererlebnisse. Konzentrieren Sie sich auf Ihr Geschäft – wir kümmern uns um den Rest.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+            
+            <div class="group relative bg-white rounded-3xl shadow-sm hover:shadow-xl hover:shadow-primary/5 transition-all duration-500 overflow-hidden flex flex-col" data-aos="fade-up" data-aos-delay="100">
+                <div class="relative h-56 bg-primary/5 flex items-center justify-center overflow-hidden p-6">
+                    <div class="absolute -right-4 -bottom-8 text-9xl font-bold text-primary/10 select-none z-0">01</div>
+                    
+                    <div class="w-full h-full relative z-10 transition-transform duration-500 group-hover:scale-105">
+                        <svg class="w-full h-full" viewBox="0 0 200 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="20" y="20" width="140" height="100" rx="8" class="fill-white stroke-primary/20" stroke-width="2"/>
+                            <rect x="20" y="20" width="140" height="20" rx="8" class="fill-primary/10"/>
+                            <circle cx="35" cy="30" r="3" class="fill-primary/30"/>
+                            <circle cx="45" cy="30" r="3" class="fill-primary/30"/>
+                            <rect x="60" y="28" width="80" height="4" rx="2" class="fill-white"/>
+                            <rect x="35" y="55" width="50" height="40" rx="4" class="fill-primary/20 group-hover:fill-accent/30 transition-colors duration-500"/>
+                            <rect x="95" y="55" width="50" height="8" rx="2" class="fill-primary/30"/>
+                            <rect x="95" y="70" width="40" height="8" rx="2" class="fill-primary/30"/>
+                            <rect x="95" y="85" width="30" height="8" rx="2" class="fill-primary/30"/>
+                            <rect x="130" y="60" width="40" height="70" rx="6" class="fill-white stroke-accent shadow-sm" stroke-width="2" transform="rotate(-10 150 95)"/>
+                            <rect x="135" y="70" width="30" height="50" rx="2" class="fill-primary/5" transform="rotate(-10 150 95)"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="p-8 flex flex-col flex-grow relative z-10 border-t border-gray-50">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-primary transition-colors duration-300">Webentwicklung</h3>
+                    <p class="text-gray-600 mb-8 leading-relaxed flex-grow">
+                        Responsive Webseiten, die nicht nur gut aussehen, sondern auch performen. Wir schaffen digitale Aushängeschilder, die Besucher in Kunden verwandeln.
+                    </p>
+                    <a href="/leistungen/webentwicklung" class="inline-flex items-center text-primary font-semibold group-hover:text-accent transition-colors duration-300">
+                        <span>Details ansehen</span>
+                        <svg class="w-5 h-5 ml-2 transform group-hover:translate-x-2 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="group relative bg-white rounded-3xl shadow-sm hover:shadow-xl hover:shadow-primary/5 transition-all duration-500 overflow-hidden flex flex-col" data-aos="fade-up" data-aos-delay="200">
+                <div class="relative h-56 bg-accent/5 flex items-center justify-center overflow-hidden p-6">
+                    <div class="absolute -right-4 -bottom-8 text-9xl font-bold text-accent/10 select-none z-0">02</div>
+                    
+                    <div class="w-full h-full relative z-10 transition-transform duration-500 group-hover:scale-105">
+                        <svg class="w-full h-full" viewBox="0 0 200 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M140 40C140 28.9543 131.046 20 120 20C112.366 20 105.729 24.2702 102.358 30.563C99.8833 28.9118 96.9274 28 93.75 28C84.7754 28 77.5 35.2754 77.5 44.25C77.5 45.675 77.6831 47.0585 78.0291 48.3864C72.6723 50.3935 68.75 55.5433 68.75 61.625C68.75 69.7011 75.2989 76.25 83.375 76.25H135C146.046 76.25 155 67.2957 155 56.25C155 48.1739 149.11 39.9468 140 40Z" class="fill-primary/10 stroke-primary/20" stroke-width="2"/>
+                            <path d="M115 76V100" class="stroke-primary/30" stroke-width="2" stroke-dasharray="4 4"/>
+                            <path d="M85 100L115 76L145 100" class="stroke-accent/50" stroke-width="2"/>
+                            <rect x="70" y="80" width="50" height="80" rx="8" class="fill-white stroke-primary" stroke-width="2"/>
+                            <rect x="75" y="90" width="40" height="50" rx="4" class="fill-accent/10 group-hover:fill-accent/20 transition-colors duration-500"/>
+                            <circle cx="95" cy="150" r="3" class="fill-primary/30"/>
+                            
+                            <rect x="120" y="95" width="45" height="70" rx="6" class="fill-white stroke-accent" stroke-width="2" opacity="0.8"/>
+                             <rect x="125" y="105" width="35" height="40" rx="3" class="fill-primary/5"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="p-8 flex flex-col flex-grow relative z-10 border-t border-gray-50">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-primary transition-colors duration-300">App Solutions</h3>
+                    <p class="text-gray-600 mb-8 leading-relaxed flex-grow">
+                        Native und hybride Apps, die begeistern. Wir bringen Ihre Geschäftsprozesse und Angebote direkt in die Hosentasche Ihrer Kunden.
+                    </p>
+                    <a href="/leistungen/app-entwicklung" class="inline-flex items-center text-primary font-semibold group-hover:text-accent transition-colors duration-300">
+                        <span>Details ansehen</span>
+                        <svg class="w-5 h-5 ml-2 transform group-hover:translate-x-2 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="group relative bg-white rounded-3xl shadow-sm hover:shadow-xl hover:shadow-primary/5 transition-all duration-500 overflow-hidden flex flex-col" data-aos="fade-up" data-aos-delay="300">
+                <div class="relative h-56 bg-primary/5 flex items-center justify-center overflow-hidden p-6">
+                    <div class="absolute -right-4 -bottom-8 text-9xl font-bold text-primary/10 select-none z-0">03</div>
+                    
+                    <div class="w-full h-full relative z-10 transition-transform duration-500 group-hover:scale-105">
+                        <svg class="w-full h-full" viewBox="0 0 200 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M40 120H160" class="stroke-primary/20" stroke-width="2"/>
+                            <path d="M40 120V40" class="stroke-primary/20" stroke-width="2"/>
+                            <rect x="50" y="90" width="20" height="30" rx="2" class="fill-primary/20"/>
+                            <rect x="80" y="70" width="20" height="50" rx="2" class="fill-primary/30"/>
+                            <rect x="110" y="40" width="20" height="80" rx="2" class="fill-accent/60 group-hover:fill-accent transition-colors duration-500"/>
+                            <path d="M140 100C140 100 150 60 170 40M170 40L145 45M170 40L165 65" class="stroke-accent" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="160" cy="100" r="15" class="fill-white stroke-primary/20" stroke-width="2"/>
+                             <path d="M168 108L175 115" class="stroke-primary/30" stroke-width="2" stroke-linecap="round"/>
+                             <circle cx="158" cy="98" r="6" class="fill-primary/10"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="p-8 flex flex-col flex-grow relative z-10 border-t border-gray-50">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-primary transition-colors duration-300">Digital Growth</h3>
+                    <p class="text-gray-600 mb-8 leading-relaxed flex-grow">
+                        Mehr als nur Technik. Mit gezieltem SEO, zuverlässigem Hosting und proaktivem Support sorgen wir für nachhaltiges Wachstum Ihrer digitalen Präsenz.
+                    </p>
+                    <a href="/leistungen/individual-software" class="inline-flex items-center text-primary font-semibold group-hover:text-accent transition-colors duration-300">
+                        <span>Details ansehen</span>
+                        <svg class="w-5 h-5 ml-2 transform group-hover:translate-x-2 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+</body>
+</html>
