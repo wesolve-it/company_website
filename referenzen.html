@@ -1,171 +1,155 @@
+<!DOCTYPE html>
 <html lang="de">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Referenzen | Wesolveit Digital</title>
+  <title>Referenzen | wesolve-IT</title>
   
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;400;700;900&display=swap" rel="stylesheet">
   
   <style>
-    body { 
-      font-family: 'Plus Jakarta Sans', sans-serif; 
-      background-color: #f0f4f3; 
-      color: #1a2e26;
+    /* Die exakte Farbpalette deiner Hauptseite */
+    :root {
+      --bg-dark: #020617;
+      --card-bg: rgba(15, 23, 42, 0.03); /* Ganz helles Slate für den 'hellen' Look */
+      --accent-blue: #3b82f6;
     }
 
-    /* Soft Organic Shapes */
+    body { 
+      font-family: 'Plus Jakarta Sans', sans-serif; 
+      background-color: #ffffff; 
+      color: #020617;
+    }
+
+    /* Bento-Card Style von der Hauptseite (angepasst auf Hell) */
     .bento-card {
-      background: rgba(255, 255, 255, 0.7);
-      backdrop-filter: blur(20px);
-      border: 1px solid rgba(255, 255, 255, 0.4);
-      border-radius: 40px; /* Sehr rund für modernen Look */
-      transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-      overflow: hidden;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 2.5rem;
+      transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
     .bento-card:hover {
-      transform: scale(1.02) translateY(-5px);
-      background: rgba(255, 255, 255, 0.9);
-      box-shadow: 0 40px 80px -20px rgba(0,0,0,0.08);
+      background: #ffffff;
+      border-color: #3b82f6;
+      box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.05);
+      transform: translateY(-5px);
     }
 
-    .img-container {
-      border-radius: 32px;
-      overflow: hidden;
-      margin: 12px;
+    /* Die markante Outline-Schrift der Hauptseite */
+    .text-outline {
+      -webkit-text-stroke: 1px #cbd5e1;
+      color: transparent;
     }
 
-    /* Animated Gradient Background */
-    .bg-gradient-mesh {
-      position: fixed;
-      top: 0; left: 0; width: 100%; height: 100%;
+    /* Glow-Effekte (wie im Hero) nur dezenter */
+    .glow-soft {
+      position: absolute;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(59, 130, 246, 0.05) 0%, transparent 70%);
       z-index: -1;
-      background: 
-        radial-gradient(circle at 0% 0%, #e8f5e9 0%, transparent 50%),
-        radial-gradient(circle at 100% 100%, #f1f8e9 0%, transparent 50%),
-        radial-gradient(circle at 50% 50%, #ffffff 0%, transparent 100%);
-    }
-
-    .pill-tag {
-      background: white;
-      padding: 6px 16px;
-      border-radius: 100px;
-      font-size: 0.7rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
     }
   </style>
 </head>
-<body class="antialiased">
+<body x-data="{ filter: 'all' }">
 
-  <div class="bg-gradient-mesh"></div>
+  <div class="glow-soft top-0 left-0"></div>
+  <div class="glow-soft bottom-0 right-0"></div>
 
-  <section class="pt-24 pb-16 px-6 text-center">
-    <div class="max-w-4xl mx-auto" data-aos="fade-down">
-      <div class="inline-flex items-center space-x-2 bg-emerald-100 text-emerald-800 px-4 py-2 rounded-full mb-8">
-        <span class="relative flex h-2 w-2">
-          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-          <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-        </span>
-        <span class="text-xs font-bold uppercase tracking-wider">Ready for 2025</span>
+  <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-xl border-b border-slate-100">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <div class="font-black text-2xl tracking-tighter uppercase italic">wesolve-IT</div>
+      <div class="hidden md:flex items-center space-x-10">
+        <a href="/" class="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 hover:text-blue-600 transition-colors">Vision</a>
+        <a href="/referenzen" class="text-[10px] font-black uppercase tracking-[0.2em] text-blue-600">Referenzen</a>
+        <a href="/kontakt" class="bg-slate-950 text-white px-8 py-3 rounded-2xl text-[10px] font-black uppercase tracking-widest hover:bg-blue-600 transition-all shadow-lg shadow-blue-900/10">Start Project</a>
       </div>
-      <h1 class="text-6xl md:text-8xl font-extrabold tracking-tight mb-6">
-        Unsere <span class="text-emerald-600">Projekte.</span>
-      </h1>
-      <p class="text-lg text-slate-600 max-w-xl mx-auto font-light">
-        Wir brechen Konventionen und schaffen digitale Unikate. Entdecke unsere neuesten Arbeiten.
-      </p>
     </div>
-  </section>
+  </nav>
 
-  <main class="max-w-7xl mx-auto px-6 pb-32">
+  <header class="pt-48 pb-24 px-6">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex flex-col space-y-4">
+        <span class="text-blue-600 font-black text-[10px] uppercase tracking-[0.4em]" data-aos="fade-right">Archive 2024/25</span>
+        <h1 class="text-[10vw] md:text-[8vw] font-black leading-[0.8] tracking-tighter uppercase italic">
+          Proven <br> <span class="text-outline">Results.</span>
+        </h1>
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-8 pt-12">
+          <p class="max-w-md text-slate-500 font-medium leading-relaxed">
+            Wir transformieren Unternehmen durch Code. Hier ist eine Auswahl unserer digitalisierten Visionen.
+          </p>
+          
+          <div class="flex gap-1 bg-slate-100 p-1.5 rounded-3xl border border-slate-200">
+            <button @click="filter = 'all'" :class="filter === 'all' ? 'bg-white text-slate-950 shadow-sm' : 'text-slate-400'" class="px-6 py-2.5 rounded-2xl text-[10px] font-black uppercase tracking-widest transition-all">All</button>
+            <button @click="filter = 'web'" :class="filter === 'web' ? 'bg-white text-slate-950 shadow-sm' : 'text-slate-400'" class="px-6 py-2.5 rounded-2xl text-[10px] font-black uppercase tracking-widest transition-all">Web</button>
+            <button @click="filter = 'app'" :class="filter === 'app' ? 'bg-white text-slate-950 shadow-sm' : 'text-slate-400'" class="px-6 py-2.5 rounded-2xl text-[10px] font-black uppercase tracking-widest transition-all">Apps</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-6 pb-40">
     <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
       
-      <div class="md:col-span-8 bento-card group p-4" data-aos="fade-up">
-        <div class="img-container aspect-video md:aspect-auto md:h-[400px]">
+      <div class="md:col-span-8 bento-card p-4 group" x-show="filter === 'all' || filter === 'web'" x-transition>
+        <div class="overflow-hidden rounded-[2rem] aspect-[16/9] relative bg-slate-200">
           <img src="./assets/img/exampleImage.png" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+          <div class="absolute inset-0 bg-blue-600/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
         </div>
-        <div class="p-8 flex justify-between items-end">
+        <div class="p-8 flex items-end justify-between">
           <div>
-            <span class="pill-tag text-emerald-600">Webentwicklung</span>
-            <h2 class="text-4xl font-extrabold mt-4">Alfafood</h2>
+            <h2 class="text-4xl font-black tracking-tighter uppercase italic">Alfafood</h2>
+            <p class="text-blue-600 font-bold text-[10px] uppercase tracking-widest mt-2">Logistics & Web Ecosystem</p>
           </div>
-          <a href="/referenzen/alfafood" class="h-14 w-14 bg-black text-white rounded-full flex items-center justify-center hover:bg-emerald-600 transition-colors">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-            </svg>
-          </a>
-        </div>
-      </div>
-
-      <div class="md:col-span-4 bento-card group p-4" data-aos="fade-up" data-aos-delay="100">
-        <div class="img-container h-64">
-          <img src="./assets/img/Bildschirmfoto-2024-04-30-um-14.56.41.png" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-        </div>
-        <div class="p-6">
-          <span class="pill-tag text-blue-600">SEO</span>
-          <h2 class="text-2xl font-bold mt-4">LU-BU Asian Food</h2>
-        </div>
-      </div>
-
-      <div class="md:col-span-4 bento-card group p-4 border-dashed border-2 border-emerald-200 bg-emerald-50/30" data-aos="fade-up">
-        <div class="img-container h-80 bg-slate-200 flex items-center justify-center">
-          <span class="text-slate-400 font-bold tracking-tighter text-4xl">NEU</span>
-        </div>
-        <div class="p-6">
-          <span class="pill-tag text-gray-400">Kategorie</span>
-          <h2 class="text-2xl font-bold mt-4">Deine neue Referenz</h2>
-          <p class="text-slate-500 text-sm mt-2">Kurze Beschreibung des Projekts...</p>
-        </div>
-      </div>
-
-      <div class="md:col-span-8 bento-card group p-4" data-aos="fade-up" data-aos-delay="100">
-        <div class="img-container h-[450px] relative">
-          <img src="./assets/img/standing-ipad-mockup-1.png" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-          <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-12">
-            <div class="text-white">
-              <span class="pill-tag !bg-white/20 backdrop-blur text-white">App Development</span>
-              <h2 class="text-5xl font-black mt-4 uppercase">1. FC Nürnberg</h2>
-            </div>
+          <div class="w-12 h-12 rounded-full border border-slate-200 flex items-center justify-center group-hover:bg-slate-950 group-hover:text-white transition-all">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M17 8l4 4m0 0l-4 4m4-4H3" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </div>
         </div>
       </div>
 
-      <div class="md:col-span-6 bento-card group p-4 border-dashed border-2 border-emerald-200 bg-emerald-50/30" data-aos="fade-up">
-         <div class="flex items-center h-full">
-            <div class="w-1/2 img-container h-48 bg-slate-200 flex items-center justify-center">
-                <span class="text-slate-400 font-bold">IMAGE</span>
-            </div>
-            <div class="w-1/2 p-6">
-                <span class="pill-tag text-gray-400">Strategy</span>
-                <h2 class="text-2xl font-bold mt-2 text-slate-400 italic">Coming Soon</h2>
-            </div>
-         </div>
-      </div>
-
-      <div class="md:col-span-6 bento-card group p-4" data-aos="fade-up" data-aos-delay="100">
-        <div class="img-container h-64">
-          <img src="./assets/img/Bildschirmfoto-2024-04-30-um-15.05.05.png" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+      <div class="md:col-span-4 bento-card p-4 group" x-show="filter === 'all' || filter === 'seo'" x-transition>
+        <div class="overflow-hidden rounded-[2rem] aspect-square bg-slate-200">
+          <img src="./assets/img/Bildschirmfoto-2024-04-30-um-14.56.41.png" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
         </div>
         <div class="p-6">
-          <h2 class="text-2xl font-bold">Sport-Weber</h2>
-          <p class="text-emerald-600 font-bold text-sm">Automatisierung</p>
+          <h2 class="text-xl font-black tracking-tighter uppercase italic">LU-BU Asian Food</h2>
+          <p class="text-slate-400 font-bold text-[10px] uppercase tracking-widest mt-1">SEO Strategy</p>
+        </div>
+      </div>
+
+      <div class="md:col-span-4 bento-card p-4 group bg-slate-950 border-none text-white" x-show="filter === 'all' || filter === 'app'" x-transition>
+        <div class="overflow-hidden rounded-[2rem] aspect-square bg-slate-800">
+          <img src="./assets/img/standing-ipad-mockup-1.png" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity">
+        </div>
+        <div class="p-6">
+          <h2 class="text-xl font-black tracking-tighter uppercase italic">1. FC Nürnberg</h2>
+          <p class="text-blue-400 font-bold text-[10px] uppercase tracking-widest mt-1">Mobile Ticketing</p>
+        </div>
+      </div>
+
+      <div class="md:col-span-8 bento-card p-4 group" x-show="filter === 'all' || filter === 'web'" x-transition>
+        <div class="overflow-hidden rounded-[2rem] aspect-[16/7] bg-slate-200">
+          <img src="./assets/img/Bildschirmfoto-2024-04-30-um-15.05.05.png" class="w-full h-full object-cover">
+        </div>
+        <div class="p-8 flex items-center justify-between">
+           <h2 class="text-3xl font-black tracking-tighter uppercase italic">Sport-Weber</h2>
+           <span class="text-[10px] font-black text-slate-300 uppercase tracking-widest">E-Commerce</span>
         </div>
       </div>
 
     </div>
   </main>
 
-  <script>
-    AOS.init({
-      duration: 1000,
-      once: true,
-      easing: 'ease-out-back'
-    });
-  </script>
+  <footer class="bg-[#020617] py-32 relative overflow-hidden text-center">
+    <div class="max-w-4xl mx-auto px-6 relative z-10">
+      <h2 class="text-5xl md:text-7xl font-black text-white mb-8 tracking-tighter uppercase italic">Ready to <br> <span class="text-blue-500">Go Digital?</span></h2>
+      <a href="/kontakt" class="inline-block bg-white text-slate-950 px-12 py-5 rounded-2xl font-black uppercase tracking-[0.2em] text-[10px] hover:scale-105 transition-all">Contact Us</a>
+    </div>
+  </footer>
+
 </body>
 </html>
