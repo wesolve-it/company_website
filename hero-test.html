@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="de" x-data="{ darkMode: true }" :class="{ 'dark': darkMode }">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern MVP Hero | Dark Mode</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+        }
+    </script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+        .animate-scroll { animation: scroll 30s linear infinite; }
+        @keyframes blob { 0%, 100% { transform: translate(0px, 0px) scale(1); } 33% { transform: translate(30px, -50px) scale(1.1); } 66% { transform: translate(-20px, 20px) scale(0.9); } }
+        .animate-blob { animation: blob 7s infinite; }
+        @keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+    </style>
+</head>
+<body class="antialiased bg-white dark:bg-slate-950 transition-colors duration-500">
+
+    <button @click="darkMode = !darkMode" class="fixed top-6 right-6 z-50 p-3 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-yellow-400 shadow-lg transition-all border border-slate-200 dark:border-slate-700">
+        <span x-show="!darkMode">🌙</span>
+        <span x-show="darkMode">☀️</span>
+    </button>
+
+    <section 
+        x-data="{ mouseX: 0, mouseY: 0 }" 
+        @mousemove="mouseX = ($event.clientX / window.innerWidth - 0.5) * 40; mouseY = ($event.clientY / window.innerHeight - 0.5) * 40"
+        class="relative min-h-screen flex flex-col items-center justify-center overflow-hidden"
+    >
+        <div class="absolute top-1/4 -left-20 w-72 h-72 bg-blue-400 dark:bg-blue-600 rounded-full mix-blend-multiply dark:mix-blend-lighten filter blur-3xl opacity-20 dark:opacity-10 animate-blob"></div>
+        <div class="absolute top-1/3 -right-20 w-72 h-72 bg-indigo-400 dark:bg-indigo-600 rounded-full mix-blend-multiply dark:mix-blend-lighten filter blur-3xl opacity-20 dark:opacity-10 animate-blob [animation-delay:2s]"></div>
+        <div class="absolute -bottom-20 left-1/2 w-72 h-72 bg-pink-200 dark:bg-purple-900 rounded-full mix-blend-multiply dark:mix-blend-lighten filter blur-3xl opacity-20 dark:opacity-5 animate-blob [animation-delay:4s]"></div>
+
+        <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+            <div class="absolute w-[600px] h-[600px] border border-slate-100 dark:border-slate-800/50 rounded-full"></div>
+            <div class="absolute w-[900px] h-[900px] border border-slate-50 dark:border-slate-900/30 rounded-full"></div>
+        </div>
+
+        <div class="absolute inset-0 z-20 pointer-events-none hidden md:block">
+            <div class="absolute top-[20%] left-[15%] transition-transform duration-75 ease-out" :style="`transform: translate(${mouseX * 0.8}px, ${mouseY * 0.8}px)`">
+                <div class="bg-white/80 dark:bg-slate-900/60 backdrop-blur-md border border-white dark:border-slate-700 p-4 rounded-2xl shadow-2xl flex items-center gap-3">
+                    <div class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center text-white shadow-lg">🚀</div>
+                    <div>
+                        <p class="text-[10px] uppercase tracking-wider text-slate-400 font-bold">Velocity</p>
+                        <p class="text-sm font-bold dark:text-white text-slate-900">MVP in 3 Wochen</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="absolute top-[25%] right-[18%] transition-transform duration-75 ease-out" :style="`transform: translate(${mouseX * -1.2}px, ${mouseY * -1.2}px)`">
+                <div class="bg-white/80 dark:bg-slate-900/60 backdrop-blur-md border border-white dark:border-slate-700 p-4 rounded-2xl shadow-2xl flex items-center gap-3">
+                    <div class="w-10 h-10 bg-indigo-500 rounded-lg flex items-center justify-center text-white shadow-lg text-sm">📱</div>
+                    <div>
+                        <p class="text-[10px] uppercase tracking-wider text-slate-400 font-bold">Mobile First</p>
+                        <p class="text-sm font-bold dark:text-white text-slate-900">iOS & Android</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="absolute bottom-[25%] left-[20%] transition-transform duration-75 ease-out" :style="`transform: translate(${mouseX * 1.5}px, ${mouseY * 0.5}px)`">
+                <div class="bg-white/80 dark:bg-slate-900/60 backdrop-blur-md border border-white dark:border-slate-700 p-3 rounded-xl shadow-xl flex items-center gap-2">
+                    <span class="flex h-3 w-3 relative">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
+                    </span>
+                    <p class="text-xs font-semibold dark:text-slate-300 text-slate-600">Entwickler Live</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="relative z-30 max-w-4xl px-6 text-center">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-900/30 border border-blue-100 dark:border-blue-800 text-blue-700 dark:text-blue-300 text-xs font-bold mb-8 uppercase tracking-widest shadow-sm">
+                <span class="relative flex h-2 w-2">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-600"></span>
+                </span>
+                App & MVP Agency 2026
+            </div>
+
+            <h1 class="text-5xl md:text-8xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-[1.1]">
+                Wir bauen <br>
+                <span class="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-indigo-600 to-violet-500 dark:from-blue-400 dark:via-indigo-400 dark:to-violet-400">
+                    Ideen zu Apps.
+                </span>
+            </h1>
+
+            <p class="mt-8 text-lg md:text-xl text-slate-500 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed">
+                Moderne MVP-Entwicklung für Startups und Unternehmen. Wir kombinieren Geschwindigkeit mit High-End Design und skalierbarer Technik.
+            </p>
+
+            <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-5">
+                <button class="group relative p-[1px] inline-flex items-center justify-center overflow-hidden rounded-xl bg-slate-200 dark:bg-slate-800 transition-all duration-300 active:scale-95">
+    
+    <div class="absolute inset-[-1000%] animate-[spin_4s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2E8F0_0%,#E2E8F0_5%,#3b82f6_50%,#E2E8F0_95%,#E2E8F0_100%)] dark:bg-[conic-gradient(from_90deg_at_50%_50%,#1e293b_0%,#1e293b_5%,#60a5fa_50%,#1e293b_95%,#1e293b_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+    <div class="relative flex items-center gap-2 px-8 py-4 bg-white dark:bg-slate-950 rounded-[11px] text-slate-900 dark:text-white font-bold transition-all duration-300 group-hover:bg-slate-50/50 dark:group-hover:bg-slate-900/50">
+        <span>Projekt starten</span>
+        
+        <svg class="w-5 h-5 transition-transform duration-500 group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+    </div>
+</button>
+                
+                <button class="px-8 py-4 text-slate-600 dark:text-slate-300 font-bold hover:text-blue-600 dark:hover:text-blue-400 transition-colors flex items-center gap-2">
+                    Portfolio ansehen
+                </button>
+            </div>
+        </div>
+
+        <div class="mt-24 w-full overflow-hidden opacity-40 dark:opacity-20 hover:opacity-100 dark:hover:opacity-60 transition-opacity duration-500">
+            <div class="flex whitespace-nowrap animate-scroll">
+                <div class="flex items-center space-x-16 px-8 text-2xl font-bold text-slate-400 dark:text-slate-500">
+                    <span>REACT</span> <span>FLUTTER</span> <span>NODE.JS</span> <span>NEXT.JS</span> <span>TAILWIND</span> <span>PYTHON</span> <span>AWS</span>
+                    <span>REACT</span> <span>FLUTTER</span> <span>NODE.JS</span> <span>NEXT.JS</span> <span>TAILWIND</span> <span>PYTHON</span> <span>AWS</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section class="py-24 bg-white dark:bg-slate-950 transition-colors duration-500 relative overflow-hidden">
+    
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[radial-gradient(circle_at_center,rgba(59,130,246,0.03)_0%,transparent_70%)] pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+        
+        <div class="text-center mb-20">
+            <h2 class="text-3xl md:text-5xl font-[800] text-slate-900 dark:text-white tracking-tight">
+                Unsere <span class="text-blue-600 dark:text-blue-400">Expertise</span>
+            </h2>
+            <p class="mt-4 text-slate-500 dark:text-slate-400 text-lg max-w-2xl mx-auto">
+                Wir decken den gesamten Lebenszyklus digitaler Produkte ab – von der Validierung bis zur globalen Skalierung.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            
+            <div class="group relative p-[1px] rounded-3xl overflow-hidden bg-slate-200 dark:bg-slate-800 transition-all duration-500 hover:scale-[1.02]">
+                <div class="absolute inset-[-1000%] animate-[spin_10s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,transparent_40%,#3b82f6_50%,transparent_60%,transparent_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                
+                <div class="relative h-full p-10 bg-white dark:bg-slate-900 rounded-[23px] flex flex-col">
+                    <div class="w-14 h-14 bg-blue-50 dark:bg-blue-900/20 rounded-2xl flex items-center justify-center text-blue-600 dark:text-blue-400 mb-8 transition-transform duration-500 group-hover:rotate-[10deg]">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold dark:text-white mb-4">MVP-Entwicklung</h3>
+                    <p class="text-slate-500 dark:text-slate-400 mb-8 leading-relaxed">
+                        Wir bauen eine voll funktionsfähige erste Version Ihres Produkts in 3-4 Wochen, um Ihre Marktidee schnellstmöglich zu validieren.
+                    </p>
+                    <ul class="space-y-3 mt-auto border-t border-slate-100 dark:border-slate-800 pt-6 text-sm text-slate-600 dark:text-slate-400">
+                        <li class="flex items-center gap-2 font-medium"><span class="text-blue-500">✓</span> Rapid Prototyping</li>
+                        <li class="flex items-center gap-2 font-medium"><span class="text-blue-500">✓</span> Core Feature Fokus</li>
+                        <li class="flex items-center gap-2 font-medium"><span class="text-blue-500">✓</span> Startup-Speed</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="group relative p-[1px] rounded-3xl overflow-hidden bg-slate-200 dark:bg-slate-800 transition-all duration-500 hover:scale-[1.02]">
+                <div class="absolute inset-[-1000%] animate-[spin_10s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,transparent_40%,#6366f1_50%,transparent_60%,transparent_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                
+                <div class="relative h-full p-10 bg-white dark:bg-slate-900 rounded-[23px] flex flex-col">
+                    <div class="w-14 h-14 bg-indigo-50 dark:bg-indigo-900/20 rounded-2xl flex items-center justify-center text-indigo-600 dark:text-indigo-400 mb-8 transition-transform duration-500 group-hover:scale-110">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold dark:text-white mb-4">App-Entwicklung</h3>
+                    <p class="text-slate-500 dark:text-slate-400 mb-8 leading-relaxed">
+                        Hochperformante mobile Applikationen für iOS & Android. Wir setzen auf Flutter oder React Native für maximale Effizienz.
+                    </p>
+                    <ul class="space-y-3 mt-auto border-t border-slate-100 dark:border-slate-800 pt-6 text-sm text-slate-600 dark:text-slate-400">
+                        <li class="flex items-center gap-2 font-medium"><span class="text-indigo-500">✓</span> Cross-Platform Apps</li>
+                        <li class="flex items-center gap-2 font-medium"><span class="text-indigo-500">✓</span> Native Performance</li>
+                        <li class="flex items-center gap-2 font-medium"><span class="text-indigo-500">✓</span> App Store Publishing</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="group relative p-[1px] rounded-3xl overflow-hidden bg-slate-200 dark:bg-slate-800 transition-all duration-500 hover:scale-[1.02]">
+                <div class="absolute inset-[-1000%] animate-[spin_10s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,transparent_40%,#8b5cf6_50%,transparent_60%,transparent_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                
+                <div class="relative h-full p-10 bg-white dark:bg-slate-900 rounded-[23px] flex flex-col">
+                    <div class="w-14 h-14 bg-purple-50 dark:bg-purple-900/20 rounded-2xl flex items-center justify-center text-purple-600 dark:text-purple-400 mb-8 transition-transform duration-500 group-hover:-rotate-[10deg]">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold dark:text-white mb-4">UI/UX Design</h3>
+                    <p class="text-slate-500 dark:text-slate-400 mb-8 leading-relaxed">
+                        User-Centered Design, das begeistert. Wir kreieren Interfaces, die nicht nur schön aussehen, sondern auch intuitiv funktionieren.
+                    </p>
+                    <ul class="space-y-3 mt-auto border-t border-slate-100 dark:border-slate-800 pt-6 text-sm text-slate-600 dark:text-slate-400">
+                        <li class="flex items-center gap-2 font-medium"><span class="text-purple-500">✓</span> Interactive Prototypes</li>
+                        <li class="flex items-center gap-2 font-medium"><span class="text-purple-500">✓</span> Design Systems</li>
+                        <li class="flex items-center gap-2 font-medium"><span class="text-purple-500">✓</span> User Research</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+
+    <section class="py-24 bg-white dark:bg-slate-950 transition-colors duration-500">
+    <div class="max-w-7xl mx-auto px-6">
+        
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+            <div class="max-w-2xl">
+                <h2 class="text-3xl md:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+                    Ausgewählte <span class="text-blue-600 dark:text-blue-400">Masterpieces</span>
+                </h2>
+                <p class="mt-4 text-slate-500 dark:text-slate-400 text-lg">
+                    Wir begleiten Visionäre von der ersten Skizze bis zum produktiven MVP. Hier sind einige unserer neuesten Erfolgsgeschichten.
+                </p>
+            </div>
+            <a href="#" class="inline-flex items-center text-blue-600 font-bold hover:gap-3 transition-all">
+                Alle Projekte sehen <span class="ml-2">→</span>
+            </a>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+            
+            <div class="md:col-span-8 group relative p-[1px] rounded-3xl overflow-hidden bg-slate-200 dark:bg-slate-800 transition-all duration-500">
+                <div class="absolute inset-[-1000%] animate-[spin_6s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,transparent_40%,#3b82f6_50%,transparent_60%,transparent_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                
+                <div class="relative h-full bg-white dark:bg-slate-900 rounded-[23px] overflow-hidden">
+                    <div class="aspect-video md:aspect-auto md:h-[400px] bg-slate-100 dark:bg-slate-800 overflow-hidden">
+                        <div class="w-full h-full bg-gradient-to-br from-blue-500/20 to-indigo-500/20 flex items-center justify-center group-hover:scale-105 transition-transform duration-700">
+                            <span class="text-slate-400 font-medium">Project Showcase Image</span>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex gap-2 mb-4">
+                            <span class="px-3 py-1 text-[10px] font-bold bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-full uppercase">SaaS</span>
+                            <span class="px-3 py-1 text-[10px] font-bold bg-slate-100 dark:bg-slate-800 text-slate-500 rounded-full uppercase">FinTech</span>
+                        </div>
+                        <h3 class="text-2xl font-bold dark:text-white mb-2">FinFlow Analytics</h3>
+                        <p class="text-slate-500 dark:text-slate-400">Ein komplexes Dashboard für Echtzeit-Finanzdaten. MVP-Entwicklung in Rekordzeit von nur 4 Wochen.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="md:col-span-4 group relative p-[1px] rounded-3xl overflow-hidden bg-slate-200 dark:bg-slate-800 transition-all duration-500">
+                <div class="absolute inset-[-1000%] animate-[spin_8s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,transparent_40%,#6366f1_50%,transparent_60%,transparent_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                
+                <div class="relative h-full bg-white dark:bg-slate-900 rounded-[23px] overflow-hidden flex flex-col">
+                    <div class="h-64 bg-slate-100 dark:bg-slate-800 flex items-center justify-center">
+                        <div class="w-full h-full bg-gradient-to-tr from-emerald-500/10 to-blue-500/10 flex items-center justify-center group-hover:scale-105 transition-transform duration-700 font-medium text-slate-400">
+                            Mobile App
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <span class="px-3 py-1 text-[10px] font-bold bg-indigo-100 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 rounded-full uppercase mb-4 inline-block">iOS & Android</span>
+                        <h3 class="text-xl font-bold dark:text-white mb-2">HealthTrack Pro</h3>
+                        <p class="text-sm text-slate-500 dark:text-slate-400">Native Performance trifft auf intuitives UX-Design.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="md:col-span-4 group relative p-[1px] rounded-3xl overflow-hidden bg-slate-200 dark:bg-slate-800 transition-all duration-500">
+                <div class="absolute inset-[-1000%] animate-[spin_8s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,transparent_40%,#f43f5e_50%,transparent_60%,transparent_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                
+                <div class="relative h-full bg-white dark:bg-slate-900 rounded-[23px] overflow-hidden flex flex-col">
+                    <div class="h-64 bg-slate-100 dark:bg-slate-800 flex items-center justify-center font-medium text-slate-400">
+                        E-Commerce
+                    </div>
+                    <div class="p-8">
+                        <span class="px-3 py-1 text-[10px] font-bold bg-rose-100 dark:bg-rose-900/30 text-rose-600 dark:text-rose-400 rounded-full uppercase mb-4 inline-block">Web App</span>
+                        <h3 class="text-xl font-bold dark:text-white mb-2">Artisan Marketplace</h3>
+                        <p class="text-sm text-slate-500 dark:text-slate-400">Ein skalierbarer Marktplatz mit Fokus auf Konversionsrate.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="md:col-span-8 group relative p-[1px] rounded-3xl overflow-hidden bg-slate-200 dark:bg-slate-800 transition-all duration-500">
+                <div class="absolute inset-[-1000%] animate-[spin_10s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,transparent_40%,#fbbf24_50%,transparent_60%,transparent_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                
+                <div class="relative h-full bg-white dark:bg-slate-900 rounded-[23px] overflow-hidden flex flex-col md:flex-row">
+                    <div class="md:w-1/2 h-64 md:h-auto bg-slate-100 dark:bg-slate-800 font-medium text-slate-400 flex items-center justify-center">
+                        AI Integration
+                    </div>
+                    <div class="p-8 md:w-1/2 flex flex-col justify-center">
+                        <span class="px-3 py-1 text-[10px] font-bold bg-amber-100 dark:bg-amber-900/30 text-amber-600 dark:text-amber-400 rounded-full uppercase mb-4 inline-block w-fit">Artificial Intelligence</span>
+                        <h3 class="text-2xl font-bold dark:text-white mb-2">LexiAI Assistant</h3>
+                        <p class="text-slate-500 dark:text-slate-400">Integration von LLMs für automatisierte Kundensupport-Workflows.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<section class="py-24 bg-slate-50 dark:bg-[#020617] transition-colors duration-500 overflow-hidden" x-data="{ 
+    reviews: [
+        { name: 'Michael Chen', role: 'CEO, TechVentures', text: 'Die Entwicklung unseres MVPs in nur 3 Wochen war beeindruckend. Die Code-Qualität ist absolut erstklassig.', avatar: 'MC', color: 'from-blue-500 to-cyan-500' },
+        { name: 'Sarah Meyer', role: 'Product Manager, Healthify', text: 'Sehr professionelle Kommunikation und ein tiefes Verständnis für User Experience. Unsere App-Nutzer lieben das neue Interface.', avatar: 'SM', color: 'from-indigo-500 to-purple-500' },
+        { name: 'Julian Voigt', role: 'Founder, QuickPay', text: 'Die Festpreis-Garantie hat uns die Sicherheit gegeben, die wir als Startup brauchten. Keine versteckten Kosten, nur pure Leistung.', avatar: 'JV', color: 'from-emerald-500 to-teal-500' },
+        { name: 'Elena Rossi', role: 'CTO, Logistics.io', text: 'Technisch brillant. Die Skalierbarkeit der Architektur wurde von Anfang an mitgedacht. Absolut empfehlenswert!', avatar: 'ER', color: 'from-orange-500 to-rose-500' }
+    ]
+}">
+    <div class="max-w-7xl mx-auto px-6">
+        
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-5xl font-[800] text-slate-900 dark:text-white tracking-tight">
+                Was unsere <span class="text-blue-600 dark:text-blue-400">Partner</span> sagen
+            </h2>
+            <p class="mt-4 text-slate-500 dark:text-slate-400 text-lg max-w-2xl mx-auto">
+                Vertrauen basiert auf Ergebnissen. Wir sind stolz darauf, wegweisende Lösungen für ambitionierte Teams zu bauen.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <template x-for="review in reviews" :key="review.name">
+                <div class="group relative p-[1px] rounded-2xl overflow-hidden bg-slate-200 dark:bg-slate-800 transition-all duration-300 hover:-translate-y-1">
+                    
+                    <div class="absolute inset-[-1000%] animate-[spin_8s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,transparent_40%,#3b82f6_50%,transparent_60%,transparent_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+                    <div class="relative h-full p-8 bg-white dark:bg-slate-900 rounded-[15px] flex flex-col justify-between">
+                        <div>
+                            <div class="flex gap-1 mb-6">
+                                <template x-for="i in 5">
+                                    <svg class="w-4 h-4 text-amber-400 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                </template>
+                            </div>
+                            
+                            <p class="text-slate-600 dark:text-slate-300 italic mb-8 leading-relaxed">
+                                "<span x-text="review.text"></span>"
+                            </p>
+                        </div>
+
+                        <div class="flex items-center gap-4">
+                            <div :class="`w-12 h-12 rounded-full bg-gradient-to-br ${review.color} flex items-center justify-center text-white font-bold shadow-lg`" x-text="review.avatar"></div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 dark:text-white text-sm" x-text="review.name"></h4>
+                                <p class="text-xs text-slate-500 dark:text-slate-500 font-medium" x-text="review.role"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </template>
+        </div>
+
+        <div class="mt-16 text-center">
+            <p class="text-sm text-slate-400 dark:text-slate-600 font-medium flex items-center justify-center gap-2">
+                <span class="w-8 h-[1px] bg-slate-200 dark:bg-slate-800"></span>
+                Und 20+ weitere zufriedene Partner
+                <span class="w-8 h-[1px] bg-slate-200 dark:bg-slate-800"></span>
+            </p>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>
