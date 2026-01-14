@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT-Agentur Hero | Midnight Edition</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        // Custom Palette
+                        'brand-dark': '#0f172a',
+                        'brand-accent': '#d9f99d', // Lime Green
+                        'brand-primary': '#38bdf8', // Sky Blue
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'float-slow': 'float 8s ease-in-out infinite',
+                        'pulse-slow': 'pulse 10s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        [x-cloak] { display: none !important; }
+        .glass-particle {
+            background: rgba(56, 189, 248, 0.1);
+            backdrop-filter: blur(4px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .clay-card-dark {
+            box-shadow: 20px 20px 60px #080c16, -5px -5px 30px #1e293b;
+        }
+    </style>
+</head>
+<body class="antialiased font-sans bg-brand-dark text-white">
+
+<div class="relative min-h-screen overflow-hidden" x-data="{ loaded: false }" x-init="setTimeout(() => loaded = true, 100)">
+  
+  <div class="absolute inset-0 z-0">
+      <div class="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] rounded-full bg-brand-primary/20 blur-[120px] opacity-40 animate-pulse-slow"></div>
+      <div class="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] rounded-full bg-brand-accent/10 blur-[120px] opacity-30 animate-pulse-slow" style="animation-delay: 2s"></div>
+      
+      <template x-for="i in 8">
+          <div 
+            class="absolute glass-particle rounded-full opacity-30 animate-float"
+            :style="`
+                width: ${Math.random() * 30 + 5}px; 
+                height: ${Math.random() * 30 + 5}px; 
+                left: ${Math.random() * 100}%; 
+                top: ${Math.random() * 100}%;
+                animation-delay: ${Math.random() * 5}s;
+                animation-duration: ${Math.random() * 10 + 5}s;
+            `"
+          ></div>
+      </template>
+  </div>
+
+  <nav class="relative z-50 flex items-center justify-between px-6 py-8 md:px-12">
+    <div class="text-2xl font-extrabold tracking-tighter flex items-center gap-2">
+        <div class="w-8 h-8 bg-brand-accent rounded-lg flex items-center justify-center text-brand-dark text-sm font-black">VS</div>
+        <span class="text-white">Agency<span class="text-brand-accent">.</span></span>
+    </div>
+    
+    <div class="hidden space-x-10 font-semibold text-slate-400 md:flex">
+      <a href="#" class="hover:text-brand-accent transition">Home</a>
+      <a href="#" class="hover:text-brand-accent transition">Service</a>
+      <a href="#" class="hover:text-brand-accent transition">Our Works</a>
+      <a href="#" class="hover:text-brand-accent transition">About Us</a>
+    </div>
+
+    <button class="group relative overflow-hidden rounded-full border border-brand-accent/30 bg-transparent px-8 py-3 font-bold text-brand-accent transition-all hover:bg-brand-accent hover:text-brand-dark hover:shadow-[0_0_20px_rgba(217,249,157,0.4)]">
+      Contact Us
+    </button>
+  </nav>
+
+  <main class="relative z-10 container mx-auto flex flex-col items-center px-6 pt-10 md:flex-row md:pt-20 lg:px-12">
+    
+    <div class="w-full md:w-1/2">
+      <div :class="loaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'" class="transition-all duration-1000 ease-out" x-cloak>
+        <h2 class="text-2xl font-bold uppercase tracking-widest text-brand-primary md:text-3xl">Future Ready</h2>
+        <h1 class="text-7xl font-[800] uppercase leading-[0.85] tracking-tighter text-white md:text-[110px]">
+          Digital <br> <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent to-brand-primary">Logic</span>
+        </h1>
+        
+        <p class="mt-8 max-w-md text-lg leading-relaxed text-slate-400 font-medium">
+            Spezialisiert auf **High-Performance MVPs** und skalierbare IT-Infrastrukturen. Wir bauen die Technik von morgen.
+        </p>
+
+        <div class="mt-10 flex flex-wrap gap-5">
+            <button class="group flex items-center gap-3 rounded-2xl bg-brand-accent px-8 py-4 text-lg font-bold text-brand-dark transition-all hover:scale-105 hover:shadow-[0_10px_30px_rgba(217,249,157,0.3)]">
+                Start Project
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+            </button>
+            <div class="flex items-center gap-3">
+                <div class="flex -space-x-3">
+                    <div class="w-10 h-10 rounded-full border-2 border-brand-dark bg-slate-700 flex items-center justify-center text-[10px] font-bold">JD</div>
+                    <div class="w-10 h-10 rounded-full border-2 border-brand-dark bg-brand-primary flex items-center justify-center text-[10px] text-brand-dark font-bold">AS</div>
+                </div>
+                <span class="text-xs font-bold text-slate-500 uppercase tracking-widest">Verified Devs</span>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="relative w-full mt-24 md:mt-0 md:w-1/2 flex justify-center items-center">
+      
+      <div class="absolute h-80 w-80 rounded-full bg-brand-primary/10 md:h-[550px] md:w-[550px] blur-3xl animate-pulse"></div>
+
+      <div class="relative z-20" x-data="{ hover: false }" @mouseenter="hover = true" @mouseleave="hover = false">
+        
+        <div class="relative w-56 h-[440px] bg-slate-800 rounded-[3.5rem] border-[10px] border-slate-700 shadow-[20px_20px_60px_#080c16] flex flex-col items-center p-4 transition-all duration-700 ease-in-out animate-float" :class="hover ? 'rotate-3 scale-105' : 'rotate-0'">
+            
+            <div class="w-full h-full bg-gradient-to-br from-slate-900 to-brand-dark rounded-[2.8rem] flex flex-col items-center p-6 border border-white/5 overflow-hidden">
+                <div class="mt-4 w-14 h-14 bg-brand-accent rounded-2xl shadow-[0_0_15px_rgba(217,249,157,0.5)] flex items-center justify-center mb-6">
+                    <span class="text-brand-dark text-sm font-black italic">MVP</span>
+                </div>
+                
+                <div class="space-y-3 w-full opacity-20">
+                    <div class="h-2 w-full bg-white rounded-full"></div>
+                    <div class="h-2 w-2/3 bg-white rounded-full"></div>
+                </div>
+
+                <div class="mt-6 flex items-end gap-1 h-12 w-full justify-center">
+                    <div class="w-2 bg-brand-primary/40 rounded-t h-[40%] animate-pulse"></div>
+                    <div class="w-2 bg-brand-primary/60 rounded-t h-[70%] animate-pulse" style="animation-delay: 0.2s"></div>
+                    <div class="w-2 bg-brand-accent rounded-t h-[100%] animate-pulse" style="animation-delay: 0.4s"></div>
+                </div>
+
+                <div class="mt-auto mb-4 w-full h-12 bg-brand-accent rounded-2xl flex items-center justify-center text-brand-dark text-[10px] font-extrabold tracking-widest uppercase">
+                    Deploying...
+                </div>
+            </div>
+        </div>
+
+        <div class="absolute -left-20 top-12 h-20 w-20 animate-float rounded-3xl bg-brand-primary p-4 shadow-2xl flex items-center justify-center transform -rotate-12">
+            <code class="text-brand-dark font-black text-2xl">&lt;/&gt;</code>
+        </div>
+
+        <div class="absolute -top-16 right-0 h-16 w-16 animate-bounce rounded-full bg-slate-800 border border-white/10 shadow-xl flex items-center justify-center text-3xl">
+            ⚡
+        </div>
+
+        <div class="absolute -right-16 top-1/2 -translate-y-1/2 h-20 w-20 animate-float rounded-[2.5rem] bg-slate-800 border border-white/10 shadow-2xl flex items-center justify-center text-3xl" style="animation-delay: 1.5s">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-brand-accent animate-[spin_12s_linear_infinite]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+            </svg>
+        </div>
+
+        <div class="absolute -bottom-12 -right-12 h-28 w-40 animate-float-slow rounded-[2rem] bg-brand-accent p-6 shadow-2xl border border-white/10 hidden lg:block" style="animation-delay: 0.5s">
+            <div class="flex items-end gap-2 h-full">
+                <div class="flex-1 bg-brand-dark/20 rounded-t-md h-[40%]"></div>
+                <div class="flex-1 bg-brand-dark/40 rounded-t-md h-[60%]"></div>
+                <div class="flex-1 bg-brand-dark rounded-t-md h-[95%]"></div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="absolute bottom-8 w-full px-6 md:px-12 flex justify-between items-end z-20">
+    <div class="flex items-center gap-6">
+        <div class="hidden md:flex flex-col">
+            <span class="text-[10px] font-black uppercase text-slate-500 tracking-[0.2em] mb-1">Status</span>
+            <div class="flex items-center gap-2 font-bold text-xs text-brand-accent">
+                <div class="w-2 h-2 bg-brand-accent rounded-full animate-ping"></div>
+                Systems Online
+            </div>
+        </div>
+    </div>
+    
+    <div class="flex flex-col items-end">
+        <div class="rounded-full border border-white/10 bg-white/5 backdrop-blur-md px-5 py-2 text-[10px] font-bold text-white tracking-[0.3em] uppercase">
+          Jan 14 <span class="mx-2 text-brand-accent">•</span> 2026
+        </div>
+    </div>
+  </footer>
+
+</div>
+
+</body>
+</html>

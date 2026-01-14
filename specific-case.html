@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="de" x-data="{ darkMode: true }" :class="{ 'dark': darkMode }">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Study | FinFlow Analytics</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,900;1,900&family=Montserrat:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = { 
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        emerald: { 500: '#10B981' },
+                        dark: { 900: '#022C22', 950: '#011a15' }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Montserrat', sans-serif; }
+        .heading-font { font-family: 'Barlow Condensed', sans-serif; }
+    </style>
+</head>
+<body class="antialiased bg-white dark:bg-[#022C22] text-[#022C22] dark:text-white transition-colors duration-500" x-data="{ darkMode: true }" 
+      x-init="$watch('darkMode', val => val ? document.documentElement.classList.add('dark') : document.documentElement.classList.remove('dark'))">
+
+    <nav class="fixed top-0 w-full z-50 py-6 px-6">
+        <div class="max-w-7xl mx-auto flex justify-between items-center bg-white/80 dark:bg-[#011a15]/80 backdrop-blur-xl border border-[#10B981]/10 rounded-2xl px-8 py-4 shadow-lg">
+            <a href="portfolio.html" class="flex items-center gap-2 group text-[#10B981] font-bold text-xs uppercase tracking-widest">
+                <span class="group-hover:-translate-x-2 transition-transform">←</span> Zurück zum Portfolio
+            </a>
+            <button @click="darkMode = !darkMode" class="p-2">
+                <span x-show="!darkMode">🌙</span><span x-show="darkMode">☀️</span>
+            </button>
+        </div>
+    </nav>
+
+    <header class="pt-40 pb-20 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col lg:flex-row gap-16 items-center">
+                <div class="lg:w-1/2 space-y-6">
+                    <div class="flex gap-2">
+                        <span class="px-3 py-1 bg-[#10B981]/10 text-[#10B981] text-[10px] font-black uppercase rounded-md">FinTech</span>
+                        <span class="px-3 py-1 bg-[#10B981]/10 text-[#10B981] text-[10px] font-black uppercase rounded-md">Web App</span>
+                    </div>
+                    <h1 class="heading-font text-6xl md:text-8xl font-black uppercase italic leading-[0.85] tracking-tighter">
+                        FinFlow <br><span class="text-[#10B981] not-italic">Analytics</span>
+                    </h1>
+                    <p class="text-xl text-slate-500 dark:text-[#ECFDF5]/60 font-medium italic">
+                        "Die präziseste Echtzeit-Auswertung, die wir je implementiert haben."
+                    </p>
+                </div>
+                <div class="lg:w-1/2 w-full aspect-video bg-[#03261f] rounded-[2.5rem] border border-[#10B981]/20 flex items-center justify-center shadow-[0_30px_60px_rgba(16,185,129,0.15)] relative overflow-hidden group">
+                    <span class="text-9xl group-hover:scale-110 transition-transform duration-700">📊</span>
+                    <div class="absolute bottom-6 left-6 right-6 p-4 bg-white/5 backdrop-blur-md rounded-xl border border-white/10">
+                        <p class="text-[10px] uppercase font-bold tracking-widest text-[#10B981]">High-Fidelity Dashboard View</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="py-12 border-y border-[#10B981]/10 bg-[#F0FDF4]/50 dark:bg-[#03261f]/30">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div>
+                <p class="text-[10px] font-black uppercase text-[#10B981] mb-1">Kunde</p>
+                <p class="font-bold uppercase tracking-tight">FinVantage Group</p>
+            </div>
+            <div>
+                <p class="text-[10px] font-black uppercase text-[#10B981] mb-1">Zeitraum</p>
+                <p class="font-bold uppercase tracking-tight">3 Monate (MVP)</p>
+            </div>
+            <div>
+                <p class="text-[10px] font-black uppercase text-[#10B981] mb-1">Tech-Stack</p>
+                <p class="font-bold uppercase tracking-tight">Next.js, Python, AWS</p>
+            </div>
+            <div>
+                <p class="text-[10px] font-black uppercase text-[#10B981] mb-1">Bereich</p>
+                <p class="font-bold uppercase tracking-tight">Asset Management</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 px-6">
+        <div class="max-w-4xl mx-auto space-y-24">
+            
+            <div class="grid md:grid-cols-3 gap-12">
+                <div class="md:col-span-1">
+                    <h2 class="heading-font text-4xl font-black uppercase text-[#10B981]">Das <br>Problem</h2>
+                </div>
+                <div class="md:col-span-2 text-lg text-slate-600 dark:text-[#ECFDF5]/70 leading-relaxed font-medium">
+                    FinVantage stand vor der Herausforderung, dass ihre bestehenden Systeme bei hohem Transaktionsvolumen Latenzen von bis zu 5 Sekunden aufwiesen. In der Welt des Hochfrequenzhandels war dies ein untragbarer Wettbewerbsnachteil. Die Datenintegrität war bei Lastspitzen nicht mehr gewährleistet.
+                </div>
+            </div>
+
+            <div class="p-12 bg-[#022C22] dark:bg-[#10B981] rounded-[3rem] text-white dark:text-[#022C22] shadow-2xl">
+                <div class="grid md:grid-cols-3 gap-12 items-center">
+                    <div class="md:col-span-1">
+                        <h2 class="heading-font text-5xl font-black uppercase italic leading-none">Die <br>Lösung</h2>
+                    </div>
+                    <div class="md:col-span-2 text-lg leading-relaxed font-medium">
+                        Wir haben eine serverless Architektur auf Basis von AWS Lambda und einer In-Memory-Datenbank implementiert. Durch die Optimierung der Datenverarbeitungspfade konnten wir die Latenz auf unter 150ms senken – selbst bei 10.000 parallelen Zugriffen pro Sekunde.
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-12">
+                <div class="md:col-span-1">
+                    <h2 class="heading-font text-4xl font-black uppercase text-[#10B981]">Der <br>Kunde</h2>
+                </div>
+                <div class="md:col-span-2 space-y-6">
+                    <p class="text-lg text-slate-600 dark:text-[#ECFDF5]/70 leading-relaxed font-medium">
+                        FinVantage Group ist ein führender europäischer Asset-Manager mit einem verwalteten Vermögen von über 2,5 Mrd. Euro. Sie sind bekannt für ihren datenzentrierten Ansatz und ihren Mut zu technologischen Innovationen.
+                    </p>
+                    <div class="p-6 border-l-4 border-[#10B981] bg-[#F0FDF4] dark:bg-[#03261f]">
+                        <p class="italic font-bold">"Die Zusammenarbeit war radikal effizient. EmeraldCore liefert nicht nur Code, sondern echte Geschäftsvorteile."</p>
+                        <p class="text-xs mt-4 uppercase font-black tracking-widest text-[#10B981]">— CTO, FinVantage Group</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="py-24 bg-[#F0FDF4] dark:bg-[#011a15] border-t border-[#10B981]/10">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h3 class="heading-font text-5xl md:text-7xl font-black uppercase italic mb-12">Ähnliches <span class="text-[#10B981]">Projekt</span> planen?</h3>
+            <div class="flex flex-col md:flex-row justify-center gap-6">
+                <a href="kontakt.html" class="px-12 py-6 bg-[#10B981] text-[#022C22] font-black uppercase rounded-2xl shadow-xl hover:scale-105 transition-all italic text-xl">
+                    Jetzt anfragen
+                </a>
+                <a href="portfolio.html" class="px-12 py-6 border-2 border-[#10B981] text-[#10B981] font-black uppercase rounded-2xl hover:bg-[#10B981] hover:text-[#022C22] transition-all text-xl italic">
+                    Alle Referenzen
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 text-center text-[10px] font-black uppercase tracking-[0.3em] opacity-40">
+        © 2026 EmeraldCore • Code meets Passion
+    </footer>
+
+</body>
+</html>

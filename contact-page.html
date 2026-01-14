@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="de" x-data="{ darkMode: true, submitted: false }" :class="{ 'dark': darkMode }">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt | EmeraldCore</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,900;1,900&family=Montserrat:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = { 
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        emerald: { 500: '#10B981' },
+                        dark: { 900: '#022C22', 950: '#011a15' }
+                    }
+                }
+            }
+        }
+    </script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <style>
+        body { font-family: 'Montserrat', sans-serif; transition: background-color 0.5s ease; }
+        .heading-font { font-family: 'Barlow Condensed', sans-serif; }
+        input:focus, textarea:focus { outline: none; border-color: #10B981 !important; ring: 2px #10B981; }
+    </style>
+</head>
+<body class="antialiased bg-[#F8FAFC] dark:bg-[#022C22] text-[#022C22] dark:text-white"
+      x-init="$watch('darkMode', val => val ? document.documentElement.classList.add('dark') : document.documentElement.classList.remove('dark'))">
+
+    <nav class="fixed top-0 w-full z-50 py-6 px-6">
+        <div class="max-w-7xl mx-auto flex justify-between items-center bg-white/80 dark:bg-[#011a15]/80 backdrop-blur-xl border border-[#10B981]/10 rounded-2xl px-8 py-4 shadow-lg">
+            <a href="index.html" class="flex items-center gap-2 group">
+                <div class="w-10 h-10 bg-[#10B981] rounded-xl flex items-center justify-center text-[#022C22]">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+                </div>
+                <span class="heading-font text-2xl font-black uppercase italic tracking-tighter">
+                    EMERALD<span class="text-[#10B981] not-italic">CORE</span>
+                </span>
+            </a>
+            <button @click="darkMode = !darkMode" class="p-3 rounded-xl bg-[#10B981]/10 text-[#10B981] border border-[#10B981]/20">
+                <span x-show="!darkMode">🌙</span><span x-show="darkMode">☀️</span>
+            </button>
+        </div>
+    </nav>
+
+    <main class="pt-40 pb-24 px-6">
+        <div class="max-w-7xl mx-auto">
+            
+            <div class="grid lg:grid-cols-2 gap-20">
+                
+                <div class="space-y-12">
+                    <div>
+                        <span class="text-[#10B981] font-black uppercase tracking-[0.4em] text-xs mb-4 block">Let's Talk</span>
+                        <h1 class="heading-font text-6xl md:text-8xl font-black uppercase italic leading-[0.85] tracking-tighter mb-8">
+                            Bereit für das <br><span class="text-[#10B981] not-italic">Nächste Level?</span>
+                        </h1>
+                        <p class="text-lg text-slate-500 dark:text-[#ECFDF5]/60 font-medium max-w-md leading-relaxed">
+                            Egal ob MVP, komplexe Cloud-Infrastruktur oder KI-Integration – wir hören zu und liefern.
+                        </p>
+                    </div>
+
+                    <div class="space-y-8">
+                        <div class="flex items-center gap-6 group">
+                            <div class="w-14 h-14 rounded-2xl bg-white dark:bg-[#03261f] border border-[#10B981]/20 flex items-center justify-center text-[#10B981] group-hover:bg-[#10B981] group-hover:text-[#022C22] transition-all shadow-lg shadow-[#10B981]/5">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                            </div>
+                            <div>
+                                <p class="text-[10px] font-black uppercase text-[#10B981] tracking-widest">Schreib uns</p>
+                                <p class="text-xl font-bold italic">hello@emeraldcore.io</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-6 group">
+                            <div class="w-14 h-14 rounded-2xl bg-white dark:bg-[#03261f] border border-[#10B981]/20 flex items-center justify-center text-[#10B981] group-hover:bg-[#10B981] group-hover:text-[#022C22] transition-all shadow-lg shadow-[#10B981]/5">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+                            </div>
+                            <div>
+                                <p class="text-[10px] font-black uppercase text-[#10B981] tracking-widest">Ruf uns an</p>
+                                <p class="text-xl font-bold italic">+49 (0) 123 456 789</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-12 border-t border-[#10B981]/10">
+                        <p class="text-[10px] font-black uppercase text-slate-400 mb-6 tracking-widest italic">Social Media</p>
+                        <div class="flex gap-4">
+                            <a href="#" class="text-sm font-bold hover:text-[#10B981] transition-colors uppercase">LinkedIn</a>
+                            <a href="#" class="text-sm font-bold hover:text-[#10B981] transition-colors uppercase">GitHub</a>
+                            <a href="#" class="text-sm font-bold hover:text-[#10B981] transition-colors uppercase">Twitter / X</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <div class="absolute -inset-4 bg-[#10B981]/10 blur-2xl rounded-[3rem] -z-10"></div>
+
+                    <form @submit.prevent="submitted = true" class="bg-white dark:bg-[#03261f] p-10 md:p-14 rounded-[3rem] border border-[#10B981]/20 shadow-2xl space-y-6">
+                        <template x-if="!submitted">
+                            <div class="space-y-6">
+                                <div class="grid md:grid-cols-2 gap-6">
+                                    <div class="space-y-2">
+                                        <label class="text-[10px] font-black uppercase tracking-widest ml-1">Name</label>
+                                        <input type="text" placeholder="John Doe" class="w-full bg-[#F8FAFC] dark:bg-[#022C22] border border-[#10B981]/10 rounded-2xl px-6 py-4 font-medium transition-all">
+                                    </div>
+                                    <div class="space-y-2">
+                                        <label class="text-[10px] font-black uppercase tracking-widest ml-1">E-Mail</label>
+                                        <input type="email" placeholder="john@company.com" class="w-full bg-[#F8FAFC] dark:bg-[#022C22] border border-[#10B981]/10 rounded-2xl px-6 py-4 font-medium transition-all">
+                                    </div>
+                                </div>
+                                
+                                <div class="space-y-2">
+                                    <label class="text-[10px] font-black uppercase tracking-widest ml-1">Projekt-Typ</label>
+                                    <select class="w-full bg-[#F8FAFC] dark:bg-[#022C22] border border-[#10B981]/10 rounded-2xl px-6 py-4 font-medium transition-all appearance-none">
+                                        <option>MVP Development</option>
+                                        <option>Cloud Infrastructure</option>
+                                        <option>AI / Machine Learning</option>
+                                        <option>UI/UX Design</option>
+                                    </select>
+                                </div>
+
+                                <div class="space-y-2">
+                                    <label class="text-[10px] font-black uppercase tracking-widest ml-1">Deine Nachricht</label>
+                                    <textarea rows="5" placeholder="Erzähl uns kurz von deiner Idee..." class="w-full bg-[#F8FAFC] dark:bg-[#022C22] border border-[#10B981]/10 rounded-2xl px-6 py-4 font-medium transition-all"></textarea>
+                                </div>
+
+                                <button type="submit" class="w-full py-6 bg-[#10B981] text-[#022C22] font-black uppercase italic text-xl rounded-2xl hover:scale-[1.02] active:scale-95 transition-all shadow-xl shadow-[#10B981]/20">
+                                    Anfrage Absenden
+                                </button>
+                            </div>
+                        </template>
+
+                        <template x-if="submitted">
+                            <div class="text-center py-20 space-y-6 animate-fade-in">
+                                <div class="w-20 h-20 bg-[#10B981] rounded-full flex items-center justify-center text-[#022C22] mx-auto mb-8 shadow-lg shadow-[#10B981]/30">
+                                    <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg>
+                                </div>
+                                <h3 class="heading-font text-4xl font-black uppercase italic">Nachricht erhalten!</h3>
+                                <p class="text-slate-500 dark:text-[#ECFDF5]/60 font-medium">Wir melden uns innerhalb der nächsten 24 Stunden bei dir.</p>
+                                <button @click="submitted = false" class="text-[#10B981] font-black uppercase tracking-widest text-xs">Zurück zum Formular</button>
+                            </div>
+                        </template>
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="py-12 text-center text-[10px] font-black uppercase tracking-[0.4em] opacity-40">
+        © 2026 EmeraldCore • Designed for Performance
+    </footer>
+
+</body>
+</html>
