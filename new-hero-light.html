@@ -29,12 +29,17 @@
                         'float': 'float 6s ease-in-out infinite',
                         'float-slow': 'float 8s ease-in-out infinite',
                         'pulse-slow': 'pulse 10s ease-in-out infinite',
+                        'scroll': 'scroll 40s linear infinite', // Hinzufügen
                     },
                     keyframes: {
                         float: {
                             '0%, 100%': { transform: 'translateY(0)' },
                             '50%': { transform: 'translateY(-20px)' },
-                        }
+                        },
+                        scroll: { // Hinzufügen
+                    '0%': { transform: 'translateX(0)' },
+                    '100%': { transform: 'translateX(calc(-50% - 1.5rem))' },
+                }
                     }
                 }
             }
@@ -56,6 +61,8 @@
 </head>
 <body class="antialiased font-sans bg-brand-light text-brand-text">
 
+
+    <!-- Hero -->
 <div class="relative min-h-screen overflow-hidden" x-data="{ loaded: false }" x-init="setTimeout(() => loaded = true, 100)">
   
   <div class="absolute inset-0 z-0">
@@ -201,5 +208,710 @@
 
 </div>
 
+<!-- End Hero -->
+
+
+<!-- Customer Logos -->
+
+<section class="relative z-20 py-24 overflow-hidden">
+    <div class="container mx-auto px-6 mb-16">
+        <div class="flex flex-col items-center text-center">
+            <span class="text-[10px] font-black uppercase text-brand-primary tracking-[0.3em] mb-4">Leading Technologies</span>
+            <h3 class="text-3xl font-bold text-brand-text/90">Stack & Partners</h3>
+            <div class="mt-2 w-12 h-1 bg-gradient-to-r from-brand-primary to-brand-accent rounded-full"></div>
+        </div>
+    </div>
+
+    <div class="relative flex overflow-hidden">
+        <div class="absolute inset-y-0 left-0 w-40 bg-gradient-to-r from-brand-light via-brand-light/80 to-transparent z-10"></div>
+        <div class="absolute inset-y-0 right-0 w-40 bg-gradient-to-l from-brand-light via-brand-light/80 to-transparent z-10"></div>
+
+        <div class="flex animate-[scroll_50s_linear_infinite] space-x-12 items-center py-4">
+            
+            <div class="flex items-center gap-3 px-10 py-5 bg-white/40 backdrop-blur-md rounded-3xl border border-white/60 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group grayscale hover:grayscale-0">
+                <img src="https://cdn.simpleicons.org/stripe/635BFF" class="h-8 opacity-60 group-hover:opacity-100 transition-opacity" alt="Stripe">
+                <span class="font-bold text-slate-400 group-hover:text-[#635BFF] transition-colors">Stripe</span>
+            </div>
+
+            <div class="flex items-center gap-3 px-10 py-5 bg-white/40 backdrop-blur-md rounded-3xl border border-white/60 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group grayscale hover:grayscale-0">
+                <img src="https://cdn.simpleicons.org/vercel/000000" class="h-7 opacity-60 group-hover:opacity-100 transition-opacity" alt="Vercel">
+                <span class="font-bold text-slate-400 group-hover:text-black transition-colors">Vercel</span>
+            </div>
+
+            <div class="flex items-center gap-3 px-10 py-5 bg-white/40 backdrop-blur-md rounded-3xl border border-white/60 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group grayscale hover:grayscale-0">
+                <img src="https://cdn.simpleicons.org/amazonwebservices/232F3E" class="h-8 opacity-60 group-hover:opacity-100 transition-opacity" alt="AWS">
+                <span class="font-bold text-slate-400 group-hover:text-[#232F3E] transition-colors">AWS</span>
+            </div>
+
+            <div class="flex items-center gap-3 px-10 py-5 bg-white/40 backdrop-blur-md rounded-3xl border border-white/60 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group grayscale hover:grayscale-0">
+                <img src="https://cdn.simpleicons.org/openai/412991" class="h-7 opacity-60 group-hover:opacity-100 transition-opacity" alt="OpenAI">
+                <span class="font-bold text-slate-400 group-hover:text-[#412991] transition-colors">OpenAI</span>
+            </div>
+
+            <div class="flex items-center gap-3 px-10 py-5 bg-white/40 backdrop-blur-md rounded-3xl border border-white/60 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group grayscale hover:grayscale-0">
+                <img src="https://cdn.simpleicons.org/googlecloud/4285F4" class="h-7 opacity-60 group-hover:opacity-100 transition-opacity" alt="Google Cloud">
+                <span class="font-bold text-slate-400 group-hover:text-[#4285F4] transition-colors">Google Cloud</span>
+            </div>
+
+            <div class="flex items-center gap-3 px-10 py-5 bg-white/40 backdrop-blur-md rounded-3xl border border-white/60 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group grayscale hover:grayscale-0">
+                <img src="https://cdn.simpleicons.org/github/181717" class="h-8 opacity-60 group-hover:opacity-100 transition-opacity" alt="GitHub">
+                <span class="font-bold text-slate-400 group-hover:text-black transition-colors">GitHub</span>
+            </div>
+
+            <div class="flex items-center gap-3 px-10 py-5 bg-white/40 backdrop-blur-md rounded-3xl border border-white/60 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group grayscale hover:grayscale-0">
+                <img src="https://cdn.simpleicons.org/tailwindcss/06B6D4" class="h-6 opacity-60 group-hover:opacity-100 transition-opacity" alt="Tailwind">
+                <span class="font-bold text-slate-400 group-hover:text-[#06B6D4] transition-colors">Tailwind</span>
+            </div>
+
+            <div class="flex items-center gap-3 px-10 py-5 bg-white/40 backdrop-blur-md rounded-3xl border border-white/60 shadow-sm group grayscale hover:grayscale-0">
+                <img src="https://cdn.simpleicons.org/stripe/635BFF" class="h-8 opacity-60 transition-opacity" alt="Stripe">
+                <span class="font-bold text-slate-400">Stripe</span>
+            </div>
+            <div class="flex items-center gap-3 px-10 py-5 bg-white/40 backdrop-blur-md rounded-3xl border border-white/60 shadow-sm group grayscale hover:grayscale-0">
+                <img src="https://cdn.simpleicons.org/vercel/000000" class="h-7 opacity-60 transition-opacity" alt="Vercel">
+                <span class="font-bold text-slate-400">Vercel</span>
+            </div>
+            </div>
+    </div>
+</section>
+
+<!-- End Customer Logos -->
+
+
+<!-- Dienstleistungen -->
+
+<section class="relative z-30 py-24 bg-brand-light overflow-hidden">
+    <div class="absolute inset-0 z-0 opacity-40">
+        <div class="absolute top-[10%] left-[5%] w-[30%] h-[30%] rounded-full bg-brand-primary/5 blur-3xl animate-pulse-slow"></div>
+        <div class="absolute bottom-[5%] right-[15%] w-[35%] h-[35%] rounded-full bg-brand-accent/5 blur-3xl animate-pulse-slow" style="animation-delay: 3s;"></div>
+        <template x-for="i in 5">
+            <div 
+              class="absolute glass-particle rounded-full opacity-30 animate-float"
+              :style="`
+                  width: ${Math.random() * 20 + 10}px; 
+                  height: ${Math.random() * 20 + 10}px; 
+                  left: ${Math.random() * 100}%; 
+                  top: ${Math.random() * 100}%;
+                  animation-delay: ${Math.random() * 4}s;
+                  animation-duration: ${Math.random() * 8 + 4}s;
+              `"
+            ></div>
+        </template>
+    </div>
+
+    <div class="container mx-auto px-6 relative z-10">
+        <div class="flex flex-col items-center text-center mb-16">
+            <span class="text-[10px] font-black uppercase text-brand-primary tracking-[0.3em] mb-4">Our Core Offerings</span>
+            <h2 class="text-4xl md:text-5xl font-[800] tracking-tighter text-brand-text mb-4">
+                Services, die Ihre <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-brand-accent">Vision</span> beflügeln
+            </h2>
+            <p class="max-w-xl text-lg text-slate-500">
+                Von der ersten Idee bis zur kontinuierlichen Optimierung – wir sind Ihr Partner für digitale Exzellenz und maßgeschneiderte Softwarelösungen.
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-10 lg:gap-12">
+            <div class="group relative p-8 rounded-[2.5rem] bg-white border border-slate-100 shadow-[10px_10px_30px_#cbd5e1,-5px_-5px_15px_#ffffff]
+                        hover:shadow-[20px_20px_60px_#cbd5e1,-10px_-10px_40px_#ffffff] hover:-translate-y-2 transition-all duration-300 ease-in-out">
+                <div class="relative z-10">
+                    <div class="w-16 h-16 rounded-3xl bg-brand-primary/10 text-brand-primary flex items-center justify-center mb-6
+                                group-hover:bg-brand-primary group-hover:text-white transition-all duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-brand-text mb-4">Technische Betreuung</h3>
+                    <p class="text-slate-500 leading-relaxed mb-6">
+                        Wir sorgen dafür, dass Ihre Systeme stabil, sicher und performant laufen. Konzentrieren Sie sich auf Ihr Kerngeschäft.
+                    </p>
+                    <ul class="space-y-3 text-slate-600">
+                        <li class="flex items-center gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-brand-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span>Proaktives Monitoring & Wartung</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-brand-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span>Sicherheitsupdates & Backups</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-brand-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span>Performance-Optimierung</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-brand-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span>24/7 Support (optional)</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="relative p-8 rounded-[2.5rem] bg-gradient-to-br from-brand-primary to-brand-accent 
+                        shadow-[20px_20px_60px_#84cc1666,-10px_-10px_40px_#0ea5e966] text-white 
+                        transform scale-105 -translate-y-4 md:scale-100 md:-translate-y-0 md:hover:-translate-y-2 transition-all duration-500 ease-in-out
+                        md:col-span-1 md:row-span-2 flex flex-col justify-between">
+                <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-brand-text px-6 py-2 rounded-full text-xs font-bold uppercase tracking-wider shadow-lg">
+                    Hauptgeschäft
+                </div>
+                
+                <div class="relative z-10 flex flex-col h-full">
+                    <div class="w-16 h-16 rounded-3xl bg-white/20 text-white flex items-center justify-center mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-3xl font-bold mb-4">MVP-Entwicklung</h3>
+                    <p class="leading-relaxed mb-6 flex-grow">
+                        Wir transformieren Ihre innovative Idee in ein marktreifes Minimum Viable Product – schnell, effizient und skalierbar. Starten Sie erfolgreich.
+                    </p>
+                    <ul class="space-y-3 text-white">
+                        <li class="flex items-center gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span>Konzeption & Prototyping</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span>Agile Entwicklung & Deployment</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span>User Experience (UX) Design</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span>Skalierbare Cloud-Architektur</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span>Frühes Kundenfeedback integrieren</span>
+                        </li>
+                    </ul>
+                    <a href="#" class="mt-8 self-start inline-flex items-center gap-2 px-6 py-3 bg-white text-brand-primary rounded-full font-bold text-sm shadow-md
+                                      hover:bg-gray-100 hover:scale-[1.02] transition-all duration-300">
+                        Jetzt anfragen
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="group relative p-8 rounded-[2.5rem] bg-white border border-slate-100 shadow-[10px_10px_30px_#cbd5e1,-5px_-5px_15px_#ffffff]
+                        hover:shadow-[20px_20px_60px_#cbd5e1,-10px_-10px_40px_#ffffff] hover:-translate-y-2 transition-all duration-300 ease-in-out">
+                <div class="relative z-10">
+                    <div class="w-16 h-16 rounded-3xl bg-brand-primary/10 text-brand-primary flex items-center justify-center mb-6
+                                group-hover:bg-brand-primary group-hover:text-white transition-all duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-brand-text mb-4">Refactoring</h3>
+                    <p class="text-slate-500 leading-relaxed mb-6">
+                        Verwandeln Sie veralteten oder komplexen Code in eine saubere, wartbare und zukunftssichere Basis für Ihr Wachstum.
+                    </p>
+                    <ul class="space-y-3 text-slate-600">
+                        <li class="flex items-center gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-brand-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span>Code-Analyse & Optimierung</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-brand-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span>Architekturverbesserungen</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-brand-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span>Performance-Steigerung</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-brand-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span>Testabdeckung & Fehlerbehebung</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-20 flex flex-col items-center">
+            <div class="group relative">
+                <div class="absolute inset-0 bg-gradient-to-r from-brand-primary to-brand-accent rounded-full blur-xl opacity-20 group-hover:opacity-40 transition-opacity duration-500"></div>
+                
+                <button class="relative flex items-center gap-4 bg-white border border-slate-100 px-10 py-5 rounded-full shadow-[10px_10px_30px_#cbd5e1] transition-all duration-300 hover:scale-105 hover:shadow-[15px_15px_40px_#cbd5e1]">
+                    <span class="text-brand-text font-bold text-lg">Nicht sicher, was Sie brauchen?</span>
+                    <div class="h-8 w-[1px] bg-slate-200"></div>
+                    <span class="text-brand-primary font-extrabold flex items-center gap-2">
+                        Kostenlose Erstberatung
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 animate-bounce-x" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                        </svg>
+                    </span>
+                </button>
+            </div>
+            <p class="mt-6 text-slate-400 text-sm font-medium">
+                Antwort in der Regel innerhalb von <span class="text-brand-text">24 Stunden</span>
+            </p>
+        </div>
+</section>
+
+<!-- End Dienstleistungen -->
+
+
+<!-- Showroom -->
+
+<section class="relative z-20 py-24 bg-brand-light">
+    <div class="container mx-auto px-6">
+        
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+            <div class="max-w-2xl">
+                <span class="text-[10px] font-black uppercase text-brand-primary tracking-[0.3em] mb-4 block">Selected Works</span>
+                <h2 class="text-4xl md:text-5xl font-[800] tracking-tighter text-brand-text">
+                    Digitale Produkte mit <br> <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-brand-accent">Impact</span>
+                </h2>
+            </div>
+            
+            <a href="#" class="group flex items-center gap-3 rounded-2xl bg-white border border-slate-100 px-8 py-4 font-bold text-brand-text shadow-lg transition-all hover:scale-105 hover:shadow-xl">
+                Alle Projekte ansehen
+                <div class="w-8 h-8 rounded-full bg-brand-primary text-white flex items-center justify-center transition-transform group-hover:rotate-45">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                </div>
+            </a>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+            
+            <div class="md:col-span-8 group relative overflow-hidden rounded-[3rem] bg-white border border-white shadow-xl h-[500px] transition-all duration-500 hover:-translate-y-2">
+                <div class="absolute inset-0 bg-gradient-to-br from-brand-primary/20 to-brand-accent/20 group-hover:scale-110 transition-transform duration-700"></div>
+                <div class="absolute inset-0 flex items-center justify-center text-brand-primary/20 font-black text-9xl select-none">01</div>
+                
+                <div class="absolute bottom-0 left-0 right-0 p-8 md:p-12 bg-gradient-to-t from-brand-text/80 to-transparent backdrop-blur-[2px]">
+                    <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+                        <div>
+                            <span class="text-brand-accent font-bold tracking-widest uppercase text-xs">FinTech App</span>
+                            <h3 class="text-3xl font-extrabold text-white mt-2 italic">NeoBank Interface</h3>
+                            <p class="text-slate-200 mt-2 max-w-sm">Komplette MVP-Entwicklung einer mobilen Banking-Lösung in nur 12 Wochen.</p>
+                        </div>
+                        <button class="px-6 py-3 bg-white text-brand-text rounded-2xl font-bold text-sm hover:bg-brand-primary hover:text-white transition-colors">Case Study</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="md:col-span-4 group relative overflow-hidden rounded-[3rem] bg-white border border-white shadow-lg h-[500px] transition-all duration-500 hover:-translate-y-2">
+                <div class="absolute inset-0 bg-slate-100 group-hover:scale-110 transition-transform duration-700"></div>
+                <div class="absolute inset-0 flex items-center justify-center text-slate-200 font-black text-8xl">02</div>
+                
+                <div class="absolute inset-0 p-8 flex flex-col justify-end bg-gradient-to-t from-slate-900/60 to-transparent">
+                    <span class="text-brand-primary font-bold tracking-widest uppercase text-[10px]">Cloud Saas</span>
+                    <h3 class="text-xl font-bold text-white mt-1">DataStreamer Pro</h3>
+                </div>
+            </div>
+
+            <div class="md:col-span-4 group relative overflow-hidden rounded-[3rem] bg-white border border-white shadow-lg h-[500px] transition-all duration-500 hover:-translate-y-2">
+                <div class="absolute inset-0 bg-slate-100 group-hover:scale-110 transition-transform duration-700"></div>
+                <div class="absolute inset-0 flex items-center justify-center text-slate-200 font-black text-8xl">03</div>
+                
+                <div class="absolute inset-0 p-8 flex flex-col justify-end bg-gradient-to-t from-slate-900/60 to-transparent">
+                    <span class="text-brand-primary font-bold tracking-widest uppercase text-[10px]">Health Tech</span>
+                    <h3 class="text-xl font-bold text-white mt-1">MediConnect</h3>
+                </div>
+            </div>
+
+            <div class="md:col-span-8 group relative overflow-hidden rounded-[3rem] bg-white border border-white shadow-xl h-[500px] transition-all duration-500 hover:-translate-y-2">
+                <div class="absolute inset-0 bg-gradient-to-br from-brand-accent/20 to-brand-primary/20 group-hover:scale-110 transition-transform duration-700"></div>
+                <div class="absolute inset-0 flex items-center justify-center text-brand-accent/20 font-black text-9xl select-none">04</div>
+                
+                <div class="absolute bottom-0 left-0 right-0 p-8 md:p-12 bg-gradient-to-t from-brand-text/80 to-transparent backdrop-blur-[2px]">
+                    <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+                        <div>
+                            <span class="text-brand-primary font-bold tracking-widest uppercase text-xs">E-Commerce</span>
+                            <h3 class="text-3xl font-extrabold text-white mt-2 italic">Luxe Marketplace</h3>
+                            <p class="text-slate-200 mt-2 max-w-sm">Hochperformantes Refactoring eines Shopsystems für maximale Conversion.</p>
+                        </div>
+                        <button class="px-6 py-3 bg-white text-brand-text rounded-2xl font-bold text-sm hover:bg-brand-primary hover:text-white transition-colors">Case Study</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- End Showroom -->
+
+<!-- Reviews -->
+
+<section class="relative z-20 py-24 bg-brand-light overflow-hidden" x-data="{ active: 0 }">
+    
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full pointer-events-none">
+        <div class="absolute top-0 right-[10%] w-64 h-64 bg-brand-accent/5 blur-3xl rounded-full animate-pulse"></div>
+        <div class="absolute bottom-0 left-[10%] w-64 h-64 bg-brand-primary/5 blur-3xl rounded-full animate-pulse" style="animation-delay: 2s"></div>
+    </div>
+
+    <div class="container mx-auto px-6 relative z-10">
+        
+        <div class="text-center mb-16">
+            <span class="text-[10px] font-black uppercase text-brand-primary tracking-[0.3em] mb-4 block">Wall of Love</span>
+            <h2 class="text-4xl md:text-5xl font-[800] tracking-tighter text-brand-text mb-6">
+                Was Kunden über <span class="text-brand-primary">Logic</span> sagen
+            </h2>
+        </div>
+
+        <div class="flex overflow-x-auto pb-12 hide-scrollbar snap-x snap-mandatory gap-8 px-4">
+            
+            <div class="min-w-[320px] md:min-w-[400px] snap-center group">
+                <div class="bg-white p-8 rounded-[2.5rem] border border-slate-50 shadow-[15px_15px_40px_#cbd5e1] transition-all duration-300 group-hover:-translate-y-2 group-hover:shadow-[20px_20px_50px_#cbd5e1] relative">
+                    <div class="absolute -top-4 -right-4 w-12 h-12 bg-brand-accent rounded-2xl flex items-center justify-center text-white text-2xl shadow-lg rotate-12 group-hover:rotate-0 transition-transform">
+                        “
+                    </div>
+                    <div class="flex gap-1 mb-4">
+                        <template x-for="i in 5">
+                            <svg class="w-5 h-5 text-brand-accent" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        </template>
+                    </div>
+                    <p class="text-slate-600 italic leading-relaxed mb-8">
+                        "Die MVP-Entwicklung war ein Gamechanger für uns. In nur 8 Wochen hatten wir ein Produkt, das unsere Investoren überzeugt hat."
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-slate-100 border-2 border-brand-primary/20 flex items-center justify-center font-bold text-brand-primary">
+                            MS
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-brand-text">Marc Schmidt</h4>
+                            <p class="text-xs text-slate-400 font-bold uppercase tracking-wider">CEO, TechStart</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="min-w-[320px] md:min-w-[400px] snap-center group">
+                <div class="bg-white p-8 rounded-[2.5rem] border border-slate-50 shadow-[15px_15px_40px_#cbd5e1] transition-all duration-300 group-hover:-translate-y-2 group-hover:shadow-[20px_20px_50px_#cbd5e1]">
+                    <div class="flex gap-1 mb-4">
+                        <template x-for="i in 5">
+                            <svg class="w-5 h-5 text-brand-primary" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        </template>
+                    </div>
+                    <p class="text-slate-600 italic leading-relaxed mb-8">
+                        "Die technische Betreuung ist erstklassig. Wir müssen uns keine Sorgen mehr um Ausfälle machen – absolut zuverlässig!"
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-slate-100 border-2 border-brand-accent/20 flex items-center justify-center font-bold text-brand-accent">
+                            LK
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-brand-text">Lena Kaufmann</h4>
+                            <p class="text-xs text-slate-400 font-bold uppercase tracking-wider">CTO, HealthFlow</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="min-w-[320px] md:min-w-[400px] snap-center group">
+                <div class="bg-white p-8 rounded-[2.5rem] border border-slate-50 shadow-[15px_15px_40px_#cbd5e1] transition-all duration-300 group-hover:-translate-y-2 group-hover:shadow-[20px_20px_50px_#cbd5e1]">
+                    <div class="flex gap-1 mb-4">
+                        <template x-for="i in 5">
+                            <svg class="w-5 h-5 text-brand-primary" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        </template>
+                    </div>
+                    <p class="text-slate-600 italic leading-relaxed mb-8">
+                        "Das Refactoring hat unsere Ladezeiten halbiert. Der Code ist jetzt endlich wieder lesbar und wartbar."
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-slate-100 border-2 border-brand-primary/20 flex items-center justify-center font-bold text-brand-primary">
+                            TH
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-brand-text">Thomas Herzog</h4>
+                            <p class="text-xs text-slate-400 font-bold uppercase tracking-wider">Product Lead, Retailers</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="min-w-[320px] md:min-w-[400px] snap-center group">
+                <div class="bg-white p-8 rounded-[2.5rem] border border-slate-50 shadow-[15px_15px_40px_#cbd5e1] transition-all duration-300 group-hover:-translate-y-2 group-hover:shadow-[20px_20px_50px_#cbd5e1]">
+                    <div class="flex gap-1 mb-4">
+                        <template x-for="i in 5">
+                            <svg class="w-5 h-5 text-brand-accent" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        </template>
+                    </div>
+                    <p class="text-slate-600 italic leading-relaxed mb-8">
+                        "Herausragende Kommunikation und technisches Verständnis. Man merkt sofort, dass hier Profis am Werk sind."
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-slate-100 border-2 border-brand-primary/20 flex items-center justify-center font-bold text-brand-primary">
+                            AM
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-brand-text">Andreas Meyer</h4>
+                            <p class="text-xs text-slate-400 font-bold uppercase tracking-wider">Founder, EduGrow</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="mt-20 relative p-12 rounded-[3rem] bg-brand-text text-white overflow-hidden shadow-2xl">
+            <div class="absolute top-0 right-0 w-64 h-64 bg-brand-primary/20 blur-[80px]"></div>
+            
+            <div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
+                <div class="text-center md:text-left">
+                    <h3 class="text-3xl font-extrabold mb-2 italic">Bereit für Ihr eigenes Erfolgsbeispiel?</h3>
+                    <p class="text-slate-400 max-w-md italic font-medium">Lassen Sie uns gemeinsam besprechen, wie wir Ihre Vision technisch perfekt umsetzen können.</p>
+                </div>
+                <button class="group flex items-center gap-4 bg-brand-primary px-10 py-5 rounded-2xl font-black text-lg hover:scale-105 transition-all hover:shadow-xl hover:shadow-brand-primary/30">
+                    Projekt anfragen
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 group-hover:translate-x-2 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<style>
+    /* Versteckt die Scrollbar für das Review-Karussell */
+    .hide-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+    .hide-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+</style>
+
+<!-- End Reviews -->
+
+<!-- FAQ -->
+
+<section class="relative z-20 py-24 bg-brand-light" x-data="{ selected: null }">
+    <div class="container mx-auto px-6 relative z-10">
+        
+        <div class="flex flex-col items-center text-center mb-16">
+            <span class="text-[10px] font-black uppercase text-brand-primary tracking-[0.3em] mb-4">Questions & Answers</span>
+            <h2 class="text-4xl md:text-5xl font-[800] tracking-tighter text-brand-text mb-6">
+                Häufig gestellte <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-brand-accent">Fragen</span>
+            </h2>
+            <p class="max-w-xl text-lg text-slate-500 font-medium">
+                Alles, was Sie über unsere Zusammenarbeit, die MVP-Entwicklung und den technischen Support wissen müssen.
+            </p>
+        </div>
+
+        <div class="max-w-3xl mx-auto space-y-4">
+            
+            <div class="group">
+                <button 
+                    @click="selected !== 1 ? selected = 1 : selected = null"
+                    class="w-full flex items-center justify-between p-6 md:p-8 rounded-[2rem] bg-white border border-slate-100 shadow-[10px_10px_30px_#cbd5e1] transition-all duration-300 hover:shadow-[15px_15px_40px_#cbd5e1]"
+                    :class="selected === 1 ? 'ring-2 ring-brand-primary/20' : ''"
+                >
+                    <span class="text-lg md:text-xl font-bold text-brand-text text-left">Wie lange dauert die Entwicklung eines MVPs?</span>
+                    <div class="flex-shrink-0 ml-4 w-8 h-8 rounded-full bg-brand-primary/10 text-brand-primary flex items-center justify-center transition-transform duration-300" :class="selected === 1 ? 'rotate-180 bg-brand-primary text-white' : ''">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </div>
+                </button>
+                <div 
+                    class="relative overflow-hidden transition-all duration-500 max-h-0" 
+                    x-ref="container1" 
+                    :style="selected === 1 ? 'max-h: ' + $refs.container1.scrollHeight + 'px' : ''"
+                >
+                    <div class="p-8 text-slate-500 leading-relaxed text-lg italic">
+                        In der Regel benötigen wir für ein voll funktionsfähiges MVP zwischen 6 und 12 Wochen. Dies hängt natürlich vom Funktionsumfang ab, aber unser Fokus liegt auf einer schnellen Time-to-Market, um frühzeitig Nutzerfeedback zu sammeln.
+                    </div>
+                </div>
+            </div>
+
+            <div class="group">
+                <button 
+                    @click="selected !== 2 ? selected = 2 : selected = null"
+                    class="w-full flex items-center justify-between p-6 md:p-8 rounded-[2rem] bg-white border border-slate-100 shadow-[10px_10px_30px_#cbd5e1] transition-all duration-300 hover:shadow-[15px_15px_40px_#cbd5e1]"
+                    :class="selected === 2 ? 'ring-2 ring-brand-primary/20' : ''"
+                >
+                    <span class="text-lg md:text-xl font-bold text-brand-text text-left">Bieten Sie auch langfristige technische Betreuung an?</span>
+                    <div class="flex-shrink-0 ml-4 w-8 h-8 rounded-full bg-brand-primary/10 text-brand-primary flex items-center justify-center transition-transform duration-300" :class="selected === 2 ? 'rotate-180 bg-brand-primary text-white' : ''">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </div>
+                </button>
+                <div 
+                    class="relative overflow-hidden transition-all duration-500 max-h-0" 
+                    x-ref="container2" 
+                    :style="selected === 2 ? 'max-h: ' + $refs.container2.scrollHeight + 'px' : ''"
+                >
+                    <div class="p-8 text-slate-500 leading-relaxed text-lg italic">
+                        Ja, absolut. Viele unserer Kunden vertrauen uns die kontinuierliche Wartung, Sicherheits-Updates und Performance-Optimierung ihrer Systeme an, damit sie sich voll auf ihr Wachstum konzentrieren können.
+                    </div>
+                </div>
+            </div>
+
+            <div class="group">
+                <button 
+                    @click="selected !== 3 ? selected = 3 : selected = null"
+                    class="w-full flex items-center justify-between p-6 md:p-8 rounded-[2rem] bg-white border border-slate-100 shadow-[10px_10px_30px_#cbd5e1] transition-all duration-300 hover:shadow-[15px_15px_40px_#cbd5e1]"
+                    :class="selected === 3 ? 'ring-2 ring-brand-primary/20' : ''"
+                >
+                    <span class="text-lg md:text-xl font-bold text-brand-text text-left">Was genau passiert beim Software-Refactoring?</span>
+                    <div class="flex-shrink-0 ml-4 w-8 h-8 rounded-full bg-brand-primary/10 text-brand-primary flex items-center justify-center transition-transform duration-300" :class="selected === 3 ? 'rotate-180 bg-brand-primary text-white' : ''">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </div>
+                </button>
+                <div 
+                    class="relative overflow-hidden transition-all duration-500 max-h-0" 
+                    x-ref="container3" 
+                    :style="selected === 3 ? 'max-h: ' + $refs.container3.scrollHeight + 'px' : ''"
+                >
+                    <div class="p-8 text-slate-500 leading-relaxed text-lg italic">
+                        Beim Refactoring strukturieren wir bestehenden Code um, ohne das externe Verhalten der Software zu ändern. Das Ziel ist es, "Technical Debt" abzubauen, die Lesbarkeit zu erhöhen und die Software wieder wartbar und skalierbar zu machen.
+                    </div>
+                </div>
+            </div>
+
+            <div class="group">
+                <button 
+                    @click="selected !== 4 ? selected = 4 : selected = null"
+                    class="w-full flex items-center justify-between p-6 md:p-8 rounded-[2rem] bg-white border border-slate-100 shadow-[10px_10px_30px_#cbd5e1] transition-all duration-300 hover:shadow-[15px_15px_40px_#cbd5e1]"
+                    :class="selected === 4 ? 'ring-2 ring-brand-primary/20' : ''"
+                >
+                    <span class="text-lg md:text-xl font-bold text-brand-text text-left">Mit welchen Technologien arbeiten Sie?</span>
+                    <div class="flex-shrink-0 ml-4 w-8 h-8 rounded-full bg-brand-primary/10 text-brand-primary flex items-center justify-center transition-transform duration-300" :class="selected === 4 ? 'rotate-180 bg-brand-primary text-white' : ''">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </div>
+                </button>
+                <div 
+                    class="relative overflow-hidden transition-all duration-500 max-h-0" 
+                    x-ref="container4" 
+                    :style="selected === 4 ? 'max-h: ' + $refs.container4.scrollHeight + 'px' : ''"
+                >
+                    <div class="p-8 text-slate-500 leading-relaxed text-lg italic">
+                        Unser Stack ist modern und flexibel. Wir setzen primär auf React, Vue.js, Node.js und Cloud-Infrastrukturen wie AWS oder Vercel. Wir wählen die Technologie immer passend zu den spezifischen Anforderungen Ihres Projekts aus.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- End FAQ -->
+
+
+<!-- Footer -->
+
+<footer class="relative z-20 pt-20 pb-10 bg-brand-light overflow-hidden">
+    <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-full pointer-events-none opacity-20">
+        <div class="absolute bottom-[-10%] left-[-5%] w-96 h-96 bg-brand-primary/20 blur-[100px] rounded-full"></div>
+        <div class="absolute bottom-[-10%] right-[-5%] w-96 h-96 bg-brand-accent/20 blur-[100px] rounded-full"></div>
+    </div>
+
+    <div class="container mx-auto px-6 relative z-10">
+        <div class="bg-white/70 backdrop-blur-xl border border-white p-10 md:p-16 rounded-[3.5rem] shadow-[20px_20px_60px_#cbd5e1,-10px_-10px_40px_#ffffff]">
+            
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-12">
+                
+                <div class="md:col-span-5">
+                    <div class="text-3xl font-extrabold tracking-tighter flex items-center gap-3 text-brand-text mb-6">
+                        <div class="w-10 h-10 bg-brand-text rounded-xl flex items-center justify-center text-white text-base font-black">VS</div>
+                        <span>Agency<span class="text-brand-primary">.</span></span>
+                    </div>
+                    <p class="text-slate-500 text-lg leading-relaxed max-w-sm font-medium">
+                        Wir transformieren komplexe Probleme in digitale Logik. High-Performance MVPs und modernes Webdesign für Visionäre.
+                    </p>
+                    <div class="mt-8 flex gap-4">
+                        <a href="#" class="w-12 h-12 bg-white rounded-2xl flex items-center justify-center shadow-sm border border-slate-50 text-brand-text hover:text-brand-primary hover:scale-110 transition-all">
+                            <img src="https://cdn.simpleicons.org/linkedin/0F172A" class="w-5 h-5" alt="LinkedIn">
+                        </a>
+                        <a href="#" class="w-12 h-12 bg-white rounded-2xl flex items-center justify-center shadow-sm border border-slate-50 text-brand-text hover:text-brand-primary hover:scale-110 transition-all">
+                            <img src="https://cdn.simpleicons.org/x/0F172A" class="w-5 h-5" alt="X">
+                        </a>
+                        <a href="#" class="w-12 h-12 bg-white rounded-2xl flex items-center justify-center shadow-sm border border-slate-50 text-brand-text hover:text-brand-primary hover:scale-110 transition-all">
+                            <img src="https://cdn.simpleicons.org/github/0F172A" class="w-5 h-5" alt="GitHub">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="md:col-span-2 md:col-start-7">
+                    <h4 class="text-brand-text font-black uppercase text-xs tracking-[0.2em] mb-6">Navigation</h4>
+                    <ul class="space-y-4">
+                        <li><a href="#" class="text-slate-500 font-bold hover:text-brand-primary transition-colors">Service</a></li>
+                        <li><a href="#" class="text-slate-500 font-bold hover:text-brand-primary transition-colors">Our Works</a></li>
+                        <li><a href="#" class="text-slate-500 font-bold hover:text-brand-primary transition-colors">About Us</a></li>
+                        <li><a href="#" class="text-slate-500 font-bold hover:text-brand-primary transition-colors">Process</a></li>
+                    </ul>
+                </div>
+
+                <div class="md:col-span-2">
+                    <h4 class="text-brand-text font-black uppercase text-xs tracking-[0.2em] mb-6">Legal</h4>
+                    <ul class="space-y-4">
+                        <li><a href="#" class="text-slate-500 font-bold hover:text-brand-primary transition-colors">Impressum</a></li>
+                        <li><a href="#" class="text-slate-500 font-bold hover:text-brand-primary transition-colors">Datenschutz</a></li>
+                        <li><a href="#" class="text-slate-500 font-bold hover:text-brand-primary transition-colors">Cookies</a></li>
+                    </ul>
+                </div>
+
+                <div class="md:col-span-2">
+                    <h4 class="text-brand-text font-black uppercase text-xs tracking-[0.2em] mb-6">Say Hello</h4>
+                    <a href="mailto:hello@agency.com" class="text-brand-primary font-black text-lg hover:underline decoration-2 underline-offset-4">
+                        hello@agency.com
+                    </a>
+                </div>
+            </div>
+
+            <div class="mt-16 pt-8 border-t border-slate-100 flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="text-slate-400 text-sm font-bold uppercase tracking-widest">
+                    © 2026 VS Agency. Made with <span class="text-brand-primary">Logic</span>
+                </div>
+                
+                <div class="flex items-center gap-3 px-4 py-2 bg-slate-50 rounded-full border border-slate-100">
+                    <div class="w-2 h-2 bg-brand-accent rounded-full animate-ping"></div>
+                    <span class="text-[10px] font-black uppercase text-slate-500 tracking-wider italic">Agency is Open for Projects</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-8 text-center">
+            <div class="inline-flex items-center gap-2 rounded-full bg-white px-4 py-1.5 text-[10px] font-bold text-slate-400 border border-slate-50 shadow-sm tracking-[0.2em] uppercase">
+                Last Update <span class="text-brand-primary">•</span> Jan 16, 2026
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- End Footer -->
 </body>
 </html>
