@@ -1,0 +1,197 @@
+<section class="relative z-30 py-24 bg-brand-light overflow-hidden">
+    <div class="absolute inset-0 z-0 opacity-40">
+        <div class="absolute top-[10%] left-[5%] w-[30%] h-[30%] rounded-full bg-brand-primary/5 blur-3xl animate-pulse-slow"></div>
+        <div class="absolute bottom-[5%] right-[15%] w-[35%] h-[35%] rounded-full bg-brand-accent/5 blur-3xl animate-pulse-slow" style="animation-delay: 3s;"></div>
+        <template x-for="i in 5">
+            <div 
+              class="absolute glass-particle rounded-full opacity-30 animate-float"
+              :style="`
+                  width: ${Math.random() * 20 + 10}px; 
+                  height: ${Math.random() * 20 + 10}px; 
+                  left: ${Math.random() * 100}%; 
+                  top: ${Math.random() * 100}%;
+                  animation-delay: ${Math.random() * 4}s;
+                  animation-duration: ${Math.random() * 8 + 4}s;
+              `"
+            ></div>
+        </template>
+    </div>
+
+    <div class="container mx-auto px-6 relative z-10">
+        <div class="flex flex-col items-center text-center mb-16">
+            <span class="text-[10px] font-black uppercase text-brand-primary tracking-[0.3em] mb-4">Our Core Offerings</span>
+            <h2 class="text-4xl md:text-5xl font-[800] tracking-tighter text-brand-text mb-4">
+                Services, die Ihre <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-brand-accent">Vision</span> beflügeln
+            </h2>
+            <p class="max-w-xl text-lg text-slate-500">
+                Von der ersten Idee bis zur kontinuierlichen Optimierung – wir sind Ihr Partner für digitale Exzellenz und maßgeschneiderte Softwarelösungen.
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-10 lg:gap-12">
+            <div class="group relative p-8 rounded-[2.5rem] bg-white border border-slate-100 shadow-[10px_10px_30px_#cbd5e1,-5px_-5px_15px_#ffffff]
+                        hover:shadow-[20px_20px_60px_#cbd5e1,-10px_-10px_40px_#ffffff] hover:-translate-y-2 transition-all duration-300 ease-in-out">
+                <div class="relative z-10">
+                    <div class="w-16 h-16 rounded-3xl bg-brand-primary/10 text-brand-primary flex items-center justify-center mb-6
+                                group-hover:bg-brand-primary group-hover:text-white transition-all duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-brand-text mb-4">Technische Betreuung</h3>
+                    <p class="text-slate-500 leading-relaxed mb-6">
+                        Wir sorgen dafür, dass Ihre Systeme stabil, sicher und performant laufen. Konzentrieren Sie sich auf Ihr Kerngeschäft.
+                    </p>
+                    <ul class="space-y-3 text-slate-600">
+                        <li class="flex items-center gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-brand-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span>Proaktives Monitoring & Wartung</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-brand-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span>Sicherheitsupdates & Backups</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-brand-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span>Performance-Optimierung</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-brand-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span>24/7 Support (optional)</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="relative p-8 rounded-[2.5rem] bg-gradient-to-br from-brand-primary to-brand-accent 
+                        shadow-[20px_20px_60px_#84cc1666,-10px_-10px_40px_#0ea5e966] text-white 
+                        transform scale-105 -translate-y-4 md:scale-100 md:-translate-y-0 md:hover:-translate-y-2 transition-all duration-500 ease-in-out
+                        md:col-span-1 md:row-span-2 flex flex-col justify-between">
+                <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-brand-text px-6 py-2 rounded-full text-xs font-bold uppercase tracking-wider shadow-lg">
+                    Hauptgeschäft
+                </div>
+                
+                <div class="relative z-10 flex flex-col h-full">
+                    <div class="w-16 h-16 rounded-3xl bg-white/20 text-white flex items-center justify-center mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-3xl font-bold mb-4">MVP-Entwicklung</h3>
+                    <p class="leading-relaxed mb-6 flex-grow">
+                        Wir transformieren Ihre innovative Idee in ein marktreifes Minimum Viable Product – schnell, effizient und skalierbar. Starten Sie erfolgreich.
+                    </p>
+                    <ul class="space-y-3 text-white">
+                        <li class="flex items-center gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span>Konzeption & Prototyping</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span>Agile Entwicklung & Deployment</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span>User Experience (UX) Design</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span>Skalierbare Cloud-Architektur</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span>Frühes Kundenfeedback integrieren</span>
+                        </li>
+                    </ul>
+                    <a href="#" class="mt-8 self-start inline-flex items-center gap-2 px-6 py-3 bg-white text-brand-primary rounded-full font-bold text-sm shadow-md
+                                      hover:bg-gray-100 hover:scale-[1.02] transition-all duration-300">
+                        Jetzt anfragen
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="group relative p-8 rounded-[2.5rem] bg-white border border-slate-100 shadow-[10px_10px_30px_#cbd5e1,-5px_-5px_15px_#ffffff]
+                        hover:shadow-[20px_20px_60px_#cbd5e1,-10px_-10px_40px_#ffffff] hover:-translate-y-2 transition-all duration-300 ease-in-out">
+                <div class="relative z-10">
+                    <div class="w-16 h-16 rounded-3xl bg-brand-primary/10 text-brand-primary flex items-center justify-center mb-6
+                                group-hover:bg-brand-primary group-hover:text-white transition-all duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-brand-text mb-4">Refactoring</h3>
+                    <p class="text-slate-500 leading-relaxed mb-6">
+                        Verwandeln Sie veralteten oder komplexen Code in eine saubere, wartbare und zukunftssichere Basis für Ihr Wachstum.
+                    </p>
+                    <ul class="space-y-3 text-slate-600">
+                        <li class="flex items-center gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-brand-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span>Code-Analyse & Optimierung</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-brand-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span>Architekturverbesserungen</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-brand-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span>Performance-Steigerung</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-brand-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span>Testabdeckung & Fehlerbehebung</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-20 flex flex-col items-center">
+            <div class="group relative">
+                <div class="absolute inset-0 bg-gradient-to-r from-brand-primary to-brand-accent rounded-full blur-xl opacity-20 group-hover:opacity-40 transition-opacity duration-500"></div>
+                
+                <button class="relative flex items-center gap-4 bg-white border border-slate-100 px-10 py-5 rounded-full shadow-[10px_10px_30px_#cbd5e1] transition-all duration-300 hover:scale-105 hover:shadow-[15px_15px_40px_#cbd5e1]">
+                    <span class="text-brand-text font-bold text-lg">Nicht sicher, was Sie brauchen?</span>
+                    <div class="h-8 w-[1px] bg-slate-200"></div>
+                    <span class="text-brand-primary font-extrabold flex items-center gap-2">
+                        Kostenlose Erstberatung
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 animate-bounce-x" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                        </svg>
+                    </span>
+                </button>
+            </div>
+            <p class="mt-6 text-slate-400 text-sm font-medium">
+                Antwort in der Regel innerhalb von <span class="text-brand-text">24 Stunden</span>
+            </p>
+        </div>
+</section>

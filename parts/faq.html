@@ -1,0 +1,115 @@
+<section class="relative z-20 py-24 bg-brand-light" x-data="{ selected: null }">
+    <div class="container mx-auto px-6 relative z-10">
+        
+        <div class="flex flex-col items-center text-center mb-16">
+            <span class="text-[10px] font-black uppercase text-brand-primary tracking-[0.3em] mb-4">Questions & Answers</span>
+            <h2 class="text-4xl md:text-5xl font-[800] tracking-tighter text-brand-text mb-6">
+                Häufig gestellte <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-brand-accent">Fragen</span>
+            </h2>
+            <p class="max-w-xl text-lg text-slate-500 font-medium">
+                Alles, was Sie über unsere Zusammenarbeit, die MVP-Entwicklung und den technischen Support wissen müssen.
+            </p>
+        </div>
+
+        <div class="max-w-3xl mx-auto space-y-4">
+            
+            <div class="group">
+                <button 
+                    @click="selected !== 1 ? selected = 1 : selected = null"
+                    class="w-full flex items-center justify-between p-6 md:p-8 rounded-[2rem] bg-white border border-slate-100 shadow-[10px_10px_30px_#cbd5e1] transition-all duration-300 hover:shadow-[15px_15px_40px_#cbd5e1]"
+                    :class="selected === 1 ? 'ring-2 ring-brand-primary/20' : ''"
+                >
+                    <span class="text-lg md:text-xl font-bold text-brand-text text-left">Wie lange dauert die Entwicklung eines MVPs?</span>
+                    <div class="flex-shrink-0 ml-4 w-8 h-8 rounded-full bg-brand-primary/10 text-brand-primary flex items-center justify-center transition-transform duration-300" :class="selected === 1 ? 'rotate-180 bg-brand-primary text-white' : ''">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </div>
+                </button>
+                <div 
+                    class="relative overflow-hidden transition-all duration-500 max-h-0" 
+                    x-ref="container1" 
+                    :style="selected === 1 ? 'max-h: ' + $refs.container1.scrollHeight + 'px' : ''"
+                >
+                    <div class="p-8 text-slate-500 leading-relaxed text-lg italic">
+                        In der Regel benötigen wir für ein voll funktionsfähiges MVP zwischen 6 und 12 Wochen. Dies hängt natürlich vom Funktionsumfang ab, aber unser Fokus liegt auf einer schnellen Time-to-Market, um frühzeitig Nutzerfeedback zu sammeln.
+                    </div>
+                </div>
+            </div>
+
+            <div class="group">
+                <button 
+                    @click="selected !== 2 ? selected = 2 : selected = null"
+                    class="w-full flex items-center justify-between p-6 md:p-8 rounded-[2rem] bg-white border border-slate-100 shadow-[10px_10px_30px_#cbd5e1] transition-all duration-300 hover:shadow-[15px_15px_40px_#cbd5e1]"
+                    :class="selected === 2 ? 'ring-2 ring-brand-primary/20' : ''"
+                >
+                    <span class="text-lg md:text-xl font-bold text-brand-text text-left">Bieten Sie auch langfristige technische Betreuung an?</span>
+                    <div class="flex-shrink-0 ml-4 w-8 h-8 rounded-full bg-brand-primary/10 text-brand-primary flex items-center justify-center transition-transform duration-300" :class="selected === 2 ? 'rotate-180 bg-brand-primary text-white' : ''">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </div>
+                </button>
+                <div 
+                    class="relative overflow-hidden transition-all duration-500 max-h-0" 
+                    x-ref="container2" 
+                    :style="selected === 2 ? 'max-h: ' + $refs.container2.scrollHeight + 'px' : ''"
+                >
+                    <div class="p-8 text-slate-500 leading-relaxed text-lg italic">
+                        Ja, absolut. Viele unserer Kunden vertrauen uns die kontinuierliche Wartung, Sicherheits-Updates und Performance-Optimierung ihrer Systeme an, damit sie sich voll auf ihr Wachstum konzentrieren können.
+                    </div>
+                </div>
+            </div>
+
+            <div class="group">
+                <button 
+                    @click="selected !== 3 ? selected = 3 : selected = null"
+                    class="w-full flex items-center justify-between p-6 md:p-8 rounded-[2rem] bg-white border border-slate-100 shadow-[10px_10px_30px_#cbd5e1] transition-all duration-300 hover:shadow-[15px_15px_40px_#cbd5e1]"
+                    :class="selected === 3 ? 'ring-2 ring-brand-primary/20' : ''"
+                >
+                    <span class="text-lg md:text-xl font-bold text-brand-text text-left">Was genau passiert beim Software-Refactoring?</span>
+                    <div class="flex-shrink-0 ml-4 w-8 h-8 rounded-full bg-brand-primary/10 text-brand-primary flex items-center justify-center transition-transform duration-300" :class="selected === 3 ? 'rotate-180 bg-brand-primary text-white' : ''">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </div>
+                </button>
+                <div 
+                    class="relative overflow-hidden transition-all duration-500 max-h-0" 
+                    x-ref="container3" 
+                    :style="selected === 3 ? 'max-h: ' + $refs.container3.scrollHeight + 'px' : ''"
+                >
+                    <div class="p-8 text-slate-500 leading-relaxed text-lg italic">
+                        Beim Refactoring strukturieren wir bestehenden Code um, ohne das externe Verhalten der Software zu ändern. Das Ziel ist es, "Technical Debt" abzubauen, die Lesbarkeit zu erhöhen und die Software wieder wartbar und skalierbar zu machen.
+                    </div>
+                </div>
+            </div>
+
+            <div class="group">
+                <button 
+                    @click="selected !== 4 ? selected = 4 : selected = null"
+                    class="w-full flex items-center justify-between p-6 md:p-8 rounded-[2rem] bg-white border border-slate-100 shadow-[10px_10px_30px_#cbd5e1] transition-all duration-300 hover:shadow-[15px_15px_40px_#cbd5e1]"
+                    :class="selected === 4 ? 'ring-2 ring-brand-primary/20' : ''"
+                >
+                    <span class="text-lg md:text-xl font-bold text-brand-text text-left">Mit welchen Technologien arbeiten Sie?</span>
+                    <div class="flex-shrink-0 ml-4 w-8 h-8 rounded-full bg-brand-primary/10 text-brand-primary flex items-center justify-center transition-transform duration-300" :class="selected === 4 ? 'rotate-180 bg-brand-primary text-white' : ''">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </div>
+                </button>
+                <div 
+                    class="relative overflow-hidden transition-all duration-500 max-h-0" 
+                    x-ref="container4" 
+                    :style="selected === 4 ? 'max-h: ' + $refs.container4.scrollHeight + 'px' : ''"
+                >
+                    <div class="p-8 text-slate-500 leading-relaxed text-lg italic">
+                        Unser Stack ist modern und flexibel. Wir setzen primär auf React, Vue.js, Node.js und Cloud-Infrastrukturen wie AWS oder Vercel. Wir wählen die Technologie immer passend zu den spezifischen Anforderungen Ihres Projekts aus.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
