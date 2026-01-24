@@ -2,14 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
+/* @layer base {
   h1 {
     @apply font-heading;
   }
   body {
     @apply font-body;
   }
-}
+} */
 
 button svg {
   transition: transform 0.3s ease;

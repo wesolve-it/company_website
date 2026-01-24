@@ -1,40 +1,36 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./index.html",
-    "./js/**/*.{js,ts}",
-    "./navigation.html",
-    "./**/*.html",
-    "./referenzen/**/*.html",
-    "./leistungen/**/*.html",
+    "./*html",
+    "./parts/**/*.html",
+    "./js/**/*.{js,ts}"
   ],
   theme: {
     extend: {
       colors: {
-        "dark-emerald": "#022C22",
-        "emerald-green": "#10B981",
-        "mint-glass": "#A7F3D0",
-        "mint-white": "#ECFDF5",
-        "light-bg": "#F0FDF4",
-        "light-text-dark": "#064E3B",
+        "brand-light": "#f8fafc",
+        "brand-accent": "#84cc16",
+        "brand-primary": "#0ea5e9",
+        "brand-text": "#0f172a"
       },
       fontFamily: {
-        heading: ['"Barlow Condensed"', "sans-serif"],
-        body: ["Montserrat", "sans-serif"],
+        sans: ["Plus Jakarta Sans", "sans-serif"]
       },
       animation: {
-        "infinite-scroll": "infinite-scroll 30s linear infinite",
-        'float': 'float 6s ease-in-out infinite',
+        "float": "float 6s ease-in-out infinite",
+        "float-slow": "float 8s ease-in-out infinite",
+        "pulse-slow": "pulse 10s ease-in-out infinite",
+        "scroll": "scroll 40s linear infinite"
       },
       keyframes: {
-        "infinite-scroll": {
-          from: { transform: "translateX(0)" },
-          to: { transform: "translateX(-100%)" },
-        },
         float: {
         '0%, 100%': { transform: 'translateY(0)' },
         '50%': { transform: 'translateY(-20px)' },
-      }
+        },
+        scroll: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(calc(-50% - 1.5rem))" },
+        }
       },
     },
   },

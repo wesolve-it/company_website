@@ -9,42 +9,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+     <link href="/dist/output.css" rel="stylesheet">
 
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Plus Jakarta Sans', 'sans-serif'],
-                    },
-                    colors: {
-                        'brand-light': '#f8fafc',
-                        'brand-accent': '#84cc16', // Ein etwas kräftigeres Lime für besseren Kontrast auf Weiß
-                        'brand-primary': '#0ea5e9', // Satteres Sky Blue
-                        'brand-text': '#0f172a',
-                    },
-                    animation: {
-                        'float': 'float 6s ease-in-out infinite',
-                        'float-slow': 'float 8s ease-in-out infinite',
-                        'pulse-slow': 'pulse 10s ease-in-out infinite',
-                        'scroll': 'scroll 40s linear infinite', // Hinzufügen
-                    },
-                    keyframes: {
-                        float: {
-                            '0%, 100%': { transform: 'translateY(0)' },
-                            '50%': { transform: 'translateY(-20px)' },
-                        },
-                        scroll: { // Hinzufügen
-                    '0%': { transform: 'translateX(0)' },
-                    '100%': { transform: 'translateX(calc(-50% - 1.5rem))' },
-                }
-                    }
-                }
-            }
-        }
-    </script>
+<script src="tailwind.config.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
     <style>
         [x-cloak] { display: none !important; }
@@ -60,6 +29,8 @@
     </style>
 </head>
 <body class="antialiased font-sans bg-brand-light text-brand-text">
+
+    <div x-data x-html="await (await fetch('./parts/navigation.html')).text()"></div>
 
     <div x-data x-html="await (await fetch('./parts/hero.html')).text()"></div>
 
