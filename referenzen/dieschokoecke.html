@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="de">
 <head>
   <!-- Google Tag Manager -->
@@ -7,54 +8,540 @@
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-PQ4KTLTR');</script>
   <!-- End Google Tag Manager -->
+
+  <!-- Dark mode FOUC prevention -->
+  <script>
+    (function() {
+      var t = localStorage.getItem('theme');
+      if (t === 'dark' || (!t && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      }
+    })();
+  </script>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>dieschokoecke</title>
-  <link href="../dist/styles.css" rel="stylesheet">
-  <link rel="icon" type="image/x-icon" href="../assets/img/Wesolveit_loigo.svg" />
-  <script defer src="../js/app.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
-  <script src="../js/navigation.js" defer></script>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-</head>
-<body class="bg-wesolve-gray-50">
-  <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PQ4KTLTR"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-  <div class="max-w-screen-xl px-4 mx-auto pt-12">
-    <div class="my-12">
-      <img src="../assets/img/FullLogo_Transparent_NoBuffer.1a93282d335c16541fb0.png" alt="1.FC Nürnberg Logo" class="h-20 mx-auto object-cover" />
-      <p class="text-2xl lg:text-3xl text-center mt-4 text-wesolve-green-700 font-semibold">Webseite mit Selbstverwaltung</p>
-    </div>
-    <img src="../assets/img/dieschokoecke.png" alt="Bild der Webseite von dieschokoecke.de" class="rounded-md mb-10 md:w-5/6 md:h-1/2 object-contain mx-auto" />
-    <div class="mb-20">
-      <div class="grid lg:grid-cols-2 gap-8">
-        <div>
-        <h1 class="text-2xl text-wesolve-gray-950 font-semibold mb-2">Projekt</h1>
-        <p class="text-wesolve-gray-950">Für dieschokoecke haben wir eine moderne Webseite entwickelt, die es dem Kunden ermöglicht, Inhalte eigenständig zu verwalten. Produkte können hinzugefügt, bearbeitet oder entfernt werden, sodass das Sortiment stets aktuell bleibt. Zudem lassen sich die Texte und das FAQ flexibel anpassen, um Kunden immer die neuesten Informationen bereitzustellen. Die benutzerfreundliche Oberfläche erlaubt eine einfache Handhabung, ohne technisches Wissen. So behält dieschokoecke die volle Kontrolle über die Website und kann Änderungen jederzeit vornehmen.</p>
+  <title>Die Schokoecke – Case Study | wesolve-IT</title>
+  <meta name="description" content="Wie wesolve-IT für Die Schokoecke eine moderne Website mit vollständiger Selbstverwaltung entwickelt hat.">
 
-        <div class="flex flex-col gap-4 w-4/6 my-10 lg:flex-row lg:w-full lg:gap-8">
-          <a href="/referenzen">
-          <button class="border-2 rounded-md text-wesolve-accent-coral-500 border-wesolve-accent-coral-500 py-4 px-8 font-semibold">Mehr Referenzen</button>
-          <a href="/kontakt">
-          <button class="bg-wesolve-accent-coral-500 border-2 border-wesolve-accent-coral-500 font-semibold text-white rounded-md py-4 px-8">Zur Projektanfrage</button>
+  <link rel="icon" type="image/x-icon" href="../assets/img/Wesolveit_loigo.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="../dist/styles.css" rel="stylesheet">
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+  <style>
+    [x-cloak] { display: none !important; }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-left {
+      opacity: 0; transform: translateX(-28px);
+      transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+    }
+    .reveal-left.visible { opacity: 1; transform: translateX(0); }
+    .reveal-right {
+      opacity: 0; transform: translateX(28px);
+      transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+    }
+    .reveal-right.visible { opacity: 1; transform: translateX(0); }
+
+    .delay-100 { transition-delay: 100ms; }
+    .delay-200 { transition-delay: 200ms; }
+    .delay-300 { transition-delay: 300ms; }
+    .delay-400 { transition-delay: 400ms; }
+
+    @keyframes bounce-x {
+      0%, 100% { transform: translateX(0); }
+      50% { transform: translateX(5px); }
+    }
+    .animate-bounce-x { animation: bounce-x 1s infinite; }
+  </style>
+</head>
+<body class="antialiased font-sans bg-brand-light dark:bg-slate-950 text-brand-text dark:text-white transition-colors duration-300 overflow-x-hidden"
+      x-data="{ mobileMenuOpen: false }">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PQ4KTLTR"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  <!-- ═══════════════════════════════ NAVIGATION ═══════════════════════════════ -->
+  <nav class="sticky top-0 z-50 bg-brand-light/80 dark:bg-slate-950/80 backdrop-blur-xl border-b border-slate-200/60 dark:border-slate-800/60 transition-colors duration-300">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+
+      <a href="/" class="flex items-center gap-2 text-2xl font-extrabold tracking-tighter text-brand-text dark:text-white">
+        <div class="w-8 h-8 bg-brand-text dark:bg-white/10 rounded-lg flex items-center justify-center text-white text-sm font-black">W</div>
+        wesolve<span class="text-brand-primary">-IT</span>
+      </a>
+
+      <div class="hidden md:flex items-center space-x-10 font-semibold text-slate-500 dark:text-slate-400">
+        <a href="/" class="hover:text-brand-primary transition-colors">Home</a>
+        <a href="/leistungen" class="hover:text-brand-primary transition-colors">Leistungen</a>
+        <a href="/referenzen" class="text-brand-primary font-bold">Referenzen</a>
+        <a href="/kontakt" class="hover:text-brand-primary transition-colors">Kontakt</a>
+      </div>
+
+      <div class="hidden md:flex items-center gap-3">
+        <button
+          x-data="{ isDark: document.documentElement.classList.contains('dark') }"
+          @click="isDark = !isDark; document.documentElement.classList.toggle('dark', isDark); localStorage.setItem('theme', isDark ? 'dark' : 'light')"
+          class="w-9 h-9 rounded-full flex items-center justify-center border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-500 dark:text-slate-400 hover:text-brand-primary hover:border-brand-primary hover:scale-105 transition-all"
+          aria-label="Toggle dark mode">
+          <svg x-show="!isDark" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+          </svg>
+          <svg x-show="isDark" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
+          </svg>
+        </button>
+        <a href="/kontakt" class="rounded-full bg-brand-primary px-8 py-3 font-bold text-white transition-all hover:scale-105 hover:shadow-xl hover:shadow-brand-primary/30">
+          Projekt starten
         </a>
-        </a>
+      </div>
+
+      <button @click="mobileMenuOpen = !mobileMenuOpen" class="md:hidden text-brand-text dark:text-white focus:outline-none">
+        <svg x-show="!mobileMenuOpen" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+        <svg x-show="mobileMenuOpen" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+    </div>
+
+    <div x-show="mobileMenuOpen"
+         x-transition:enter="transition ease-out duration-200"
+         x-transition:enter-start="opacity-0 -translate-y-4"
+         x-transition:enter-end="opacity-100 translate-y-0"
+         x-cloak
+         class="bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800 p-6 md:hidden flex flex-col space-y-4">
+      <a href="/" class="text-lg font-bold text-slate-600 dark:text-slate-300 hover:text-brand-primary">Home</a>
+      <a href="/leistungen" class="text-lg font-bold text-slate-600 dark:text-slate-300 hover:text-brand-primary">Leistungen</a>
+      <a href="/referenzen" class="text-lg font-bold text-brand-primary">Referenzen</a>
+      <a href="/kontakt" class="text-lg font-bold text-slate-600 dark:text-slate-300 hover:text-brand-primary">Kontakt</a>
+      <a href="/kontakt" class="bg-brand-primary text-white py-4 rounded-2xl text-center font-bold mt-2">Projekt starten</a>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════ HERO ═══════════════════════════════════ -->
+  <section class="relative overflow-hidden pt-16 pb-0 px-6">
+    <!-- Background glows -->
+    <div class="absolute top-0 right-[15%] w-[500px] h-[400px] bg-brand-accent/8 blur-[120px] rounded-full pointer-events-none"></div>
+    <div class="absolute top-0 left-[5%] w-[400px] h-[300px] bg-brand-primary/6 blur-[100px] rounded-full pointer-events-none"></div>
+
+    <div class="relative max-w-7xl mx-auto">
+
+      <!-- Breadcrumb -->
+      <div class="flex items-center gap-2 text-sm text-slate-400 dark:text-slate-500 mb-8 font-medium">
+        <a href="/referenzen" class="hover:text-brand-primary transition-colors">Referenzen</a>
+        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+        </svg>
+        <span class="text-brand-text dark:text-white font-semibold">Die Schokoecke</span>
+      </div>
+
+      <!-- Tags + year -->
+      <div class="flex flex-wrap gap-2 mb-6">
+        <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-brand-accent/10 dark:bg-brand-accent/15 border border-brand-accent/30 text-brand-accent font-bold text-xs uppercase tracking-wider">
+          <span class="w-1.5 h-1.5 rounded-full bg-brand-accent"></span>
+          Webentwicklung
+        </span>
+        <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-sky-50 dark:bg-sky-900/20 border border-sky-200 dark:border-sky-800/40 text-brand-primary font-bold text-xs uppercase tracking-wider">
+          CMS & Selbstverwaltung
+        </span>
+        <span class="px-3 py-1.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 font-bold text-xs">2024</span>
+      </div>
+
+      <!-- Title -->
+      <h1 class="text-5xl md:text-7xl font-black tracking-tight leading-[1.0] text-brand-text dark:text-white mb-6">
+        Die Schokoecke —<br>
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent to-lime-400">Süßes digital.</span>
+      </h1>
+
+      <p class="text-xl text-slate-500 dark:text-slate-400 leading-relaxed max-w-2xl mb-12">
+        Für den lokalen Chocolatier aus Franken haben wir eine moderne, vollständig selbstverwaltbare Website entwickelt — damit das Team jederzeit Produkte, Texte und FAQs anpassen kann, ohne technisches Wissen.
+      </p>
+
+      <!-- Key metrics row -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-0">
+        <div class="bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 rounded-2xl p-5 text-center">
+          <div class="text-3xl font-black text-brand-text dark:text-white">100%</div>
+          <div class="text-xs font-semibold text-slate-400 dark:text-slate-500 uppercase tracking-widest mt-1">Selbstverwaltung</div>
+        </div>
+        <div class="bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 rounded-2xl p-5 text-center">
+          <div class="text-3xl font-black text-brand-primary">2 Wo.</div>
+          <div class="text-xs font-semibold text-slate-400 dark:text-slate-500 uppercase tracking-widest mt-1">Launch-Zeit</div>
+        </div>
+        <div class="bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 rounded-2xl p-5 text-center">
+          <div class="text-3xl font-black text-brand-accent">↑ 3×</div>
+          <div class="text-xs font-semibold text-slate-400 dark:text-slate-500 uppercase tracking-widest mt-1">Online-Anfragen</div>
+        </div>
+        <div class="bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 rounded-2xl p-5 text-center">
+          <div class="text-3xl font-black text-brand-text dark:text-white">Mobile</div>
+          <div class="text-xs font-semibold text-slate-400 dark:text-slate-500 uppercase tracking-widest mt-1">First Design</div>
         </div>
       </div>
-      <div>
-        <h1 class="text-2xl text-wesolve-gray-950 font-semibold mb-2">Kunde</h1>
-        <p class="text-wesolve-gray-950">Dieschokoecke ist ein lokaler Händler für belgische Pralinen in Franken. Dort bekommt ihr Schokopralinen in bester Qualität. Perfekt zum verschenken oder für den Eigenverzehr.</p>
+    </div>
+  </section>
 
-        <div class="border-t-4 border-wesolve-green mt-6 mb-2"></div>
+  <!-- ═══════════════════════════════ HERO IMAGE ══════════════════════════════ -->
+  <section class="px-6 pt-10 pb-0">
+    <div class="max-w-7xl mx-auto">
+      <div class="relative overflow-hidden rounded-[2.5rem] bg-slate-900 reveal">
+        <img src="../assets/img/dieschokoecke.png"
+             alt="Die Schokoecke Website Mockup"
+             class="w-full h-auto object-cover md:max-h-[640px] object-top">
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/40 to-transparent pointer-events-none"></div>
+      </div>
+    </div>
+  </section>
 
-        <h1 class="text-wesolve-gray-900 text-2xl">Webentwicklung</h1>
+  <!-- ═══════════════════════════════ OVERVIEW ════════════════════════════════ -->
+  <section class="px-6 py-24">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+
+        <!-- Left: challenge + solution -->
+        <div class="lg:col-span-7 space-y-16">
+
+          <!-- Challenge -->
+          <div class="reveal">
+            <div class="flex items-center gap-3 mb-5">
+              <div class="w-10 h-10 rounded-2xl bg-red-50 dark:bg-red-900/20 border border-red-100 dark:border-red-800/30 flex items-center justify-center text-red-400 flex-shrink-0">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.07 16.5c-.77.833.193 2.5 1.732 2.5z"/>
+                </svg>
+              </div>
+              <h2 class="text-2xl font-black text-brand-text dark:text-white tracking-tight">Die Herausforderung</h2>
+            </div>
+            <p class="text-slate-500 dark:text-slate-400 leading-relaxed text-lg">
+              Die Schokoecke betrieb einen stark wachsenden Online-Handel, war aber für jede kleinste Änderung auf externe Entwickler angewiesen. Neue Produkte einstellen, Saison-Texte anpassen, FAQ-Einträge pflegen — alles kostete Zeit und Geld. Die bestehende Lösung war veraltet, nicht mobiloptimiert und bot keine Selbstverwaltungsmöglichkeiten.
+            </p>
+          </div>
+
+          <!-- Solution -->
+          <div class="reveal">
+            <div class="flex items-center gap-3 mb-5">
+              <div class="w-10 h-10 rounded-2xl bg-brand-primary/10 dark:bg-brand-primary/15 border border-sky-200 dark:border-sky-800/40 flex items-center justify-center text-brand-primary flex-shrink-0">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                </svg>
+              </div>
+              <h2 class="text-2xl font-black text-brand-text dark:text-white tracking-tight">Unsere Lösung</h2>
+            </div>
+            <p class="text-slate-500 dark:text-slate-400 leading-relaxed text-lg mb-6">
+              Wir entwickelten eine moderne, SEO-optimierte Website mit einem intuitiven Headless-CMS-Backend. Das Ergebnis: Das Team von Die Schokoecke kann selbständig Produkte pflegen, Texte anpassen und das FAQ verwalten — vollständig ohne Entwickler-Know-how.
+            </p>
+            <ul class="space-y-3">
+              <li class="flex items-start gap-3 text-slate-600 dark:text-slate-300">
+                <span class="mt-0.5 w-5 h-5 flex-shrink-0 rounded-full bg-brand-accent/10 border border-brand-accent/30 text-brand-accent flex items-center justify-center text-[10px] font-black">✓</span>
+                <span>Eigenständige Produktverwaltung — Hinzufügen, Bearbeiten, Archivieren in Echtzeit</span>
+              </li>
+              <li class="flex items-start gap-3 text-slate-600 dark:text-slate-300">
+                <span class="mt-0.5 w-5 h-5 flex-shrink-0 rounded-full bg-brand-accent/10 border border-brand-accent/30 text-brand-accent flex items-center justify-center text-[10px] font-black">✓</span>
+                <span>Dynamisches FAQ-Modul — Fragen und Antworten per Klick anpassen</span>
+              </li>
+              <li class="flex items-start gap-3 text-slate-600 dark:text-slate-300">
+                <span class="mt-0.5 w-5 h-5 flex-shrink-0 rounded-full bg-brand-accent/10 border border-brand-accent/30 text-brand-accent flex items-center justify-center text-[10px] font-black">✓</span>
+                <span>Vollständige Textpflege über ein übersichtliches Admin-Interface</span>
+              </li>
+              <li class="flex items-start gap-3 text-slate-600 dark:text-slate-300">
+                <span class="mt-0.5 w-5 h-5 flex-shrink-0 rounded-full bg-brand-accent/10 border border-brand-accent/30 text-brand-accent flex items-center justify-center text-[10px] font-black">✓</span>
+                <span>Mobile-First Responsive Design — optimiert für alle Gerätegrößen</span>
+              </li>
+              <li class="flex items-start gap-3 text-slate-600 dark:text-slate-300">
+                <span class="mt-0.5 w-5 h-5 flex-shrink-0 rounded-full bg-brand-accent/10 border border-brand-accent/30 text-brand-accent flex items-center justify-center text-[10px] font-black">✓</span>
+                <span>On-Page SEO mit strukturierten Daten für bessere Google-Sichtbarkeit</span>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- Right: project info sidebar -->
+        <div class="lg:col-span-5 space-y-6 reveal delay-200">
+
+          <!-- Client info card -->
+          <div class="bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 rounded-[2rem] p-8">
+            <h3 class="text-xs font-black uppercase tracking-[0.2em] text-slate-400 dark:text-slate-500 mb-6">Über den Kunden</h3>
+            <p class="text-slate-600 dark:text-slate-300 leading-relaxed">
+              Die Schokoecke ist ein lokaler Spezialitätenhändler für belgische Pralinen und Schokoladenprodukte aus der Metropolregion Nürnberg. Mit einem wachsenden Sortiment und treuer Stammkundschaft war der Schritt in die digitale Sichtbarkeit der logische nächste Schritt.
+            </p>
+          </div>
+
+          <!-- Tech stack card -->
+          <div class="bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 rounded-[2rem] p-8">
+            <h3 class="text-xs font-black uppercase tracking-[0.2em] text-slate-400 dark:text-slate-500 mb-6">Tech Stack</h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1.5 rounded-xl bg-brand-primary/10 dark:bg-brand-primary/15 text-brand-primary font-semibold text-sm border border-sky-200 dark:border-sky-800/40">Next.js</span>
+              <span class="px-3 py-1.5 rounded-xl bg-brand-primary/10 dark:bg-brand-primary/15 text-brand-primary font-semibold text-sm border border-sky-200 dark:border-sky-800/40">React</span>
+              <span class="px-3 py-1.5 rounded-xl bg-brand-accent/10 dark:bg-brand-accent/15 text-brand-accent font-semibold text-sm border border-lime-200 dark:border-lime-800/30">Tailwind CSS</span>
+              <span class="px-3 py-1.5 rounded-xl bg-brand-accent/10 dark:bg-brand-accent/15 text-brand-accent font-semibold text-sm border border-lime-200 dark:border-lime-800/30">Headless CMS</span>
+              <span class="px-3 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 font-semibold text-sm">Node.js</span>
+              <span class="px-3 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 font-semibold text-sm">Vercel</span>
+            </div>
+          </div>
+
+          <!-- Timeline card -->
+          <div class="bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 rounded-[2rem] p-8">
+            <h3 class="text-xs font-black uppercase tracking-[0.2em] text-slate-400 dark:text-slate-500 mb-6">Projektverlauf</h3>
+            <div class="space-y-5">
+              <div class="flex gap-4">
+                <div class="flex flex-col items-center">
+                  <div class="w-2.5 h-2.5 rounded-full bg-brand-primary mt-1 flex-shrink-0"></div>
+                  <div class="w-px flex-1 bg-slate-100 dark:bg-slate-700 mt-1.5"></div>
+                </div>
+                <div class="pb-4">
+                  <div class="text-xs font-black uppercase tracking-widest text-slate-400 dark:text-slate-500">Woche 1</div>
+                  <div class="font-semibold text-brand-text dark:text-white mt-0.5">Discovery & Design</div>
+                  <div class="text-sm text-slate-500 dark:text-slate-400">Anforderungsanalyse, Wireframes, UI-Konzept</div>
+                </div>
+              </div>
+              <div class="flex gap-4">
+                <div class="flex flex-col items-center">
+                  <div class="w-2.5 h-2.5 rounded-full bg-brand-accent mt-1 flex-shrink-0"></div>
+                  <div class="w-px flex-1 bg-slate-100 dark:bg-slate-700 mt-1.5"></div>
+                </div>
+                <div class="pb-4">
+                  <div class="text-xs font-black uppercase tracking-widest text-slate-400 dark:text-slate-500">Woche 2–3</div>
+                  <div class="font-semibold text-brand-text dark:text-white mt-0.5">Entwicklung & CMS-Integration</div>
+                  <div class="text-sm text-slate-500 dark:text-slate-400">Frontend, Backend, CMS-Anbindung</div>
+                </div>
+              </div>
+              <div class="flex gap-4">
+                <div class="flex flex-col items-center">
+                  <div class="w-2.5 h-2.5 rounded-full bg-brand-primary mt-1 flex-shrink-0"></div>
+                </div>
+                <div>
+                  <div class="text-xs font-black uppercase tracking-widest text-slate-400 dark:text-slate-500">Woche 4</div>
+                  <div class="font-semibold text-brand-text dark:text-white mt-0.5">Launch & Einweisung</div>
+                  <div class="text-sm text-slate-500 dark:text-slate-400">Go-live, Kunden-Onboarding, Dokumentation</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
       </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ RESULTS ═════════════════════════════════ -->
+  <section class="bg-sky-50 dark:bg-slate-900 px-6 py-20 transition-colors duration-300">
+    <div class="max-w-7xl mx-auto">
+
+      <div class="mb-14 reveal">
+        <span class="text-brand-primary font-bold tracking-widest uppercase text-sm mb-3 flex items-center gap-2">
+          <span class="w-8 h-[1px] bg-brand-primary"></span> Ergebnisse
+        </span>
+        <h2 class="text-4xl md:text-5xl font-black text-brand-text dark:text-white tracking-tight">
+          Was wir erreicht haben.
+        </h2>
       </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Result 1 -->
+        <div class="reveal delay-100 bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 rounded-[2rem] p-8 group hover:-translate-y-2 hover:shadow-xl hover:shadow-brand-primary/10 transition-all duration-300">
+          <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-brand-primary to-sky-400 flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform duration-300">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <div class="text-4xl font-black text-brand-text dark:text-white mb-2">0 h</div>
+          <div class="font-bold text-brand-text dark:text-white mb-2">Entwicklerzeit pro Update</div>
+          <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">Produktänderungen, Textupdates und FAQ-Pflege werden jetzt vollständig durch das Team selbst erledigt.</p>
+        </div>
+
+        <!-- Result 2 -->
+        <div class="reveal delay-200 bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 rounded-[2rem] p-8 group hover:-translate-y-2 hover:shadow-xl hover:shadow-brand-accent/10 transition-all duration-300">
+          <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-brand-accent to-lime-400 flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform duration-300">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+            </svg>
+          </div>
+          <div class="text-4xl font-black text-brand-text dark:text-white mb-2">3×</div>
+          <div class="font-bold text-brand-text dark:text-white mb-2">Mehr Online-Anfragen</div>
+          <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">Durch die verbesserte SEO-Struktur und mobile Optimierung stiegen die Kontaktanfragen deutlich.</p>
+        </div>
+
+        <!-- Result 3 -->
+        <div class="reveal delay-300 bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 rounded-[2rem] p-8 group hover:-translate-y-2 hover:shadow-xl hover:shadow-brand-primary/10 transition-all duration-300">
+          <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-sky-500 to-brand-primary flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform duration-300">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2v-1a7 7 0 10-14 0v1a2 2 0 002 2z"/>
+            </svg>
+          </div>
+          <div class="text-4xl font-black text-brand-text dark:text-white mb-2">100%</div>
+          <div class="font-bold text-brand-text dark:text-white mb-2">Mobile Score</div>
+          <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">Perfekte Darstellung auf Smartphones und Tablets — da über 70 % des Traffics mobil kommt.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ QUOTE ═══════════════════════════════════ -->
+  <section class="px-6 py-20">
+    <div class="max-w-4xl mx-auto reveal">
+      <div class="relative bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 rounded-[2.5rem] p-10 md:p-14 overflow-hidden">
+        <div class="absolute top-0 right-0 w-48 h-48 bg-brand-accent/8 blur-3xl rounded-full"></div>
+        <div class="absolute bottom-0 left-0 w-48 h-48 bg-brand-primary/8 blur-3xl rounded-full"></div>
+        <!-- Quote mark -->
+        <div class="text-8xl font-black text-brand-accent/20 leading-none mb-4 select-none relative z-10">"</div>
+        <blockquote class="relative z-10 text-2xl md:text-3xl font-bold text-brand-text dark:text-white leading-tight mb-8">
+          Endlich können wir unsere Webseite selbst aktualisieren — ohne auf jemanden warten zu müssen. Die Zusammenarbeit mit wesolve-IT war unkompliziert und das Ergebnis übertrifft unsere Erwartungen.
+        </blockquote>
+        <div class="relative z-10 flex items-center gap-4">
+          <div class="w-12 h-12 rounded-full bg-gradient-to-br from-brand-accent to-lime-400 flex items-center justify-center text-white font-black text-sm">SC</div>
+          <div>
+            <div class="font-bold text-brand-text dark:text-white">Inhaberin</div>
+            <div class="text-sm text-slate-400 dark:text-slate-500">Die Schokoecke, Nürnberg</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ NEXT PROJECT ═════════════════════════════ -->
+  <section class="bg-sky-50 dark:bg-slate-900 px-6 py-20 transition-colors duration-300 reveal">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-8 p-8 md:p-10 bg-white dark:bg-slate-800 rounded-[2.5rem] border border-slate-100 dark:border-slate-700 shadow-lg">
+        <div>
+          <span class="text-xs font-black uppercase tracking-[0.2em] text-slate-400 dark:text-slate-500 mb-2 block">Nächstes Projekt</span>
+          <h3 class="text-3xl font-black text-brand-text dark:text-white">1. FC Nürnberg</h3>
+          <p class="text-slate-500 dark:text-slate-400 mt-1">Business Seating App für VIP-Management</p>
+        </div>
+        <a href="/referenzen/fc-nuernberg"
+           class="flex items-center gap-3 px-8 py-4 rounded-2xl bg-brand-primary text-white font-bold hover:scale-105 hover:shadow-xl hover:shadow-brand-primary/30 transition-all duration-300 flex-shrink-0 group">
+          Case Study
+          <div class="w-7 h-7 rounded-full bg-white/20 flex items-center justify-center group-hover:translate-x-1 transition-transform">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+            </svg>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ CONTACT CTA ══════════════════════════════ -->
+  <div class="relative max-w-7xl mx-auto px-6 py-20">
+    <div class="reveal relative overflow-hidden bg-white dark:bg-slate-800 rounded-[3rem] border border-slate-100 dark:border-slate-700 shadow-[20px_20px_60px_#cbd5e1] dark:shadow-[0_20px_60px_rgba(0,0,0,0.4)] p-8 md:p-16 text-center">
+      <div class="absolute -top-24 -left-24 w-64 h-64 bg-brand-primary/10 blur-[80px]"></div>
+      <div class="absolute -bottom-24 -right-24 w-64 h-64 bg-brand-accent/10 blur-[80px]"></div>
+      <div class="relative z-10 max-w-3xl mx-auto">
+        <span class="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-widest text-brand-primary uppercase bg-sky-50 dark:bg-sky-900/20 rounded-full border border-sky-200 dark:border-sky-800/30">
+          Ihr Projekt
+        </span>
+        <h2 class="text-3xl md:text-5xl font-black text-brand-text dark:text-white mb-6 tracking-tight leading-tight">
+          Ähnliches Projekt<br/>
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-brand-accent">für Ihr Unternehmen?</span>
+        </h2>
+        <p class="text-slate-500 dark:text-slate-400 text-lg mb-12 max-w-xl mx-auto">
+          Wir entwickeln Lösungen, die Ihren Arbeitsalltag wirklich erleichtern. Antwort auf Ihre Anfrage innerhalb von 24 Stunden.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="/kontakt" class="group inline-flex items-center gap-2 px-10 py-5 bg-brand-primary text-white font-black rounded-2xl hover:scale-105 hover:bg-sky-600 transition-all duration-300 shadow-xl shadow-brand-primary/20">
+            Projekt anfragen
+            <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+            </svg>
+          </a>
+          <a href="/referenzen" class="inline-flex items-center gap-2 px-10 py-5 bg-white dark:bg-slate-700 text-brand-text dark:text-white font-bold rounded-2xl border border-slate-200 dark:border-slate-600 hover:scale-105 transition-all duration-300">
+            Alle Referenzen
+          </a>
+        </div>
+      </div>
+      <div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-brand-primary/40 to-transparent"></div>
     </div>
   </div>
 
-  <div id="footer-placeholder"></div>
+  <!-- ═══════════════════════════════ FOOTER ═══════════════════════════════════ -->
+  <footer class="relative bg-brand-light dark:bg-slate-950 overflow-hidden transition-colors duration-300" x-data>
+    <div class="h-px w-full bg-gradient-to-r from-transparent via-brand-primary to-brand-accent"></div>
+    <div class="absolute inset-0 pointer-events-none overflow-hidden">
+      <div class="absolute bottom-0 left-[-10%] w-96 h-96 bg-brand-primary/5 blur-[100px] rounded-full"></div>
+      <div class="absolute bottom-0 right-[-10%] w-96 h-96 bg-brand-accent/5 blur-[100px] rounded-full"></div>
+    </div>
+    <div class="relative z-10 container mx-auto px-6 pt-20 pb-10">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-12 pb-16 mb-10 border-b border-slate-200 dark:border-slate-800">
+        <div class="md:col-span-5">
+          <a href="/" class="inline-flex items-center gap-3 mb-7">
+            <div class="w-10 h-10 bg-brand-text dark:bg-white/10 rounded-xl flex items-center justify-center text-white text-base font-black shadow-sm">W</div>
+            <span class="text-2xl font-extrabold tracking-tighter text-brand-text dark:text-white">wesolve<span class="text-brand-primary">-IT</span></span>
+          </a>
+          <p class="text-slate-500 dark:text-slate-400 text-base leading-relaxed max-w-sm mb-8">
+            Wir transformieren komplexe Probleme in digitale Logik. High-Performance MVPs und modernes Webdesign für Visionäre.
+          </p>
+          <div class="flex gap-3">
+            <a href="https://www.linkedin.com/company/wesolve-it-nuernberg" target="_blank"
+               class="w-11 h-11 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-2xl flex items-center justify-center text-slate-500 dark:text-slate-400 hover:bg-brand-primary hover:border-brand-primary hover:text-white hover:scale-110 transition-all shadow-sm">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/wesolve_it/" target="_blank"
+               class="w-11 h-11 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-2xl flex items-center justify-center text-slate-500 dark:text-slate-400 hover:bg-gradient-to-br hover:from-pink-500 hover:to-orange-400 hover:border-transparent hover:text-white hover:scale-110 transition-all shadow-sm">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="md:col-span-2 md:col-start-7">
+          <h4 class="text-brand-text dark:text-white font-black uppercase text-xs tracking-[0.2em] mb-6">Navigation</h4>
+          <ul class="space-y-4">
+            <li><a href="/" class="text-slate-500 dark:text-slate-400 font-medium hover:text-brand-primary transition-colors">Home</a></li>
+            <li><a href="/leistungen" class="text-slate-500 dark:text-slate-400 font-medium hover:text-brand-primary transition-colors">Leistungen</a></li>
+            <li><a href="/referenzen" class="text-brand-primary font-semibold">Referenzen</a></li>
+            <li><a href="/kontakt" class="text-slate-500 dark:text-slate-400 font-medium hover:text-brand-primary transition-colors">Kontakt</a></li>
+          </ul>
+        </div>
+
+        <div class="md:col-span-2">
+          <h4 class="text-brand-text dark:text-white font-black uppercase text-xs tracking-[0.2em] mb-6">Rechtliches</h4>
+          <ul class="space-y-4">
+            <li><a href="/impressum" class="text-slate-500 dark:text-slate-400 font-medium hover:text-brand-primary transition-colors">Impressum</a></li>
+            <li><a href="/datenschutz" class="text-slate-500 dark:text-slate-400 font-medium hover:text-brand-primary transition-colors">Datenschutz</a></li>
+            <li><a href="/agbs" class="text-slate-500 dark:text-slate-400 font-medium hover:text-brand-primary transition-colors">AGB</a></li>
+          </ul>
+        </div>
+
+        <div class="md:col-span-2">
+          <h4 class="text-brand-text dark:text-white font-black uppercase text-xs tracking-[0.2em] mb-6">Kontakt</h4>
+          <a href="mailto:info@wesolve-it.de" class="text-brand-primary font-bold text-base hover:underline decoration-2 underline-offset-4 break-all">info@wesolve-it.de</a>
+          <div class="mt-5 flex items-center gap-2">
+            <div class="w-2 h-2 bg-brand-accent rounded-full animate-ping flex-shrink-0"></div>
+            <span class="text-slate-500 dark:text-slate-400 text-xs font-semibold">Bereit für neue Projekte</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+        <p class="text-slate-400 dark:text-slate-500 text-sm font-medium">
+          © <span x-text="new Date().getFullYear()"></span> wesolve-IT. Made with <span class="text-brand-primary font-semibold">Logic</span> in Nürnberg.
+        </p>
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm">
+          <span class="text-[10px] font-black uppercase text-slate-400 dark:text-slate-500 tracking-wider">Last Update</span>
+          <span class="text-brand-primary text-[10px] font-black">•</span>
+          <span class="text-[10px] font-black uppercase text-slate-500 dark:text-slate-400 tracking-wider">April 2026</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Intersection Observer -->
+  <script>
+    (function() {
+      var obs = new IntersectionObserver(function(entries) {
+        entries.forEach(function(e) {
+          if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
+        });
+      }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+      document.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach(function(el) { obs.observe(el); });
+    })();
+  </script>
+
 </body>
 </html>

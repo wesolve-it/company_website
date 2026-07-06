@@ -1,4 +1,5 @@
-<html lang="en">
+<!DOCTYPE html>
+<html lang="de">
 <head>
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -7,58 +8,672 @@
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-PQ4KTLTR');</script>
   <!-- End Google Tag Manager -->
+
+  <!-- Dark mode FOUC prevention -->
+  <script>
+    (function() {
+      var t = localStorage.getItem('theme');
+      if (t === 'dark' || (!t && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      }
+    })();
+  </script>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Webentwicklung</title>
-  <link href="../dist/styles.css" rel="stylesheet">
+  <title>Webentwicklung | wesolve-IT</title>
+  <meta name="description" content="Maßgeschneiderte Websites und Webapplikationen für Gastronomie & Mittelstand. Schnell, SEO-optimiert und designgetrieben — wesolve-IT Nürnberg.">
+
   <link rel="icon" type="image/x-icon" href="../assets/img/Wesolveit_loigo.svg" />
-  <script defer src="../js/app.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
-  <script src="../js/navigation.js" defer></script>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="../dist/styles.css" rel="stylesheet">
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+  <style>
+    [x-cloak] { display: none !important; }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+    }
+    @keyframes cursor-blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+    @keyframes bounce-x {
+      0%, 100% { transform: translateX(0); }
+      50% { transform: translateX(5px); }
+    }
+    @keyframes code-scroll {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-50%); }
+    }
+
+    .animate-float { animation: float 5s ease-in-out infinite; }
+    .animate-bounce-x { animation: bounce-x 1s infinite; }
+    .cursor-blink { animation: cursor-blink 1s step-end infinite; }
+    .animate-code-scroll { animation: code-scroll 20s linear infinite; }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-left {
+      opacity: 0; transform: translateX(-28px);
+      transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+    }
+    .reveal-left.visible { opacity: 1; transform: translateX(0); }
+    .reveal-right {
+      opacity: 0; transform: translateX(28px);
+      transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+    }
+    .reveal-right.visible { opacity: 1; transform: translateX(0); }
+
+    .delay-100 { transition-delay: 100ms; }
+    .delay-200 { transition-delay: 200ms; }
+    .delay-300 { transition-delay: 300ms; }
+    .delay-400 { transition-delay: 400ms; }
+
+    /* Browser mockup chrome */
+    .browser-bar {
+      background: #e2e8f0;
+      border-radius: 12px 12px 0 0;
+      padding: 10px 14px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .dark .browser-bar { background: #1e293b; }
+    .browser-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+    .browser-address {
+      flex: 1;
+      background: white;
+      border-radius: 6px;
+      padding: 4px 10px;
+      font-size: 11px;
+      color: #94a3b8;
+      font-family: monospace;
+      margin-left: 8px;
+    }
+    .dark .browser-address { background: #0f172a; color: #64748b; }
+    .browser-screen {
+      border-radius: 0 0 12px 12px;
+      overflow: hidden;
+      border: 1px solid #e2e8f0;
+      border-top: none;
+    }
+    .dark .browser-screen { border-color: #1e293b; }
+
+    /* Code block styling */
+    .code-line { font-family: 'Fira Code', 'Courier New', monospace; font-size: 12px; line-height: 1.8; white-space: nowrap; }
+    .token-tag { color: #38bdf8; }
+    .token-attr { color: #86efac; }
+    .token-string { color: #fbbf24; }
+    .token-comment { color: #64748b; }
+    .token-fn { color: #c084fc; }
+    .token-key { color: #f472b6; }
+  </style>
 </head>
-<body class="bg-wesolve-gray-50">
+
+<body class="antialiased font-sans bg-brand-light dark:bg-slate-950 text-brand-text dark:text-white transition-colors duration-300 overflow-x-hidden"
+      x-data="{ mobileMenuOpen: false }">
+
   <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PQ4KTLTR"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-  <div class="max-w-screen-xl mx-auto px-4 mt-10 mb-20 grid lg:grid-cols-2 lg:gap-8 pt-16">
-    <div>
-      <h1 class="text-3xl lg:text-4xl font-semibold mb-4 text-wesolve-green-700">Webentwicklung</h1>
-      <p class="text-wesolve-gray-950">Unsere Leidenschaft liegt darin, innovative Technologien zu nutzen, um Ihre Vision in die Realität umzusetzen - sei es durch die Gestaltung ansprechender Websites oder die Entwicklung komplexer Webanwendungen. Lassen Sie uns gemeinsam Ihre digitale Zukunft formen und Ihren Erfolg im Online-Bereich sichern.</p>
-    
-  
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PQ4KTLTR"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-  <div class="flex flex-col gap-6 mt-10">
-    <div class="bg-wesolve-gray-200 p-6 rounded-md">
-      <h2 class="text-xl font-semibold text-wesolve-gray-950 mb-2">Webauftritte & Webapplikationen</h2>
-      <p class="text-wesolve-gray-950">Unsere Expertise erstreckt sich auf Webapplikationen, welche browserbasierte Anwendungen wie Portale, Plattformen, Intra- und Extranetzs, sowie Tools für Projektplanung umfassen. Diese sind in der Regel auf Desktop-Nutzer ausgerichtet und zeichnen sich durch hohe Individualität aus. Unsere Leistungen erstrecken sich auch auf die Gestaltung digitaler Auftritte und Webseiten.</p>
+  <!-- ═══════════════════════════════ NAVIGATION ═══════════════════════════════ -->
+  <nav class="sticky top-0 z-50 bg-brand-light/80 dark:bg-slate-950/80 backdrop-blur-xl border-b border-slate-200/60 dark:border-slate-800/60 transition-colors duration-300">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+
+      <a href="/" class="flex items-center gap-2 text-2xl font-extrabold tracking-tighter text-brand-text dark:text-white">
+        <div class="w-8 h-8 bg-brand-text dark:bg-white/10 rounded-lg flex items-center justify-center text-white text-sm font-black">W</div>
+        wesolve<span class="text-brand-primary">-IT</span>
+      </a>
+
+      <div class="hidden md:flex items-center space-x-10 font-semibold text-slate-500 dark:text-slate-400">
+        <a href="/" class="hover:text-brand-primary dark:hover:text-brand-primary transition-colors">Home</a>
+        <a href="/leistungen" class="text-brand-primary font-bold">Leistungen</a>
+        <a href="/referenzen" class="hover:text-brand-primary dark:hover:text-brand-primary transition-colors">Referenzen</a>
+        <a href="/kontakt" class="hover:text-brand-primary dark:hover:text-brand-primary transition-colors">Kontakt</a>
+      </div>
+
+      <div class="hidden md:flex items-center gap-3">
+        <button
+          x-data="{ isDark: document.documentElement.classList.contains('dark') }"
+          @click="isDark = !isDark; document.documentElement.classList.toggle('dark', isDark); localStorage.setItem('theme', isDark ? 'dark' : 'light')"
+          class="w-9 h-9 rounded-full flex items-center justify-center border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-500 dark:text-slate-400 hover:text-brand-primary hover:border-brand-primary hover:scale-105 transition-all"
+          aria-label="Toggle dark mode">
+          <svg x-show="!isDark" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+          </svg>
+          <svg x-show="isDark" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
+          </svg>
+        </button>
+        <a href="/kontakt"
+           class="rounded-full bg-brand-primary px-8 py-3 font-bold text-white transition-all hover:scale-105 hover:shadow-xl hover:shadow-brand-primary/30">
+          Projekt starten
+        </a>
+      </div>
+
+      <!-- Mobile hamburger -->
+      <button @click="mobileMenuOpen = !mobileMenuOpen" class="md:hidden text-brand-text dark:text-white focus:outline-none">
+        <svg x-show="!mobileMenuOpen" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+        <svg x-show="mobileMenuOpen" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
     </div>
-    <div class="bg-wesolve-gray-200 p-6 rounded-md">
-      <h2 class="text-xl font-semibold text-wesolve-gray-950 mb-2">Agile Entwicklung</h2>
-      <p class="text-wesolve-gray-950">wesolve-IT verkörpert kompetente und zeitgemäße Softwareentwicklung. Daher bervorzugen wir in der Regel einen agilen Ansatz, der es uns ermöglicht, flexibel auf deine Anforderungen einzugehen, währen wir gemeinsam am Entwicklungsprozess arbeiten.</p>
+
+    <!-- Mobile menu -->
+    <div x-show="mobileMenuOpen"
+         x-transition:enter="transition ease-out duration-200"
+         x-transition:enter-start="opacity-0 -translate-y-4"
+         x-transition:enter-end="opacity-100 translate-y-0"
+         x-cloak
+         class="bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800 p-6 md:hidden flex flex-col space-y-4">
+      <a href="/" class="text-lg font-bold text-slate-600 dark:text-slate-300 hover:text-brand-primary">Home</a>
+      <a href="/leistungen" class="text-lg font-bold text-brand-primary">Leistungen</a>
+      <a href="/referenzen" class="text-lg font-bold text-slate-600 dark:text-slate-300 hover:text-brand-primary">Referenzen</a>
+      <a href="/kontakt" class="text-lg font-bold text-slate-600 dark:text-slate-300 hover:text-brand-primary">Kontakt</a>
+      <div class="flex items-center gap-3 pt-2">
+        <a href="/kontakt" class="flex-1 bg-brand-primary text-white py-4 rounded-2xl text-center font-bold">Projekt starten</a>
+        <button
+          x-data="{ isDark: document.documentElement.classList.contains('dark') }"
+          @click="isDark = !isDark; document.documentElement.classList.toggle('dark', isDark); localStorage.setItem('theme', isDark ? 'dark' : 'light')"
+          class="w-14 h-14 rounded-2xl flex items-center justify-center border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-500 dark:text-slate-400">
+          <svg x-show="!isDark" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+          </svg>
+          <svg x-show="isDark" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
+          </svg>
+        </button>
+      </div>
     </div>
-    <div class="bg-wesolve-gray-200 p-6 rounded-md">
-      <h2 class="text-xl font-semibold text-wesolve-gray-950 mb-2">Microservices & More</h2>
-      <p class="text-wesolve-gray-950">Zusätzlich zu automatisierten Tests und unserer Konzentration auf eine Microservice-Architektur mit Docker und Kubernetes bieten wir auch die Einrichtung von CI/CD-Pipelines an. Diese ermöglichen einen kontinuierlichen und iterativen Entwicklungsprozess, um eine effiziente Entwicklung sicherzustellen.</p>
+  </nav>
+
+  <!-- Breadcrumb -->
+  <div class="max-w-7xl mx-auto px-6 pt-6">
+    <div class="flex items-center gap-2 text-sm text-slate-400 dark:text-slate-500">
+      <a href="/" class="hover:text-brand-primary transition-colors">Home</a>
+      <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+      <a href="/leistungen" class="hover:text-brand-primary transition-colors">Leistungen</a>
+      <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+      <span class="text-brand-primary font-semibold">Webentwicklung</span>
     </div>
   </div>
-</div>
 
-  <div>
-    <img src="../assets/img/webdevelopment.png" class="mx-auto" />
-    <div class="flex flex-col w-4/6 mx-auto xl:flex-row xl:gap-4">
-      <a href="/referenzen">
-      <button class="border-2 w-full border-wesolve-accent-coral-500 text-wesolve-accent-coral-500 font-semibold rounded-md py-4 px-8 mt-4">Referenzen</button></a>
-      <a href="/kontakt">
-      <button class="bg-wesolve-accent-coral-500 w-fulll border-2 border-wesolve-accent-coral-500 text-wesolve-gray-50 font-semibold rounded-md py-4 px-8 mt-4">Schreib uns!</button>
-    </a>
+  <!-- ═══════════════════════════════ HERO ═══════════════════════════════ -->
+  <section class="relative overflow-hidden pt-12 pb-20 px-6">
+    <!-- Background glows -->
+    <div class="absolute top-0 left-[10%] w-[600px] h-[600px] bg-brand-primary/6 blur-[140px] rounded-full pointer-events-none"></div>
+    <div class="absolute bottom-0 right-[5%] w-[400px] h-[400px] bg-sky-400/5 blur-[120px] rounded-full pointer-events-none"></div>
+
+    <div class="relative max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+        <!-- Left: Copy -->
+        <div class="reveal-left">
+          <!-- Badge -->
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-sky-50 dark:bg-sky-900/20 border border-sky-200 dark:border-sky-800/40 mb-8">
+            <span class="w-2 h-2 rounded-full bg-brand-primary animate-pulse"></span>
+            <span class="text-brand-primary font-bold text-xs uppercase tracking-[0.2em]">Webentwicklung</span>
+          </div>
+
+          <h1 class="text-5xl md:text-6xl font-black tracking-tight leading-[1.05] text-brand-text dark:text-white mb-6">
+            Websites, die<br>
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-sky-400">mehr leisten.</span>
+          </h1>
+
+          <p class="text-lg text-slate-500 dark:text-slate-400 leading-relaxed mb-8 max-w-lg">
+            Wir bauen keine Templates — wir entwickeln digitale Erlebnisse, die Ihre Marke widerspiegeln, schnell laden und konvertieren. Für Gastronomie, Mittelstand und ambitionierte Projekte.
+          </p>
+
+          <!-- Key facts -->
+          <div class="grid grid-cols-3 gap-4 mb-10">
+            <div class="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-center">
+              <div class="text-2xl font-black text-brand-text dark:text-white">&lt;1s</div>
+              <div class="text-xs font-semibold text-slate-400 uppercase tracking-wider mt-1">Ladezeit</div>
+            </div>
+            <div class="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-center">
+              <div class="text-2xl font-black text-brand-text dark:text-white">100</div>
+              <div class="text-xs font-semibold text-slate-400 uppercase tracking-wider mt-1">PageSpeed</div>
+            </div>
+            <div class="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-center">
+              <div class="text-2xl font-black text-brand-text dark:text-white">∞</div>
+              <div class="text-xs font-semibold text-slate-400 uppercase tracking-wider mt-1">Support</div>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap gap-3">
+            <a href="/kontakt"
+               class="inline-flex items-center gap-2 px-8 py-4 rounded-2xl bg-brand-primary hover:bg-sky-400 text-white font-bold transition-all hover:shadow-xl hover:shadow-brand-primary/30 hover:-translate-y-0.5 group">
+              Projekt besprechen
+              <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+              </svg>
+            </a>
+            <a href="/referenzen"
+               class="inline-flex items-center gap-2 px-8 py-4 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-brand-text dark:text-white font-bold transition-all hover:border-brand-primary/50 hover:-translate-y-0.5">
+              Referenzen ansehen
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: Browser Mockup -->
+        <div class="reveal-right">
+          <div class="relative">
+            <!-- Floating badge -->
+            <div class="absolute -top-4 -right-4 z-20 px-4 py-2 rounded-full bg-brand-accent text-white font-black text-xs uppercase tracking-widest shadow-lg shadow-brand-accent/30 animate-float">
+              Live Preview
+            </div>
+
+            <!-- Browser frame -->
+            <div class="rounded-[1.5rem] overflow-hidden shadow-[0_30px_80px_-20px_rgba(14,165,233,0.25)] border border-slate-200 dark:border-slate-700">
+              <!-- Browser chrome -->
+              <div class="browser-bar">
+                <div class="browser-dot bg-red-400"></div>
+                <div class="browser-dot bg-yellow-400"></div>
+                <div class="browser-dot bg-green-400"></div>
+                <div class="browser-address">https://ihr-projekt.de</div>
+              </div>
+              <!-- Browser screen content -->
+              <div class="browser-screen bg-slate-950 p-0 relative h-72 overflow-hidden">
+                <!-- Code scrolling in background -->
+                <div class="absolute inset-0 p-5 overflow-hidden select-none pointer-events-none">
+                  <div class="animate-code-scroll">
+                    <div class="code-line"><span class="token-comment">// wesolve-IT · Webentwicklung</span></div>
+                    <div class="code-line"><span class="token-tag">&lt;section</span> <span class="token-attr">class</span>=<span class="token-string">"hero"</span><span class="token-tag">&gt;</span></div>
+                    <div class="code-line pl-4"><span class="token-tag">&lt;h1&gt;</span><span class="text-white">Ihr Auftritt.</span><span class="token-tag">&lt;/h1&gt;</span></div>
+                    <div class="code-line pl-4"><span class="token-fn">const</span> <span class="text-white">score</span> = <span class="token-string">100</span><span class="token-comment">; // PageSpeed</span></div>
+                    <div class="code-line pl-4"><span class="token-key">performance</span>.<span class="token-fn">optimize</span>(<span class="token-string">'all'</span>);</div>
+                    <div class="code-line"><span class="token-tag">&lt;/section&gt;</span></div>
+                    <div class="code-line mt-2"><span class="token-fn">async function</span> <span class="text-white">launch</span>() &#123;</div>
+                    <div class="code-line pl-4"><span class="token-fn">await</span> <span class="text-white">design</span>.<span class="token-fn">create</span>();</div>
+                    <div class="code-line pl-4"><span class="token-fn">await</span> <span class="text-white">code</span>.<span class="token-fn">build</span>();</div>
+                    <div class="code-line pl-4"><span class="token-fn">await</span> <span class="text-white">seo</span>.<span class="token-fn">optimize</span>();</div>
+                    <div class="code-line pl-4"><span class="token-key">return</span> <span class="token-string">'🚀 live'</span>;</div>
+                    <div class="code-line">&#125;</div>
+                    <div class="code-line mt-2"><span class="token-tag">&lt;style&gt;</span></div>
+                    <div class="code-line pl-4"><span class="token-key">.brand</span> &#123; <span class="token-attr">color</span>: <span class="token-string">#0ea5e9</span>; &#125;</div>
+                    <div class="code-line pl-4"><span class="token-key">.speed</span> &#123; <span class="token-attr">load-time</span>: <span class="token-string">&lt;1s</span>; &#125;</div>
+                    <div class="code-line"><span class="token-tag">&lt;/style&gt;</span></div>
+                    <div class="code-line mt-2"><span class="token-comment">// — repeat —</span></div>
+                    <div class="code-line"><span class="token-comment">// wesolve-IT · Webentwicklung</span></div>
+                    <div class="code-line"><span class="token-tag">&lt;section</span> <span class="token-attr">class</span>=<span class="token-string">"hero"</span><span class="token-tag">&gt;</span></div>
+                    <div class="code-line pl-4"><span class="token-tag">&lt;h1&gt;</span><span class="text-white">Ihr Auftritt.</span><span class="token-tag">&lt;/h1&gt;</span></div>
+                    <div class="code-line pl-4"><span class="token-fn">const</span> <span class="text-white">score</span> = <span class="token-string">100</span><span class="token-comment">; // PageSpeed</span></div>
+                    <div class="code-line pl-4"><span class="token-key">performance</span>.<span class="token-fn">optimize</span>(<span class="token-string">'all'</span>);</div>
+                    <div class="code-line"><span class="token-tag">&lt;/section&gt;</span></div>
+                    <div class="code-line mt-2"><span class="token-fn">async function</span> <span class="text-white">launch</span>() &#123;</div>
+                    <div class="code-line pl-4"><span class="token-fn">await</span> <span class="text-white">design</span>.<span class="token-fn">create</span>();</div>
+                    <div class="code-line pl-4"><span class="token-fn">await</span> <span class="text-white">code</span>.<span class="token-fn">build</span>();</div>
+                    <div class="code-line pl-4"><span class="token-fn">await</span> <span class="text-white">seo</span>.<span class="token-fn">optimize</span>();</div>
+                    <div class="code-line pl-4"><span class="token-key">return</span> <span class="token-string">'🚀 live'</span>;</div>
+                    <div class="code-line">&#125;</div>
+                  </div>
+                </div>
+                <!-- Overlay gradient -->
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-slate-950/60 pointer-events-none"></div>
+                <!-- Center badge -->
+                <div class="absolute inset-0 flex items-center justify-center">
+                  <div class="text-center">
+                    <div class="text-5xl font-black text-white tracking-tight">&lt;/&gt;</div>
+                    <div class="text-xs text-slate-400 font-bold uppercase tracking-widest mt-2">Clean Code</div>
+                  </div>
+                </div>
+                <!-- Bottom status bar -->
+                <div class="absolute bottom-0 left-0 right-0 flex items-center gap-3 px-5 py-3 bg-slate-900/90 backdrop-blur-sm border-t border-slate-700/50">
+                  <div class="w-2 h-2 rounded-full bg-brand-accent animate-pulse"></div>
+                  <span class="text-xs text-slate-400 font-mono">build complete · 0 errors · ready to deploy</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Floating tech badges -->
+            <div class="absolute -bottom-4 -left-6 px-4 py-2.5 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-lg flex items-center gap-2">
+              <div class="w-6 h-6 rounded-lg bg-sky-500 flex items-center justify-center text-white text-xs font-black">R</div>
+              <span class="text-xs font-bold text-slate-600 dark:text-slate-300">React</span>
+            </div>
+            <div class="absolute top-1/3 -right-6 px-4 py-2.5 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-lg flex items-center gap-2">
+              <div class="w-6 h-6 rounded-lg bg-black flex items-center justify-center text-white text-xs font-black">N</div>
+              <span class="text-xs font-bold text-slate-600 dark:text-slate-300">Next.js</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
+  </section>
 
-</div>
-  
+  <!-- ═══════════════════════════════ TECH STACK ═══════════════════════════════ -->
+  <section class="py-12 px-6 border-y border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 transition-colors duration-300">
+    <div class="max-w-7xl mx-auto">
+      <p class="text-center text-xs font-black uppercase tracking-[0.3em] text-slate-400 dark:text-slate-500 mb-8">Technologien, mit denen wir arbeiten</p>
+      <div class="flex flex-wrap justify-center gap-3">
+        <span class="px-5 py-2.5 rounded-full bg-brand-light dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-sm font-bold text-slate-600 dark:text-slate-300 hover:border-brand-primary/40 hover:text-brand-primary transition-all">React</span>
+        <span class="px-5 py-2.5 rounded-full bg-brand-light dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-sm font-bold text-slate-600 dark:text-slate-300 hover:border-brand-primary/40 hover:text-brand-primary transition-all">Next.js</span>
+        <span class="px-5 py-2.5 rounded-full bg-brand-light dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-sm font-bold text-slate-600 dark:text-slate-300 hover:border-brand-primary/40 hover:text-brand-primary transition-all">TypeScript</span>
+        <span class="px-5 py-2.5 rounded-full bg-brand-light dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-sm font-bold text-slate-600 dark:text-slate-300 hover:border-brand-primary/40 hover:text-brand-primary transition-all">Tailwind CSS</span>
+        <span class="px-5 py-2.5 rounded-full bg-brand-light dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-sm font-bold text-slate-600 dark:text-slate-300 hover:border-brand-primary/40 hover:text-brand-primary transition-all">Node.js</span>
+        <span class="px-5 py-2.5 rounded-full bg-brand-light dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-sm font-bold text-slate-600 dark:text-slate-300 hover:border-brand-primary/40 hover:text-brand-primary transition-all">PostgreSQL</span>
+        <span class="px-5 py-2.5 rounded-full bg-brand-light dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-sm font-bold text-slate-600 dark:text-slate-300 hover:border-brand-primary/40 hover:text-brand-primary transition-all">Docker</span>
+        <span class="px-5 py-2.5 rounded-full bg-brand-light dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-sm font-bold text-slate-600 dark:text-slate-300 hover:border-brand-primary/40 hover:text-brand-primary transition-all">Strapi CMS</span>
+        <span class="px-5 py-2.5 rounded-full bg-brand-light dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-sm font-bold text-slate-600 dark:text-slate-300 hover:border-brand-primary/40 hover:text-brand-primary transition-all">Vercel</span>
+      </div>
+    </div>
+  </section>
 
-  <div id="footer-placeholder"></div>
+  <!-- ═══════════════════════════════ LEISTUNGEN ═══════════════════════════════ -->
+  <section class="py-24 px-6">
+    <div class="max-w-7xl mx-auto">
+
+      <div class="mb-16 reveal">
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-sky-50 dark:bg-sky-900/20 border border-sky-200 dark:border-sky-800/40 mb-6">
+          <span class="w-2 h-2 rounded-full bg-brand-primary animate-pulse"></span>
+          <span class="text-brand-primary font-bold text-xs uppercase tracking-[0.2em]">Was wir liefern</span>
+        </div>
+        <h2 class="text-4xl md:text-5xl font-black tracking-tight text-brand-text dark:text-white">
+          Alles aus einer Hand.
+        </h2>
+      </div>
+
+      <!-- Feature cards grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- Card 1: Webauftritte -->
+        <div class="group p-8 rounded-[2rem] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-brand-primary/40 hover:-translate-y-1 hover:shadow-lg hover:shadow-brand-primary/5 transition-all duration-300 reveal delay-100">
+          <div class="w-12 h-12 rounded-2xl bg-brand-primary/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+            <svg class="w-6 h-6 text-brand-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-black text-brand-text dark:text-white mb-3">Webauftritte & Landingpages</h3>
+          <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-6">
+            Professionelle Unternehmenswebsites, die Vertrauen aufbauen und Besucher in Kunden verwandeln. Responsive, schnell, und SEO-ready ab Tag 1.
+          </p>
+          <div class="flex flex-wrap gap-1.5">
+            <span class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 text-xs font-medium">Responsive</span>
+            <span class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 text-xs font-medium">SEO-ready</span>
+            <span class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 text-xs font-medium">CMS</span>
+          </div>
+        </div>
+
+        <!-- Card 2: Webapplikationen -->
+        <div class="group p-8 rounded-[2rem] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-brand-primary/40 hover:-translate-y-1 hover:shadow-lg hover:shadow-brand-primary/5 transition-all duration-300 reveal delay-200">
+          <div class="w-12 h-12 rounded-2xl bg-sky-500/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+            <svg class="w-6 h-6 text-sky-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-black text-brand-text dark:text-white mb-3">Webapplikationen & Portale</h3>
+          <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-6">
+            Komplexe browserbasierte Anwendungen, Intra- und Extranets, Buchungsportale und Dashboards — individuell entwickelt und auf Skalierung ausgelegt.
+          </p>
+          <div class="flex flex-wrap gap-1.5">
+            <span class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 text-xs font-medium">React</span>
+            <span class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 text-xs font-medium">REST API</span>
+            <span class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 text-xs font-medium">Auth</span>
+          </div>
+        </div>
+
+        <!-- Card 3: Agile Dev -->
+        <div class="group p-8 rounded-[2rem] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-brand-primary/40 hover:-translate-y-1 hover:shadow-lg hover:shadow-brand-primary/5 transition-all duration-300 reveal delay-300">
+          <div class="w-12 h-12 rounded-2xl bg-brand-accent/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+            <svg class="w-6 h-6 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-black text-brand-text dark:text-white mb-3">Agile Entwicklung</h3>
+          <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-6">
+            Kurze Iterationszyklen, regelmäßige Demos und direkter Draht zu Ihrem Entwickler. Kein Wasserfall, kein Blindflug — Sie sehen Fortschritt von Tag 1.
+          </p>
+          <div class="flex flex-wrap gap-1.5">
+            <span class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 text-xs font-medium">Sprints</span>
+            <span class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 text-xs font-medium">Reviews</span>
+            <span class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 text-xs font-medium">Transparenz</span>
+          </div>
+        </div>
+
+        <!-- Card 4: Performance -->
+        <div class="group p-8 rounded-[2rem] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-brand-primary/40 hover:-translate-y-1 hover:shadow-lg hover:shadow-brand-primary/5 transition-all duration-300 reveal delay-100">
+          <div class="w-12 h-12 rounded-2xl bg-brand-primary/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+            <svg class="w-6 h-6 text-brand-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-black text-brand-text dark:text-white mb-3">Performance & Geschwindigkeit</h3>
+          <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-6">
+            Jede Website wird für maximale Ladegeschwindigkeit optimiert. Core Web Vitals, Bildkomprimierung, Lazy Loading und CDN-Auslieferung gehören zum Standard.
+          </p>
+          <div class="flex flex-wrap gap-1.5">
+            <span class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 text-xs font-medium">Core Web Vitals</span>
+            <span class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 text-xs font-medium">CDN</span>
+            <span class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 text-xs font-medium">Caching</span>
+          </div>
+        </div>
+
+        <!-- Card 5: CI/CD & DevOps -->
+        <div class="group p-8 rounded-[2rem] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-brand-primary/40 hover:-translate-y-1 hover:shadow-lg hover:shadow-brand-primary/5 transition-all duration-300 reveal delay-200">
+          <div class="w-12 h-12 rounded-2xl bg-slate-100 dark:bg-slate-800 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+            <svg class="w-6 h-6 text-slate-500 dark:text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-black text-brand-text dark:text-white mb-3">Hosting & DevOps</h3>
+          <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-6">
+            CI/CD-Pipelines, automatisierte Deployments und Monitoring. Ihr Projekt läuft auf moderner Cloud-Infrastruktur — sicher, skalierbar und wartungsarm.
+          </p>
+          <div class="flex flex-wrap gap-1.5">
+            <span class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 text-xs font-medium">Docker</span>
+            <span class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 text-xs font-medium">CI/CD</span>
+            <span class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 text-xs font-medium">Monitoring</span>
+          </div>
+        </div>
+
+        <!-- Card 6: Support -->
+        <div class="group p-8 rounded-[2rem] bg-gradient-to-br from-brand-primary to-sky-400 border border-brand-primary hover:-translate-y-1 hover:shadow-xl hover:shadow-brand-primary/30 transition-all duration-300 reveal delay-300">
+          <div class="w-12 h-12 rounded-2xl bg-white/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-black text-white mb-3">Support & Pflege</h3>
+          <p class="text-white/80 text-sm leading-relaxed mb-6">
+            Nach dem Launch sind wir weiterhin für Sie da. Updates, Erweiterungen, Bugfixes und Content-Änderungen — schnell, zuverlässig und ohne Stundenabrechnung.
+          </p>
+          <a href="/kontakt" class="inline-flex items-center gap-2 text-white font-bold text-sm hover:gap-3 transition-all">
+            Support anfragen
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+            </svg>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ PROZESS ═══════════════════════════════ -->
+  <section class="py-24 px-6 bg-slate-50 dark:bg-slate-900/50 transition-colors duration-300">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+        <!-- Left: Heading -->
+        <div class="reveal-left">
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-sky-50 dark:bg-sky-900/20 border border-sky-200 dark:border-sky-800/40 mb-6">
+            <span class="w-2 h-2 rounded-full bg-brand-primary animate-pulse"></span>
+            <span class="text-brand-primary font-bold text-xs uppercase tracking-[0.2em]">Unser Ablauf</span>
+          </div>
+          <h2 class="text-4xl md:text-5xl font-black tracking-tight text-brand-text dark:text-white mb-6">
+            Von der Idee zur<br>
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-brand-accent">fertigen Website.</span>
+          </h2>
+          <p class="text-slate-500 dark:text-slate-400 leading-relaxed text-lg mb-8">
+            Klarer Prozess, ehrliche Kommunikation. Bei uns wissen Sie immer, in welcher Phase sich Ihr Projekt befindet.
+          </p>
+          <a href="/kontakt"
+             class="inline-flex items-center gap-2 px-8 py-4 rounded-2xl bg-brand-primary hover:bg-sky-400 text-white font-bold transition-all hover:shadow-xl hover:shadow-brand-primary/30 hover:-translate-y-0.5 group">
+            Jetzt starten
+            <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+            </svg>
+          </a>
+        </div>
+
+        <!-- Right: Steps -->
+        <div class="space-y-4 reveal-right">
+          <div class="flex gap-5 p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-brand-primary/30 transition-all">
+            <div class="w-10 h-10 rounded-xl bg-brand-primary/10 flex items-center justify-center flex-shrink-0 font-black text-brand-primary text-sm">01</div>
+            <div>
+              <h4 class="font-black text-brand-text dark:text-white mb-1">Briefing & Analyse</h4>
+              <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">Wir verstehen Ihr Ziel, Ihre Zielgruppe und Ihren Wettbewerb, bevor wir eine Zeile schreiben.</p>
+            </div>
+          </div>
+          <div class="flex gap-5 p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-brand-primary/30 transition-all">
+            <div class="w-10 h-10 rounded-xl bg-sky-500/10 flex items-center justify-center flex-shrink-0 font-black text-sky-500 text-sm">02</div>
+            <div>
+              <h4 class="font-black text-brand-text dark:text-white mb-1">Design & Prototyp</h4>
+              <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">Sie sehen Ihr Design bevor der erste Code geschrieben wird — mit Feedback-Schleife bis es perfekt ist.</p>
+            </div>
+          </div>
+          <div class="flex gap-5 p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-brand-primary/30 transition-all">
+            <div class="w-10 h-10 rounded-xl bg-brand-accent/10 flex items-center justify-center flex-shrink-0 font-black text-brand-accent text-sm">03</div>
+            <div>
+              <h4 class="font-black text-brand-text dark:text-white mb-1">Entwicklung & Testing</h4>
+              <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">Sauberer Code, automatisierte Tests und Performance-Optimierung in schnellen Iterationen.</p>
+            </div>
+          </div>
+          <div class="flex gap-5 p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-brand-primary/30 transition-all">
+            <div class="w-10 h-10 rounded-xl bg-brand-primary/10 flex items-center justify-center flex-shrink-0 font-black text-brand-primary text-sm">04</div>
+            <div>
+              <h4 class="font-black text-brand-text dark:text-white mb-1">Launch & laufender Support</h4>
+              <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">Deployment, Monitoring und Wartung. Wir sind nach dem Go-live weiterhin für Sie da.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ CTA ═══════════════════════════════ -->
+  <section class="py-24 px-6 relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-brand-primary/5 via-transparent to-brand-accent/5 pointer-events-none"></div>
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-primary/5 blur-[150px] rounded-full pointer-events-none"></div>
+
+    <div class="relative max-w-3xl mx-auto text-center reveal">
+      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-sky-50 dark:bg-sky-900/20 border border-sky-200 dark:border-sky-800/40 mb-8">
+        <div class="w-2 h-2 rounded-full bg-brand-accent animate-ping"></div>
+        <span class="text-brand-primary font-bold text-xs uppercase tracking-[0.2em]">Bereit loszulegen?</span>
+      </div>
+      <h2 class="text-4xl md:text-6xl font-black tracking-tight text-brand-text dark:text-white mb-6">
+        Ihre Website.<br>
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-brand-accent">Unser Code.</span>
+      </h2>
+      <p class="text-lg text-slate-500 dark:text-slate-400 mb-10 max-w-xl mx-auto leading-relaxed">
+        Erzählen Sie uns von Ihrem Projekt — wir antworten innerhalb von 24 Stunden mit einem konkreten Vorschlag.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/kontakt"
+           class="inline-flex items-center justify-center gap-2 px-10 py-5 rounded-2xl bg-brand-primary hover:bg-sky-400 text-white font-bold text-base transition-all hover:shadow-2xl hover:shadow-brand-primary/30 hover:-translate-y-0.5 group">
+          Kostenlos anfragen
+          <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+          </svg>
+        </a>
+        <a href="/referenzen"
+           class="inline-flex items-center justify-center gap-2 px-10 py-5 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-brand-text dark:text-white font-bold text-base transition-all hover:border-brand-primary/50 hover:-translate-y-0.5 hover:shadow-lg">
+          Projekte ansehen
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ FOOTER ═══════════════════════════════ -->
+  <footer class="relative bg-brand-light dark:bg-slate-950 overflow-hidden transition-colors duration-300" x-data>
+    <div class="h-px w-full bg-gradient-to-r from-transparent via-brand-primary to-brand-accent"></div>
+    <div class="absolute inset-0 pointer-events-none overflow-hidden">
+      <div class="absolute bottom-0 left-[-10%] w-96 h-96 bg-brand-primary/5 blur-[100px] rounded-full"></div>
+      <div class="absolute bottom-0 right-[-10%] w-96 h-96 bg-brand-accent/5 blur-[100px] rounded-full"></div>
+    </div>
+    <div class="relative z-10 container mx-auto px-6 pt-20 pb-10">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-12 pb-16 mb-10 border-b border-slate-200 dark:border-slate-800">
+        <div class="md:col-span-5">
+          <a href="/" class="inline-flex items-center gap-3 mb-7">
+            <div class="w-10 h-10 bg-brand-text dark:bg-white/10 rounded-xl flex items-center justify-center text-white text-base font-black shadow-sm">W</div>
+            <span class="text-2xl font-extrabold tracking-tighter text-brand-text dark:text-white">wesolve<span class="text-brand-primary">-IT</span></span>
+          </a>
+          <p class="text-slate-500 dark:text-slate-400 text-base leading-relaxed max-w-sm mb-8">
+            Wir transformieren komplexe Probleme in digitale Logik. High-Performance MVPs und modernes Webdesign für Visionäre.
+          </p>
+          <div class="flex gap-3">
+            <a href="https://www.linkedin.com/company/wesolve-it-nuernberg" target="_blank"
+               class="w-11 h-11 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-2xl flex items-center justify-center text-slate-500 dark:text-slate-400 hover:bg-brand-primary hover:border-brand-primary hover:text-white hover:scale-110 transition-all shadow-sm">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+              </svg>
+            </a>
+            <a href="https://www.instagram.com/wesolve_it/" target="_blank"
+               class="w-11 h-11 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-2xl flex items-center justify-center text-slate-500 dark:text-slate-400 hover:bg-gradient-to-br hover:from-pink-500 hover:to-orange-400 hover:border-transparent hover:text-white hover:scale-110 transition-all shadow-sm">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="md:col-span-2 md:col-start-7">
+          <h4 class="text-brand-text dark:text-white font-black uppercase text-xs tracking-[0.2em] mb-6">Navigation</h4>
+          <ul class="space-y-4">
+            <li><a href="/" class="text-slate-500 dark:text-slate-400 font-medium hover:text-brand-primary transition-colors">Home</a></li>
+            <li><a href="/leistungen" class="text-brand-primary font-bold">Leistungen</a></li>
+            <li><a href="/referenzen" class="text-slate-500 dark:text-slate-400 font-medium hover:text-brand-primary transition-colors">Referenzen</a></li>
+            <li><a href="/kontakt" class="text-slate-500 dark:text-slate-400 font-medium hover:text-brand-primary transition-colors">Kontakt</a></li>
+          </ul>
+        </div>
+        <div class="md:col-span-2">
+          <h4 class="text-brand-text dark:text-white font-black uppercase text-xs tracking-[0.2em] mb-6">Rechtliches</h4>
+          <ul class="space-y-4">
+            <li><a href="/impressum" class="text-slate-500 dark:text-slate-400 font-medium hover:text-brand-primary transition-colors">Impressum</a></li>
+            <li><a href="/datenschutz" class="text-slate-500 dark:text-slate-400 font-medium hover:text-brand-primary transition-colors">Datenschutz</a></li>
+            <li><a href="/agbs" class="text-slate-500 dark:text-slate-400 font-medium hover:text-brand-primary transition-colors">AGB</a></li>
+          </ul>
+        </div>
+        <div class="md:col-span-2">
+          <h4 class="text-brand-text dark:text-white font-black uppercase text-xs tracking-[0.2em] mb-6">Kontakt</h4>
+          <a href="mailto:info@wesolve-it.de" class="text-brand-primary font-bold text-base hover:underline decoration-2 underline-offset-4 break-all">info@wesolve-it.de</a>
+          <div class="mt-5 flex items-center gap-2">
+            <div class="w-2 h-2 bg-brand-accent rounded-full animate-ping flex-shrink-0"></div>
+            <span class="text-slate-500 dark:text-slate-400 text-xs font-semibold">Bereit für neue Projekte</span>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+        <p class="text-slate-400 dark:text-slate-500 text-sm font-medium">
+          © <span x-text="new Date().getFullYear()"></span> wesolve-IT. Made with <span class="text-brand-primary font-semibold">Logic</span> in Nürnberg.
+        </p>
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm">
+          <span class="text-[10px] font-black uppercase text-slate-400 dark:text-slate-500 tracking-wider">Last Update</span>
+          <span class="text-brand-primary text-[10px] font-black">•</span>
+          <span class="text-[10px] font-black uppercase text-slate-500 dark:text-slate-400 tracking-wider">April 2026</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll-reveal observer -->
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(el => observer.observe(el));
+  </script>
+
 </body>
 </html>

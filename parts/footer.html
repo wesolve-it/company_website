@@ -1,78 +1,91 @@
-<footer class="relative z-20 pt-20 pb-10 bg-brand-light overflow-hidden">
-    <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-full pointer-events-none opacity-20">
-        <div class="absolute bottom-[-10%] left-[-5%] w-96 h-96 bg-brand-primary/20 blur-[100px] rounded-full"></div>
-        <div class="absolute bottom-[-10%] right-[-5%] w-96 h-96 bg-brand-accent/20 blur-[100px] rounded-full"></div>
+<footer class="relative bg-brand-light dark:bg-slate-950 overflow-hidden transition-colors duration-300" x-data>
+  <!-- Top gradient accent line -->
+  <div class="h-px w-full bg-gradient-to-r from-transparent via-brand-primary to-brand-accent"></div>
+
+  <!-- Background blobs -->
+  <div class="absolute inset-0 pointer-events-none overflow-hidden">
+    <div class="absolute bottom-0 left-[-10%] w-96 h-96 bg-brand-primary/5 blur-[100px] rounded-full"></div>
+    <div class="absolute bottom-0 right-[-10%] w-96 h-96 bg-brand-accent/5 blur-[100px] rounded-full"></div>
+  </div>
+
+  <div class="relative z-10 container mx-auto px-6 pt-20 pb-10">
+
+    <!-- Main grid -->
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-12 pb-16 mb-10 border-b border-slate-200 dark:border-slate-800">
+
+      <!-- Brand column -->
+      <div class="md:col-span-5">
+        <a href="/" class="inline-flex items-center gap-3 mb-7">
+          <div class="w-10 h-10 bg-brand-text dark:bg-white/10 rounded-xl flex items-center justify-center text-white text-base font-black shadow-sm">W</div>
+          <span class="text-2xl font-extrabold tracking-tighter text-brand-text dark:text-white">wesolve<span class="text-brand-primary">-IT</span></span>
+        </a>
+        <p class="text-slate-500 dark:text-slate-400 text-base leading-relaxed max-w-sm mb-8">
+          Wir transformieren komplexe Probleme in digitale Logik. High-Performance MVPs und modernes Webdesign für Visionäre.
+        </p>
+
+        <!-- Social links -->
+        <div class="flex gap-3">
+          <a href="https://www.linkedin.com/company/wesolve-it-nuernberg" target="_blank"
+             class="w-11 h-11 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-2xl flex items-center justify-center text-slate-500 dark:text-slate-400 hover:bg-brand-primary hover:border-brand-primary hover:text-white hover:scale-110 transition-all shadow-sm group">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            </svg>
+          </a>
+          <a href="https://www.instagram.com/wesolve_it/" target="_blank"
+             class="w-11 h-11 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-2xl flex items-center justify-center text-slate-500 dark:text-slate-400 hover:bg-gradient-to-br hover:from-pink-500 hover:to-orange-400 hover:border-transparent hover:text-white hover:scale-110 transition-all shadow-sm group">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Nav links -->
+      <div class="md:col-span-2 md:col-start-7">
+        <h4 class="text-brand-text dark:text-white font-black uppercase text-xs tracking-[0.2em] mb-6">Navigation</h4>
+        <ul class="space-y-4">
+          <li><a href="/" class="text-slate-500 dark:text-slate-400 font-medium hover:text-brand-primary transition-colors">Home</a></li>
+          <li><a href="/leistungen" class="text-slate-500 dark:text-slate-400 font-medium hover:text-brand-primary transition-colors">Leistungen</a></li>
+          <li><a href="/referenzen" class="text-slate-500 dark:text-slate-400 font-medium hover:text-brand-primary transition-colors">Referenzen</a></li>
+          <li><a href="/kontakt" class="text-slate-500 dark:text-slate-400 font-medium hover:text-brand-primary transition-colors">Kontakt</a></li>
+        </ul>
+      </div>
+
+      <!-- Legal links -->
+      <div class="md:col-span-2">
+        <h4 class="text-brand-text dark:text-white font-black uppercase text-xs tracking-[0.2em] mb-6">Rechtliches</h4>
+        <ul class="space-y-4">
+          <li><a href="/impressum" class="text-slate-500 dark:text-slate-400 font-medium hover:text-brand-primary transition-colors">Impressum</a></li>
+          <li><a href="/datenschutz" class="text-slate-500 dark:text-slate-400 font-medium hover:text-brand-primary transition-colors">Datenschutz</a></li>
+          <li><a href="/agbs" class="text-slate-500 dark:text-slate-400 font-medium hover:text-brand-primary transition-colors">AGB</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="md:col-span-2">
+        <h4 class="text-brand-text dark:text-white font-black uppercase text-xs tracking-[0.2em] mb-6">Kontakt</h4>
+        <a href="mailto:info@wesolve-it.de"
+           class="text-brand-primary font-bold text-base hover:underline decoration-2 underline-offset-4 break-all">
+          info@wesolve-it.de
+        </a>
+        <div class="mt-5 flex items-center gap-2">
+          <div class="w-2 h-2 bg-brand-accent rounded-full animate-ping flex-shrink-0"></div>
+          <span class="text-slate-500 dark:text-slate-400 text-xs font-semibold">Bereit für neue Projekte</span>
+        </div>
+      </div>
     </div>
 
-    <div class="container mx-auto px-6 relative z-10">
-        <div class="bg-white/70 backdrop-blur-xl border border-white p-10 md:p-16 rounded-[3.5rem] shadow-[20px_20px_60px_#cbd5e1,-10px_-10px_40px_#ffffff]">
-            
-            <div class="grid grid-cols-1 md:grid-cols-12 gap-12">
-                
-                <div class="md:col-span-5">
-                    <div class="text-3xl font-extrabold tracking-tighter flex items-center gap-3 text-brand-text mb-6">
-                        <div class="w-10 h-10 bg-brand-text rounded-xl flex items-center justify-center text-white text-base font-black">VS</div>
-                        <span>Agency<span class="text-brand-primary">.</span></span>
-                    </div>
-                    <p class="text-slate-500 text-lg leading-relaxed max-w-sm font-medium">
-                        Wir transformieren komplexe Probleme in digitale Logik. High-Performance MVPs und modernes Webdesign für Visionäre.
-                    </p>
-                    <div class="mt-8 flex gap-4">
-                        <a href="#" class="w-12 h-12 bg-white rounded-2xl flex items-center justify-center shadow-sm border border-slate-50 text-brand-text hover:text-brand-primary hover:scale-110 transition-all">
-                            <img src="https://cdn.simpleicons.org/linkedin/0F172A" class="w-5 h-5" alt="LinkedIn">
-                        </a>
-                        <a href="#" class="w-12 h-12 bg-white rounded-2xl flex items-center justify-center shadow-sm border border-slate-50 text-brand-text hover:text-brand-primary hover:scale-110 transition-all">
-                            <img src="https://cdn.simpleicons.org/x/0F172A" class="w-5 h-5" alt="X">
-                        </a>
-                        <a href="#" class="w-12 h-12 bg-white rounded-2xl flex items-center justify-center shadow-sm border border-slate-50 text-brand-text hover:text-brand-primary hover:scale-110 transition-all">
-                            <img src="https://cdn.simpleicons.org/github/0F172A" class="w-5 h-5" alt="GitHub">
-                        </a>
-                    </div>
-                </div>
-
-                <div class="md:col-span-2 md:col-start-7">
-                    <h4 class="text-brand-text font-black uppercase text-xs tracking-[0.2em] mb-6">Navigation</h4>
-                    <ul class="space-y-4">
-                        <li><a href="#" class="text-slate-500 font-bold hover:text-brand-primary transition-colors">Service</a></li>
-                        <li><a href="#" class="text-slate-500 font-bold hover:text-brand-primary transition-colors">Our Works</a></li>
-                        <li><a href="#" class="text-slate-500 font-bold hover:text-brand-primary transition-colors">About Us</a></li>
-                        <li><a href="#" class="text-slate-500 font-bold hover:text-brand-primary transition-colors">Process</a></li>
-                    </ul>
-                </div>
-
-                <div class="md:col-span-2">
-                    <h4 class="text-brand-text font-black uppercase text-xs tracking-[0.2em] mb-6">Legal</h4>
-                    <ul class="space-y-4">
-                        <li><a href="#" class="text-slate-500 font-bold hover:text-brand-primary transition-colors">Impressum</a></li>
-                        <li><a href="#" class="text-slate-500 font-bold hover:text-brand-primary transition-colors">Datenschutz</a></li>
-                        <li><a href="#" class="text-slate-500 font-bold hover:text-brand-primary transition-colors">Cookies</a></li>
-                    </ul>
-                </div>
-
-                <div class="md:col-span-2">
-                    <h4 class="text-brand-text font-black uppercase text-xs tracking-[0.2em] mb-6">Say Hello</h4>
-                    <a href="mailto:hello@agency.com" class="text-brand-primary font-black text-lg hover:underline decoration-2 underline-offset-4">
-                        hello@agency.com
-                    </a>
-                </div>
-            </div>
-
-            <div class="mt-16 pt-8 border-t border-slate-100 flex flex-col md:flex-row justify-between items-center gap-6">
-                <div class="text-slate-400 text-sm font-bold uppercase tracking-widest">
-                    © 2026 VS Agency. Made with <span class="text-brand-primary">Logic</span>
-                </div>
-                
-                <div class="flex items-center gap-3 px-4 py-2 bg-slate-50 rounded-full border border-slate-100">
-                    <div class="w-2 h-2 bg-brand-accent rounded-full animate-ping"></div>
-                    <span class="text-[10px] font-black uppercase text-slate-500 tracking-wider italic">Agency is Open for Projects</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="mt-8 text-center">
-            <div class="inline-flex items-center gap-2 rounded-full bg-white px-4 py-1.5 text-[10px] font-bold text-slate-400 border border-slate-50 shadow-sm tracking-[0.2em] uppercase">
-                Last Update <span class="text-brand-primary">•</span> Jan 16, 2026
-            </div>
-        </div>
+    <!-- Bottom bar -->
+    <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+      <p class="text-slate-400 dark:text-slate-500 text-sm font-medium">
+        © <span x-text="new Date().getFullYear()"></span> wesolve-IT. Made with <span class="text-brand-primary font-semibold">Logic</span> in Nürnberg.
+      </p>
+      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm">
+        <span class="text-[10px] font-black uppercase text-slate-400 dark:text-slate-500 tracking-wider">Last Update</span>
+        <span class="text-brand-primary text-[10px] font-black">•</span>
+        <span class="text-[10px] font-black uppercase text-slate-500 dark:text-slate-400 tracking-wider">April 2026</span>
+      </div>
     </div>
+
+  </div>
 </footer>

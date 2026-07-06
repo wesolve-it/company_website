@@ -38,24 +38,24 @@
         </p>
 
         <div class="mt-10 flex flex-wrap gap-5">
-          <button
+          <a href="/kontakt"
             class="group flex items-center gap-3 rounded-2xl bg-brand-primary px-8 py-4 text-lg font-bold text-white transition-all hover:scale-105 hover:shadow-lg hover:shadow-brand-primary/30">
-            Start Project
+            Projekt starten
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform group-hover:translate-x-1"
               fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M14 5l7 7m0 0l-7 7m7-7H3" />
             </svg>
-          </button>
+          </a>
           <div class="flex items-center gap-3">
             <div class="flex -space-x-3">
               <div
                 class="w-10 h-10 rounded-full border-2 border-white bg-slate-200 flex items-center justify-center text-[10px] font-bold text-slate-600">
-                JD</div>
+                MR</div>
               <div
                 class="w-10 h-10 rounded-full border-2 border-white bg-brand-primary/20 flex items-center justify-center text-[10px] text-brand-primary font-bold">
-                AS</div>
+                WI</div>
             </div>
-            <span class="text-xs font-bold text-slate-400 uppercase tracking-widest">Expert Team</span>
+            <span class="text-xs font-bold text-slate-400 uppercase tracking-widest">wesolve-IT Team</span>
           </div>
         </div>
       </div>
@@ -131,7 +131,7 @@
     </div>
   </main>
 
-  <footer class="absolute bottom-8 w-full px-6 md:px-12 flex justify-between items-end z-20">
+  <footer class="w-full px-6 md:px-12 flex justify-between items-end z-20">
     <div class="flex items-center gap-6">
       <div class="hidden md:flex flex-col">
         <span class="text-[10px] font-black uppercase text-slate-400 tracking-[0.2em] mb-1">Service
@@ -146,7 +146,7 @@
     <div class="flex flex-col items-end">
       <div
         class="rounded-full bg-white px-5 py-2 text-[10px] font-bold text-brand-text border border-slate-100 shadow-sm tracking-[0.3em] uppercase">
-        Jan 14 <span class="mx-2 text-brand-primary">•</span> 2026
+        <span x-text="new Date().toLocaleDateString('de-DE', { month: 'short', day: 'numeric', year: 'numeric' })"></span>
       </div>
     </div>
   </footer>

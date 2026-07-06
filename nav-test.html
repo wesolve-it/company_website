@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Test</title>
+    <link href="/dist/styles.css" rel="stylesheet">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body class="bg-slate-50">
+    <div id="nav-container"></div>
+    
+    <div class="h-[100vh] pt-32 px-12 flex items-center justify-center">
+        <div class="text-center">
+            <h1 class="text-6xl font-black text-slate-900 mb-6">Navigation & Customers Test</h1>
+            <p class="text-xl text-slate-500">Scroll down to see the glass effect and the new customer loop.</p>
+        </div>
+    </div>
+
+    <div id="customer-container"></div>
+
+    <div class="h-[100vh] bg-[#020617] flex items-center justify-center">
+        <p class="text-slate-500">End of test page</p>
+    </div>
+
+    <script>
+        fetch('/parts/navigation.html')
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById('nav-container').innerHTML = html;
+            });
+
+        fetch('/parts/customer.html')
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById('customer-container').innerHTML = html;
+            });
+    </script>
+</body>
+</html>

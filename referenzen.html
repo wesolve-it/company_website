@@ -1,155 +1,633 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
+  <!-- Dark mode FOUC prevention -->
+  <script>
+    (function() {
+      var t = localStorage.getItem('theme');
+      if (t === 'dark' || (!t && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      }
+    })();
+  </script>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Referenzen | wesolve-IT</title>
-  
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;400;700;900&display=swap" rel="stylesheet">
-  
+  <meta name="description" content="Unsere digitalen Projekte — von Business Apps bis E-Commerce Lösungen. Entdecken Sie, wie wesolve-IT Unternehmen transformiert.">
+
+  <link rel="icon" type="image/x-icon" href="./assets/img/Wesolveit_loigo.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="./dist/styles.css" rel="stylesheet">
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
   <style>
-    /* Die exakte Farbpalette deiner Hauptseite */
-    :root {
-      --bg-dark: #020617;
-      --card-bg: rgba(15, 23, 42, 0.03); /* Ganz helles Slate für den 'hellen' Look */
-      --accent-blue: #3b82f6;
+    [x-cloak] { display: none !important; }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-12px); }
+    }
+    @keyframes bounce-x {
+      0%, 100% { transform: translateX(0); }
+      50% { transform: translateX(5px); }
     }
 
-    body { 
-      font-family: 'Plus Jakarta Sans', sans-serif; 
-      background-color: #ffffff; 
-      color: #020617;
-    }
+    .animate-float { animation: float 5s ease-in-out infinite; }
+    .animate-bounce-x { animation: bounce-x 1s infinite; }
 
-    /* Bento-Card Style von der Hauptseite (angepasst auf Hell) */
-    .bento-card {
-      background: #f8fafc;
-      border: 1px solid #e2e8f0;
-      border-radius: 2.5rem;
-      transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.7s ease-out, transform 0.7s ease-out;
     }
-
-    .bento-card:hover {
-      background: #ffffff;
-      border-color: #3b82f6;
-      box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.05);
-      transform: translateY(-5px);
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-left {
+      opacity: 0; transform: translateX(-28px);
+      transition: opacity 0.7s ease-out, transform 0.7s ease-out;
     }
-
-    /* Die markante Outline-Schrift der Hauptseite */
-    .text-outline {
-      -webkit-text-stroke: 1px #cbd5e1;
-      color: transparent;
+    .reveal-left.visible { opacity: 1; transform: translateX(0); }
+    .reveal-right {
+      opacity: 0; transform: translateX(28px);
+      transition: opacity 0.7s ease-out, transform 0.7s ease-out;
     }
+    .reveal-right.visible { opacity: 1; transform: translateX(0); }
 
-    /* Glow-Effekte (wie im Hero) nur dezenter */
-    .glow-soft {
+    .delay-100 { transition-delay: 100ms; }
+    .delay-200 { transition-delay: 200ms; }
+    .delay-300 { transition-delay: 300ms; }
+    .delay-400 { transition-delay: 400ms; }
+    .delay-500 { transition-delay: 500ms; }
+
+    /* Card hover shimmer */
+    .project-card::after {
+      content: '';
       position: absolute;
-      width: 400px;
-      height: 400px;
-      background: radial-gradient(circle, rgba(59, 130, 246, 0.05) 0%, transparent 70%);
-      z-index: -1;
+      inset: 0;
+      border-radius: inherit;
+      background: linear-gradient(135deg, rgba(14,165,233,0.06) 0%, transparent 60%);
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      pointer-events: none;
     }
+    .project-card:hover::after { opacity: 1; }
   </style>
 </head>
-<body x-data="{ filter: 'all' }">
+<body class="antialiased font-sans bg-brand-light dark:bg-slate-950 text-brand-text dark:text-white transition-colors duration-300 overflow-x-hidden"
+      x-data="{ filter: 'all', mobileMenuOpen: false }">
 
-  <div class="glow-soft top-0 left-0"></div>
-  <div class="glow-soft bottom-0 right-0"></div>
-
-  <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-xl border-b border-slate-100">
+  <!-- ═══════════════════════════════ NAVIGATION ═══════════════════════════════ -->
+  <nav class="sticky top-0 z-50 bg-brand-light/80 dark:bg-slate-950/80 backdrop-blur-xl border-b border-slate-200/60 dark:border-slate-800/60 transition-colors duration-300">
     <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-      <div class="font-black text-2xl tracking-tighter uppercase italic">wesolve-IT</div>
-      <div class="hidden md:flex items-center space-x-10">
-        <a href="/" class="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 hover:text-blue-600 transition-colors">Vision</a>
-        <a href="/referenzen" class="text-[10px] font-black uppercase tracking-[0.2em] text-blue-600">Referenzen</a>
-        <a href="/kontakt" class="bg-slate-950 text-white px-8 py-3 rounded-2xl text-[10px] font-black uppercase tracking-widest hover:bg-blue-600 transition-all shadow-lg shadow-blue-900/10">Start Project</a>
+
+      <a href="/" class="flex items-center gap-2 text-2xl font-extrabold tracking-tighter text-brand-text dark:text-white">
+        <div class="w-8 h-8 bg-brand-text dark:bg-white/10 rounded-lg flex items-center justify-center text-white text-sm font-black">W</div>
+        wesolve<span class="text-brand-primary">-IT</span>
+      </a>
+
+      <div class="hidden md:flex items-center space-x-10 font-semibold text-slate-500 dark:text-slate-400">
+        <a href="/" class="hover:text-brand-primary transition-colors">Home</a>
+        <a href="/leistungen" class="hover:text-brand-primary transition-colors">Leistungen</a>
+        <a href="/referenzen" class="text-brand-primary font-bold">Referenzen</a>
+        <a href="/kontakt" class="hover:text-brand-primary transition-colors">Kontakt</a>
+      </div>
+
+      <div class="hidden md:flex items-center gap-3">
+        <!-- Dark mode toggle -->
+        <button
+          x-data="{ isDark: document.documentElement.classList.contains('dark') }"
+          @click="isDark = !isDark; document.documentElement.classList.toggle('dark', isDark); localStorage.setItem('theme', isDark ? 'dark' : 'light')"
+          class="w-9 h-9 rounded-full flex items-center justify-center border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-500 dark:text-slate-400 hover:text-brand-primary hover:border-brand-primary hover:scale-105 transition-all"
+          aria-label="Toggle dark mode">
+          <svg x-show="!isDark" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+          </svg>
+          <svg x-show="isDark" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
+          </svg>
+        </button>
+        <a href="/kontakt"
+           class="rounded-full bg-brand-primary px-8 py-3 font-bold text-white transition-all hover:scale-105 hover:shadow-xl hover:shadow-brand-primary/30">
+          Projekt starten
+        </a>
+      </div>
+
+      <!-- Mobile hamburger -->
+      <button @click="mobileMenuOpen = !mobileMenuOpen" class="md:hidden text-brand-text dark:text-white focus:outline-none">
+        <svg x-show="!mobileMenuOpen" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+        <svg x-show="mobileMenuOpen" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile menu -->
+    <div x-show="mobileMenuOpen"
+         x-transition:enter="transition ease-out duration-200"
+         x-transition:enter-start="opacity-0 -translate-y-4"
+         x-transition:enter-end="opacity-100 translate-y-0"
+         x-cloak
+         class="bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800 p-6 md:hidden flex flex-col space-y-4">
+      <a href="/" class="text-lg font-bold text-slate-600 dark:text-slate-300 hover:text-brand-primary">Home</a>
+      <a href="/leistungen" class="text-lg font-bold text-slate-600 dark:text-slate-300 hover:text-brand-primary">Leistungen</a>
+      <a href="/referenzen" class="text-lg font-bold text-brand-primary">Referenzen</a>
+      <a href="/kontakt" class="text-lg font-bold text-slate-600 dark:text-slate-300 hover:text-brand-primary">Kontakt</a>
+      <div class="flex items-center gap-3 pt-2">
+        <a href="/kontakt" class="flex-1 bg-brand-primary text-white py-4 rounded-2xl text-center font-bold">Projekt starten</a>
+        <button
+          x-data="{ isDark: document.documentElement.classList.contains('dark') }"
+          @click="isDark = !isDark; document.documentElement.classList.toggle('dark', isDark); localStorage.setItem('theme', isDark ? 'dark' : 'light')"
+          class="w-14 h-14 rounded-2xl flex items-center justify-center border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-500 dark:text-slate-400">
+          <svg x-show="!isDark" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+          </svg>
+          <svg x-show="isDark" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
+          </svg>
+        </button>
       </div>
     </div>
   </nav>
 
-  <header class="pt-48 pb-24 px-6">
-    <div class="max-w-7xl mx-auto">
-      <div class="flex flex-col space-y-4">
-        <span class="text-blue-600 font-black text-[10px] uppercase tracking-[0.4em]" data-aos="fade-right">Archive 2024/25</span>
-        <h1 class="text-[10vw] md:text-[8vw] font-black leading-[0.8] tracking-tighter uppercase italic">
-          Proven <br> <span class="text-outline">Results.</span>
-        </h1>
-        <div class="flex flex-col md:flex-row md:items-center justify-between gap-8 pt-12">
-          <p class="max-w-md text-slate-500 font-medium leading-relaxed">
-            Wir transformieren Unternehmen durch Code. Hier ist eine Auswahl unserer digitalisierten Visionen.
+  <!-- ═══════════════════════════════ HERO ═══════════════════════════════ -->
+  <section class="relative overflow-hidden pt-20 pb-16 px-6">
+    <!-- Background glows -->
+    <div class="absolute top-0 left-[20%] w-[500px] h-[500px] bg-brand-primary/8 blur-[120px] rounded-full pointer-events-none"></div>
+    <div class="absolute bottom-0 right-[10%] w-[400px] h-[400px] bg-brand-accent/8 blur-[120px] rounded-full pointer-events-none"></div>
+
+    <div class="relative max-w-7xl mx-auto">
+      <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-10">
+
+        <!-- Left: heading -->
+        <div class="max-w-2xl">
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-sky-50 dark:bg-sky-900/20 border border-sky-200 dark:border-sky-800/40 mb-6">
+            <span class="w-2 h-2 rounded-full bg-brand-primary animate-pulse"></span>
+            <span class="text-brand-primary font-bold text-xs uppercase tracking-[0.2em]">Unsere Referenzen</span>
+          </div>
+          <h1 class="text-5xl md:text-7xl font-black tracking-tight leading-[1.0] text-brand-text dark:text-white mb-6">
+            Digitale Produkte,<br>
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-brand-accent">die wirken.</span>
+          </h1>
+          <p class="text-lg text-slate-500 dark:text-slate-400 leading-relaxed max-w-xl">
+            Von Business-Apps bis zu komplexen Webplattformen — hier sehen Sie, wie wir Ideen in funktionierende digitale Produkte verwandeln.
           </p>
-          
-          <div class="flex gap-1 bg-slate-100 p-1.5 rounded-3xl border border-slate-200">
-            <button @click="filter = 'all'" :class="filter === 'all' ? 'bg-white text-slate-950 shadow-sm' : 'text-slate-400'" class="px-6 py-2.5 rounded-2xl text-[10px] font-black uppercase tracking-widest transition-all">All</button>
-            <button @click="filter = 'web'" :class="filter === 'web' ? 'bg-white text-slate-950 shadow-sm' : 'text-slate-400'" class="px-6 py-2.5 rounded-2xl text-[10px] font-black uppercase tracking-widest transition-all">Web</button>
-            <button @click="filter = 'app'" :class="filter === 'app' ? 'bg-white text-slate-950 shadow-sm' : 'text-slate-400'" class="px-6 py-2.5 rounded-2xl text-[10px] font-black uppercase tracking-widest transition-all">Apps</button>
+        </div>
+
+        <!-- Right: stats -->
+        <div class="flex gap-6 lg:gap-8 flex-shrink-0">
+          <div class="text-center">
+            <div class="text-4xl font-black text-brand-text dark:text-white">15+</div>
+            <div class="text-xs font-semibold text-slate-400 dark:text-slate-500 uppercase tracking-widest mt-1">Projekte</div>
           </div>
+          <div class="w-px bg-slate-200 dark:bg-slate-700"></div>
+          <div class="text-center">
+            <div class="text-4xl font-black text-brand-text dark:text-white">4+</div>
+            <div class="text-xs font-semibold text-slate-400 dark:text-slate-500 uppercase tracking-widest mt-1">Jahre</div>
+          </div>
+          <div class="w-px bg-slate-200 dark:bg-slate-700"></div>
+          <div class="text-center">
+            <div class="text-4xl font-black text-brand-text dark:text-white">100%</div>
+            <div class="text-xs font-semibold text-slate-400 dark:text-slate-500 uppercase tracking-widest mt-1">Zufrieden</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Filter tabs -->
+      <div class="mt-12 flex flex-wrap gap-2">
+        <button @click="filter = 'all'"
+                :class="filter === 'all' ? 'bg-brand-primary text-white border-brand-primary shadow-lg shadow-brand-primary/20' : 'bg-white dark:bg-slate-800 text-slate-500 dark:text-slate-400 border-slate-200 dark:border-slate-700 hover:border-brand-primary/50'"
+                class="px-6 py-2.5 rounded-full border font-bold text-sm transition-all duration-300">
+          Alle Projekte
+        </button>
+        <button @click="filter = 'web'"
+                :class="filter === 'web' ? 'bg-brand-primary text-white border-brand-primary shadow-lg shadow-brand-primary/20' : 'bg-white dark:bg-slate-800 text-slate-500 dark:text-slate-400 border-slate-200 dark:border-slate-700 hover:border-brand-primary/50'"
+                class="px-6 py-2.5 rounded-full border font-bold text-sm transition-all duration-300">
+          Web & E-Commerce
+        </button>
+        <button @click="filter = 'app'"
+                :class="filter === 'app' ? 'bg-brand-primary text-white border-brand-primary shadow-lg shadow-brand-primary/20' : 'bg-white dark:bg-slate-800 text-slate-500 dark:text-slate-400 border-slate-200 dark:border-slate-700 hover:border-brand-primary/50'"
+                class="px-6 py-2.5 rounded-full border font-bold text-sm transition-all duration-300">
+          Apps & Software
+        </button>
+        <button @click="filter = 'seo'"
+                :class="filter === 'seo' ? 'bg-brand-primary text-white border-brand-primary shadow-lg shadow-brand-primary/20' : 'bg-white dark:bg-slate-800 text-slate-500 dark:text-slate-400 border-slate-200 dark:border-slate-700 hover:border-brand-primary/50'"
+                class="px-6 py-2.5 rounded-full border font-bold text-sm transition-all duration-300">
+          SEO & Marketing
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ PROJECTS GRID ═══════════════════════════ -->
+  <section class="pb-24 px-6">
+    <div class="max-w-7xl mx-auto">
+
+      <!-- Row 1: FCN (large) + Alfafood (medium) -->
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-6 mb-6">
+
+        <!-- FCN — featured large -->
+        <div class="md:col-span-7 project-card group relative overflow-hidden rounded-[2.5rem] bg-slate-900 h-[500px] md:h-[560px] cursor-pointer transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_40px_80px_-20px_rgba(14,165,233,0.25)] reveal delay-100"
+             x-show="filter === 'all' || filter === 'app'"
+             x-transition:enter="transition ease-out duration-300"
+             x-transition:enter-start="opacity-0 scale-95"
+             x-transition:enter-end="opacity-100 scale-100"
+             x-transition:leave="transition ease-in duration-200"
+             x-transition:leave-start="opacity-100 scale-100"
+             x-transition:leave-end="opacity-0 scale-95">
+          <img src="./assets/img/standing-ipad-mockup-1.webp"
+               class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+               alt="1. FC Nürnberg Business Seating App">
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/50 to-transparent"></div>
+          <!-- Category badge top-left -->
+          <div class="absolute top-7 left-7">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-brand-accent/20 backdrop-blur-sm border border-brand-accent/30 text-brand-accent font-bold text-xs uppercase tracking-wider">
+              <span class="w-1.5 h-1.5 rounded-full bg-brand-accent"></span>
+              Sport & Event
+            </span>
+          </div>
+          <!-- Year badge top-right -->
+          <div class="absolute top-7 right-7">
+            <span class="px-3 py-1.5 rounded-full bg-white/10 backdrop-blur-sm text-white/70 font-bold text-xs">2023–2025</span>
+          </div>
+          <!-- Content bottom -->
+          <div class="absolute bottom-0 left-0 right-0 p-8 md:p-10">
+            <h2 class="text-3xl md:text-4xl font-black text-white tracking-tight">1. FC Nürnberg</h2>
+            <p class="text-slate-300 mt-3 text-sm md:text-base max-w-sm leading-relaxed">Business Seating App für VIP-Management und reibungslose Spieltagabwicklung im Max-Morlock-Stadion.</p>
+            <div class="flex flex-wrap gap-2 mt-4 mb-6">
+              <span class="px-3 py-1 rounded-full bg-white/10 text-white/70 text-xs font-medium">Mobile App</span>
+              <span class="px-3 py-1 rounded-full bg-white/10 text-white/70 text-xs font-medium">React Native</span>
+              <span class="px-3 py-1 rounded-full bg-white/10 text-white/70 text-xs font-medium">REST API</span>
+            </div>
+            <a href="/referenzen/fc-nuernberg"
+               class="inline-flex items-center gap-2 px-6 py-3 rounded-2xl bg-white/10 hover:bg-white text-white hover:text-brand-text backdrop-blur-sm font-bold text-sm transition-all duration-300 group/btn">
+              Case Study lesen
+              <svg class="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Alfafood -->
+        <div class="md:col-span-5 project-card group relative overflow-hidden rounded-[2.5rem] bg-slate-900 h-[500px] md:h-[560px] cursor-pointer transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_40px_80px_-20px_rgba(14,165,233,0.2)] reveal delay-200"
+             x-show="filter === 'all' || filter === 'web'"
+             x-transition:enter="transition ease-out duration-300"
+             x-transition:enter-start="opacity-0 scale-95"
+             x-transition:enter-end="opacity-100 scale-100"
+             x-transition:leave="transition ease-in duration-200"
+             x-transition:leave-start="opacity-100 scale-100"
+             x-transition:leave-end="opacity-0 scale-95">
+          <img src="./assets/img/exampleImage.webp"
+               class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+               alt="Alfafood Webseite">
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/40 to-transparent"></div>
+          <div class="absolute top-7 left-7">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-brand-primary/20 backdrop-blur-sm border border-brand-primary/30 text-brand-primary font-bold text-xs uppercase tracking-wider">
+              <span class="w-1.5 h-1.5 rounded-full bg-brand-primary"></span>
+              Web & E-Commerce
+            </span>
+          </div>
+          <div class="absolute top-7 right-7">
+            <span class="px-3 py-1.5 rounded-full bg-white/10 backdrop-blur-sm text-white/70 font-bold text-xs">2024</span>
+          </div>
+          <div class="absolute bottom-0 left-0 right-0 p-8">
+            <h2 class="text-2xl md:text-3xl font-black text-white tracking-tight">Alfafood GmbH</h2>
+            <p class="text-slate-300 mt-2 text-sm leading-relaxed">Moderner Webauftritt mit autonomer CMS-Integration und digitaler Logistikübersicht.</p>
+            <div class="flex flex-wrap gap-2 mt-3 mb-5">
+              <span class="px-3 py-1 rounded-full bg-white/10 text-white/70 text-xs font-medium">Next.js</span>
+              <span class="px-3 py-1 rounded-full bg-white/10 text-white/70 text-xs font-medium">CMS</span>
+              <span class="px-3 py-1 rounded-full bg-white/10 text-white/70 text-xs font-medium">SEO</span>
+            </div>
+            <a href="/referenzen/alfafood"
+               class="inline-flex items-center gap-2 px-6 py-3 rounded-2xl bg-white/10 hover:bg-white text-white hover:text-brand-text backdrop-blur-sm font-bold text-sm transition-all duration-300 group/btn">
+              Case Study lesen
+              <svg class="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Row 2: Sport Weber (large) + Die Schokoecke (medium) -->
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-6 mb-6">
+
+        <!-- Die Schokoecke -->
+        <div class="md:col-span-5 project-card group relative overflow-hidden rounded-[2.5rem] bg-slate-900 h-[440px] cursor-pointer transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_40px_80px_-20px_rgba(132,204,22,0.2)] reveal delay-100"
+             x-show="filter === 'all' || filter === 'web'"
+             x-transition:enter="transition ease-out duration-300"
+             x-transition:enter-start="opacity-0 scale-95"
+             x-transition:enter-end="opacity-100 scale-100"
+             x-transition:leave="transition ease-in duration-200"
+             x-transition:leave-start="opacity-100 scale-100"
+             x-transition:leave-end="opacity-0 scale-95">
+          <img src="./assets/img/dieschokoecke.png"
+               class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+               alt="Die Schokoecke">
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/40 to-transparent"></div>
+          <div class="absolute top-7 left-7">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-brand-accent/20 backdrop-blur-sm border border-brand-accent/30 text-brand-accent font-bold text-xs uppercase tracking-wider">
+              <span class="w-1.5 h-1.5 rounded-full bg-brand-accent"></span>
+              Individuelle Software
+            </span>
+          </div>
+          <div class="absolute top-7 right-7">
+            <span class="px-3 py-1.5 rounded-full bg-white/10 backdrop-blur-sm text-white/70 font-bold text-xs">2024</span>
+          </div>
+          <div class="absolute bottom-0 left-0 right-0 p-8">
+            <h2 class="text-2xl font-black text-white tracking-tight">Die Schokoecke</h2>
+            <p class="text-slate-300 mt-2 text-sm leading-relaxed">Maßgeschneiderte Betriebssoftware für einen Chocolatier — Bestellverwaltung & Kundendatenbank.</p>
+            <div class="flex flex-wrap gap-2 mt-3 mb-5">
+              <span class="px-3 py-1 rounded-full bg-white/10 text-white/70 text-xs font-medium">Custom Software</span>
+              <span class="px-3 py-1 rounded-full bg-white/10 text-white/70 text-xs font-medium">Node.js</span>
+            </div>
+            <a href="/referenzen/dieschokoecke"
+               class="inline-flex items-center gap-2 px-6 py-3 rounded-2xl bg-white/10 hover:bg-white text-white hover:text-brand-text backdrop-blur-sm font-bold text-sm transition-all duration-300 group/btn">
+              Case Study lesen
+              <svg class="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Sport Weber -->
+        <div class="md:col-span-7 project-card group relative overflow-hidden rounded-[2.5rem] h-[440px] cursor-pointer transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_40px_80px_-20px_rgba(14,165,233,0.2)] reveal delay-200"
+             x-show="filter === 'all' || filter === 'web'"
+             x-transition:enter="transition ease-out duration-300"
+             x-transition:enter-start="opacity-0 scale-95"
+             x-transition:enter-end="opacity-100 scale-100"
+             x-transition:leave="transition ease-in duration-200"
+             x-transition:leave-start="opacity-100 scale-100"
+             x-transition:leave-end="opacity-0 scale-95">
+          <!-- Gradient background -->
+          <div class="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 transition-transform duration-700 group-hover:scale-105"></div>
+          <div class="absolute inset-0 opacity-30" style="background: radial-gradient(ellipse at 70% 50%, rgba(14,165,233,0.3) 0%, transparent 60%), radial-gradient(ellipse at 20% 80%, rgba(132,204,22,0.2) 0%, transparent 50%)"></div>
+          <!-- Grid pattern -->
+          <div class="absolute inset-0 opacity-5" style="background-image: linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px); background-size: 40px 40px;"></div>
+          <!-- Logo center -->
+          <div class="absolute inset-0 flex items-center justify-center">
+            <div class="relative">
+              <div class="absolute inset-0 bg-brand-primary/20 blur-3xl rounded-full scale-150"></div>
+              <img src="./assets/img/SportWeberLogoNeuklein.3caf40cb13b6ecc9538a.webp"
+                   class="relative h-20 md:h-28 w-auto opacity-30 group-hover:opacity-90 grayscale group-hover:grayscale-0 transition-all duration-700"
+                   alt="Sport Weber">
+            </div>
+          </div>
+          <div class="absolute top-7 left-7">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-brand-primary/20 backdrop-blur-sm border border-brand-primary/30 text-brand-primary font-bold text-xs uppercase tracking-wider">
+              <span class="w-1.5 h-1.5 rounded-full bg-brand-primary"></span>
+              Retail & Rent
+            </span>
+          </div>
+          <div class="absolute top-7 right-7">
+            <span class="px-3 py-1.5 rounded-full bg-white/10 backdrop-blur-sm text-white/70 font-bold text-xs">2023</span>
+          </div>
+          <div class="absolute bottom-0 left-0 right-0 p-8 md:p-10">
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+              <div>
+                <h2 class="text-2xl md:text-3xl font-black text-white tracking-tight">Sport Weber</h2>
+                <p class="text-slate-300 mt-2 text-sm leading-relaxed max-w-sm">Individuelles Rent-Shop-System zur effizienten Abwicklung von Ski- und Sportgeräteverleih.</p>
+                <div class="flex flex-wrap gap-2 mt-3">
+                  <span class="px-3 py-1 rounded-full bg-white/10 text-white/70 text-xs font-medium">E-Commerce</span>
+                  <span class="px-3 py-1 rounded-full bg-white/10 text-white/70 text-xs font-medium">Rental System</span>
+                  <span class="px-3 py-1 rounded-full bg-white/10 text-white/70 text-xs font-medium">Laravel</span>
+                </div>
+              </div>
+              <a href="/referenzen/sportweber-schnaittach"
+                 class="flex-shrink-0 inline-flex items-center gap-2 px-6 py-3 rounded-2xl bg-white/10 hover:bg-white text-white hover:text-brand-text backdrop-blur-sm font-bold text-sm transition-all duration-300 group/btn">
+                Case Study
+                <svg class="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Row 3: LU-BU (small) + "Ihr Projekt?" card -->
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+
+        <!-- LU-BU Asian Food -->
+        <div class="md:col-span-5 project-card group relative overflow-hidden rounded-[2.5rem] bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 h-[360px] cursor-pointer transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_30px_60px_-15px_rgba(14,165,233,0.15)] reveal delay-100"
+             x-show="filter === 'all' || filter === 'seo'"
+             x-transition:enter="transition ease-out duration-300"
+             x-transition:enter-start="opacity-0 scale-95"
+             x-transition:enter-end="opacity-100 scale-100"
+             x-transition:leave="transition ease-in duration-200"
+             x-transition:leave-start="opacity-100 scale-100"
+             x-transition:leave-end="opacity-0 scale-95">
+          <img src="./assets/img/Bildschirmfoto-2024-04-30-um-14.56.41.png"
+               class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+               alt="LU-BU Asian Food">
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/30 to-transparent"></div>
+          <div class="absolute top-7 left-7">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-brand-primary/20 backdrop-blur-sm border border-brand-primary/30 text-brand-primary font-bold text-xs uppercase tracking-wider">
+              <span class="w-1.5 h-1.5 rounded-full bg-brand-primary"></span>
+              SEO & Marketing
+            </span>
+          </div>
+          <div class="absolute bottom-0 left-0 right-0 p-7">
+            <h2 class="text-xl font-black text-white tracking-tight">LU-BU Asian Food</h2>
+            <p class="text-slate-300 mt-1.5 text-sm">Lokale SEO-Strategie mit messbarer Sichtbarkeitssteigerung in Google Maps & Search.</p>
+          </div>
+        </div>
+
+        <!-- "Ihr Projekt?" CTA card -->
+        <div class="md:col-span-7 reveal delay-200"
+             x-show="filter === 'all'"
+             x-transition:enter="transition ease-out duration-300"
+             x-transition:enter-start="opacity-0 scale-95"
+             x-transition:enter-end="opacity-100 scale-100"
+             x-transition:leave="transition ease-in duration-200"
+             x-transition:leave-start="opacity-100 scale-100"
+             x-transition:leave-end="opacity-0 scale-95">
+          <div class="relative overflow-hidden rounded-[2.5rem] h-[360px] bg-gradient-to-br from-brand-primary via-sky-500 to-brand-accent p-8 md:p-10 flex flex-col justify-between">
+            <!-- Background elements -->
+            <div class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/3 blur-2xl"></div>
+            <div class="absolute bottom-0 left-0 w-48 h-48 bg-white/10 rounded-full translate-y-1/2 -translate-x-1/4 blur-xl"></div>
+
+            <div class="relative z-10">
+              <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/20 border border-white/30 text-white font-bold text-xs uppercase tracking-wider mb-5">
+                <span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span>
+                Jetzt verfügbar
+              </div>
+              <h2 class="text-3xl md:text-4xl font-black text-white tracking-tight leading-tight">
+                Ihr Projekt<br>könnte hier stehen.
+              </h2>
+              <p class="text-white/80 mt-3 text-base leading-relaxed max-w-sm">
+                Wir haben freie Kapazitäten und freuen uns auf neue Herausforderungen. Lassen Sie uns gemeinsam etwas Großartiges bauen.
+              </p>
+            </div>
+
+            <div class="relative z-10 flex flex-col sm:flex-row gap-3">
+              <a href="/kontakt"
+                 class="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-2xl bg-white text-brand-primary font-black hover:scale-105 transition-all duration-300 shadow-lg">
+                Jetzt anfragen
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                </svg>
+              </a>
+              <a href="mailto:info@wesolve-it.de"
+                 class="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-2xl bg-white/15 hover:bg-white/25 text-white font-bold border border-white/30 transition-all duration-300">
+                info@wesolve-it.de
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ STATS BAR ════════════════════════════════ -->
+  <section class="bg-sky-50 dark:bg-slate-900 border-y border-slate-200 dark:border-slate-800 py-14 px-6 transition-colors duration-300 reveal">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-10 text-center">
+        <div>
+          <div class="text-5xl font-black text-brand-text dark:text-white mb-1">15+</div>
+          <div class="text-sm font-semibold text-slate-400 dark:text-slate-500 uppercase tracking-widest">Projekte realisiert</div>
+        </div>
+        <div>
+          <div class="text-5xl font-black text-brand-primary mb-1">4+</div>
+          <div class="text-sm font-semibold text-slate-400 dark:text-slate-500 uppercase tracking-widest">Jahre Erfahrung</div>
+        </div>
+        <div>
+          <div class="text-5xl font-black text-brand-text dark:text-white mb-1">3</div>
+          <div class="text-sm font-semibold text-slate-400 dark:text-slate-500 uppercase tracking-widest">Tech-Stacks</div>
+        </div>
+        <div>
+          <div class="text-5xl font-black text-brand-accent mb-1">∞</div>
+          <div class="text-sm font-semibold text-slate-400 dark:text-slate-500 uppercase tracking-widest">Kunden-Support</div>
         </div>
       </div>
     </div>
-  </header>
+  </section>
 
-  <main class="max-w-7xl mx-auto px-6 pb-40">
-    <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
-      
-      <div class="md:col-span-8 bento-card p-4 group" x-show="filter === 'all' || filter === 'web'" x-transition>
-        <div class="overflow-hidden rounded-[2rem] aspect-[16/9] relative bg-slate-200">
-          <img src="./assets/img/exampleImage.png" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-          <div class="absolute inset-0 bg-blue-600/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-        </div>
-        <div class="p-8 flex items-end justify-between">
-          <div>
-            <h2 class="text-4xl font-black tracking-tighter uppercase italic">Alfafood</h2>
-            <p class="text-blue-600 font-bold text-[10px] uppercase tracking-widest mt-2">Logistics & Web Ecosystem</p>
+  <!-- ═══════════════════════════════ CONTACT CTA ══════════════════════════════ -->
+  <div class="relative max-w-7xl mx-auto px-6 py-20">
+    <div class="reveal relative overflow-hidden bg-white dark:bg-slate-800 rounded-[3rem] border border-slate-100 dark:border-slate-700 shadow-[20px_20px_60px_#cbd5e1] dark:shadow-[0_20px_60px_rgba(0,0,0,0.4)] p-8 md:p-16 text-center">
+      <div class="absolute -top-24 -left-24 w-64 h-64 bg-brand-primary/10 blur-[80px]"></div>
+      <div class="absolute -bottom-24 -right-24 w-64 h-64 bg-brand-accent/10 blur-[80px]"></div>
+      <div class="relative z-10 max-w-3xl mx-auto">
+        <span class="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-widest text-brand-primary uppercase bg-sky-50 dark:bg-sky-900/20 rounded-full border border-sky-200 dark:border-sky-800/30">
+          Let's build together
+        </span>
+        <h2 class="text-3xl md:text-5xl font-black text-brand-text dark:text-white mb-6 tracking-tight leading-tight">
+          Bereit, Ihr nächstes Projekt<br/>
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-brand-accent">digital voranzubringen?</span>
+        </h2>
+        <p class="text-slate-500 dark:text-slate-400 text-lg mb-12 max-w-xl mx-auto">
+          Wir entwickeln individuelle Lösungen, die Ihren Arbeitsalltag erleichtern und Ihre Kunden begeistern. Antwort innerhalb von 24 Stunden.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
+          <a href="/kontakt" class="group inline-flex items-center justify-center gap-2 px-10 py-5 bg-brand-primary text-white font-black rounded-2xl hover:scale-105 hover:bg-sky-600 transition-all duration-300 shadow-xl shadow-brand-primary/20">
+            Jetzt durchstarten
+            <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+            </svg>
+          </a>
+          <div class="flex items-center gap-3 text-slate-500 dark:text-slate-400 text-sm">
+            <div class="flex -space-x-2">
+              <div class="w-8 h-8 rounded-full border-2 border-white dark:border-slate-800 bg-brand-primary flex items-center justify-center text-[10px] text-white font-bold">FCN</div>
+              <div class="w-8 h-8 rounded-full border-2 border-white dark:border-slate-800 bg-brand-accent flex items-center justify-center text-[10px] text-white font-bold">ALF</div>
+              <div class="w-8 h-8 rounded-full border-2 border-white dark:border-slate-800 bg-slate-400 dark:bg-slate-600 flex items-center justify-center text-[10px] text-white font-bold">+12</div>
+            </div>
+            <span>Bereits 15+ Projekte realisiert</span>
           </div>
-          <div class="w-12 h-12 rounded-full border border-slate-200 flex items-center justify-center group-hover:bg-slate-950 group-hover:text-white transition-all">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M17 8l4 4m0 0l-4 4m4-4H3" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </div>
         </div>
       </div>
-
-      <div class="md:col-span-4 bento-card p-4 group" x-show="filter === 'all' || filter === 'seo'" x-transition>
-        <div class="overflow-hidden rounded-[2rem] aspect-square bg-slate-200">
-          <img src="./assets/img/Bildschirmfoto-2024-04-30-um-14.56.41.png" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-        </div>
-        <div class="p-6">
-          <h2 class="text-xl font-black tracking-tighter uppercase italic">LU-BU Asian Food</h2>
-          <p class="text-slate-400 font-bold text-[10px] uppercase tracking-widest mt-1">SEO Strategy</p>
-        </div>
-      </div>
-
-      <div class="md:col-span-4 bento-card p-4 group bg-slate-950 border-none text-white" x-show="filter === 'all' || filter === 'app'" x-transition>
-        <div class="overflow-hidden rounded-[2rem] aspect-square bg-slate-800">
-          <img src="./assets/img/standing-ipad-mockup-1.png" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity">
-        </div>
-        <div class="p-6">
-          <h2 class="text-xl font-black tracking-tighter uppercase italic">1. FC Nürnberg</h2>
-          <p class="text-blue-400 font-bold text-[10px] uppercase tracking-widest mt-1">Mobile Ticketing</p>
-        </div>
-      </div>
-
-      <div class="md:col-span-8 bento-card p-4 group" x-show="filter === 'all' || filter === 'web'" x-transition>
-        <div class="overflow-hidden rounded-[2rem] aspect-[16/7] bg-slate-200">
-          <img src="./assets/img/Bildschirmfoto-2024-04-30-um-15.05.05.png" class="w-full h-full object-cover">
-        </div>
-        <div class="p-8 flex items-center justify-between">
-           <h2 class="text-3xl font-black tracking-tighter uppercase italic">Sport-Weber</h2>
-           <span class="text-[10px] font-black text-slate-300 uppercase tracking-widest">E-Commerce</span>
-        </div>
-      </div>
-
+      <div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-brand-primary/40 to-transparent"></div>
     </div>
-  </main>
+  </div>
 
-  <footer class="bg-[#020617] py-32 relative overflow-hidden text-center">
-    <div class="max-w-4xl mx-auto px-6 relative z-10">
-      <h2 class="text-5xl md:text-7xl font-black text-white mb-8 tracking-tighter uppercase italic">Ready to <br> <span class="text-blue-500">Go Digital?</span></h2>
-      <a href="/kontakt" class="inline-block bg-white text-slate-950 px-12 py-5 rounded-2xl font-black uppercase tracking-[0.2em] text-[10px] hover:scale-105 transition-all">Contact Us</a>
+  <!-- ═══════════════════════════════ FOOTER ═══════════════════════════════════ -->
+  <footer class="relative bg-brand-light dark:bg-slate-950 overflow-hidden transition-colors duration-300" x-data>
+    <div class="h-px w-full bg-gradient-to-r from-transparent via-brand-primary to-brand-accent"></div>
+    <div class="absolute inset-0 pointer-events-none overflow-hidden">
+      <div class="absolute bottom-0 left-[-10%] w-96 h-96 bg-brand-primary/5 blur-[100px] rounded-full"></div>
+      <div class="absolute bottom-0 right-[-10%] w-96 h-96 bg-brand-accent/5 blur-[100px] rounded-full"></div>
+    </div>
+    <div class="relative z-10 container mx-auto px-6 pt-20 pb-10">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-12 pb-16 mb-10 border-b border-slate-200 dark:border-slate-800">
+        <div class="md:col-span-5">
+          <a href="/" class="inline-flex items-center gap-3 mb-7">
+            <div class="w-10 h-10 bg-brand-text dark:bg-white/10 rounded-xl flex items-center justify-center text-white text-base font-black shadow-sm">W</div>
+            <span class="text-2xl font-extrabold tracking-tighter text-brand-text dark:text-white">wesolve<span class="text-brand-primary">-IT</span></span>
+          </a>
+          <p class="text-slate-500 dark:text-slate-400 text-base leading-relaxed max-w-sm mb-8">
+            Wir transformieren komplexe Probleme in digitale Logik. High-Performance MVPs und modernes Webdesign für Visionäre.
+          </p>
+          <div class="flex gap-3">
+            <a href="https://www.linkedin.com/company/wesolve-it-nuernberg" target="_blank"
+               class="w-11 h-11 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-2xl flex items-center justify-center text-slate-500 dark:text-slate-400 hover:bg-brand-primary hover:border-brand-primary hover:text-white hover:scale-110 transition-all shadow-sm">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/wesolve_it/" target="_blank"
+               class="w-11 h-11 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-2xl flex items-center justify-center text-slate-500 dark:text-slate-400 hover:bg-gradient-to-br hover:from-pink-500 hover:to-orange-400 hover:border-transparent hover:text-white hover:scale-110 transition-all shadow-sm">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="md:col-span-2 md:col-start-7">
+          <h4 class="text-brand-text dark:text-white font-black uppercase text-xs tracking-[0.2em] mb-6">Navigation</h4>
+          <ul class="space-y-4">
+            <li><a href="/" class="text-slate-500 dark:text-slate-400 font-medium hover:text-brand-primary transition-colors">Home</a></li>
+            <li><a href="/leistungen" class="text-slate-500 dark:text-slate-400 font-medium hover:text-brand-primary transition-colors">Leistungen</a></li>
+            <li><a href="/referenzen" class="text-brand-primary font-semibold">Referenzen</a></li>
+            <li><a href="/kontakt" class="text-slate-500 dark:text-slate-400 font-medium hover:text-brand-primary transition-colors">Kontakt</a></li>
+          </ul>
+        </div>
+
+        <div class="md:col-span-2">
+          <h4 class="text-brand-text dark:text-white font-black uppercase text-xs tracking-[0.2em] mb-6">Rechtliches</h4>
+          <ul class="space-y-4">
+            <li><a href="/impressum" class="text-slate-500 dark:text-slate-400 font-medium hover:text-brand-primary transition-colors">Impressum</a></li>
+            <li><a href="/datenschutz" class="text-slate-500 dark:text-slate-400 font-medium hover:text-brand-primary transition-colors">Datenschutz</a></li>
+            <li><a href="/agbs" class="text-slate-500 dark:text-slate-400 font-medium hover:text-brand-primary transition-colors">AGB</a></li>
+          </ul>
+        </div>
+
+        <div class="md:col-span-2">
+          <h4 class="text-brand-text dark:text-white font-black uppercase text-xs tracking-[0.2em] mb-6">Kontakt</h4>
+          <a href="mailto:info@wesolve-it.de" class="text-brand-primary font-bold text-base hover:underline decoration-2 underline-offset-4 break-all">info@wesolve-it.de</a>
+          <div class="mt-5 flex items-center gap-2">
+            <div class="w-2 h-2 bg-brand-accent rounded-full animate-ping flex-shrink-0"></div>
+            <span class="text-slate-500 dark:text-slate-400 text-xs font-semibold">Bereit für neue Projekte</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+        <p class="text-slate-400 dark:text-slate-500 text-sm font-medium">
+          © <span x-text="new Date().getFullYear()"></span> wesolve-IT. Made with <span class="text-brand-primary font-semibold">Logic</span> in Nürnberg.
+        </p>
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm">
+          <span class="text-[10px] font-black uppercase text-slate-400 dark:text-slate-500 tracking-wider">Last Update</span>
+          <span class="text-brand-primary text-[10px] font-black">•</span>
+          <span class="text-[10px] font-black uppercase text-slate-500 dark:text-slate-400 tracking-wider">April 2026</span>
+        </div>
+      </div>
     </div>
   </footer>
+
+  <!-- Intersection Observer for scroll reveal -->
+  <script>
+    (function() {
+      var obs = new IntersectionObserver(function(entries) {
+        entries.forEach(function(e) {
+          if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
+        });
+      }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+      document.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach(function(el) { obs.observe(el); });
+    })();
+  </script>
 
 </body>
 </html>
