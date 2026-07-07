@@ -1,22 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://cdn.tailwindcss.com"></script>
   <title>Danke!</title>
+  <!-- Umami Analytics (cookielos, DSGVO-freundlich ohne Consent-Banner).
+       Nach dem Anlegen der Website in Umami: src/Website-ID eintragen und Kommentar entfernen. -->
+  <!-- <script defer src="https://cloud.umami.is/script.js" data-website-id="UMAMI-WEBSITE-ID"></script> -->
+  <link href="./dist/styles.css" rel="stylesheet">
+  <script src="/js/theme.js"></script>
+  <link rel="icon" type="image/x-icon" href="./assets/img/Wesolveit_loigo.svg" />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Montserrat:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body class="bg-gray-100 flex items-center justify-center min-h-screen">
-  <div class="bg-white p-8 rounded-lg shadow-md text-center max-w-md">
-    <h1 class="text-2xl font-bold text-gray-800">Danke für deine Nachricht!</h1>
-    <p class="text-gray-600 mt-4">
+<body class="relative flex min-h-screen items-center justify-center overflow-hidden bg-white text-neutral-900 dark:bg-neutral-950 dark:text-neutral-100">
+  <div class="pointer-events-none absolute -top-24 -left-24 h-96 w-96 rounded-full bg-lime-300/40 blur-3xl dark:bg-lime-500/10"></div>
+  <div class="pointer-events-none absolute -bottom-24 -right-24 h-96 w-96 rounded-full bg-lime-200/50 blur-3xl dark:bg-lime-500/10"></div>
+
+  <div class="relative mx-6 max-w-md rounded-3xl border-2 border-neutral-200 bg-white dark:border-neutral-800 dark:bg-neutral-900 p-10 text-center shadow-[8px_8px_0px_0px_#a3e635]">
+    <div class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-lime-300">
+      <svg class="h-8 w-8 text-neutral-900" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+    </div>
+    <h1 class="mt-6 font-display text-3xl font-bold tracking-tight">Danke für deine Nachricht!</h1>
+    <p class="mt-4 text-neutral-600 dark:text-neutral-400">
       Wir werden uns so schnell wie möglich bei dir melden.
     </p>
-    <a
-      href="/"
-      class="mt-6 inline-block text-blue-500 hover:text-blue-700"
-    >
+    <a href="/"
+       class="group mt-8 inline-flex items-center gap-2 rounded-full bg-neutral-900 px-7 py-3.5 font-display font-semibold text-lime-300 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[4px_4px_0px_0px_#a3e635] dark:bg-lime-400 dark:text-neutral-900 dark:hover:bg-lime-300">
       Zurück zur Startseite
+      <svg class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
     </a>
   </div>
 </body>

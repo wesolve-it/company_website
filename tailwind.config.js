@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: 'class',
   content: [
     "./index.html",
     "./js/**/*.{js,ts}",
@@ -69,15 +70,22 @@ module.exports = {
       },
       fontFamily: {
         heading: ['"Barlow Condensed"', 'sans-serif'],
-        body: ['Montserrat', 'sans-serif']
+        body: ['Montserrat', 'sans-serif'],
+        display: ['"Space Grotesk"', 'sans-serif'],
       },
       animation: {
         'infinite-scroll': 'infinite-scroll 30s linear infinite',
+        'ticker': 'infinite-scroll 22s linear infinite',
+        'float': 'float 5s ease-in-out infinite',
       },
       keyframes: {
         'infinite-scroll': {
           from: { transform: 'translateX(0)' },
           to: { transform: 'translateX(-100%)' },
+        },
+        'float': {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-12px)' },
         }
       }
     },

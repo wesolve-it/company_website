@@ -9,6 +9,10 @@
   body {
     @apply font-body;
   }
+  html.dark {
+    color-scheme: dark;
+    background-color: theme('colors.neutral.950');
+  }
 }
 
 button svg {
@@ -53,5 +57,15 @@ button svg[x-show="open"] {
 
   [data-aos="safe-fade-right"] {
     transform: translateX(-15px);
+  }
+}
+
+/* Dauer-Animationen für Nutzer mit reduzierter Bewegung abschalten */
+@media (prefers-reduced-motion: reduce) {
+  .animate-ticker,
+  .animate-float,
+  .animate-infinite-scroll,
+  .logo-track {
+    animation: none !important;
   }
 }

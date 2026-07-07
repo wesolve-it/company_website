@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none" role="img" aria-label="Illustration: Suchleiste mit Top-Platzierung in den Suchergebnissen">
+  <defs>
+    <pattern id="dots-seo" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.5" fill="#404040"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="600" fill="#171717"/>
+  <rect width="800" height="600" fill="url(#dots-seo)" opacity="0.4"/>
+
+  <!-- Suchleiste mit Lime-Schatten -->
+  <rect x="132" y="92" width="560" height="68" rx="34" fill="#a3e635"/>
+  <rect x="120" y="80" width="560" height="68" rx="34" fill="#262626" stroke="#404040" stroke-width="2"/>
+  <circle cx="168" cy="114" r="12" stroke="#a3e635" stroke-width="3.5"/>
+  <line x1="177" y1="123" x2="190" y2="136" stroke="#a3e635" stroke-width="3.5" stroke-linecap="round"/>
+  <rect x="212" y="110" width="170" height="8" rx="4" fill="#fafafa"/>
+  <rect x="394" y="100" width="3" height="28" rx="1.5" fill="#a3e635"/>
+
+  <!-- Ergebnis 1: hervorgehoben -->
+  <rect x="120" y="196" width="380" height="92" rx="14" fill="#262626" stroke="#a3e635" stroke-width="2.5"/>
+  <circle cx="156" cy="242" r="16" fill="#a3e635"/>
+  <path d="M148 242 l6 6 10 -12" stroke="#171717" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="188" y="216" width="90" height="6" rx="3" fill="#a3e635"/>
+  <rect x="188" y="232" width="190" height="10" rx="5" fill="#fafafa"/>
+  <rect x="188" y="252" width="240" height="6" rx="3" fill="#525252"/>
+  <rect x="188" y="264" width="200" height="6" rx="3" fill="#525252"/>
+
+  <!-- Ergebnis 2 -->
+  <rect x="120" y="308" width="380" height="80" rx="14" fill="#262626" stroke="#404040" stroke-width="2"/>
+  <circle cx="156" cy="348" r="14" fill="#404040"/>
+  <rect x="188" y="326" width="70" height="6" rx="3" fill="#525252"/>
+  <rect x="188" y="340" width="160" height="9" rx="4.5" fill="#737373"/>
+  <rect x="188" y="358" width="220" height="6" rx="3" fill="#404040"/>
+
+  <!-- Ergebnis 3 -->
+  <rect x="120" y="408" width="380" height="80" rx="14" fill="#262626" stroke="#404040" stroke-width="2"/>
+  <circle cx="156" cy="448" r="14" fill="#404040"/>
+  <rect x="188" y="426" width="70" height="6" rx="3" fill="#525252"/>
+  <rect x="188" y="440" width="160" height="9" rx="4.5" fill="#737373"/>
+  <rect x="188" y="458" width="220" height="6" rx="3" fill="#404040"/>
+
+  <!-- Ranking-Chart rechts -->
+  <rect x="536" y="220" width="180" height="230" rx="16" fill="#262626" stroke="#404040" stroke-width="2"/>
+  <rect x="560" y="366" width="26" height="56" rx="6" fill="#525252"/>
+  <rect x="596" y="336" width="26" height="86" rx="6" fill="#525252"/>
+  <rect x="632" y="300" width="26" height="122" rx="6" fill="#525252"/>
+  <rect x="668" y="252" width="26" height="170" rx="6" fill="#a3e635"/>
+  <polyline points="560,346 606,312 640,278 678,240" stroke="#a3e635" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M666 238 l14 -2 -2 14" stroke="#a3e635" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Standort-Pin -->
+  <path d="M636 486 c-16 0 -27 11 -27 26 c0 18 27 42 27 42 c0 0 27 -24 27 -42 c0 -15 -11 -26 -27 -26 z" fill="#a3e635"/>
+  <circle cx="636" cy="512" r="9" fill="#171717"/>
+
+  <!-- Sparkles -->
+  <path d="M736 100 l5 15 15 5 -15 5 -5 15 -5 -15 -15 -5 15 -5 z" fill="#a3e635"/>
+  <path d="M64 520 l4 12 12 4 -12 4 -4 12 -4 -12 -12 -4 12 -4 z" fill="#d9f99d"/>
+</svg>
