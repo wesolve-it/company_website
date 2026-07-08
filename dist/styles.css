@@ -509,6 +509,15 @@ video {
     color-scheme: dark;
     background-color: #0a0a0a;
   }
+  /* Sicherheitsnetz gegen Überlauf durch lange Wörter; gezielte Trennstellen via &shy; im Markup */
+  h1, h2, h3 {
+    overflow-wrap: break-word;
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
 .container {
   width: 100%;
 }
@@ -2074,6 +2083,10 @@ button svg[x-show="open"] {
 
   .sm\:h-80 {
     height: 20rem;
+  }
+
+  .sm\:w-auto {
+    width: auto;
   }
 
   .sm\:grid-cols-2 {
