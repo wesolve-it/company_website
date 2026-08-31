@@ -16,3 +16,12 @@ document.addEventListener("DOMContentLoaded", function() {
       document.getElementById("footer-placeholder").innerHTML = data;
     });
 });
+
+// Cookie-Consent-Banner (js/cookie-consent.js) site-weit laden.
+document.addEventListener("DOMContentLoaded", function () {
+  if (document.getElementById("cookie-consent-loader")) return;
+  var script = document.createElement("script");
+  script.id = "cookie-consent-loader";
+  script.src = "/js/cookie-consent.js";
+  document.head.appendChild(script);
+});
