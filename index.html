@@ -13,7 +13,7 @@
   <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image">
   <link href="./dist/styles.css" rel="stylesheet"><script src="/js/theme.js"></script>
   <link rel="icon" type="image/svg+xml" href="./assets/img/Wesolveit_loigo.svg">
-  <script src="./js/navigation.js" defer></script><script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <script src="/js/navigation.js" defer></script><script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.8/dist/cdn.min.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
   <meta name="description" content="wesolve-IT entwickelt professionelle Webseiten, Apps und individuelle Software für Unternehmen – persönlich, verständlich und verlässlich betreut.">
@@ -25,18 +25,18 @@
 <main>
   <section class="hero-panel relative overflow-hidden bg-wesolve-green-950 px-4 pb-12 pt-28 text-white sm:px-6 lg:pb-16 lg:pt-40" aria-labelledby="hero-title">
     <div class="mx-auto grid max-w-screen-xl items-center gap-10 lg:grid-cols-12 lg:gap-6">
-      <div class="relative z-10 lg:col-span-6">
+      <div class="relative z-10 lg:col-span-7">
         <p class="hero-in text-sm font-semibold uppercase tracking-[0.18em] text-wesolve-accent-300" style="--d:0">Digitalagentur aus Schnaittach</p>
-        <h1 id="hero-title" style="--d:1" class="hero-in mt-6 max-w-4xl font-text text-[clamp(2.75rem,6.4vw,5.6rem)] font-bold leading-[0.98] tracking-[-0.055em]">Digitale Produkte, die Unternehmen voranbringen.</h1>
+        <h1 id="hero-title" style="--d:1" class="hero-in mt-6 max-w-4xl font-text text-[clamp(2.6rem,5.4vw,4.9rem)] font-bold leading-[1] tracking-[-0.055em]">Digitale Produkte, die Unternehmen voranbringen.</h1>
         <p style="--d:2" class="hero-in mt-7 max-w-2xl text-lg leading-relaxed text-wesolve-green-100 sm:text-xl">Wir entwickeln Webseiten, Apps und individuelle Software, die gut aussehen, verlässlich funktionieren und im Alltag wirklich Arbeit abnehmen.</p>
         <div style="--d:3" class="hero-in mt-9 flex flex-col gap-3 sm:flex-row">
           <a data-umami-event="cta-erstgespraech" href="/kontakt" id="beratungsButton" class="btn-primary">Projekt besprechen <svg class="h-4 w-4" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
           <a href="/referenzen" class="btn-secondary-dark">Referenzen ansehen</a>
         </div>
       </div>
-      <div style="--d:2" class="hero-in hero-art relative lg:col-span-6 lg:-mr-10">
+      <div style="--d:2" class="hero-in hero-art relative lg:col-span-5 lg:-mr-10">
         <div class="absolute inset-12 rounded-full bg-wesolve-accent-400/10 blur-3xl" aria-hidden="true"></div>
-        <img src="./assets/img/hero-tech-system.png" alt="Abstrakte Darstellung eines vernetzten digitalen Systems mit Laptop, Smartphone und Softwaremodulen" width="1536" height="1024" class="hero-float relative h-auto w-full drop-shadow-[0_28px_50px_rgba(0,0,0,0.3)]" fetchpriority="high">
+        <img src="./assets/img/hero-tech-system.webp" alt="Abstrakte Darstellung eines vernetzten digitalen Systems mit Laptop, Smartphone und Softwaremodulen" width="1536" height="1024" class="hero-float relative h-auto w-full drop-shadow-[0_28px_50px_rgba(0,0,0,0.3)]" fetchpriority="high">
       </div>
     </div>
     <div class="mx-auto mt-16 max-w-screen-xl border-t border-white/10 pt-7">
@@ -53,22 +53,66 @@
 
   <section class="px-4 py-24 sm:px-6 lg:py-32" aria-labelledby="services-title">
     <div class="mx-auto max-w-screen-xl">
-      <div class="grid gap-8 lg:grid-cols-12"><div class="lg:col-span-5"><p class="eyebrow">Leistungen</p><h2 id="services-title" class="section-title">Technologie, die zu deinem Unternehmen passt.</h2></div><p class="max-w-2xl text-lg leading-relaxed text-wesolve-green-700 dark:text-wesolve-green-200 lg:col-span-6 lg:col-start-7 lg:pt-10">Kein Produkt von der Stange: Wir verbinden Strategie, Gestaltung und Entwicklung zu einer Lösung, die dein Team versteht und deine Kunden gerne nutzen.</p></div>
+      <div class="grid gap-8 lg:grid-cols-12"><div class="lg:col-span-6"><p class="eyebrow">Leistungen</p><h2 id="services-title" class="section-title">Technologie, die zu deinem Unternehmen passt.</h2></div><p class="max-w-2xl text-lg leading-relaxed text-wesolve-green-700 dark:text-wesolve-green-200 lg:col-span-5 lg:col-start-8 lg:pt-10">Kein Produkt von der Stange: Wir verbinden Strategie, Gestaltung und Entwicklung zu einer Lösung, die dein Team versteht und deine Kunden gerne nutzen.</p></div>
       <div class="mt-14 grid gap-5 lg:grid-cols-12">
         <a href="/leistungen/webentwicklung" data-reveal class="service-card bg-wesolve-green-50 lg:col-span-7 dark:bg-wesolve-green-900">
-          <div class="flex items-start justify-between"><span class="font-mono text-sm text-wesolve-green-500">01 / WEB</span><span class="grid h-12 w-12 place-items-center rounded-xl bg-wesolve-green-950 text-wesolve-accent-300"><svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2" stroke="currentColor" stroke-width="1.7"/><path d="M3 9h18M7 6.5h.01M10 6.5h.01" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span></div>
+          <div class="flex items-start justify-between"><span class="font-mono text-sm text-wesolve-green-500">01 / WEB</span><span class="card-ill block w-36 shrink-0 sm:w-44" aria-hidden="true"><svg class="ill ill-sm" viewBox="0 0 480 320" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<rect x="40" y="28" width="400" height="256" rx="16" class="ill-paper"/>
+<path d="M40 64h400"/><circle cx="62" cy="46" r="4" class="ill-soft"/><circle cx="76" cy="46" r="4" class="ill-soft"/><circle cx="90" cy="46" r="4" class="ill-soft"/>
+<rect x="64" y="84" width="190" height="18" rx="6" class="ill-soft"/>
+<path d="M64 118h150M64 134h120"/>
+<rect x="64" y="154" width="86" height="26" rx="13" class="ill-accent"/>
+<rect x="282" y="84" width="134" height="96" rx="10" class="ill-soft"/>
+<path d="m292 168 34-36 24 24 16-14 40 26"/><circle cx="384" cy="108" r="9"/>
+<rect x="64" y="204" width="104" height="58" rx="10" class="ill-paper"/><rect x="188" y="204" width="104" height="58" rx="10" class="ill-paper"/><rect x="312" y="204" width="104" height="58" rx="10" class="ill-paper"/>
+<path d="M80 222h56M80 238h40M204 222h56M204 238h40M328 222h56M328 238h40"/>
+<path d="M338 300 402 236l20 20-64 64h-20Z" class="ill-paper"/><path d="m392 246 20 20"/><path d="M338 300l4-20" /></svg></span></div>
           <h3 class="mt-10 text-3xl font-semibold tracking-[-0.025em]">Webentwicklung</h3><p class="mt-4 max-w-xl leading-relaxed text-wesolve-green-700 dark:text-wesolve-green-200">Schnelle, zugängliche Webseiten und Shops, die auf jedem Gerät überzeugen und einfach gepflegt werden können.</p><span class="relative z-10 mt-auto pt-8 font-semibold text-wesolve-green-800 dark:text-wesolve-green-100">Leistung ansehen →</span>
         </a>
         <a href="/leistungen/app-entwicklung" data-reveal class="service-card lg:col-span-5">
-          <div class="flex items-start justify-between"><span class="font-mono text-sm text-wesolve-green-500">02 / APP</span><span class="grid h-12 w-12 place-items-center rounded-xl bg-wesolve-accent-100 text-wesolve-green-800"><svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="7" y="2.5" width="10" height="19" rx="2.5" stroke="currentColor" stroke-width="1.7"/><path d="M10 5h4M11 18.5h2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span></div>
+          <div class="flex items-start justify-between"><span class="font-mono text-sm text-wesolve-green-500">02 / APP</span><span class="card-ill block w-36 shrink-0 sm:w-44" aria-hidden="true"><svg class="ill ill-sm" viewBox="0 0 480 320" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<rect x="170" y="16" width="140" height="288" rx="26" class="ill-paper"/>
+<path d="M218 32h44"/>
+<rect x="190" y="56" width="100" height="56" rx="10" class="ill-soft"/>
+<path d="M190 132h100M190 152h70M190 184h100M190 204h60"/>
+<rect x="190" y="236" width="100" height="30" rx="15" class="ill-accent"/>
+<rect x="28" y="70" width="158" height="58" rx="14" class="ill-paper"/>
+<circle cx="56" cy="99" r="12" class="ill-accent"/><path d="M78 92h86M78 108h58"/>
+<path d="m186 112 0 0"/>
+<rect x="296" y="178" width="158" height="96" rx="14" class="ill-paper"/>
+<path d="M316 202h70"/>
+<circle cx="326" cy="244" r="12" class="ill-accent"/><circle cx="360" cy="244" r="12" class="ill-accent"/><circle cx="394" cy="244" r="12" class="ill-accent"/><circle cx="428" cy="244" r="12" class="ill-soft"/>
+<path d="m320 244 4 4 8-8M354 244l4 4 8-8M388 244l4 4 8-8"/></svg></span></div>
           <h3 class="mt-10 text-3xl font-semibold tracking-[-0.025em]">App-Entwicklung</h3><p class="mt-4 leading-relaxed text-wesolve-green-700 dark:text-wesolve-green-200">Intuitive Anwendungen für Smartphone und Tablet – für Kunden, Mitarbeitende und den täglichen Betrieb.</p><span class="relative z-10 mt-auto pt-8 font-semibold text-wesolve-green-800 dark:text-wesolve-green-100">Leistung ansehen →</span>
         </a>
         <a href="/leistungen/individual-software" data-reveal class="service-card lg:col-span-5">
-          <div class="flex items-start justify-between"><span class="font-mono text-sm text-wesolve-green-500">03 / SYSTEM</span><span class="grid h-12 w-12 place-items-center rounded-xl bg-wesolve-accent-100 text-wesolve-green-800"><svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8.5 8.5 5 12l3.5 3.5M15.5 8.5 19 12l-3.5 3.5M13.5 5l-3 14" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
+          <div class="flex items-start justify-between"><span class="font-mono text-sm text-wesolve-green-500">03 / SYSTEM</span><span class="card-ill block w-36 shrink-0 sm:w-44" aria-hidden="true"><svg class="ill ill-sm" viewBox="0 0 480 320" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<rect x="24" y="30" width="300" height="220" rx="16" class="ill-paper"/>
+<path d="M88 30v220"/><path d="M40 60h32M40 80h24M40 100h28"/>
+<rect x="106" y="50" width="198" height="40" rx="8" class="ill-soft"/>
+<path d="M106 116h198M106 150h198M106 184h198M106 218h198"/>
+<path d="m112 132 6 6 10-12M112 166l6 6 10-12M112 200l6 6 10-12" />
+<path d="M142 132h90M142 166h110M142 200h70"/>
+<circle cx="392" cy="86" r="34" stroke-width="10" stroke-dasharray="9 9.3" class="ill-none"/>
+<circle cx="392" cy="86" r="26" class="ill-paper"/><circle cx="392" cy="86" r="10" class="ill-accent"/>
+<path d="M300 268c40 0 54-20 62-44" stroke-dasharray="2 9"/><path d="m352 230 10-8 6 12"/>
+<path d="M344 172h74l22 22v104H344Z" class="ill-paper"/><path d="M418 172v22h22"/>
+<path d="M360 214h50M360 232h62M360 250h40"/>
+<rect x="386" y="266" width="40" height="18" rx="9" class="ill-accent"/></svg></span></div>
           <h3 class="mt-10 text-3xl font-semibold tracking-[-0.025em]">Individualsoftware</h3><p class="mt-4 leading-relaxed text-wesolve-green-700 dark:text-wesolve-green-200">Digitale Werkzeuge für Buchung, Verwaltung und Automatisierung – exakt entlang deiner Abläufe entwickelt.</p><span class="relative z-10 mt-auto pt-8 font-semibold text-wesolve-green-800 dark:text-wesolve-green-100">Leistung ansehen →</span>
         </a>
         <a href="/leistungen/suchmaschinenoptimierung" data-reveal class="service-card bg-wesolve-green-950 text-white lg:col-span-7 dark:bg-wesolve-green-800">
-          <div class="flex items-start justify-between"><span class="font-mono text-sm text-wesolve-accent-300">04 / GROWTH</span><span class="grid h-12 w-12 place-items-center rounded-xl bg-white/10 text-wesolve-accent-300"><svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" stroke="currentColor" stroke-width="1.7"/><path d="m15.5 15.5 5 5M7.5 12.5l2-2 2 1 3-3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
+          <div class="flex items-start justify-between"><span class="font-mono text-sm text-wesolve-accent-300">04 / GROWTH</span><span class="card-ill block w-36 shrink-0 sm:w-44" aria-hidden="true"><svg class="ill ill-sm ill-on-dark" viewBox="0 0 480 320" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<rect x="36" y="28" width="408" height="48" rx="24" class="ill-paper"/>
+<circle cx="66" cy="52" r="10"/><path d="m73 59 9 9"/><path d="M98 52h150"/>
+<rect x="36" y="100" width="300" height="62" rx="12" class="ill-accent"/>
+<circle cx="66" cy="131" r="14" class="ill-paper"/><path d="M63 125l4-2v16"/>
+<path d="M94 122h150M94 140h110"/>
+<rect x="36" y="176" width="300" height="52" rx="12" class="ill-paper"/><path d="M58 196h140M58 210h90"/>
+<rect x="36" y="242" width="300" height="52" rx="12" class="ill-paper"/><path d="M58 262h120M58 276h70"/>
+<ellipse cx="400" cy="270" rx="34" ry="9" class="ill-soft"/>
+<path d="M400 266s-34-30-34-58a34 34 0 0 1 68 0c0 28-34 58-34 58Z" class="ill-paper"/><circle cx="400" cy="208" r="12" class="ill-accent"/>
+<path d="m360 140 24-18 18 10 34-30M420 102h16v16"/></svg></span></div>
           <h3 class="mt-10 text-3xl font-semibold tracking-[-0.025em]">SEO &amp; Sichtbarkeit</h3><p class="mt-4 max-w-xl leading-relaxed text-wesolve-green-200">Technische und inhaltliche Optimierung, damit dein Angebot genau dann gefunden wird, wenn Bedarf entsteht.</p><span class="relative z-10 mt-auto pt-8 font-semibold text-white">Leistung ansehen →</span>
         </a>
       </div>
@@ -80,7 +124,7 @@
       <div class="flex flex-col gap-8 sm:flex-row sm:items-end sm:justify-between"><div><p class="eyebrow">Ausgewählte Projekte</p><h2 id="projects-title" class="section-title">Ergebnisse statt Showcases.</h2></div><a href="/referenzen" class="btn-secondary self-start sm:self-auto">Alle Referenzen</a></div>
       <div class="mt-14 grid items-start gap-6 lg:grid-cols-12">
         <a href="/referenzen/sportweber-bikeservice" data-reveal class="case-card group h-[30rem] lg:col-span-7 lg:h-[36rem]">
-          <img src="./assets/img/home-referenz-sportweber-bikeservice.jpg" alt="Webseite von Sport-Weber Bikeservice" loading="lazy" class="case-image">
+          <img src="./assets/img/home-referenz-sportweber-bikeservice.webp" alt="Webseite von Sport-Weber Bikeservice" loading="lazy" class="case-image">
           <span class="absolute left-6 top-6 z-20 rounded-full bg-white/90 px-3 py-1.5 font-mono text-xs text-wesolve-green-950 backdrop-blur">01</span>
           <span class="absolute right-6 top-6 z-20 grid h-11 w-11 place-items-center rounded-full bg-wesolve-accent-400 text-wesolve-green-950 transition-transform duration-300 group-hover:rotate-45" aria-hidden="true">↗</span>
           <div class="case-overlay absolute inset-0"></div><div class="absolute inset-x-0 bottom-0 z-10 p-7 text-white sm:p-9"><div class="flex flex-wrap gap-2"><span class="rounded-md bg-white/15 px-2.5 py-1 text-xs font-semibold backdrop-blur">Website</span><span class="rounded-md bg-white/15 px-2.5 py-1 text-xs font-semibold backdrop-blur">Terminbuchung</span></div><h3 class="mt-5 text-3xl font-semibold tracking-[-0.025em]">Sport-Weber Bikeservice</h3><p class="mt-3 max-w-lg text-wesolve-green-100">Digitale Terminbuchung und klar strukturierte Service-Pakete für die Fahrradwerkstatt.</p></div>
@@ -91,11 +135,11 @@
           <div class="case-overlay absolute inset-0"></div><div class="absolute inset-x-0 bottom-0 z-10 p-7 text-white sm:p-9"><span class="rounded-md bg-white/15 px-2.5 py-1 text-xs font-semibold backdrop-blur">Tablet-App</span><h3 class="mt-5 text-3xl font-semibold tracking-[-0.025em]">1. FC Nürnberg</h3><p class="mt-3 text-wesolve-green-100">Eine verlässliche Anwendung für Plätze, Logen und Zutritt im VIP-Bereich.</p></div>
         </a>
         <a href="/referenzen/lubu-restaurant" data-reveal class="case-card group h-[28rem] lg:col-span-5 lg:h-[32rem]">
-          <img src="./assets/img/home-lubu.jpg" alt="Catering-Webseite von LU-BU Asian Food" loading="lazy" class="case-image"><span class="absolute left-6 top-6 z-20 rounded-full bg-white/90 px-3 py-1.5 font-mono text-xs text-wesolve-green-950 backdrop-blur">03</span><span class="absolute right-6 top-6 z-20 grid h-11 w-11 place-items-center rounded-full bg-wesolve-accent-400 text-wesolve-green-950 transition-transform duration-300 group-hover:rotate-45" aria-hidden="true">↗</span>
+          <img src="./assets/img/home-lubu.webp" alt="Catering-Webseite von LU-BU Asian Food" loading="lazy" class="case-image"><span class="absolute left-6 top-6 z-20 rounded-full bg-white/90 px-3 py-1.5 font-mono text-xs text-wesolve-green-950 backdrop-blur">03</span><span class="absolute right-6 top-6 z-20 grid h-11 w-11 place-items-center rounded-full bg-wesolve-accent-400 text-wesolve-green-950 transition-transform duration-300 group-hover:rotate-45" aria-hidden="true">↗</span>
           <div class="case-overlay absolute inset-0"></div><div class="absolute inset-x-0 bottom-0 z-10 p-7 text-white sm:p-9"><div class="flex gap-2"><span class="rounded-md bg-white/15 px-2.5 py-1 text-xs font-semibold backdrop-blur">Website</span><span class="rounded-md bg-white/15 px-2.5 py-1 text-xs font-semibold backdrop-blur">SEO</span></div><h3 class="mt-5 text-3xl font-semibold tracking-[-0.025em]">LU-BU Asian Food</h3><p class="mt-3 text-wesolve-green-100">Catering-Webseite mit lokaler Sichtbarkeit für relevante Suchanfragen.</p></div>
         </a>
         <a href="/referenzen/rootd" data-reveal class="case-card group h-[30rem] lg:col-span-7 lg:mt-16 lg:h-[36rem]">
-          <img src="./assets/img/home-referenz-rootd.jpg" alt="Onlineshop des Streetwear-Labels ROOTD." loading="lazy" class="case-image"><span class="absolute left-6 top-6 z-20 rounded-full bg-white/90 px-3 py-1.5 font-mono text-xs text-wesolve-green-950 backdrop-blur">04</span><span class="absolute right-6 top-6 z-20 grid h-11 w-11 place-items-center rounded-full bg-wesolve-accent-400 text-wesolve-green-950 transition-transform duration-300 group-hover:rotate-45" aria-hidden="true">↗</span>
+          <img src="./assets/img/home-referenz-rootd.webp" alt="Onlineshop des Streetwear-Labels ROOTD." loading="lazy" class="case-image"><span class="absolute left-6 top-6 z-20 rounded-full bg-white/90 px-3 py-1.5 font-mono text-xs text-wesolve-green-950 backdrop-blur">04</span><span class="absolute right-6 top-6 z-20 grid h-11 w-11 place-items-center rounded-full bg-wesolve-accent-400 text-wesolve-green-950 transition-transform duration-300 group-hover:rotate-45" aria-hidden="true">↗</span>
           <div class="case-overlay absolute inset-0"></div><div class="absolute inset-x-0 bottom-0 z-10 p-7 text-white sm:p-9"><span class="rounded-md bg-white/15 px-2.5 py-1 text-xs font-semibold backdrop-blur">Online-Shop</span><h3 class="mt-5 text-3xl font-semibold tracking-[-0.025em]">ROOTD.</h3><p class="mt-3 max-w-lg text-wesolve-green-100">Ein fokussierter Shop für ein nachhaltiges Streetwear-Label aus Schnaittach.</p></div>
         </a>
       </div>
@@ -124,8 +168,8 @@
   </section>
 
   <section class="px-4 py-24 sm:px-6 lg:py-32" aria-labelledby="testimonial-title"><div class="mx-auto grid max-w-screen-xl gap-12 lg:grid-cols-12">
-    <div class="lg:col-span-4"><p class="eyebrow">Kundenstimme</p><h2 id="testimonial-title" class="section-title">Zusammenarbeit, die im Alltag wirkt.</h2></div>
-    <figure class="border-l-2 border-wesolve-accent-400 pl-7 lg:col-span-7 lg:col-start-6 lg:pl-10"><blockquote class="text-[clamp(1.45rem,2.5vw,2.25rem)] font-medium leading-snug tracking-[-0.02em]">„Durch die Zusammenarbeit sparen wir uns viel Zeit und die Arbeit wird deutlich einfacher. Michael Reinert ist sehr zuverlässig und hilft sofort, falls es doch einmal Probleme geben sollte.“</blockquote><figcaption class="mt-8"><span class="block font-semibold">Henrik Brüggen</span><span class="mt-1 block text-sm text-wesolve-green-600 dark:text-wesolve-green-300">Vermarktung und Marketing, 1. FC Nürnberg</span></figcaption></figure>
+    <div class="lg:col-span-5"><p class="eyebrow">Kundenstimme</p><h2 id="testimonial-title" class="section-title">Zusammenarbeit, die im Alltag wirkt.</h2></div>
+    <figure class="border-l-2 border-wesolve-accent-400 pl-7 lg:col-span-6 lg:col-start-7 lg:pl-10"><blockquote class="text-[clamp(1.45rem,2.5vw,2.25rem)] font-medium leading-snug tracking-[-0.02em]">„Durch die Zusammenarbeit sparen wir uns viel Zeit und die Arbeit wird deutlich einfacher. Michael Reinert ist sehr zuverlässig und hilft sofort, falls es doch einmal Probleme geben sollte.“</blockquote><figcaption class="mt-8"><span class="block font-semibold">Henrik Brüggen</span><span class="mt-1 block text-sm text-wesolve-green-600 dark:text-wesolve-green-300">Vermarktung und Marketing, 1. FC Nürnberg</span></figcaption></figure>
   </div></section>
 
   <section class="border-y border-wesolve-green-200 bg-wesolve-green-100 px-4 py-20 dark:border-wesolve-green-800 dark:bg-wesolve-green-900 sm:px-6 lg:py-24" aria-labelledby="contact-title">

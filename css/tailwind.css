@@ -16,6 +16,11 @@
   /* Sicherheitsnetz gegen Überlauf durch lange Wörter; gezielte Trennstellen via &shy; im Markup */
   h1, h2, h3 {
     overflow-wrap: break-word;
+    /* Zeilen gleichmäßig verteilen statt einzelne Wörter in die letzte Zeile zu schieben */
+    text-wrap: balance;
+  }
+  p, blockquote, li {
+    text-wrap: pretty;
   }
   @media (prefers-reduced-motion: no-preference) {
     html {
@@ -30,43 +35,6 @@ button svg {
 
 button svg[x-show="open"] {
   transform: rotate(180deg);
-}
-
-[data-aos="safe-fade-left"] {
-  opacity: 0;
-  transform: translateX(100px); /* statt -100px */
-  transition-property: transform, opacity;
-  transition-duration: 600ms;
-  transition-timing-function: ease-in-out;
-}
-
-[data-aos="safe-fade-left"].aos-animate {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-[data-aos="safe-fade-right"] {
-  opacity: 0;
-  transform: translateX(-100px); /* statt -100px */
-  transition-property: transform, opacity;
-  transition-duration: 600ms;
-  transition-timing-function: ease-in-out;
-}
-
-[data-aos="safe-fade-right"].aos-animate {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-/* Mobile: weniger Versatz */
-@media (max-width: 768px) {
-  [data-aos="safe-fade-left"] {
-    transform: translateX(15px);
-  }
-
-  [data-aos="safe-fade-right"] {
-    transform: translateX(-15px);
-  }
 }
 
 /* Dauer-Animationen für Nutzer mit reduzierter Bewegung abschalten */
@@ -214,8 +182,6 @@ button svg[x-show="open"] {
 .btn-primary:hover svg { transform: translateX(4px); }
 .service-card > span:last-child { transition: transform .25s ease, color .2s; }
 .service-card:hover > span:last-child { transform: translateX(4px); }
-.service-card .rounded-xl { transition: transform .4s cubic-bezier(.3,1.6,.5,1); }
-.service-card:hover .rounded-xl { transform: rotate(-8deg) scale(1.08); }
 
 /* Navigation: Unterstrich wächst von links (hell: Grün, dunkel/Hero: Mint) */
 .nav-underline { position: relative; }
@@ -296,3 +262,27 @@ button svg[x-show="open"] {
 @media (prefers-reduced-motion: reduce) { .success-ring, .success-tick { animation: none; stroke-dashoffset: 0; } }
 
 .guide-link.is-page:hover svg { transform: translateX(4px); }
+
+/* Linien-Illustrationen (Leistungsseiten): Farben über Klassen, damit Hell/Dunkel stimmt */
+.ill { @apply h-auto w-full text-wesolve-green-800 dark:text-wesolve-accent-300; }
+.ill .ill-paper { fill: #fff; }
+.ill .ill-soft { fill: theme('colors.wesolve-green.100'); }
+.ill .ill-accent { fill: theme('colors.wesolve-accent.300'); }
+.ill .ill-none { fill: none; }
+.dark .ill .ill-paper { fill: theme('colors.wesolve-green.900'); }
+.dark .ill .ill-soft { fill: theme('colors.wesolve-green.800'); }
+.dark .ill .ill-accent { fill: theme('colors.wesolve-accent.700'); }
+/* Akzentflächen ploppen beim Einblenden kurz auf */
+.js-reveal .ill-wrap .ill-accent { transform-box: fill-box; transform-origin: center; transform: scale(.6); opacity: 0; transition: transform .5s cubic-bezier(.3,1.6,.5,1) .4s, opacity .3s ease .4s; }
+.js-reveal .ill-wrap.is-visible .ill-accent { transform: none; opacity: 1; }
+@media (prefers-reduced-motion: reduce) { .js-reveal .ill-wrap .ill-accent { transform: none; opacity: 1; transition: none; } }
+
+/* Kleine Illustrationen in den Leistungskarten der Startseite */
+.ill-sm { stroke-width: 3.5; }
+.ill.ill-on-dark { color: theme('colors.wesolve-accent.300'); }
+.ill.ill-on-dark .ill-paper { fill: theme('colors.wesolve-green.900'); }
+.ill.ill-on-dark .ill-soft { fill: theme('colors.wesolve-green.800'); }
+.ill.ill-on-dark .ill-accent { fill: theme('colors.wesolve-accent.700'); }
+.card-ill { transition: transform .4s cubic-bezier(.3,1.4,.5,1); transform-origin: top right; }
+.service-card:hover .card-ill { transform: rotate(-3deg) scale(1.05); }
+@media (prefers-reduced-motion: reduce) { .card-ill { transition: none; } }
