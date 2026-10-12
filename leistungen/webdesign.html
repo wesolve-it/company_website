@@ -18,13 +18,12 @@
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="description" content="Webdesign, das aus Besuchern Kunden macht: Konzepte, klickbare Prototypen und intuitive Benutzeroberflächen für Webseiten und Apps.">
+  <link rel="preload" href="/assets/fonts/onest-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link href="../dist/styles.css" rel="stylesheet">
   <script src="/js/theme.js"></script>
   <link rel="icon" type="image/x-icon" href="../assets/img/Wesolveit_loigo.svg" />
-  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.8/dist/cdn.min.js" defer></script>
+  <script defer src="/js/vendor/alpine-3.14.8.min.js"></script>
   <script src="/js/navigation.js" defer></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Was kostet ein Webdesign?", "acceptedAnswer": {"@type": "Answer", "text": "Das hängt vom Umfang ab – vom Design einzelner Seiten bis zum kompletten Auftritt mit allen Ansichten. Nach dem Erstgespräch bekommst du ein Festpreis-Angebot."}}, {"@type": "Question", "name": "Wie viele Entwürfe und Korrekturen bekomme ich?", "acceptedAnswer": {"@type": "Answer", "text": "Wir arbeiten iterativ: Du gibst früh Feedback auf erste Entwürfe, und wir passen an, bis es passt – in der Regel reichen zwei bis drei Runden, weil wir vorher genau zuhören."}}, {"@type": "Question", "name": "Ich habe kein Logo und keine Farben – ist das ein Problem?", "acceptedAnswer": {"@type": "Answer", "text": "Nein. Wir entwickeln die Grundlagen – Farben, Schriften, Bildsprache – gemeinsam mit dir, sodass am Ende ein stimmiger Auftritt steht."}}, {"@type": "Question", "name": "Kann ich das Design auch woanders umsetzen lassen?", "acceptedAnswer": {"@type": "Answer", "text": "Ja – du bekommst alle Dateien übergeben und kannst damit machen, was du willst. Am einfachsten ist es natürlich, wenn Design und Umsetzung aus einer Hand kommen."}}, {"@type": "Question", "name": "Macht ihr auch das Redesign einer bestehenden Seite?", "acceptedAnswer": {"@type": "Answer", "text": "Ja, gern. Oft lässt sich mit einer gezielten Überarbeitung von Struktur und Design viel erreichen, ohne alles neu zu bauen – wir sagen dir ehrlich, was sinnvoll ist."}}]}</script>
 </head>
 <body data-hero="dark" class="overflow-x-hidden bg-white font-text text-wesolve-green-950 antialiased dark:bg-wesolve-green-950 dark:text-wesolve-green-50">
@@ -41,7 +40,7 @@
           <div style="--d:3" class="hero-in mt-9 flex flex-col gap-3 sm:flex-row"><a data-umami-event="cta-erstgespraech" href="/kontakt" class="btn-primary">Kostenloses Erstgespräch <svg class="h-4 w-4" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="/referenzen" class="btn-secondary-dark">Unsere Referenzen</a></div>
         </div>
         <figure style="--d:3" class="hero-in lg:col-span-6">
-          <div class="overflow-hidden rounded-2xl bg-white shadow-[0_50px_100px_-40px_rgba(0,0,0,0.7)]"><div class="flex gap-1.5 border-b border-wesolve-green-100 px-4 py-3" aria-hidden="true"><span class="h-2.5 w-2.5 rounded-full bg-wesolve-green-200"></span><span class="h-2.5 w-2.5 rounded-full bg-wesolve-green-200"></span><span class="h-2.5 w-2.5 rounded-full bg-wesolve-green-200"></span></div><img src="../assets/img/dieschokoecke.webp" alt="Webseite der Pralinen-Manufaktur dieschokoecke" class="aspect-[16/10] w-full object-cover object-top" fetchpriority="high"></div>
+          <div class="overflow-hidden rounded-2xl bg-white shadow-[0_50px_100px_-40px_rgba(0,0,0,0.7)]"><div class="flex gap-1.5 border-b border-wesolve-green-100 px-4 py-3" aria-hidden="true"><span class="h-2.5 w-2.5 rounded-full bg-wesolve-green-200"></span><span class="h-2.5 w-2.5 rounded-full bg-wesolve-green-200"></span><span class="h-2.5 w-2.5 rounded-full bg-wesolve-green-200"></span></div><img width="1600" height="745" src="../assets/img/dieschokoecke.webp" alt="Webseite der Pralinen-Manufaktur dieschokoecke" class="aspect-[16/10] w-full object-cover object-top" fetchpriority="high"></div>
           <figcaption class="mt-4 text-sm text-wesolve-green-300">Beispiel: dieschokoecke</figcaption>
         </figure>
       </div>
@@ -89,7 +88,7 @@
     <div class="mx-auto grid max-w-screen-xl items-center gap-12 lg:grid-cols-12 lg:gap-16">
       <div class="lg:col-span-5"><h2 id="case-title" class="section-title mt-0">Aus der Praxis</h2><p class="mt-5 text-lg leading-relaxed text-wesolve-green-700 dark:text-wesolve-green-200">So sieht das bei einem unserer Kunden aus.</p></div>
       <div class="lg:col-span-7"><a href="/referenzen/dieschokoecke" data-reveal class="ref-tile group ">
-        <div class="hero-panel aspect-[16/10] overflow-hidden bg-wesolve-green-950 px-6 pt-6 sm:px-8 sm:pt-8"><div class="ref-shot h-full overflow-hidden rounded-t-xl bg-white"><img src="../assets/img/dieschokoecke.webp" alt="" loading="lazy" class="h-full w-full object-cover object-top"></div></div>
+        <div class="hero-panel aspect-[16/10] overflow-hidden bg-wesolve-green-950 px-6 pt-6 sm:px-8 sm:pt-8"><div class="ref-shot h-full overflow-hidden rounded-t-xl bg-white"><img width="1600" height="745" src="../assets/img/dieschokoecke.webp" alt="" loading="lazy" class="h-full w-full object-cover object-top"></div></div>
         <div class="p-6 sm:p-7"><h3 class="text-xl font-semibold tracking-[-0.02em]">dieschokoecke</h3><p class="mt-2 leading-relaxed text-wesolve-green-700 dark:text-wesolve-green-200">Moderner Webauftritt mit Selbstpflege für die belgische Pralinen-Manufaktur – Design und Umsetzung aus einer Hand.</p><span class="ref-more mt-5 inline-flex items-center gap-2 font-semibold text-wesolve-green-800 dark:text-wesolve-green-100">Projekt ansehen <svg class="h-4 w-4" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
       </a></div>
     </div>

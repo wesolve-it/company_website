@@ -6,7 +6,7 @@
   "use strict";
 
   var CC_VERSION = "3.1.0";
-  var BASE = "https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@" + CC_VERSION + "/dist/";
+  var BASE = "/js/vendor/cookieconsent-" + CC_VERSION + "/"; // lokal ausgeliefert, kein Drittanbieter-CDN
 
   // Stylesheet nur einmal einbinden.
   if (!document.getElementById("cc-style")) {
