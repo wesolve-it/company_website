@@ -21,306 +21,147 @@
   <link href="./dist/styles.css" rel="stylesheet">
   <script src="/js/theme.js"></script>
   <link rel="icon" type="image/x-icon" href="./assets/img/Wesolveit_loigo.svg" />
-  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
-  <script src="./js/navigation.js" defer></script>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Montserrat:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.8/dist/cdn.min.js" defer></script>
+  <script src="/js/navigation.js" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
 </head>
-<body class="bg-white text-neutral-900 dark:bg-neutral-950 dark:text-neutral-100 overflow-x-hidden">
-
-  <div x-data="{ filter: 'alle' }">
-
-  <!-- Header -->
-  <div class="relative overflow-hidden">
-    <div class="pointer-events-none absolute -top-24 -right-24 h-80 w-80 rounded-full bg-lime-300/40 blur-3xl dark:bg-lime-500/10"></div>
-    <div class="pointer-events-none absolute -top-10 -left-32 h-72 w-72 rounded-full bg-lime-200/50 blur-3xl dark:bg-lime-500/10"></div>
-    <div class="pointer-events-none absolute inset-0 opacity-[0.35] dark:opacity-[0.08]" style="background-image: radial-gradient(#d4d4d4 1px, transparent 1px); background-size: 28px 28px;"></div>
-    <div class="relative mx-auto max-w-screen-xl px-6 pt-32">
-      <span class="inline-flex items-center rounded-full bg-lime-100 px-4 py-1.5 font-display text-xs font-bold uppercase tracking-wide text-lime-800 dark:bg-lime-950 dark:text-lime-300">Referenzen</span>
-      <h1 class="mt-4 max-w-4xl font-display text-4xl font-bold leading-tight tracking-tight lg:text-5xl xl:text-6xl">
-        Vom Familienbetrieb bis zum Bundesliga-Verein:
-        <span class="relative inline-block">
-          <span class="absolute inset-x-0 bottom-1 h-[0.55em] -rotate-1 rounded-sm bg-lime-300 dark:bg-lime-400/30"></span>
-          <span class="relative">erfolgreiche Projekte</span>
-        </span>
-        für kleine Unternehmen
-      </h1>
-      <p class="mt-5 max-w-3xl leading-relaxed text-neutral-600 dark:text-neutral-400 lg:text-lg">Webseiten, Apps und Software, die im Alltag echter Betriebe funktionieren. Schau dir an, was wir umgesetzt haben – und was davon auch dein Unternehmen voranbringen könnte.</p>
-
-      <!-- Filter -->
-      <div class="mb-14 mt-10 flex flex-wrap gap-3">
-        <button @click="filter = 'alle'" :class="filter === 'alle' ? 'border-neutral-900 bg-lime-300 text-neutral-900 dark:border-lime-300' : 'border-neutral-200 dark:border-neutral-800'" class="rounded-full border-2 px-5 py-2.5 font-display text-sm font-semibold transition-colors duration-300 hover:border-neutral-900 hover:bg-lime-300 hover:text-neutral-900 dark:hover:border-lime-300">Alle Projekte</button>
-        <button @click="filter = 'web'" :class="filter === 'web' ? 'border-neutral-900 bg-lime-300 text-neutral-900 dark:border-lime-300' : 'border-neutral-200 dark:border-neutral-800'" class="rounded-full border-2 px-5 py-2.5 font-display text-sm font-semibold transition-colors duration-300 hover:border-neutral-900 hover:bg-lime-300 hover:text-neutral-900 dark:hover:border-lime-300">Webentwicklung</button>
-        <button @click="filter = 'app'" :class="filter === 'app' ? 'border-neutral-900 bg-lime-300 text-neutral-900 dark:border-lime-300' : 'border-neutral-200 dark:border-neutral-800'" class="rounded-full border-2 px-5 py-2.5 font-display text-sm font-semibold transition-colors duration-300 hover:border-neutral-900 hover:bg-lime-300 hover:text-neutral-900 dark:hover:border-lime-300">App-Entwicklung</button>
-        <button @click="filter = 'seo'" :class="filter === 'seo' ? 'border-neutral-900 bg-lime-300 text-neutral-900 dark:border-lime-300' : 'border-neutral-200 dark:border-neutral-800'" class="rounded-full border-2 px-5 py-2.5 font-display text-sm font-semibold transition-colors duration-300 hover:border-neutral-900 hover:bg-lime-300 hover:text-neutral-900 dark:hover:border-lime-300">SEO</button>
-        <button @click="filter = 'software'" :class="filter === 'software' ? 'border-neutral-900 bg-lime-300 text-neutral-900 dark:border-lime-300' : 'border-neutral-200 dark:border-neutral-800'" class="rounded-full border-2 px-5 py-2.5 font-display text-sm font-semibold transition-colors duration-300 hover:border-neutral-900 hover:bg-lime-300 hover:text-neutral-900 dark:hover:border-lime-300">Individual-Software</button>
+<body data-hero="dark" class="overflow-x-hidden bg-white font-text text-wesolve-green-950 antialiased dark:bg-wesolve-green-950 dark:text-wesolve-green-50">
+<main x-data="{ filter: 'alle', show(t) { return this.filter === 'alle' || t.includes(this.filter) } }">
+  <!-- Kopf: Aussage links, Belege direkt darunter statt am Seitenende -->
+  <section class="hero-panel relative overflow-hidden bg-wesolve-green-950 px-4 pb-12 pt-28 text-white sm:px-6 lg:pb-16 lg:pt-40" aria-labelledby="ref-title">
+    <div class="mx-auto max-w-screen-xl">
+      <div class="grid gap-8 lg:grid-cols-12 lg:items-end">
+        <div class="lg:col-span-7">
+          <p class="hero-in text-sm font-semibold uppercase tracking-[0.18em] text-wesolve-accent-300" style="--d:0">Referenzen</p>
+          <h1 id="ref-title" style="--d:1" class="hero-in mt-6 font-text text-[clamp(2.5rem,5.6vw,4.75rem)] font-bold leading-[1] tracking-[-0.05em]">Vom Familienbetrieb bis zum Bundesliga-Verein.</h1>
+        </div>
+        <p style="--d:2" class="hero-in max-w-xl text-lg leading-relaxed text-wesolve-green-100 lg:col-span-5 lg:pb-2">Webseiten, Apps und Software, die im Alltag echter Betriebe funktionieren. Schau dir an, was wir umgesetzt haben.</p>
       </div>
+      <dl style="--d:3" class="hero-in mt-14 grid gap-8 border-t border-white/10 pt-8 sm:grid-cols-3">
+        <div><dt class="sr-only">Google-Ranking</dt><dd class="text-3xl font-bold tracking-[-0.04em] text-wesolve-accent-300 lg:text-4xl">Platz 1</dd><dd class="mt-2 text-wesolve-green-200">bei Google für das Sushi-Catering von LU-BU</dd></div>
+        <div><dt class="sr-only">Größter Kunde</dt><dd class="text-3xl font-bold tracking-[-0.04em] text-wesolve-accent-300 lg:text-4xl">Bundesliga</dd><dd class="mt-2 text-wesolve-green-200">der 1. FC Nürnberg setzt am Spieltag auf unsere App</dd></div>
+        <div><dt class="sr-only">Projekte</dt><dd class="text-3xl font-bold tracking-[-0.04em] text-wesolve-accent-300 lg:text-4xl">9 Projekte</dd><dd class="mt-2 text-wesolve-green-200">aus Web, App, SEO und Individualsoftware</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- Filter bleibt beim Scrollen erreichbar -->
+  <div class="sticky top-[60px] z-30 border-b border-wesolve-green-100 bg-white/90 px-4 backdrop-blur-md dark:border-wesolve-green-800 dark:bg-wesolve-green-950/90 sm:px-6">
+    <div class="mx-auto flex max-w-screen-xl gap-1 overflow-x-auto py-3" role="group" aria-label="Projekte filtern">
+        <button type="button" @click="filter = 'alle'" :aria-pressed="(filter === 'alle').toString()" :class="filter === 'alle' ? 'bg-wesolve-green-950 text-white dark:bg-wesolve-accent-400 dark:text-wesolve-green-950' : 'text-wesolve-green-800 hover:bg-wesolve-green-100 dark:text-wesolve-green-100 dark:hover:bg-wesolve-green-800'" class="filter-pill">Alle <span class="ml-1 opacity-60">9</span></button>
+        <button type="button" @click="filter = 'web'" :aria-pressed="(filter === 'web').toString()" :class="filter === 'web' ? 'bg-wesolve-green-950 text-white dark:bg-wesolve-accent-400 dark:text-wesolve-green-950' : 'text-wesolve-green-800 hover:bg-wesolve-green-100 dark:text-wesolve-green-100 dark:hover:bg-wesolve-green-800'" class="filter-pill">Webseiten <span class="ml-1 opacity-60">6</span></button>
+        <button type="button" @click="filter = 'app'" :aria-pressed="(filter === 'app').toString()" :class="filter === 'app' ? 'bg-wesolve-green-950 text-white dark:bg-wesolve-accent-400 dark:text-wesolve-green-950' : 'text-wesolve-green-800 hover:bg-wesolve-green-100 dark:text-wesolve-green-100 dark:hover:bg-wesolve-green-800'" class="filter-pill">Apps <span class="ml-1 opacity-60">2</span></button>
+        <button type="button" @click="filter = 'seo'" :aria-pressed="(filter === 'seo').toString()" :class="filter === 'seo' ? 'bg-wesolve-green-950 text-white dark:bg-wesolve-accent-400 dark:text-wesolve-green-950' : 'text-wesolve-green-800 hover:bg-wesolve-green-100 dark:text-wesolve-green-100 dark:hover:bg-wesolve-green-800'" class="filter-pill">SEO <span class="ml-1 opacity-60">1</span></button>
+        <button type="button" @click="filter = 'software'" :aria-pressed="(filter === 'software').toString()" :class="filter === 'software' ? 'bg-wesolve-green-950 text-white dark:bg-wesolve-accent-400 dark:text-wesolve-green-950' : 'text-wesolve-green-800 hover:bg-wesolve-green-100 dark:text-wesolve-green-100 dark:hover:bg-wesolve-green-800'" class="filter-pill">Software <span class="ml-1 opacity-60">3</span></button>
     </div>
   </div>
 
-  <div class="mx-auto max-w-screen-xl space-y-10 px-6 pb-20">
-
-    <!-- 1. FC Nürnberg (Flaggschiff zuerst) -->
-    <a href="/referenzen/fc-nuernberg" x-show="filter === 'alle' || filter === 'app'" class="group grid overflow-hidden rounded-3xl border-2 border-neutral-200 bg-white transition-all duration-300 hover:-translate-y-1 hover:border-neutral-900 hover:shadow-[8px_8px_0px_0px_#a3e635] dark:border-neutral-800 dark:bg-neutral-900 dark:hover:border-lime-400 lg:grid-cols-2" data-aos="fade-up">
-      <div class="h-64 overflow-hidden bg-neutral-900 p-8 sm:h-80 lg:h-full lg:min-h-[26rem]" style="background-image: radial-gradient(#404040 1px, transparent 1px); background-size: 26px 26px;">
-        <img src="./assets/img/standing-ipad-mockup-1.png" alt="Business Seating App des 1. FC Nürnberg auf einem iPad" class="h-full w-full rounded-2xl object-cover shadow-[6px_6px_0px_0px_#a3e635] transition-transform duration-500 group-hover:scale-105" />
-      </div>
-      <div class="flex flex-col justify-center p-8 lg:p-12">
-        <span class="mb-3 w-fit rounded-full bg-lime-300 px-3 py-1 font-display text-xs font-bold uppercase text-neutral-900">App-Entwicklung</span>
-        <h2 class="mb-3 font-display text-2xl font-bold xl:text-4xl">1. FC Nürnberg</h2>
-        <p class="leading-relaxed text-neutral-600 dark:text-neutral-400">Business Seating App für den VIP-Bereich: Platzvergabe, Zutrittsberechtigungen und kurzfristige Änderungen – alles direkt auf dem Tablet, an jedem Heimspieltag im Einsatz.</p>
-        <span class="mt-8 inline-flex items-center gap-2 font-display font-semibold text-neutral-900 dark:text-white">
-          Details ansehen
-          <svg class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-        </span>
-      </div>
-    </a>
-
-    <!-- Alfafood -->
-    <a href="/referenzen/alfafood" x-show="filter === 'alle' || filter === 'web'" class="group grid overflow-hidden rounded-3xl border-2 border-neutral-200 bg-white transition-all duration-300 hover:-translate-y-1 hover:border-neutral-900 hover:shadow-[8px_8px_0px_0px_#a3e635] dark:border-neutral-800 dark:bg-neutral-900 dark:hover:border-lime-400 lg:grid-cols-2" data-aos="fade-up">
-      <div class="h-64 overflow-hidden bg-neutral-900 px-8 pt-8 sm:h-80 lg:order-2 lg:h-full lg:min-h-[26rem]" style="background-image: radial-gradient(#404040 1px, transparent 1px); background-size: 26px 26px;">
-        <div class="flex h-full flex-col overflow-hidden rounded-t-2xl border-2 border-b-0 border-neutral-700 bg-neutral-800 shadow-[6px_6px_0px_0px_#a3e635]">
-          <div class="flex flex-shrink-0 items-center gap-1.5 border-b-2 border-neutral-700 px-4 py-2.5">
-            <span class="h-2.5 w-2.5 rounded-full bg-wesolve-accent-coral-500"></span>
-            <span class="h-2.5 w-2.5 rounded-full bg-wesolve-accent-400"></span>
-            <span class="h-2.5 w-2.5 rounded-full bg-lime-400"></span>
-            <span class="ml-3 h-4 w-40 rounded-full bg-neutral-900"></span>
-          </div>
-          <div class="min-h-0 flex-1 overflow-hidden">
-            <img src="./assets/img/exampleImage.png" alt="Webseite von Alfafood" class="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105" />
-          </div>
+  <section class="px-4 py-16 sm:px-6 lg:py-24" aria-label="Projekte">
+    <div class="mx-auto max-w-screen-xl">
+      <!-- Flaggschiff: groß und zuerst -->
+      <a href="/referenzen/fc-nuernberg" x-show="show(['app', 'software'])" x-transition.opacity.duration.300ms data-reveal class="ref-feature group">
+        <div class="hero-panel overflow-hidden bg-wesolve-green-950 p-8 lg:col-span-7 lg:p-12"><img src="./assets/img/standing-ipad-mockup-1.webp" alt="Business Seating App des 1. FC Nürnberg auf einem iPad" class="ref-shot h-full max-h-[28rem] w-full rounded-xl object-cover"></div>
+        <div class="flex flex-col justify-center p-7 sm:p-10 lg:col-span-5 lg:p-12">
+          <div class="flex flex-wrap gap-2"><span class="tag">App</span><span class="tag">Software</span></div>
+          <h2 class="mt-5 text-3xl font-semibold tracking-[-0.03em] xl:text-5xl">1. FC Nürnberg</h2>
+          <p class="mt-4 leading-relaxed text-wesolve-green-700 dark:text-wesolve-green-200">Business Seating App für den VIP-Bereich: Platzvergabe, Zutrittsberechtigungen und kurzfristige Änderungen – direkt auf dem Tablet, an jedem Heimspieltag im Einsatz.</p>
+          <blockquote class="mt-8 border-l-2 border-wesolve-accent-400 pl-5 text-wesolve-green-900 dark:text-wesolve-green-100">„Durch die Zusammenarbeit sparen wir uns viel Zeit und die Arbeit wird deutlich einfacher.“<footer class="mt-2 text-sm text-wesolve-green-600 dark:text-wesolve-green-300">Henrik Brüggen, Vermarktung und Marketing</footer></blockquote>
+          <span class="ref-more mt-8 inline-flex items-center gap-2 font-semibold text-wesolve-green-800 dark:text-wesolve-green-100">Projekt ansehen <svg class="h-4 w-4" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         </div>
-      </div>
-      <div class="flex flex-col justify-center p-8 lg:order-1 lg:p-12">
-        <span class="mb-3 w-fit rounded-full bg-lime-300 px-3 py-1 font-display text-xs font-bold uppercase text-neutral-900">Webentwicklung</span>
-        <h2 class="mb-3 font-display text-2xl font-bold xl:text-4xl">Alfafood</h2>
-        <p class="leading-relaxed text-neutral-600 dark:text-neutral-400">Webseite mit Selbstpflege und geschütztem Franchise-Bereich: Inhalte, Bilder und ganze Filialen verwaltet das Team komplett selbst – ohne Agentur und ohne Wartezeiten.</p>
-        <span class="mt-8 inline-flex items-center gap-2 font-display font-semibold text-neutral-900 dark:text-white">
-          Details ansehen
-          <svg class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-        </span>
-      </div>
-    </a>
+      </a>
 
-    <!-- LU-BU -->
-    <a href="/referenzen/lubu-restaurant" x-show="filter === 'alle' || filter === 'seo'" class="group grid overflow-hidden rounded-3xl border-2 border-neutral-200 bg-white transition-all duration-300 hover:-translate-y-1 hover:border-neutral-900 hover:shadow-[8px_8px_0px_0px_#a3e635] dark:border-neutral-800 dark:bg-neutral-900 dark:hover:border-lime-400 lg:grid-cols-2" data-aos="fade-up">
-      <div class="h-64 overflow-hidden bg-neutral-900 px-8 pt-8 sm:h-80 lg:h-full lg:min-h-[26rem]" style="background-image: radial-gradient(#404040 1px, transparent 1px); background-size: 26px 26px;">
-        <div class="flex h-full flex-col overflow-hidden rounded-t-2xl border-2 border-b-0 border-neutral-700 bg-neutral-800 shadow-[6px_6px_0px_0px_#a3e635]">
-          <div class="flex flex-shrink-0 items-center gap-1.5 border-b-2 border-neutral-700 px-4 py-2.5">
-            <span class="h-2.5 w-2.5 rounded-full bg-wesolve-accent-coral-500"></span>
-            <span class="h-2.5 w-2.5 rounded-full bg-wesolve-accent-400"></span>
-            <span class="h-2.5 w-2.5 rounded-full bg-lime-400"></span>
-            <span class="ml-3 h-4 w-40 rounded-full bg-neutral-900"></span>
+      <div class="mt-6 grid gap-6 md:grid-cols-2">
+        <a href="/referenzen/alfafood" x-show="show(['web'])" x-transition.opacity.duration.300ms data-reveal class="ref-tile group">
+          <div class="hero-panel aspect-[16/10] overflow-hidden bg-wesolve-green-950 px-6 pt-6 sm:px-8 sm:pt-8"><div class="ref-shot flex h-full flex-col overflow-hidden rounded-t-xl bg-white shadow-[0_24px_60px_-30px_rgba(0,0,0,0.8)]"><div class="flex shrink-0 gap-1.5 border-b border-wesolve-green-100 px-3.5 py-2" aria-hidden="true"><span class="h-2 w-2 rounded-full bg-wesolve-green-200"></span><span class="h-2 w-2 rounded-full bg-wesolve-green-200"></span><span class="h-2 w-2 rounded-full bg-wesolve-green-200"></span></div><div class="min-h-0 flex-1 overflow-hidden"><img src="./assets/img/exampleImage.webp" alt="Webseite von Alfafood" loading="lazy" class="h-full w-full object-cover object-top"></div></div></div>
+          <div class="flex flex-1 flex-col p-6 sm:p-8">
+            <div class="flex flex-wrap gap-2"><span class="tag">Website</span></div>
+            <h3 class="mt-4 text-2xl font-semibold tracking-[-0.025em]">Alfafood</h3>
+            <p class="mt-3 leading-relaxed text-wesolve-green-700 dark:text-wesolve-green-200">Webseite mit Selbstpflege und geschütztem Franchise-Bereich: Inhalte, Bilder und ganze Filialen verwaltet das Team komplett selbst.</p>
+            <span class="ref-more mt-auto inline-flex items-center gap-2 pt-6 font-semibold text-wesolve-green-800 dark:text-wesolve-green-100">Projekt ansehen <svg class="h-4 w-4" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
           </div>
-          <div class="min-h-0 flex-1 overflow-hidden">
-            <img src="./assets/img/Bildschirmfoto-2024-04-30-um-14.56.41.png" alt="Webseite von LU-BU Asian Food" class="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105" />
+        </a>
+        <a href="/referenzen/lubu-restaurant" x-show="show(['web', 'seo'])" x-transition.opacity.duration.300ms data-reveal class="ref-tile group">
+          <div class="hero-panel aspect-[16/10] overflow-hidden bg-wesolve-green-950 px-6 pt-6 sm:px-8 sm:pt-8"><div class="ref-shot flex h-full flex-col overflow-hidden rounded-t-xl bg-white shadow-[0_24px_60px_-30px_rgba(0,0,0,0.8)]"><div class="flex shrink-0 gap-1.5 border-b border-wesolve-green-100 px-3.5 py-2" aria-hidden="true"><span class="h-2 w-2 rounded-full bg-wesolve-green-200"></span><span class="h-2 w-2 rounded-full bg-wesolve-green-200"></span><span class="h-2 w-2 rounded-full bg-wesolve-green-200"></span></div><div class="min-h-0 flex-1 overflow-hidden"><img src="./assets/img/Bildschirmfoto-2024-04-30-um-14.56.41.webp" alt="Webseite von LU-BU Asian Food" loading="lazy" class="h-full w-full object-cover object-top"></div></div></div>
+          <div class="flex flex-1 flex-col p-6 sm:p-8">
+            <div class="flex flex-wrap gap-2"><span class="tag">Website</span><span class="tag">SEO</span></div>
+            <h3 class="mt-4 text-2xl font-semibold tracking-[-0.025em]">LU-BU Asian Food</h3>
+            <p class="mt-3 leading-relaxed text-wesolve-green-700 dark:text-wesolve-green-200">Catering-Landingpage plus laufende SEO-Betreuung – Platz 1 der unbezahlten Google-Ergebnisse für „Sushi Catering Nürnberg“.</p>
+            <span class="ref-more mt-auto inline-flex items-center gap-2 pt-6 font-semibold text-wesolve-green-800 dark:text-wesolve-green-100">Projekt ansehen <svg class="h-4 w-4" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
           </div>
-        </div>
-      </div>
-      <div class="flex flex-col justify-center p-8 lg:p-12">
-        <span class="mb-3 w-fit rounded-full bg-lime-300 px-3 py-1 font-display text-xs font-bold uppercase text-neutral-900">Suchmaschinenoptimierung</span>
-        <h2 class="mb-3 font-display text-2xl font-bold xl:text-4xl">LU-BU Asian Food</h2>
-        <p class="leading-relaxed text-neutral-600 dark:text-neutral-400">Catering-Landingpage plus laufende SEO-Betreuung – Ergebnis: Platz 1 der unbezahlten Google-Ergebnisse für „Sushi Catering Nürnberg".</p>
-        <span class="mt-8 inline-flex items-center gap-2 font-display font-semibold text-neutral-900 dark:text-white">
-          Details ansehen
-          <svg class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-        </span>
-      </div>
-    </a>
-
-    <!-- Sport-Weber -->
-    <a href="/referenzen/sportweber-schnaittach" x-show="filter === 'alle' || filter === 'software'" class="group grid overflow-hidden rounded-3xl border-2 border-neutral-200 bg-white transition-all duration-300 hover:-translate-y-1 hover:border-neutral-900 hover:shadow-[8px_8px_0px_0px_#a3e635] dark:border-neutral-800 dark:bg-neutral-900 dark:hover:border-lime-400 lg:grid-cols-2" data-aos="fade-up">
-      <div class="h-64 overflow-hidden bg-neutral-900 px-8 pt-8 sm:h-80 lg:order-2 lg:h-full lg:min-h-[26rem]" style="background-image: radial-gradient(#404040 1px, transparent 1px); background-size: 26px 26px;">
-        <div class="flex h-full flex-col overflow-hidden rounded-t-2xl border-2 border-b-0 border-neutral-700 bg-neutral-800 shadow-[6px_6px_0px_0px_#a3e635]">
-          <div class="flex flex-shrink-0 items-center gap-1.5 border-b-2 border-neutral-700 px-4 py-2.5">
-            <span class="h-2.5 w-2.5 rounded-full bg-wesolve-accent-coral-500"></span>
-            <span class="h-2.5 w-2.5 rounded-full bg-wesolve-accent-400"></span>
-            <span class="h-2.5 w-2.5 rounded-full bg-lime-400"></span>
-            <span class="ml-3 h-4 w-40 rounded-full bg-neutral-900"></span>
+        </a>
+        <a href="/referenzen/sportweber-schnaittach" x-show="show(['software'])" x-transition.opacity.duration.300ms data-reveal class="ref-tile group">
+          <div class="hero-panel aspect-[16/10] overflow-hidden bg-wesolve-green-950 px-6 pt-6 sm:px-8 sm:pt-8"><div class="ref-shot flex h-full flex-col overflow-hidden rounded-t-xl bg-white shadow-[0_24px_60px_-30px_rgba(0,0,0,0.8)]"><div class="flex shrink-0 gap-1.5 border-b border-wesolve-green-100 px-3.5 py-2" aria-hidden="true"><span class="h-2 w-2 rounded-full bg-wesolve-green-200"></span><span class="h-2 w-2 rounded-full bg-wesolve-green-200"></span><span class="h-2 w-2 rounded-full bg-wesolve-green-200"></span></div><div class="min-h-0 flex-1 overflow-hidden"><img src="./assets/img/Bildschirmfoto-2024-04-30-um-15.05.05.webp" alt="Verleihsoftware von Sport-Weber Schnaittach" loading="lazy" class="h-full w-full object-cover object-top"></div></div></div>
+          <div class="flex flex-1 flex-col p-6 sm:p-8">
+            <div class="flex flex-wrap gap-2"><span class="tag">Software</span></div>
+            <h3 class="mt-4 text-2xl font-semibold tracking-[-0.025em]">Sport-Weber Verleih</h3>
+            <p class="mt-3 leading-relaxed text-wesolve-green-700 dark:text-wesolve-green-200">Online-Verleihsystem mit Warenkorb und Admin-Bereich – inklusive automatischer Rechnungserstellung bei jeder Buchung.</p>
+            <span class="ref-more mt-auto inline-flex items-center gap-2 pt-6 font-semibold text-wesolve-green-800 dark:text-wesolve-green-100">Projekt ansehen <svg class="h-4 w-4" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
           </div>
-          <div class="min-h-0 flex-1 overflow-hidden">
-            <img src="./assets/img/Bildschirmfoto-2024-04-30-um-15.05.05.png" alt="Verleihsoftware von Sport-Weber Schnaittach" class="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105" />
+        </a>
+        <a href="/referenzen/sportweber-bikeservice" x-show="show(['web', 'software'])" x-transition.opacity.duration.300ms data-reveal class="ref-tile group">
+          <div class="hero-panel aspect-[16/10] overflow-hidden bg-wesolve-green-950 px-6 pt-6 sm:px-8 sm:pt-8"><div class="ref-shot flex h-full flex-col overflow-hidden rounded-t-xl bg-white shadow-[0_24px_60px_-30px_rgba(0,0,0,0.8)]"><div class="flex shrink-0 gap-1.5 border-b border-wesolve-green-100 px-3.5 py-2" aria-hidden="true"><span class="h-2 w-2 rounded-full bg-wesolve-green-200"></span><span class="h-2 w-2 rounded-full bg-wesolve-green-200"></span><span class="h-2 w-2 rounded-full bg-wesolve-green-200"></span></div><div class="min-h-0 flex-1 overflow-hidden"><img src="./assets/img/referenz-sportweber-bikeservice.webp" alt="Bikeservice-Plattform von Sport-Weber Schnaittach" loading="lazy" class="h-full w-full object-cover object-top"></div></div></div>
+          <div class="flex flex-1 flex-col p-6 sm:p-8">
+            <div class="flex flex-wrap gap-2"><span class="tag">Website</span><span class="tag">Software</span></div>
+            <h3 class="mt-4 text-2xl font-semibold tracking-[-0.025em]">Sport-Weber Bikeservice</h3>
+            <p class="mt-3 leading-relaxed text-wesolve-green-700 dark:text-wesolve-green-200">Service-Plattform für die Fahrradwerkstatt mit Online-Terminbuchung, Service-Paketen und FAQ.</p>
+            <span class="ref-more mt-auto inline-flex items-center gap-2 pt-6 font-semibold text-wesolve-green-800 dark:text-wesolve-green-100">Projekt ansehen <svg class="h-4 w-4" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
           </div>
-        </div>
-      </div>
-      <div class="flex flex-col justify-center p-8 lg:order-1 lg:p-12">
-        <span class="mb-3 w-fit rounded-full bg-lime-300 px-3 py-1 font-display text-xs font-bold uppercase text-neutral-900">Individual-Software</span>
-        <h2 class="mb-3 font-display text-2xl font-bold xl:text-4xl">Sport-Weber Schnaittach</h2>
-        <p class="leading-relaxed text-neutral-600 dark:text-neutral-400">Online-Verleihsystem mit Warenkorb und Admin-Bereich – inklusive automatischer Rechnungserstellung, die bei jeder Buchung Zeit und Papierkram spart.</p>
-        <span class="mt-8 inline-flex items-center gap-2 font-display font-semibold text-neutral-900 dark:text-white">
-          Details ansehen
-          <svg class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-        </span>
-      </div>
-    </a>
-
-    <!-- dieschokoecke -->
-    <a href="/referenzen/dieschokoecke" x-show="filter === 'alle' || filter === 'web'" class="group grid overflow-hidden rounded-3xl border-2 border-neutral-200 bg-white transition-all duration-300 hover:-translate-y-1 hover:border-neutral-900 hover:shadow-[8px_8px_0px_0px_#a3e635] dark:border-neutral-800 dark:bg-neutral-900 dark:hover:border-lime-400 lg:grid-cols-2" data-aos="fade-up">
-      <div class="h-64 overflow-hidden bg-neutral-900 px-8 pt-8 sm:h-80 lg:h-full lg:min-h-[26rem]" style="background-image: radial-gradient(#404040 1px, transparent 1px); background-size: 26px 26px;">
-        <div class="flex h-full flex-col overflow-hidden rounded-t-2xl border-2 border-b-0 border-neutral-700 bg-neutral-800 shadow-[6px_6px_0px_0px_#a3e635]">
-          <div class="flex flex-shrink-0 items-center gap-1.5 border-b-2 border-neutral-700 px-4 py-2.5">
-            <span class="h-2.5 w-2.5 rounded-full bg-wesolve-accent-coral-500"></span>
-            <span class="h-2.5 w-2.5 rounded-full bg-wesolve-accent-400"></span>
-            <span class="h-2.5 w-2.5 rounded-full bg-lime-400"></span>
-            <span class="ml-3 h-4 w-40 rounded-full bg-neutral-900"></span>
+        </a>
+        <a href="/referenzen/rootd" x-show="show(['web'])" x-transition.opacity.duration.300ms data-reveal class="ref-tile group">
+          <div class="hero-panel aspect-[16/10] overflow-hidden bg-wesolve-green-950 px-6 pt-6 sm:px-8 sm:pt-8"><div class="ref-shot flex h-full flex-col overflow-hidden rounded-t-xl bg-white shadow-[0_24px_60px_-30px_rgba(0,0,0,0.8)]"><div class="flex shrink-0 gap-1.5 border-b border-wesolve-green-100 px-3.5 py-2" aria-hidden="true"><span class="h-2 w-2 rounded-full bg-wesolve-green-200"></span><span class="h-2 w-2 rounded-full bg-wesolve-green-200"></span><span class="h-2 w-2 rounded-full bg-wesolve-green-200"></span></div><div class="min-h-0 flex-1 overflow-hidden"><img src="./assets/img/referenz-rootd.webp" alt="Online-Shop von ROOTD." loading="lazy" class="h-full w-full object-cover object-top"></div></div></div>
+          <div class="flex flex-1 flex-col p-6 sm:p-8">
+            <div class="flex flex-wrap gap-2"><span class="tag">Website</span></div>
+            <h3 class="mt-4 text-2xl font-semibold tracking-[-0.025em]">ROOTD.</h3>
+            <p class="mt-3 leading-relaxed text-wesolve-green-700 dark:text-wesolve-green-200">Online-Shop für das nachhaltige Streetwear-Label aus Schnaittach – mit Produktkatalog, Warenkorb und Klarna-Rechnungskauf.</p>
+            <span class="ref-more mt-auto inline-flex items-center gap-2 pt-6 font-semibold text-wesolve-green-800 dark:text-wesolve-green-100">Projekt ansehen <svg class="h-4 w-4" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
           </div>
-          <div class="min-h-0 flex-1 overflow-hidden">
-            <img src="./assets/img/dieschokoecke.png" alt="Webseite von dieschokoecke" class="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105" />
+        </a>
+        <a href="/referenzen/tobias-herrmann" x-show="show(['app'])" x-transition.opacity.duration.300ms data-reveal class="ref-tile group">
+          <div class="hero-panel aspect-[16/10] overflow-hidden bg-wesolve-green-950 p-6"><img src="./assets/img/Bildschirmfoto-2024-05-27-um-16.46.28.webp" alt="ManifeSTATE App von Tobias Herrmann auf zwei Smartphones" loading="lazy" class="ref-shot mx-auto h-full w-auto rounded-xl object-contain"></div>
+          <div class="flex flex-1 flex-col p-6 sm:p-8">
+            <div class="flex flex-wrap gap-2"><span class="tag">App</span></div>
+            <h3 class="mt-4 text-2xl font-semibold tracking-[-0.025em]">Tobias Herrmann</h3>
+            <p class="mt-3 leading-relaxed text-wesolve-green-700 dark:text-wesolve-green-200">ManifeSTATE: App für iOS und Android mit 30-Tage-Challenges, Punktesystem und Notizen für die tägliche Begleitung.</p>
+            <span class="ref-more mt-auto inline-flex items-center gap-2 pt-6 font-semibold text-wesolve-green-800 dark:text-wesolve-green-100">Projekt ansehen <svg class="h-4 w-4" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
           </div>
-        </div>
-      </div>
-      <div class="flex flex-col justify-center p-8 lg:p-12">
-        <span class="mb-3 w-fit rounded-full bg-lime-300 px-3 py-1 font-display text-xs font-bold uppercase text-neutral-900">Webentwicklung</span>
-        <h2 class="mb-3 font-display text-2xl font-bold xl:text-4xl">dieschokoecke</h2>
-        <p class="leading-relaxed text-neutral-600 dark:text-neutral-400">Moderne Webseite mit Selbstverwaltung für die Pralinen-Manufaktur: Sortiment, Texte und FAQ bleiben ohne Technikwissen immer aktuell.</p>
-        <span class="mt-8 inline-flex items-center gap-2 font-display font-semibold text-neutral-900 dark:text-white">
-          Details ansehen
-          <svg class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-        </span>
-      </div>
-    </a>
-
-    <!-- Tobias Herrmann -->
-    <a href="/referenzen/tobias-herrmann" x-show="filter === 'alle' || filter === 'app'" class="group grid overflow-hidden rounded-3xl border-2 border-neutral-200 bg-white transition-all duration-300 hover:-translate-y-1 hover:border-neutral-900 hover:shadow-[8px_8px_0px_0px_#a3e635] dark:border-neutral-800 dark:bg-neutral-900 dark:hover:border-lime-400 lg:grid-cols-2" data-aos="fade-up">
-      <div class="h-64 overflow-hidden bg-neutral-900 p-8 sm:h-80 lg:order-2 lg:h-full lg:min-h-[26rem]" style="background-image: radial-gradient(#404040 1px, transparent 1px); background-size: 26px 26px;">
-        <img src="./assets/img/Bildschirmfoto-2024-05-27-um-16.46.28.png" alt="ManifeSTATE App von Tobias Herrmann auf zwei Smartphones" class="h-full w-full rounded-2xl object-cover shadow-[6px_6px_0px_0px_#a3e635] transition-transform duration-500 group-hover:scale-105" />
-      </div>
-      <div class="flex flex-col justify-center p-8 lg:order-1 lg:p-12">
-        <span class="mb-3 w-fit rounded-full bg-lime-300 px-3 py-1 font-display text-xs font-bold uppercase text-neutral-900">App-Entwicklung</span>
-        <h2 class="mb-3 font-display text-2xl font-bold xl:text-4xl">Tobias Herrmann</h2>
-        <p class="leading-relaxed text-neutral-600 dark:text-neutral-400">ManifeSTATE: App für iOS und Android im Corporate Design – mit 30-Tage-Challenges, Punktesystem und Notizen für die tägliche Begleitung.</p>
-        <span class="mt-8 inline-flex items-center gap-2 font-display font-semibold text-neutral-900 dark:text-white">
-          Details ansehen
-          <svg class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-        </span>
-      </div>
-    </a>
-
-    <!-- ROOTD. Online-Shop -->
-    <a href="/referenzen/rootd" x-show="filter === 'alle' || filter === 'web'" class="group grid overflow-hidden rounded-3xl border-2 border-neutral-200 bg-white transition-all duration-300 hover:-translate-y-1 hover:border-neutral-900 hover:shadow-[8px_8px_0px_0px_#a3e635] dark:border-neutral-800 dark:bg-neutral-900 dark:hover:border-lime-400 lg:grid-cols-2" data-aos="fade-up">
-      <div class="h-64 overflow-hidden bg-neutral-900 px-8 pt-8 sm:h-80 lg:h-full lg:min-h-[26rem]" style="background-image: radial-gradient(#404040 1px, transparent 1px); background-size: 26px 26px;">
-        <div class="flex h-full flex-col overflow-hidden rounded-t-2xl border-2 border-b-0 border-neutral-700 bg-neutral-800 shadow-[6px_6px_0px_0px_#a3e635]">
-          <div class="flex flex-shrink-0 items-center gap-1.5 border-b-2 border-neutral-700 px-4 py-2.5">
-            <span class="h-2.5 w-2.5 rounded-full bg-wesolve-accent-coral-500"></span>
-            <span class="h-2.5 w-2.5 rounded-full bg-wesolve-accent-400"></span>
-            <span class="h-2.5 w-2.5 rounded-full bg-lime-400"></span>
-            <span class="ml-3 h-4 w-40 rounded-full bg-neutral-900"></span>
+        </a>
+        <a href="/referenzen/dieschokoecke" x-show="show(['web'])" x-transition.opacity.duration.300ms data-reveal class="ref-tile group">
+          <div class="hero-panel aspect-[16/10] overflow-hidden bg-wesolve-green-950 px-6 pt-6 sm:px-8 sm:pt-8"><div class="ref-shot flex h-full flex-col overflow-hidden rounded-t-xl bg-white shadow-[0_24px_60px_-30px_rgba(0,0,0,0.8)]"><div class="flex shrink-0 gap-1.5 border-b border-wesolve-green-100 px-3.5 py-2" aria-hidden="true"><span class="h-2 w-2 rounded-full bg-wesolve-green-200"></span><span class="h-2 w-2 rounded-full bg-wesolve-green-200"></span><span class="h-2 w-2 rounded-full bg-wesolve-green-200"></span></div><div class="min-h-0 flex-1 overflow-hidden"><img src="./assets/img/dieschokoecke.webp" alt="Webseite von dieschokoecke" loading="lazy" class="h-full w-full object-cover object-top"></div></div></div>
+          <div class="flex flex-1 flex-col p-6 sm:p-8">
+            <div class="flex flex-wrap gap-2"><span class="tag">Website</span></div>
+            <h3 class="mt-4 text-2xl font-semibold tracking-[-0.025em]">dieschokoecke</h3>
+            <p class="mt-3 leading-relaxed text-wesolve-green-700 dark:text-wesolve-green-200">Webseite mit Selbstverwaltung für die Pralinen-Manufaktur: Sortiment, Texte und FAQ bleiben ohne Technikwissen aktuell.</p>
+            <span class="ref-more mt-auto inline-flex items-center gap-2 pt-6 font-semibold text-wesolve-green-800 dark:text-wesolve-green-100">Projekt ansehen <svg class="h-4 w-4" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
           </div>
-          <div class="min-h-0 flex-1 overflow-hidden">
-            <img src="./assets/img/referenz-rootd.png" alt="Online-Shop von ROOTD." class="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105" />
+        </a>
+        <a href="/referenzen/rooted-merch" x-show="show(['web'])" x-transition.opacity.duration.300ms data-reveal class="ref-tile group">
+          <div class="hero-panel aspect-[16/10] overflow-hidden bg-wesolve-green-950 px-6 pt-6 sm:px-8 sm:pt-8"><div class="ref-shot flex h-full flex-col overflow-hidden rounded-t-xl bg-white shadow-[0_24px_60px_-30px_rgba(0,0,0,0.8)]"><div class="flex shrink-0 gap-1.5 border-b border-wesolve-green-100 px-3.5 py-2" aria-hidden="true"><span class="h-2 w-2 rounded-full bg-wesolve-green-200"></span><span class="h-2 w-2 rounded-full bg-wesolve-green-200"></span><span class="h-2 w-2 rounded-full bg-wesolve-green-200"></span></div><div class="min-h-0 flex-1 overflow-hidden"><img src="./assets/img/referenz-rooted-merch.webp" alt="B2B-Webseite von ROOTED Merch" loading="lazy" class="h-full w-full object-cover object-top"></div></div></div>
+          <div class="flex flex-1 flex-col p-6 sm:p-8">
+            <div class="flex flex-wrap gap-2"><span class="tag">Website</span></div>
+            <h3 class="mt-4 text-2xl font-semibold tracking-[-0.025em]">ROOTED Merch</h3>
+            <p class="mt-3 leading-relaxed text-wesolve-green-700 dark:text-wesolve-green-200">B2B-Webseite für bedruckte Vereins- und Firmenkleidung – mit klarem Anfrageweg für Musterdesigns.</p>
+            <span class="ref-more mt-auto inline-flex items-center gap-2 pt-6 font-semibold text-wesolve-green-800 dark:text-wesolve-green-100">Projekt ansehen <svg class="h-4 w-4" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
           </div>
-        </div>
-      </div>
-      <div class="flex flex-col justify-center p-8 lg:p-12">
-        <span class="mb-3 w-fit rounded-full bg-lime-300 px-3 py-1 font-display text-xs font-bold uppercase text-neutral-900">Webentwicklung</span>
-        <h2 class="mb-3 font-display text-2xl font-bold xl:text-4xl">ROOTD.</h2>
-        <p class="leading-relaxed text-neutral-600 dark:text-neutral-400">Kompletter Online-Shop für das nachhaltige Streetwear-Label aus Schnaittach – Produktkatalog, Warenkorb und Klarna-Rechnungskauf inklusive.</p>
-        <span class="mt-8 inline-flex items-center gap-2 font-display font-semibold text-neutral-900 dark:text-white">
-          Details ansehen
-          <svg class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-        </span>
-      </div>
-    </a>
-
-    <!-- Sport-Weber Bikeservice -->
-    <a href="/referenzen/sportweber-bikeservice" x-show="filter === 'alle' || filter === 'web'" class="group grid overflow-hidden rounded-3xl border-2 border-neutral-200 bg-white transition-all duration-300 hover:-translate-y-1 hover:border-neutral-900 hover:shadow-[8px_8px_0px_0px_#a3e635] dark:border-neutral-800 dark:bg-neutral-900 dark:hover:border-lime-400 lg:grid-cols-2" data-aos="fade-up">
-      <div class="h-64 overflow-hidden bg-neutral-900 px-8 pt-8 sm:h-80 lg:order-2 lg:h-full lg:min-h-[26rem]" style="background-image: radial-gradient(#404040 1px, transparent 1px); background-size: 26px 26px;">
-        <div class="flex h-full flex-col overflow-hidden rounded-t-2xl border-2 border-b-0 border-neutral-700 bg-neutral-800 shadow-[6px_6px_0px_0px_#a3e635]">
-          <div class="flex flex-shrink-0 items-center gap-1.5 border-b-2 border-neutral-700 px-4 py-2.5">
-            <span class="h-2.5 w-2.5 rounded-full bg-wesolve-accent-coral-500"></span>
-            <span class="h-2.5 w-2.5 rounded-full bg-wesolve-accent-400"></span>
-            <span class="h-2.5 w-2.5 rounded-full bg-lime-400"></span>
-            <span class="ml-3 h-4 w-40 rounded-full bg-neutral-900"></span>
-          </div>
-          <div class="min-h-0 flex-1 overflow-hidden">
-            <img src="./assets/img/referenz-sportweber-bikeservice.png" alt="Bikeservice-Plattform von Sport-Weber Schnaittach" class="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105" />
-          </div>
-        </div>
-      </div>
-      <div class="flex flex-col justify-center p-8 lg:order-1 lg:p-12">
-        <span class="mb-3 w-fit rounded-full bg-lime-300 px-3 py-1 font-display text-xs font-bold uppercase text-neutral-900">Webentwicklung</span>
-        <h2 class="mb-3 font-display text-2xl font-bold xl:text-4xl">Sport-Weber Bikeservice</h2>
-        <p class="leading-relaxed text-neutral-600 dark:text-neutral-400">Service-Plattform für die Fahrradwerkstatt mit Online-Terminbuchung, Service-Paketen und FAQ – das zweite gemeinsame Projekt mit Sport-Weber.</p>
-        <span class="mt-8 inline-flex items-center gap-2 font-display font-semibold text-neutral-900 dark:text-white">
-          Details ansehen
-          <svg class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-        </span>
-      </div>
-    </a>
-
-    <!-- ROOTED Merch -->
-    <a href="/referenzen/rooted-merch" x-show="filter === 'alle' || filter === 'web'" class="group grid overflow-hidden rounded-3xl border-2 border-neutral-200 bg-white transition-all duration-300 hover:-translate-y-1 hover:border-neutral-900 hover:shadow-[8px_8px_0px_0px_#a3e635] dark:border-neutral-800 dark:bg-neutral-900 dark:hover:border-lime-400 lg:grid-cols-2" data-aos="fade-up">
-      <div class="h-64 overflow-hidden bg-neutral-900 px-8 pt-8 sm:h-80 lg:h-full lg:min-h-[26rem]" style="background-image: radial-gradient(#404040 1px, transparent 1px); background-size: 26px 26px;">
-        <div class="flex h-full flex-col overflow-hidden rounded-t-2xl border-2 border-b-0 border-neutral-700 bg-neutral-800 shadow-[6px_6px_0px_0px_#a3e635]">
-          <div class="flex flex-shrink-0 items-center gap-1.5 border-b-2 border-neutral-700 px-4 py-2.5">
-            <span class="h-2.5 w-2.5 rounded-full bg-wesolve-accent-coral-500"></span>
-            <span class="h-2.5 w-2.5 rounded-full bg-wesolve-accent-400"></span>
-            <span class="h-2.5 w-2.5 rounded-full bg-lime-400"></span>
-            <span class="ml-3 h-4 w-40 rounded-full bg-neutral-900"></span>
-          </div>
-          <div class="min-h-0 flex-1 overflow-hidden">
-            <img src="./assets/img/referenz-rooted-merch.png" alt="B2B-Webseite von ROOTED Merch" class="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105" />
-          </div>
-        </div>
-      </div>
-      <div class="flex flex-col justify-center p-8 lg:p-12">
-        <span class="mb-3 w-fit rounded-full bg-lime-300 px-3 py-1 font-display text-xs font-bold uppercase text-neutral-900">Webentwicklung</span>
-        <h2 class="mb-3 font-display text-2xl font-bold xl:text-4xl">ROOTED Merch</h2>
-        <p class="leading-relaxed text-neutral-600 dark:text-neutral-400">B2B-Webseite für individuell bedruckte Vereins- und Firmenkleidung – mit klarem Anfrage-Funnel für Musterdesigns.</p>
-        <span class="mt-8 inline-flex items-center gap-2 font-display font-semibold text-neutral-900 dark:text-white">
-          Details ansehen
-          <svg class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-        </span>
-      </div>
-    </a>
-  </div>
-
-  </div>
-
-  <!-- Ergebnis-Band -->
-  <section class="bg-neutral-900 px-6 py-16 dark:border-y dark:border-neutral-800">
-    <div class="mx-auto grid max-w-screen-xl gap-10 text-center sm:grid-cols-3">
-      <div>
-        <p class="font-display text-4xl font-bold text-lime-400 lg:text-5xl">Platz 1</p>
-        <p class="mt-2 text-sm text-neutral-400">bei Google für das Sushi-Catering von LU-BU</p>
-      </div>
-      <div>
-        <p class="font-display text-4xl font-bold text-lime-400 lg:text-5xl">Bundesliga</p>
-        <p class="mt-2 text-sm text-neutral-400">der 1. FC Nürnberg setzt am Spieltag auf unsere App</p>
-      </div>
-      <div>
-        <p class="font-display text-4xl font-bold text-lime-400 lg:text-5xl">4 Bereiche</p>
-        <p class="mt-2 text-sm text-neutral-400">Web, App, SEO und Individual-Software – in echten Projekten</p>
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- CTA -->
-  <div class="px-6 py-24">
-    <div class="relative mx-auto max-w-screen-xl overflow-hidden rounded-[2.5rem] bg-neutral-900 dark:border dark:border-neutral-800 px-6 py-16 text-center lg:py-20">
-      <div class="pointer-events-none absolute -left-20 -top-20 h-72 w-72 rounded-full bg-lime-400/20 blur-3xl"></div>
-      <div class="pointer-events-none absolute -bottom-24 -right-16 h-80 w-80 rounded-full bg-lime-400/20 blur-3xl"></div>
-      <h2 class="relative mx-auto max-w-3xl font-display text-3xl font-bold text-white lg:text-4xl">
-        Dein Projekt könnte das
-        <span class="relative inline-block whitespace-nowrap">
-          <span class="absolute inset-x-0 bottom-1 h-[0.5em] -rotate-1 rounded-sm bg-lime-400"></span>
-          <span class="relative">nächste</span>
-        </span>
-        sein.
-      </h2>
-      <p class="relative mx-auto mt-4 max-w-xl text-neutral-300">Erzähl uns von deiner Idee – wir machen daraus eine Erfolgsgeschichte.</p>
-      <a data-umami-event="cta-erstgespraech" href="/kontakt"
-         class="group relative mt-8 inline-flex items-center gap-2 rounded-full bg-lime-400 px-8 py-4 font-display font-bold text-neutral-900 transition-all duration-300 hover:-translate-y-0.5 hover:bg-lime-300 w-full justify-center sm:w-auto">
-        Kostenloses Erstgespräch sichern
-        <svg class="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-      </a>
-    </div>
-  </div>
-
-  <div id="footer-placeholder"></div>
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <section class="border-y border-wesolve-green-200 bg-wesolve-green-100 px-4 py-20 dark:border-wesolve-green-800 dark:bg-wesolve-green-900 sm:px-6 lg:py-24" aria-labelledby="contact-title">
+    <div class="mx-auto flex max-w-screen-xl flex-col gap-10 lg:flex-row lg:items-end lg:justify-between"><div><p class="eyebrow">Nächster Schritt</p><h2 id="contact-title" class="section-title max-w-3xl">Dein Projekt könnte das nächste sein.</h2><p class="mt-5 max-w-2xl text-lg leading-relaxed text-wesolve-green-700 dark:text-wesolve-green-200">Erzähl uns von deiner Idee. Im kostenlosen Erstgespräch klären wir, was sinnvoll ist und welcher Rahmen realistisch ist.</p></div><div class="flex flex-col gap-3 sm:flex-row lg:flex-col xl:flex-row"><a data-umami-event="cta-erstgespraech" href="/kontakt" class="btn-primary">Erstgespräch vereinbaren <svg class="h-4 w-4" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a data-umami-event="kontakt-telefon" href="tel:+4915202721146" class="btn-secondary">0152 02721146</a></div></div>
+  </section>
+</main>
+<div id="footer-placeholder"></div>
 <script>
-  AOS.init();
+  // Karten einmalig einblenden, sobald sie ins Bild scrollen
+  if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.documentElement.classList.add('js-reveal');
+    const io = new IntersectionObserver(entries => entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); }
+    }), { threshold: 0.15, rootMargin: '0px 0px -8% 0px' });
+    document.querySelectorAll('[data-reveal]').forEach(el => io.observe(el));
+  }
 </script>
 </body>
 </html>

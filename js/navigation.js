@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   const nav = document.createElement("div");
-  fetch("../navigation.html")
+  fetch("/navigation.html")
   .then(response => response.text())
   .then(html => {
     nav.innerHTML = html;
@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 
 document.addEventListener("DOMContentLoaded", function() {
-  fetch("../footer.html")
+  fetch("/footer.html")
     .then(response => response.text())
     .then(data => {
       document.getElementById("footer-placeholder").innerHTML = data;
