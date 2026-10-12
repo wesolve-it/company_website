@@ -13,17 +13,17 @@ module.exports = {
     extend: {
       colors: {
         'wesolve-green': {
-          '50': '#f2f7f4',
-          '100': '#e0ebe2',
-          '200': '#c3d7c8',
-          '300': '#9bbaa5',
-          '400': '#70977e',
-          '500': '#4f7a60',
-          '600': '#3b604a',
-          '700': '#314f3e', // primary
-          '800': '#273e31',
-          '900': '#213329',
-          '950': '#121c17',
+          '50': '#f4f8f6',
+          '100': '#e6f0eb',
+          '200': '#cbe0d5',
+          '300': '#a7c9b8',
+          '400': '#78aa92',
+          '500': '#4d8b6d',
+          '600': '#326d52',
+          '700': '#245540', // primary
+          '800': '#193e30',
+          '900': '#102d23',
+          '950': '#081c16',
         },
         'wesolve-gray': {
           '50': '#f6f6f7',
@@ -39,28 +39,35 @@ module.exports = {
           '950': '#323234',
         },
         'wesolve-accent': {
-          '50': '#fffaf0',
-          '100': '#fef3c7',
-          '200': '#fde68a',
-          '300': '#fcd34d',
-          '400': '#fbbf24',
-          '500': '#f59e0b', // CTA-Stufe
-          '600': '#d97706',
-          '700': '#b45309',
-          '800': '#92400e',
-          '900': '#78350f',
+          '50': '#edfcf7',
+          '100': '#d3f8eb',
+          '200': '#abefd8',
+          '300': '#73dfbf',
+          '400': '#36c99a',
+          '500': '#19ad7f', // Akzent
+          '600': '#0e8c68',
+          '700': '#0e7056',
+          '800': '#105945',
+          '900': '#104a3b',
         },
         'wesolve-accent-coral': {
-          '50': '#fff1f0',
-          '100': '#ffe0dc',
-          '200': '#ffc2b9',
-          '300': '#ff9e8f',
-          '400': '#ff7a65',
-          '500': '#ff573b', // Primär
-          '600': '#e0442d',
-          '700': '#b53523',
-          '800': '#8c291b',
-          '900': '#6f2015',
+          '50': '#edfcf7',
+          '100': '#d3f8eb',
+          '200': '#abefd8',
+          '300': '#73dfbf',
+          '400': '#36c99a',
+          '500': '#19ad7f',
+          '600': '#0e8c68',
+          '700': '#0e7056',
+          '800': '#105945',
+          '900': '#104a3b',
+        },
+        'wesolve-sun': {
+          '100': '#fff4cc',
+          '200': '#ffe78f',
+          '300': '#ffd95a',
+          '400': '#ffc929', // Akzent: Markierungen, Haken, CTA
+          '500': '#f0b400',
         },
         'bg-gray': '#161616',
         'section-gray': '#282828',
@@ -71,6 +78,8 @@ module.exports = {
       fontFamily: {
         heading: ['"Barlow Condensed"', 'sans-serif'],
         body: ['Montserrat', 'sans-serif'],
+        // Startseite: Onest für Überschriften und Fließtext
+        text: ['Onest', 'sans-serif'],
         display: ['"Space Grotesk"', 'sans-serif'],
       },
       animation: {
@@ -92,4 +101,3 @@ module.exports = {
   },
   plugins: [],
 }
-

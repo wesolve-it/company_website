@@ -23,212 +23,140 @@
   <link rel="icon" type="image/x-icon" href="./assets/img/Wesolveit_loigo.svg" />
   <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
   <script src="./js/navigation.js" defer></script>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Montserrat:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
 </head>
-<body class="bg-white text-neutral-900 dark:bg-neutral-950 dark:text-neutral-100 overflow-x-hidden">
-
-  <!-- Header -->
-  <div class="relative overflow-hidden">
-    <div class="pointer-events-none absolute -top-24 -right-24 h-80 w-80 rounded-full bg-lime-300/40 blur-3xl dark:bg-lime-500/10"></div>
-    <div class="relative mx-auto max-w-screen-xl px-6 pt-32">
-      <span class="inline-flex items-center rounded-full bg-lime-100 px-4 py-1.5 font-display text-xs font-bold uppercase tracking-wide text-lime-800 dark:bg-lime-950 dark:text-lime-300">Unsere Leistungen</span>
-      <h1 class="mt-4 max-w-4xl font-display text-4xl font-bold leading-tight tracking-tight lg:text-5xl xl:text-6xl">
-        Digitale Lösungen, die dein Unternehmen
-        <span class="relative inline-block whitespace-nowrap">
-          <span class="absolute inset-x-0 bottom-1 h-[0.55em] -rotate-1 rounded-sm bg-lime-300 dark:bg-lime-400/30"></span>
-          <span class="relative">wirklich entlasten</span>
-        </span>
-      </h1>
-      <p class="mt-5 max-w-3xl leading-relaxed text-neutral-600 dark:text-neutral-400 lg:text-lg">Webseite, App, Sichtbarkeit bei Google oder maßgeschneiderte Software – hier findest du, was zu deinem Ziel passt. Und wenn du nicht sicher bist: Wir sagen dir ehrlich, was sich für dich lohnt und was nicht.</p>
-
-      <!-- Schnellnavigation -->
-      <div class="mb-20 mt-10 flex flex-wrap gap-3">
-        <a href="#webentwicklung" class="inline-flex items-center gap-2 rounded-full border-2 border-neutral-200 px-5 py-2.5 font-display text-sm font-semibold transition-colors duration-300 hover:border-neutral-900 hover:bg-lime-300 hover:text-neutral-900 dark:border-neutral-800 dark:hover:border-lime-300">
-          <span class="text-neutral-400">01</span> Webentwicklung
-        </a>
-        <a href="#app-entwicklung" class="inline-flex items-center gap-2 rounded-full border-2 border-neutral-200 px-5 py-2.5 font-display text-sm font-semibold transition-colors duration-300 hover:border-neutral-900 hover:bg-lime-300 hover:text-neutral-900 dark:border-neutral-800 dark:hover:border-lime-300">
-          <span class="text-neutral-400">02</span> App-Entwicklung
-        </a>
-        <a href="#seo" class="inline-flex items-center gap-2 rounded-full border-2 border-neutral-200 px-5 py-2.5 font-display text-sm font-semibold transition-colors duration-300 hover:border-neutral-900 hover:bg-lime-300 hover:text-neutral-900 dark:border-neutral-800 dark:hover:border-lime-300">
-          <span class="text-neutral-400">03</span> SEO
-        </a>
-        <a href="#individual-software" class="inline-flex items-center gap-2 rounded-full border-2 border-neutral-200 px-5 py-2.5 font-display text-sm font-semibold transition-colors duration-300 hover:border-neutral-900 hover:bg-lime-300 hover:text-neutral-900 dark:border-neutral-800 dark:hover:border-lime-300">
-          <span class="text-neutral-400">04</span> Individual-Software
-        </a>
+<body data-hero="dark" class="overflow-x-hidden bg-white font-text text-wesolve-green-950 antialiased dark:bg-wesolve-green-950 dark:text-wesolve-green-50">
+<main>
+  <!-- Kopf mit Wegweiser: von der eigenen Situation direkt zur passenden Leistung -->
+  <section class="hero-panel relative overflow-hidden bg-wesolve-green-950 px-4 pb-16 pt-28 text-white sm:px-6 lg:pb-24 lg:pt-40" aria-labelledby="leistungen-title">
+    <div class="mx-auto grid max-w-screen-xl gap-12 lg:grid-cols-12 lg:gap-10">
+      <div class="lg:col-span-5">
+        <p class="hero-in text-sm font-semibold uppercase tracking-[0.18em] text-wesolve-accent-300" style="--d:0">Leistungen</p>
+        <h1 id="leistungen-title" style="--d:1" class="hero-in mt-6 font-text text-[clamp(2.5rem,5.2vw,4.5rem)] font-bold leading-[1] tracking-[-0.05em]">Digitale Lösungen, die dein Unternehmen entlasten.</h1>
+        <p style="--d:2" class="hero-in mt-7 max-w-xl text-lg leading-relaxed text-wesolve-green-100">Webseite, App, Sichtbarkeit bei Google oder maßgeschneiderte Software. Und wenn du nicht sicher bist: Wir sagen dir ehrlich, was sich für dich lohnt und was nicht.</p>
       </div>
-    </div>
-  </div>
-
-  <!-- 01 Webentwicklung -->
-  <section id="webentwicklung" class="scroll-mt-28 bg-white px-6 py-20 dark:bg-neutral-950">
-    <div class="mx-auto grid max-w-screen-xl items-center gap-12 lg:grid-cols-2 lg:gap-20">
-      <div data-aos="fade-up">
-        <div class="flex items-center gap-4">
-          <span class="font-display text-sm font-bold text-neutral-400">01</span>
-          <span class="rounded-full bg-lime-300 px-3 py-1 font-display text-xs font-bold uppercase text-neutral-900">Webentwicklung</span>
-        </div>
-        <h2 class="mt-4 font-display text-3xl font-bold tracking-tight lg:text-4xl">Deine Webseite: dein bester Verkäufer – rund um die Uhr</h2>
-        <p class="mt-4 leading-relaxed text-neutral-600 dark:text-neutral-400">Der erste Eindruck entsteht heute online. Wir bauen dir eine Webseite, die professionell aussieht, auf jedem Gerät funktioniert und aus Besuchern Anfragen macht.</p>
-        <ul class="mt-6 space-y-3 text-neutral-600 dark:text-neutral-400">
-          <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 flex-shrink-0 text-lime-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg><span>Individuelles Design, das zu deinem Betrieb passt – kein Baukasten von der Stange</span></li>
-          <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 flex-shrink-0 text-lime-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg><span>Schnell und übersichtlich auf jedem Gerät – die meisten Besucher kommen übers Smartphone</span></li>
-          <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 flex-shrink-0 text-lime-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg><span>Inhalte selbst pflegen – ohne Technikkenntnisse und ohne uns anrufen zu müssen</span></li>
-          <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 flex-shrink-0 text-lime-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg><span>DSGVO-konform und technisch auf dem neuesten Stand</span></li>
+      <div style="--d:3" class="hero-in lg:col-span-6 lg:col-start-7">
+        <p class="font-semibold text-white">Was beschreibt dich am besten?</p>
+        <ul class="mt-5 grid gap-3 sm:grid-cols-2">
+          <li><a href="#webentwicklung" class="guide-link group"><span class="text-wesolve-green-100">Deine Webseite veraltet ist, kaum Anfragen bringt – oder du noch gar keine hast.</span><span class="mt-2 inline-flex items-center gap-2 font-semibold text-wesolve-accent-300">Webseiten & Shops <svg class="h-4 w-4" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li>
+          <li><a href="#app-entwicklung" class="guide-link group"><span class="text-wesolve-green-100">Deine Kunden immer wiederkommen – und du sie direkt auf ihrem Smartphone erreichen willst.</span><span class="mt-2 inline-flex items-center gap-2 font-semibold text-wesolve-accent-300">Apps <svg class="h-4 w-4" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li>
+          <li><a href="#seo" class="guide-link group"><span class="text-wesolve-green-100">Es dein Unternehmen gibt – aber Google es nicht kennt.</span><span class="mt-2 inline-flex items-center gap-2 font-semibold text-wesolve-accent-300">SEO <svg class="h-4 w-4" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li>
+          <li><a href="#individual-software" class="guide-link group"><span class="text-wesolve-green-100">Abläufe in deinem Betrieb zu viel Zeit fressen – und keine fertige Software wirklich passt.</span><span class="mt-2 inline-flex items-center gap-2 font-semibold text-wesolve-accent-300">Individualsoftware <svg class="h-4 w-4" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li>
         </ul>
-        <div class="mt-6 rounded-r-2xl border-l-4 border-lime-400 bg-lime-50 px-5 py-4 text-sm leading-relaxed text-neutral-700 dark:bg-lime-950/40 dark:text-neutral-300">
-          <span class="font-semibold">Passt zu dir, wenn:</span> deine Webseite veraltet ist, kaum Anfragen bringt – oder du noch gar keine hast.
-        </div>
-        <p class="mt-4 text-sm text-neutral-500 dark:text-neutral-400">Beispiel aus der Praxis: <a href="/referenzen/alfafood" class="font-semibold text-neutral-900 underline decoration-lime-400 decoration-2 underline-offset-4 dark:text-white">Alfafood – Webseite mit Selbstpflege &amp; Franchise-Bereich</a></p>
-        <div class="mt-8 flex flex-wrap items-center gap-5">
-          <a href="/leistungen/webentwicklung" class="group inline-flex items-center gap-2 rounded-full bg-neutral-900 px-7 py-3.5 font-display font-semibold text-lime-300 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[4px_4px_0px_0px_#a3e635] dark:bg-lime-400 dark:text-neutral-900 dark:hover:bg-lime-300 w-full justify-center sm:w-auto">
-            Mehr zur Webentwicklung
-            <svg class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-          </a>
-          <a data-umami-event="cta-erstgespraech" href="/kontakt" class="font-display font-semibold text-neutral-900 underline decoration-lime-400 decoration-2 underline-offset-4 transition-all hover:decoration-4 dark:text-white">Kostenloses Erstgespräch</a>
-        </div>
-      </div>
-      <div data-aos="safe-fade-left">
-        <div class="overflow-hidden rounded-3xl shadow-[8px_8px_0px_0px_#a3e635]">
-          <img src="./assets/img/illustration-webentwicklung.svg" loading="lazy" alt="Illustration eines modernen Webseiten-Layouts im Browser" class="w-full" />
-        </div>
       </div>
     </div>
   </section>
 
-  <!-- 02 App-Entwicklung -->
-  <section id="app-entwicklung" class="scroll-mt-28 bg-neutral-50 px-6 py-20 dark:bg-neutral-900/40">
-    <div class="mx-auto grid max-w-screen-xl items-center gap-12 lg:grid-cols-2 lg:gap-20">
-      <div class="lg:order-2" data-aos="fade-up">
-        <div class="flex items-center gap-4">
-          <span class="font-display text-sm font-bold text-neutral-400">02</span>
-          <span class="rounded-full bg-lime-300 px-3 py-1 font-display text-xs font-bold uppercase text-neutral-900">App-Entwicklung</span>
-        </div>
-        <h2 class="mt-4 font-display text-3xl font-bold tracking-tight lg:text-4xl">Deine App: der direkte Draht zu deinen Kunden</h2>
-        <p class="mt-4 leading-relaxed text-neutral-600 dark:text-neutral-400">Eine eigene App lohnt sich, wenn deine Kunden regelmäßig bei dir kaufen, buchen oder bestellen. Wir entwickeln sie maßgeschneidert – von der Idee bis zur Veröffentlichung im App Store.</p>
-        <ul class="mt-6 space-y-3 text-neutral-600 dark:text-neutral-400">
-          <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 flex-shrink-0 text-lime-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg><span>Maßgeschneidert im Look deines Unternehmens – für iOS und Android</span></li>
-          <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 flex-shrink-0 text-lime-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg><span>Bestellungen, Termine oder Reservierungen – für deine Kunden nur einen Fingertipp entfernt</span></li>
-          <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 flex-shrink-0 text-lime-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg><span>Kundenbindung inklusive: Treueprogramm, exklusive Angebote, Push-Nachrichten</span></li>
-          <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 flex-shrink-0 text-lime-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg><span>Wir übernehmen alles – Konzept, Entwicklung, App-Store-Veröffentlichung und Updates</span></li>
-        </ul>
-        <div class="mt-6 rounded-r-2xl border-l-4 border-lime-400 bg-lime-50 px-5 py-4 text-sm leading-relaxed text-neutral-700 dark:bg-lime-950/40 dark:text-neutral-300">
-          <span class="font-semibold">Passt zu dir, wenn:</span> deine Kunden immer wiederkommen – und du sie direkt auf ihrem Smartphone erreichen willst.
-        </div>
-        <p class="mt-4 text-sm text-neutral-500 dark:text-neutral-400">Beispiel aus der Praxis: <a href="/referenzen/fc-nuernberg" class="font-semibold text-neutral-900 underline decoration-lime-400 decoration-2 underline-offset-4 dark:text-white">1. FC Nürnberg – Business Seating App</a></p>
-        <div class="mt-8 flex flex-wrap items-center gap-5">
-          <a href="/leistungen/app-entwicklung" class="group inline-flex items-center gap-2 rounded-full bg-neutral-900 px-7 py-3.5 font-display font-semibold text-lime-300 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[4px_4px_0px_0px_#a3e635] dark:bg-lime-400 dark:text-neutral-900 dark:hover:bg-lime-300 w-full justify-center sm:w-auto">
-            Mehr zur App-Entwicklung
-            <svg class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-          </a>
-          <a data-umami-event="cta-erstgespraech" href="/kontakt" class="font-display font-semibold text-neutral-900 underline decoration-lime-400 decoration-2 underline-offset-4 transition-all hover:decoration-4 dark:text-white">Kostenloses Erstgespräch</a>
+  <section id="webentwicklung" class="scroll-mt-24 px-4 py-20 sm:px-6 lg:py-28 " aria-labelledby="webentwicklung-title">
+    <div class="mx-auto grid max-w-screen-xl gap-12 lg:grid-cols-12 lg:gap-16">
+      <div class="lg:col-span-5">
+        <div class="lg:sticky lg:top-28">
+          <div class="flex items-center gap-3"><span class="grid h-11 w-11 place-items-center rounded-xl bg-wesolve-green-950 text-wesolve-accent-300 dark:bg-wesolve-green-800"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2" stroke="currentColor" stroke-width="1.7"/><path d="M3 9h18M7 6.5h.01M10 6.5h.01" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span><span class="font-semibold text-wesolve-green-700 dark:text-wesolve-green-200">Webseiten & Shops</span></div>
+          <h2 id="webentwicklung-title" class="mt-6 text-[clamp(1.9rem,3.4vw,2.9rem)] font-bold leading-[1.08] tracking-[-0.035em]">Deine Webseite: dein bester Verkäufer – rund um die Uhr</h2>
+          <p class="mt-5 text-lg leading-relaxed text-wesolve-green-700 dark:text-wesolve-green-200">Der erste Eindruck entsteht heute online. Wir bauen dir eine Webseite, die professionell aussieht, auf jedem Gerät funktioniert und aus Besuchern Anfragen macht.</p>
+          <div class="mt-8 flex flex-col gap-3 sm:flex-row"><a href="/leistungen/webentwicklung" class="btn-primary">Mehr zu Webseiten <svg class="h-4 w-4" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a data-umami-event="cta-erstgespraech" href="/kontakt" class="btn-secondary">Erstgespräch</a></div>
         </div>
       </div>
-      <div class="lg:order-1" data-aos="safe-fade-right">
-        <div class="overflow-hidden rounded-3xl shadow-[8px_8px_0px_0px_#a3e635]">
-          <img src="./assets/img/illustration-app.svg" loading="lazy" alt="Illustration einer Smartphone-App mit Benachrichtigung" class="w-full" />
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 03 SEO -->
-  <section id="seo" class="scroll-mt-28 bg-white px-6 py-20 dark:bg-neutral-950">
-    <div class="mx-auto grid max-w-screen-xl items-center gap-12 lg:grid-cols-2 lg:gap-20">
-      <div data-aos="fade-up">
-        <div class="flex items-center gap-4">
-          <span class="font-display text-sm font-bold text-neutral-400">03</span>
-          <span class="rounded-full bg-lime-300 px-3 py-1 font-display text-xs font-bold uppercase text-neutral-900">SEO</span>
-        </div>
-        <h2 class="mt-4 font-display text-3xl font-bold tracking-tight lg:text-4xl">Gefunden werden, wenn Kunden nach dir suchen</h2>
-        <p class="mt-4 leading-relaxed text-neutral-600 dark:text-neutral-400">Die beste Webseite bringt nichts, wenn niemand sie findet. Wir sorgen dafür, dass du bei Google ganz oben stehst – vor allem dort, wo deine Kunden sind: in deiner Region.</p>
-        <ul class="mt-6 space-y-3 text-neutral-600 dark:text-neutral-400">
-          <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 flex-shrink-0 text-lime-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg><span>Top-Platzierungen bei Google und Google Maps in deiner Region (Local SEO)</span></li>
-          <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 flex-shrink-0 text-lime-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg><span>Google-Unternehmensprofil im Griff: Bewertungen, Bilder, Öffnungszeiten</span></li>
-          <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 flex-shrink-0 text-lime-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg><span>Technische Optimierung: Ladezeit, Struktur und strukturierte Daten</span></li>
-          <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 flex-shrink-0 text-lime-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg><span>Verständliche Auswertung – du siehst schwarz auf weiß, was die Maßnahmen bringen</span></li>
-        </ul>
-        <div class="mt-6 rounded-r-2xl border-l-4 border-lime-400 bg-lime-50 px-5 py-4 text-sm leading-relaxed text-neutral-700 dark:bg-lime-950/40 dark:text-neutral-300">
-          <span class="font-semibold">Passt zu dir, wenn:</span> es dein Unternehmen gibt – aber Google es nicht kennt.
-        </div>
-        <p class="mt-4 text-sm text-neutral-500 dark:text-neutral-400">Beispiel aus der Praxis: <a href="/referenzen/lubu-restaurant" class="font-semibold text-neutral-900 underline decoration-lime-400 decoration-2 underline-offset-4 dark:text-white">LU-BU – Platz 1 bei Google für Sushi-Catering</a></p>
-        <div class="mt-8 flex flex-wrap items-center gap-5">
-          <a href="/leistungen/suchmaschinenoptimierung" class="group inline-flex items-center gap-2 rounded-full bg-neutral-900 px-7 py-3.5 font-display font-semibold text-lime-300 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[4px_4px_0px_0px_#a3e635] dark:bg-lime-400 dark:text-neutral-900 dark:hover:bg-lime-300 w-full justify-center sm:w-auto">
-            Mehr zur Suchmaschinenoptimierung
-            <svg class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-          </a>
-          <a data-umami-event="cta-erstgespraech" href="/kontakt" class="font-display font-semibold text-neutral-900 underline decoration-lime-400 decoration-2 underline-offset-4 transition-all hover:decoration-4 dark:text-white">Kostenloses Erstgespräch</a>
-        </div>
-      </div>
-      <div data-aos="safe-fade-left">
-        <div class="overflow-hidden rounded-3xl shadow-[8px_8px_0px_0px_#a3e635]">
-          <img src="./assets/img/illustration-seo.svg" loading="lazy" alt="Illustration einer Suchleiste mit Top-Platzierung in den Suchergebnissen" class="w-full" />
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 04 Individual-Software -->
-  <section id="individual-software" class="scroll-mt-28 bg-neutral-50 px-6 py-20 dark:bg-neutral-900/40">
-    <div class="mx-auto grid max-w-screen-xl items-center gap-12 lg:grid-cols-2 lg:gap-20">
-      <div class="lg:order-2" data-aos="fade-up">
-        <div class="flex items-center gap-4">
-          <span class="font-display text-sm font-bold text-neutral-400">04</span>
-          <span class="rounded-full bg-lime-300 px-3 py-1 font-display text-xs font-bold uppercase text-neutral-900">Individual-Software</span>
-        </div>
-        <h2 class="mt-4 font-display text-3xl font-bold tracking-tight lg:text-4xl">Schluss mit Zettelwirtschaft und Excel-Chaos</h2>
-        <p class="mt-4 leading-relaxed text-neutral-600 dark:text-neutral-400">Wenn keine Standardsoftware zu deinen Abläufen passt, bauen wir dir eine, die es tut. Maßgeschneidert für deinen Betrieb – und so einfach zu bedienen, dass dein Team sofort damit arbeiten kann.</p>
-        <ul class="mt-6 space-y-3 text-neutral-600 dark:text-neutral-400">
-          <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 flex-shrink-0 text-lime-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg><span>Maßgeschneidert für deinen Arbeitsablauf – vom Verleihsystem bis zur Buchungsverwaltung</span></li>
-          <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 flex-shrink-0 text-lime-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg><span>Automatisiert, was dich Zeit kostet: Rechnungen, Termine, Bestände</span></li>
-          <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 flex-shrink-0 text-lime-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg><span>Wächst mit deinem Unternehmen – neue Funktionen, wann immer du sie brauchst</span></li>
-          <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 flex-shrink-0 text-lime-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg><span>Hosting, Wartung und Support aus derselben Hand – ein Ansprechpartner für alles</span></li>
-        </ul>
-        <div class="mt-6 rounded-r-2xl border-l-4 border-lime-400 bg-lime-50 px-5 py-4 text-sm leading-relaxed text-neutral-700 dark:bg-lime-950/40 dark:text-neutral-300">
-          <span class="font-semibold">Passt zu dir, wenn:</span> Abläufe in deinem Betrieb zu viel Zeit fressen – und keine fertige Software wirklich passt.
-        </div>
-        <p class="mt-4 text-sm text-neutral-500 dark:text-neutral-400">Beispiel aus der Praxis: <a href="/referenzen/sportweber-schnaittach" class="font-semibold text-neutral-900 underline decoration-lime-400 decoration-2 underline-offset-4 dark:text-white">Sport-Weber – Verleihsoftware mit automatischer Rechnungserstellung</a></p>
-        <div class="mt-8 flex flex-wrap items-center gap-5">
-          <a href="/leistungen/individual-software" class="group inline-flex items-center gap-2 rounded-full bg-neutral-900 px-7 py-3.5 font-display font-semibold text-lime-300 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[4px_4px_0px_0px_#a3e635] dark:bg-lime-400 dark:text-neutral-900 dark:hover:bg-lime-300 w-full justify-center sm:w-auto">
-            Mehr zur Individual-Software
-            <svg class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-          </a>
-          <a data-umami-event="cta-erstgespraech" href="/kontakt" class="font-display font-semibold text-neutral-900 underline decoration-lime-400 decoration-2 underline-offset-4 transition-all hover:decoration-4 dark:text-white">Kostenloses Erstgespräch</a>
-        </div>
-      </div>
-      <div class="lg:order-1" data-aos="safe-fade-right">
-        <div class="overflow-hidden rounded-3xl shadow-[8px_8px_0px_0px_#a3e635]">
-          <img src="./assets/img/illustration-komplettpaket.svg" loading="lazy" alt="Illustration eines digitalen Komplettpakets mit Dashboard, Cloud, Sicherheit und Support" class="w-full" />
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <div class="px-6 py-24">
-    <div class="relative mx-auto max-w-screen-xl overflow-hidden rounded-[2.5rem] bg-neutral-900 dark:border dark:border-neutral-800 px-6 py-16 text-center lg:py-20">
-      <div class="pointer-events-none absolute -left-20 -top-20 h-72 w-72 rounded-full bg-lime-400/20 blur-3xl"></div>
-      <div class="pointer-events-none absolute -bottom-24 -right-16 h-80 w-80 rounded-full bg-lime-400/20 blur-3xl"></div>
-      <h2 class="relative mx-auto max-w-3xl font-display text-3xl font-bold text-white lg:text-4xl">Nicht sicher, welche Lösung zu dir passt?</h2>
-      <p class="relative mx-auto mt-4 max-w-xl text-neutral-300">Wir beraten dich unverbindlich und finden gemeinsam heraus, was dein Unternehmen wirklich braucht – ehrlich und auf Augenhöhe.</p>
-      <div class="relative mt-8 flex flex-wrap items-center justify-center gap-4">
-        <a data-umami-event="cta-erstgespraech" href="/kontakt"
-           class="group inline-flex items-center gap-2 rounded-full bg-lime-400 px-8 py-4 font-display font-bold text-neutral-900 transition-all duration-300 hover:-translate-y-0.5 hover:bg-lime-300 w-full justify-center sm:w-auto">
-          Kostenloses Erstgespräch sichern
-          <svg class="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-        </a>
-        <a data-umami-event="cta-quick-check" href="/quick-check"
-           class="inline-flex items-center gap-2 rounded-full border-2 border-white px-7 py-[14px] font-display font-semibold text-white transition-colors duration-300 hover:border-lime-300 hover:text-lime-300 w-full justify-center sm:w-auto">
-          Zum kostenlosen Quick-Check
+      <div class="lg:col-span-7">
+        <p class="rounded-xl border-l-2 border-wesolve-accent-400 bg-white px-5 py-4 leading-relaxed shadow-[0_12px_40px_-30px_rgba(8,28,22,0.5)] dark:bg-wesolve-green-900"><span class="font-semibold">Passt zu dir, wenn</span> deine Webseite veraltet ist, kaum Anfragen bringt – oder du noch gar keine hast.</p>
+        <ul data-reveal class="mt-8 grid gap-x-10 gap-y-8 sm:grid-cols-2"><li class="service-feature"><h3 class="font-semibold">Eigenes Design</h3><p class="mt-1.5 leading-relaxed text-wesolve-green-700 dark:text-wesolve-green-200">Passend zu deinem Betrieb – kein Baukasten von der Stange.</p></li><li class="service-feature"><h3 class="font-semibold">Schnell auf jedem Gerät</h3><p class="mt-1.5 leading-relaxed text-wesolve-green-700 dark:text-wesolve-green-200">Die meisten Besucher kommen übers Smartphone.</p></li><li class="service-feature"><h3 class="font-semibold">Inhalte selbst pflegen</h3><p class="mt-1.5 leading-relaxed text-wesolve-green-700 dark:text-wesolve-green-200">Ohne Technikkenntnisse und ohne uns anrufen zu müssen.</p></li><li class="service-feature"><h3 class="font-semibold">Rechtssicher</h3><p class="mt-1.5 leading-relaxed text-wesolve-green-700 dark:text-wesolve-green-200">DSGVO-konform und technisch auf dem neuesten Stand.</p></li></ul>
+        <a href="/referenzen/alfafood" data-reveal class="ref-tile group mt-10">
+          <div class="hero-panel aspect-[16/9] overflow-hidden bg-wesolve-green-950 px-6 pt-6 sm:px-8 sm:pt-8"><div class="ref-shot flex h-full flex-col overflow-hidden rounded-t-xl bg-white shadow-[0_24px_60px_-30px_rgba(0,0,0,0.8)]"><div class="flex shrink-0 gap-1.5 border-b border-wesolve-green-100 px-3.5 py-2" aria-hidden="true"><span class="h-2 w-2 rounded-full bg-wesolve-green-200"></span><span class="h-2 w-2 rounded-full bg-wesolve-green-200"></span><span class="h-2 w-2 rounded-full bg-wesolve-green-200"></span></div><div class="min-h-0 flex-1 overflow-hidden"><img src="./assets/img/exampleImage.png" alt="Webseite von Alfafood" loading="lazy" class="h-full w-full object-cover object-top"></div></div></div>
+          <div class="flex flex-col gap-1 p-6 sm:flex-row sm:items-end sm:justify-between sm:p-7"><div><p class="text-sm text-wesolve-green-600 dark:text-wesolve-green-300">Beispiel aus der Praxis</p><h3 class="mt-1 text-xl font-semibold tracking-[-0.02em]">Alfafood</h3><p class="mt-1 text-wesolve-green-700 dark:text-wesolve-green-200">Webseite mit Selbstpflege und Franchise-Bereich</p></div><span class="ref-more mt-4 inline-flex shrink-0 items-center gap-2 font-semibold text-wesolve-green-800 dark:text-wesolve-green-100 sm:mt-0">Projekt ansehen <svg class="h-4 w-4" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
         </a>
       </div>
     </div>
-  </div>
+  </section>
 
-  <div id="footer-placeholder"></div>
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <section id="app-entwicklung" class="scroll-mt-24 px-4 py-20 sm:px-6 lg:py-28 bg-wesolve-green-50 dark:bg-wesolve-green-900/60" aria-labelledby="app-entwicklung-title">
+    <div class="mx-auto grid max-w-screen-xl gap-12 lg:grid-cols-12 lg:gap-16">
+      <div class="lg:col-span-5">
+        <div class="lg:sticky lg:top-28">
+          <div class="flex items-center gap-3"><span class="grid h-11 w-11 place-items-center rounded-xl bg-wesolve-green-950 text-wesolve-accent-300 dark:bg-wesolve-green-800"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="7" y="2.5" width="10" height="19" rx="2.5" stroke="currentColor" stroke-width="1.7"/><path d="M10 5h4M11 18.5h2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span><span class="font-semibold text-wesolve-green-700 dark:text-wesolve-green-200">Apps</span></div>
+          <h2 id="app-entwicklung-title" class="mt-6 text-[clamp(1.9rem,3.4vw,2.9rem)] font-bold leading-[1.08] tracking-[-0.035em]">Deine App: der direkte Draht zu deinen Kunden</h2>
+          <p class="mt-5 text-lg leading-relaxed text-wesolve-green-700 dark:text-wesolve-green-200">Eine eigene App lohnt sich, wenn deine Kunden regelmäßig bei dir kaufen, buchen oder bestellen. Wir entwickeln sie maßgeschneidert – von der Idee bis zur Veröffentlichung im App Store.</p>
+          <div class="mt-8 flex flex-col gap-3 sm:flex-row"><a href="/leistungen/app-entwicklung" class="btn-primary">Mehr zu Apps <svg class="h-4 w-4" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a data-umami-event="cta-erstgespraech" href="/kontakt" class="btn-secondary">Erstgespräch</a></div>
+        </div>
+      </div>
+      <div class="lg:col-span-7">
+        <p class="rounded-xl border-l-2 border-wesolve-accent-400 bg-white px-5 py-4 leading-relaxed shadow-[0_12px_40px_-30px_rgba(8,28,22,0.5)] dark:bg-wesolve-green-900"><span class="font-semibold">Passt zu dir, wenn</span> deine Kunden immer wiederkommen – und du sie direkt auf ihrem Smartphone erreichen willst.</p>
+        <ul data-reveal class="mt-8 grid gap-x-10 gap-y-8 sm:grid-cols-2"><li class="service-feature"><h3 class="font-semibold">iOS und Android</h3><p class="mt-1.5 leading-relaxed text-wesolve-green-700 dark:text-wesolve-green-200">Im Look deines Unternehmens, auf beiden Plattformen.</p></li><li class="service-feature"><h3 class="font-semibold">Ein Fingertipp entfernt</h3><p class="mt-1.5 leading-relaxed text-wesolve-green-700 dark:text-wesolve-green-200">Bestellungen, Termine oder Reservierungen direkt in der App.</p></li><li class="service-feature"><h3 class="font-semibold">Kundenbindung</h3><p class="mt-1.5 leading-relaxed text-wesolve-green-700 dark:text-wesolve-green-200">Treueprogramm, exklusive Angebote und Push-Nachrichten.</p></li><li class="service-feature"><h3 class="font-semibold">Alles aus einer Hand</h3><p class="mt-1.5 leading-relaxed text-wesolve-green-700 dark:text-wesolve-green-200">Konzept, Entwicklung, App-Store-Veröffentlichung und Updates.</p></li></ul>
+        <a href="/referenzen/fc-nuernberg" data-reveal class="ref-tile group mt-10">
+          <div class="hero-panel aspect-[16/9] overflow-hidden bg-wesolve-green-950 p-6"><img src="./assets/img/standing-ipad-mockup-1.png" alt="Business Seating App des 1. FC Nürnberg" loading="lazy" class="ref-shot h-full w-full rounded-xl object-cover"></div>
+          <div class="flex flex-col gap-1 p-6 sm:flex-row sm:items-end sm:justify-between sm:p-7"><div><p class="text-sm text-wesolve-green-600 dark:text-wesolve-green-300">Beispiel aus der Praxis</p><h3 class="mt-1 text-xl font-semibold tracking-[-0.02em]">1. FC Nürnberg</h3><p class="mt-1 text-wesolve-green-700 dark:text-wesolve-green-200">Business Seating App für den VIP-Bereich</p></div><span class="ref-more mt-4 inline-flex shrink-0 items-center gap-2 font-semibold text-wesolve-green-800 dark:text-wesolve-green-100 sm:mt-0">Projekt ansehen <svg class="h-4 w-4" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="seo" class="scroll-mt-24 px-4 py-20 sm:px-6 lg:py-28 " aria-labelledby="seo-title">
+    <div class="mx-auto grid max-w-screen-xl gap-12 lg:grid-cols-12 lg:gap-16">
+      <div class="lg:col-span-5">
+        <div class="lg:sticky lg:top-28">
+          <div class="flex items-center gap-3"><span class="grid h-11 w-11 place-items-center rounded-xl bg-wesolve-green-950 text-wesolve-accent-300 dark:bg-wesolve-green-800"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" stroke="currentColor" stroke-width="1.7"/><path d="m15.5 15.5 5 5M7.5 12.5l2-2 2 1 3-3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="font-semibold text-wesolve-green-700 dark:text-wesolve-green-200">SEO</span></div>
+          <h2 id="seo-title" class="mt-6 text-[clamp(1.9rem,3.4vw,2.9rem)] font-bold leading-[1.08] tracking-[-0.035em]">Gefunden werden, wenn Kunden nach dir suchen</h2>
+          <p class="mt-5 text-lg leading-relaxed text-wesolve-green-700 dark:text-wesolve-green-200">Die beste Webseite bringt nichts, wenn niemand sie findet. Wir sorgen dafür, dass du bei Google gut gefunden wirst – vor allem dort, wo deine Kunden sind: in deiner Region.</p>
+          <div class="mt-8 flex flex-col gap-3 sm:flex-row"><a href="/leistungen/suchmaschinenoptimierung" class="btn-primary">Mehr zu SEO <svg class="h-4 w-4" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a data-umami-event="cta-erstgespraech" href="/kontakt" class="btn-secondary">Erstgespräch</a></div>
+        </div>
+      </div>
+      <div class="lg:col-span-7">
+        <p class="rounded-xl border-l-2 border-wesolve-accent-400 bg-white px-5 py-4 leading-relaxed shadow-[0_12px_40px_-30px_rgba(8,28,22,0.5)] dark:bg-wesolve-green-900"><span class="font-semibold">Passt zu dir, wenn</span> es dein Unternehmen gibt – aber Google es nicht kennt.</p>
+        <ul data-reveal class="mt-8 grid gap-x-10 gap-y-8 sm:grid-cols-2"><li class="service-feature"><h3 class="font-semibold">Local SEO</h3><p class="mt-1.5 leading-relaxed text-wesolve-green-700 dark:text-wesolve-green-200">Gute Platzierungen bei Google und Google Maps in deiner Region.</p></li><li class="service-feature"><h3 class="font-semibold">Google-Unternehmensprofil</h3><p class="mt-1.5 leading-relaxed text-wesolve-green-700 dark:text-wesolve-green-200">Bewertungen, Bilder und Öffnungszeiten im Griff.</p></li><li class="service-feature"><h3 class="font-semibold">Technische Optimierung</h3><p class="mt-1.5 leading-relaxed text-wesolve-green-700 dark:text-wesolve-green-200">Ladezeit, Struktur und strukturierte Daten.</p></li><li class="service-feature"><h3 class="font-semibold">Verständliche Auswertung</h3><p class="mt-1.5 leading-relaxed text-wesolve-green-700 dark:text-wesolve-green-200">Du siehst schwarz auf weiß, was die Maßnahmen bringen.</p></li></ul>
+        <a href="/referenzen/lubu-restaurant" data-reveal class="ref-tile group mt-10">
+          <div class="hero-panel aspect-[16/9] overflow-hidden bg-wesolve-green-950 px-6 pt-6 sm:px-8 sm:pt-8"><div class="ref-shot flex h-full flex-col overflow-hidden rounded-t-xl bg-white shadow-[0_24px_60px_-30px_rgba(0,0,0,0.8)]"><div class="flex shrink-0 gap-1.5 border-b border-wesolve-green-100 px-3.5 py-2" aria-hidden="true"><span class="h-2 w-2 rounded-full bg-wesolve-green-200"></span><span class="h-2 w-2 rounded-full bg-wesolve-green-200"></span><span class="h-2 w-2 rounded-full bg-wesolve-green-200"></span></div><div class="min-h-0 flex-1 overflow-hidden"><img src="./assets/img/Bildschirmfoto-2024-04-30-um-14.56.41.png" alt="Webseite von LU-BU Asian Food" loading="lazy" class="h-full w-full object-cover object-top"></div></div></div>
+          <div class="flex flex-col gap-1 p-6 sm:flex-row sm:items-end sm:justify-between sm:p-7"><div><p class="text-sm text-wesolve-green-600 dark:text-wesolve-green-300">Beispiel aus der Praxis</p><h3 class="mt-1 text-xl font-semibold tracking-[-0.02em]">LU-BU Asian Food</h3><p class="mt-1 text-wesolve-green-700 dark:text-wesolve-green-200">Platz 1 bei Google für „Sushi Catering Nürnberg“</p></div><span class="ref-more mt-4 inline-flex shrink-0 items-center gap-2 font-semibold text-wesolve-green-800 dark:text-wesolve-green-100 sm:mt-0">Projekt ansehen <svg class="h-4 w-4" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="individual-software" class="scroll-mt-24 px-4 py-20 sm:px-6 lg:py-28 bg-wesolve-green-50 dark:bg-wesolve-green-900/60" aria-labelledby="individual-software-title">
+    <div class="mx-auto grid max-w-screen-xl gap-12 lg:grid-cols-12 lg:gap-16">
+      <div class="lg:col-span-5">
+        <div class="lg:sticky lg:top-28">
+          <div class="flex items-center gap-3"><span class="grid h-11 w-11 place-items-center rounded-xl bg-wesolve-green-950 text-wesolve-accent-300 dark:bg-wesolve-green-800"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8.5 8.5 5 12l3.5 3.5M15.5 8.5 19 12l-3.5 3.5M13.5 5l-3 14" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="font-semibold text-wesolve-green-700 dark:text-wesolve-green-200">Individualsoftware</span></div>
+          <h2 id="individual-software-title" class="mt-6 text-[clamp(1.9rem,3.4vw,2.9rem)] font-bold leading-[1.08] tracking-[-0.035em]">Schluss mit Zettelwirtschaft und Excel-Chaos</h2>
+          <p class="mt-5 text-lg leading-relaxed text-wesolve-green-700 dark:text-wesolve-green-200">Wenn keine Standardsoftware zu deinen Abläufen passt, bauen wir dir eine, die es tut. Maßgeschneidert für deinen Betrieb – und so einfach, dass dein Team sofort damit arbeiten kann.</p>
+          <div class="mt-8 flex flex-col gap-3 sm:flex-row"><a href="/leistungen/individual-software" class="btn-primary">Mehr zu Individualsoftware <svg class="h-4 w-4" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a data-umami-event="cta-erstgespraech" href="/kontakt" class="btn-secondary">Erstgespräch</a></div>
+        </div>
+      </div>
+      <div class="lg:col-span-7">
+        <p class="rounded-xl border-l-2 border-wesolve-accent-400 bg-white px-5 py-4 leading-relaxed shadow-[0_12px_40px_-30px_rgba(8,28,22,0.5)] dark:bg-wesolve-green-900"><span class="font-semibold">Passt zu dir, wenn</span> Abläufe in deinem Betrieb zu viel Zeit fressen – und keine fertige Software wirklich passt.</p>
+        <ul data-reveal class="mt-8 grid gap-x-10 gap-y-8 sm:grid-cols-2"><li class="service-feature"><h3 class="font-semibold">Für deinen Ablauf gebaut</h3><p class="mt-1.5 leading-relaxed text-wesolve-green-700 dark:text-wesolve-green-200">Vom Verleihsystem bis zur Buchungsverwaltung.</p></li><li class="service-feature"><h3 class="font-semibold">Automatisiert</h3><p class="mt-1.5 leading-relaxed text-wesolve-green-700 dark:text-wesolve-green-200">Rechnungen, Termine und Bestände erledigen sich nebenbei.</p></li><li class="service-feature"><h3 class="font-semibold">Wächst mit</h3><p class="mt-1.5 leading-relaxed text-wesolve-green-700 dark:text-wesolve-green-200">Neue Funktionen, wann immer du sie brauchst.</p></li><li class="service-feature"><h3 class="font-semibold">Ein Ansprechpartner</h3><p class="mt-1.5 leading-relaxed text-wesolve-green-700 dark:text-wesolve-green-200">Hosting, Wartung und Support aus derselben Hand.</p></li></ul>
+        <a href="/referenzen/sportweber-schnaittach" data-reveal class="ref-tile group mt-10">
+          <div class="hero-panel aspect-[16/9] overflow-hidden bg-wesolve-green-950 px-6 pt-6 sm:px-8 sm:pt-8"><div class="ref-shot flex h-full flex-col overflow-hidden rounded-t-xl bg-white shadow-[0_24px_60px_-30px_rgba(0,0,0,0.8)]"><div class="flex shrink-0 gap-1.5 border-b border-wesolve-green-100 px-3.5 py-2" aria-hidden="true"><span class="h-2 w-2 rounded-full bg-wesolve-green-200"></span><span class="h-2 w-2 rounded-full bg-wesolve-green-200"></span><span class="h-2 w-2 rounded-full bg-wesolve-green-200"></span></div><div class="min-h-0 flex-1 overflow-hidden"><img src="./assets/img/Bildschirmfoto-2024-04-30-um-15.05.05.png" alt="Verleihsoftware von Sport-Weber Schnaittach" loading="lazy" class="h-full w-full object-cover object-top"></div></div></div>
+          <div class="flex flex-col gap-1 p-6 sm:flex-row sm:items-end sm:justify-between sm:p-7"><div><p class="text-sm text-wesolve-green-600 dark:text-wesolve-green-300">Beispiel aus der Praxis</p><h3 class="mt-1 text-xl font-semibold tracking-[-0.02em]">Sport-Weber Verleih</h3><p class="mt-1 text-wesolve-green-700 dark:text-wesolve-green-200">Verleihsystem mit automatischer Rechnungserstellung</p></div><span class="ref-more mt-4 inline-flex shrink-0 items-center gap-2 font-semibold text-wesolve-green-800 dark:text-wesolve-green-100 sm:mt-0">Projekt ansehen <svg class="h-4 w-4" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-wesolve-green-950 px-4 py-24 text-white sm:px-6 lg:py-32" aria-labelledby="process-title">
+    <div class="mx-auto max-w-screen-xl">
+      <div class="max-w-3xl"><p class="text-sm font-semibold uppercase tracking-[0.16em] text-wesolve-accent-300">Zusammenarbeit</p><h2 id="process-title" class="section-title">Egal welche Leistung: so läuft’s ab.</h2><p class="mt-6 max-w-2xl text-lg leading-relaxed text-wesolve-green-200">Du sprichst mit den Menschen, die dein Projekt konzipieren und umsetzen. Jeder Schritt ist klar, jede Entscheidung nachvollziehbar.</p></div>
+      <ol data-reveal class="timeline" aria-label="Projektablauf">
+        <li class="timeline-step"><span class="timeline-node">01</span><div class="timeline-content"><p class="text-xs font-semibold uppercase tracking-[0.14em] text-wesolve-green-400">Start</p><h3 class="mt-3 text-xl font-semibold">Kennenlernen</h3><p class="mt-3 leading-relaxed text-wesolve-green-200">Wir klären Ziele, Rahmen und die wichtigste Aufgabe des Projekts.</p></div></li>
+        <li class="timeline-step"><span class="timeline-node">02</span><div class="timeline-content"><p class="text-xs font-semibold uppercase tracking-[0.14em] text-wesolve-green-400">Plan</p><h3 class="mt-3 text-xl font-semibold">Klarer Vorschlag</h3><p class="mt-3 leading-relaxed text-wesolve-green-200">Du erhältst Leistungsumfang, Zeitplan und Kosten verständlich aufbereitet.</p></div></li>
+        <li class="timeline-step"><span class="timeline-node">03</span><div class="timeline-content"><p class="text-xs font-semibold uppercase tracking-[0.14em] text-wesolve-green-400">Umsetzung</p><h3 class="mt-3 text-xl font-semibold">Entwicklung &amp; Betreuung</h3><p class="mt-3 leading-relaxed text-wesolve-green-200">Wir entwickeln iterativ und bleiben auch nach dem Start erreichbar.</p></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="border-b border-wesolve-green-200 bg-wesolve-green-100 px-4 py-20 dark:border-wesolve-green-800 dark:bg-wesolve-green-900 sm:px-6 lg:py-24" aria-labelledby="contact-title">
+    <div class="mx-auto flex max-w-screen-xl flex-col gap-10 lg:flex-row lg:items-end lg:justify-between"><div><p class="eyebrow">Nächster Schritt</p><h2 id="contact-title" class="section-title max-w-3xl">Nicht sicher, welche Lösung zu dir passt?</h2><p class="mt-5 max-w-2xl text-lg leading-relaxed text-wesolve-green-700 dark:text-wesolve-green-200">Wir beraten dich unverbindlich und finden gemeinsam heraus, was dein Unternehmen wirklich braucht – ehrlich und auf Augenhöhe.</p></div><div class="flex flex-col gap-3 sm:flex-row lg:flex-col xl:flex-row"><a data-umami-event="cta-erstgespraech" href="/kontakt" class="btn-primary">Erstgespräch vereinbaren <svg class="h-4 w-4" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a data-umami-event="cta-quick-check" href="/quick-check" class="btn-secondary">Zum kostenlosen Quick-Check</a></div></div>
+  </section>
+</main>
+<div id="footer-placeholder"></div>
 <script>
-  AOS.init();
+  // Inhalte einmalig einblenden, sobald sie ins Bild scrollen
+  if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.documentElement.classList.add('js-reveal');
+    const io = new IntersectionObserver(entries => entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); }
+    }), { threshold: 0.15, rootMargin: '0px 0px -8% 0px' });
+    document.querySelectorAll('[data-reveal]').forEach(el => io.observe(el));
+  }
 </script>
 </body>
 </html>

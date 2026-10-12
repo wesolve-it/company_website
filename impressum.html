@@ -11,15 +11,28 @@
   <link rel="icon" type="image/x-icon" href="./assets/img/Wesolveit_loigo.svg" />
   <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
   <script src="./js/navigation.js" defer></script>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Montserrat:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
 </head>
-<body class="bg-white text-neutral-900 dark:bg-neutral-950 dark:text-neutral-100">
-  <div class="mx-auto max-w-screen-md px-6 pb-24 pt-32 leading-relaxed text-neutral-700 dark:text-neutral-300">
-    <span class="inline-flex items-center rounded-full bg-lime-100 px-4 py-1.5 font-display text-xs font-bold uppercase tracking-wide text-lime-800 dark:bg-lime-950 dark:text-lime-300">Rechtliches</span>
-    <h1 class="mb-8 mt-4 font-display text-4xl font-bold tracking-tight text-neutral-900 dark:text-white">Impressum</h1>
+<body data-hero="dark" class="overflow-x-hidden bg-white font-text text-wesolve-green-950 antialiased dark:bg-wesolve-green-950 dark:text-wesolve-green-50">
+<main>
+  <section class="hero-panel relative bg-wesolve-green-950 px-4 pb-14 pt-28 text-white sm:px-6 lg:pb-20 lg:pt-36" aria-labelledby="legal-title">
+    <div class="mx-auto max-w-screen-xl">
+      <p class="hero-in text-sm font-semibold uppercase tracking-[0.18em] text-wesolve-accent-300" style="--d:0">Rechtliches</p>
+      <h1 id="legal-title" style="--d:1" class="hero-in mt-6 font-text text-[clamp(2.5rem,5vw,4.25rem)] font-bold leading-[1] tracking-[-0.05em]">Impressum</h1>
+      <p style="--d:2" class="hero-in mt-6 max-w-xl text-lg leading-relaxed text-wesolve-green-100">Angaben zum Anbieter dieser Website und wie du uns erreichst.</p>
+    </div>
+  </section>
 
-    <section class="mb-8">
-      <h2 class="mb-2 font-display text-xl font-semibold text-neutral-900 dark:text-white">Angaben gemäß §5 TMG</h2>
+  <section class="px-4 py-16 sm:px-6 lg:py-24">
+    <div class="mx-auto grid max-w-screen-xl gap-12 lg:grid-cols-12 lg:gap-16">
+      
+      <article class="legal lg:col-span-8 lg:col-start-3">
+    
+    
+
+    <section>
+      <h2 id="angaben-gemaess-5-tmg">Angaben gemäß §5 TMG</h2>
       <p>Michael Reinert</p>
       <p>Webentwicklung & App-Entwicklung</p>
       <p>Hardware Tätigkeiten</p>
@@ -28,24 +41,24 @@
       <p>91220 Schnaittach</p>
     </section>
 
-    <section class="mb-8">
-      <h2 class="mb-2 font-display text-xl font-semibold text-neutral-900 dark:text-white">Kontakt</h2>
-      <p>Telefon: <a href="tel:+4915202721146" class="font-medium text-lime-700 dark:text-lime-400 underline decoration-lime-400 decoration-2 underline-offset-2 hover:text-lime-600">+49 (0) 152 02721146</a></p>
-      <p>Telefax: <a href="tel:+4915202721146" class="font-medium text-lime-700 dark:text-lime-400 underline decoration-lime-400 decoration-2 underline-offset-2 hover:text-lime-600">+49 (0) 152 02721146</a></p>
-      <p>E-Mail: <a href="mailto:info@wesolve-it.com" class="font-medium text-lime-700 dark:text-lime-400 underline decoration-lime-400 decoration-2 underline-offset-2 hover:text-lime-600">info@wesolve-it.com</a></p>
+    <section>
+      <h2 id="kontakt">Kontakt</h2>
+      <p>Telefon: <a href="tel:+4915202721146">+49 (0) 152 02721146</a></p>
+      <p>Telefax: <a href="tel:+4915202721146">+49 (0) 152 02721146</a></p>
+      <p>E-Mail: <a href="mailto:info@wesolve-it.com">info@wesolve-it.com</a></p>
     </section>
 
-    <section class="mb-8">
-      <h2 class="mb-2 font-display text-xl font-semibold text-neutral-900 dark:text-white">Umsatzsteuer-ID</h2>
+    <section>
+      <h2 id="umsatzsteuer-id">Umsatzsteuer-ID</h2>
       <p>Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:</p>
       <p>221/261/41320</p>
     </section>
 
-    <section class="mb-8">
-      <h2 class="mb-2 font-display text-xl font-semibold text-neutral-900 dark:text-white">EU-Streitschlichtung</h2>
+    <section>
+      <h2 id="eu-streitschlichtung">EU-Streitschlichtung</h2>
       <p>
         Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit:
-        <a href="https://ec.europa.eu/consumers/odr/" target="_blank" class="font-medium text-lime-700 dark:text-lime-400 underline decoration-lime-400 decoration-2 underline-offset-2 hover:text-lime-600">
+        <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener">
           https://ec.europa.eu/consumers/odr/
         </a>.
       </p>
@@ -53,15 +66,18 @@
     </section>
 
     <section>
-      <h2 class="mb-2 font-display text-xl font-semibold text-neutral-900 dark:text-white">Verbraucherstreitbeteiligung/Universalschlichtungsstelle</h2>
+      <h2 id="verbraucherstreitbeteiligung-universalschlichtungsstelle">Verbraucherstreitbeteiligung/Universalschlichtungsstelle</h2>
       <p>
         Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
       </p>
     </section>
 
-    <p class="mt-10 text-sm text-neutral-500 dark:text-neutral-400">Quelle: <a href="https://www.e-recht24.de/impressum-generator.html" target="_blank" class="font-medium text-lime-700 dark:text-lime-400 underline decoration-lime-400 decoration-2 underline-offset-2 hover:text-lime-600">e-recht24.de</a></p>
-  </div>
-
-  <div id="footer-placeholder"></div>
+    <p>Quelle: <a href="https://www.e-recht24.de/impressum-generator.html" target="_blank" rel="noopener">e-recht24.de</a></p>
+  
+      </article>
+    </div>
+  </section>
+</main>
+<div id="footer-placeholder"></div>
 </body>
 </html>

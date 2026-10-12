@@ -18,7 +18,7 @@ There is no lint or test setup (`npm test` is a stub).
 
 ## Architecture
 
-- **Pages**: top-level HTML files (`index.html`, `kontakt.html`, `leistungen.html`, `referenzen.html`, `impressum.html`, `datenschutz.html`, `agbs.html`, `thank-you.html`) plus detail pages in `leistungen/` (services) and `referenzen/` (client references). All content is in German.
+- **Pages**: top-level HTML files (`index.html`, `kontakt.html`, `leistungen.html`, `referenzen.html`, `impressum.html`, `datenschutz.html`, `thank-you.html`) plus detail pages in `leistungen/` (services) and `referenzen/` (client references). All content is in German.
 - **Shared navigation/footer**: `navigation.html` and `footer.html` are partials fetched at runtime by `js/navigation.js`, which prepends the nav to `<body>` and injects the footer into `#footer-placeholder`. Every page must include `js/navigation.js` and a `<div id="footer-placeholder">`. Changes to nav/footer only need to be made in the two partial files.
 - **Styling**: `css/tailwind.css` is the Tailwind entry point (also holds custom `data-aos="safe-fade-left/right"` animation classes). It compiles to `dist/styles.css`, which every page links. The compiled `dist/styles.css` is committed. After editing HTML classes or `css/tailwind.css`, rebuild (or have `npm run watch` running) so `dist/styles.css` stays current.
 - **Tailwind config**: `tailwind.config.js` defines the brand palette (`wesolve-green` with 700 as primary, `wesolve-gray`, `wesolve-accent` amber for CTAs, `wesolve-accent-coral` with 500 as primary) and fonts (`font-heading` = Barlow Condensed, `font-body` = Montserrat). Use these tokens instead of raw colors.

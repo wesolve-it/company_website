@@ -78,3 +78,221 @@ button svg[x-show="open"] {
     animation: none !important;
   }
 }
+
+/* ---------- Startseite ---------- */
+@layer components {
+  .btn-primary {
+    @apply inline-flex min-h-12 items-center justify-center gap-2 whitespace-nowrap rounded-lg bg-wesolve-accent-400 px-6 py-3 text-base font-semibold text-wesolve-green-950 transition-colors duration-200 hover:bg-wesolve-accent-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-wesolve-accent-300;
+  }
+  .btn-secondary {
+    @apply inline-flex min-h-12 items-center justify-center gap-2 whitespace-nowrap rounded-lg border border-wesolve-green-200 bg-white px-6 py-3 text-base font-semibold text-wesolve-green-900 transition-colors duration-200 hover:border-wesolve-green-400 hover:bg-wesolve-green-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-wesolve-green-500 dark:border-wesolve-green-700 dark:bg-wesolve-green-900 dark:text-white dark:hover:bg-wesolve-green-800;
+  }
+  .btn-secondary-dark {
+    @apply inline-flex min-h-12 items-center justify-center gap-2 whitespace-nowrap rounded-lg border border-white/25 px-6 py-3 text-base font-semibold text-white transition-colors duration-200 hover:border-white/60 hover:bg-white/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-wesolve-accent-300;
+  }
+  .eyebrow {
+    @apply text-sm font-semibold uppercase tracking-[0.16em] text-wesolve-green-600 dark:text-wesolve-green-300;
+  }
+  .section-title {
+    @apply mt-4 text-[clamp(2rem,4vw,3.5rem)] font-bold leading-[1.08] tracking-[-0.035em];
+  }
+  .service-card {
+    @apply relative flex min-h-80 flex-col overflow-hidden rounded-2xl border border-wesolve-green-200 bg-white p-7 transition-[border-color,box-shadow,transform] duration-300 hover:-translate-y-1 hover:border-wesolve-green-400 hover:shadow-[0_24px_70px_-36px_rgba(8,28,22,0.45)] dark:border-wesolve-green-800 dark:bg-wesolve-green-900 dark:hover:border-wesolve-green-500 sm:p-8;
+  }
+  .case-card {
+    @apply relative overflow-hidden rounded-2xl bg-wesolve-green-950 shadow-[0_24px_70px_-40px_rgba(8,28,22,0.65)] transition-[box-shadow,transform] duration-500 hover:-translate-y-2 hover:shadow-[0_34px_90px_-42px_rgba(8,28,22,0.75)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-wesolve-green-500;
+  }
+  .case-image {
+    @apply h-full w-full object-cover object-top transition-transform duration-700;
+  }
+  .ref-card {
+    @apply grid overflow-hidden rounded-2xl border border-wesolve-green-200 bg-white transition-[border-color,box-shadow] duration-300 hover:border-wesolve-green-400 hover:shadow-[0_30px_80px_-40px_rgba(8,28,22,0.5)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-wesolve-green-500 dark:border-wesolve-green-800 dark:bg-wesolve-green-900 dark:hover:border-wesolve-green-500 lg:grid-cols-2;
+  }
+  .filter-pill {
+    @apply min-h-10 shrink-0 whitespace-nowrap rounded-lg px-4 py-2 text-sm font-semibold transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-wesolve-green-500;
+  }
+  .ref-feature {
+    @apply grid overflow-hidden rounded-2xl border border-wesolve-green-200 bg-white transition-[border-color,box-shadow] duration-300 hover:border-wesolve-green-400 hover:shadow-[0_30px_80px_-40px_rgba(8,28,22,0.5)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-wesolve-green-500 dark:border-wesolve-green-800 dark:bg-wesolve-green-900 dark:hover:border-wesolve-green-500 lg:grid-cols-12;
+  }
+  .ref-tile {
+    @apply flex flex-col overflow-hidden rounded-2xl border border-wesolve-green-200 bg-white transition-[border-color,box-shadow] duration-300 hover:border-wesolve-green-400 hover:shadow-[0_30px_80px_-40px_rgba(8,28,22,0.5)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-wesolve-green-500 dark:border-wesolve-green-800 dark:bg-wesolve-green-900 dark:hover:border-wesolve-green-500;
+  }
+  .guide-link {
+    @apply flex h-full flex-col justify-between rounded-xl border border-white/15 bg-white/[0.03] p-5 leading-snug transition-colors duration-200 hover:border-wesolve-accent-300/70 hover:bg-white/[0.07] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-wesolve-accent-300;
+  }
+  .service-feature {
+    @apply border-t-2 border-wesolve-green-200 pt-4 dark:border-wesolve-green-700;
+  }
+  .feature-item {
+    @apply bg-white p-7 dark:bg-wesolve-green-950 sm:p-8;
+  }
+  .contact-channel {
+    @apply grid grid-cols-[auto_1fr_auto] items-center gap-4 rounded-xl border border-white/15 bg-white/[0.03] p-4 transition-colors duration-200 hover:border-wesolve-accent-300/70 hover:bg-white/[0.07] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-wesolve-accent-300;
+  }
+  .form-label {
+    @apply mb-2 block text-sm font-semibold;
+  }
+  .form-input {
+    @apply block w-full rounded-lg border border-wesolve-green-200 bg-white px-4 py-3 text-base text-wesolve-green-950 transition-[border-color,box-shadow] duration-200 placeholder:text-wesolve-green-400 hover:border-wesolve-green-400 focus:border-wesolve-green-600 focus:outline-none focus:ring-4 focus:ring-wesolve-accent-200/60 dark:border-wesolve-green-700 dark:bg-wesolve-green-950 dark:text-white dark:focus:border-wesolve-accent-400 dark:focus:ring-wesolve-accent-400/20;
+  }
+  .tag {
+    @apply inline-flex rounded-md bg-wesolve-green-100 px-2.5 py-1 text-xs font-semibold text-wesolve-green-800 dark:bg-wesolve-green-800 dark:text-wesolve-green-100;
+  }
+}
+
+.service-card::after {
+  content: '';
+  @apply pointer-events-none absolute -bottom-20 -right-20 h-52 w-52 rounded-full bg-wesolve-accent-200/40 blur-3xl transition-transform duration-500;
+}
+.service-card > * { position: relative; z-index: 1; }
+.service-card:hover::after { transform: translate(-12px, -12px) scale(1.12); }
+.case-card:hover .case-image { transform: scale(1.035); }
+.case-overlay {
+  background: linear-gradient(to top, rgba(8, 28, 22, 0.98) 0%, rgba(8, 28, 22, 0.72) 43%, transparent 78%);
+}
+
+.timeline {
+  @apply relative mt-16 grid gap-10 md:grid-cols-3 md:gap-8;
+}
+.timeline::before {
+  content: '';
+  @apply absolute left-4 top-4 h-[calc(100%-2rem)] w-px bg-white/20 md:left-[16.666%] md:right-[16.666%] md:top-4 md:h-px md:w-auto;
+}
+.timeline-step {
+  @apply relative grid grid-cols-[2rem_1fr] gap-5 md:block;
+}
+.timeline-node {
+  @apply relative z-10 grid h-8 w-8 place-items-center rounded-full border border-wesolve-accent-300 bg-wesolve-green-950 font-mono text-[11px] font-semibold text-wesolve-accent-300 md:mx-auto;
+}
+.timeline-content {
+  @apply pb-3 md:mt-8 md:border-t md:border-white/10 md:px-5 md:pt-7 md:text-center;
+}
+
+.hero-panel {
+  background-image:
+    linear-gradient(rgba(120, 170, 146, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(120, 170, 146, 0.08) 1px, transparent 1px),
+    radial-gradient(circle at 82% 28%, rgba(54, 201, 154, 0.14), transparent 32%);
+  background-size: 64px 64px, 64px 64px, auto;
+}
+
+.nav-dark .nav-link { color: #fff !important; }
+.nav-dark .nav-logo { filter: brightness(0) invert(1); }
+.nav-dark .nav-toggle { color: #fff !important; border-color: rgba(255, 255, 255, 0.25) !important; }
+.nav-dark .nav-burger { background-color: #fff !important; }
+.nav-dark .nav-cta { background-color: #36c99a !important; color: #081c16 !important; }
+
+/* ---------- Animationen Startseite ---------- */
+/* 1. Hero: einmalige, gestaffelte Ladesequenz */
+@keyframes hero-in { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
+@keyframes hero-art-in { from { opacity: 0; transform: translateY(24px) scale(.97); } to { opacity: 1; transform: none; } }
+@keyframes hero-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+.hero-in { animation: hero-in .8s cubic-bezier(.2,.7,.2,1) both; animation-delay: calc(var(--d, 0) * 110ms + 100ms); }
+.hero-art { animation-name: hero-art-in; animation-duration: 1.1s; }
+.hero-float { animation: hero-float 7s ease-in-out 1.4s infinite; }
+
+/* 2. Karten & Zeitleiste: einmal beim Scrollen einblenden */
+.js-reveal [data-reveal]:not(.timeline) { opacity: 0; transform: translateY(28px); transition: opacity .7s ease, transform .8s cubic-bezier(.2,.7,.2,1), box-shadow .5s, border-color .3s; }
+.js-reveal [data-reveal].is-visible:not(.timeline) { opacity: 1; transform: none; }
+.js-reveal [data-reveal].is-visible:not(.timeline):hover { transform: translateY(-6px); }
+/* Paare in derselben Reihe leicht versetzen */
+.js-reveal [data-reveal]:nth-child(even) { transition-delay: .12s, .12s, 0s, 0s; }
+
+/* Zeitleiste: Linie zeichnet sich, Punkte leuchten nacheinander auf */
+.js-reveal .timeline::before { transform: scaleY(0); transform-origin: top; transition: transform 1.3s cubic-bezier(.6,0,.3,1); }
+@media (min-width: 768px) { .js-reveal .timeline::before { transform: scaleX(0); transform-origin: left; } }
+.js-reveal .timeline.is-visible::before { transform: none; }
+.js-reveal .timeline .timeline-node { opacity: .25; transform: scale(.6); transition: opacity .4s ease, transform .5s cubic-bezier(.3,1.6,.5,1), box-shadow .6s ease; }
+.js-reveal .timeline .timeline-content { opacity: 0; transform: translateY(12px); transition: opacity .6s ease, transform .6s ease; }
+.js-reveal .timeline.is-visible .timeline-node { opacity: 1; transform: none; box-shadow: 0 0 0 6px rgba(54, 201, 154, .15); }
+.js-reveal .timeline.is-visible .timeline-content { opacity: 1; transform: none; }
+.js-reveal .timeline.is-visible .timeline-step:nth-child(2) > * { transition-delay: .45s; }
+.js-reveal .timeline.is-visible .timeline-step:nth-child(3) > * { transition-delay: .9s; }
+
+/* 3. Hover-Details */
+.btn-primary svg { transition: transform .25s ease; }
+.btn-primary:hover svg { transform: translateX(4px); }
+.service-card > span:last-child { transition: transform .25s ease, color .2s; }
+.service-card:hover > span:last-child { transform: translateX(4px); }
+.service-card .rounded-xl { transition: transform .4s cubic-bezier(.3,1.6,.5,1); }
+.service-card:hover .rounded-xl { transform: rotate(-8deg) scale(1.08); }
+
+/* Navigation: Unterstrich wächst von links (hell: Grün, dunkel/Hero: Mint) */
+.nav-underline { position: relative; }
+.nav-underline::after { content: ''; position: absolute; left: 0; right: 0; bottom: -6px; height: 2px; border-radius: 2px; background: theme('colors.wesolve-green.600'); transform: scaleX(0); transform-origin: left; transition: transform .3s cubic-bezier(.6,0,.3,1); }
+.nav-underline:hover::after, .nav-underline:focus-visible::after { transform: scaleX(1); }
+.dark .nav-underline::after, .nav-dark .nav-underline::after { background: theme('colors.wesolve-accent.400'); }
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-in, .hero-art, .hero-float { animation: none !important; }
+  .service-card .rounded-xl, .nav-underline::after { transition: none !important; }
+}
+
+/* Referenzen: Screenshot hebt sich, Pfeil rückt nach */
+.ref-shot { transition: transform .6s cubic-bezier(.2,.7,.2,1); }
+.ref-feature:hover .ref-shot, .ref-tile:hover .ref-shot { transform: translateY(-8px) scale(1.015); }
+.ref-more svg { transition: transform .25s ease; }
+.ref-feature:hover .ref-more svg, .ref-tile:hover .ref-more svg { transform: translateX(4px); }
+/* Ergebnis-Band: Zahlen erscheinen nacheinander */
+.js-reveal .stats.is-visible > div { animation: hero-in .7s cubic-bezier(.2,.7,.2,1) both; }
+.js-reveal .stats > div { opacity: 0; }
+.js-reveal .stats.is-visible > div:nth-child(2) { animation-delay: .15s; }
+.js-reveal .stats.is-visible > div:nth-child(3) { animation-delay: .3s; }
+.js-reveal [data-reveal].stats { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) { .ref-shot, .ref-more svg { transition: none !important; } }
+
+.guide-link svg { transition: transform .25s ease; }
+.guide-link:hover svg { transform: translateY(3px) rotate(90deg); }
+
+/* Referenz-Detail: Schritte der Geschichte nacheinander einblenden */
+.js-reveal [data-reveal].case-story { opacity: 1; transform: none; }
+.js-reveal .case-story .case-step { opacity: 0; transform: translateY(16px); transition: opacity .6s ease, transform .7s cubic-bezier(.2,.7,.2,1); }
+.js-reveal .case-story.is-visible .case-step { opacity: 1; transform: none; }
+.js-reveal .case-story.is-visible .case-step:nth-child(2) { transition-delay: .15s; }
+.js-reveal .case-story.is-visible .case-step:nth-child(3) { transition-delay: .3s; }
+.back-link svg { transition: transform .25s ease; }
+.back-link:hover svg { transform: rotate(180deg) translateX(3px); }
+
+.js-reveal [data-reveal].feature-grid { opacity: 1; transform: none; }
+.js-reveal .feature-grid .feature-item { opacity: 0; transition: opacity .6s ease; }
+.js-reveal .feature-grid.is-visible .feature-item { opacity: 1; }
+.js-reveal .feature-grid.is-visible .feature-item:nth-child(2) { transition-delay: .08s; }
+.js-reveal .feature-grid.is-visible .feature-item:nth-child(3) { transition-delay: .16s; }
+.js-reveal .feature-grid.is-visible .feature-item:nth-child(4) { transition-delay: .24s; }
+.js-reveal .feature-grid.is-visible .feature-item:nth-child(5) { transition-delay: .32s; }
+.js-reveal .feature-grid.is-visible .feature-item:nth-child(6) { transition-delay: .4s; }
+
+.contact-channel > svg { color: theme('colors.wesolve-green.300'); transition: transform .25s ease, color .2s; }
+.contact-channel:hover > svg { transform: translateX(4px); color: theme('colors.wesolve-accent.300'); }
+
+/* Zeitleiste mit vier Schritten */
+@media (min-width: 768px) {
+  .timeline-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .timeline-4::before { left: 12.5%; right: 12.5%; }
+}
+/* FAQ: Plus dreht sich zum Kreuz */
+.faq-icon svg { transition: transform .3s cubic-bezier(.3,1.4,.5,1); }
+.faq-icon.is-open svg { transform: rotate(45deg); }
+.faq-btn:focus-visible { outline: 2px solid theme('colors.wesolve-green.500'); outline-offset: 4px; border-radius: 4px; }
+
+/* Rechtliche Seiten: ruhige Lesetypografie ohne Klassen im Fließtext */
+.legal { @apply max-w-[68ch] leading-relaxed text-wesolve-green-800 dark:text-wesolve-green-100; }
+.legal section + section { @apply mt-12 border-t border-wesolve-green-200 pt-12 dark:border-wesolve-green-800; }
+.legal h2 { @apply scroll-mt-28 text-2xl font-semibold tracking-[-0.025em] text-wesolve-green-950 dark:text-white; }
+.legal h3 { @apply mt-8 text-lg font-semibold text-wesolve-green-950 dark:text-white; }
+.legal h4 { @apply mt-6 font-semibold text-wesolve-green-950 dark:text-white; }
+.legal h2 + *, .legal h3 + *, .legal h4 + * { @apply mt-3; }
+.legal p + p { @apply mt-3; }
+.legal p { @apply mb-0; }
+.legal ul { @apply mt-3 list-disc space-y-1 pl-5; }
+.legal a { @apply break-words font-medium text-wesolve-green-700 underline decoration-wesolve-accent-400 decoration-2 underline-offset-2 hover:text-wesolve-green-900 dark:text-wesolve-accent-300 dark:hover:text-white; }
+.legal > p:last-child { @apply mt-12 text-sm text-wesolve-green-600 dark:text-wesolve-green-300; }
+.toc-link { @apply -ml-px block border-l-2 border-transparent py-1.5 pl-4 text-wesolve-green-700 transition-colors hover:border-wesolve-accent-400 hover:text-wesolve-green-950 dark:text-wesolve-green-200 dark:hover:text-white; }
+
+/* Danke-Seite: Haken zeichnet sich einmal */
+.success-ring { stroke-dasharray: 227; stroke-dashoffset: 227; animation: draw .7s cubic-bezier(.6,0,.3,1) .15s forwards; }
+.success-tick { stroke-dasharray: 50; stroke-dashoffset: 50; animation: draw .45s cubic-bezier(.6,0,.3,1) .75s forwards; }
+@keyframes draw { to { stroke-dashoffset: 0; } }
+@media (prefers-reduced-motion: reduce) { .success-ring, .success-tick { animation: none; stroke-dashoffset: 0; } }
+
+.guide-link.is-page:hover svg { transform: translateX(4px); }
