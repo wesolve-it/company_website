@@ -18,13 +18,12 @@
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="description" content="Maßgeschneiderte Apps für iOS und Android – von der Idee bis zum App Store. Für kleine Unternehmen, die ihre Kunden direkt erreichen wollen.">
+  <link rel="preload" href="/assets/fonts/onest-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link href="../dist/styles.css" rel="stylesheet">
   <script src="/js/theme.js"></script>
   <link rel="icon" type="image/x-icon" href="../assets/img/Wesolveit_loigo.svg" />
-  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.8/dist/cdn.min.js" defer></script>
+  <script defer src="/js/vendor/alpine-3.14.8.min.js"></script>
   <script src="/js/navigation.js" defer></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Was kostet eine App?", "acceptedAnswer": {"@type": "Answer", "text": "Das hängt vom Funktionsumfang ab. Eine schlanke erste Version ist oft günstiger, als viele denken – und ein guter Weg, die Idee am Markt zu testen. Nach dem Erstgespräch bekommst du ein Festpreis-Angebot."}}, {"@type": "Question", "name": "Wie lange dauert die Entwicklung?", "acceptedAnswer": {"@type": "Answer", "text": "Eine erste Version ist je nach Umfang oft in zwei bis drei Monaten im App Store. Danach entwickeln wir in Etappen weiter – so ist deine App früh im Einsatz und wächst mit dem Feedback deiner Kunden."}}, {"@type": "Question", "name": "Brauche ich getrennte Apps für iPhone und Android?", "acceptedAnswer": {"@type": "Answer", "text": "Nein. Wir entwickeln deine App einmal, und sie läuft auf beiden Plattformen. Das spart deutlich Kosten gegenüber zwei getrennten Entwicklungen."}}, {"@type": "Question", "name": "Übernehmt ihr die Veröffentlichung im App Store?", "acceptedAnswer": {"@type": "Answer", "text": "Ja, komplett – inklusive der Freigabeprozesse bei Apple und Google. Du musst dich um nichts kümmern."}}, {"@type": "Question", "name": "Lohnt sich eine App für ein kleines Unternehmen überhaupt?", "acceptedAnswer": {"@type": "Answer", "text": "Wenn deine Kunden regelmäßig bei dir kaufen, buchen oder bestellen: sehr wahrscheinlich ja. Wenn nicht, sagen wir dir das ehrlich – mach am besten den kostenlosen Quick-Check, dann bekommst du in 48 Stunden unsere Einschätzung."}}]}</script>
 </head>
 <body data-hero="dark" class="overflow-x-hidden bg-white font-text text-wesolve-green-950 antialiased dark:bg-wesolve-green-950 dark:text-wesolve-green-50">
@@ -35,13 +34,13 @@
       <a href="/leistungen" class="hero-in back-link inline-flex items-center gap-2 text-sm font-semibold text-wesolve-green-200 hover:text-white" style="--d:0"><svg class="h-4 w-4 rotate-180" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Alle Leistungen</a>
       <div class="mt-10 grid items-center gap-12 lg:grid-cols-12 lg:gap-10">
         <div class="lg:col-span-6">
-          <p class="hero-in text-sm font-semibold uppercase tracking-[0.18em] text-wesolve-accent-300" style="--d:1">App-Entwicklung</p>
+          <p class="hero-in text-base font-semibold text-wesolve-accent-300" style="--d:1">App-Entwicklung</p>
           <h1 id="page-title" style="--d:1" class="hero-in mt-6 font-text text-[clamp(2.5rem,5.2vw,4.5rem)] font-bold leading-[1] tracking-[-0.05em]">Der direkte Draht zu deinen Kunden.</h1>
           <p style="--d:2" class="hero-in mt-7 max-w-xl text-lg leading-relaxed text-wesolve-green-100">Eine eigene App bringt dich direkt auf das Smartphone deiner Kunden – für Bestellungen, Termine, Treueprogramme und mehr. Wir begleiten dich von der ersten Idee bis zur Veröffentlichung im App Store und darüber hinaus.</p>
           <div style="--d:3" class="hero-in mt-9 flex flex-col gap-3 sm:flex-row"><a data-umami-event="cta-erstgespraech" href="/kontakt" class="btn-primary">Kostenloses Erstgespräch <svg class="h-4 w-4" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="/referenzen" class="btn-secondary-dark">Unsere Referenzen</a></div>
         </div>
         <figure style="--d:3" class="hero-in lg:col-span-6">
-          <img src="../assets/img/standing-ipad-mockup-1.webp" alt="Business Seating App des 1. FC Nürnberg auf einem iPad" class="w-full rounded-2xl object-cover" fetchpriority="high">
+          <img width="1600" height="1200" src="../assets/img/standing-ipad-mockup-1.webp" alt="Business Seating App des 1. FC Nürnberg auf einem iPad" class="w-full rounded-2xl object-cover" fetchpriority="high">
           <figcaption class="mt-4 text-sm text-wesolve-green-300">Beispiel: 1. FC Nürnberg</figcaption>
         </figure>
       </div>
@@ -95,7 +94,7 @@
         <figcaption class="mt-8"><span class="block font-semibold">Henrik Brüggen</span><span class="mt-1 block text-sm text-wesolve-green-600 dark:text-wesolve-green-300">Vermarktung/Marketing 1. FC Nürnberg</span></figcaption>
       </figure>
       <a href="/referenzen/fc-nuernberg" data-reveal class="ref-tile group lg:col-span-5">
-        <div class="hero-panel aspect-[16/10] overflow-hidden bg-wesolve-green-950 p-6"><img src="../assets/img/standing-ipad-mockup-1.webp" alt="" loading="lazy" class="ref-shot h-full w-full rounded-xl object-cover"></div>
+        <div class="hero-panel aspect-[16/10] overflow-hidden bg-wesolve-green-950 p-6"><img width="1600" height="1200" src="../assets/img/standing-ipad-mockup-1.webp" alt="" loading="lazy" class="ref-shot h-full w-full rounded-xl object-cover"></div>
         <div class="p-6 sm:p-7"><h3 class="text-xl font-semibold tracking-[-0.02em]">1. FC Nürnberg</h3><p class="mt-2 leading-relaxed text-wesolve-green-700 dark:text-wesolve-green-200">Business Seating App für den VIP-Bereich – für einen reibungslosen Ablauf am Spieltag.</p><span class="ref-more mt-5 inline-flex items-center gap-2 font-semibold text-wesolve-green-800 dark:text-wesolve-green-100">Projekt ansehen <svg class="h-4 w-4" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
       </a>
     </div>
@@ -113,6 +112,14 @@
         <li class="feature-item"><span class="grid h-11 w-11 place-items-center rounded-xl bg-wesolve-green-950 text-wesolve-accent-300 dark:bg-wesolve-green-800" aria-hidden="true"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none"><path d="M12 3.5 5 6v5.5c0 4.2 3 7.5 7 9 4-1.5 7-4.8 7-9V6Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="m9 12 2 2 4-4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3 class="mt-5 text-lg font-semibold">DSGVO-konform</h3><p class="mt-2 leading-relaxed text-wesolve-green-700 dark:text-wesolve-green-200">Datenschutz ist von Anfang an mitgedacht – nicht nachgerüstet.</p></li>
         <li class="feature-item"><span class="grid h-11 w-11 place-items-center rounded-xl bg-wesolve-green-950 text-wesolve-accent-300 dark:bg-wesolve-green-800" aria-hidden="true"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none"><path d="M4 6.5A2.5 2.5 0 0 1 6.5 4h11A2.5 2.5 0 0 1 20 6.5v7a2.5 2.5 0 0 1-2.5 2.5H10l-4 4v-4A2 2 0 0 1 4 14Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3 class="mt-5 text-lg font-semibold">Direkter Draht</h3><p class="mt-2 leading-relaxed text-wesolve-green-700 dark:text-wesolve-green-200">Du sprichst mit dem Entwickler – nicht mit einer Hotline.</p></li>
       </ul>
+    </div>
+  </section>
+
+  <!-- PLATZHALTER: Preisrahmen für Apps eintragen -->
+  <section class="px-4 pb-4 pt-20 sm:px-6 lg:pt-28" aria-labelledby="price-title">
+    <div class="mx-auto flex max-w-screen-xl flex-col gap-6 rounded-2xl border border-wesolve-green-200 p-7 dark:border-wesolve-green-800 sm:p-10 md:flex-row md:items-center md:justify-between">
+      <div><h2 id="price-title" class="text-2xl font-semibold tracking-[-0.025em]">Was kostet das?</h2><p class="mt-2 max-w-xl leading-relaxed text-wesolve-green-700 dark:text-wesolve-green-200">Jedes Projekt ist anders – nach dem Erstgespräch bekommst du ein Festpreis-Angebot. Als grobe Orientierung:</p></div>
+      <p class="ph shrink-0 text-3xl font-bold tracking-[-0.03em] text-wesolve-green-800 dark:text-wesolve-accent-300">ab [Preis] €</p>
     </div>
   </section>
 

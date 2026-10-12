@@ -1,3 +1,21 @@
+/* Schrift lokal ausgeliefert (keine Verbindung zu Google) */
+@font-face {
+  font-family: 'Onest';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 900;
+  src: url('/assets/fonts/onest-latin-ext-wght-normal.woff2') format('woff2');
+  unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Onest';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 900;
+  src: url('/assets/fonts/onest-latin-wght-normal.woff2') format('woff2');
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -59,7 +77,7 @@ button svg[x-show="open"] {
     @apply inline-flex min-h-12 items-center justify-center gap-2 whitespace-nowrap rounded-lg border border-white/25 px-6 py-3 text-base font-semibold text-white transition-colors duration-200 hover:border-white/60 hover:bg-white/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-wesolve-accent-300;
   }
   .eyebrow {
-    @apply text-sm font-semibold uppercase tracking-[0.16em] text-wesolve-green-600 dark:text-wesolve-green-300;
+    @apply text-base font-semibold text-wesolve-green-600 dark:text-wesolve-green-300;
   }
   .section-title {
     @apply mt-4 text-[clamp(2rem,4vw,3.5rem)] font-bold leading-[1.08] tracking-[-0.035em];
@@ -130,7 +148,7 @@ button svg[x-show="open"] {
   @apply relative grid grid-cols-[2rem_1fr] gap-5 md:block;
 }
 .timeline-node {
-  @apply relative z-10 grid h-8 w-8 place-items-center rounded-full border border-wesolve-accent-300 bg-wesolve-green-950 font-mono text-[11px] font-semibold text-wesolve-accent-300 md:mx-auto;
+  @apply relative z-10 grid h-8 w-8 place-items-center rounded-full border border-wesolve-accent-300 bg-wesolve-green-950 text-xs font-semibold text-wesolve-accent-300 md:mx-auto;
 }
 .timeline-content {
   @apply pb-3 md:mt-8 md:border-t md:border-white/10 md:px-5 md:pt-7 md:text-center;
@@ -180,8 +198,8 @@ button svg[x-show="open"] {
 /* 3. Hover-Details */
 .btn-primary svg { transition: transform .25s ease; }
 .btn-primary:hover svg { transform: translateX(4px); }
-.service-card > span:last-child { transition: transform .25s ease, color .2s; }
-.service-card:hover > span:last-child { transform: translateX(4px); }
+.card-more svg { transition: transform .25s ease; }
+.service-card:hover .card-more svg { transform: translateX(4px); }
 
 /* Navigation: Unterstrich wächst von links (hell: Grün, dunkel/Hero: Mint) */
 .nav-underline { position: relative; }
@@ -286,3 +304,6 @@ button svg[x-show="open"] {
 .card-ill { transition: transform .4s cubic-bezier(.3,1.4,.5,1); transform-origin: top right; }
 .service-card:hover .card-ill { transform: rotate(-3deg) scale(1.05); }
 @media (prefers-reduced-motion: reduce) { .card-ill { transition: none; } }
+
+/* PLATZHALTER-Markierung: unübersehbar, damit nichts Unfertiges live geht */
+.ph { outline: 2px dashed #f59e0b; outline-offset: 4px; border-radius: 6px; }

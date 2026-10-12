@@ -18,13 +18,12 @@
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="description" content="Echte Projekte statt Versprechen: Webseiten, Apps und Individual-Software für kleine Unternehmen – vom Familienbetrieb bis zum 1. FC Nürnberg.">
+  <link rel="preload" href="/assets/fonts/onest-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link href="./dist/styles.css" rel="stylesheet">
   <script src="/js/theme.js"></script>
   <link rel="icon" type="image/x-icon" href="./assets/img/Wesolveit_loigo.svg" />
-  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.8/dist/cdn.min.js" defer></script>
+  <script defer src="/js/vendor/alpine-3.14.8.min.js"></script>
   <script src="/js/navigation.js" defer></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
 </head>
 <body data-hero="dark" class="overflow-x-hidden bg-white font-text text-wesolve-green-950 antialiased dark:bg-wesolve-green-950 dark:text-wesolve-green-50">
 <main x-data="{ filter: 'alle', show(t) { return this.filter === 'alle' || t.includes(this.filter) } }">
@@ -33,7 +32,7 @@
     <div class="mx-auto max-w-screen-xl">
       <div class="grid gap-8 lg:grid-cols-12 lg:items-end">
         <div class="lg:col-span-7">
-          <p class="hero-in text-sm font-semibold uppercase tracking-[0.18em] text-wesolve-accent-300" style="--d:0">Referenzen</p>
+          <p class="hero-in text-base font-semibold text-wesolve-accent-300" style="--d:0">Referenzen</p>
           <h1 id="ref-title" style="--d:1" class="hero-in mt-6 font-text text-[clamp(2.5rem,5.6vw,4.75rem)] font-bold leading-[1] tracking-[-0.05em]">Vom Familienbetrieb bis zum Bundesliga-Verein.</h1>
         </div>
         <p style="--d:2" class="hero-in max-w-xl text-lg leading-relaxed text-wesolve-green-100 lg:col-span-5 lg:pb-2">Webseiten, Apps und Software, die im Alltag echter Betriebe funktionieren. Schau dir an, was wir umgesetzt haben.</p>
@@ -61,7 +60,7 @@
     <div class="mx-auto max-w-screen-xl">
       <!-- Flaggschiff: groß und zuerst -->
       <a href="/referenzen/fc-nuernberg" x-show="show(['app', 'software'])" x-transition.opacity.duration.300ms data-reveal class="ref-feature group">
-        <div class="hero-panel overflow-hidden bg-wesolve-green-950 p-8 lg:col-span-7 lg:p-12"><img src="./assets/img/standing-ipad-mockup-1.webp" alt="Business Seating App des 1. FC Nürnberg auf einem iPad" class="ref-shot h-full max-h-[28rem] w-full rounded-xl object-cover"></div>
+        <div class="hero-panel overflow-hidden bg-wesolve-green-950 p-8 lg:col-span-7 lg:p-12"><img width="1600" height="1200" src="./assets/img/standing-ipad-mockup-1.webp" alt="Business Seating App des 1. FC Nürnberg auf einem iPad" class="ref-shot h-full max-h-[28rem] w-full rounded-xl object-cover"></div>
         <div class="flex flex-col justify-center p-7 sm:p-10 lg:col-span-5 lg:p-12">
           <div class="flex flex-wrap gap-2"><span class="tag">App</span><span class="tag">Software</span></div>
           <h2 class="mt-5 text-3xl font-semibold tracking-[-0.03em] xl:text-5xl">1. FC Nürnberg</h2>
@@ -73,7 +72,7 @@
 
       <div class="mt-6 grid gap-6 md:grid-cols-2">
         <a href="/referenzen/alfafood" x-show="show(['web'])" x-transition.opacity.duration.300ms data-reveal class="ref-tile group">
-          <div class="hero-panel aspect-[16/10] overflow-hidden bg-wesolve-green-950 px-6 pt-6 sm:px-8 sm:pt-8"><div class="ref-shot flex h-full flex-col overflow-hidden rounded-t-xl bg-white shadow-[0_24px_60px_-30px_rgba(0,0,0,0.8)]"><div class="flex shrink-0 gap-1.5 border-b border-wesolve-green-100 px-3.5 py-2" aria-hidden="true"><span class="h-2 w-2 rounded-full bg-wesolve-green-200"></span><span class="h-2 w-2 rounded-full bg-wesolve-green-200"></span><span class="h-2 w-2 rounded-full bg-wesolve-green-200"></span></div><div class="min-h-0 flex-1 overflow-hidden"><img src="./assets/img/exampleImage.webp" alt="Webseite von Alfafood" loading="lazy" class="h-full w-full object-cover object-top"></div></div></div>
+          <div class="hero-panel aspect-[16/10] overflow-hidden bg-wesolve-green-950 px-6 pt-6 sm:px-8 sm:pt-8"><div class="ref-shot flex h-full flex-col overflow-hidden rounded-t-xl bg-white shadow-[0_24px_60px_-30px_rgba(0,0,0,0.8)]"><div class="flex shrink-0 gap-1.5 border-b border-wesolve-green-100 px-3.5 py-2" aria-hidden="true"><span class="h-2 w-2 rounded-full bg-wesolve-green-200"></span><span class="h-2 w-2 rounded-full bg-wesolve-green-200"></span><span class="h-2 w-2 rounded-full bg-wesolve-green-200"></span></div><div class="min-h-0 flex-1 overflow-hidden"><img width="1600" height="771" src="./assets/img/exampleImage.webp" alt="Webseite von Alfafood" loading="lazy" class="h-full w-full object-cover object-top"></div></div></div>
           <div class="flex flex-1 flex-col p-6 sm:p-8">
             <div class="flex flex-wrap gap-2"><span class="tag">Website</span></div>
             <h3 class="mt-4 text-2xl font-semibold tracking-[-0.025em]">Alfafood</h3>
@@ -82,7 +81,7 @@
           </div>
         </a>
         <a href="/referenzen/lubu-restaurant" x-show="show(['web', 'seo'])" x-transition.opacity.duration.300ms data-reveal class="ref-tile group">
-          <div class="hero-panel aspect-[16/10] overflow-hidden bg-wesolve-green-950 px-6 pt-6 sm:px-8 sm:pt-8"><div class="ref-shot flex h-full flex-col overflow-hidden rounded-t-xl bg-white shadow-[0_24px_60px_-30px_rgba(0,0,0,0.8)]"><div class="flex shrink-0 gap-1.5 border-b border-wesolve-green-100 px-3.5 py-2" aria-hidden="true"><span class="h-2 w-2 rounded-full bg-wesolve-green-200"></span><span class="h-2 w-2 rounded-full bg-wesolve-green-200"></span><span class="h-2 w-2 rounded-full bg-wesolve-green-200"></span></div><div class="min-h-0 flex-1 overflow-hidden"><img src="./assets/img/Bildschirmfoto-2024-04-30-um-14.56.41.webp" alt="Webseite von LU-BU Asian Food" loading="lazy" class="h-full w-full object-cover object-top"></div></div></div>
+          <div class="hero-panel aspect-[16/10] overflow-hidden bg-wesolve-green-950 px-6 pt-6 sm:px-8 sm:pt-8"><div class="ref-shot flex h-full flex-col overflow-hidden rounded-t-xl bg-white shadow-[0_24px_60px_-30px_rgba(0,0,0,0.8)]"><div class="flex shrink-0 gap-1.5 border-b border-wesolve-green-100 px-3.5 py-2" aria-hidden="true"><span class="h-2 w-2 rounded-full bg-wesolve-green-200"></span><span class="h-2 w-2 rounded-full bg-wesolve-green-200"></span><span class="h-2 w-2 rounded-full bg-wesolve-green-200"></span></div><div class="min-h-0 flex-1 overflow-hidden"><img width="1600" height="913" src="./assets/img/Bildschirmfoto-2024-04-30-um-14.56.41.webp" alt="Webseite von LU-BU Asian Food" loading="lazy" class="h-full w-full object-cover object-top"></div></div></div>
           <div class="flex flex-1 flex-col p-6 sm:p-8">
             <div class="flex flex-wrap gap-2"><span class="tag">Website</span><span class="tag">SEO</span></div>
             <h3 class="mt-4 text-2xl font-semibold tracking-[-0.025em]">LU-BU Asian Food</h3>
@@ -91,7 +90,7 @@
           </div>
         </a>
         <a href="/referenzen/sportweber-schnaittach" x-show="show(['software'])" x-transition.opacity.duration.300ms data-reveal class="ref-tile group">
-          <div class="hero-panel aspect-[16/10] overflow-hidden bg-wesolve-green-950 px-6 pt-6 sm:px-8 sm:pt-8"><div class="ref-shot flex h-full flex-col overflow-hidden rounded-t-xl bg-white shadow-[0_24px_60px_-30px_rgba(0,0,0,0.8)]"><div class="flex shrink-0 gap-1.5 border-b border-wesolve-green-100 px-3.5 py-2" aria-hidden="true"><span class="h-2 w-2 rounded-full bg-wesolve-green-200"></span><span class="h-2 w-2 rounded-full bg-wesolve-green-200"></span><span class="h-2 w-2 rounded-full bg-wesolve-green-200"></span></div><div class="min-h-0 flex-1 overflow-hidden"><img src="./assets/img/Bildschirmfoto-2024-04-30-um-15.05.05.webp" alt="Verleihsoftware von Sport-Weber Schnaittach" loading="lazy" class="h-full w-full object-cover object-top"></div></div></div>
+          <div class="hero-panel aspect-[16/10] overflow-hidden bg-wesolve-green-950 px-6 pt-6 sm:px-8 sm:pt-8"><div class="ref-shot flex h-full flex-col overflow-hidden rounded-t-xl bg-white shadow-[0_24px_60px_-30px_rgba(0,0,0,0.8)]"><div class="flex shrink-0 gap-1.5 border-b border-wesolve-green-100 px-3.5 py-2" aria-hidden="true"><span class="h-2 w-2 rounded-full bg-wesolve-green-200"></span><span class="h-2 w-2 rounded-full bg-wesolve-green-200"></span><span class="h-2 w-2 rounded-full bg-wesolve-green-200"></span></div><div class="min-h-0 flex-1 overflow-hidden"><img width="1600" height="913" src="./assets/img/Bildschirmfoto-2024-04-30-um-15.05.05.webp" alt="Verleihsoftware von Sport-Weber Schnaittach" loading="lazy" class="h-full w-full object-cover object-top"></div></div></div>
           <div class="flex flex-1 flex-col p-6 sm:p-8">
             <div class="flex flex-wrap gap-2"><span class="tag">Software</span></div>
             <h3 class="mt-4 text-2xl font-semibold tracking-[-0.025em]">Sport-Weber Verleih</h3>
@@ -100,7 +99,7 @@
           </div>
         </a>
         <a href="/referenzen/sportweber-bikeservice" x-show="show(['web', 'software'])" x-transition.opacity.duration.300ms data-reveal class="ref-tile group">
-          <div class="hero-panel aspect-[16/10] overflow-hidden bg-wesolve-green-950 px-6 pt-6 sm:px-8 sm:pt-8"><div class="ref-shot flex h-full flex-col overflow-hidden rounded-t-xl bg-white shadow-[0_24px_60px_-30px_rgba(0,0,0,0.8)]"><div class="flex shrink-0 gap-1.5 border-b border-wesolve-green-100 px-3.5 py-2" aria-hidden="true"><span class="h-2 w-2 rounded-full bg-wesolve-green-200"></span><span class="h-2 w-2 rounded-full bg-wesolve-green-200"></span><span class="h-2 w-2 rounded-full bg-wesolve-green-200"></span></div><div class="min-h-0 flex-1 overflow-hidden"><img src="./assets/img/referenz-sportweber-bikeservice.webp" alt="Bikeservice-Plattform von Sport-Weber Schnaittach" loading="lazy" class="h-full w-full object-cover object-top"></div></div></div>
+          <div class="hero-panel aspect-[16/10] overflow-hidden bg-wesolve-green-950 px-6 pt-6 sm:px-8 sm:pt-8"><div class="ref-shot flex h-full flex-col overflow-hidden rounded-t-xl bg-white shadow-[0_24px_60px_-30px_rgba(0,0,0,0.8)]"><div class="flex shrink-0 gap-1.5 border-b border-wesolve-green-100 px-3.5 py-2" aria-hidden="true"><span class="h-2 w-2 rounded-full bg-wesolve-green-200"></span><span class="h-2 w-2 rounded-full bg-wesolve-green-200"></span><span class="h-2 w-2 rounded-full bg-wesolve-green-200"></span></div><div class="min-h-0 flex-1 overflow-hidden"><img width="1440" height="1000" src="./assets/img/referenz-sportweber-bikeservice.webp" alt="Bikeservice-Plattform von Sport-Weber Schnaittach" loading="lazy" class="h-full w-full object-cover object-top"></div></div></div>
           <div class="flex flex-1 flex-col p-6 sm:p-8">
             <div class="flex flex-wrap gap-2"><span class="tag">Website</span><span class="tag">Software</span></div>
             <h3 class="mt-4 text-2xl font-semibold tracking-[-0.025em]">Sport-Weber Bikeservice</h3>
@@ -109,7 +108,7 @@
           </div>
         </a>
         <a href="/referenzen/rootd" x-show="show(['web'])" x-transition.opacity.duration.300ms data-reveal class="ref-tile group">
-          <div class="hero-panel aspect-[16/10] overflow-hidden bg-wesolve-green-950 px-6 pt-6 sm:px-8 sm:pt-8"><div class="ref-shot flex h-full flex-col overflow-hidden rounded-t-xl bg-white shadow-[0_24px_60px_-30px_rgba(0,0,0,0.8)]"><div class="flex shrink-0 gap-1.5 border-b border-wesolve-green-100 px-3.5 py-2" aria-hidden="true"><span class="h-2 w-2 rounded-full bg-wesolve-green-200"></span><span class="h-2 w-2 rounded-full bg-wesolve-green-200"></span><span class="h-2 w-2 rounded-full bg-wesolve-green-200"></span></div><div class="min-h-0 flex-1 overflow-hidden"><img src="./assets/img/referenz-rootd.webp" alt="Online-Shop von ROOTD." loading="lazy" class="h-full w-full object-cover object-top"></div></div></div>
+          <div class="hero-panel aspect-[16/10] overflow-hidden bg-wesolve-green-950 px-6 pt-6 sm:px-8 sm:pt-8"><div class="ref-shot flex h-full flex-col overflow-hidden rounded-t-xl bg-white shadow-[0_24px_60px_-30px_rgba(0,0,0,0.8)]"><div class="flex shrink-0 gap-1.5 border-b border-wesolve-green-100 px-3.5 py-2" aria-hidden="true"><span class="h-2 w-2 rounded-full bg-wesolve-green-200"></span><span class="h-2 w-2 rounded-full bg-wesolve-green-200"></span><span class="h-2 w-2 rounded-full bg-wesolve-green-200"></span></div><div class="min-h-0 flex-1 overflow-hidden"><img width="1440" height="1000" src="./assets/img/referenz-rootd.webp" alt="Online-Shop von ROOTD." loading="lazy" class="h-full w-full object-cover object-top"></div></div></div>
           <div class="flex flex-1 flex-col p-6 sm:p-8">
             <div class="flex flex-wrap gap-2"><span class="tag">Website</span></div>
             <h3 class="mt-4 text-2xl font-semibold tracking-[-0.025em]">ROOTD.</h3>
@@ -118,7 +117,7 @@
           </div>
         </a>
         <a href="/referenzen/tobias-herrmann" x-show="show(['app'])" x-transition.opacity.duration.300ms data-reveal class="ref-tile group">
-          <div class="hero-panel aspect-[16/10] overflow-hidden bg-wesolve-green-950 p-6"><img src="./assets/img/Bildschirmfoto-2024-05-27-um-16.46.28.webp" alt="ManifeSTATE App von Tobias Herrmann auf zwei Smartphones" loading="lazy" class="ref-shot mx-auto h-full w-auto rounded-xl object-contain"></div>
+          <div class="hero-panel aspect-[16/10] overflow-hidden bg-wesolve-green-950 p-6"><img width="1586" height="892" src="./assets/img/Bildschirmfoto-2024-05-27-um-16.46.28.webp" alt="ManifeSTATE App von Tobias Herrmann auf zwei Smartphones" loading="lazy" class="ref-shot mx-auto h-full w-auto rounded-xl object-contain"></div>
           <div class="flex flex-1 flex-col p-6 sm:p-8">
             <div class="flex flex-wrap gap-2"><span class="tag">App</span></div>
             <h3 class="mt-4 text-2xl font-semibold tracking-[-0.025em]">Tobias Herrmann</h3>
@@ -127,7 +126,7 @@
           </div>
         </a>
         <a href="/referenzen/dieschokoecke" x-show="show(['web'])" x-transition.opacity.duration.300ms data-reveal class="ref-tile group">
-          <div class="hero-panel aspect-[16/10] overflow-hidden bg-wesolve-green-950 px-6 pt-6 sm:px-8 sm:pt-8"><div class="ref-shot flex h-full flex-col overflow-hidden rounded-t-xl bg-white shadow-[0_24px_60px_-30px_rgba(0,0,0,0.8)]"><div class="flex shrink-0 gap-1.5 border-b border-wesolve-green-100 px-3.5 py-2" aria-hidden="true"><span class="h-2 w-2 rounded-full bg-wesolve-green-200"></span><span class="h-2 w-2 rounded-full bg-wesolve-green-200"></span><span class="h-2 w-2 rounded-full bg-wesolve-green-200"></span></div><div class="min-h-0 flex-1 overflow-hidden"><img src="./assets/img/dieschokoecke.webp" alt="Webseite von dieschokoecke" loading="lazy" class="h-full w-full object-cover object-top"></div></div></div>
+          <div class="hero-panel aspect-[16/10] overflow-hidden bg-wesolve-green-950 px-6 pt-6 sm:px-8 sm:pt-8"><div class="ref-shot flex h-full flex-col overflow-hidden rounded-t-xl bg-white shadow-[0_24px_60px_-30px_rgba(0,0,0,0.8)]"><div class="flex shrink-0 gap-1.5 border-b border-wesolve-green-100 px-3.5 py-2" aria-hidden="true"><span class="h-2 w-2 rounded-full bg-wesolve-green-200"></span><span class="h-2 w-2 rounded-full bg-wesolve-green-200"></span><span class="h-2 w-2 rounded-full bg-wesolve-green-200"></span></div><div class="min-h-0 flex-1 overflow-hidden"><img width="1600" height="745" src="./assets/img/dieschokoecke.webp" alt="Webseite von dieschokoecke" loading="lazy" class="h-full w-full object-cover object-top"></div></div></div>
           <div class="flex flex-1 flex-col p-6 sm:p-8">
             <div class="flex flex-wrap gap-2"><span class="tag">Website</span></div>
             <h3 class="mt-4 text-2xl font-semibold tracking-[-0.025em]">dieschokoecke</h3>
@@ -136,7 +135,7 @@
           </div>
         </a>
         <a href="/referenzen/rooted-merch" x-show="show(['web'])" x-transition.opacity.duration.300ms data-reveal class="ref-tile group">
-          <div class="hero-panel aspect-[16/10] overflow-hidden bg-wesolve-green-950 px-6 pt-6 sm:px-8 sm:pt-8"><div class="ref-shot flex h-full flex-col overflow-hidden rounded-t-xl bg-white shadow-[0_24px_60px_-30px_rgba(0,0,0,0.8)]"><div class="flex shrink-0 gap-1.5 border-b border-wesolve-green-100 px-3.5 py-2" aria-hidden="true"><span class="h-2 w-2 rounded-full bg-wesolve-green-200"></span><span class="h-2 w-2 rounded-full bg-wesolve-green-200"></span><span class="h-2 w-2 rounded-full bg-wesolve-green-200"></span></div><div class="min-h-0 flex-1 overflow-hidden"><img src="./assets/img/referenz-rooted-merch.webp" alt="B2B-Webseite von ROOTED Merch" loading="lazy" class="h-full w-full object-cover object-top"></div></div></div>
+          <div class="hero-panel aspect-[16/10] overflow-hidden bg-wesolve-green-950 px-6 pt-6 sm:px-8 sm:pt-8"><div class="ref-shot flex h-full flex-col overflow-hidden rounded-t-xl bg-white shadow-[0_24px_60px_-30px_rgba(0,0,0,0.8)]"><div class="flex shrink-0 gap-1.5 border-b border-wesolve-green-100 px-3.5 py-2" aria-hidden="true"><span class="h-2 w-2 rounded-full bg-wesolve-green-200"></span><span class="h-2 w-2 rounded-full bg-wesolve-green-200"></span><span class="h-2 w-2 rounded-full bg-wesolve-green-200"></span></div><div class="min-h-0 flex-1 overflow-hidden"><img width="1440" height="1000" src="./assets/img/referenz-rooted-merch.webp" alt="B2B-Webseite von ROOTED Merch" loading="lazy" class="h-full w-full object-cover object-top"></div></div></div>
           <div class="flex flex-1 flex-col p-6 sm:p-8">
             <div class="flex flex-wrap gap-2"><span class="tag">Website</span></div>
             <h3 class="mt-4 text-2xl font-semibold tracking-[-0.025em]">ROOTED Merch</h3>

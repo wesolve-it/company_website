@@ -91,6 +91,11 @@
     <priority>0.80</priority>
   </url>
   <url>
+    <loc>https://wesolve-it.com/ueber-uns</loc>
+    <lastmod>2026-07-07</lastmod>
+    <priority>0.90</priority>
+  </url>
+  <url>
     <loc>https://wesolve-it.com/kontakt</loc>
     <lastmod>2026-07-07</lastmod>
     <priority>0.90</priority>
