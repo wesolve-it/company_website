@@ -5,100 +5,112 @@
   <title>Datenschutz</title>
   <!-- Umami Analytics (cookielos, DSGVO-freundlich, ohne Consent-Banner) -->
   <script defer src="https://cloud.umami.is/script.js" data-website-id="9ae829dd-0d21-44d1-b913-58b2c74faf32" data-domains="wesolve-it.com"></script>
+  <link rel="preload" href="/assets/fonts/onest-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link href="./dist/styles.css" rel="stylesheet">
   <script src="/js/theme.js"></script>
   <link rel="icon" type="image/x-icon" href="./assets/img/Wesolveit_loigo.svg" />
-  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
-  <script src="./js/navigation.js" defer></script>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Montserrat:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script defer src="/js/vendor/alpine-3.14.8.min.js"></script>
+  <script src="/js/navigation.js" defer></script>
 </head>
-<body class="bg-white text-neutral-900 dark:bg-neutral-950 dark:text-neutral-100">
-  <div class="mx-auto max-w-screen-md px-6 pb-24 pt-32 leading-relaxed text-neutral-700 dark:text-neutral-300">
-    <h1 class="mb-8 font-display text-4xl font-bold tracking-tight text-neutral-900 dark:text-white">Datenschutzerklärung</h1>
+<body data-hero="dark" class="overflow-x-hidden bg-white font-text text-wesolve-green-950 antialiased dark:bg-wesolve-green-950 dark:text-wesolve-green-50">
+<main>
+  <section class="hero-panel relative bg-wesolve-green-950 px-4 pb-14 pt-28 text-white sm:px-6 lg:pb-20 lg:pt-36" aria-labelledby="legal-title">
+    <div class="mx-auto max-w-screen-xl">
+      <p class="hero-in text-sm font-semibold uppercase tracking-[0.18em] text-wesolve-accent-300" style="--d:0">Rechtliches</p>
+      <h1 id="legal-title" style="--d:1" class="hero-in mt-6 font-text text-[clamp(2.5rem,5vw,4.25rem)] font-bold leading-[1] tracking-[-0.05em]">Datenschutzerklärung</h1>
+      <p style="--d:2" class="hero-in mt-6 max-w-xl text-lg leading-relaxed text-wesolve-green-100">Welche Daten beim Besuch dieser Website verarbeitet werden, wofür – und welche Rechte du hast.</p>
+    </div>
+  </section>
+
+  <section class="px-4 py-16 sm:px-6 lg:py-24">
+    <div class="mx-auto grid max-w-screen-xl gap-12 lg:grid-cols-12 lg:gap-16">
+      <nav class="lg:col-span-4" aria-label="Inhalt"><div class="lg:sticky lg:top-28"><p class="font-semibold">Inhalt</p><ul class="mt-4 space-y-1 border-l border-wesolve-green-200 dark:border-wesolve-green-800"><li><a href="#datenschutz-auf-einen-blick" class="toc-link">1. Datenschutz auf einen Blick</a></li><li><a href="#hosting" class="toc-link">2. Hosting</a></li><li><a href="#allgemeine-hinweise-und-pflichtinformationen" class="toc-link">3. Allgemeine Hinweise und Pflichtinformationen</a></li><li><a href="#web-analyse-und-optimierungstools" class="toc-link">7. Web-Analyse und Optimierungstools</a></li><li><a href="#weitere-plugins-und-tools" class="toc-link">8. Weitere Plugins und Tools</a></li></ul></div></nav>
+      <article class="legal lg:col-span-8">
+    
   
-    <section class="mb-6">
-      <h2 class="mb-3 mt-10 font-display text-2xl font-bold text-neutral-900 dark:text-white">1. Datenschutz auf einen Blick</h2>
-      <h3 class="mb-2 mt-6 font-display text-xl font-semibold text-neutral-900 dark:text-white">Allgemeine Hinweise</h3>
-      <p class="mb-4">
+    <section>
+      <h2 id="datenschutz-auf-einen-blick">1. Datenschutz auf einen Blick</h2>
+      <h3>Allgemeine Hinweise</h3>
+      <p>
         Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können. Ausführliche Informationen zum Thema Datenschutz entnehmen Sie unserer unter diesem Text aufgeführten Datenschutzerklärung.
       </p>
   
-      <h3 class="mb-2 mt-6 font-display text-xl font-semibold text-neutral-900 dark:text-white">Datenerfassung auf dieser Website</h3>
-      <h4 class="mb-1 mt-4 font-display text-lg font-semibold text-neutral-900 dark:text-white">Wer ist verantwortlich für die Datenerfassung auf dieser Website?</h4>
-      <p class="mb-4">
+      <h3>Datenerfassung auf dieser Website</h3>
+      <h4>Wer ist verantwortlich für die Datenerfassung auf dieser Website?</h4>
+      <p>
         Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. Dessen Kontaktdaten können Sie dem Abschnitt „Hinweis zur Verantwortlichen Stelle“ in dieser Datenschutzerklärung entnehmen.
       </p>
-      <h4 class="mb-1 mt-4 font-display text-lg font-semibold text-neutral-900 dark:text-white">Wie erfassen wir Ihre Daten?</h4>
-      <p class="mb-4">
+      <h4>Wie erfassen wir Ihre Daten?</h4>
+      <p>
         Ihre Daten werden zum einen dadurch erhoben, dass Sie uns diese mitteilen. Hierbei kann es sich z. B. um Daten handeln, die Sie in ein Kontaktformular eingeben.
       </p>
-      <p class="mb-4">
+      <p>
         Andere Daten werden automatisch oder nach Ihrer Einwilligung beim Besuch der Website durch unsere IT-Systeme erfasst. Das sind vor allem technische Daten (z. B. Internetbrowser, Betriebssystem oder Uhrzeit des Seitenaufrufs). Die Erfassung dieser Daten erfolgt automatisch, sobald Sie diese Website betreten.
       </p>
   
-      <h4 class="mb-1 mt-4 font-display text-lg font-semibold text-neutral-900 dark:text-white">Wofür nutzen wir Ihre Daten?</h4>
-      <p class="mb-4">
+      <h4>Wofür nutzen wir Ihre Daten?</h4>
+      <p>
         Ein Teil der Daten wird erhoben, um eine fehlerfreie Bereitstellung der Website zu gewährleisten. Andere Daten können zur Analyse Ihres Nutzerverhaltens verwendet werden.
       </p>
   
-      <h4 class="mb-1 mt-4 font-display text-lg font-semibold text-neutral-900 dark:text-white">Welche Rechte haben Sie bezüglich Ihrer Daten?</h4>
-      <p class="mb-4">
+      <h4>Welche Rechte haben Sie bezüglich Ihrer Daten?</h4>
+      <p>
         Sie haben jederzeit das Recht, unentgeltlich Auskunft über Herkunft, Empfänger und Zweck Ihrer gespeicherten personenbezogenen Daten zu erhalten. Sie haben außerdem ein Recht, die Berichtigung oder Löschung dieser Daten zu verlangen. Wenn Sie eine Einwilligung zur Datenverarbeitung erteilt haben, können Sie diese Einwilligung jederzeit für die Zukunft widerrufen. Außerdem haben Sie das Recht, unter bestimmten Umständen die Einschränkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen. Des Weiteren steht Ihnen ein Beschwerderecht bei der zuständigen Aufsichtsbehörde zu.
       </p>
-      <p class="mb-4">
+      <p>
         Hierzu sowie zu weiteren Fragen zum Thema Datenschutz können Sie sich jederzeit an uns wenden.
       </p>
     </section>
   
-    <section class="mb-6">
-      <h2 class="mb-3 mt-10 font-display text-2xl font-bold text-neutral-900 dark:text-white">2. Hosting</h2>
-      <h3 class="mb-2 mt-6 font-display text-xl font-semibold text-neutral-900 dark:text-white">IONOS</h3>
-      <p class="mb-4">
+    <section>
+      <h2 id="hosting">2. Hosting</h2>
+      <h3>IONOS</h3>
+      <p>
         Anbieter ist die IONOS SE, Elgendorfer Str. 57, 56410 Montabaur (nachfolgend IONOS). Wenn Sie unsere Website besuchen, erfasst IONOS verschiedene Logfiles inklusive Ihrer IP-Adressen. Details entnehmen Sie der Datenschutzerklärung von IONOS: 
-        <a href="https://www.ionos.de/terms-gtc/terms-privacy" target="_blank" class="font-medium text-lime-700 dark:text-lime-400 underline decoration-lime-400 decoration-2 underline-offset-2 hover:text-lime-600">https://www.ionos.de/terms-gtc/terms-privacy</a>.
+        <a href="https://www.ionos.de/terms-gtc/terms-privacy" target="_blank" rel="noopener">https://www.ionos.de/terms-gtc/terms-privacy</a>.
       </p>
-      <p class="mb-4">
+      <p>
         Die Verwendung von IONOS erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Wir haben ein berechtigtes Interesse an einer möglichst zuverlässigen Darstellung unserer Website. Sofern eine entsprechende Einwilligung abgefragt wurde, erfolgt die Verarbeitung ausschließlich auf Grundlage von Art. 6 Abs. 1 lit. a DSGVO und § 25 Abs. 1 TTDSG, soweit die Einwilligung die Speicherung von Cookies oder den Zugriff auf Informationen im Endgerät des Nutzers (z. B. Device-Fingerprinting) im Sinne des TTDSG umfasst. Die Einwilligung ist jederzeit widerrufbar.
       </p>
-      <h4 class="mb-1 mt-4 font-display text-lg font-semibold text-neutral-900 dark:text-white">Auftragsverarbeitung</h4>
-      <p class="mb-4">
+      <h4>Auftragsverarbeitung</h4>
+      <p>
         Wir haben einen Vertrag über Auftragsverarbeitung (AVV) zur Nutzung des oben genannten Dienstes geschlossen. Hierbei handelt es sich um einen datenschutzrechtlich vorgeschriebenen Vertrag, der gewährleistet, dass dieser die personenbezogenen Daten unserer Websitebesucher nur nach unseren Weisungen und unter Einhaltung der DSGVO verarbeitet.
       </p>
     </section>
   
-    <section class="mb-6">
-      <h2 class="mb-3 mt-10 font-display text-2xl font-bold text-neutral-900 dark:text-white">3. Allgemeine Hinweise und Pflichtinformationen</h2>
-      <h3 class="mb-2 mt-6 font-display text-xl font-semibold text-neutral-900 dark:text-white">Datenschutz</h3>
-      <p class="mb-4">
+    <section>
+      <h2 id="allgemeine-hinweise-und-pflichtinformationen">3. Allgemeine Hinweise und Pflichtinformationen</h2>
+      <h3>Datenschutz</h3>
+      <p>
         Die Betreiber dieser Seiten nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend den gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerklärung.
       </p>
-      <p class="mb-4">
+      <p>
         Wenn Sie diese Website benutzen, werden verschiedene personenbezogene Daten erhoben. Personenbezogene Daten sind Daten, mit denen Sie persönlich identifiziert werden können. Die vorliegende Datenschutzerklärung erläutert, welche Daten wir erheben und wofür wir sie nutzen. Sie erläutert auch, wie und zu welchem Zweck das geschieht.
       </p>
-      <p class="mb-4">
+      <p>
         Wir weisen darauf hin, dass die Datenübertragung im Internet (z. B. bei der Kommunikation per E-Mail) Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht möglich.
       </p>
 
-      <h3 class="mb-2 mt-6 font-display text-xl font-semibold text-neutral-900 dark:text-white">Hinweis zur verantwortlichen Stelle</h3>
-      <p class="mb-4">Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:</p>
-      <p class="mb-4">Michael Reinert<br/>
+      <h3>Hinweis zur verantwortlichen Stelle</h3>
+      <p>Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:</p>
+      <p>Michael Reinert<br/>
         Himmelgartenstr. 33<br/>
         91220 Schnaittach</p>
-      <p class="mb-4">Telefon: +49 (0) 162 1847163<br/>
+      <p>Telefon: +49 (0) 162 1847163<br/>
         E-Mail: michael@mreinert.de</p>
-      <p class="mb-4">Verantwortliche Stelle ist die natürliche oder juristische Person, die allein oder gemeinsam mit anderen über die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten (z. B. Namen, E-Mail-Adressen o. Ä.) entscheidet.</p>
+      <p>Verantwortliche Stelle ist die natürliche oder juristische Person, die allein oder gemeinsam mit anderen über die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten (z. B. Namen, E-Mail-Adressen o. Ä.) entscheidet.</p>
 
-      <h3 class="mb-2 mt-6 font-display text-xl font-semibold text-neutral-900 dark:text-white">Speicherdauer</h3>
-      <p class="mb-4">Soweit innerhalb dieser Datenschutzerklärung keine speziellere Speicherdauer genannt wurde, verbleiben Ihre personenbezogenen Daten bei uns, bis der Zweck für die Datenverarbeitung entfällt. Wenn Sie ein berechtigtes Löschersuchen geltend machen oder eine Einwilligung zur Datenverarbeitung widerrufen, werden Ihre Daten gelöscht, sofern wir keine anderen rechtlich zulässigen Gründe für die Speicherung Ihrer personenbezogenen Daten haben (z. B. steuer- oder handelsrechtliche Aufbewahrungsfristen); im letztgenannten Fall erfolgt die Löschung nach Fortfall dieser Gründe.</p>
+      <h3>Speicherdauer</h3>
+      <p>Soweit innerhalb dieser Datenschutzerklärung keine speziellere Speicherdauer genannt wurde, verbleiben Ihre personenbezogenen Daten bei uns, bis der Zweck für die Datenverarbeitung entfällt. Wenn Sie ein berechtigtes Löschersuchen geltend machen oder eine Einwilligung zur Datenverarbeitung widerrufen, werden Ihre Daten gelöscht, sofern wir keine anderen rechtlich zulässigen Gründe für die Speicherung Ihrer personenbezogenen Daten haben (z. B. steuer- oder handelsrechtliche Aufbewahrungsfristen); im letztgenannten Fall erfolgt die Löschung nach Fortfall dieser Gründe.</p>
 
-      <h3 class="mb-2 mt-6 font-display text-xl font-semibold text-neutral-900 dark:text-white">Allgemeine Hinweise zu den Rechtsgrundlagen der Datenverarbeitung auf dieser Website</h3>
-      <p class="mb-4">Sofern Sie in die Datenverarbeitung eingewilligt haben, verarbeiten wir Ihre personenbezogenen Daten auf Grundlage von Art. 6 Abs. 1 lit. a DSGVO bzw. Art. 9 Abs. 2 lit. a DSGVO, sofern besondere Datenkategorien nach Art. 9 Abs. 1 DSGVO verarbeitet werden. Im Falle einer ausdrücklichen Einwilligung in die Übertragung personenbezogener Daten in Drittstaaten erfolgt die Datenverarbeitung außerdem auf Grundlage von Art. 49 Abs. 1 lit. a DSGVO. Sofern Sie in die Speicherung von Cookies oder in den Zugriff auf Informationen in Ihr Endgerät (z. B. via Device-Fingerprinting) eingewilligt haben, erfolgt die Datenverarbeitung zusätzlich auf Grundlage von § 25 Abs. 1 TTDSG. Die Einwilligung ist jederzeit widerrufbar. Sind Ihre Daten zur Vertragserfüllung oder zur Durchführung vorvertraglicher Maßnahmen erforderlich, verarbeiten wir Ihre Daten auf Grundlage des Art. 6 Abs. 1 lit. b DSGVO. Des Weiteren verarbeiten wir Ihre Daten, sofern diese zur Erfüllung einer rechtlichen Verpflichtung erforderlich sind auf Grundlage von Art. 6 Abs. 1 lit. c DSGVO. Die Datenverarbeitung kann ferner auf Grundlage unseres berechtigten Interesses nach Art. 6 Abs. 1 lit. f DSGVO erfolgen. Über die jeweils im Einzelfall einschlägigen Rechtsgrundlagen wird in den folgenden Absätzen dieser Datenschutzerklärung informiert.</p>
+      <h3>Allgemeine Hinweise zu den Rechtsgrundlagen der Datenverarbeitung auf dieser Website</h3>
+      <p>Sofern Sie in die Datenverarbeitung eingewilligt haben, verarbeiten wir Ihre personenbezogenen Daten auf Grundlage von Art. 6 Abs. 1 lit. a DSGVO bzw. Art. 9 Abs. 2 lit. a DSGVO, sofern besondere Datenkategorien nach Art. 9 Abs. 1 DSGVO verarbeitet werden. Im Falle einer ausdrücklichen Einwilligung in die Übertragung personenbezogener Daten in Drittstaaten erfolgt die Datenverarbeitung außerdem auf Grundlage von Art. 49 Abs. 1 lit. a DSGVO. Sofern Sie in die Speicherung von Cookies oder in den Zugriff auf Informationen in Ihr Endgerät (z. B. via Device-Fingerprinting) eingewilligt haben, erfolgt die Datenverarbeitung zusätzlich auf Grundlage von § 25 Abs. 1 TTDSG. Die Einwilligung ist jederzeit widerrufbar. Sind Ihre Daten zur Vertragserfüllung oder zur Durchführung vorvertraglicher Maßnahmen erforderlich, verarbeiten wir Ihre Daten auf Grundlage des Art. 6 Abs. 1 lit. b DSGVO. Des Weiteren verarbeiten wir Ihre Daten, sofern diese zur Erfüllung einer rechtlichen Verpflichtung erforderlich sind auf Grundlage von Art. 6 Abs. 1 lit. c DSGVO. Die Datenverarbeitung kann ferner auf Grundlage unseres berechtigten Interesses nach Art. 6 Abs. 1 lit. f DSGVO erfolgen. Über die jeweils im Einzelfall einschlägigen Rechtsgrundlagen wird in den folgenden Absätzen dieser Datenschutzerklärung informiert.</p>
 
-      <h3 class="mb-2 mt-6 font-display text-xl font-semibold text-neutral-900 dark:text-white">Hinweis zur Datenweitergabe in die USA und sonstige Drittstaaten</h3>
-      <p class="mb-4">Wir verwenden unter anderem Tools von Unternehmen mit Sitz in den USA oder sonstigen datenschutzrechtlich nicht sicheren Drittstaaten. Wenn diese Tools aktiv sind, können Ihre personenbezogene Daten in diese Drittstaaten übertragen und dort verarbeitet werden. Wir weisen darauf hin, dass in diesen Ländern kein mit der EU vergleichbares Datenschutzniveau garantiert werden kann. Beispielsweise sind US-Unternehmen dazu verpflichtet, personenbezogene Daten an Sicherheitsbehörden herauszugeben, ohne dass Sie als Betroffener hiergegen gerichtlich vorgehen könnten. Es kann daher nicht ausgeschlossen werden, dass US-Behörden (z. B. Geheimdienste) Ihre auf US-Servern befindlichen Daten zu Überwachungszwecken verarbeiten, auswerten und dauerhaft speichern. Wir haben auf diese Verarbeitungstätigkeiten keinen Einfluss.</p>
+      <h3>Hinweis zur Datenweitergabe in die USA und sonstige Drittstaaten</h3>
+      <p>Wir verwenden unter anderem Tools von Unternehmen mit Sitz in den USA oder sonstigen datenschutzrechtlich nicht sicheren Drittstaaten. Wenn diese Tools aktiv sind, können Ihre personenbezogene Daten in diese Drittstaaten übertragen und dort verarbeitet werden. Wir weisen darauf hin, dass in diesen Ländern kein mit der EU vergleichbares Datenschutzniveau garantiert werden kann. Beispielsweise sind US-Unternehmen dazu verpflichtet, personenbezogene Daten an Sicherheitsbehörden herauszugeben, ohne dass Sie als Betroffener hiergegen gerichtlich vorgehen könnten. Es kann daher nicht ausgeschlossen werden, dass US-Behörden (z. B. Geheimdienste) Ihre auf US-Servern befindlichen Daten zu Überwachungszwecken verarbeiten, auswerten und dauerhaft speichern. Wir haben auf diese Verarbeitungstätigkeiten keinen Einfluss.</p>
 
-      <h3 class="mb-2 mt-6 font-display text-xl font-semibold text-neutral-900 dark:text-white">Widerruf Ihrer Einwilligung zur Datenverarbeitung</h3>
-      <p class="mb-4">Viele Datenverarbeitungsvorgänge sind nur mit Ihrer ausdrücklichen Einwilligung möglich. Sie können eine bereits erteilte Einwilligung jederzeit widerrufen. Die Rechtmäßigkeit der bis zum Widerruf erfolgten Datenverarbeitung bleibt vom Widerruf unberührt.</p>
+      <h3>Widerruf Ihrer Einwilligung zur Datenverarbeitung</h3>
+      <p>Viele Datenverarbeitungsvorgänge sind nur mit Ihrer ausdrücklichen Einwilligung möglich. Sie können eine bereits erteilte Einwilligung jederzeit widerrufen. Die Rechtmäßigkeit der bis zum Widerruf erfolgten Datenverarbeitung bleibt vom Widerruf unberührt.</p>
     </section>
     <p>Widerspruchsrecht gegen die Datenerhebung in besonderen Fällen sowie gegen Direktwerbung (Art. 21 DSGVO)
       WENN DIE DATENVERARBEITUNG AUF GRUNDLAGE VON ART. 6 ABS. 1 LIT. E ODER F DSGVO ERFOLGT, HABEN SIE JEDERZEIT DAS RECHT, AUS GRÜNDEN, DIE SICH AUS IHRER BESONDEREN SITUATION ERGEBEN, GEGEN DIE VERARBEITUNG IHRER PERSONENBEZOGENEN DATEN WIDERSPRUCH EINZULEGEN; DIES GILT AUCH FÜR EIN AUF DIESE BESTIMMUNGEN GESTÜTZTES PROFILING. DIE JEWEILIGE RECHTSGRUNDLAGE, AUF DENEN EINE VERARBEITUNG BERUHT, ENTNEHMEN SIE DIESER DATENSCHUTZERKLÄRUNG. WENN SIE WIDERSPRUCH EINLEGEN, WERDEN WIR IHRE BETROFFENEN PERSONENBEZOGENEN DATEN NICHT MEHR VERARBEITEN, ES SEI DENN, WIR KÖNNEN ZWINGENDE SCHUTZWÜRDIGE GRÜNDE FÜR DIE VERARBEITUNG NACHWEISEN, DIE IHRE INTERESSEN, RECHTE UND FREIHEITEN ÜBERWIEGEN ODER DIE VERARBEITUNG DIENT DER GELTENDMACHUNG, AUSÜBUNG ODER VERTEIDIGUNG VON RECHTSANSPRÜCHEN (WIDERSPRUCH NACH ART. 21 ABS. 1 DSGVO).
@@ -192,72 +204,75 @@
       
       Quelle: https://www.e-recht24.de</p>
 
-    <section class="mb-6">
-      <h2 class="mb-3 mt-10 font-display text-2xl font-bold text-neutral-900 dark:text-white">7. Web-Analyse und Optimierungstools</h2>
+    <section>
+      <h2 id="web-analyse-und-optimierungstools">7. Web-Analyse und Optimierungstools</h2>
 
-      <h3 class="mb-2 mt-6 font-display text-xl font-semibold text-neutral-900 dark:text-white">Umami</h3>
-      <p class="mb-4">
+      <h3>Umami</h3>
+      <p>
         Diese Website nutzt zur Reichweitenmessung den cookielosen Analysedienst Umami. Anbieter ist die Umami Software, Inc. (umami.is). Umami setzt keine Cookies und erhebt keine personenbezogenen Daten; es werden lediglich anonymisierte, aggregierte Nutzungsstatistiken (z. B. aufgerufene Seiten, Referrer, ungefähre Herkunftsregion, Browser- und Gerätetyp) erfasst. Eine Identifizierung einzelner Besucher ist nicht möglich, ein Wiedererkennen über mehrere Sitzungen findet nicht statt.
       </p>
-      <p class="mb-4">
+      <p>
         Die Nutzung von Umami erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Wir haben ein berechtigtes Interesse an der datenschutzfreundlichen, cookielosen Analyse des Nutzerverhaltens, um unser Angebot zu optimieren. Da keine Informationen im Endgerät gespeichert oder ausgelesen werden und keine personenbezogenen Daten verarbeitet werden, ist hierfür keine Einwilligung erforderlich. Beim Laden des Analyse-Skripts wird eine Verbindung zu den Servern des Anbieters hergestellt, wodurch Ihre IP-Adresse übertragen werden kann. Weitere Informationen finden Sie in der Datenschutzerklärung von Umami:
-        <a href="https://umami.is/privacy" target="_blank" class="font-medium text-lime-700 dark:text-lime-400 underline decoration-lime-400 decoration-2 underline-offset-2 hover:text-lime-600">https://umami.is/privacy</a>.
+        <a href="https://umami.is/privacy" target="_blank" rel="noopener">https://umami.is/privacy</a>.
       </p>
 
-      <h3 class="mb-2 mt-6 font-display text-xl font-semibold text-neutral-900 dark:text-white">Microsoft Clarity</h3>
-      <p class="mb-4">
+      <h3>Microsoft Clarity</h3>
+      <p>
         Diese Website nutzt Microsoft Clarity, einen Analysedienst zur Auswertung des Nutzerverhaltens. Anbieter ist die Microsoft Corporation, One Microsoft Way, Redmond, WA 98052-6399, USA (in der EU vertreten durch die Microsoft Ireland Operations Limited, One Microsoft Place, South County Business Park, Leopardstown, Dublin 18, Irland). Mit Clarity erfassen wir insbesondere Mausbewegungen, Scroll- und Klickverhalten sowie Sitzungsaufzeichnungen und Heatmaps, um zu verstehen, wie unsere Website genutzt wird, und um sie zu verbessern. Hierbei werden Cookies (u. a. <code>_clck</code>, <code>_clsk</code>, <code>CLID</code>, <code>MUID</code>) gesetzt und Nutzungsdaten sowie Ihre IP-Adresse verarbeitet.
       </p>
-      <p class="mb-4">
+      <p>
         Die Nutzung von Microsoft Clarity erfolgt ausschließlich auf Grundlage Ihrer Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO und § 25 Abs. 1 TTDSG. Der Dienst wird erst geladen, nachdem Sie über unser Cookie-Banner in die Kategorie „Analyse & Optimierung“ eingewilligt haben. Ihre Einwilligung können Sie jederzeit mit Wirkung für die Zukunft über den Link „Cookie-Einstellungen“ im Seitenfuß widerrufen.
       </p>
-      <p class="mb-4">
+      <p>
         Die Datenverarbeitung kann auch auf Servern in den USA erfolgen. Microsoft ist unter dem EU-US Data Privacy Framework (DPF) zertifiziert, das ein angemessenes Datenschutzniveau gewährleisten soll. Weitere Informationen finden Sie in der Datenschutzerklärung von Microsoft:
-        <a href="https://privacy.microsoft.com/de-de/privacystatement" target="_blank" class="font-medium text-lime-700 dark:text-lime-400 underline decoration-lime-400 decoration-2 underline-offset-2 hover:text-lime-600">https://privacy.microsoft.com/de-de/privacystatement</a>.
+        <a href="https://privacy.microsoft.com/de-de/privacystatement" target="_blank" rel="noopener">https://privacy.microsoft.com/de-de/privacystatement</a>.
       </p>
 
-      <h3 class="mb-2 mt-6 font-display text-xl font-semibold text-neutral-900 dark:text-white">ABlyft (A/B-Testing)</h3>
-      <p class="mb-4">
+      <h3>ABlyft (A/B-Testing)</h3>
+      <p>
         Diese Website nutzt ABlyft, ein Werkzeug zur Durchführung von A/B-Tests zur Optimierung von Inhalten und Nutzererlebnis. Anbieter ist [ANBIETER LAUT ABLYFT-IMPRESSUM EINTRAGEN]. Mit ABlyft werden verschiedene Varianten von Inhalten ausgespielt und deren Wirkung gemessen. Dabei können Cookies gesetzt und Nutzungsdaten (z. B. besuchte Seiten, angezeigte Testvariante, Interaktionen) verarbeitet werden.
       </p>
-      <p class="mb-4">
+      <p>
         Die Nutzung von ABlyft erfolgt ausschließlich auf Grundlage Ihrer Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO und § 25 Abs. 1 TTDSG. Der Dienst wird erst geladen, nachdem Sie über unser Cookie-Banner in die Kategorie „Analyse & Optimierung“ eingewilligt haben. Ihre Einwilligung können Sie jederzeit mit Wirkung für die Zukunft über den Link „Cookie-Einstellungen“ im Seitenfuß widerrufen. Weitere Informationen entnehmen Sie der Datenschutzerklärung des Anbieters:
-        <a href="https://www.ablyft.com/de/datenschutz/" target="_blank" class="font-medium text-lime-700 dark:text-lime-400 underline decoration-lime-400 decoration-2 underline-offset-2 hover:text-lime-600">https://www.ablyft.com/de/datenschutz/</a>.
+        <a href="https://www.ablyft.com/de/datenschutz/" target="_blank" rel="noopener">https://www.ablyft.com/de/datenschutz/</a>.
       </p>
     </section>
 
-    <section class="mb-6">
-      <h2 class="mb-3 mt-10 font-display text-2xl font-bold text-neutral-900 dark:text-white">8. Weitere Plugins und Tools</h2>
+    <section>
+      <h2 id="weitere-plugins-und-tools">8. Weitere Plugins und Tools</h2>
 
-      <h3 class="mb-2 mt-6 font-display text-xl font-semibold text-neutral-900 dark:text-white">Netlify (Formularverarbeitung)</h3>
-      <p class="mb-4">
+      <h3>Netlify (Formularverarbeitung)</h3>
+      <p>
         Die über unser Kontaktformular übermittelten Daten werden mithilfe des Dienstes „Netlify Forms“ verarbeitet. Anbieter ist die Netlify, Inc., 512 2nd Street, Suite 200, San Francisco, CA 94107, USA. Wenn Sie das Kontaktformular absenden, werden Ihre Eingaben an Netlify übermittelt und dort verarbeitet; dabei können Daten auf Servern in den USA verarbeitet werden.
       </p>
-      <p class="mb-4">
+      <p>
         Die Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO (Bearbeitung Ihrer Anfrage) bzw. Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einer sicheren und zuverlässigen Bereitstellung unseres Kontaktformulars). Weitere Informationen finden Sie in der Datenschutzerklärung von Netlify:
-        <a href="https://www.netlify.com/privacy/" target="_blank" class="font-medium text-lime-700 dark:text-lime-400 underline decoration-lime-400 decoration-2 underline-offset-2 hover:text-lime-600">https://www.netlify.com/privacy/</a>.
+        <a href="https://www.netlify.com/privacy/" target="_blank" rel="noopener">https://www.netlify.com/privacy/</a>.
       </p>
 
-      <h3 class="mb-2 mt-6 font-display text-xl font-semibold text-neutral-900 dark:text-white">Google reCAPTCHA</h3>
-      <p class="mb-4">
+      <h3>Google reCAPTCHA</h3>
+      <p>
         Zum Schutz unseres Kontaktformulars vor missbräuchlichen Eingaben und Spam nutzen wir „reCAPTCHA“ von Google (im Rahmen von Netlify Forms). Anbieter ist die Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland. Mit reCAPTCHA wird geprüft, ob die Eingabe durch einen Menschen oder durch ein automatisiertes Programm erfolgt. Hierzu analysiert reCAPTCHA das Verhalten des Websitebesuchers anhand verschiedener Merkmale. Diese Analyse beginnt, sobald Sie mit dem Kontaktformular interagieren. Zur Auswertung wertet reCAPTCHA verschiedene Informationen aus (z. B. IP-Adresse, Verweildauer auf der Website, vom Nutzer getätigte Mausbewegungen). Die erfassten Daten werden an Google übermittelt.
       </p>
-      <p class="mb-4">
+      <p>
         Die Nutzung von reCAPTCHA erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Der Websitebetreiber hat ein berechtigtes Interesse daran, seine Webangebote vor missbräuchlicher automatisierter Ausspähung und vor Spam zu schützen. Sofern eine entsprechende Einwilligung abgefragt wurde, erfolgt die Verarbeitung ausschließlich auf Grundlage von Art. 6 Abs. 1 lit. a DSGVO und § 25 Abs. 1 TTDSG. Die Einwilligung ist jederzeit widerrufbar. Weitere Informationen zu Google reCAPTCHA entnehmen Sie den Datenschutzbestimmungen und den Nutzungsbedingungen von Google unter
-        <a href="https://policies.google.com/privacy?hl=de" target="_blank" class="font-medium text-lime-700 dark:text-lime-400 underline decoration-lime-400 decoration-2 underline-offset-2 hover:text-lime-600">https://policies.google.com/privacy?hl=de</a> und
-        <a href="https://policies.google.com/terms?hl=de" target="_blank" class="font-medium text-lime-700 dark:text-lime-400 underline decoration-lime-400 decoration-2 underline-offset-2 hover:text-lime-600">https://policies.google.com/terms?hl=de</a>.
+        <a href="https://policies.google.com/privacy?hl=de" target="_blank" rel="noopener">https://policies.google.com/privacy?hl=de</a> und
+        <a href="https://policies.google.com/terms?hl=de" target="_blank" rel="noopener">https://policies.google.com/terms?hl=de</a>.
       </p>
 
-      <h3 class="mb-2 mt-6 font-display text-xl font-semibold text-neutral-900 dark:text-white">Cookie-Consent-Tool</h3>
-      <p class="mb-4">
+      <h3>Cookie-Consent-Tool</h3>
+      <p>
         Diese Website nutzt ein Cookie-Consent-Tool, um Ihre Einwilligung zur Speicherung bestimmter Cookies bzw. zum Einsatz bestimmter Technologien einzuholen und diese datenschutzkonform zu dokumentieren. Zu diesem Zweck wird Ihre Einwilligungsentscheidung in Ihrem Browser gespeichert (Cookie bzw. lokaler Speicher, z. B. <code>cc_cookie</code>), damit wir die Einwilligung bei erneutem Seitenaufruf nicht erneut abfragen müssen und Ihre Auswahl nachweisen können. Gespeichert werden insbesondere Ihre Einwilligung bzw. deren Widerruf sowie der Zeitpunkt der Erteilung. Eine Weitergabe an Dritte findet nicht statt.
       </p>
-      <p class="mb-4">
+      <p>
         Die Speicherung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. c DSGVO (rechtliche Verpflichtung zum Nachweis der Einwilligung) sowie unserem berechtigten Interesse an einer rechtskonformen Einwilligungsverwaltung (Art. 6 Abs. 1 lit. f DSGVO). Ihre einmal getroffene Auswahl können Sie jederzeit über den Link „Cookie-Einstellungen“ im Seitenfuß ändern oder widerrufen.
       </p>
     </section>
-  </div>
-  <div id="footer-placeholder"></div>
   
+      </article>
+    </div>
+  </section>
+</main>
+<div id="footer-placeholder"></div>
 </body>
 </html>

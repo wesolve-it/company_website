@@ -18,276 +18,146 @@
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="description" content="Maßgeschneiderte Apps für iOS und Android – von der Idee bis zum App Store. Für kleine Unternehmen, die ihre Kunden direkt erreichen wollen.">
+  <link rel="preload" href="/assets/fonts/onest-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link href="../dist/styles.css" rel="stylesheet">
   <script src="/js/theme.js"></script>
   <link rel="icon" type="image/x-icon" href="../assets/img/Wesolveit_loigo.svg" />
-  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
-  <script src="../js/navigation.js" defer></script>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Montserrat:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script defer src="/js/vendor/alpine-3.14.8.min.js"></script>
+  <script src="/js/navigation.js" defer></script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Was kostet eine App?", "acceptedAnswer": {"@type": "Answer", "text": "Das hängt vom Funktionsumfang ab. Eine schlanke erste Version ist oft günstiger, als viele denken – und ein guter Weg, die Idee am Markt zu testen. Nach dem Erstgespräch bekommst du ein Festpreis-Angebot."}}, {"@type": "Question", "name": "Wie lange dauert die Entwicklung?", "acceptedAnswer": {"@type": "Answer", "text": "Eine erste Version ist je nach Umfang oft in zwei bis drei Monaten im App Store. Danach entwickeln wir in Etappen weiter – so ist deine App früh im Einsatz und wächst mit dem Feedback deiner Kunden."}}, {"@type": "Question", "name": "Brauche ich getrennte Apps für iPhone und Android?", "acceptedAnswer": {"@type": "Answer", "text": "Nein. Wir entwickeln deine App einmal, und sie läuft auf beiden Plattformen. Das spart deutlich Kosten gegenüber zwei getrennten Entwicklungen."}}, {"@type": "Question", "name": "Übernehmt ihr die Veröffentlichung im App Store?", "acceptedAnswer": {"@type": "Answer", "text": "Ja, komplett – inklusive der Freigabeprozesse bei Apple und Google. Du musst dich um nichts kümmern."}}, {"@type": "Question", "name": "Lohnt sich eine App für ein kleines Unternehmen überhaupt?", "acceptedAnswer": {"@type": "Answer", "text": "Wenn deine Kunden regelmäßig bei dir kaufen, buchen oder bestellen: sehr wahrscheinlich ja. Wenn nicht, sagen wir dir das ehrlich – mach am besten den kostenlosen Quick-Check, dann bekommst du in 48 Stunden unsere Einschätzung."}}]}</script>
 </head>
-<body class="bg-white text-neutral-900 dark:bg-neutral-950 dark:text-neutral-100 overflow-x-hidden">
-
-  <!-- Hero -->
-  <section class="relative overflow-hidden">
-    <div class="pointer-events-none absolute -top-24 -right-24 h-80 w-80 rounded-full bg-lime-300/40 blur-3xl dark:bg-lime-500/10"></div>
-    <div class="pointer-events-none absolute inset-0 opacity-[0.35] dark:opacity-[0.08]" style="background-image: radial-gradient(#d4d4d4 1px, transparent 1px); background-size: 28px 28px;"></div>
-    <div class="relative mx-auto grid max-w-screen-xl items-center gap-14 px-6 pb-20 pt-32 lg:grid-cols-2 lg:gap-20">
-      <div>
-        <span class="inline-flex items-center rounded-full bg-lime-100 px-4 py-1.5 font-display text-xs font-bold uppercase tracking-wide text-lime-800 dark:bg-lime-950 dark:text-lime-300">Unsere Leistungen</span>
-        <h1 class="mt-4 font-display text-4xl font-bold leading-tight tracking-tight lg:text-5xl">
-          <span class="relative inline-block">
-            <span class="absolute inset-x-0 bottom-1 h-[0.55em] -rotate-1 rounded-sm bg-lime-300 dark:bg-lime-400/30"></span>
-            <span class="relative">App-Entwicklung</span>
-          </span>
-        </h1>
-        <p class="mt-5 max-w-xl leading-relaxed text-neutral-600 dark:text-neutral-400 lg:text-lg">Eine eigene App bringt dich direkt auf das Smartphone deiner Kunden – für Bestellungen, Termine, Treueprogramme und mehr. Wir begleiten dich von der ersten Idee bis zur Veröffentlichung im App Store und darüber hinaus.</p>
-        <div class="mt-8 flex flex-wrap items-center gap-4">
-          <a data-umami-event="cta-erstgespraech" href="/kontakt" class="group inline-flex items-center gap-2 rounded-full bg-neutral-900 px-7 py-4 font-display font-semibold text-lime-300 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[6px_6px_0px_0px_#a3e635] dark:bg-lime-400 dark:text-neutral-900 dark:hover:bg-lime-300 w-full justify-center sm:w-auto">
-            Kostenloses Erstgespräch
-            <svg class="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-          </a>
-          <a href="/referenzen" class="inline-flex items-center gap-2 rounded-full border-2 border-neutral-900 px-7 py-[14px] font-display font-semibold text-neutral-900 transition-colors duration-300 hover:bg-lime-300 dark:border-white dark:text-white dark:hover:border-lime-300 dark:hover:text-neutral-900 w-full justify-center sm:w-auto">Unsere Referenzen</a>
+<body data-hero="dark" class="overflow-x-hidden bg-white font-text text-wesolve-green-950 antialiased dark:bg-wesolve-green-950 dark:text-wesolve-green-50">
+<main>
+  <!-- Kopf: Nutzen als Überschrift, echtes Projekt als Bild -->
+  <section class="hero-panel relative overflow-hidden bg-wesolve-green-950 px-4 pb-20 pt-28 text-white sm:px-6 lg:pb-28 lg:pt-36" aria-labelledby="page-title">
+    <div class="mx-auto max-w-screen-xl">
+      <a href="/leistungen" class="hero-in back-link inline-flex items-center gap-2 text-sm font-semibold text-wesolve-green-200 hover:text-white" style="--d:0"><svg class="h-4 w-4 rotate-180" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Alle Leistungen</a>
+      <div class="mt-10 grid items-center gap-12 lg:grid-cols-12 lg:gap-10">
+        <div class="lg:col-span-6">
+          <p class="hero-in text-sm font-semibold uppercase tracking-[0.18em] text-wesolve-accent-300" style="--d:1">App-Entwicklung</p>
+          <h1 id="page-title" style="--d:1" class="hero-in mt-6 font-text text-[clamp(2.5rem,5.2vw,4.5rem)] font-bold leading-[1] tracking-[-0.05em]">Der direkte Draht zu deinen Kunden.</h1>
+          <p style="--d:2" class="hero-in mt-7 max-w-xl text-lg leading-relaxed text-wesolve-green-100">Eine eigene App bringt dich direkt auf das Smartphone deiner Kunden – für Bestellungen, Termine, Treueprogramme und mehr. Wir begleiten dich von der ersten Idee bis zur Veröffentlichung im App Store und darüber hinaus.</p>
+          <div style="--d:3" class="hero-in mt-9 flex flex-col gap-3 sm:flex-row"><a data-umami-event="cta-erstgespraech" href="/kontakt" class="btn-primary">Kostenloses Erstgespräch <svg class="h-4 w-4" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="/referenzen" class="btn-secondary-dark">Unsere Referenzen</a></div>
         </div>
-      </div>
-      <div class="relative">
-        <div class="absolute -inset-3 rotate-2 rounded-[2rem] bg-lime-300"></div>
-        <img src="../assets/img/illustration-app.svg" alt="Illustration einer Smartphone-App mit Benachrichtigung" class="relative w-full -rotate-1 rounded-[2rem] transition-transform duration-500 hover:rotate-0" loading="eager" />
+        <figure style="--d:3" class="hero-in lg:col-span-6">
+          <img width="1600" height="1200" src="../assets/img/standing-ipad-mockup-1.webp" alt="Business Seating App des 1. FC Nürnberg auf einem iPad" class="w-full rounded-2xl object-cover" fetchpriority="high">
+          <figcaption class="mt-4 text-sm text-wesolve-green-300">Beispiel: 1. FC Nürnberg</figcaption>
+        </figure>
       </div>
     </div>
   </section>
 
-  <!-- Problem Section -->
-  <section class="bg-neutral-50 px-6 py-20 dark:bg-neutral-900/40">
+  <!-- Wiedererkennen: typische Sätze von Kunden -->
+  <section class="px-4 py-20 sm:px-6 lg:py-28" aria-labelledby="problem-title">
     <div class="mx-auto max-w-screen-xl">
-      <span class="inline-flex items-center rounded-full bg-lime-100 px-4 py-1.5 font-display text-xs font-bold uppercase tracking-wide text-lime-800 dark:bg-lime-950 dark:text-lime-300">Kommt dir das bekannt vor?</span>
-      <h2 class="mt-4 max-w-3xl font-display text-3xl font-bold tracking-tight lg:text-4xl">Der direkte Weg zu deinen Kunden ist heute das Smartphone</h2>
-      <div class="mt-12 grid gap-6 md:grid-cols-3">
-        <div class="rounded-3xl border-2 border-neutral-200 bg-white p-8 dark:border-neutral-800 dark:bg-neutral-900">
-          <svg class="h-8 w-8 text-wesolve-accent-coral-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
-          <p class="mt-4 leading-relaxed text-neutral-600 dark:text-neutral-400">„Meine Stammkunden würden gern direkt bei mir bestellen oder buchen – aber der Weg ist umständlich."</p>
-        </div>
-        <div class="rounded-3xl border-2 border-neutral-200 bg-white p-8 dark:border-neutral-800 dark:bg-neutral-900">
-          <svg class="h-8 w-8 text-wesolve-accent-coral-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
-          <p class="mt-4 leading-relaxed text-neutral-600 dark:text-neutral-400">„Ich zahle hohe Provisionen an Plattformen, die zwischen mir und meinen Kunden stehen."</p>
-        </div>
-        <div class="rounded-3xl border-2 border-neutral-200 bg-white p-8 dark:border-neutral-800 dark:bg-neutral-900">
-          <svg class="h-8 w-8 text-wesolve-accent-coral-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
-          <p class="mt-4 leading-relaxed text-neutral-600 dark:text-neutral-400">„Ich will meine Kunden über Aktionen informieren – erreiche sie aber nicht zuverlässig."</p>
-        </div>
-      </div>
-      <p class="mt-10 font-display text-xl font-semibold">Kommt dir bekannt vor? <span class="text-lime-600 dark:text-lime-400">Dann bist du hier richtig.</span></p>
+      <h2 id="problem-title" class="section-title mt-0 max-w-3xl">Der direkte Weg zu deinen Kunden ist heute das Smartphone</h2>
+      <ul data-reveal class="mt-12 grid gap-8 md:grid-cols-3"><li class="border-l-2 border-wesolve-accent-400 pl-5 text-lg leading-relaxed text-wesolve-green-900 dark:text-wesolve-green-100">„Meine Stammkunden würden gern direkt bei mir bestellen oder buchen – aber der Weg ist umständlich.“</li><li class="border-l-2 border-wesolve-accent-400 pl-5 text-lg leading-relaxed text-wesolve-green-900 dark:text-wesolve-green-100">„Ich zahle hohe Provisionen an Plattformen, die zwischen mir und meinen Kunden stehen.“</li><li class="border-l-2 border-wesolve-accent-400 pl-5 text-lg leading-relaxed text-wesolve-green-900 dark:text-wesolve-green-100">„Ich will meine Kunden über Aktionen informieren – erreiche sie aber nicht zuverlässig.“</li></ul>
+      <p class="mt-12 text-xl font-semibold">Kommt dir bekannt vor? Dann bist du hier richtig.</p>
     </div>
   </section>
 
-  <!-- Was du bekommst -->
-  <section class="bg-white px-6 py-20 dark:bg-neutral-950">
+  <!-- Angebot -->
+  <section class="bg-wesolve-green-50 px-4 py-20 dark:bg-wesolve-green-900/60 sm:px-6 lg:py-28" aria-labelledby="offer-title">
     <div class="mx-auto max-w-screen-xl">
-      <span class="inline-flex items-center rounded-full bg-lime-100 px-4 py-1.5 font-display text-xs font-bold uppercase tracking-wide text-lime-800 dark:bg-lime-950 dark:text-lime-300">Was du bekommst</span>
-      <h2 class="mt-4 max-w-3xl font-display text-3xl font-bold tracking-tight lg:text-4xl">Von der Idee bis in den App Store</h2>
-
-      <div class="mt-12 grid gap-6 md:grid-cols-3">
-        <div class="flex h-full flex-col rounded-3xl border-2 border-neutral-200 bg-white p-8 transition-all duration-300 hover:-translate-y-2 hover:border-neutral-900 hover:shadow-[8px_8px_0px_0px_#a3e635] dark:border-neutral-800 dark:bg-neutral-900 dark:hover:border-lime-400">
-          <span class="font-display text-5xl font-bold text-lime-400">01</span>
-          <h3 class="mt-5 font-display text-xl font-bold">Eine App für iPhone &amp; Android</h3>
-          <p class="mt-3 flex-grow text-sm leading-relaxed text-neutral-600 dark:text-neutral-400">Wir entwickeln deine App einmal – und sie läuft auf iPhone und Android gleichermaßen. Das spart Entwicklungskosten und stellt sicher, dass du alle deine Kunden erreichst, egal welches Gerät sie nutzen.</p>
-        </div>
-        <div class="flex h-full flex-col rounded-3xl border-2 border-neutral-200 bg-white p-8 transition-all duration-300 hover:-translate-y-2 hover:border-neutral-900 hover:shadow-[8px_8px_0px_0px_#a3e635] dark:border-neutral-800 dark:bg-neutral-900 dark:hover:border-lime-400">
-          <span class="font-display text-5xl font-bold text-lime-400">02</span>
-          <h3 class="mt-5 font-display text-xl font-bold">Durchdacht bis ins Detail</h3>
-          <p class="mt-3 flex-grow text-sm leading-relaxed text-neutral-600 dark:text-neutral-400">Deine Kunden nutzen die App unterwegs und oft nebenbei. Deshalb gestalten wir jede Ansicht so, dass sie sich sofort intuitiv bedienen lässt – schnell, übersichtlich und ganz ohne Anleitung.</p>
-        </div>
-        <div class="flex h-full flex-col rounded-3xl border-2 border-neutral-200 bg-white p-8 transition-all duration-300 hover:-translate-y-2 hover:border-neutral-900 hover:shadow-[8px_8px_0px_0px_#a3e635] dark:border-neutral-800 dark:bg-neutral-900 dark:hover:border-lime-400">
-          <span class="font-display text-5xl font-bold text-lime-400">03</span>
-          <h3 class="mt-5 font-display text-xl font-bold">Veröffentlichung &amp; Updates inklusive</h3>
-          <p class="mt-3 flex-grow text-sm leading-relaxed text-neutral-600 dark:text-neutral-400">App-Store-Freigabe, technische Updates, neue Funktionen: Nach dem Start lassen wir dich nicht allein. Deine App bleibt aktuell und sicher – und wächst mit deinem Unternehmen mit.</p>
-        </div>
+      <div class="grid items-center gap-10 lg:grid-cols-12">
+        <h2 id="offer-title" class="section-title mt-0 lg:col-span-6">Von der Idee bis in den App Store</h2>
+        <div data-reveal class="ill-wrap mx-auto w-full max-w-md lg:col-span-5 lg:col-start-8 lg:max-w-none"><svg class="ill" viewBox="0 0 480 320" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<rect x="170" y="16" width="140" height="288" rx="26" class="ill-paper"/>
+<path d="M218 32h44"/>
+<rect x="190" y="56" width="100" height="56" rx="10" class="ill-soft"/>
+<path d="M190 132h100M190 152h70M190 184h100M190 204h60"/>
+<rect x="190" y="236" width="100" height="30" rx="15" class="ill-accent"/>
+<rect x="28" y="70" width="158" height="58" rx="14" class="ill-paper"/>
+<circle cx="56" cy="99" r="12" class="ill-accent"/><path d="M78 92h86M78 108h58"/>
+<path d="m186 112 0 0"/>
+<rect x="296" y="178" width="158" height="96" rx="14" class="ill-paper"/>
+<path d="M316 202h70"/>
+<circle cx="326" cy="244" r="12" class="ill-accent"/><circle cx="360" cy="244" r="12" class="ill-accent"/><circle cx="394" cy="244" r="12" class="ill-accent"/><circle cx="428" cy="244" r="12" class="ill-soft"/>
+<path d="m320 244 4 4 8-8M354 244l4 4 8-8M388 244l4 4 8-8"/></svg></div>
       </div>
-
-      <!-- Aus der Praxis -->
-      <div class="mt-12 flex flex-col items-center justify-between gap-6 rounded-3xl border-2 border-lime-300 bg-lime-50 p-8 text-center dark:border-lime-400/30 dark:bg-lime-950/30 md:flex-row md:text-left">
-        <div>
-          <span class="font-display text-xs font-bold uppercase tracking-wide text-lime-700 dark:text-lime-300">Aus der Praxis</span>
-          <h3 class="mt-1 font-display text-xl font-bold lg:text-2xl">1. FC Nürnberg</h3>
-          <p class="mt-2 text-sm leading-relaxed text-neutral-600 dark:text-neutral-400">Business Seating App für den VIP-Bereich – für einen reibungslosen Ablauf am Spieltag.</p>
-        </div>
-        <a href="/referenzen/fc-nuernberg" class="group inline-flex flex-shrink-0 items-center gap-2 rounded-full bg-neutral-900 px-7 py-3.5 font-display font-semibold text-lime-300 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[4px_4px_0px_0px_#a3e635] dark:bg-lime-400 dark:text-neutral-900 dark:hover:bg-lime-300 w-full justify-center sm:w-auto">
-          Zur Erfolgsgeschichte
-          <svg class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-        </a>
-      </div>
+      <ul data-reveal class="mt-12 grid gap-10 md:grid-cols-3"><li class="border-t-2 border-wesolve-green-200 pt-6 dark:border-wesolve-green-700"><span class="grid h-11 w-11 place-items-center rounded-xl bg-wesolve-green-950 text-wesolve-accent-300 dark:bg-wesolve-green-800" aria-hidden="true"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none"><rect x="7" y="2.5" width="10" height="19" rx="2.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="M11 18.5h2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3 class="mt-5 text-xl font-semibold tracking-[-0.02em]">Eine App für iPhone &amp; Android</h3><p class="mt-3 leading-relaxed text-wesolve-green-700 dark:text-wesolve-green-200">Wir entwickeln deine App einmal – und sie läuft auf iPhone und Android gleichermaßen. Das spart Entwicklungskosten und stellt sicher, dass du alle deine Kunden erreichst, egal welches Gerät sie nutzen.</p></li><li class="border-t-2 border-wesolve-green-200 pt-6 dark:border-wesolve-green-700"><span class="grid h-11 w-11 place-items-center rounded-xl bg-wesolve-green-950 text-wesolve-accent-300 dark:bg-wesolve-green-800" aria-hidden="true"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none"><path d="m5 4 13 6-5.5 1.5L11 17Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3 class="mt-5 text-xl font-semibold tracking-[-0.02em]">Durchdacht bis ins Detail</h3><p class="mt-3 leading-relaxed text-wesolve-green-700 dark:text-wesolve-green-200">Deine Kunden nutzen die App unterwegs und oft nebenbei. Deshalb gestalten wir jede Ansicht so, dass sie sich sofort intuitiv bedienen lässt – schnell, übersichtlich und ganz ohne Anleitung.</p></li><li class="border-t-2 border-wesolve-green-200 pt-6 dark:border-wesolve-green-700"><span class="grid h-11 w-11 place-items-center rounded-xl bg-wesolve-green-950 text-wesolve-accent-300 dark:bg-wesolve-green-800" aria-hidden="true"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none"><path d="M12 15V4m-4 4 4-4 4 4M5 15v4h14v-4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3 class="mt-5 text-xl font-semibold tracking-[-0.02em]">Veröffentlichung &amp; Updates inklusive</h3><p class="mt-3 leading-relaxed text-wesolve-green-700 dark:text-wesolve-green-200">App-Store-Freigabe, technische Updates, neue Funktionen: Nach dem Start lassen wir dich nicht allein. Deine App bleibt aktuell und sicher – und wächst mit deinem Unternehmen mit.</p></li></ul>
     </div>
   </section>
 
-  <!-- Ablauf -->
-  <section class="bg-neutral-900 px-6 py-20 dark:border-y dark:border-neutral-800">
+  <!-- Ablauf mit Zeitangaben: echte Abfolge -->
+  <section class="bg-wesolve-green-950 px-4 py-24 text-white sm:px-6 lg:py-32" aria-labelledby="process-title">
     <div class="mx-auto max-w-screen-xl">
-      <span class="inline-flex items-center rounded-full bg-lime-400/10 px-4 py-1.5 font-display text-xs font-bold uppercase tracking-wide text-lime-300">So läuft dein Projekt ab</span>
-      <h2 class="mt-4 max-w-3xl font-display text-3xl font-bold tracking-tight text-white lg:text-4xl">Von der Idee bis in den App Store</h2>
-      <p class="mt-4 max-w-3xl text-neutral-400">Ein typisches App-Projekt – der genaue Zeitplan hängt vom Funktionsumfang ab.</p>
-      <div class="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-        <div class="rounded-3xl border-2 border-neutral-800 bg-neutral-800/50 p-8">
-          <div class="flex items-center gap-3">
-            <span class="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full bg-lime-400 font-display text-lg font-bold text-neutral-900">1</span>
-            <span class="font-display text-sm font-bold uppercase tracking-wide text-lime-400">Woche 1–2</span>
-          </div>
-          <h3 class="mt-4 font-display text-lg font-bold text-white">Idee &amp; Konzept</h3>
-          <p class="mt-2 text-sm leading-relaxed text-neutral-400">Wir schärfen deine Idee, definieren die wichtigsten Funktionen und planen die Umsetzung.</p>
-        </div>
-        <div class="rounded-3xl border-2 border-neutral-800 bg-neutral-800/50 p-8">
-          <div class="flex items-center gap-3">
-            <span class="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full bg-lime-400 font-display text-lg font-bold text-neutral-900">2</span>
-            <span class="font-display text-sm font-bold uppercase tracking-wide text-lime-400">Woche 3–4</span>
-          </div>
-          <h3 class="mt-4 font-display text-lg font-bold text-white">Design &amp; Prototyp</h3>
-          <p class="mt-2 text-sm leading-relaxed text-neutral-400">Ein klickbarer Entwurf zeigt dir, wie sich deine App anfühlen wird – bevor die Entwicklung startet.</p>
-        </div>
-        <div class="rounded-3xl border-2 border-neutral-800 bg-neutral-800/50 p-8">
-          <div class="flex items-center gap-3">
-            <span class="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full bg-lime-400 font-display text-lg font-bold text-neutral-900">3</span>
-            <span class="font-display text-sm font-bold uppercase tracking-wide text-lime-400">ab Woche 5</span>
-          </div>
-          <h3 class="mt-4 font-display text-lg font-bold text-white">Entwicklung</h3>
-          <p class="mt-2 text-sm leading-relaxed text-neutral-400">Wir bauen die App in Etappen – du testest Zwischenstände direkt auf deinem eigenen Handy.</p>
-        </div>
-        <div class="rounded-3xl border-2 border-neutral-800 bg-neutral-800/50 p-8">
-          <div class="flex items-center gap-3">
-            <span class="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full bg-lime-400 font-display text-lg font-bold text-neutral-900">4</span>
-            <span class="font-display text-sm font-bold uppercase tracking-wide text-lime-400">Livegang</span>
-          </div>
-          <h3 class="mt-4 font-display text-lg font-bold text-white">App Store &amp; Updates</h3>
-          <p class="mt-2 text-sm leading-relaxed text-neutral-400">Wir übernehmen die Veröffentlichung bei Apple &amp; Google und halten deine App danach aktuell.</p>
-        </div>
-      </div>
+      <div class="max-w-3xl"><h2 id="process-title" class="section-title mt-0">Von der Idee bis in den App Store</h2><p class="mt-6 max-w-2xl text-lg leading-relaxed text-wesolve-green-200">Ein typisches App-Projekt – der genaue Zeitplan hängt vom Funktionsumfang ab.</p></div>
+      <ol data-reveal class="timeline timeline-4" aria-label="Ablauf"><li class="timeline-step"><span class="timeline-node">01</span><div class="timeline-content"><p class="text-sm font-semibold text-wesolve-accent-300">Woche 1–2</p><h3 class="mt-2 text-xl font-semibold">Idee &amp; Konzept</h3><p class="mt-3 leading-relaxed text-wesolve-green-200">Wir schärfen deine Idee, definieren die wichtigsten Funktionen und planen die Umsetzung.</p></div></li><li class="timeline-step"><span class="timeline-node">02</span><div class="timeline-content"><p class="text-sm font-semibold text-wesolve-accent-300">Woche 3–4</p><h3 class="mt-2 text-xl font-semibold">Design &amp; Prototyp</h3><p class="mt-3 leading-relaxed text-wesolve-green-200">Ein klickbarer Entwurf zeigt dir, wie sich deine App anfühlen wird – bevor die Entwicklung startet.</p></div></li><li class="timeline-step"><span class="timeline-node">03</span><div class="timeline-content"><p class="text-sm font-semibold text-wesolve-accent-300">ab Woche 5</p><h3 class="mt-2 text-xl font-semibold">Entwicklung</h3><p class="mt-3 leading-relaxed text-wesolve-green-200">Wir bauen die App in Etappen – du testest Zwischenstände direkt auf deinem eigenen Handy.</p></div></li><li class="timeline-step"><span class="timeline-node">04</span><div class="timeline-content"><p class="text-sm font-semibold text-wesolve-accent-300">Livegang</p><h3 class="mt-2 text-xl font-semibold">App Store &amp; Updates</h3><p class="mt-3 leading-relaxed text-wesolve-green-200">Wir übernehmen die Veröffentlichung bei Apple &amp; Google und halten deine App danach aktuell.</p></div></li></ol>
     </div>
   </section>
 
-  <!-- Kundenstimme -->
-  <section class="bg-white px-6 py-20 dark:bg-neutral-950">
-    <figure class="mx-auto max-w-3xl text-center">
-      <span class="font-display text-7xl font-bold leading-none text-lime-400">„</span>
-      <blockquote class="font-display text-xl font-semibold leading-relaxed text-neutral-900 dark:text-white lg:text-2xl">Wir vom 1. FC Nürnberg sind sehr zufrieden über die Zusammenarbeit mit wesolve-IT. Durch die Zusammenarbeit sparen wir uns viel Zeit und die Arbeit wird deutlich einfacher.</blockquote>
-      <figcaption class="mt-6 text-sm text-neutral-500 dark:text-neutral-400"><span class="font-semibold text-neutral-900 dark:text-white">Henrik Brüggen</span> · Vermarktung/Marketing 1. FC Nürnberg</figcaption>
-    </figure>
+  <section class="px-4 py-20 sm:px-6 lg:py-28" aria-label="Kundenstimme">
+    <div class="mx-auto grid max-w-screen-xl items-center gap-12 lg:grid-cols-12 lg:gap-16">
+      <figure class="lg:col-span-7">
+        <blockquote class="text-[clamp(1.45rem,2.6vw,2.25rem)] font-medium leading-snug tracking-[-0.02em]">„Wir vom 1. FC Nürnberg sind sehr zufrieden über die Zusammenarbeit mit wesolve-IT. Durch die Zusammenarbeit sparen wir uns viel Zeit und die Arbeit wird deutlich einfacher.“</blockquote>
+        <figcaption class="mt-8"><span class="block font-semibold">Henrik Brüggen</span><span class="mt-1 block text-sm text-wesolve-green-600 dark:text-wesolve-green-300">Vermarktung/Marketing 1. FC Nürnberg</span></figcaption>
+      </figure>
+      <a href="/referenzen/fc-nuernberg" data-reveal class="ref-tile group lg:col-span-5">
+        <div class="hero-panel aspect-[16/10] overflow-hidden bg-wesolve-green-950 p-6"><img width="1600" height="1200" src="../assets/img/standing-ipad-mockup-1.webp" alt="" loading="lazy" class="ref-shot h-full w-full rounded-xl object-cover"></div>
+        <div class="p-6 sm:p-7"><h3 class="text-xl font-semibold tracking-[-0.02em]">1. FC Nürnberg</h3><p class="mt-2 leading-relaxed text-wesolve-green-700 dark:text-wesolve-green-200">Business Seating App für den VIP-Bereich – für einen reibungslosen Ablauf am Spieltag.</p><span class="ref-more mt-5 inline-flex items-center gap-2 font-semibold text-wesolve-green-800 dark:text-wesolve-green-100">Projekt ansehen <svg class="h-4 w-4" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
+      </a>
+    </div>
   </section>
 
-  <!-- Immer mit dabei -->
-  <section class="bg-neutral-50 px-6 py-20 dark:bg-neutral-900/40">
+  <!-- Inklusive -->
+  <section class="bg-wesolve-green-50 px-4 py-20 dark:bg-wesolve-green-900/60 sm:px-6 lg:py-28" aria-labelledby="included-title">
     <div class="mx-auto max-w-screen-xl">
-      <span class="inline-flex items-center rounded-full bg-lime-100 px-4 py-1.5 font-display text-xs font-bold uppercase tracking-wide text-lime-800 dark:bg-lime-950 dark:text-lime-300">Immer mit dabei</span>
-      <h2 class="mt-4 max-w-3xl font-display text-3xl font-bold tracking-tight lg:text-4xl">Bei uns selbstverständlich – ohne Aufpreis</h2>
-      <div class="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        <div class="flex items-start gap-4 rounded-2xl border-2 border-neutral-200 bg-white p-5 dark:border-neutral-800 dark:bg-neutral-900">
-          <span class="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-lime-300"><svg class="h-5 w-5 text-neutral-900" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg></span>
-          <div>
-            <h3 class="font-display font-bold">Festpreis-Angebot</h3>
-            <p class="mt-1 text-sm text-neutral-600 dark:text-neutral-400">Keine versteckten Kosten, keine Überraschungen.</p>
-          </div>
-        </div>
-        <div class="flex items-start gap-4 rounded-2xl border-2 border-neutral-200 bg-white p-5 dark:border-neutral-800 dark:bg-neutral-900">
-          <span class="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-lime-300"><svg class="h-5 w-5 text-neutral-900" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg></span>
-          <div>
-            <h3 class="font-display font-bold">iPhone &amp; Android</h3>
-            <p class="mt-1 text-sm text-neutral-600 dark:text-neutral-400">Eine Entwicklung, beide Plattformen – ohne doppelte Kosten.</p>
-          </div>
-        </div>
-        <div class="flex items-start gap-4 rounded-2xl border-2 border-neutral-200 bg-white p-5 dark:border-neutral-800 dark:bg-neutral-900">
-          <span class="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-lime-300"><svg class="h-5 w-5 text-neutral-900" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg></span>
-          <div>
-            <h3 class="font-display font-bold">App-Store-Veröffentlichung</h3>
-            <p class="mt-1 text-sm text-neutral-600 dark:text-neutral-400">Wir übernehmen den kompletten Freigabeprozess bei Apple und Google.</p>
-          </div>
-        </div>
-        <div class="flex items-start gap-4 rounded-2xl border-2 border-neutral-200 bg-white p-5 dark:border-neutral-800 dark:bg-neutral-900">
-          <span class="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-lime-300"><svg class="h-5 w-5 text-neutral-900" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg></span>
-          <div>
-            <h3 class="font-display font-bold">Updates &amp; Wartung</h3>
-            <p class="mt-1 text-sm text-neutral-600 dark:text-neutral-400">Deine App bleibt mit neuen iOS- und Android-Versionen kompatibel.</p>
-          </div>
-        </div>
-        <div class="flex items-start gap-4 rounded-2xl border-2 border-neutral-200 bg-white p-5 dark:border-neutral-800 dark:bg-neutral-900">
-          <span class="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-lime-300"><svg class="h-5 w-5 text-neutral-900" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg></span>
-          <div>
-            <h3 class="font-display font-bold">DSGVO-konform</h3>
-            <p class="mt-1 text-sm text-neutral-600 dark:text-neutral-400">Datenschutz ist von Anfang an mitgedacht – nicht nachgerüstet.</p>
-          </div>
-        </div>
-        <div class="flex items-start gap-4 rounded-2xl border-2 border-neutral-200 bg-white p-5 dark:border-neutral-800 dark:bg-neutral-900">
-          <span class="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-lime-300"><svg class="h-5 w-5 text-neutral-900" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg></span>
-          <div>
-            <h3 class="font-display font-bold">Direkter Draht</h3>
-            <p class="mt-1 text-sm text-neutral-600 dark:text-neutral-400">Du sprichst mit dem Entwickler – nicht mit einer Hotline.</p>
-          </div>
-        </div>
-      </div>
+      <h2 id="included-title" class="section-title mt-0 max-w-3xl">Immer dabei – ohne Aufpreis</h2>
+      <ul data-reveal class="feature-grid mt-12 grid gap-px overflow-hidden rounded-2xl border border-wesolve-green-200 bg-wesolve-green-200 dark:border-wesolve-green-800 dark:bg-wesolve-green-800 sm:grid-cols-2 lg:grid-cols-3">
+        <li class="feature-item"><span class="grid h-11 w-11 place-items-center rounded-xl bg-wesolve-green-950 text-wesolve-accent-300 dark:bg-wesolve-green-800" aria-hidden="true"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none"><path d="M17 6.5A6.5 6.5 0 1 0 17 17.5M4 10.5h9M4 13.5h9" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3 class="mt-5 text-lg font-semibold">Festpreis-Angebot</h3><p class="mt-2 leading-relaxed text-wesolve-green-700 dark:text-wesolve-green-200">Keine versteckten Kosten, keine Überraschungen.</p></li>
+        <li class="feature-item"><span class="grid h-11 w-11 place-items-center rounded-xl bg-wesolve-green-950 text-wesolve-accent-300 dark:bg-wesolve-green-800" aria-hidden="true"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none"><rect x="7" y="2.5" width="10" height="19" rx="2.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="M11 18.5h2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3 class="mt-5 text-lg font-semibold">iPhone &amp; Android</h3><p class="mt-2 leading-relaxed text-wesolve-green-700 dark:text-wesolve-green-200">Eine Entwicklung, beide Plattformen – ohne doppelte Kosten.</p></li>
+        <li class="feature-item"><span class="grid h-11 w-11 place-items-center rounded-xl bg-wesolve-green-950 text-wesolve-accent-300 dark:bg-wesolve-green-800" aria-hidden="true"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none"><path d="M12 15V4m-4 4 4-4 4 4M5 15v4h14v-4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3 class="mt-5 text-lg font-semibold">App-Store-Veröffentlichung</h3><p class="mt-2 leading-relaxed text-wesolve-green-700 dark:text-wesolve-green-200">Wir übernehmen den kompletten Freigabeprozess bei Apple und Google.</p></li>
+        <li class="feature-item"><span class="grid h-11 w-11 place-items-center rounded-xl bg-wesolve-green-950 text-wesolve-accent-300 dark:bg-wesolve-green-800" aria-hidden="true"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none"><path d="M19 8a7.5 7.5 0 0 0-13.5 1M5 16a7.5 7.5 0 0 0 13.5-1M19 4v4h-4M5 20v-4h4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3 class="mt-5 text-lg font-semibold">Updates &amp; Wartung</h3><p class="mt-2 leading-relaxed text-wesolve-green-700 dark:text-wesolve-green-200">Deine App bleibt mit neuen iOS- und Android-Versionen kompatibel.</p></li>
+        <li class="feature-item"><span class="grid h-11 w-11 place-items-center rounded-xl bg-wesolve-green-950 text-wesolve-accent-300 dark:bg-wesolve-green-800" aria-hidden="true"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none"><path d="M12 3.5 5 6v5.5c0 4.2 3 7.5 7 9 4-1.5 7-4.8 7-9V6Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="m9 12 2 2 4-4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3 class="mt-5 text-lg font-semibold">DSGVO-konform</h3><p class="mt-2 leading-relaxed text-wesolve-green-700 dark:text-wesolve-green-200">Datenschutz ist von Anfang an mitgedacht – nicht nachgerüstet.</p></li>
+        <li class="feature-item"><span class="grid h-11 w-11 place-items-center rounded-xl bg-wesolve-green-950 text-wesolve-accent-300 dark:bg-wesolve-green-800" aria-hidden="true"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none"><path d="M4 6.5A2.5 2.5 0 0 1 6.5 4h11A2.5 2.5 0 0 1 20 6.5v7a2.5 2.5 0 0 1-2.5 2.5H10l-4 4v-4A2 2 0 0 1 4 14Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3 class="mt-5 text-lg font-semibold">Direkter Draht</h3><p class="mt-2 leading-relaxed text-wesolve-green-700 dark:text-wesolve-green-200">Du sprichst mit dem Entwickler – nicht mit einer Hotline.</p></li>
+      </ul>
     </div>
   </section>
 
   <!-- FAQ -->
-  <section class="bg-white px-6 py-20 dark:bg-neutral-950">
-    <div class="mx-auto max-w-screen-xl">
-      <span class="inline-flex items-center rounded-full bg-lime-100 px-4 py-1.5 font-display text-xs font-bold uppercase tracking-wide text-lime-800 dark:bg-lime-950 dark:text-lime-300">FAQ</span>
-      <h2 class="mt-4 max-w-3xl font-display text-3xl font-bold tracking-tight lg:text-4xl">Häufige Fragen zur App-Entwicklung</h2>
-      <div class="mt-12 max-w-3xl space-y-4">
-        <div x-data="{ open: false }" class="rounded-2xl border-2 border-neutral-200 bg-white dark:border-neutral-800 dark:bg-neutral-900">
-          <button @click="open = !open" class="flex w-full items-center justify-between gap-4 px-6 py-5 text-left font-display font-bold">
-            Was kostet eine App?
-            <svg class="h-5 w-5 flex-shrink-0 transition-transform duration-300" :class="open ? 'rotate-180' : ''" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
-          </button>
-          <p x-show="open" style="display: none;" class="px-6 pb-5 text-sm leading-relaxed text-neutral-600 dark:text-neutral-400">Das hängt vom Funktionsumfang ab. Eine schlanke erste Version ist oft günstiger, als viele denken – und ein guter Weg, die Idee am Markt zu testen. Nach dem Erstgespräch bekommst du ein Festpreis-Angebot.</p>
-        </div>
-        <div x-data="{ open: false }" class="rounded-2xl border-2 border-neutral-200 bg-white dark:border-neutral-800 dark:bg-neutral-900">
-          <button @click="open = !open" class="flex w-full items-center justify-between gap-4 px-6 py-5 text-left font-display font-bold">
-            Wie lange dauert die Entwicklung?
-            <svg class="h-5 w-5 flex-shrink-0 transition-transform duration-300" :class="open ? 'rotate-180' : ''" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
-          </button>
-          <p x-show="open" style="display: none;" class="px-6 pb-5 text-sm leading-relaxed text-neutral-600 dark:text-neutral-400">Eine erste Version ist je nach Umfang oft in zwei bis drei Monaten im App Store. Danach entwickeln wir in Etappen weiter – so ist deine App früh im Einsatz und wächst mit dem Feedback deiner Kunden.</p>
-        </div>
-        <div x-data="{ open: false }" class="rounded-2xl border-2 border-neutral-200 bg-white dark:border-neutral-800 dark:bg-neutral-900">
-          <button @click="open = !open" class="flex w-full items-center justify-between gap-4 px-6 py-5 text-left font-display font-bold">
-            Brauche ich getrennte Apps für iPhone und Android?
-            <svg class="h-5 w-5 flex-shrink-0 transition-transform duration-300" :class="open ? 'rotate-180' : ''" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
-          </button>
-          <p x-show="open" style="display: none;" class="px-6 pb-5 text-sm leading-relaxed text-neutral-600 dark:text-neutral-400">Nein. Wir entwickeln deine App einmal, und sie läuft auf beiden Plattformen. Das spart deutlich Kosten gegenüber zwei getrennten Entwicklungen.</p>
-        </div>
-        <div x-data="{ open: false }" class="rounded-2xl border-2 border-neutral-200 bg-white dark:border-neutral-800 dark:bg-neutral-900">
-          <button @click="open = !open" class="flex w-full items-center justify-between gap-4 px-6 py-5 text-left font-display font-bold">
-            Übernehmt ihr die Veröffentlichung im App Store?
-            <svg class="h-5 w-5 flex-shrink-0 transition-transform duration-300" :class="open ? 'rotate-180' : ''" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
-          </button>
-          <p x-show="open" style="display: none;" class="px-6 pb-5 text-sm leading-relaxed text-neutral-600 dark:text-neutral-400">Ja, komplett – inklusive der Freigabeprozesse bei Apple und Google. Du musst dich um nichts kümmern.</p>
-        </div>
-        <div x-data="{ open: false }" class="rounded-2xl border-2 border-neutral-200 bg-white dark:border-neutral-800 dark:bg-neutral-900">
-          <button @click="open = !open" class="flex w-full items-center justify-between gap-4 px-6 py-5 text-left font-display font-bold">
-            Lohnt sich eine App für ein kleines Unternehmen überhaupt?
-            <svg class="h-5 w-5 flex-shrink-0 transition-transform duration-300" :class="open ? 'rotate-180' : ''" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
-          </button>
-          <p x-show="open" style="display: none;" class="px-6 pb-5 text-sm leading-relaxed text-neutral-600 dark:text-neutral-400">Wenn deine Kunden regelmäßig bei dir kaufen, buchen oder bestellen: sehr wahrscheinlich ja. Wenn nicht, sagen wir dir das ehrlich – mach am besten den kostenlosen Quick-Check, dann bekommst du in 48 Stunden unsere Einschätzung.</p>
-        </div>
+  <section class="px-4 py-20 sm:px-6 lg:py-28" aria-labelledby="faq-title">
+    <div class="mx-auto grid max-w-screen-xl gap-10 lg:grid-cols-12 lg:gap-16">
+      <div class="lg:col-span-4"><div class="lg:sticky lg:top-28"><h2 id="faq-title" class="section-title mt-0">Häufige Fragen</h2><p class="mt-5 leading-relaxed text-wesolve-green-700 dark:text-wesolve-green-200">Deine Frage ist nicht dabei? <a href="/kontakt" class="font-semibold underline underline-offset-4">Schreib uns einfach.</a></p></div></div>
+      <div class="border-t border-wesolve-green-200 dark:border-wesolve-green-800 lg:col-span-8">
+          <div x-data="{ open: false }" class="border-b border-wesolve-green-200 dark:border-wesolve-green-800">
+            <h3><button type="button" @click="open = !open" :aria-expanded="open.toString()" aria-controls="faq-0" class="faq-btn flex w-full items-center justify-between gap-6 py-6 text-left text-lg font-semibold">Was kostet eine App?<span class="faq-icon grid h-8 w-8 shrink-0 place-items-center rounded-full border border-wesolve-green-300 dark:border-wesolve-green-600" :class="open && 'is-open'" aria-hidden="true"><svg class="h-4 w-4" viewBox="0 0 16 16" fill="none"><path d="M8 3v10M3 8h10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span></button></h3>
+            <div id="faq-0" x-show="open" x-transition.opacity.duration.200ms style="display: none;"><p class="max-w-2xl pb-6 leading-relaxed text-wesolve-green-700 dark:text-wesolve-green-200">Das hängt vom Funktionsumfang ab. Eine schlanke erste Version ist oft günstiger, als viele denken – und ein guter Weg, die Idee am Markt zu testen. Nach dem Erstgespräch bekommst du ein Festpreis-Angebot.</p></div>
+          </div>
+          <div x-data="{ open: false }" class="border-b border-wesolve-green-200 dark:border-wesolve-green-800">
+            <h3><button type="button" @click="open = !open" :aria-expanded="open.toString()" aria-controls="faq-1" class="faq-btn flex w-full items-center justify-between gap-6 py-6 text-left text-lg font-semibold">Wie lange dauert die Entwicklung?<span class="faq-icon grid h-8 w-8 shrink-0 place-items-center rounded-full border border-wesolve-green-300 dark:border-wesolve-green-600" :class="open && 'is-open'" aria-hidden="true"><svg class="h-4 w-4" viewBox="0 0 16 16" fill="none"><path d="M8 3v10M3 8h10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span></button></h3>
+            <div id="faq-1" x-show="open" x-transition.opacity.duration.200ms style="display: none;"><p class="max-w-2xl pb-6 leading-relaxed text-wesolve-green-700 dark:text-wesolve-green-200">Eine erste Version ist je nach Umfang oft in zwei bis drei Monaten im App Store. Danach entwickeln wir in Etappen weiter – so ist deine App früh im Einsatz und wächst mit dem Feedback deiner Kunden.</p></div>
+          </div>
+          <div x-data="{ open: false }" class="border-b border-wesolve-green-200 dark:border-wesolve-green-800">
+            <h3><button type="button" @click="open = !open" :aria-expanded="open.toString()" aria-controls="faq-2" class="faq-btn flex w-full items-center justify-between gap-6 py-6 text-left text-lg font-semibold">Brauche ich getrennte Apps für iPhone und Android?<span class="faq-icon grid h-8 w-8 shrink-0 place-items-center rounded-full border border-wesolve-green-300 dark:border-wesolve-green-600" :class="open && 'is-open'" aria-hidden="true"><svg class="h-4 w-4" viewBox="0 0 16 16" fill="none"><path d="M8 3v10M3 8h10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span></button></h3>
+            <div id="faq-2" x-show="open" x-transition.opacity.duration.200ms style="display: none;"><p class="max-w-2xl pb-6 leading-relaxed text-wesolve-green-700 dark:text-wesolve-green-200">Nein. Wir entwickeln deine App einmal, und sie läuft auf beiden Plattformen. Das spart deutlich Kosten gegenüber zwei getrennten Entwicklungen.</p></div>
+          </div>
+          <div x-data="{ open: false }" class="border-b border-wesolve-green-200 dark:border-wesolve-green-800">
+            <h3><button type="button" @click="open = !open" :aria-expanded="open.toString()" aria-controls="faq-3" class="faq-btn flex w-full items-center justify-between gap-6 py-6 text-left text-lg font-semibold">Übernehmt ihr die Veröffentlichung im App Store?<span class="faq-icon grid h-8 w-8 shrink-0 place-items-center rounded-full border border-wesolve-green-300 dark:border-wesolve-green-600" :class="open && 'is-open'" aria-hidden="true"><svg class="h-4 w-4" viewBox="0 0 16 16" fill="none"><path d="M8 3v10M3 8h10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span></button></h3>
+            <div id="faq-3" x-show="open" x-transition.opacity.duration.200ms style="display: none;"><p class="max-w-2xl pb-6 leading-relaxed text-wesolve-green-700 dark:text-wesolve-green-200">Ja, komplett – inklusive der Freigabeprozesse bei Apple und Google. Du musst dich um nichts kümmern.</p></div>
+          </div>
+          <div x-data="{ open: false }" class="border-b border-wesolve-green-200 dark:border-wesolve-green-800">
+            <h3><button type="button" @click="open = !open" :aria-expanded="open.toString()" aria-controls="faq-4" class="faq-btn flex w-full items-center justify-between gap-6 py-6 text-left text-lg font-semibold">Lohnt sich eine App für ein kleines Unternehmen überhaupt?<span class="faq-icon grid h-8 w-8 shrink-0 place-items-center rounded-full border border-wesolve-green-300 dark:border-wesolve-green-600" :class="open && 'is-open'" aria-hidden="true"><svg class="h-4 w-4" viewBox="0 0 16 16" fill="none"><path d="M8 3v10M3 8h10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span></button></h3>
+            <div id="faq-4" x-show="open" x-transition.opacity.duration.200ms style="display: none;"><p class="max-w-2xl pb-6 leading-relaxed text-wesolve-green-700 dark:text-wesolve-green-200">Wenn deine Kunden regelmäßig bei dir kaufen, buchen oder bestellen: sehr wahrscheinlich ja. Wenn nicht, sagen wir dir das ehrlich – mach am besten den kostenlosen Quick-Check, dann bekommst du in 48 Stunden unsere Einschätzung.</p></div>
+          </div>
       </div>
     </div>
   </section>
 
-  <!-- CTA -->
-  <div class="px-6 py-24">
-    <div class="relative mx-auto max-w-screen-xl overflow-hidden rounded-[2.5rem] bg-neutral-900 dark:border dark:border-neutral-800 px-6 py-16 text-center lg:py-20">
-      <div class="pointer-events-none absolute -left-20 -top-20 h-72 w-72 rounded-full bg-lime-400/20 blur-3xl"></div>
-      <div class="pointer-events-none absolute -bottom-24 -right-16 h-80 w-80 rounded-full bg-lime-400/20 blur-3xl"></div>
-      <h2 class="relative mx-auto max-w-3xl font-display text-3xl font-bold text-white lg:text-4xl">Du hast eine App-Idee im Kopf?</h2>
-      <p class="relative mx-auto mt-4 max-w-xl text-neutral-300">Lass sie uns kostenlos checken: Innerhalb von 48 Stunden bekommst du unsere ehrliche Einschätzung zu Aufwand und Umsetzung.</p>
-      <div class="relative mt-8 flex flex-wrap items-center justify-center gap-4">
-        <a data-umami-event="cta-quick-check" href="/quick-check"
-           class="group inline-flex items-center gap-2 rounded-full bg-lime-400 px-8 py-4 font-display font-bold text-neutral-900 transition-all duration-300 hover:-translate-y-0.5 hover:bg-lime-300 w-full justify-center sm:w-auto">
-          Idee kostenlos checken lassen
-          <svg class="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-        </a>
-        <a data-umami-event="cta-erstgespraech" href="/kontakt"
-           class="inline-flex items-center gap-2 rounded-full border-2 border-white px-7 py-[14px] font-display font-semibold text-white transition-colors duration-300 hover:border-lime-300 hover:text-lime-300 w-full justify-center sm:w-auto">
-          Kostenloses Erstgespräch
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <div id="footer-placeholder"></div>
+  <section class="border-y border-wesolve-green-200 bg-wesolve-green-100 px-4 py-20 dark:border-wesolve-green-800 dark:bg-wesolve-green-900 sm:px-6 lg:py-24" aria-labelledby="contact-title">
+    <div class="mx-auto flex max-w-screen-xl flex-col gap-10 lg:flex-row lg:items-end lg:justify-between"><div><h2 id="contact-title" class="section-title mt-0 max-w-3xl">Du hast eine App-Idee im Kopf?</h2><p class="mt-5 max-w-2xl text-lg leading-relaxed text-wesolve-green-700 dark:text-wesolve-green-200">Lass sie uns kostenlos checken: Innerhalb von 48 Stunden bekommst du unsere ehrliche Einschätzung zu Aufwand und Umsetzung.</p></div><div class="flex flex-col gap-3 sm:flex-row lg:flex-col xl:flex-row"><a data-umami-event="cta-erstgespraech" href="/kontakt" class="btn-primary">Erstgespräch vereinbaren <svg class="h-4 w-4" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a data-umami-event="cta-quick-check" href="/quick-check" class="btn-secondary">Zum Quick-Check</a></div></div>
+  </section>
+</main>
+<div id="footer-placeholder"></div>
+<script>
+  // Inhalte einmalig einblenden, sobald sie ins Bild scrollen
+  if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.documentElement.classList.add('js-reveal');
+    const io = new IntersectionObserver(entries => entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); }
+    }), { threshold: 0.15, rootMargin: '0px 0px -8% 0px' });
+    document.querySelectorAll('[data-reveal]').forEach(el => io.observe(el));
+  }
+</script>
 </body>
 </html>

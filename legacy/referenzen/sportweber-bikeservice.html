@@ -18,158 +18,86 @@
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="description" content="Case Study: Wie die Meisterwerkstatt von Sport-Weber Schnaittach Werkstatt-Termine online buchbar macht – Service-Pakete, Reparaturen und Terminbuchung auf einer Plattform.">
+  <link rel="preload" href="/assets/fonts/onest-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link href="../dist/styles.css" rel="stylesheet">
   <script src="/js/theme.js"></script>
   <link rel="icon" type="image/x-icon" href="../assets/img/Wesolveit_loigo.svg" />
-  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
-  <script src="../js/navigation.js" defer></script>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Montserrat:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script defer src="/js/vendor/alpine-3.14.8.min.js"></script>
+  <script src="/js/navigation.js" defer></script>
 </head>
-<body class="bg-white text-neutral-900 dark:bg-neutral-950 dark:text-neutral-100 overflow-x-hidden">
-
-  <!-- Header -->
-  <div class="relative overflow-hidden">
-    <div class="pointer-events-none absolute -top-24 -left-24 h-80 w-80 rounded-full bg-lime-300/40 blur-3xl dark:bg-lime-500/10"></div>
-    <div class="pointer-events-none absolute top-20 -right-24 h-80 w-80 rounded-full bg-lime-200/50 blur-3xl dark:bg-lime-500/10"></div>
-    <div class="relative mx-auto max-w-screen-xl px-6 pt-32 text-center">
-      <div class="mx-auto flex h-24 w-fit items-center justify-center rounded-2xl bg-neutral-900 px-8 dark:border dark:border-neutral-800"><img src="../assets/img/SportWeberLogoNeuklein.3caf40cb13b6ecc9538a.png" alt="Sport-Weber Schnaittach Logo" class="h-14 object-contain" /></div>
-      <div class="mt-6 flex justify-center">
-        <span class="rounded-full bg-lime-300 px-3 py-1 font-display text-xs font-bold uppercase text-neutral-900">Webentwicklung</span>
-      </div>
-      <h1 class="mx-auto mt-4 max-w-3xl font-display text-3xl font-bold leading-tight tracking-tight lg:text-5xl">
-        <span class="relative inline-block">
-          <span class="absolute inset-x-0 bottom-1 h-[0.55em] -rotate-1 rounded-sm bg-lime-300 dark:bg-lime-400/30"></span>
-          <span class="relative">Bikeservice mit Online-Buchung</span>
-        </span>
-      </h1>
-      <p class="mx-auto mt-5 max-w-2xl leading-relaxed text-neutral-600 dark:text-neutral-400 lg:text-lg">Eine Service-Plattform für die Meisterwerkstatt: Leistungen, Service-Pakete und Online-Terminbuchung – rund um die Uhr erreichbar unter eigener Adresse.</p>
-    </div>
-  </div>
-
-  <!-- Screenshot -->
-  <div class="mx-auto max-w-screen-xl px-6 pt-14">
-    <div class="overflow-hidden rounded-[2rem] bg-neutral-900 px-5 pt-5 sm:px-10 sm:pt-10" style="background-image: radial-gradient(#404040 1px, transparent 1px); background-size: 26px 26px;">
-      <div class="mx-auto max-w-4xl overflow-hidden rounded-t-2xl border-2 border-b-0 border-neutral-700 bg-neutral-800 shadow-[6px_6px_0px_0px_#a3e635]">
-        <div class="flex items-center gap-1.5 border-b-2 border-neutral-700 px-4 py-2.5">
-          <span class="h-2.5 w-2.5 rounded-full bg-wesolve-accent-coral-500"></span>
-          <span class="h-2.5 w-2.5 rounded-full bg-wesolve-accent-400"></span>
-          <span class="h-2.5 w-2.5 rounded-full bg-lime-400"></span>
-          <span class="ml-3 h-4 w-40 rounded-full bg-neutral-900"></span>
-        </div>
-        <img src="../assets/img/referenz-sportweber-bikeservice.png" alt="Die Bikeservice-Plattform von Sport-Weber Schnaittach im Browser" class="w-full object-cover object-top" />
-      </div>
-    </div>
-  </div>
-
-  <!-- Fakten -->
-  <div class="mx-auto max-w-screen-xl px-6 pt-14">
-    <div class="grid gap-4 sm:grid-cols-3">
-      <div class="rounded-2xl border-2 border-neutral-200 bg-white p-6 dark:border-neutral-800 dark:bg-neutral-900">
-        <p class="font-display text-xs font-bold uppercase tracking-[0.2em] text-neutral-400">Branche</p>
-        <p class="mt-2 font-display text-lg font-bold">Sportfachhandel (Bike &amp; Ski)</p>
-      </div>
-      <div class="rounded-2xl border-2 border-neutral-200 bg-white p-6 dark:border-neutral-800 dark:bg-neutral-900">
-        <p class="font-display text-xs font-bold uppercase tracking-[0.2em] text-neutral-400">Leistung</p>
-        <p class="mt-2 font-display text-lg font-bold">Webentwicklung</p>
-      </div>
-      <div class="rounded-2xl border-2 border-neutral-200 bg-white p-6 dark:border-neutral-800 dark:bg-neutral-900">
-        <p class="font-display text-xs font-bold uppercase tracking-[0.2em] text-neutral-400">Besonderheit</p>
-        <p class="mt-2 font-display text-lg font-bold">Zweites gemeinsames Projekt</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- Story -->
-  <section class="px-6 py-20">
+<body data-hero="dark" class="overflow-x-hidden bg-white font-text text-wesolve-green-950 antialiased dark:bg-wesolve-green-950 dark:text-wesolve-green-50">
+<main>
+  <!-- Kopf: Kunde, Aufgabe und Eckdaten auf einen Blick -->
+  <section class="hero-panel relative bg-wesolve-green-950 px-4 pb-40 pt-28 text-white sm:px-6 lg:pb-56 lg:pt-36" aria-labelledby="case-title">
     <div class="mx-auto max-w-screen-xl">
-      <div class="grid gap-6 md:grid-cols-3">
-        <div class="flex h-full flex-col rounded-3xl border-2 border-neutral-200 bg-white p-8 dark:border-neutral-800 dark:bg-neutral-900">
-          <span class="font-display text-5xl font-bold text-lime-400">01</span>
-          <h2 class="mt-5 font-display text-xl font-bold">Die Ausgangslage</h2>
-          <p class="mt-3 flex-grow text-sm leading-relaxed text-neutral-600 dark:text-neutral-400">Nach dem gemeinsamen Verleihsystem stand bei Sport-Weber der nächste Ablauf an: die Fahrradwerkstatt. Termine für Service und Reparaturen liefen bislang über Telefon und Ladentheke – Zeit, die im Tagesgeschäft fehlt, und für Kunden nur zu Öffnungszeiten möglich.</p>
+      <a href="/referenzen" class="hero-in back-link inline-flex items-center gap-2 text-sm font-semibold text-wesolve-green-200 hover:text-white" style="--d:0"><svg class="h-4 w-4 rotate-180" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Alle Referenzen</a>
+      <div class="mt-10 grid gap-10 lg:grid-cols-12 lg:items-end">
+        <div class="lg:col-span-7">
+          <img width="1280" height="720" src="../assets/img/SportWeberLogoNeuklein.3caf40cb13b6ecc9538a.png" alt="Sport-Weber Schnaittach" style="--d:1" class="hero-in h-10 w-auto brightness-0 invert">
+          <h1 id="case-title" style="--d:2" class="hero-in mt-8 font-text text-[clamp(2.4rem,5vw,4.25rem)] font-bold leading-[1.02] tracking-[-0.05em]">Bikeservice mit Online-Buchung.</h1>
+          <p style="--d:3" class="hero-in mt-6 max-w-xl text-lg leading-relaxed text-wesolve-green-100">Eine Service-Plattform für die Meisterwerkstatt: Leistungen, Service-Pakete und Online-Terminbuchung – rund um die Uhr erreichbar unter eigener Adresse.</p>
         </div>
-        <div class="flex h-full flex-col rounded-3xl border-2 border-neutral-200 bg-white p-8 dark:border-neutral-800 dark:bg-neutral-900">
-          <span class="font-display text-5xl font-bold text-lime-400">02</span>
-          <h2 class="mt-5 font-display text-xl font-bold">Unsere Lösung</h2>
-          <p class="mt-3 flex-grow text-sm leading-relaxed text-neutral-600 dark:text-neutral-400">Eine eigene Service-Plattform unter service.sportweber-schnaittach.de: Kunden sehen die Leistungen und Service-Pakete der Meisterwerkstatt auf einen Blick – vom Fahrrad über E-Bike bis zum Lastenrad, inklusive Ski- und Snowboard-Montage – und buchen ihren Termin direkt online. Ein FAQ beantwortet die häufigsten Fragen vorab.</p>
-        </div>
-        <div class="flex h-full flex-col rounded-3xl border-2 border-neutral-200 bg-white p-8 dark:border-neutral-800 dark:bg-neutral-900">
-          <span class="font-display text-5xl font-bold text-lime-400">03</span>
-          <h2 class="mt-5 font-display text-xl font-bold">Das Ergebnis</h2>
-          <p class="mt-3 flex-grow text-sm leading-relaxed text-neutral-600 dark:text-neutral-400">Die Werkstatt ist rund um die Uhr buchbar: Kunden wählen ihren Termin, wann es ihnen passt – und das Team plant mit strukturierten Online-Buchungen statt Telefonnotizen.</p>
-        </div>
+        <dl style="--d:4" class="hero-in grid gap-5 border-t border-white/10 pt-6 sm:grid-cols-3 sm:gap-6 lg:col-span-5 lg:grid-cols-1 lg:gap-5 lg:border-l lg:border-t-0 lg:pl-10 lg:pt-0"><div><dt class="text-sm text-wesolve-green-300">Branche</dt><dd class="mt-1 font-semibold">Sportfachhandel (Bike &amp; Ski)</dd></div><div><dt class="text-sm text-wesolve-green-300">Leistung</dt><dd class="mt-1 font-semibold">Webentwicklung</dd></div><div><dt class="text-sm text-wesolve-green-300">Besonderheit</dt><dd class="mt-1 font-semibold">Zweites gemeinsames Projekt</dd></div></dl>
       </div>
     </div>
   </section>
 
-  <!-- Das steckt drin -->
-  <section class="bg-neutral-50 px-6 py-20 dark:bg-neutral-900/40">
-    <div class="mx-auto max-w-screen-xl">
-      <span class="inline-flex items-center rounded-full bg-lime-100 px-4 py-1.5 font-display text-xs font-bold uppercase tracking-wide text-lime-800 dark:bg-lime-950 dark:text-lime-300">Das steckt drin</span>
-      <h2 class="mt-4 max-w-3xl font-display text-3xl font-bold tracking-tight lg:text-4xl">Die wichtigsten Funktionen</h2>
-      <div class="mt-12 grid gap-4 sm:grid-cols-2">
-        <div class="flex items-center gap-4 rounded-2xl border-2 border-neutral-200 bg-white p-5 dark:border-neutral-800 dark:bg-neutral-900">
-          <span class="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-lime-300"><svg class="h-5 w-5 text-neutral-900" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg></span>
-          <p class="font-display font-semibold">Online-Terminbuchung rund um die Uhr</p>
-        </div>
-        <div class="flex items-center gap-4 rounded-2xl border-2 border-neutral-200 bg-white p-5 dark:border-neutral-800 dark:bg-neutral-900">
-          <span class="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-lime-300"><svg class="h-5 w-5 text-neutral-900" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg></span>
-          <p class="font-display font-semibold">Service-Pakete übersichtlich dargestellt</p>
-        </div>
-        <div class="flex items-center gap-4 rounded-2xl border-2 border-neutral-200 bg-white p-5 dark:border-neutral-800 dark:bg-neutral-900">
-          <span class="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-lime-300"><svg class="h-5 w-5 text-neutral-900" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg></span>
-          <p class="font-display font-semibold">Fahrrad, E-Bike, Lastenrad – plus Ski &amp; Snowboard</p>
-        </div>
-        <div class="flex items-center gap-4 rounded-2xl border-2 border-neutral-200 bg-white p-5 dark:border-neutral-800 dark:bg-neutral-900">
-          <span class="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-lime-300"><svg class="h-5 w-5 text-neutral-900" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg></span>
-          <p class="font-display font-semibold">FAQ für die häufigsten Fragen</p>
-        </div>
-        <div class="flex items-center gap-4 rounded-2xl border-2 border-neutral-200 bg-white p-5 dark:border-neutral-800 dark:bg-neutral-900">
-          <span class="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-lime-300"><svg class="h-5 w-5 text-neutral-900" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg></span>
-          <p class="font-display font-semibold">Eigene Service-Adresse, angebunden an den Auftritt</p>
-        </div>
-        <div class="flex items-center gap-4 rounded-2xl border-2 border-neutral-200 bg-white p-5 dark:border-neutral-800 dark:bg-neutral-900">
-          <span class="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-lime-300"><svg class="h-5 w-5 text-neutral-900" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg></span>
-          <p class="font-display font-semibold">Mobiloptimiert – buchen direkt vom Smartphone</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Wiederholungskunde -->
-  <section class="bg-neutral-900 px-6 py-20 dark:border-y dark:border-neutral-800">
-    <div class="mx-auto max-w-screen-xl text-center">
-      <p class="font-display text-sm font-bold uppercase tracking-[0.2em] text-neutral-400">Projekt Nr. 2 mit Sport-Weber</p>
-      <p class="mx-auto mt-4 max-w-2xl font-display text-2xl font-bold text-white lg:text-3xl">Die schönste Referenz ist ein Kunde, der wiederkommt.</p>
-      <p class="mx-auto mt-4 max-w-xl text-neutral-300">Nach der Verleihsoftware mit automatischer Rechnungserstellung folgte die Werkstatt-Plattform – aus einem Projekt wurde eine Zusammenarbeit.</p>
-      <a href="/referenzen/sportweber-schnaittach" class="group mt-8 inline-flex items-center gap-2 rounded-full border-2 border-white px-7 py-[14px] font-display font-semibold text-white transition-colors duration-300 hover:border-lime-300 hover:text-lime-300 w-full justify-center sm:w-auto">
-        Zum ersten Projekt
-        <svg class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-      </a>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <div class="px-6 py-24">
-    <div class="relative mx-auto max-w-screen-xl overflow-hidden rounded-[2.5rem] bg-neutral-900 dark:border dark:border-neutral-800 px-6 py-16 text-center lg:py-20">
-      <div class="pointer-events-none absolute -left-20 -top-20 h-72 w-72 rounded-full bg-lime-400/20 blur-3xl"></div>
-      <div class="pointer-events-none absolute -bottom-24 -right-16 h-80 w-80 rounded-full bg-lime-400/20 blur-3xl"></div>
-      <h2 class="relative mx-auto max-w-3xl font-display text-3xl font-bold text-white lg:text-4xl">Welcher Ablauf soll bei dir online buchbar werden?</h2>
-      <p class="relative mx-auto mt-4 max-w-xl text-neutral-300">Erzähl uns davon – wir sagen dir ehrlich, was möglich ist.</p>
-      <div class="relative mt-8 flex flex-wrap items-center justify-center gap-4">
-        <a data-umami-event="cta-erstgespraech" href="/kontakt"
-           class="group inline-flex items-center gap-2 rounded-full bg-lime-400 px-8 py-4 font-display font-bold text-neutral-900 transition-all duration-300 hover:-translate-y-0.5 hover:bg-lime-300 w-full justify-center sm:w-auto">
-          Kostenloses Erstgespräch sichern
-          <svg class="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-        </a>
-        <a href="/referenzen"
-           class="inline-flex items-center gap-2 rounded-full border-2 border-white px-7 py-[14px] font-display font-semibold text-white transition-colors duration-300 hover:border-lime-300 hover:text-lime-300 w-full justify-center sm:w-auto">
-          Mehr Referenzen
-        </a>
-      </div>
-    </div>
+  <!-- Bild ragt aus dem dunklen Kopf in den hellen Inhalt -->
+  <div class="relative z-10 -mt-28 px-4 sm:px-6 lg:-mt-40">
+    <figure style="--d:4" class="hero-in mx-auto max-w-5xl overflow-hidden rounded-2xl bg-white shadow-[0_50px_100px_-40px_rgba(8,28,22,0.7)] ring-1 ring-wesolve-green-950/10"><div class="flex gap-1.5 border-b border-wesolve-green-100 px-4 py-3" aria-hidden="true"><span class="h-2.5 w-2.5 rounded-full bg-wesolve-green-200"></span><span class="h-2.5 w-2.5 rounded-full bg-wesolve-green-200"></span><span class="h-2.5 w-2.5 rounded-full bg-wesolve-green-200"></span></div><img width="1440" height="1000" src="../assets/img/referenz-sportweber-bikeservice.webp" alt="Die Bikeservice-Plattform von Sport-Weber Schnaittach im Browser" class="w-full"></figure>
   </div>
 
-  <div id="footer-placeholder"></div>
+  <!-- Geschichte: echte Abfolge, daher nummeriert -->
+  <section class="px-4 py-20 sm:px-6 lg:py-28" aria-label="Projektverlauf">
+    <ol data-reveal class="case-story mx-auto max-w-screen-xl border-b border-wesolve-green-200 dark:border-wesolve-green-800">
+        <li class="case-step grid gap-4 border-t border-wesolve-green-200 py-10 dark:border-wesolve-green-800 lg:grid-cols-12 lg:gap-10"><h2 class="flex items-baseline gap-4 text-2xl font-semibold tracking-[-0.025em] lg:col-span-4"><span class="text-base font-semibold text-wesolve-green-500 dark:text-wesolve-accent-300">1.</span>Die Ausgangslage</h2><p class="max-w-2xl text-lg leading-relaxed text-wesolve-green-800 dark:text-wesolve-green-100 lg:col-span-7 lg:col-start-6">Nach dem gemeinsamen Verleihsystem stand bei Sport-Weber der nächste Ablauf an: die Fahrradwerkstatt. Termine für Service und Reparaturen liefen bislang über Telefon und Ladentheke – Zeit, die im Tagesgeschäft fehlt, und für Kunden nur zu Öffnungszeiten möglich.</p></li>
+        <li class="case-step grid gap-4 border-t border-wesolve-green-200 py-10 dark:border-wesolve-green-800 lg:grid-cols-12 lg:gap-10"><h2 class="flex items-baseline gap-4 text-2xl font-semibold tracking-[-0.025em] lg:col-span-4"><span class="text-base font-semibold text-wesolve-green-500 dark:text-wesolve-accent-300">2.</span>Unsere Lösung</h2><p class="max-w-2xl text-lg leading-relaxed text-wesolve-green-800 dark:text-wesolve-green-100 lg:col-span-7 lg:col-start-6">Eine eigene Service-Plattform unter service.sportweber-schnaittach.de: Kunden sehen die Leistungen und Service-Pakete der Meisterwerkstatt auf einen Blick – vom Fahrrad über E-Bike bis zum Lastenrad, inklusive Ski- und Snowboard-Montage – und buchen ihren Termin direkt online. Ein FAQ beantwortet die häufigsten Fragen vorab.</p></li>
+        <li class="case-step grid gap-4 border-t border-wesolve-green-200 py-10 dark:border-wesolve-green-800 lg:grid-cols-12 lg:gap-10"><h2 class="flex items-baseline gap-4 text-2xl font-semibold tracking-[-0.025em] lg:col-span-4"><span class="text-base font-semibold text-wesolve-green-500 dark:text-wesolve-accent-300">3.</span>Das Ergebnis</h2><p class="max-w-2xl text-lg leading-relaxed text-wesolve-green-800 dark:text-wesolve-green-100 lg:col-span-7 lg:col-start-6">Die Werkstatt ist rund um die Uhr buchbar: Kunden wählen ihren Termin, wann es ihnen passt – und das Team plant mit strukturierten Online-Buchungen statt Telefonnotizen.</p></li>
+    </ol>
+  </section>
+
+  <!-- Wiederkehrender Kunde -->
+  <section class="bg-wesolve-green-950 px-4 py-20 text-white sm:px-6 lg:py-24" aria-labelledby="repeat-title">
+    <div class="mx-auto flex max-w-screen-xl flex-col gap-8 lg:flex-row lg:items-end lg:justify-between"><div><p class="font-semibold text-wesolve-accent-300">Projekt Nr. 2 mit Sport-Weber</p><h2 id="repeat-title" class="section-title max-w-2xl">Die schönste Referenz ist ein Kunde, der wiederkommt.</h2><p class="mt-5 max-w-xl text-lg leading-relaxed text-wesolve-green-200">Nach der Verleihsoftware mit automatischer Rechnungserstellung folgte die Werkstatt-Plattform – aus einem Projekt wurde eine Zusammenarbeit.</p></div><a href="/referenzen/sportweber-schnaittach" class="btn-secondary-dark self-start lg:self-auto">Zum ersten Projekt <svg class="h-4 w-4" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+  </section>
+
+  <!-- Funktionen -->
+  <section class="bg-wesolve-green-50 px-4 py-20 dark:bg-wesolve-green-900/60 sm:px-6 lg:py-28" aria-labelledby="features-title">
+    <div class="mx-auto max-w-screen-xl">
+      <h2 id="features-title" class="section-title mt-0">Das steckt drin</h2>
+      <ul data-reveal class="feature-grid mt-12 grid gap-px overflow-hidden rounded-2xl border border-wesolve-green-200 bg-wesolve-green-200 dark:border-wesolve-green-800 dark:bg-wesolve-green-800 sm:grid-cols-2 lg:grid-cols-3">
+        <li class="feature-item flex items-center gap-4"><span class="grid h-11 w-11 place-items-center rounded-xl bg-wesolve-green-950 text-wesolve-accent-300 dark:bg-wesolve-green-800" aria-hidden="true"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none"><rect x="4" y="5" width="16" height="15" rx="2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 10h16M9 3v4M15 3v4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3 class="font-semibold">Online-Terminbuchung rund um die Uhr</h3></li>
+        <li class="feature-item flex items-center gap-4"><span class="grid h-11 w-11 place-items-center rounded-xl bg-wesolve-green-950 text-wesolve-accent-300 dark:bg-wesolve-green-800" aria-hidden="true"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none"><path d="M7 3.5h7l4 4V20a.5.5 0 0 1-.5.5h-10A.5.5 0 0 1 7 20Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="M10 12h5M10 15.5h5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3 class="font-semibold">Service-Pakete übersichtlich dargestellt</h3></li>
+        <li class="feature-item flex items-center gap-4"><span class="grid h-11 w-11 place-items-center rounded-xl bg-wesolve-green-950 text-wesolve-accent-300 dark:bg-wesolve-green-800" aria-hidden="true"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5 18 18M6 18l2.5-2.5M15.5 8.5 18 6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3 class="font-semibold">Fahrrad, E-Bike, Lastenrad – plus Ski &amp; Snowboard</h3></li>
+        <li class="feature-item flex items-center gap-4"><span class="grid h-11 w-11 place-items-center rounded-xl bg-wesolve-green-950 text-wesolve-accent-300 dark:bg-wesolve-green-800" aria-hidden="true"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none"><path d="M4 6.5A2.5 2.5 0 0 1 6.5 4h11A2.5 2.5 0 0 1 20 6.5v7a2.5 2.5 0 0 1-2.5 2.5H10l-4 4v-4A2 2 0 0 1 4 14Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3 class="font-semibold">FAQ für die häufigsten Fragen</h3></li>
+        <li class="feature-item flex items-center gap-4"><span class="grid h-11 w-11 place-items-center rounded-xl bg-wesolve-green-950 text-wesolve-accent-300 dark:bg-wesolve-green-800" aria-hidden="true"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none"><path d="M12 21s6.5-5.6 6.5-11a6.5 6.5 0 0 0-13 0c0 5.4 6.5 11 6.5 11Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3 class="font-semibold">Eigene Service-Adresse, angebunden an den Auftritt</h3></li>
+        <li class="feature-item flex items-center gap-4"><span class="grid h-11 w-11 place-items-center rounded-xl bg-wesolve-green-950 text-wesolve-accent-300 dark:bg-wesolve-green-800" aria-hidden="true"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none"><path d="M4 4v16h16M8 15l3.5-4 3 2.5L19 8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3 class="font-semibold">Mobiloptimiert – buchen direkt vom Smartphone</h3></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Weiterblättern -->
+  <section class="px-4 py-16 sm:px-6" aria-label="Nächste Referenz">
+    <a href="/referenzen/rootd" class="next-case group mx-auto flex max-w-screen-xl flex-col gap-2 border-y border-wesolve-green-200 py-10 dark:border-wesolve-green-800 sm:flex-row sm:items-center sm:justify-between">
+      <span><span class="block text-sm text-wesolve-green-600 dark:text-wesolve-green-300">Nächste Referenz</span><span class="mt-1 block text-3xl font-semibold tracking-[-0.03em] lg:text-4xl">ROOTD.</span></span>
+      <span class="grid h-14 w-14 place-items-center rounded-full bg-wesolve-green-950 text-wesolve-accent-300 transition-transform duration-300 group-hover:translate-x-2 dark:bg-wesolve-green-800" aria-hidden="true"><svg class="h-5 w-5" viewBox="0 0 20 20" fill="none"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+    </a>
+  </section>
+
+  <section class="border-y border-wesolve-green-200 bg-wesolve-green-100 px-4 py-20 dark:border-wesolve-green-800 dark:bg-wesolve-green-900 sm:px-6 lg:py-24" aria-labelledby="contact-title">
+    <div class="mx-auto flex max-w-screen-xl flex-col gap-10 lg:flex-row lg:items-end lg:justify-between"><div><h2 id="contact-title" class="section-title mt-0 max-w-3xl">Welcher Ablauf soll bei dir online buchbar werden?</h2><p class="mt-5 max-w-2xl text-lg leading-relaxed text-wesolve-green-700 dark:text-wesolve-green-200">Erzähl uns davon – wir sagen dir ehrlich, was möglich ist.</p></div><div class="flex flex-col gap-3 sm:flex-row lg:flex-col xl:flex-row"><a data-umami-event="cta-erstgespraech" href="/kontakt" class="btn-primary">Erstgespräch vereinbaren <svg class="h-4 w-4" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="/referenzen" class="btn-secondary">Alle Referenzen</a></div></div>
+  </section>
+</main>
+<div id="footer-placeholder"></div>
+<script>
+  // Inhalte einmalig einblenden, sobald sie ins Bild scrollen
+  if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.documentElement.classList.add('js-reveal');
+    const io = new IntersectionObserver(entries => entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); }
+    }), { threshold: 0.15, rootMargin: '0px 0px -8% 0px' });
+    document.querySelectorAll('[data-reveal]').forEach(el => io.observe(el));
+  }
+</script>
 </body>
 </html>

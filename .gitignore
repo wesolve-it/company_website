@@ -10,3 +10,5 @@ playwright-report/
 test-results/
 
 .test-data/
+.DS_Store
+.claude/settings.local.json
