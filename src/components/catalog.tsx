@@ -4,8 +4,38 @@ import { RichText } from '@payloadcms/richtext-lexical/react'
 import { Media } from './Media'
 import { Badge, Button, CTA, TestimonialCard } from './ui'
 export const categoryLabels = { web:'Webentwicklung', app:'App-Entwicklung', seo:'SEO', software:'Individual-Software' }
+export const serviceHighlights: Record<string, string[]> = {
+  webentwicklung: ['Individuelles Design nach Maß', 'Einfache Selbstpflege (CMS)', 'Responsive & blitzschnell'],
+  'app-entwicklung': ['iOS & Android aus einer Hand', 'Intuitive Bedienung für Kunden', 'App Store & Play Store Release'],
+  suchmaschinenoptimierung: ['Lokale Google-Sichtbarkeit', 'Relevante Suchbegriffe & Traffic', 'Technische SEO-Optimierung'],
+  'individual-software': ['Digitale Workflows & Portale', 'Automatisierung manueller Tasks', 'Sichere API-Schnittstellen'],
+  webdesign: ['Modernes UI/UX-Konzept', 'Markenorientierte Bildsprache', 'Optimiert für hohe Conversion'],
+}
 export function ServiceCards({ services }: { services:Service[] }) {
-  return <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">{services.map((s,index)=><Link href={`/leistungen/${s.slug}`} key={s.id} className="group flex h-full flex-col rounded-3xl border-2 border-neutral-200 bg-white p-6 transition-all hover:-translate-y-2 hover:border-neutral-900 hover:shadow-[8px_8px_0px_0px_#a3e635] dark:border-neutral-800 dark:bg-neutral-900 dark:hover:border-lime-400"><span className="font-display text-sm font-bold text-neutral-400">{String(index+1).padStart(2,'0')}</span><Media media={s.image} className="my-6 aspect-[4/3] w-full object-contain transition-transform group-hover:scale-105" sizes="(max-width: 768px) 90vw, (max-width: 1280px) 45vw, 23vw" /><h3 className="font-display text-2xl font-bold">{s.title}</h3><p className="mt-4 flex-grow text-sm leading-relaxed text-neutral-600 dark:text-neutral-400">{s.intro}</p><span className="mt-6 font-display font-semibold">Mehr erfahren →</span></Link>)}</div>
+  return <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">{services.map((s,index)=>{
+    const highlights = serviceHighlights[s.slug]
+    return <Link href={`/leistungen/${s.slug}`} key={s.id} className="group relative flex h-full flex-col rounded-3xl border border-neutral-200/90 bg-white p-7 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-lime-400/80 hover:shadow-xl dark:border-neutral-800/80 dark:bg-neutral-900/80 dark:hover:border-lime-400/60 dark:hover:shadow-[0_10px_30px_-10px_rgba(163,230,53,0.15)]">
+      <div className="flex items-center justify-between">
+        <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-lime-100 text-xs font-bold text-lime-800 dark:bg-lime-950/80 dark:text-lime-300 font-display">{String(index+1).padStart(2,'0')}</span>
+      </div>
+      <Media media={s.image} className="my-6 aspect-[4/3] w-full object-contain transition-transform duration-300 group-hover:scale-105" sizes="(max-width: 768px) 90vw, (max-width: 1280px) 45vw, 23vw" />
+      <h3 className="font-display text-2xl font-bold [text-wrap:balance]">{s.title}</h3>
+      <p className="mt-3 flex-grow text-sm leading-relaxed text-neutral-600 dark:text-neutral-400 [text-wrap:pretty]">{s.intro}</p>
+      {highlights && (
+        <ul className="mt-5 space-y-2 border-t border-neutral-100 pt-5 text-xs text-neutral-600 dark:border-neutral-800/80 dark:text-neutral-400">
+          {highlights.map((item, i) => (
+            <li key={i} className="flex items-center gap-2">
+              <span className="font-bold text-lime-600 dark:text-lime-400">✓</span>
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+      )}
+      <span className="mt-6 flex items-center gap-1 font-display font-semibold text-neutral-900 transition-colors group-hover:text-lime-700 dark:text-neutral-100 dark:group-hover:text-lime-400">
+        Mehr erfahren <span aria-hidden="true" className="transition-transform duration-200 group-hover:translate-x-1">→</span>
+      </span>
+    </Link>
+  })}</div>
 }
 export function ReferenceCard({ reference:r }: { reference:Reference }) {
   return <Link href={`/referenzen/${r.slug}`} className="group grid overflow-hidden rounded-3xl border-2 border-neutral-200 bg-white transition-all hover:-translate-y-1 hover:border-neutral-900 hover:shadow-[8px_8px_0px_0px_#a3e635] dark:border-neutral-800 dark:bg-neutral-900 lg:grid-cols-2"><div className="h-64 overflow-hidden bg-neutral-900 p-8 sm:h-80 lg:h-full lg:min-h-[26rem]"><Media media={r.image} className="h-full w-full rounded-2xl object-cover object-top transition-transform group-hover:scale-105" /></div><div className="flex flex-col justify-center p-8 lg:p-12"><Badge>{categoryLabels[r.category]}</Badge><h2 className="mb-3 mt-4 font-display text-2xl font-bold xl:text-4xl">{r.title}</h2><p className="leading-relaxed text-neutral-600 dark:text-neutral-400">{r.intro}</p><span className="mt-8 font-display font-semibold">Details ansehen →</span></div></Link>

@@ -5,13 +5,16 @@
   html { background: white; }
   html.dark { color-scheme: dark; background: #0a0a0a; }
   body { @apply font-body; }
-  h1,h2,h3 { overflow-wrap: break-word; }
+  h1,h2,h3,h4 { overflow-wrap: break-word; text-wrap: balance; }
+  p { text-wrap: pretty; }
   button,a,input,textarea,summary { @apply focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-lime-600; }
   @media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
 }
 @layer components {
- .button-primary { @apply inline-flex items-center justify-center gap-2 rounded-full bg-neutral-900 px-7 py-4 font-display font-semibold text-lime-300 transition-all hover:-translate-y-0.5 hover:shadow-[4px_4px_0px_0px_#a3e635] dark:bg-lime-400 dark:text-neutral-900; }
- .button-secondary { @apply inline-flex items-center justify-center gap-2 rounded-full border-2 border-neutral-900 px-7 py-3.5 font-display font-semibold hover:bg-lime-300 dark:border-white dark:hover:text-neutral-900; }
+ .button-primary { @apply inline-flex items-center justify-center gap-2 rounded-full bg-neutral-900 px-7 py-4 font-display font-semibold text-lime-300 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_10px_25px_-5px_rgba(163,230,53,0.35)] active:translate-y-0 dark:bg-lime-400 dark:text-neutral-950 dark:hover:bg-lime-300 dark:hover:shadow-[0_10px_25px_-5px_rgba(163,230,53,0.3)]; }
+ .button-secondary { @apply inline-flex items-center justify-center gap-2 rounded-full border-2 border-neutral-900 px-7 py-3.5 font-display font-semibold transition-all duration-200 hover:-translate-y-0.5 hover:bg-neutral-900 hover:text-lime-300 dark:border-neutral-200 dark:text-neutral-100 dark:hover:border-lime-400 dark:hover:bg-lime-400 dark:hover:text-neutral-950 active:translate-y-0; }
+ .text-highlight { @apply relative inline-block text-neutral-900 dark:text-white; }
+ .text-highlight::after { content: ''; @apply pointer-events-none absolute -inset-x-2 bottom-1 h-3.5 -rotate-1 rounded-sm bg-lime-300/70 -z-10 dark:bg-lime-400/30; }
  .footer-heading { @apply font-display text-sm font-bold uppercase tracking-[0.2em] text-lime-400; }
  .footer-links { @apply mt-4 space-y-3 text-sm text-neutral-300; }
  .footer-links a { @apply hover:text-lime-300; }

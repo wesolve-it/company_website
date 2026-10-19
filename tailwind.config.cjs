@@ -61,14 +61,15 @@ module.exports = {
         // 'nav-gray': '#ccccd1'
       },
       fontFamily: {
-        heading: ['"Barlow Condensed"', 'sans-serif'],
-        body: ['Montserrat', 'sans-serif'],
-        display: ['"Space Grotesk"', 'sans-serif'],
+        heading: ['var(--font-barlow-condensed)', '"Barlow Condensed"', 'sans-serif'],
+        body: ['var(--font-montserrat)', 'Montserrat', 'sans-serif'],
+        display: ['var(--font-space-grotesk)', '"Space Grotesk"', 'sans-serif'],
       },
       animation: {
         'infinite-scroll': 'infinite-scroll 30s linear infinite',
         'ticker': 'infinite-scroll 22s linear infinite',
         'float': 'float 5s ease-in-out infinite',
+        'float-delayed': 'float 5.5s ease-in-out 2.5s infinite',
       },
       keyframes: {
         'infinite-scroll': {
