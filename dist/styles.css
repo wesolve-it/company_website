@@ -548,6 +548,16 @@ p, blockquote, li {
     text-wrap: pretty;
   }
 
+::-moz-selection {
+    background-color: #abefd8;
+    color: #081c16;
+  }
+
+::selection {
+    background-color: #abefd8;
+    color: #081c16;
+  }
+
 @media (prefers-reduced-motion: no-preference) {
     html {
       scroll-behavior: smooth;
@@ -696,19 +706,6 @@ p, blockquote, li {
   outline-width: 2px;
   outline-offset: 4px;
   outline-color: #73dfbf;
-}
-.eyebrow {
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.16em;
-  --tw-text-opacity: 1;
-  color: rgb(50 109 82 / var(--tw-text-opacity, 1));
-}
-.eyebrow:is(.dark *) {
-  --tw-text-opacity: 1;
-  color: rgb(167 201 184 / var(--tw-text-opacity, 1));
 }
 .section-title {
   margin-top: 1rem;
@@ -1106,9 +1103,6 @@ p, blockquote, li {
 .bottom-0 {
   bottom: 0px;
 }
-.left-6 {
-  left: 1.5rem;
-}
 .right-0 {
   right: 0px;
 }
@@ -1452,6 +1446,9 @@ p, blockquote, li {
 .items-baseline {
   align-items: baseline;
 }
+.justify-end {
+  justify-content: flex-end;
+}
 .justify-center {
   justify-content: center;
 }
@@ -1693,10 +1690,6 @@ p, blockquote, li {
   padding-left: 0.625rem;
   padding-right: 0.625rem;
 }
-.px-3 {
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
-}
 .px-3\.5 {
   padding-left: 0.875rem;
   padding-right: 0.875rem;
@@ -1716,10 +1709,6 @@ p, blockquote, li {
 .py-1 {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
-}
-.py-1\.5 {
-  padding-top: 0.375rem;
-  padding-bottom: 0.375rem;
 }
 .py-10 {
   padding-top: 2.5rem;
@@ -1813,9 +1802,6 @@ p, blockquote, li {
 .text-left {
   text-align: left;
 }
-.font-mono {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-}
 .font-text {
   font-family: Onest, sans-serif;
 }
@@ -1901,6 +1887,10 @@ p, blockquote, li {
 .uppercase {
   text-transform: uppercase;
 }
+.tabular-nums {
+  --tw-numeric-spacing: tabular-nums;
+  font-variant-numeric: var(--tw-ordinal) var(--tw-slashed-zero) var(--tw-numeric-figure) var(--tw-numeric-spacing) var(--tw-numeric-fraction);
+}
 .leading-\[1\.02\] {
   line-height: 1.02;
 }
@@ -1937,26 +1927,8 @@ p, blockquote, li {
 .tracking-\[-0\.04em\] {
   letter-spacing: -0.04em;
 }
-.tracking-\[-0\.055em\] {
-  letter-spacing: -0.055em;
-}
-.tracking-\[-0\.05em\] {
-  letter-spacing: -0.05em;
-}
-.tracking-\[-0\.06em\] {
-  letter-spacing: -0.06em;
-}
-.tracking-\[-0\.07em\] {
-  letter-spacing: -0.07em;
-}
-.tracking-\[0\.14em\] {
-  letter-spacing: 0.14em;
-}
 .tracking-\[0\.16em\] {
   letter-spacing: 0.16em;
-}
-.tracking-\[0\.18em\] {
-  letter-spacing: 0.18em;
 }
 .text-neutral-900 {
   --tw-text-opacity: 1;
@@ -1985,14 +1957,6 @@ p, blockquote, li {
 .text-wesolve-green-300 {
   --tw-text-opacity: 1;
   color: rgb(167 201 184 / var(--tw-text-opacity, 1));
-}
-.text-wesolve-green-400 {
-  --tw-text-opacity: 1;
-  color: rgb(120 170 146 / var(--tw-text-opacity, 1));
-}
-.text-wesolve-green-500 {
-  --tw-text-opacity: 1;
-  color: rgb(77 139 109 / var(--tw-text-opacity, 1));
 }
 .text-wesolve-green-600 {
   --tw-text-opacity: 1;
@@ -2278,9 +2242,11 @@ button svg[x-show="open"] {
   border-color: rgb(115 223 191 / var(--tw-border-opacity, 1));
   --tw-bg-opacity: 1;
   background-color: rgb(8 28 22 / var(--tw-bg-opacity, 1));
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  font-size: 11px;
+  font-size: 0.75rem;
+  line-height: 1rem;
   font-weight: 600;
+  --tw-numeric-spacing: tabular-nums;
+  font-variant-numeric: var(--tw-ordinal) var(--tw-slashed-zero) var(--tw-numeric-figure) var(--tw-numeric-spacing) var(--tw-numeric-fraction);
   --tw-text-opacity: 1;
   color: rgb(115 223 191 / var(--tw-text-opacity, 1));
 }

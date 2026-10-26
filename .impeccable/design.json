@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-26T00:00:00Z",
+  "title": "Design System: wesolve-IT",
+  "extensions": {
+    "colorMeta": {
+      "forest-night": { "role": "primary", "displayName": "Forest Night", "canonical": "#081c16", "tonalRamp": ["#081c16", "#102d23", "#193e30", "#245540", "#326d52", "#4d8b6d", "#78aa92", "#a7c9b8"] },
+      "forest": { "role": "primary", "displayName": "Forest", "canonical": "#245540", "tonalRamp": ["#081c16", "#102d23", "#193e30", "#245540", "#326d52", "#4d8b6d", "#78aa92", "#e6f0eb"] },
+      "mint": { "role": "secondary", "displayName": "Mint Signal", "canonical": "#36c99a", "tonalRamp": ["#104a3b", "#105945", "#0e7056", "#0e8c68", "#19ad7f", "#36c99a", "#73dfbf", "#d3f8eb"] },
+      "sage-line": { "role": "neutral", "displayName": "Sage Line", "canonical": "#cbe0d5", "tonalRamp": ["#4d8b6d", "#78aa92", "#a7c9b8", "#cbe0d5", "#e6f0eb", "#f4f8f6", "#fafcfb", "#ffffff"] },
+      "paper": { "role": "neutral", "displayName": "Paper", "canonical": "#ffffff" }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Page hero h1 only." },
+      "headline": { "displayName": "Headline", "purpose": "Section titles." },
+      "label": { "displayName": "Caption", "purpose": "Small standalone uppercase caption; never a kicker above a heading." }
+    },
+    "shadows": [
+      { "name": "hover-lift", "value": "0 24px 70px -36px rgba(8,28,22,0.45)", "purpose": "Service cards on hover." },
+      { "name": "feature-hover", "value": "0 30px 80px -40px rgba(8,28,22,0.5)", "purpose": "Reference cards on hover." },
+      { "name": "case-rest", "value": "0 24px 70px -40px rgba(8,28,22,0.65)", "purpose": "Image case cards at rest." }
+    ],
+    "motion": [
+      { "name": "ease-out-soft", "value": "cubic-bezier(.2,.7,.2,1)", "purpose": "Entrances and reveals." },
+      { "name": "ease-draw", "value": "cubic-bezier(.6,0,.3,1)", "purpose": "Lines and underlines drawing." },
+      { "name": "ease-pop", "value": "cubic-bezier(.3,1.6,.5,1)", "purpose": "Timeline nodes and illustration accents." }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" },
+      { "name": "xl", "value": "1280px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Main call to action; mint fill, arrow nudges on hover.",
+      "html": "<button class=\"ds-btn-primary\">Projekt besprechen <svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M5 12h14M13 6l6 6-6 6\"/></svg></button>",
+      "css": ".ds-btn-primary{display:inline-flex;align-items:center;gap:8px;min-height:48px;padding:12px 24px;border:0;border-radius:8px;background:#36c99a;color:#081c16;font:600 1rem Onest,sans-serif;cursor:pointer;transition:background-color .2s}.ds-btn-primary svg{transition:transform .25s ease}.ds-btn-primary:hover{background:#73dfbf}.ds-btn-primary:hover svg{transform:translateX(4px)}.ds-btn-primary:focus-visible{outline:2px solid #73dfbf;outline-offset:4px}"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Secondary action on light sections.",
+      "html": "<button class=\"ds-btn-secondary\">Referenzen ansehen</button>",
+      "css": ".ds-btn-secondary{display:inline-flex;align-items:center;min-height:48px;padding:12px 24px;border:1px solid #cbe0d5;border-radius:8px;background:#fff;color:#102d23;font:600 1rem Onest,sans-serif;cursor:pointer;transition:background-color .2s,border-color .2s}.ds-btn-secondary:hover{border-color:#78aa92;background:#f4f8f6}.ds-btn-secondary:focus-visible{outline:2px solid #4d8b6d;outline-offset:4px}"
+    },
+    {
+      "name": "Text Input",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Form field with mint halo on focus.",
+      "html": "<label class=\"ds-label\">Name<input class=\"ds-input\" placeholder=\"Max Mustermann\"></label>",
+      "css": ".ds-label{display:block;font:600 .875rem Onest,sans-serif;color:#081c16}.ds-input{display:block;width:100%;margin-top:8px;padding:12px 16px;border:1px solid #cbe0d5;border-radius:8px;background:#fff;color:#081c16;font:400 1rem Onest,sans-serif;transition:border-color .2s,box-shadow .2s}.ds-input::placeholder{color:#78aa92}.ds-input:hover{border-color:#78aa92}.ds-input:focus{outline:none;border-color:#326d52;box-shadow:0 0 0 4px rgba(171,239,216,.6)}"
+    },
+    {
+      "name": "Tag",
+      "kind": "chip",
+      "refersTo": "tag",
+      "description": "Project category label.",
+      "html": "<span class=\"ds-tag\">Website</span>",
+      "css": ".ds-tag{display:inline-flex;padding:4px 10px;border-radius:6px;background:#e6f0eb;color:#193e30;font:600 .75rem Onest,sans-serif}"
+    },
+    {
+      "name": "Service Card",
+      "kind": "card",
+      "refersTo": "card-service",
+      "description": "Bordered card with mint glow that lifts on hover.",
+      "html": "<a class=\"ds-card\" href=\"#\"><span class=\"ds-eyebrow\">01 / WEB</span><h3>Webentwicklung</h3><p>Schnelle, zugängliche Webseiten und Shops.</p><span class=\"ds-more\">Leistung ansehen →</span></a>",
+      "css": ".ds-card{position:relative;display:flex;flex-direction:column;gap:12px;overflow:hidden;max-width:340px;padding:28px;border:1px solid #cbe0d5;border-radius:16px;background:#fff;color:#081c16;text-decoration:none;font-family:Onest,sans-serif;transition:border-color .3s,box-shadow .3s,transform .3s}.ds-card::after{content:'';position:absolute;right:-80px;bottom:-80px;width:208px;height:208px;border-radius:50%;background:rgba(171,239,216,.4);filter:blur(64px);pointer-events:none}.ds-card h3{margin:0;font-size:1.5rem;font-weight:600;letter-spacing:-.025em}.ds-card p{margin:0;line-height:1.6;color:#193e30}.ds-eyebrow{font-size:.75rem;font-weight:600;letter-spacing:.16em;color:#326d52}.ds-more{font-weight:600;color:#245540}.ds-card:hover{transform:translateY(-4px);border-color:#78aa92;box-shadow:0 24px 70px -36px rgba(8,28,22,.45)}.ds-card:focus-visible{outline:2px solid #4d8b6d;outline-offset:4px}"
+    },
+    {
+      "name": "Navigation",
+      "kind": "nav",
+      "description": "Text links with a growing underline and a mint CTA.",
+      "html": "<nav class=\"ds-nav\"><strong>wesolve-IT</strong><a href=\"#\">Leistungen</a><a href=\"#\">Referenzen</a><a class=\"ds-nav-cta\" href=\"#\">Kontakt</a></nav>",
+      "css": ".ds-nav{display:flex;align-items:center;gap:28px;padding:16px 24px;background:#fff;font:500 1rem Onest,sans-serif;color:#081c16}.ds-nav strong{margin-right:auto}.ds-nav a{position:relative;color:inherit;text-decoration:none}.ds-nav a:not(.ds-nav-cta)::after{content:'';position:absolute;left:0;right:0;bottom:-6px;height:2px;border-radius:2px;background:#326d52;transform:scaleX(0);transform-origin:left;transition:transform .3s cubic-bezier(.6,0,.3,1)}.ds-nav a:hover::after,.ds-nav a:focus-visible::after{transform:scaleX(1)}.ds-nav-cta{padding:10px 18px;border-radius:8px;background:#36c99a;color:#081c16!important;font-weight:600}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Green Workbench",
+    "overview": "The site feels like a well-kept workbench: solid, approachable, everything within reach. A single deep forest green carries the whole system, from near-black hero bands to pale sage card borders, so the page reads as one material in different tones, not a mix of colours. Rounded cards, gentle lift on hover and line illustrations make it tactile and friendly without becoming playful.\n\nPages alternate light paper sections with dark forest bands (hero, process timeline, contact). The dark hero carries a faint 64px drafting grid with a soft mint glow. Motion is calm and one-shot: staggered hero entrance, cards that fade up once on scroll, a timeline line that draws itself. Every motion respects prefers-reduced-motion. Dark mode (class-based) moves the light sections onto forest tones rather than neutral grey.",
+    "keyCharacteristics": [
+      "One green family in many tones; mint is the only other hue and is used sparingly.",
+      "One typeface (Onest) for everything, tight-tracked bold headlines.",
+      "Rounded, bordered cards that lift on hover with deep green-tinted shadows.",
+      "Light/dark section rhythm; dark bands for hero, process and closing CTA.",
+      "Headings stand on their own; numbering appears only where the sequence matters (the process timeline)."
+    ],
+    "rules": [
+      { "name": "The Rare Signal Rule", "body": "Mint marks action and state only: CTAs, focus, active markers, small illustration accents. Never a section background or large fill.", "section": "colors" },
+      { "name": "The One Material Rule", "body": "Neutrals are green-tinted sage, not grey. Don't introduce neutral-* or gray-* greys on new surfaces.", "section": "colors" },
+      { "name": "The Balanced Lines Rule", "body": "Headings use text-wrap: balance, paragraphs text-wrap: pretty; long German compounds get &shy; break points rather than smaller type.", "section": "typography" },
+      { "name": "The Lift-on-Touch Rule", "body": "Surfaces are flat until hovered or focused; lift and shadow are a response, never decoration.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do build every new surface from the forest-green ramp and sage neutrals, with both light and dark: variants.",
+      "Do keep mint for CTAs, focus and markers only (The Rare Signal Rule).",
+      "Do set all type in Onest; use weight and tight tracking for hierarchy.",
+      "Do keep cards flat and bordered at rest, lifting with a forest-tinted shadow on hover.",
+      "Do make every motion one-shot or hover-driven and disable it under prefers-reduced-motion."
+    ],
+    "donts": [
+      "Don't use neutral greys (gray-*, neutral-*) or black shadows on new surfaces.",
+      "Don't fill large areas or section backgrounds with mint.",
+      "Don't use Barlow Condensed, Montserrat or Space Grotesk; they remain in the Tailwind config but are not shipped or self-hosted.",
+      "Don't add looping decorative animation beyond the existing logo ticker and hero float.",
+      "Don't put an eyebrow or kicker label above a heading, or decorative numbering (01 / WEB) on cards.",
+      "Don't use monospace or Unicode glyphs as styling; arrows are stroked inline SVG."
+    ]
+  }
+}

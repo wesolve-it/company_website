@@ -1,0 +1,33 @@
+{
+  "hook": {
+    "enabled": true,
+    "limits": {
+      "maxFindings": 5,
+      "maxChars": 8000
+    }
+  },
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "leistungen/*.html"
+        ],
+        "createdAt": "2026-10-26T12:30:18.492Z",
+        "reason": "Agent: FAQ accordion list; each item's button carries py-6, so the top border is not flush with content"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          "datenschutz.html"
+        ],
+        "createdAt": "2026-10-26T12:30:18.508Z",
+        "reason": "Agent: monospace only on literal cookie names inside <code>"
+      }
+    ]
+  }
+}
