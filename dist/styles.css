@@ -1055,6 +1055,60 @@ p, blockquote, li {
   width: 100%;
   border-radius: 0.8rem;
 }
+.phone-pair {
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: flex-start;
+  gap: 8%;
+}
+.phone-pair-offset {
+  margin-top: 18%;
+}
+.device-phone {
+  position: relative;
+  border-radius: 18%/8.4%;
+  --tw-bg-opacity: 1;
+  background-color: rgb(13 18 16 / var(--tw-bg-opacity, 1));
+  padding: 4.5%;
+  --tw-shadow: 0 40px 80px -30px rgba(0,0,0,0.85),inset 0 0 0 1px rgba(255,255,255,0.14);
+  --tw-shadow-colored: 0 40px 80px -30px var(--tw-shadow-color), inset 0 0 0 1px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+  --tw-ring-color: rgb(0 0 0 / 0.6);
+}
+.device-phone::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 3.6%;
+    height: 2.6%;
+    width: 30%;
+    --tw-translate-x: -50%;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    border-radius: 9999px;
+    --tw-bg-opacity: 1;
+    background-color: rgb(0 0 0 / var(--tw-bg-opacity, 1));
+  }
+.device-phone-screen {
+  aspect-ratio: 6/13;
+  overflow: hidden;
+  border-radius: 14%/6.5%;
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity, 1));
+}
+.device-phone-screen img {
+  height: 100%;
+  width: 100%;
+  --tw-scale-x: 1.04;
+  --tw-scale-y: 1.04;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 .tag {
   display: inline-flex;
   border-radius: 0.375rem;
@@ -1319,6 +1373,9 @@ p, blockquote, li {
 .h-full {
   height: 100%;
 }
+.max-h-\[44rem\] {
+  max-height: 44rem;
+}
 .min-h-0 {
   min-height: 0px;
 }
@@ -1369,6 +1426,12 @@ p, blockquote, li {
 }
 .w-8 {
   width: 2rem;
+}
+.w-\[62\%\] {
+  width: 62%;
+}
+.w-\[78\%\] {
+  width: 78%;
 }
 .w-auto {
   width: auto;
@@ -1683,10 +1746,6 @@ p, blockquote, li {
 .bg-white\/\[0\.04\] {
   background-color: rgb(255 255 255 / 0.04);
 }
-.object-contain {
-  -o-object-fit: contain;
-     object-fit: contain;
-}
 .object-cover {
   -o-object-fit: cover;
      object-fit: cover;
@@ -1802,6 +1861,9 @@ p, blockquote, li {
 }
 .pl-7 {
   padding-left: 1.75rem;
+}
+.pt-10 {
+  padding-top: 2.5rem;
 }
 .pt-14 {
   padding-top: 3.5rem;
@@ -2755,6 +2817,9 @@ button svg[x-show="open"] {
   .sm\:w-44 {
     width: 11rem;
   }
+  .sm\:w-\[60\%\] {
+    width: 60%;
+  }
   .sm\:w-auto {
     width: auto;
   }
@@ -2808,10 +2873,6 @@ button svg[x-show="open"] {
     padding-left: 2.5rem;
     padding-right: 2.5rem;
   }
-  .sm\:px-12 {
-    padding-left: 3rem;
-    padding-right: 3rem;
-  }
   .sm\:px-6 {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
@@ -2820,9 +2881,11 @@ button svg[x-show="open"] {
     padding-left: 2rem;
     padding-right: 2rem;
   }
-  .sm\:py-14 {
+  .sm\:pt-10 {
+    padding-top: 2.5rem;
+  }
+  .sm\:pt-14 {
     padding-top: 3.5rem;
-    padding-bottom: 3.5rem;
   }
   .sm\:pt-8 {
     padding-top: 2rem;
