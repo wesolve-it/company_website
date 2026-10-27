@@ -131,6 +131,25 @@ button svg[x-show="open"] {
   .device-screen {
     @apply block w-full rounded-[0.8rem];
   }
+  .phone-pair {
+    @apply mx-auto grid grid-cols-2 items-start gap-[8%];
+  }
+  .phone-pair-offset {
+    @apply mt-[18%];
+  }
+  .device-phone {
+    @apply relative rounded-[18%/8.4%] bg-[#0d1210] p-[4.5%] shadow-[0_40px_80px_-30px_rgba(0,0,0,0.85),inset_0_0_0_1px_rgba(255,255,255,0.14)] ring-1 ring-black/60;
+  }
+  .device-phone::after {
+    content: '';
+    @apply absolute left-1/2 top-[3.6%] h-[2.6%] w-[30%] -translate-x-1/2 rounded-full bg-black;
+  }
+  .device-phone-screen {
+    @apply aspect-[6/13] overflow-hidden rounded-[14%/6.5%] bg-black;
+  }
+  .device-phone-screen img {
+    @apply h-full w-full scale-[1.04] object-cover;
+  }
   .tag {
     @apply inline-flex rounded-md bg-wesolve-green-100 px-2.5 py-1 text-xs font-semibold text-wesolve-green-800 dark:bg-wesolve-green-800 dark:text-wesolve-green-100;
   }
