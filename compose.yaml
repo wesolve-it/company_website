@@ -1,0 +1,15 @@
+services:
+  website:
+    build: .
+    ports:
+      - "127.0.0.1:3000:3000"
+    env_file: .env
+    environment:
+      NODE_ENV: production
+      DATABASE_URL: file:/app/data/payload.db
+      MEDIA_DIR: /app/data/media
+    volumes:
+      - website-data:/app/data
+    restart: unless-stopped
+volumes:
+  website-data:

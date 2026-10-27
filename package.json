@@ -1,18 +1,60 @@
 {
-  "name": "website",
+  "name": "wesolve-it-website",
   "version": "1.0.0",
   "scripts": {
-    "build": "npx postcss css/tailwind.css -o dist/styles.css",
-    "watch": "npx postcss css/tailwind.css -o dist/styles.css --watch"
+    "dev": "next dev",
+    "build": "next build --webpack",
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "payload": "node --env-file-if-exists=.env node_modules/payload/bin.js",
+    "generate:types": "node --env-file-if-exists=.env node_modules/payload/bin.js generate:types",
+    "generate:importmap": "node --env-file-if-exists=.env node_modules/payload/bin.js generate:importmap",
+    "seed": "node --env-file-if-exists=.env --import tsx scripts/seed.ts",
+    "migrate": "node --env-file-if-exists=.env node_modules/payload/bin.js migrate",
+    "test": "node --import tsx --test tests/*.test.ts",
+    "test:e2e": "playwright test"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
-  "devDependencies": {
+  "dependencies": {
+    "@payloadcms/db-postgres": "3.92.0",
+    "@payloadcms/db-sqlite": "3.92.0",
+    "@payloadcms/email-nodemailer": "3.92.0",
+    "@payloadcms/next": "3.92.0",
+    "@payloadcms/richtext-lexical": "3.92.0",
+    "@tailwindcss/postcss": "4.3.3",
     "autoprefixer": "^10.4.20",
+    "graphql": "16.14.2",
+    "next": "16.4.3",
+    "payload": "3.92.0",
     "postcss": "^8.5.1",
-    "tailwindcss": "^3.4.17",
-    "postcss-cli": "^11.0.0"
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "server-only": "0.0.1",
+    "sharp": "0.35.5",
+    "tailwindcss": "4.3.3"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.64.0",
+    "@types/node": "26.6.4",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "cheerio": "1.2.0",
+    "domhandler": "6.0.1",
+    "tsx": "4.23.15",
+    "typescript": "7.0.2"
+  },
+  "private": true,
+  "type": "module",
+  "overrides": {
+    "undici": "7.30.0",
+    "nodemailer": "10.0.16",
+    "sass": "1.105.1",
+    "dompurify": "3.4.16",
+    "@esbuild-kit/core-utils": {
+      "esbuild": "0.25.12"
+    }
   }
 }

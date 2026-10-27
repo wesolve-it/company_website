@@ -1,28 +1,14 @@
-# CLAUDE.md
+# Projektkonventionen
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+Next.js App Router und Payload CMS. Setup und Betrieb stehen in README.md.
 
-## Project Overview
-
-Static marketing website for wesolve-IT (German-language, targeting small and mid-sized businesses of any sector, mainly in the Nuremberg/Franconia region; see `PRODUCT.md`). Plain HTML pages styled with Tailwind CSS, interactivity via Alpine.js. No bundler, no framework, no tests — pages are served directly (e.g. via Live Server).
-
-## Commands
-
-```bash
-npm install          # install dependencies
-npm run build        # compile css/tailwind.css -> dist/styles.css (PostCSS + Tailwind + Autoprefixer)
-npm run watch        # same, in watch mode — run this during development alongside a live server
-```
-
-There is no lint or test setup (`npm test` is a stub).
-
-## Architecture
-
-- **Pages**: top-level HTML files (`index.html`, `kontakt.html`, `leistungen.html`, `referenzen.html`, `impressum.html`, `datenschutz.html`, `thank-you.html`, `quick-check.html`, `404.html`) plus detail pages in `leistungen/` (services) and `referenzen/` (client references). All content is in German.
-- **Shared navigation/footer**: `navigation.html` and `footer.html` are partials fetched at runtime by `js/navigation.js`, which prepends the nav to `<body>` and injects the footer into `#footer-placeholder`. Every page must include `js/navigation.js` and a `<div id="footer-placeholder">`. Changes to nav/footer only need to be made in the two partial files.
-- **Styling**: `css/tailwind.css` is the Tailwind entry point. It compiles to `dist/styles.css`, which every page links. The compiled `dist/styles.css` is committed. After editing HTML classes or `css/tailwind.css`, rebuild (or have `npm run watch` running) so `dist/styles.css` stays current.
-- **Tailwind config**: `tailwind.config.js` defines the brand palette (`wesolve-green`, a forest-green ramp, with 700 as brand primary and 950 for dark bands/text; `wesolve-accent`, mint, 400 for CTAs, focus and markers only; `wesolve-accent-coral` is currently an identical copy of the mint ramp). All pages use `font-text` (Onest, self-hosted in `assets/fonts/`). The `heading`/`body`/`display` font families (Barlow Condensed, Montserrat, Space Grotesk) are still in the config but not shipped; don't use them. Use these tokens instead of raw colors; `DESIGN.md` documents the full visual system.
-- **JavaScript**: Alpine.js is loaded exactly once per page via the CDN build (`cdn.jsdelivr.net/npm/alpinejs@3.14.8`, with `defer`). Do NOT additionally load `alpinejs` as an ES module — a second Alpine instance double-initializes all `x-data` trees and breaks the mobile navigation toggle. Alpine directives (`x-data`, `x-show`, etc.) are used inline in the HTML (mobile navigation, FAQ accordions, Referenzen filter).
-- **Dark mode**: Tailwind `darkMode: 'class'`. `js/theme.js` must be loaded synchronously in every page `<head>` (right after `dist/styles.css`) — it sets the `dark` class from localStorage/system preference before paint and exposes `window.toggleTheme()`, which the toggle button in `navigation.html` calls. New pages need both the script tag and `dark:` variants on light-specific utilities.
-- **Analytics**: each page loads Umami (`cloud.umami.is/script.js`) in `<head>`; CTAs use `data-umami-event`. `js/navigation.js` also injects `js/cookie-consent.js` site-wide — keep both when creating new pages.
-- **SEO**: `sitemap.xml` and `robots.txt` at the root; new pages should be added to the sitemap.
+- Frontend: `src/app/(frontend)`, CMS: `src/app/(payload)`.
+- CMS-Konfiguration: `src/payload.config.ts`, Collections und Globals unter `src/`.
+- Öffentliche CMS-Abfragen müssen `overrideAccess: false` verwenden. Entwürfe dürfen nie öffentlich erscheinen.
+- Anfragen werden ausschließlich durch die validierende Kontakt-API angelegt, nicht durch eine offene Collection-API.
+- React-Komponenten und Tailwind-Tokens verwenden; keine Alpine-/AOS-/HTML-Partial-Loader ergänzen.
+- `legacy/` ist nur das Archiv der ursprünglichen Website. Änderungen an der neuen Website erfolgen in `src/`.
+- `.env`, Datenbanken, Medienuploads und Testdaten nicht committen.
+- Datenbankadapter getrennte Migrationen geben. PostgreSQL-Support nicht mit SQLite-Migrationen ausliefern.
+- Nach Änderungen: Typecheck, relevante Tests und Produktionsbuild. Browserprüfungen nutzen `.test-data/`.
+- Zielgruppe und Positionierung: `PRODUCT.md`. `DESIGN.md` dokumentiert das visuelle System der ursprünglichen Website in `legacy/`.

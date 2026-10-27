@@ -1,0 +1,4364 @@
+{
+  "services": [
+    {
+      "title": "Webentwicklung",
+      "slug": "webentwicklung",
+      "heading": "Webentwicklung",
+      "intro": "Deine Webseite ist oft der erste Kontakt mit deinem Unternehmen – wir sorgen dafür, dass sie überzeugt. Ob moderner Webauftritt, Online-Shop oder Webanwendung: Wir entwickeln individuell, verständlich und so, dass du danach selbst damit arbeiten kannst.",
+      "image": "/assets/img/illustration-webentwicklung.svg",
+      "order": 0,
+      "featured": true,
+      "sections": [
+        {
+          "heading": "Deine Webseite sollte für dich arbeiten – nicht gegen dich",
+          "eyebrow": "Kommt dir das bekannt vor?",
+          "tone": "muted",
+          "paragraphs": [
+            {
+              "text": "Kommt dir bekannt vor? Dann bist du hier richtig."
+            }
+          ],
+          "items": [
+            {
+              "heading": "",
+              "paragraphs": [
+                {
+                  "text": "„Meine Webseite ist Jahre alt – und ich traue mich nicht, etwas daran zu ändern.\""
+                }
+              ]
+            },
+            {
+              "heading": "",
+              "paragraphs": [
+                {
+                  "text": "„Für jede kleine Textänderung zahle ich eine Agentur – oder warte wochenlang.\""
+                }
+              ]
+            },
+            {
+              "heading": "",
+              "paragraphs": [
+                {
+                  "text": "„Auf dem Smartphone sieht meine Seite zerschossen aus – dabei kommen die meisten Besucher mobil.\""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Mehr als nur eine hübsche Seite",
+          "eyebrow": "Was du bekommst",
+          "tone": "light",
+          "paragraphs": [
+            {
+              "text": "Webseite mit Selbstpflege und eigenem Franchise-Bereich – die Inhalte pflegt das Team heute komplett selbst, ohne Hilfe Dritter."
+            }
+          ],
+          "items": [
+            {
+              "heading": "Webseiten & Online-Shops",
+              "paragraphs": [
+                {
+                  "text": "Vom Webauftritt mit allen wichtigen Infos bis zum Online-Shop: Wir gestalten und entwickeln individuell, statt Vorlagen zu verbiegen. Deine Inhalte pflegst du danach selbst – ohne Technikkenntnisse und ohne laufende Agenturkosten."
+                }
+              ]
+            },
+            {
+              "heading": "Webanwendungen & Portale",
+              "paragraphs": [
+                {
+                  "text": "Wenn eine normale Webseite nicht reicht: Wir bauen browserbasierte Anwendungen wie Kundenportale, Buchungssysteme oder interne Tools – genau auf deine Abläufe zugeschnitten."
+                }
+              ]
+            },
+            {
+              "heading": "Schritt für Schritt, gemeinsam",
+              "paragraphs": [
+                {
+                  "text": "Wir arbeiten in kurzen Etappen und zeigen dir regelmäßig Zwischenstände. So siehst du früh, wohin es geht, und kannst jederzeit Wünsche einbringen – statt am Ende eine Überraschung zu erleben. Moderne Technik und automatisierte Tests sorgen im Hintergrund dafür, dass alles zuverlässig läuft."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Vom Kickoff bis zum Livegang",
+          "eyebrow": "So läuft dein Projekt ab",
+          "tone": "dark",
+          "paragraphs": [
+            {
+              "text": "Ein typisches Webseiten-Projekt – je nach Umfang geht es schneller oder dauert etwas länger."
+            }
+          ],
+          "items": [
+            {
+              "heading": "Kickoff & Konzept",
+              "paragraphs": [
+                {
+                  "text": "Wir klären Ziele, Inhalte und Struktur deiner Seite – bei dir vor Ort oder per Video-Call."
+                }
+              ]
+            },
+            {
+              "heading": "Design",
+              "paragraphs": [
+                {
+                  "text": "Du bekommst einen ersten Entwurf und gibst Feedback – wir passen an, bis alles sitzt."
+                }
+              ]
+            },
+            {
+              "heading": "Umsetzung",
+              "paragraphs": [
+                {
+                  "text": "Wir entwickeln deine Seite und du siehst regelmäßig Zwischenstände – keine Blackbox."
+                }
+              ]
+            },
+            {
+              "heading": "Livegang & Einweisung",
+              "paragraphs": [
+                {
+                  "text": "Wir schalten deine Seite live, zeigen dir die Pflege der Inhalte – und bleiben erreichbar."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Bei uns selbstverständlich – ohne Aufpreis",
+          "eyebrow": "Immer mit dabei",
+          "tone": "muted",
+          "paragraphs": [
+            {
+              "text": "Keine versteckten Kosten, keine Überraschungen."
+            },
+            {
+              "text": "Sieht auf Smartphone, Tablet und Desktop gleichermaßen gut aus."
+            },
+            {
+              "text": "Deine Seite läuft sicher und verschlüsselt – wir kümmern uns um die Technik."
+            },
+            {
+              "text": "Datenschutz und Rechtliches sind von Anfang an mitgedacht."
+            },
+            {
+              "text": "Wir zeigen dir alles, bis du dich bei der Pflege sicher fühlst."
+            },
+            {
+              "text": "Du sprichst mit dem Entwickler – nicht mit einer Hotline."
+            }
+          ],
+          "items": []
+        }
+      ],
+      "faq": [
+        {
+          "question": "Was kostet eine Webseite?",
+          "answer": "Das hängt vom Umfang ab: Eine kompakte Unternehmens-Webseite ist deutlich günstiger als ein Online-Shop mit Anbindungen. Nach dem kostenlosen Erstgespräch bekommst du ein Festpreis-Angebot – ohne versteckte Kosten."
+        },
+        {
+          "question": "Wie lange dauert es, bis meine Webseite online ist?",
+          "answer": "In der Regel vier bis sechs Wochen vom Kickoff bis zum Livegang – je nach Umfang und danach, wie schnell Inhalte wie Texte und Bilder zusammenkommen."
+        },
+        {
+          "question": "Was muss ich selbst beisteuern?",
+          "answer": "Dein Wissen über dein Geschäft – und vorhandene Inhalte wie Logo, Texte oder Fotos. Beim Rest unterstützen wir dich, von der Textstruktur bis zur Bildauswahl."
+        },
+        {
+          "question": "Kann ich die Inhalte später selbst ändern?",
+          "answer": "Ja – das ist bei uns Standard. Du bekommst ein System, mit dem du Texte, Bilder und Angebote selbst pflegst, plus eine persönliche Einweisung. So wie unsere Kunden Alfafood und dieschokoecke."
+        },
+        {
+          "question": "Ich habe schon eine Webseite – lohnt sich ein Relaunch?",
+          "answer": "Wenn sie kaum Anfragen bringt, mobil schlecht aussieht oder du sie nicht selbst pflegen kannst: ja. Im Erstgespräch schauen wir ehrlich drauf – manchmal reicht auch eine Überarbeitung statt eines Neubaus."
+        },
+        {
+          "question": "Was passiert nach dem Livegang?",
+          "answer": "Wir lassen dich nicht allein: Hosting, technische Updates und Support kommen aus derselben Hand. Wenn du etwas ändern willst und nicht weiterkommst, bist du bei uns nicht in der Warteschleife."
+        }
+      ],
+      "seo": {
+        "title": "Webentwicklung für kleine Unternehmen | wesolve-IT",
+        "description": "Moderne Webseiten und Webanwendungen für kleine Unternehmen – individuell gestaltet, leicht selbst zu pflegen und technisch auf dem neuesten Stand."
+      }
+    },
+    {
+      "title": "App-Entwicklung",
+      "slug": "app-entwicklung",
+      "heading": "App-Entwicklung",
+      "intro": "Eine eigene App bringt dich direkt auf das Smartphone deiner Kunden – für Bestellungen, Termine, Treueprogramme und mehr. Wir begleiten dich von der ersten Idee bis zur Veröffentlichung im App Store und darüber hinaus.",
+      "image": "/assets/img/illustration-app.svg",
+      "order": 1,
+      "featured": true,
+      "sections": [
+        {
+          "heading": "Der direkte Weg zu deinen Kunden ist heute das Smartphone",
+          "eyebrow": "Kommt dir das bekannt vor?",
+          "tone": "muted",
+          "paragraphs": [
+            {
+              "text": "Kommt dir bekannt vor? Dann bist du hier richtig."
+            }
+          ],
+          "items": [
+            {
+              "heading": "",
+              "paragraphs": [
+                {
+                  "text": "„Meine Stammkunden würden gern direkt bei mir bestellen oder buchen – aber der Weg ist umständlich.\""
+                }
+              ]
+            },
+            {
+              "heading": "",
+              "paragraphs": [
+                {
+                  "text": "„Ich zahle hohe Provisionen an Plattformen, die zwischen mir und meinen Kunden stehen.\""
+                }
+              ]
+            },
+            {
+              "heading": "",
+              "paragraphs": [
+                {
+                  "text": "„Ich will meine Kunden über Aktionen informieren – erreiche sie aber nicht zuverlässig.\""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Von der Idee bis in den App Store",
+          "eyebrow": "Was du bekommst",
+          "tone": "light",
+          "paragraphs": [
+            {
+              "text": "Business Seating App für den VIP-Bereich – für einen reibungslosen Ablauf am Spieltag."
+            }
+          ],
+          "items": [
+            {
+              "heading": "Eine App für iPhone & Android",
+              "paragraphs": [
+                {
+                  "text": "Wir entwickeln deine App einmal – und sie läuft auf iPhone und Android gleichermaßen. Das spart Entwicklungskosten und stellt sicher, dass du alle deine Kunden erreichst, egal welches Gerät sie nutzen."
+                }
+              ]
+            },
+            {
+              "heading": "Durchdacht bis ins Detail",
+              "paragraphs": [
+                {
+                  "text": "Deine Kunden nutzen die App unterwegs und oft nebenbei. Deshalb gestalten wir jede Ansicht so, dass sie sich sofort intuitiv bedienen lässt – schnell, übersichtlich und ganz ohne Anleitung."
+                }
+              ]
+            },
+            {
+              "heading": "Veröffentlichung & Updates inklusive",
+              "paragraphs": [
+                {
+                  "text": "App-Store-Freigabe, technische Updates, neue Funktionen: Nach dem Start lassen wir dich nicht allein. Deine App bleibt aktuell und sicher – und wächst mit deinem Unternehmen mit."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Von der Idee bis in den App Store",
+          "eyebrow": "So läuft dein Projekt ab",
+          "tone": "dark",
+          "paragraphs": [
+            {
+              "text": "Ein typisches App-Projekt – der genaue Zeitplan hängt vom Funktionsumfang ab."
+            }
+          ],
+          "items": [
+            {
+              "heading": "Idee & Konzept",
+              "paragraphs": [
+                {
+                  "text": "Wir schärfen deine Idee, definieren die wichtigsten Funktionen und planen die Umsetzung."
+                }
+              ]
+            },
+            {
+              "heading": "Design & Prototyp",
+              "paragraphs": [
+                {
+                  "text": "Ein klickbarer Entwurf zeigt dir, wie sich deine App anfühlen wird – bevor die Entwicklung startet."
+                }
+              ]
+            },
+            {
+              "heading": "Entwicklung",
+              "paragraphs": [
+                {
+                  "text": "Wir bauen die App in Etappen – du testest Zwischenstände direkt auf deinem eigenen Handy."
+                }
+              ]
+            },
+            {
+              "heading": "App Store & Updates",
+              "paragraphs": [
+                {
+                  "text": "Wir übernehmen die Veröffentlichung bei Apple & Google und halten deine App danach aktuell."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Bei uns selbstverständlich – ohne Aufpreis",
+          "eyebrow": "Immer mit dabei",
+          "tone": "muted",
+          "paragraphs": [
+            {
+              "text": "Keine versteckten Kosten, keine Überraschungen."
+            },
+            {
+              "text": "Eine Entwicklung, beide Plattformen – ohne doppelte Kosten."
+            },
+            {
+              "text": "Wir übernehmen den kompletten Freigabeprozess bei Apple und Google."
+            },
+            {
+              "text": "Deine App bleibt mit neuen iOS- und Android-Versionen kompatibel."
+            },
+            {
+              "text": "Datenschutz ist von Anfang an mitgedacht – nicht nachgerüstet."
+            },
+            {
+              "text": "Du sprichst mit dem Entwickler – nicht mit einer Hotline."
+            }
+          ],
+          "items": []
+        }
+      ],
+      "faq": [
+        {
+          "question": "Was kostet eine App?",
+          "answer": "Das hängt vom Funktionsumfang ab. Eine schlanke erste Version ist oft günstiger, als viele denken – und ein guter Weg, die Idee am Markt zu testen. Nach dem Erstgespräch bekommst du ein Festpreis-Angebot."
+        },
+        {
+          "question": "Wie lange dauert die Entwicklung?",
+          "answer": "Eine erste Version ist je nach Umfang oft in zwei bis drei Monaten im App Store. Danach entwickeln wir in Etappen weiter – so ist deine App früh im Einsatz und wächst mit dem Feedback deiner Kunden."
+        },
+        {
+          "question": "Brauche ich getrennte Apps für iPhone und Android?",
+          "answer": "Nein. Wir entwickeln deine App einmal, und sie läuft auf beiden Plattformen. Das spart deutlich Kosten gegenüber zwei getrennten Entwicklungen."
+        },
+        {
+          "question": "Übernehmt ihr die Veröffentlichung im App Store?",
+          "answer": "Ja, komplett – inklusive der Freigabeprozesse bei Apple und Google. Du musst dich um nichts kümmern."
+        },
+        {
+          "question": "Lohnt sich eine App für ein kleines Unternehmen überhaupt?",
+          "answer": "Wenn deine Kunden regelmäßig bei dir kaufen, buchen oder bestellen: sehr wahrscheinlich ja. Wenn nicht, sagen wir dir das ehrlich – mach am besten den kostenlosen Quick-Check, dann bekommst du in 48 Stunden unsere Einschätzung."
+        }
+      ],
+      "seo": {
+        "title": "App-Entwicklung für kleine Unternehmen | wesolve-IT",
+        "description": "Maßgeschneiderte Apps für iOS und Android – von der Idee bis zum App Store. Für kleine Unternehmen, die ihre Kunden direkt erreichen wollen."
+      }
+    },
+    {
+      "title": "Suchmaschinen­optimierung",
+      "slug": "suchmaschinenoptimierung",
+      "heading": "Suchmaschinen­optimierung",
+      "intro": "Deine Kunden suchen bei Google – die Frage ist nur, ob sie dich finden oder deine Konkurrenz. Wir sorgen dafür, dass dein Unternehmen dort auftaucht, wo gesucht wird: in deiner Region, mit deinen Leistungen.",
+      "image": "/assets/img/illustration-seo.svg",
+      "order": 2,
+      "featured": true,
+      "sections": [
+        {
+          "heading": "Es gibt dich – aber Google kennt dich nicht",
+          "eyebrow": "Kommt dir das bekannt vor?",
+          "tone": "muted",
+          "paragraphs": [
+            {
+              "text": "Kommt dir bekannt vor? Dann bist du hier richtig."
+            }
+          ],
+          "items": [
+            {
+              "heading": "",
+              "paragraphs": [
+                {
+                  "text": "„Wer meinen Firmennamen googelt, findet mich – aber sonst findet mich niemand.\""
+                }
+              ]
+            },
+            {
+              "heading": "",
+              "paragraphs": [
+                {
+                  "text": "„Meine Konkurrenz steht bei Google oben – obwohl ich der bessere Anbieter bin.\""
+                }
+              ]
+            },
+            {
+              "heading": "",
+              "paragraphs": [
+                {
+                  "text": "„Mein Google-Profil zeigt falsche Öffnungszeiten und uralte Fotos.\""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "In drei Schritten nach oben",
+          "eyebrow": "So gehen wir vor",
+          "tone": "light",
+          "paragraphs": [
+            {
+              "text": "Platz 1 bei Google für das angebotene Sushi-Catering – Kunden finden LU-BU jetzt vor der Konkurrenz."
+            }
+          ],
+          "items": [
+            {
+              "heading": "Analyse & Ziele",
+              "paragraphs": [
+                {
+                  "text": "Wir analysieren deine Webseite und finden heraus, wonach deine Kunden wirklich suchen. Gemeinsam legen wir fest, für welche Suchbegriffe du gefunden werden willst – realistisch, messbar und passend zu deinem Angebot."
+                }
+              ]
+            },
+            {
+              "heading": "Optimierung, die wirkt",
+              "paragraphs": [
+                {
+                  "text": "Wir optimieren Inhalte, Ladezeiten und Technik deiner Webseite und bringen dein Google-Unternehmensprofil auf Vordermann – inklusive Bewertungen, Bildern und Öffnungszeiten. Für bessere Platzierungen genau dort, wo deine Kunden suchen."
+                }
+              ]
+            },
+            {
+              "heading": "Messbare Ergebnisse",
+              "paragraphs": [
+                {
+                  "text": "Du siehst schwarz auf weiß, was die Maßnahmen bringen: Wir beobachten Platzierungen und Besucherzahlen, passen an, was nötig ist – und besprechen die Zahlen regelmäßig mit dir. Verständlich, nicht in Fachchinesisch."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Wann siehst du Ergebnisse?",
+          "eyebrow": "Realistische Erwartungen",
+          "tone": "dark",
+          "paragraphs": [
+            {
+              "text": "SEO ist kein Schalter, den man umlegt – sondern ein Prozess, der sich aufbaut. So sieht der typische Verlauf aus:"
+            }
+          ],
+          "items": [
+            {
+              "heading": "Analyse",
+              "paragraphs": [
+                {
+                  "text": "Wir prüfen, wo du heute stehst, was deine Konkurrenz macht und wonach deine Kunden suchen."
+                }
+              ]
+            },
+            {
+              "heading": "Optimierung",
+              "paragraphs": [
+                {
+                  "text": "Webseite, Inhalte und dein Google-Unternehmensprofil werden auf Vordermann gebracht."
+                }
+              ]
+            },
+            {
+              "heading": "Sichtbarkeit wächst",
+              "paragraphs": [
+                {
+                  "text": "Google braucht etwas Zeit – erste Verbesserungen zeigen sich meist nach wenigen Wochen."
+                }
+              ]
+            },
+            {
+              "heading": "Auswertung",
+              "paragraphs": [
+                {
+                  "text": "Du bekommst regelmäßig verständliche Zahlen – und wir justieren gemeinsam nach."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Bei uns selbstverständlich – ohne Aufpreis",
+          "eyebrow": "Immer mit dabei",
+          "tone": "muted",
+          "paragraphs": [
+            {
+              "text": "Zahlen, die du verstehst – kein Fachchinesisch."
+            },
+            {
+              "text": "Bewertungen, Bilder und Öffnungszeiten – gepflegt und aktuell."
+            },
+            {
+              "text": "Ladezeiten und Struktur deiner Webseite prüfen wir gleich mit."
+            },
+            {
+              "text": "Wir versprechen nichts, was wir nicht halten können."
+            },
+            {
+              "text": "Optimiert für die Region, in der deine Kunden wirklich suchen."
+            },
+            {
+              "text": "Du sprichst mit dem, der die Arbeit macht – nicht mit einem Vertrieb."
+            }
+          ],
+          "items": []
+        }
+      ],
+      "faq": [
+        {
+          "question": "Wie schnell sehe ich Ergebnisse?",
+          "answer": "Erste Verbesserungen zeigen sich meist nach wenigen Wochen, deutliche Ergebnisse nach zwei bis drei Monaten. SEO wirkt dafür nachhaltig: Eine gute Platzierung bringt dir Monat für Monat Kunden – ohne dass du pro Klick bezahlst."
+        },
+        {
+          "question": "Garantiert ihr mir Platz 1 bei Google?",
+          "answer": "Nein – und sei skeptisch bei jedem, der das verspricht. Niemand kontrolliert Google. Was wir tun: realistische Ziele setzen, sauber arbeiten und dir mit nachvollziehbaren Zahlen zeigen, was erreicht wurde. Dass Platz 1 möglich ist, zeigt unser Kunde LU-BU."
+        },
+        {
+          "question": "Was kostet SEO?",
+          "answer": "Das hängt davon ab, wo du stehst und wie umkämpft deine Branche ist. Nach der Analyse bekommst du einen klaren Vorschlag – einmalige Optimierung oder laufende Betreuung, transparent kalkuliert."
+        },
+        {
+          "question": "Brauche ich dafür eine neue Webseite?",
+          "answer": "Nicht unbedingt. Oft lässt sich die bestehende Seite optimieren. Wenn die Technik deiner Seite die Platzierungen ausbremst, sagen wir dir das ehrlich – inklusive der Optionen und Kosten."
+        },
+        {
+          "question": "Muss ich selbst etwas tun?",
+          "answer": "Sehr wenig. Was wirklich hilft: zufriedene Kunden um eine Google-Bewertung bitten. Wie das am einfachsten geht, zeigen wir dir – den Rest übernehmen wir."
+        }
+      ],
+      "seo": {
+        "title": "SEO für kleine Unternehmen: bei Google gefunden werden | wesolve-IT",
+        "description": "Local SEO für kleine Unternehmen: Top-Platzierungen bei Google und Google Maps, optimiertes Unternehmensprofil und messbare Ergebnisse – verständlich erklärt."
+      }
+    },
+    {
+      "title": "Individual-Software",
+      "slug": "individual-software",
+      "heading": "Individual-Software",
+      "intro": "Wenn keine fertige Software zu deinen Abläufen passt, bauen wir dir eine, die es tut. Wir digitalisieren und automatisieren, was dich heute Zeit kostet – praxisnah, verständlich und gemeinsam mit dir entwickelt.",
+      "image": "/assets/img/illustration-komplettpaket.svg",
+      "order": 3,
+      "featured": true,
+      "sections": [
+        {
+          "heading": "Wenn Abläufe mehr Zeit kosten als das eigentliche Geschäft",
+          "eyebrow": "Kommt dir das bekannt vor?",
+          "tone": "muted",
+          "paragraphs": [
+            {
+              "text": "Kommt dir bekannt vor? Dann bist du hier richtig."
+            }
+          ],
+          "items": [
+            {
+              "heading": "",
+              "paragraphs": [
+                {
+                  "text": "„Rechnungen, Listen, Termine – vieles läuft bei mir doppelt und von Hand.\""
+                }
+              ]
+            },
+            {
+              "heading": "",
+              "paragraphs": [
+                {
+                  "text": "„Meine Daten stecken in Excel-Tabellen, die nur eine Person wirklich versteht.\""
+                }
+              ]
+            },
+            {
+              "heading": "",
+              "paragraphs": [
+                {
+                  "text": "„Standardsoftware habe ich probiert – sie passt einfach nicht zu meinen Abläufen.\""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Weniger Handarbeit, mehr Überblick",
+          "eyebrow": "Was du bekommst",
+          "tone": "light",
+          "paragraphs": [
+            {
+              "text": "Verleihsoftware mit automatischer Rechnungserstellung – spart bei jeder einzelnen Ausleihe Zeit und Papierkram."
+            }
+          ],
+          "items": [
+            {
+              "heading": "Automatisierung",
+              "paragraphs": [
+                {
+                  "text": "Rechnungen schreiben, Termine koordinieren, Bestände pflegen: Vieles davon läuft in kleinen Betrieben noch von Hand. Wir automatisieren diese Abläufe, damit du deine Zeit wieder für dein eigentliches Geschäft hast."
+                }
+              ]
+            },
+            {
+              "heading": "Digitalisierung deiner Abläufe",
+              "paragraphs": [
+                {
+                  "text": "Zettel, Excel-Listen und Insellösungen ersetzen wir durch ein System, das zu deinem Betrieb passt – vom Verleihsystem mit automatischer Rechnung bis zur Buchungsverwaltung."
+                }
+              ]
+            },
+            {
+              "heading": "Wächst mit deinem Unternehmen",
+              "paragraphs": [
+                {
+                  "text": "Deine Software läuft sicher in der Cloud, ist von überall erreichbar und lässt sich jederzeit erweitern. Neue Funktion, neue Schnittstelle, mehr Nutzer? Bauen wir ein, sobald du so weit bist."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Vom Zeitfresser zur fertigen Lösung",
+          "eyebrow": "So läuft dein Projekt ab",
+          "tone": "dark",
+          "paragraphs": [
+            {
+              "text": "Ein typisches Software-Projekt – der genaue Zeitplan hängt vom Umfang ab."
+            }
+          ],
+          "items": [
+            {
+              "heading": "Abläufe verstehen",
+              "paragraphs": [
+                {
+                  "text": "Wir schauen uns deine Arbeitsabläufe an – am liebsten vor Ort – und finden die Zeitfresser."
+                }
+              ]
+            },
+            {
+              "heading": "Konzept & Festpreis",
+              "paragraphs": [
+                {
+                  "text": "Du bekommst einen konkreten Vorschlag – verständlich erklärt und mit klarem Preis."
+                }
+              ]
+            },
+            {
+              "heading": "Entwicklung in Etappen",
+              "paragraphs": [
+                {
+                  "text": "Wir bauen die Lösung Schritt für Schritt – du testest früh mit echten Daten aus deinem Alltag."
+                }
+              ]
+            },
+            {
+              "heading": "Livegang & Betreuung",
+              "paragraphs": [
+                {
+                  "text": "Dein Team wird eingewiesen – und wir bleiben für Fragen und Erweiterungen an Bord."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Bei uns selbstverständlich – ohne Aufpreis",
+          "eyebrow": "Immer mit dabei",
+          "tone": "muted",
+          "paragraphs": [
+            {
+              "text": "Keine versteckten Kosten, keine Überraschungen."
+            },
+            {
+              "text": "Wir zeigen allen alles, bis die Lösung im Alltag sitzt."
+            },
+            {
+              "text": "Deine Software läuft sicher – wir kümmern uns um die Technik."
+            },
+            {
+              "text": "Deine Daten und die deiner Kunden sind geschützt."
+            },
+            {
+              "text": "Neue Funktionen kommen dazu, wenn dein Betrieb sie braucht."
+            },
+            {
+              "text": "Du sprichst mit dem Entwickler – nicht mit einer Hotline."
+            }
+          ],
+          "items": []
+        }
+      ],
+      "faq": [
+        {
+          "question": "Lohnt sich Individual-Software für einen kleinen Betrieb?",
+          "answer": "Rechne selbst: Wenn ein Ablauf dich oder dein Team ein paar Stunden pro Woche kostet, summiert sich das übers Jahr auf Wochen an Arbeitszeit. Genau solche Abläufe automatisieren wir. Ob es sich in deinem Fall rechnet, sagen wir dir ehrlich im Erstgespräch."
+        },
+        {
+          "question": "Was kostet eine individuelle Lösung?",
+          "answer": "Das hängt vom Umfang ab – eine schlanke Lösung für einen einzelnen Ablauf ist deutlich günstiger, als viele erwarten. Nach dem Kennenlernen bekommst du ein Festpreis-Angebot, oft mit einem Vorschlag für eine kleine erste Ausbaustufe."
+        },
+        {
+          "question": "Wie lange dauert die Entwicklung?",
+          "answer": "Eine erste nutzbare Version steht je nach Umfang oft nach wenigen Wochen. Danach entwickeln wir in Etappen weiter – so arbeitest du früh mit der Lösung und sie wächst an deinem echten Alltag."
+        },
+        {
+          "question": "Was ist, wenn sich meine Abläufe später ändern?",
+          "answer": "Genau dafür ist Individual-Software da: Sie passt sich deinem Betrieb an, nicht umgekehrt. Neue Funktionen oder geänderte Abläufe bauen wir ein, sobald du sie brauchst."
+        },
+        {
+          "question": "Muss mein Team technikaffin sein?",
+          "answer": "Nein. Wir gestalten die Bedienung so einfach, dass dein Team ohne Schulungsmarathon damit arbeiten kann – und weisen alle persönlich ein."
+        }
+      ],
+      "seo": {
+        "title": "Individual-Software für kleine Unternehmen | wesolve-IT",
+        "description": "Maßgeschneiderte Software statt Excel-Chaos: Wir digitalisieren und automatisieren deine Abläufe – von Rechnungen bis Buchungsverwaltung. Alles aus einer Hand."
+      }
+    },
+    {
+      "title": "Webdesign",
+      "slug": "webdesign",
+      "heading": "Webdesign",
+      "intro": "Gutes Design ist mehr als hübsch: Es führt deine Besucher zum Ziel – zur Anfrage, zur Bestellung, zum Anruf. Wir gestalten Webseiten und Apps, die professionell aussehen und sich intuitiv bedienen lassen.",
+      "image": "/assets/img/illustration-webentwicklung.svg",
+      "order": 4,
+      "featured": false,
+      "sections": [
+        {
+          "heading": "Schön ist nicht genug – Design muss verkaufen",
+          "eyebrow": "Kommt dir das bekannt vor?",
+          "tone": "muted",
+          "paragraphs": [
+            {
+              "text": "Kommt dir bekannt vor? Dann bist du hier richtig."
+            }
+          ],
+          "items": [
+            {
+              "heading": "",
+              "paragraphs": [
+                {
+                  "text": "„Meine Seite sieht eigentlich ordentlich aus – aber es kommt trotzdem keine Anfrage.\""
+                }
+              ]
+            },
+            {
+              "heading": "",
+              "paragraphs": [
+                {
+                  "text": "„Besucher finden nicht, was sie suchen – und sind nach Sekunden wieder weg.\""
+                }
+              ]
+            },
+            {
+              "heading": "",
+              "paragraphs": [
+                {
+                  "text": "„Mein Auftritt wirkt beliebig und sieht aus wie tausend andere.\""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Vom ersten Entwurf zum fertigen Design",
+          "eyebrow": "Was du bekommst",
+          "tone": "light",
+          "paragraphs": [
+            {
+              "text": "Moderner Webauftritt mit Selbstpflege für die belgische Pralinen-Manufaktur – Design und Umsetzung aus einer Hand."
+            }
+          ],
+          "items": [
+            {
+              "heading": "Konzept & erste Entwürfe",
+              "paragraphs": [
+                {
+                  "text": "Wir bringen deine Ideen in Form: Struktur, Seitenaufbau und erste Designentwürfe zeigen dir früh, wie dein Projekt aussehen wird – noch bevor eine Zeile Code geschrieben ist."
+                }
+              ]
+            },
+            {
+              "heading": "Prototypen & erste Versionen",
+              "paragraphs": [
+                {
+                  "text": "Du willst eine Idee erst testen, bevor du groß investierst? Wir bauen dir einen klickbaren Prototyp oder eine schlanke erste Version, mit der du echtes Feedback von deiner Zielgruppe sammelst – und dann gezielt weiterentwickelst."
+                }
+              ]
+            },
+            {
+              "heading": "Design, das bedienbar ist (UI/UX)",
+              "paragraphs": [
+                {
+                  "text": "Schön allein reicht nicht: Unsere Designs sind intuitiv bedienbar und barrierefrei – auf dem Smartphone genauso wie am Desktop. Auch das Redesign einer bestehenden Webseite oder App übernehmen wir gern."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Vom Briefing zum fertigen Design",
+          "eyebrow": "So läuft dein Projekt ab",
+          "tone": "dark",
+          "paragraphs": [
+            {
+              "text": "Ein typisches Design-Projekt – je nach Umfang geht es schneller oder dauert etwas länger."
+            }
+          ],
+          "items": [
+            {
+              "heading": "Briefing",
+              "paragraphs": [
+                {
+                  "text": "Wir sammeln, was dir gefällt, was du brauchst und wer deine Kunden sind."
+                }
+              ]
+            },
+            {
+              "heading": "Erste Entwürfe",
+              "paragraphs": [
+                {
+                  "text": "Du siehst Struktur und Design-Richtung – und entscheidest, wohin es geht."
+                }
+              ]
+            },
+            {
+              "heading": "Ausarbeitung",
+              "paragraphs": [
+                {
+                  "text": "Wir gestalten alle Seiten und Ansichten aus – die Mobil-Variante inklusive."
+                }
+              ]
+            },
+            {
+              "heading": "Übergabe oder Umsetzung",
+              "paragraphs": [
+                {
+                  "text": "Du bekommst alle Design-Dateien – oder wir setzen das Design direkt als fertige Webseite um."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Bei uns selbstverständlich – ohne Aufpreis",
+          "eyebrow": "Immer mit dabei",
+          "tone": "muted",
+          "paragraphs": [
+            {
+              "text": "Keine versteckten Kosten, keine Überraschungen."
+            },
+            {
+              "text": "Wir passen an, bis das Design wirklich zu dir passt."
+            },
+            {
+              "text": "Jede Ansicht wird auch für Smartphone und Tablet gestaltet."
+            },
+            {
+              "text": "Volle Übergabe – du bist nicht an uns gebunden."
+            },
+            {
+              "text": "Lesbare Kontraste und intuitive Bedienung für alle Besucher."
+            },
+            {
+              "text": "Du sprichst direkt mit dem, der gestaltet – nicht mit einem Vertrieb."
+            }
+          ],
+          "items": []
+        }
+      ],
+      "faq": [
+        {
+          "question": "Was kostet ein Webdesign?",
+          "answer": "Das hängt vom Umfang ab – vom Design einzelner Seiten bis zum kompletten Auftritt mit allen Ansichten. Nach dem Erstgespräch bekommst du ein Festpreis-Angebot."
+        },
+        {
+          "question": "Wie viele Entwürfe und Korrekturen bekomme ich?",
+          "answer": "Wir arbeiten iterativ: Du gibst früh Feedback auf erste Entwürfe, und wir passen an, bis es passt – in der Regel reichen zwei bis drei Runden, weil wir vorher genau zuhören."
+        },
+        {
+          "question": "Ich habe kein Logo und keine Farben – ist das ein Problem?",
+          "answer": "Nein. Wir entwickeln die Grundlagen – Farben, Schriften, Bildsprache – gemeinsam mit dir, sodass am Ende ein stimmiger Auftritt steht."
+        },
+        {
+          "question": "Kann ich das Design auch woanders umsetzen lassen?",
+          "answer": "Ja – du bekommst alle Dateien übergeben und kannst damit machen, was du willst. Am einfachsten ist es natürlich, wenn Design und Umsetzung aus einer Hand kommen."
+        },
+        {
+          "question": "Macht ihr auch das Redesign einer bestehenden Seite?",
+          "answer": "Ja, gern. Oft lässt sich mit einer gezielten Überarbeitung von Struktur und Design viel erreichen, ohne alles neu zu bauen – wir sagen dir ehrlich, was sinnvoll ist."
+        }
+      ],
+      "seo": {
+        "title": "Webdesign & UI/UX für kleine Unternehmen | wesolve-IT",
+        "description": "Webdesign, das aus Besuchern Kunden macht: Konzepte, klickbare Prototypen und intuitive Benutzeroberflächen für Webseiten und Apps."
+      }
+    }
+  ],
+  "references": [
+    {
+      "title": "1. FC Nürnberg",
+      "slug": "fc-nuernberg",
+      "heading": "Business Seating App",
+      "intro": "Eine App, die den Spieltag im VIP-Bereich organisiert: Platzvergabe, Zutrittsberechtigungen und kurzfristige Änderungen – alles direkt auf dem Tablet.",
+      "image": "/assets/img/Bildschirmfoto-2024-05-27-um-15.40.45.png",
+      "order": 0,
+      "featured": true,
+      "sections": [
+        {
+          "heading": "",
+          "eyebrow": "",
+          "tone": "light",
+          "paragraphs": [],
+          "items": [
+            {
+              "heading": "Die Ausgangslage",
+              "paragraphs": [
+                {
+                  "text": "An jedem Heimspieltag empfängt der 1. FC Nürnberg hunderte Gäste im VIP-Bereich. Jeder Gast muss schnell seinen reservierten Platz finden, Zutrittsberechtigungen müssen geprüft werden – und kurzfristige Änderungen gehören zum Alltag. Ohne digitales Werkzeug kostet das Zeit und sorgt für Verwirrung."
+                }
+              ]
+            },
+            {
+              "heading": "Unsere Lösung",
+              "paragraphs": [
+                {
+                  "text": "Eine mobile App, die an Spieltagen auf den Tablets des Vereins läuft: Gäste finden, Plätze zuweisen, Zutrittsberechtigungen auf einen Blick prüfen. Wichtige Ansprechpartner sind hinterlegt, damit bei Fragen sofort die richtige Person erreichbar ist – und Änderungen werden direkt vom Tablet aus erledigt."
+                }
+              ]
+            },
+            {
+              "heading": "Das Ergebnis",
+              "paragraphs": [
+                {
+                  "text": "Ein reibungsloser Ablauf am Spieltag – ohne Zettelwirtschaft und ohne zusätzliche Geräte. Die Daten für kommende Spieltage verwaltet der Verein komplett selbst, auftretende Probleme werden in Minuten statt Stunden gelöst."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Die wichtigsten Funktionen",
+          "eyebrow": "Das steckt drin",
+          "tone": "muted",
+          "paragraphs": [],
+          "items": [
+            {
+              "heading": "",
+              "paragraphs": [
+                {
+                  "text": "Gästesuche & Platzzuweisung in Sekunden"
+                }
+              ]
+            },
+            {
+              "heading": "",
+              "paragraphs": [
+                {
+                  "text": "Zutrittsberechtigungen auf einen Blick"
+                }
+              ]
+            },
+            {
+              "heading": "",
+              "paragraphs": [
+                {
+                  "text": "Kurzfristige Änderungen direkt vom Tablet"
+                }
+              ]
+            },
+            {
+              "heading": "",
+              "paragraphs": [
+                {
+                  "text": "Spieltagsdaten in Eigenregie verwalten"
+                }
+              ]
+            },
+            {
+              "heading": "",
+              "paragraphs": [
+                {
+                  "text": "Hinterlegte Ansprechpartner für schnelle Lösungen"
+                }
+              ]
+            },
+            {
+              "heading": "",
+              "paragraphs": [
+                {
+                  "text": "Keine zusätzlichen Geräte nötig"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "faq": [],
+      "seo": {
+        "title": "Referenz: Business Seating App für den 1. FC Nürnberg | wesolve-IT",
+        "description": "Case Study: Wie der 1. FC Nürnberg mit einer maßgeschneiderten App den VIP-Bereich am Spieltag organisiert – Platzvergabe, Zutritt und Änderungen direkt vom Tablet."
+      },
+      "category": "app",
+      "logo": "/assets/img/FCN_Logo.png",
+      "facts": [
+        {
+          "label": "Branche",
+          "value": "Profifußball (2. Bundesliga)"
+        },
+        {
+          "label": "Leistung",
+          "value": "App-Entwicklung"
+        },
+        {
+          "label": "Im Einsatz",
+          "value": "An jedem Heimspieltag"
+        }
+      ]
+    },
+    {
+      "title": "Alfafood",
+      "slug": "alfafood",
+      "heading": "Webseite mit Franchise-Bereich",
+      "intro": "Ein Webauftritt, den das Alfafood-Team komplett selbst pflegt – inklusive geschütztem Franchise-Bereich mit automatischer Kategorisierung der Inhalte.",
+      "image": "/assets/img/exampleImage.png",
+      "order": 1,
+      "featured": true,
+      "sections": [
+        {
+          "heading": "",
+          "eyebrow": "",
+          "tone": "light",
+          "paragraphs": [],
+          "items": [
+            {
+              "heading": "Die Ausgangslage",
+              "paragraphs": [
+                {
+                  "text": "Alfafood wächst: Neue Filialen kommen dazu, seit 2023 läuft zusätzlich das Franchise-Geschäft. Der Webauftritt sollte da mithalten – ohne dass für jede Textänderung oder jede neue Filiale eine Agentur beauftragt werden muss."
+                }
+              ]
+            },
+            {
+              "heading": "Unsere Lösung",
+              "paragraphs": [
+                {
+                  "text": "Ein komplett neuer Webauftritt, dessen Herzstück die Selbstpflege ist: Texte, Bilder und ganze Filialen verwaltet das Team ohne Hilfe Dritter. Dazu ein geschützter Franchise-Bereich für Mitglieder, in dem beliebige Dateitypen bereitgestellt werden – automatisch nach Kategorien gegliedert."
+                }
+              ]
+            },
+            {
+              "heading": "Das Ergebnis",
+              "paragraphs": [
+                {
+                  "text": "Keine Wartezeiten mehr: Neue Inhalte und Filialen sind in Minuten online, die Franchise-Partner werden zentral mit aktuellen Unterlagen versorgt – und Alfafood konzentriert sich voll auf das Tagesgeschäft."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Die wichtigsten Funktionen",
+          "eyebrow": "Das steckt drin",
+          "tone": "muted",
+          "paragraphs": [],
+          "items": [
+            {
+              "heading": "",
+              "paragraphs": [
+                {
+                  "text": "Texte & Bilder ohne Technikkenntnisse pflegen"
+                }
+              ]
+            },
+            {
+              "heading": "",
+              "paragraphs": [
+                {
+                  "text": "Neue Filialen ohne Programmierer anlegen"
+                }
+              ]
+            },
+            {
+              "heading": "",
+              "paragraphs": [
+                {
+                  "text": "Geschützter Franchise-Bereich für Mitglieder"
+                }
+              ]
+            },
+            {
+              "heading": "",
+              "paragraphs": [
+                {
+                  "text": "Alle Dateitypen hochladbar"
+                }
+              ]
+            },
+            {
+              "heading": "",
+              "paragraphs": [
+                {
+                  "text": "Automatische Kategorisierung der Inhalte"
+                }
+              ]
+            },
+            {
+              "heading": "",
+              "paragraphs": [
+                {
+                  "text": "Modernes Design im Stil der Marke"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "faq": [],
+      "seo": {
+        "title": "Referenz: Webseite mit Franchise-Bereich für Alfafood | wesolve-IT",
+        "description": "Case Study: Wie Alfafood seine Webseite komplett selbst pflegt – inklusive geschütztem Franchise-Bereich mit automatischer Kategorisierung."
+      },
+      "category": "web",
+      "logo": "/assets/img/Alfafood_Logo.png",
+      "facts": [
+        {
+          "label": "Branche",
+          "value": "Lebensmittel-Großhandel"
+        },
+        {
+          "label": "Leistung",
+          "value": "Webentwicklung"
+        },
+        {
+          "label": "Besonderheit",
+          "value": "100 % Selbstpflege"
+        }
+      ]
+    },
+    {
+      "title": "Sport-Weber Schnaittach",
+      "slug": "sportweber-schnaittach",
+      "heading": "Verleihsoftware mit eigener Pflege",
+      "intro": "Ein Online-Verleihsystem mit Warenkorb, Admin-Bereich und automatischer Rechnungserstellung – komplett in Eigenregie pflegbar.",
+      "image": "/assets/img/referenz-sportweber-verleih-2026.png",
+      "order": 2,
+      "featured": false,
+      "sections": [
+        {
+          "heading": "",
+          "eyebrow": "",
+          "tone": "light",
+          "paragraphs": [],
+          "items": [
+            {
+              "heading": "Die Ausgangslage",
+              "paragraphs": [
+                {
+                  "text": "Sport-Weber verleiht Ski, Fahrräder und mehr – und jede Ausleihe bedeutete Handarbeit: Buchungen festhalten, den Überblick über Zeiträume behalten, Rechnungen schreiben. Zeit, die im Ladengeschäft fehlte."
+                }
+              ]
+            },
+            {
+              "heading": "Unsere Lösung",
+              "paragraphs": [
+                {
+                  "text": "Ein Verleihsystem, in dem Kunden Artikel über einen Warenkorb reservieren. Produkte und Kategorien pflegt Sport-Weber selbst, der Admin-Bereich zeigt alle vergangenen und kommenden Buchungen – filterbar nach Zeitraum und Name. Bei jeder Buchung wird die Rechnung automatisch erstellt."
+                }
+              ]
+            },
+            {
+              "heading": "Das Ergebnis",
+              "paragraphs": [
+                {
+                  "text": "Jede Buchung läuft strukturiert über das System, die Rechnung liegt automatisch bereit und muss nur noch ausgedruckt werden. Das spart bei jeder einzelnen Ausleihe Zeit – und der Inhaber behält jederzeit den vollen Überblick."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Die wichtigsten Funktionen",
+          "eyebrow": "Das steckt drin",
+          "tone": "muted",
+          "paragraphs": [],
+          "items": [
+            {
+              "heading": "",
+              "paragraphs": [
+                {
+                  "text": "Online-Verleih mit Warenkorb"
+                }
+              ]
+            },
+            {
+              "heading": "",
+              "paragraphs": [
+                {
+                  "text": "Automatische Rechnungserstellung bei jeder Buchung"
+                }
+              ]
+            },
+            {
+              "heading": "",
+              "paragraphs": [
+                {
+                  "text": "Admin-Bereich mit Buchungsübersicht & Filtern"
+                }
+              ]
+            },
+            {
+              "heading": "",
+              "paragraphs": [
+                {
+                  "text": "Produkte & Kategorien selbst pflegen"
+                }
+              ]
+            },
+            {
+              "heading": "",
+              "paragraphs": [
+                {
+                  "text": "Voller Zugriff auf alle eigenen Daten"
+                }
+              ]
+            },
+            {
+              "heading": "",
+              "paragraphs": [
+                {
+                  "text": "Suche nach Zeitraum oder Name in Sekunden"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "faq": [],
+      "seo": {
+        "title": "Referenz: Verleihsoftware für Sport-Weber Schnaittach | wesolve-IT",
+        "description": "Case Study: Wie Sport-Weber Schnaittach mit einem Online-Verleihsystem und automatischer Rechnungserstellung bei jeder Buchung Zeit spart."
+      },
+      "category": "software",
+      "logo": "/assets/img/SportWeberLogoNeuklein.3caf40cb13b6ecc9538a.png",
+      "facts": [
+        {
+          "label": "Branche",
+          "value": "Sportfachhandel (Ski & Fahrrad)"
+        },
+        {
+          "label": "Leistung",
+          "value": "Individual-Software"
+        },
+        {
+          "label": "Besonderheit",
+          "value": "Automatische Rechnungen"
+        }
+      ]
+    },
+    {
+      "title": "dieschokoecke",
+      "slug": "dieschokoecke",
+      "heading": "Webseite mit Selbstverwaltung",
+      "intro": "Eine moderne Webseite für die belgische Pralinen-Manufaktur – Sortiment, Texte und FAQ verwaltet dieschokoecke komplett selbst.",
+      "image": "/assets/img/referenz-dieschokoecke-2026.png",
+      "order": 3,
+      "featured": false,
+      "sections": [
+        {
+          "heading": "",
+          "eyebrow": "",
+          "tone": "light",
+          "paragraphs": [],
+          "items": [
+            {
+              "heading": "Die Ausgangslage",
+              "paragraphs": [
+                {
+                  "text": "dieschokoecke verkauft belgische Pralinen in Franken – und das Sortiment ändert sich laufend. Eine Webseite, für deren Aktualisierung jedes Mal jemand beauftragt werden muss, wäre dauerhaft veraltet oder dauerhaft teuer."
+                }
+              ]
+            },
+            {
+              "heading": "Unsere Lösung",
+              "paragraphs": [
+                {
+                  "text": "Eine moderne Webseite mit vollständiger Selbstverwaltung: Produkte lassen sich hinzufügen, bearbeiten und entfernen, Texte und FAQ jederzeit anpassen. Die Oberfläche ist so gestaltet, dass alles ohne technisches Wissen funktioniert."
+                }
+              ]
+            },
+            {
+              "heading": "Das Ergebnis",
+              "paragraphs": [
+                {
+                  "text": "Das Sortiment auf der Webseite ist immer aktuell, Kunden finden stets die neuesten Informationen – und dieschokoecke behält die volle Kontrolle über den eigenen Auftritt, ohne laufende Agenturkosten."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Die wichtigsten Funktionen",
+          "eyebrow": "Das steckt drin",
+          "tone": "muted",
+          "paragraphs": [],
+          "items": [
+            {
+              "heading": "",
+              "paragraphs": [
+                {
+                  "text": "Produkte selbst hinzufügen, bearbeiten & entfernen"
+                }
+              ]
+            },
+            {
+              "heading": "",
+              "paragraphs": [
+                {
+                  "text": "Texte & FAQ flexibel anpassbar"
+                }
+              ]
+            },
+            {
+              "heading": "",
+              "paragraphs": [
+                {
+                  "text": "Bedienung ohne technisches Wissen"
+                }
+              ]
+            },
+            {
+              "heading": "",
+              "paragraphs": [
+                {
+                  "text": "Modernes Design, passend zur Marke"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "faq": [],
+      "seo": {
+        "title": "Referenz: Webseite mit Selbstverwaltung für dieschokoecke | wesolve-IT",
+        "description": "Case Study: Wie dieschokoecke Sortiment, Texte und FAQ der eigenen Webseite komplett selbst verwaltet – ganz ohne Technikwissen."
+      },
+      "category": "web",
+      "logo": "/assets/img/FullLogo_Transparent_NoBuffer.1a93282d335c16541fb0.png",
+      "facts": [
+        {
+          "label": "Branche",
+          "value": "Einzelhandel (Pralinen)"
+        },
+        {
+          "label": "Leistung",
+          "value": "Webentwicklung"
+        },
+        {
+          "label": "Besonderheit",
+          "value": "Pflege ohne Technikwissen"
+        }
+      ]
+    },
+    {
+      "title": "ROOTD.",
+      "slug": "rootd",
+      "heading": "Online-Shop für Streetwear",
+      "intro": "Ein kompletter E-Commerce-Auftritt für das nachhaltige Streetwear-Label aus Schnaittach: lokal bedruckte Mode, online bestellbar mit wenigen Klicks.",
+      "image": "/assets/img/referenz-rootd-2026.png",
+      "order": 4,
+      "featured": false,
+      "sections": [
+        {
+          "heading": "",
+          "eyebrow": "",
+          "tone": "light",
+          "paragraphs": [],
+          "items": [
+            {
+              "heading": "Die Ausgangslage",
+              "paragraphs": [
+                {
+                  "text": "ROOTD. steht für nachhaltige Streetwear: Bio-Baumwolle und recyceltes Polyester, lokal bedruckt in Schnaittach bei Nürnberg. Damit die Marke über die Region hinaus wachsen kann, brauchte sie einen Verkaufskanal, der rund um die Uhr geöffnet hat."
+                }
+              ]
+            },
+            {
+              "heading": "Unsere Lösung",
+              "paragraphs": [
+                {
+                  "text": "Ein vollwertiger Online-Shop mit Produktkatalog, Kategorien, Warenkorb und gängigen Bezahlarten wie dem Klarna-Rechnungskauf. Das Design transportiert den Look der Marke: große Kampagnenbilder, klare Kollektionen, eigene Bereiche für New Arrivals und Sale."
+                }
+              ]
+            },
+            {
+              "heading": "Das Ergebnis",
+              "paragraphs": [
+                {
+                  "text": "Kunden shoppen die Kollektionen jederzeit online, neue Drops sind schnell im Shop – und das Label verkauft über den eigenen Standort hinaus, ohne von Marktplätzen abhängig zu sein."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Die wichtigsten Funktionen",
+          "eyebrow": "Das steckt drin",
+          "tone": "muted",
+          "paragraphs": [],
+          "items": [
+            {
+              "heading": "",
+              "paragraphs": [
+                {
+                  "text": "Produktkatalog mit Kategorien, New & Sale"
+                }
+              ]
+            },
+            {
+              "heading": "",
+              "paragraphs": [
+                {
+                  "text": "Warenkorb & Kasse mit Klarna-Rechnungskauf"
+                }
+              ]
+            },
+            {
+              "heading": "",
+              "paragraphs": [
+                {
+                  "text": "Kollektions- und Kampagnen-Seiten im Marken-Look"
+                }
+              ]
+            },
+            {
+              "heading": "",
+              "paragraphs": [
+                {
+                  "text": "Sortiment & Aktionen in Eigenregie pflegbar"
+                }
+              ]
+            },
+            {
+              "heading": "",
+              "paragraphs": [
+                {
+                  "text": "Kundenkonto & Login"
+                }
+              ]
+            },
+            {
+              "heading": "",
+              "paragraphs": [
+                {
+                  "text": "Mobiloptimiert – shoppen vom Smartphone"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "faq": [],
+      "seo": {
+        "title": "Referenz: Online-Shop für das Streetwear-Label ROOTD. | wesolve-IT",
+        "description": "Case Study: Ein kompletter Online-Shop für ROOTD. – nachhaltige Streetwear, lokal bedruckt in Schnaittach. Mit Produktkatalog, Warenkorb und Klarna-Bezahlung."
+      },
+      "category": "web",
+      "logo": "/assets/img/rootd-logo.webp",
+      "facts": [
+        {
+          "label": "Branche",
+          "value": "Mode & E-Commerce"
+        },
+        {
+          "label": "Leistung",
+          "value": "Webentwicklung"
+        },
+        {
+          "label": "Besonderheit",
+          "value": "Kompletter Online-Shop"
+        }
+      ]
+    },
+    {
+      "title": "Rooted Merch",
+      "slug": "rooted-merch",
+      "heading": "Webseite für Vereins- & Firmen-Merch",
+      "intro": "Eine fokussierte B2B-Webseite mit einem klaren Ziel: Vereine und Unternehmen fragen ihr Musterdesign an – lokal bedruckt in der Region Nürnberg.",
+      "image": "/assets/img/referenz-rooted-merch-2026.png",
+      "order": 5,
+      "featured": false,
+      "sections": [
+        {
+          "heading": "",
+          "eyebrow": "",
+          "tone": "light",
+          "paragraphs": [],
+          "items": [
+            {
+              "heading": "Die Ausgangslage",
+              "paragraphs": [
+                {
+                  "text": "Unter der Marke ROOTED Merch bedruckt das Team hinter ROOTD. Kleidung für Vereine und Unternehmen – vom Jubiläums-Hoodie bis zur Teamausstattung. Dieses B2B-Angebot brauchte einen eigenen Auftritt, der gezielt Anfragen bringt, klar getrennt vom Endkunden-Shop."
+                }
+              ]
+            },
+            {
+              "heading": "Unsere Lösung",
+              "paragraphs": [
+                {
+                  "text": "Eine fokussierte Webseite mit klarem Funnel: die Leistungen auf einen Blick (Grafikservice, lokaler Druck, Bio-Baumwolle), echte Kundenstimmen und realisierte Projekte als Beweis – und durchgängig ein einziger Call-to-Action: Musterdesign anfragen."
+                }
+              ]
+            },
+            {
+              "heading": "Das Ergebnis",
+              "paragraphs": [
+                {
+                  "text": "Vereine und Unternehmen sehen sofort, was sie bekommen, und fragen direkt ein unverbindliches Musterdesign an – der erste Schritt zum Auftrag, ohne Umwege."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Die wichtigsten Funktionen",
+          "eyebrow": "Das steckt drin",
+          "tone": "muted",
+          "paragraphs": [],
+          "items": [
+            {
+              "heading": "",
+              "paragraphs": [
+                {
+                  "text": "Klarer Anfrage-Funnel: „Musterdesign anfragen\""
+                }
+              ]
+            },
+            {
+              "heading": "",
+              "paragraphs": [
+                {
+                  "text": "Kundenstimmen & realisierte Projekte als Beweis"
+                }
+              ]
+            },
+            {
+              "heading": "",
+              "paragraphs": [
+                {
+                  "text": "Leistungsportfolio: Grafikservice & lokaler Druck"
+                }
+              ]
+            },
+            {
+              "heading": "",
+              "paragraphs": [
+                {
+                  "text": "Eigener B2B-Auftritt neben dem Endkunden-Shop"
+                }
+              ]
+            },
+            {
+              "heading": "",
+              "paragraphs": [
+                {
+                  "text": "Mobiloptimiert für Anfragen von unterwegs"
+                }
+              ]
+            },
+            {
+              "heading": "",
+              "paragraphs": [
+                {
+                  "text": "Regionale Verankerung: bedruckt bei Nürnberg"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "faq": [],
+      "seo": {
+        "title": "Referenz: B2B-Webseite für ROOTED Merch | wesolve-IT",
+        "description": "Case Study: Webseite mit klarem Anfrage-Funnel für ROOTED Merch – individuell bedruckte Kleidung für Vereine und Unternehmen aus der Region Nürnberg."
+      },
+      "category": "web",
+      "logo": "/assets/img/rooted-merch-logo.png",
+      "facts": [
+        {
+          "label": "Branche",
+          "value": "Textildruck (B2B)"
+        },
+        {
+          "label": "Leistung",
+          "value": "Webentwicklung"
+        },
+        {
+          "label": "Ziel",
+          "value": "Anfragen für Musterdesigns"
+        }
+      ]
+    },
+    {
+      "title": "Sport-Weber Bikeservice",
+      "slug": "sportweber-bikeservice",
+      "heading": "Bikeservice mit Online-Buchung",
+      "intro": "Eine Service-Plattform für die Meisterwerkstatt: Leistungen, Service-Pakete und Online-Terminbuchung – rund um die Uhr erreichbar unter eigener Adresse.",
+      "image": "/assets/img/referenz-sportweber-bikeservice.png",
+      "order": 6,
+      "featured": false,
+      "sections": [
+        {
+          "heading": "",
+          "eyebrow": "",
+          "tone": "light",
+          "paragraphs": [],
+          "items": [
+            {
+              "heading": "Die Ausgangslage",
+              "paragraphs": [
+                {
+                  "text": "Nach dem gemeinsamen Verleihsystem stand bei Sport-Weber der nächste Ablauf an: die Fahrradwerkstatt. Termine für Service und Reparaturen liefen bislang über Telefon und Ladentheke – Zeit, die im Tagesgeschäft fehlt, und für Kunden nur zu Öffnungszeiten möglich."
+                }
+              ]
+            },
+            {
+              "heading": "Unsere Lösung",
+              "paragraphs": [
+                {
+                  "text": "Eine eigene Service-Plattform unter service.sportweber-schnaittach.de: Kunden sehen die Leistungen und Service-Pakete der Meisterwerkstatt auf einen Blick – vom Fahrrad über E-Bike bis zum Lastenrad, inklusive Ski- und Snowboard-Montage – und buchen ihren Termin direkt online. Ein FAQ beantwortet die häufigsten Fragen vorab."
+                }
+              ]
+            },
+            {
+              "heading": "Das Ergebnis",
+              "paragraphs": [
+                {
+                  "text": "Die Werkstatt ist rund um die Uhr buchbar: Kunden wählen ihren Termin, wann es ihnen passt – und das Team plant mit strukturierten Online-Buchungen statt Telefonnotizen."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Die wichtigsten Funktionen",
+          "eyebrow": "Das steckt drin",
+          "tone": "muted",
+          "paragraphs": [],
+          "items": [
+            {
+              "heading": "",
+              "paragraphs": [
+                {
+                  "text": "Online-Terminbuchung rund um die Uhr"
+                }
+              ]
+            },
+            {
+              "heading": "",
+              "paragraphs": [
+                {
+                  "text": "Service-Pakete übersichtlich dargestellt"
+                }
+              ]
+            },
+            {
+              "heading": "",
+              "paragraphs": [
+                {
+                  "text": "Fahrrad, E-Bike, Lastenrad – plus Ski & Snowboard"
+                }
+              ]
+            },
+            {
+              "heading": "",
+              "paragraphs": [
+                {
+                  "text": "FAQ für die häufigsten Fragen"
+                }
+              ]
+            },
+            {
+              "heading": "",
+              "paragraphs": [
+                {
+                  "text": "Eigene Service-Adresse, angebunden an den Auftritt"
+                }
+              ]
+            },
+            {
+              "heading": "",
+              "paragraphs": [
+                {
+                  "text": "Mobiloptimiert – buchen direkt vom Smartphone"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "",
+          "eyebrow": "",
+          "tone": "dark",
+          "paragraphs": [
+            {
+              "text": "Projekt Nr. 2 mit Sport-Weber"
+            },
+            {
+              "text": "Die schönste Referenz ist ein Kunde, der wiederkommt."
+            },
+            {
+              "text": "Nach der Verleihsoftware mit automatischer Rechnungserstellung folgte die Werkstatt-Plattform – aus einem Projekt wurde eine Zusammenarbeit."
+            }
+          ],
+          "items": []
+        }
+      ],
+      "faq": [],
+      "seo": {
+        "title": "Referenz: Online-Terminbuchung für die Sport-Weber Fahrradwerkstatt | wesolve-IT",
+        "description": "Case Study: Wie die Meisterwerkstatt von Sport-Weber Schnaittach Werkstatt-Termine online buchbar macht – Service-Pakete, Reparaturen und Terminbuchung auf einer Plattform."
+      },
+      "category": "software",
+      "logo": "/assets/img/SportWeberLogoNeuklein.3caf40cb13b6ecc9538a.png",
+      "facts": [
+        {
+          "label": "Branche",
+          "value": "Sportfachhandel (Bike & Ski)"
+        },
+        {
+          "label": "Leistung",
+          "value": "Webentwicklung"
+        },
+        {
+          "label": "Besonderheit",
+          "value": "Zweites gemeinsames Projekt"
+        }
+      ]
+    },
+    {
+      "title": "Tobias Herrmann",
+      "slug": "tobias-herrmann",
+      "heading": "ManifeSTATE App",
+      "intro": "Eine App für iOS und Android im Corporate Design – mit 30-Tage-Challenges, Punktesystem und Notizen, die Nutzer täglich beim Manifestieren begleitet.",
+      "image": "/assets/img/377-5023880.png",
+      "order": 7,
+      "featured": false,
+      "sections": [
+        {
+          "heading": "",
+          "eyebrow": "",
+          "tone": "light",
+          "paragraphs": [],
+          "items": [
+            {
+              "heading": "Die Ausgangslage",
+              "paragraphs": [
+                {
+                  "text": "Tobias Herrmann erreicht mit seinen Inhalten rund um Manifestation über 40.000 Menschen auf Social Media. Was fehlte: ein Werkzeug, das seine Kunden im Alltag begleitet – täglich, direkt auf dem Smartphone, in seinem eigenen Look."
+                }
+              ]
+            },
+            {
+              "heading": "Unsere Lösung",
+              "paragraphs": [
+                {
+                  "text": "Eine App für iOS und Android im Corporate Design – vom ersten Designvorschlag gemeinsam ausgearbeitet. Nutzer halten ihren Zustand dreimal täglich fest, sammeln Punkte, absolvieren 30-Tage-Challenges und dokumentieren mit Notizen, was ihnen guttut."
+                }
+              ]
+            },
+            {
+              "heading": "Das Ergebnis",
+              "paragraphs": [
+                {
+                  "text": "Die App ist für iPhone und Android verfügbar und begleitet die Community jeden Tag. Und sie wächst weiter: Als Nächstes ist eine Funktion geplant, mit der sich Nutzer mit Freunden vernetzen können."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Die wichtigsten Funktionen",
+          "eyebrow": "Das steckt drin",
+          "tone": "muted",
+          "paragraphs": [],
+          "items": [
+            {
+              "heading": "",
+              "paragraphs": [
+                {
+                  "text": "iOS & Android aus einer Entwicklung"
+                }
+              ]
+            },
+            {
+              "heading": "",
+              "paragraphs": [
+                {
+                  "text": "Komplett im Corporate Design des Kunden"
+                }
+              ]
+            },
+            {
+              "heading": "",
+              "paragraphs": [
+                {
+                  "text": "30-Tage-Challenges mit Punktesystem"
+                }
+              ]
+            },
+            {
+              "heading": "",
+              "paragraphs": [
+                {
+                  "text": "Tägliche Zustandseingabe mit Punkten"
+                }
+              ]
+            },
+            {
+              "heading": "",
+              "paragraphs": [
+                {
+                  "text": "Notizen & Rückblick auf die eigene Entwicklung"
+                }
+              ]
+            },
+            {
+              "heading": "",
+              "paragraphs": [
+                {
+                  "text": "Weiterentwicklung geplant: Freunde-Funktion"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "faq": [],
+      "seo": {
+        "title": "Referenz: ManifeSTATE App für Tobias Herrmann | wesolve-IT",
+        "description": "Case Study: Eine iOS- und Android-App im Corporate Design – mit 30-Tage-Challenges, Punktesystem und Notizen für die Community von Tobias Herrmann."
+      },
+      "category": "web",
+      "facts": [
+        {
+          "label": "Branche",
+          "value": "Coaching & Social Media"
+        },
+        {
+          "label": "Leistung",
+          "value": "App-Entwicklung"
+        },
+        {
+          "label": "Plattformen",
+          "value": "iOS & Android"
+        }
+      ]
+    },
+    {
+      "title": "LU-BU Restaurant",
+      "slug": "lubu-restaurant",
+      "heading": "Platz 1 bei Google",
+      "intro": "Eine Catering-Landingpage plus laufende Suchmaschinenoptimierung – Ergebnis: Platz 1 der unbezahlten Google-Ergebnisse für „Sushi Catering Nürnberg\".",
+      "image": "/assets/img/1597497751.png",
+      "order": 8,
+      "featured": false,
+      "sections": [
+        {
+          "heading": "",
+          "eyebrow": "",
+          "tone": "light",
+          "paragraphs": [],
+          "items": [
+            {
+              "heading": "Die Ausgangslage",
+              "paragraphs": [
+                {
+                  "text": "LU-BU Asian Food bietet neben dem Restaurant im Herzen Nürnbergs auch Sushi-Catering an. Das Problem: Wer online nach Sushi-Catering suchte, fand die Konkurrenz – das eigene Angebot war praktisch unsichtbar."
+                }
+              ]
+            },
+            {
+              "heading": "Unsere Lösung",
+              "paragraphs": [
+                {
+                  "text": "Eine eigene Catering-Seite im einheitlichen Stil des bestehenden Auftritts. Die Inhalte haben wir gemeinsam mit dem Kunden erarbeitet und gezielt auf die Suchbegriffe optimiert, nach denen seine Kunden wirklich suchen – mit anschließender laufender SEO-Betreuung."
+                }
+              ]
+            },
+            {
+              "heading": "Das Ergebnis",
+              "paragraphs": [
+                {
+                  "text": "Platz 1 der unbezahlten Google-Ergebnisse für „Sushi Catering Nürnberg\". Wer jetzt in der Region nach Sushi-Catering sucht, landet zuerst bei LU-BU – nicht bei der Konkurrenz."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "",
+          "eyebrow": "",
+          "tone": "dark",
+          "paragraphs": [
+            {
+              "text": "Das Ergebnis in einer Zahl"
+            },
+            {
+              "text": "Platz 1"
+            },
+            {
+              "text": "bei Google für „Sushi Catering Nürnberg\" – in den unbezahlten Suchergebnissen, also ohne laufende Werbekosten."
+            }
+          ],
+          "items": []
+        },
+        {
+          "heading": "So kam das Ergebnis zustande",
+          "eyebrow": "Das steckt drin",
+          "tone": "muted",
+          "paragraphs": [],
+          "items": [
+            {
+              "heading": "",
+              "paragraphs": [
+                {
+                  "text": "Eigene Landingpage für das Catering-Angebot"
+                }
+              ]
+            },
+            {
+              "heading": "",
+              "paragraphs": [
+                {
+                  "text": "Design im einheitlichen Stil des Auftritts"
+                }
+              ]
+            },
+            {
+              "heading": "",
+              "paragraphs": [
+                {
+                  "text": "Inhalte gemeinsam erarbeitet und optimiert"
+                }
+              ]
+            },
+            {
+              "heading": "",
+              "paragraphs": [
+                {
+                  "text": "Laufende SEO-Betreuung nach dem Livegang"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "faq": [],
+      "seo": {
+        "title": "Referenz: Platz 1 bei Google für LU-BU Sushi-Catering | wesolve-IT",
+        "description": "Case Study: Wie LU-BU Asian Food mit einer Catering-Landingpage und laufender Suchmaschinenoptimierung Platz 1 bei Google erreicht hat."
+      },
+      "category": "web",
+      "facts": [
+        {
+          "label": "Branche",
+          "value": "Gastronomie & Catering"
+        },
+        {
+          "label": "Leistung",
+          "value": "SEO & Webentwicklung"
+        },
+        {
+          "label": "Ergebnis",
+          "value": "Platz 1 (unbezahlt)"
+        }
+      ]
+    },
+    {
+      "title": "Brotkultur Pur",
+      "slug": "brotkultur-pur",
+      "heading": "Projekt",
+      "intro": "Wir haben für den 1.FC Nürnberg eine mobile App entwickelt, die an Spieltagen auf den entsprechenden Mobilgeräten im Einsatz ist. Diese Anwendung ermöglicht es, Gäste zu finden und ihnen ihren reservierten Platz im VIP-Bereich zuzuweisen. Darüber hinaus bietet sie einen schnellen Überblick über die aktuellen Zutrittsberechtigungen, um Verwirrungen zu vermeiden. Zudem können wichtige Ansprechpartner hinterlegt werden, um bei Bedarf sofortige Lösungen anzubieten. Der Verein kann die Daten für kommende Spieltage selbst verwalten. Dank der Möglichkeit, kurzfristige Änderungen direkt vom Tablet aus vorzunehmen, ohne zusätzliche Geräte verwenden zu müssen, können auftretende Probleme schnell behoben werden.",
+      "image": "/assets/img/Bildschirmfoto-2024-05-27-um-15.40.45.png",
+      "order": 9,
+      "featured": false,
+      "sections": [],
+      "faq": [],
+      "seo": {
+        "title": "1.FC Nürnberg",
+        "description": ""
+      },
+      "category": "web",
+      "logo": "/assets/img/FCN_Logo.png",
+      "facts": []
+    }
+  ],
+  "home": {
+    "badge": "Digitalagentur für kleine Unternehmen",
+    "heading": "Digitale Lösungen für dein Unternehmen – mehr Kunden, mehr Umsatz!",
+    "intro": "Du willst dein Unternehmen voranbringen, aber Webseite, Google & Co. kosten dich Zeit, die du im Tagesgeschäft nicht hast? Genau dafür sind wir da: Wir kümmern uns um deinen kompletten digitalen Auftritt – verständlich, verlässlich und ohne Technik-Kauderwelsch.",
+    "image": "/assets/img/illustration-hero.svg",
+    "servicesHeading": "Während du dich um deine Kunden kümmerst, sorgen wir dafür, dass online alles rund läuft.",
+    "servicesIntro": "Wir übernehmen die digitale Seite deines Geschäfts – vom ersten Entwurf bis zur fertigen Webseite oder App. Du musst dich um nichts kümmern und kannst dich ganz auf dein Tagesgeschäft konzentrieren. Technik, Design, Updates & Support? Machen wir.",
+    "referencesHeading": "Kunden, die den digitalen Wandel leben – und ihre Geschichten",
+    "referencesIntro": "Lass dich inspirieren und starte jetzt dein eigenes digitales Projekt mit uns.",
+    "seo": {
+      "title": "Webseiten, Apps & SEO für kleine Unternehmen | wesolve-IT",
+      "description": "Digitale Lösungen für kleine Unternehmen: maßgeschneiderte Webseiten, Apps und SEO – persönlich, verständlich und alles aus einer Hand. Für mehr Kunden und mehr Umsatz."
+    }
+  },
+  "testimonials": [
+    {
+      "name": "Henrik Brüggen",
+      "position": "Vermarktung/Marketing 1. FC Nürnberg",
+      "quote": "Wir vom 1. FC Nürnberg sind sehr zufrieden über die Zusammenarbeit mit wesolve-IT. Durch die Zusammenarbeit sparen wir uns viel Zeit und die Arbeit wird deutlich einfacher. Auch die Zusammenarbeit mit Michael Reinert ist sehr gut. Er ist sehr zuverlässig und hilft sofort, falls es doch einmal Probleme geben sollte.",
+      "image": "/assets/img/FCN_Logo.webp",
+      "order": 0
+    },
+    {
+      "name": "Roni Burcak",
+      "position": "Geschäftsführer Alfafood GmbH",
+      "quote": "Die Erstellung meiner Webseite war ein absoluter Erfolg! Das Team lieferte nicht nur ein ansprechendes Design, sondern ermöglichte mir auch mühelose Selbstpflege. Perfekte Lösung für mein Business!",
+      "image": "/assets/img/Alfafood_Logo.webp",
+      "order": 1
+    },
+    {
+      "name": "Max Schorn",
+      "position": "Geschäftsführer Sport-Weber Schnaittach",
+      "quote": "Wir haben unseren Rent-Shop zusammen mit wesolve-IT entworfen und sind mit Planung und Umsetzung sehr zufrieden. Herr Reinert hat unsere Wünsche bei uns vor Ort aufgenommen und uns oft sogar funktionellere Lösungen gezeigt, die uns Arbeitsschritte ersparen. Wir freuen uns auf die weitere Zusammenarbeit!",
+      "image": "/assets/img/maxrundohne-rand.webp",
+      "order": 2
+    }
+  ],
+  "process": [
+    {
+      "heading": "Kennenlernen",
+      "text": "Wir treffen uns bei dir vor Ort oder per Video-Call und hören erst mal zu: Was ist dein Geschäft, wo drückt der Schuh, was soll digital besser laufen? Kostenlos und unverbindlich."
+    },
+    {
+      "heading": "Konzept & Angebot",
+      "text": "Du bekommst einen konkreten Vorschlag mit Festpreis und Zeitplan – verständlich erklärt, ohne Fachchinesisch. Erst wenn alles für dich passt, geht es los."
+    },
+    {
+      "heading": "Umsetzung & Betreuung",
+      "text": "Wir setzen um, du gibst Feedback. Und nach dem Livegang lassen wir dich nicht allein: Hosting, Updates und Support kommen aus derselben Hand."
+    }
+  ],
+  "pages": [
+    {
+      "slug": "impressum",
+      "title": "Impressum",
+      "seo": {
+        "title": "Impressum",
+        "description": ""
+      },
+      "content": {
+        "root": {
+          "type": "root",
+          "version": 1,
+          "format": "",
+          "indent": 0,
+          "direction": null,
+          "children": [
+            {
+              "type": "heading",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": null,
+              "tag": "h1",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Impressum",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                }
+              ]
+            },
+            {
+              "type": "heading",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": null,
+              "tag": "h2",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Angaben gemäß §5 TMG",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": null,
+              "textFormat": 0,
+              "textStyle": "",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Michael Reinert",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": null,
+              "textFormat": 0,
+              "textStyle": "",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Webentwicklung & App-Entwicklung",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": null,
+              "textFormat": 0,
+              "textStyle": "",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Hardware Tätigkeiten",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": null,
+              "textFormat": 0,
+              "textStyle": "",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "IT Tätigkeiten",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": null,
+              "textFormat": 0,
+              "textStyle": "",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Himmelgartenstr. 33",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": null,
+              "textFormat": 0,
+              "textStyle": "",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "91220 Schnaittach",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                }
+              ]
+            },
+            {
+              "type": "heading",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": null,
+              "tag": "h2",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Kontakt",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": null,
+              "textFormat": 0,
+              "textStyle": "",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Telefon: ",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                },
+                {
+                  "type": "link",
+                  "version": 3,
+                  "format": "",
+                  "indent": 0,
+                  "direction": null,
+                  "fields": {
+                    "linkType": "custom",
+                    "url": "tel:+4915202721146",
+                    "newTab": false
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "version": 1,
+                      "text": "+49 (0) 152 02721146",
+                      "format": 0,
+                      "detail": 0,
+                      "mode": "normal",
+                      "style": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": null,
+              "textFormat": 0,
+              "textStyle": "",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Telefax: ",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                },
+                {
+                  "type": "link",
+                  "version": 3,
+                  "format": "",
+                  "indent": 0,
+                  "direction": null,
+                  "fields": {
+                    "linkType": "custom",
+                    "url": "tel:+4915202721146",
+                    "newTab": false
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "version": 1,
+                      "text": "+49 (0) 152 02721146",
+                      "format": 0,
+                      "detail": 0,
+                      "mode": "normal",
+                      "style": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": null,
+              "textFormat": 0,
+              "textStyle": "",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "E-Mail: ",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                },
+                {
+                  "type": "link",
+                  "version": 3,
+                  "format": "",
+                  "indent": 0,
+                  "direction": null,
+                  "fields": {
+                    "linkType": "custom",
+                    "url": "mailto:info@wesolve-it.com",
+                    "newTab": false
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "version": 1,
+                      "text": "info@wesolve-it.com",
+                      "format": 0,
+                      "detail": 0,
+                      "mode": "normal",
+                      "style": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "heading",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": null,
+              "tag": "h2",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Umsatzsteuer-ID",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": null,
+              "textFormat": 0,
+              "textStyle": "",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": null,
+              "textFormat": 0,
+              "textStyle": "",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "221/261/41320",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                }
+              ]
+            },
+            {
+              "type": "heading",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": null,
+              "tag": "h2",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "EU-Streitschlichtung",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": null,
+              "textFormat": 0,
+              "textStyle": "",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": " Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: ",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                },
+                {
+                  "type": "link",
+                  "version": 3,
+                  "format": "",
+                  "indent": 0,
+                  "direction": null,
+                  "fields": {
+                    "linkType": "custom",
+                    "url": "https://ec.europa.eu/consumers/odr/",
+                    "newTab": true
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "version": 1,
+                      "text": " https://ec.europa.eu/consumers/odr/ ",
+                      "format": 0,
+                      "detail": 0,
+                      "mode": "normal",
+                      "style": ""
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": ". ",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": null,
+              "textFormat": 0,
+              "textStyle": "",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Unsere E-Mail-Adresse finden Sie oben im Impressum.",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                }
+              ]
+            },
+            {
+              "type": "heading",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": null,
+              "tag": "h2",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Verbraucherstreitbeteiligung/Universalschlichtungsstelle",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": null,
+              "textFormat": 0,
+              "textStyle": "",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": " Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen. ",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": null,
+              "textFormat": 0,
+              "textStyle": "",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Quelle: ",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                },
+                {
+                  "type": "link",
+                  "version": 3,
+                  "format": "",
+                  "indent": 0,
+                  "direction": null,
+                  "fields": {
+                    "linkType": "custom",
+                    "url": "https://www.e-recht24.de/impressum-generator.html",
+                    "newTab": true
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "version": 1,
+                      "text": "e-recht24.de",
+                      "format": 0,
+                      "detail": 0,
+                      "mode": "normal",
+                      "style": ""
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "slug": "datenschutz",
+      "title": "Datenschutzerklärung",
+      "seo": {
+        "title": "Datenschutz",
+        "description": ""
+      },
+      "content": {
+        "root": {
+          "type": "root",
+          "version": 1,
+          "format": "",
+          "indent": 0,
+          "direction": null,
+          "children": [
+            {
+              "type": "heading",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": null,
+              "tag": "h1",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Datenschutzerklärung",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                }
+              ]
+            },
+            {
+              "type": "heading",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": null,
+              "tag": "h2",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "1. Datenschutz auf einen Blick",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                }
+              ]
+            },
+            {
+              "type": "heading",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": null,
+              "tag": "h3",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Allgemeine Hinweise",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": null,
+              "textFormat": 0,
+              "textStyle": "",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": " Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können. Ausführliche Informationen zum Thema Datenschutz entnehmen Sie unserer unter diesem Text aufgeführten Datenschutzerklärung. ",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                }
+              ]
+            },
+            {
+              "type": "heading",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": null,
+              "tag": "h3",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Datenerfassung auf dieser Website",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": null,
+              "textFormat": 0,
+              "textStyle": "",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": " Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. Dessen Kontaktdaten können Sie dem Abschnitt „Hinweis zur Verantwortlichen Stelle“ in dieser Datenschutzerklärung entnehmen. ",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": null,
+              "textFormat": 0,
+              "textStyle": "",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": " Ihre Daten werden zum einen dadurch erhoben, dass Sie uns diese mitteilen. Hierbei kann es sich z. B. um Daten handeln, die Sie in ein Kontaktformular eingeben. ",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": null,
+              "textFormat": 0,
+              "textStyle": "",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": " Andere Daten werden automatisch oder nach Ihrer Einwilligung beim Besuch der Website durch unsere IT-Systeme erfasst. Das sind vor allem technische Daten (z. B. Internetbrowser, Betriebssystem oder Uhrzeit des Seitenaufrufs). Die Erfassung dieser Daten erfolgt automatisch, sobald Sie diese Website betreten. ",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": null,
+              "textFormat": 0,
+              "textStyle": "",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": " Ein Teil der Daten wird erhoben, um eine fehlerfreie Bereitstellung der Website zu gewährleisten. Andere Daten können zur Analyse Ihres Nutzerverhaltens verwendet werden. ",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": null,
+              "textFormat": 0,
+              "textStyle": "",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": " Sie haben jederzeit das Recht, unentgeltlich Auskunft über Herkunft, Empfänger und Zweck Ihrer gespeicherten personenbezogenen Daten zu erhalten. Sie haben außerdem ein Recht, die Berichtigung oder Löschung dieser Daten zu verlangen. Wenn Sie eine Einwilligung zur Datenverarbeitung erteilt haben, können Sie diese Einwilligung jederzeit für die Zukunft widerrufen. Außerdem haben Sie das Recht, unter bestimmten Umständen die Einschränkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen. Des Weiteren steht Ihnen ein Beschwerderecht bei der zuständigen Aufsichtsbehörde zu. ",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": null,
+              "textFormat": 0,
+              "textStyle": "",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": " Hierzu sowie zu weiteren Fragen zum Thema Datenschutz können Sie sich jederzeit an uns wenden. ",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                }
+              ]
+            },
+            {
+              "type": "heading",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": null,
+              "tag": "h2",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "2. Hosting",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                }
+              ]
+            },
+            {
+              "type": "heading",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": null,
+              "tag": "h3",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "IONOS",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": null,
+              "textFormat": 0,
+              "textStyle": "",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": " Anbieter ist die IONOS SE, Elgendorfer Str. 57, 56410 Montabaur (nachfolgend IONOS). Wenn Sie unsere Website besuchen, erfasst IONOS verschiedene Logfiles inklusive Ihrer IP-Adressen. Details entnehmen Sie der Datenschutzerklärung von IONOS: ",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                },
+                {
+                  "type": "link",
+                  "version": 3,
+                  "format": "",
+                  "indent": 0,
+                  "direction": null,
+                  "fields": {
+                    "linkType": "custom",
+                    "url": "https://www.ionos.de/terms-gtc/terms-privacy",
+                    "newTab": true
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "version": 1,
+                      "text": "https://www.ionos.de/terms-gtc/terms-privacy",
+                      "format": 0,
+                      "detail": 0,
+                      "mode": "normal",
+                      "style": ""
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": ". ",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": null,
+              "textFormat": 0,
+              "textStyle": "",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": " Die Verwendung von IONOS erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Wir haben ein berechtigtes Interesse an einer möglichst zuverlässigen Darstellung unserer Website. Sofern eine entsprechende Einwilligung abgefragt wurde, erfolgt die Verarbeitung ausschließlich auf Grundlage von Art. 6 Abs. 1 lit. a DSGVO und § 25 Abs. 1 TTDSG, soweit die Einwilligung die Speicherung von Cookies oder den Zugriff auf Informationen im Endgerät des Nutzers (z. B. Device-Fingerprinting) im Sinne des TTDSG umfasst. Die Einwilligung ist jederzeit widerrufbar. ",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": null,
+              "textFormat": 0,
+              "textStyle": "",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": " Wir haben einen Vertrag über Auftragsverarbeitung (AVV) zur Nutzung des oben genannten Dienstes geschlossen. Hierbei handelt es sich um einen datenschutzrechtlich vorgeschriebenen Vertrag, der gewährleistet, dass dieser die personenbezogenen Daten unserer Websitebesucher nur nach unseren Weisungen und unter Einhaltung der DSGVO verarbeitet. ",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                }
+              ]
+            },
+            {
+              "type": "heading",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": null,
+              "tag": "h2",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "3. Allgemeine Hinweise und Pflichtinformationen",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                }
+              ]
+            },
+            {
+              "type": "heading",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": null,
+              "tag": "h3",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Datenschutz",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": null,
+              "textFormat": 0,
+              "textStyle": "",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": " Die Betreiber dieser Seiten nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend den gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerklärung. ",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": null,
+              "textFormat": 0,
+              "textStyle": "",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": " Wenn Sie diese Website benutzen, werden verschiedene personenbezogene Daten erhoben. Personenbezogene Daten sind Daten, mit denen Sie persönlich identifiziert werden können. Die vorliegende Datenschutzerklärung erläutert, welche Daten wir erheben und wofür wir sie nutzen. Sie erläutert auch, wie und zu welchem Zweck das geschieht. ",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": null,
+              "textFormat": 0,
+              "textStyle": "",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": " Wir weisen darauf hin, dass die Datenübertragung im Internet (z. B. bei der Kommunikation per E-Mail) Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht möglich. ",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                }
+              ]
+            },
+            {
+              "type": "heading",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": null,
+              "tag": "h3",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Hinweis zur verantwortlichen Stelle",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": null,
+              "textFormat": 0,
+              "textStyle": "",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": null,
+              "textFormat": 0,
+              "textStyle": "",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Michael Reinert",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                },
+                {
+                  "type": "linebreak",
+                  "version": 1
+                },
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": " Himmelgartenstr. 33",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                },
+                {
+                  "type": "linebreak",
+                  "version": 1
+                },
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": " 91220 Schnaittach",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": null,
+              "textFormat": 0,
+              "textStyle": "",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Telefon: +49 (0) 162 1847163",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                },
+                {
+                  "type": "linebreak",
+                  "version": 1
+                },
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": " E-Mail: michael@mreinert.de",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": null,
+              "textFormat": 0,
+              "textStyle": "",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Verantwortliche Stelle ist die natürliche oder juristische Person, die allein oder gemeinsam mit anderen über die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten (z. B. Namen, E-Mail-Adressen o. Ä.) entscheidet.",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                }
+              ]
+            },
+            {
+              "type": "heading",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": null,
+              "tag": "h3",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Speicherdauer",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": null,
+              "textFormat": 0,
+              "textStyle": "",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Soweit innerhalb dieser Datenschutzerklärung keine speziellere Speicherdauer genannt wurde, verbleiben Ihre personenbezogenen Daten bei uns, bis der Zweck für die Datenverarbeitung entfällt. Wenn Sie ein berechtigtes Löschersuchen geltend machen oder eine Einwilligung zur Datenverarbeitung widerrufen, werden Ihre Daten gelöscht, sofern wir keine anderen rechtlich zulässigen Gründe für die Speicherung Ihrer personenbezogenen Daten haben (z. B. steuer- oder handelsrechtliche Aufbewahrungsfristen); im letztgenannten Fall erfolgt die Löschung nach Fortfall dieser Gründe.",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                }
+              ]
+            },
+            {
+              "type": "heading",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": null,
+              "tag": "h3",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Allgemeine Hinweise zu den Rechtsgrundlagen der Datenverarbeitung auf dieser Website",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": null,
+              "textFormat": 0,
+              "textStyle": "",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Sofern Sie in die Datenverarbeitung eingewilligt haben, verarbeiten wir Ihre personenbezogenen Daten auf Grundlage von Art. 6 Abs. 1 lit. a DSGVO bzw. Art. 9 Abs. 2 lit. a DSGVO, sofern besondere Datenkategorien nach Art. 9 Abs. 1 DSGVO verarbeitet werden. Im Falle einer ausdrücklichen Einwilligung in die Übertragung personenbezogener Daten in Drittstaaten erfolgt die Datenverarbeitung außerdem auf Grundlage von Art. 49 Abs. 1 lit. a DSGVO. Sofern Sie in die Speicherung von Cookies oder in den Zugriff auf Informationen in Ihr Endgerät (z. B. via Device-Fingerprinting) eingewilligt haben, erfolgt die Datenverarbeitung zusätzlich auf Grundlage von § 25 Abs. 1 TTDSG. Die Einwilligung ist jederzeit widerrufbar. Sind Ihre Daten zur Vertragserfüllung oder zur Durchführung vorvertraglicher Maßnahmen erforderlich, verarbeiten wir Ihre Daten auf Grundlage des Art. 6 Abs. 1 lit. b DSGVO. Des Weiteren verarbeiten wir Ihre Daten, sofern diese zur Erfüllung einer rechtlichen Verpflichtung erforderlich sind auf Grundlage von Art. 6 Abs. 1 lit. c DSGVO. Die Datenverarbeitung kann ferner auf Grundlage unseres berechtigten Interesses nach Art. 6 Abs. 1 lit. f DSGVO erfolgen. Über die jeweils im Einzelfall einschlägigen Rechtsgrundlagen wird in den folgenden Absätzen dieser Datenschutzerklärung informiert.",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                }
+              ]
+            },
+            {
+              "type": "heading",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": null,
+              "tag": "h3",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Hinweis zur Datenweitergabe in die USA und sonstige Drittstaaten",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": null,
+              "textFormat": 0,
+              "textStyle": "",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Wir verwenden unter anderem Tools von Unternehmen mit Sitz in den USA oder sonstigen datenschutzrechtlich nicht sicheren Drittstaaten. Wenn diese Tools aktiv sind, können Ihre personenbezogene Daten in diese Drittstaaten übertragen und dort verarbeitet werden. Wir weisen darauf hin, dass in diesen Ländern kein mit der EU vergleichbares Datenschutzniveau garantiert werden kann. Beispielsweise sind US-Unternehmen dazu verpflichtet, personenbezogene Daten an Sicherheitsbehörden herauszugeben, ohne dass Sie als Betroffener hiergegen gerichtlich vorgehen könnten. Es kann daher nicht ausgeschlossen werden, dass US-Behörden (z. B. Geheimdienste) Ihre auf US-Servern befindlichen Daten zu Überwachungszwecken verarbeiten, auswerten und dauerhaft speichern. Wir haben auf diese Verarbeitungstätigkeiten keinen Einfluss.",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                }
+              ]
+            },
+            {
+              "type": "heading",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": null,
+              "tag": "h3",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Widerruf Ihrer Einwilligung zur Datenverarbeitung",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": null,
+              "textFormat": 0,
+              "textStyle": "",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Viele Datenverarbeitungsvorgänge sind nur mit Ihrer ausdrücklichen Einwilligung möglich. Sie können eine bereits erteilte Einwilligung jederzeit widerrufen. Die Rechtmäßigkeit der bis zum Widerruf erfolgten Datenverarbeitung bleibt vom Widerruf unberührt.",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": null,
+              "textFormat": 0,
+              "textStyle": "",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Widerspruchsrecht gegen die Datenerhebung in besonderen Fällen sowie gegen Direktwerbung (Art. 21 DSGVO) WENN DIE DATENVERARBEITUNG AUF GRUNDLAGE VON ART. 6 ABS. 1 LIT. E ODER F DSGVO ERFOLGT, HABEN SIE JEDERZEIT DAS RECHT, AUS GRÜNDEN, DIE SICH AUS IHRER BESONDEREN SITUATION ERGEBEN, GEGEN DIE VERARBEITUNG IHRER PERSONENBEZOGENEN DATEN WIDERSPRUCH EINZULEGEN; DIES GILT AUCH FÜR EIN AUF DIESE BESTIMMUNGEN GESTÜTZTES PROFILING. DIE JEWEILIGE RECHTSGRUNDLAGE, AUF DENEN EINE VERARBEITUNG BERUHT, ENTNEHMEN SIE DIESER DATENSCHUTZERKLÄRUNG. WENN SIE WIDERSPRUCH EINLEGEN, WERDEN WIR IHRE BETROFFENEN PERSONENBEZOGENEN DATEN NICHT MEHR VERARBEITEN, ES SEI DENN, WIR KÖNNEN ZWINGENDE SCHUTZWÜRDIGE GRÜNDE FÜR DIE VERARBEITUNG NACHWEISEN, DIE IHRE INTERESSEN, RECHTE UND FREIHEITEN ÜBERWIEGEN ODER DIE VERARBEITUNG DIENT DER GELTENDMACHUNG, AUSÜBUNG ODER VERTEIDIGUNG VON RECHTSANSPRÜCHEN (WIDERSPRUCH NACH ART. 21 ABS. 1 DSGVO). WERDEN IHRE PERSONENBEZOGENEN DATEN VERARBEITET, UM DIREKTWERBUNG ZU BETREIBEN, SO HABEN SIE DAS RECHT, JEDERZEIT WIDERSPRUCH GEGEN DIE VERARBEITUNG SIE BETREFFENDER PERSONENBEZOGENER DATEN ZUM ZWECKE DERARTIGER WERBUNG EINZULEGEN; DIES GILT AUCH FÜR DAS PROFILING, SOWEIT ES MIT SOLCHER DIREKTWERBUNG IN VERBINDUNG STEHT. WENN SIE WIDERSPRECHEN, WERDEN IHRE PERSONENBEZOGENEN DATEN ANSCHLIESSEND NICHT MEHR ZUM ZWECKE DER DIREKTWERBUNG VERWENDET (WIDERSPRUCH NACH ART. 21 ABS. 2 DSGVO). Beschwerde­recht bei der zuständigen Aufsichts­behörde Im Falle von Verstößen gegen die DSGVO steht den Betroffenen ein Beschwerderecht bei einer Aufsichtsbehörde, insbesondere in dem Mitgliedstaat ihres gewöhnlichen Aufenthalts, ihres Arbeitsplatzes oder des Orts des mutmaßlichen Verstoßes zu. Das Beschwerderecht besteht unbeschadet anderweitiger verwaltungsrechtlicher oder gerichtlicher Rechtsbehelfe. Recht auf Daten­übertrag­barkeit Sie haben das Recht, Daten, die wir auf Grundlage Ihrer Einwilligung oder in Erfüllung eines Vertrags automatisiert verarbeiten, an sich oder an einen Dritten in einem gängigen, maschinenlesbaren Format aushändigen zu lassen. Sofern Sie die direkte Übertragung der Daten an einen anderen Verantwortlichen verlangen, erfolgt dies nur, soweit es technisch machbar ist. Auskunft, Löschung und Berichtigung Sie haben im Rahmen der geltenden gesetzlichen Bestimmungen jederzeit das Recht auf unentgeltliche Auskunft über Ihre gespeicherten personenbezogenen Daten, deren Herkunft und Empfänger und den Zweck der Datenverarbeitung und ggf. ein Recht auf Berichtigung oder Löschung dieser Daten. Hierzu sowie zu weiteren Fragen zum Thema personenbezogene Daten können Sie sich jederzeit an uns wenden. Recht auf Einschränkung der Verarbeitung Sie haben das Recht, die Einschränkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen. Hierzu können Sie sich jederzeit an uns wenden. Das Recht auf Einschränkung der Verarbeitung besteht in folgenden Fällen: Wenn Sie die Richtigkeit Ihrer bei uns gespeicherten personenbezogenen Daten bestreiten, benötigen wir in der Regel Zeit, um dies zu überprüfen. Für die Dauer der Prüfung haben Sie das Recht, die Einschränkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen. Wenn die Verarbeitung Ihrer personenbezogenen Daten unrechtmäßig geschah/geschieht, können Sie statt der Löschung die Einschränkung der Datenverarbeitung verlangen. Wenn wir Ihre personenbezogenen Daten nicht mehr benötigen, Sie sie jedoch zur Ausübung, Verteidigung oder Geltendmachung von Rechtsansprüchen benötigen, haben Sie das Recht, statt der Löschung die Einschränkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen. Wenn Sie einen Widerspruch nach Art. 21 Abs. 1 DSGVO eingelegt haben, muss eine Abwägung zwischen Ihren und unseren Interessen vorgenommen werden. Solange noch nicht feststeht, wessen Interessen überwiegen, haben Sie das Recht, die Einschränkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen. Wenn Sie die Verarbeitung Ihrer personenbezogenen Daten eingeschränkt haben, dürfen diese Daten – von ihrer Speicherung abgesehen – nur mit Ihrer Einwilligung oder zur Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen oder zum Schutz der Rechte einer anderen natürlichen oder juristischen Person oder aus Gründen eines wichtigen öffentlichen Interesses der Europäischen Union oder eines Mitgliedstaats verarbeitet werden. SSL- bzw. TLS-Verschlüsselung Diese Seite nutzt aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher Inhalte, wie zum Beispiel Bestellungen oder Anfragen, die Sie an uns als Seitenbetreiber senden, eine SSL- bzw. TLS-Verschlüsselung. Eine verschlüsselte Verbindung erkennen Sie daran, dass die Adresszeile des Browsers von „http://“ auf „https://“ wechselt und an dem Schloss-Symbol in Ihrer Browserzeile. Wenn die SSL- bzw. TLS-Verschlüsselung aktiviert ist, können die Daten, die Sie an uns übermitteln, nicht von Dritten mitgelesen werden. Widerspruch gegen Werbe-E-Mails Der Nutzung von im Rahmen der Impressumspflicht veröffentlichten Kontaktdaten zur Übersendung von nicht ausdrücklich angeforderter Werbung und Informationsmaterialien wird hiermit widersprochen. Die Betreiber der Seiten behalten sich ausdrücklich rechtliche Schritte im Falle der unverlangten Zusendung von Werbeinformationen, etwa durch Spam-E-Mails, vor. 4. Datenerfassung auf dieser Website Cookies Unsere Internetseiten verwenden so genannte „Cookies“. Cookies sind kleine Datenpakete und richten auf Ihrem Endgerät keinen Schaden an. Sie werden entweder vorübergehend für die Dauer einer Sitzung (Session-Cookies) oder dauerhaft (permanente Cookies) auf Ihrem Endgerät gespeichert. Session-Cookies werden nach Ende Ihres Besuchs automatisch gelöscht. Permanente Cookies bleiben auf Ihrem Endgerät gespeichert, bis Sie diese selbst löschen oder eine automatische Löschung durch Ihren Webbrowser erfolgt. Teilweise können auch Cookies von Drittunternehmen auf Ihrem Endgerät gespeichert werden, wenn Sie unsere Seite betreten (Third-Party-Cookies). Diese ermöglichen uns oder Ihnen die Nutzung bestimmter Dienstleistungen des Drittunternehmens (z. B. Cookies zur Abwicklung von Zahlungsdienstleistungen). Cookies haben verschiedene Funktionen. Zahlreiche Cookies sind technisch notwendig, da bestimmte Websitefunktionen ohne diese nicht funktionieren würden (z. B. die Warenkorbfunktion oder die Anzeige von Videos). Andere Cookies dienen dazu, das Nutzerverhalten auszuwerten oder Werbung anzuzeigen. Cookies, die zur Durchführung des elektronischen Kommunikationsvorgangs, zur Bereitstellung bestimmter, von Ihnen erwünschter Funktionen (z. B. für die Warenkorbfunktion) oder zur Optimierung der Website (z. B. Cookies zur Messung des Webpublikums) erforderlich sind (notwendige Cookies), werden auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO gespeichert, sofern keine andere Rechtsgrundlage angegeben wird. Der Websitebetreiber hat ein berechtigtes Interesse an der Speicherung von notwendigen Cookies zur technisch fehlerfreien und optimierten Bereitstellung seiner Dienste. Sofern eine Einwilligung zur Speicherung von Cookies und vergleichbaren Wiedererkennungstechnologien abgefragt wurde, erfolgt die Verarbeitung ausschließlich auf Grundlage dieser Einwilligung (Art. 6 Abs. 1 lit. a DSGVO und § 25 Abs. 1 TTDSG); die Einwilligung ist jederzeit widerrufbar. Sie können Ihren Browser so einstellen, dass Sie über das Setzen von Cookies informiert werden und Cookies nur im Einzelfall erlauben, die Annahme von Cookies für bestimmte Fälle oder generell ausschließen sowie das automatische Löschen der Cookies beim Schließen des Browsers aktivieren. Bei der Deaktivierung von Cookies kann die Funktionalität dieser Website eingeschränkt sein. Soweit Cookies von Drittunternehmen oder zu Analysezwecken eingesetzt werden, werden wir Sie hierüber im Rahmen dieser Datenschutzerklärung gesondert informieren und ggf. eine Einwilligung abfragen. Kontaktformular Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem Anfrageformular inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter. Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, sofern Ihre Anfrage mit der Erfüllung eines Vertrags zusammenhängt oder zur Durchführung vorvertraglicher Maßnahmen erforderlich ist. In allen übrigen Fällen beruht die Verarbeitung auf unserem berechtigten Interesse an der effektiven Bearbeitung der an uns gerichteten Anfragen (Art. 6 Abs. 1 lit. f DSGVO) oder auf Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO) sofern diese abgefragt wurde; die Einwilligung ist jederzeit widerrufbar. Die von Ihnen im Kontaktformular eingegebenen Daten verbleiben bei uns, bis Sie uns zur Löschung auffordern, Ihre Einwilligung zur Speicherung widerrufen oder der Zweck für die Datenspeicherung entfällt (z. B. nach abgeschlossener Bearbeitung Ihrer Anfrage). Zwingende gesetzliche Bestimmungen – insbesondere Aufbewahrungsfristen – bleiben unberührt. Anfrage per E-Mail, Telefon oder Telefax Wenn Sie uns per E-Mail, Telefon oder Telefax kontaktieren, wird Ihre Anfrage inklusive aller daraus hervorgehenden personenbezogenen Daten (Name, Anfrage) zum Zwecke der Bearbeitung Ihres Anliegens bei uns gespeichert und verarbeitet. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter. Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, sofern Ihre Anfrage mit der Erfüllung eines Vertrags zusammenhängt oder zur Durchführung vorvertraglicher Maßnahmen erforderlich ist. In allen übrigen Fällen beruht die Verarbeitung auf unserem berechtigten Interesse an der effektiven Bearbeitung der an uns gerichteten Anfragen (Art. 6 Abs. 1 lit. f DSGVO) oder auf Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO) sofern diese abgefragt wurde; die Einwilligung ist jederzeit widerrufbar. Die von Ihnen an uns per Kontaktanfragen übersandten Daten verbleiben bei uns, bis Sie uns zur Löschung auffordern, Ihre Einwilligung zur Speicherung widerrufen oder der Zweck für die Datenspeicherung entfällt (z. B. nach abgeschlossener Bearbeitung Ihres Anliegens). Zwingende gesetzliche Bestimmungen – insbesondere gesetzliche Aufbewahrungsfristen – bleiben unberührt. 5. Newsletter Newsletter­daten Wenn Sie den auf der Website angebotenen Newsletter beziehen möchten, benötigen wir von Ihnen eine E-Mail-Adresse sowie Informationen, welche uns die Überprüfung gestatten, dass Sie der Inhaber der angegebenen E-Mail-Adresse sind und mit dem Empfang des Newsletters einverstanden sind. Weitere Daten werden nicht bzw. nur auf freiwilliger Basis erhoben. Diese Daten verwenden wir ausschließlich für den Versand der angeforderten Informationen und geben diese nicht an Dritte weiter. Die Verarbeitung der in das Newsletteranmeldeformular eingegebenen Daten erfolgt ausschließlich auf Grundlage Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO). Die erteilte Einwilligung zur Speicherung der Daten, der E-Mail-Adresse sowie deren Nutzung zum Versand des Newsletters können Sie jederzeit widerrufen, etwa über den „Austragen“-Link im Newsletter. Die Rechtmäßigkeit der bereits erfolgten Datenverarbeitungsvorgänge bleibt vom Widerruf unberührt. Die von Ihnen zum Zwecke des Newsletter-Bezugs bei uns hinterlegten Daten werden von uns bis zu Ihrer Austragung aus dem Newsletter bei uns bzw. dem Newsletterdiensteanbieter gespeichert und nach der Abbestellung des Newsletters oder nach Zweckfortfall aus der Newsletterverteilerliste gelöscht. Wir behalten uns vor, E-Mail-Adressen aus unserem Newsletterverteiler nach eigenem Ermessen im Rahmen unseres berechtigten Interesses nach Art. 6 Abs. 1 lit. f DSGVO zu löschen oder zu sperren. Daten, die zu anderen Zwecken bei uns gespeichert wurden, bleiben hiervon unberührt. Nach Ihrer Austragung aus der Newsletterverteilerliste wird Ihre E-Mail-Adresse bei uns bzw. dem Newsletterdiensteanbieter ggf. in einer Blacklist gespeichert, sofern dies zur Verhinderung künftiger Mailings erforderlich ist. Die Daten aus der Blacklist werden nur für diesen Zweck verwendet und nicht mit anderen Daten zusammengeführt. Dies dient sowohl Ihrem Interesse als auch unserem Interesse an der Einhaltung der gesetzlichen Vorgaben beim Versand von Newslettern (berechtigtes Interesse im Sinne des Art. 6 Abs. 1 lit. f DSGVO). Die Speicherung in der Blacklist ist zeitlich nicht befristet. Sie können der Speicherung widersprechen, sofern Ihre Interessen unser berechtigtes Interesse überwiegen. 6. Plugins und Tools Google Fonts Diese Seite nutzt zur einheitlichen Darstellung von Schriftarten so genannte Google Fonts, die von Google bereitgestellt werden. Beim Aufruf einer Seite lädt Ihr Browser die benötigten Fonts in ihren Browsercache, um Texte und Schriftarten korrekt anzuzeigen. Zu diesem Zweck muss der von Ihnen verwendete Browser Verbindung zu den Servern von Google aufnehmen. Hierdurch erlangt Google Kenntnis darüber, dass über Ihre IP-Adresse diese Website aufgerufen wurde. Die Nutzung von Google Fonts erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Der Websitebetreiber hat ein berechtigtes Interesse an der einheitlichen Darstellung des Schriftbildes auf seiner Website. Sofern eine entsprechende Einwilligung abgefragt wurde, erfolgt die Verarbeitung ausschließlich auf Grundlage von Art. 6 Abs. 1 lit. a DSGVO und § 25 Abs. 1 TTDSG, soweit die Einwilligung die Speicherung von Cookies oder den Zugriff auf Informationen im Endgerät des Nutzers (z. B. Device-Fingerprinting) im Sinne des TTDSG umfasst. Die Einwilligung ist jederzeit widerrufbar. Wenn Ihr Browser Google Fonts nicht unterstützt, wird eine Standardschrift von Ihrem Computer genutzt. Weitere Informationen zu Google Fonts finden Sie unter https://developers.google.com/fonts/faq und in der Datenschutzerklärung von Google: https://policies.google.com/privacy?hl=de. Font Awesome Diese Seite nutzt zur einheitlichen Darstellung von Schriftarten und Symbolen Font Awesome. Anbieter ist die Fonticons, Inc., 6 Porter Road Apartment 3R, Cambridge, Massachusetts, USA. Beim Aufruf einer Seite lädt Ihr Browser die benötigten Fonts in ihren Browsercache, um Texte, Schriftarten und Symbole korrekt anzuzeigen. Zu diesem Zweck muss der von Ihnen verwendete Browser Verbindung zu den Servern von Font Awesome aufnehmen. Hierdurch erlangt Font Awesome Kenntnis darüber, dass über Ihre IP-Adresse diese Website aufgerufen wurde. Die Nutzung von Font Awesome erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Wir haben ein berechtigtes Interesse an der einheitlichen Darstellung des Schriftbildes auf unserer Website. Sofern eine entsprechende Einwilligung abgefragt wurde, erfolgt die Verarbeitung ausschließlich auf Grundlage von Art. 6 Abs. 1 lit. a DSGVO und § 25 Abs. 1 TTDSG, soweit die Einwilligung die Speicherung von Cookies oder den Zugriff auf Informationen im Endgerät des Nutzers (z. B. Device-Fingerprinting) im Sinne des TTDSG umfasst. Die Einwilligung ist jederzeit widerrufbar. Wenn Ihr Browser Font Awesome nicht unterstützt, wird eine Standardschrift von Ihrem Computer genutzt. Weitere Informationen zu Font Awesome finden Sie und in der Datenschutzerklärung von Font Awesome unter: https://fontawesome.com/privacy. Quelle: https://www.e-recht24.de",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                }
+              ]
+            },
+            {
+              "type": "heading",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": null,
+              "tag": "h2",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "7. Web-Analyse und Optimierungstools",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                }
+              ]
+            },
+            {
+              "type": "heading",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": null,
+              "tag": "h3",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Umami",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": null,
+              "textFormat": 0,
+              "textStyle": "",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": " Diese Website nutzt zur Reichweitenmessung den cookielosen Analysedienst Umami. Anbieter ist die Umami Software, Inc. (umami.is). Umami setzt keine Cookies und erhebt keine personenbezogenen Daten; es werden lediglich anonymisierte, aggregierte Nutzungsstatistiken (z. B. aufgerufene Seiten, Referrer, ungefähre Herkunftsregion, Browser- und Gerätetyp) erfasst. Eine Identifizierung einzelner Besucher ist nicht möglich, ein Wiedererkennen über mehrere Sitzungen findet nicht statt. ",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": null,
+              "textFormat": 0,
+              "textStyle": "",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": " Die Nutzung von Umami erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Wir haben ein berechtigtes Interesse an der datenschutzfreundlichen, cookielosen Analyse des Nutzerverhaltens, um unser Angebot zu optimieren. Da keine Informationen im Endgerät gespeichert oder ausgelesen werden und keine personenbezogenen Daten verarbeitet werden, ist hierfür keine Einwilligung erforderlich. Beim Laden des Analyse-Skripts wird eine Verbindung zu den Servern des Anbieters hergestellt, wodurch Ihre IP-Adresse übertragen werden kann. Weitere Informationen finden Sie in der Datenschutzerklärung von Umami: ",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                },
+                {
+                  "type": "link",
+                  "version": 3,
+                  "format": "",
+                  "indent": 0,
+                  "direction": null,
+                  "fields": {
+                    "linkType": "custom",
+                    "url": "https://umami.is/privacy",
+                    "newTab": true
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "version": 1,
+                      "text": "https://umami.is/privacy",
+                      "format": 0,
+                      "detail": 0,
+                      "mode": "normal",
+                      "style": ""
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": ". ",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                }
+              ]
+            },
+            {
+              "type": "heading",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": null,
+              "tag": "h3",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Microsoft Clarity",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": null,
+              "textFormat": 0,
+              "textStyle": "",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": " Diese Website nutzt Microsoft Clarity, einen Analysedienst zur Auswertung des Nutzerverhaltens. Anbieter ist die Microsoft Corporation, One Microsoft Way, Redmond, WA 98052-6399, USA (in der EU vertreten durch die Microsoft Ireland Operations Limited, One Microsoft Place, South County Business Park, Leopardstown, Dublin 18, Irland). Mit Clarity erfassen wir insbesondere Mausbewegungen, Scroll- und Klickverhalten sowie Sitzungsaufzeichnungen und Heatmaps, um zu verstehen, wie unsere Website genutzt wird, und um sie zu verbessern. Hierbei werden Cookies (u. a. ",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                },
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "_clck",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                },
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": ", ",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                },
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "_clsk",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                },
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": ", ",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                },
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "CLID",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                },
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": ", ",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                },
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "MUID",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                },
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": ") gesetzt und Nutzungsdaten sowie Ihre IP-Adresse verarbeitet. ",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": null,
+              "textFormat": 0,
+              "textStyle": "",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": " Die Nutzung von Microsoft Clarity erfolgt ausschließlich auf Grundlage Ihrer Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO und § 25 Abs. 1 TTDSG. Der Dienst wird erst geladen, nachdem Sie über unser Cookie-Banner in die Kategorie „Analyse & Optimierung“ eingewilligt haben. Ihre Einwilligung können Sie jederzeit mit Wirkung für die Zukunft über den Link „Cookie-Einstellungen“ im Seitenfuß widerrufen. ",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": null,
+              "textFormat": 0,
+              "textStyle": "",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": " Die Datenverarbeitung kann auch auf Servern in den USA erfolgen. Microsoft ist unter dem EU-US Data Privacy Framework (DPF) zertifiziert, das ein angemessenes Datenschutzniveau gewährleisten soll. Weitere Informationen finden Sie in der Datenschutzerklärung von Microsoft: ",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                },
+                {
+                  "type": "link",
+                  "version": 3,
+                  "format": "",
+                  "indent": 0,
+                  "direction": null,
+                  "fields": {
+                    "linkType": "custom",
+                    "url": "https://privacy.microsoft.com/de-de/privacystatement",
+                    "newTab": true
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "version": 1,
+                      "text": "https://privacy.microsoft.com/de-de/privacystatement",
+                      "format": 0,
+                      "detail": 0,
+                      "mode": "normal",
+                      "style": ""
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": ". ",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                }
+              ]
+            },
+            {
+              "type": "heading",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": null,
+              "tag": "h3",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "ABlyft (A/B-Testing)",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": null,
+              "textFormat": 0,
+              "textStyle": "",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": " Diese Website nutzt ABlyft, ein Werkzeug zur Durchführung von A/B-Tests zur Optimierung von Inhalten und Nutzererlebnis. Anbieter ist [ANBIETER LAUT ABLYFT-IMPRESSUM EINTRAGEN]. Mit ABlyft werden verschiedene Varianten von Inhalten ausgespielt und deren Wirkung gemessen. Dabei können Cookies gesetzt und Nutzungsdaten (z. B. besuchte Seiten, angezeigte Testvariante, Interaktionen) verarbeitet werden. ",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": null,
+              "textFormat": 0,
+              "textStyle": "",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": " Die Nutzung von ABlyft erfolgt ausschließlich auf Grundlage Ihrer Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO und § 25 Abs. 1 TTDSG. Der Dienst wird erst geladen, nachdem Sie über unser Cookie-Banner in die Kategorie „Analyse & Optimierung“ eingewilligt haben. Ihre Einwilligung können Sie jederzeit mit Wirkung für die Zukunft über den Link „Cookie-Einstellungen“ im Seitenfuß widerrufen. Weitere Informationen entnehmen Sie der Datenschutzerklärung des Anbieters: ",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                },
+                {
+                  "type": "link",
+                  "version": 3,
+                  "format": "",
+                  "indent": 0,
+                  "direction": null,
+                  "fields": {
+                    "linkType": "custom",
+                    "url": "https://www.ablyft.com/de/datenschutz/",
+                    "newTab": true
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "version": 1,
+                      "text": "https://www.ablyft.com/de/datenschutz/",
+                      "format": 0,
+                      "detail": 0,
+                      "mode": "normal",
+                      "style": ""
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": ". ",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                }
+              ]
+            },
+            {
+              "type": "heading",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": null,
+              "tag": "h2",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "8. Weitere Plugins und Tools",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                }
+              ]
+            },
+            {
+              "type": "heading",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": null,
+              "tag": "h3",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Netlify (Formularverarbeitung)",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": null,
+              "textFormat": 0,
+              "textStyle": "",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": " Die über unser Kontaktformular übermittelten Daten werden mithilfe des Dienstes „Netlify Forms“ verarbeitet. Anbieter ist die Netlify, Inc., 512 2nd Street, Suite 200, San Francisco, CA 94107, USA. Wenn Sie das Kontaktformular absenden, werden Ihre Eingaben an Netlify übermittelt und dort verarbeitet; dabei können Daten auf Servern in den USA verarbeitet werden. ",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": null,
+              "textFormat": 0,
+              "textStyle": "",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": " Die Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO (Bearbeitung Ihrer Anfrage) bzw. Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einer sicheren und zuverlässigen Bereitstellung unseres Kontaktformulars). Weitere Informationen finden Sie in der Datenschutzerklärung von Netlify: ",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                },
+                {
+                  "type": "link",
+                  "version": 3,
+                  "format": "",
+                  "indent": 0,
+                  "direction": null,
+                  "fields": {
+                    "linkType": "custom",
+                    "url": "https://www.netlify.com/privacy/",
+                    "newTab": true
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "version": 1,
+                      "text": "https://www.netlify.com/privacy/",
+                      "format": 0,
+                      "detail": 0,
+                      "mode": "normal",
+                      "style": ""
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": ". ",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                }
+              ]
+            },
+            {
+              "type": "heading",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": null,
+              "tag": "h3",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Google reCAPTCHA",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": null,
+              "textFormat": 0,
+              "textStyle": "",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": " Zum Schutz unseres Kontaktformulars vor missbräuchlichen Eingaben und Spam nutzen wir „reCAPTCHA“ von Google (im Rahmen von Netlify Forms). Anbieter ist die Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland. Mit reCAPTCHA wird geprüft, ob die Eingabe durch einen Menschen oder durch ein automatisiertes Programm erfolgt. Hierzu analysiert reCAPTCHA das Verhalten des Websitebesuchers anhand verschiedener Merkmale. Diese Analyse beginnt, sobald Sie mit dem Kontaktformular interagieren. Zur Auswertung wertet reCAPTCHA verschiedene Informationen aus (z. B. IP-Adresse, Verweildauer auf der Website, vom Nutzer getätigte Mausbewegungen). Die erfassten Daten werden an Google übermittelt. ",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": null,
+              "textFormat": 0,
+              "textStyle": "",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": " Die Nutzung von reCAPTCHA erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Der Websitebetreiber hat ein berechtigtes Interesse daran, seine Webangebote vor missbräuchlicher automatisierter Ausspähung und vor Spam zu schützen. Sofern eine entsprechende Einwilligung abgefragt wurde, erfolgt die Verarbeitung ausschließlich auf Grundlage von Art. 6 Abs. 1 lit. a DSGVO und § 25 Abs. 1 TTDSG. Die Einwilligung ist jederzeit widerrufbar. Weitere Informationen zu Google reCAPTCHA entnehmen Sie den Datenschutzbestimmungen und den Nutzungsbedingungen von Google unter ",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                },
+                {
+                  "type": "link",
+                  "version": 3,
+                  "format": "",
+                  "indent": 0,
+                  "direction": null,
+                  "fields": {
+                    "linkType": "custom",
+                    "url": "https://policies.google.com/privacy?hl=de",
+                    "newTab": true
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "version": 1,
+                      "text": "https://policies.google.com/privacy?hl=de",
+                      "format": 0,
+                      "detail": 0,
+                      "mode": "normal",
+                      "style": ""
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": " und ",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                },
+                {
+                  "type": "link",
+                  "version": 3,
+                  "format": "",
+                  "indent": 0,
+                  "direction": null,
+                  "fields": {
+                    "linkType": "custom",
+                    "url": "https://policies.google.com/terms?hl=de",
+                    "newTab": true
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "version": 1,
+                      "text": "https://policies.google.com/terms?hl=de",
+                      "format": 0,
+                      "detail": 0,
+                      "mode": "normal",
+                      "style": ""
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": ". ",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                }
+              ]
+            },
+            {
+              "type": "heading",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": null,
+              "tag": "h3",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Cookie-Consent-Tool",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": null,
+              "textFormat": 0,
+              "textStyle": "",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": " Diese Website nutzt ein Cookie-Consent-Tool, um Ihre Einwilligung zur Speicherung bestimmter Cookies bzw. zum Einsatz bestimmter Technologien einzuholen und diese datenschutzkonform zu dokumentieren. Zu diesem Zweck wird Ihre Einwilligungsentscheidung in Ihrem Browser gespeichert (Cookie bzw. lokaler Speicher, z. B. ",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                },
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "cc_cookie",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                },
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "), damit wir die Einwilligung bei erneutem Seitenaufruf nicht erneut abfragen müssen und Ihre Auswahl nachweisen können. Gespeichert werden insbesondere Ihre Einwilligung bzw. deren Widerruf sowie der Zeitpunkt der Erteilung. Eine Weitergabe an Dritte findet nicht statt. ",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": null,
+              "textFormat": 0,
+              "textStyle": "",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": " Die Speicherung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. c DSGVO (rechtliche Verpflichtung zum Nachweis der Einwilligung) sowie unserem berechtigten Interesse an einer rechtskonformen Einwilligungsverwaltung (Art. 6 Abs. 1 lit. f DSGVO). Ihre einmal getroffene Auswahl können Sie jederzeit über den Link „Cookie-Einstellungen“ im Seitenfuß ändern oder widerrufen. ",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "slug": "quick-check",
+      "title": "Lass deine App- oder Website-Idee kostenlos von uns checken.",
+      "seo": {
+        "title": "Kostenloser Quick-Check für deine Website- oder App-Idee | wesolve-IT",
+        "description": "Lass deine Website- oder App-Idee kostenlos checken: Innerhalb von 48 Stunden bekommst du unsere ehrliche Einschätzung zu Aufwand, Technik und Umsetzung."
+      },
+      "content": {
+        "root": {
+          "type": "root",
+          "version": 1,
+          "format": "",
+          "indent": 0,
+          "direction": null,
+          "children": [
+            {
+              "type": "heading",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": null,
+              "tag": "h1",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": " Lass deine App- oder Website-Idee ",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                },
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "kostenlos",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                },
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": " von uns checken. ",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": null,
+              "textFormat": 0,
+              "textStyle": "",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Innerhalb von 48 Stunden bekommst du unser ehrliches Feedback und eine Einschätzung zu Aufwand, Technik und Umsetzung.",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": null,
+              "textFormat": 0,
+              "textStyle": "",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Du hast eine Idee, bist dir aber unsicher, wie du starten sollst? Genau dafür ist der Quick-Check da – ohne Verpflichtung und ohne Fachchinesisch.",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": null,
+              "textFormat": 0,
+              "textStyle": "",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Du beschreibst uns deine Idee – formlos, so wie sie dir im Kopf herumgeht.",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": null,
+              "textFormat": 0,
+              "textStyle": "",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Wir schauen sie uns an und prüfen Aufwand, Technik und Machbarkeit.",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": null,
+              "textFormat": 0,
+              "textStyle": "",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "In 48 Stunden bekommst du unsere ehrliche Einschätzung – und entscheidest selbst, wie es weitergeht.",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "settings": {
+    "brand": "wesolve-IT",
+    "description": "Deine Digitalagentur für kleine Unternehmen – Webseiten, Apps & SEO, die für mehr Kunden und mehr Umsatz sorgen.",
+    "email": "info@wesolve-it.com",
+    "phone": "+49 (0) 152 02721146",
+    "whatsapp": "4915202721146",
+    "linkedin": "https://www.linkedin.com/company/wesolve-it/",
+    "instagram": "https://www.instagram.com/wesolveit_official/",
+    "navigation": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Kunden",
+        "url": "/referenzen"
+      },
+      {
+        "label": "Leistungen",
+        "url": "/leistungen"
+      },
+      {
+        "label": "Kontakt",
+        "url": "/kontakt"
+      }
+    ],
+    "ctaHeading": "Bereit, dein Unternehmen digital voranzubringen?",
+    "ctaText": "Unverbindlich, ehrlich und auf Augenhöhe – erzähl uns von deinem Projekt.",
+    "newsletterEnabled": false
+  },
+  "media": [
+    {
+      "url": "/assets/img/illustration-webentwicklung.svg",
+      "alt": "Illustration eines modernen Webseiten-Layouts im Browser"
+    },
+    {
+      "url": "/assets/img/illustration-app.svg",
+      "alt": "Illustration einer Smartphone-App mit Benachrichtigung"
+    },
+    {
+      "url": "/assets/img/illustration-seo.svg",
+      "alt": "Illustration einer Suchleiste mit Top-Platzierung in den Suchergebnissen"
+    },
+    {
+      "url": "/assets/img/illustration-komplettpaket.svg",
+      "alt": "Illustration eines digitalen Komplettpakets mit Dashboard, Cloud, Sicherheit und Support"
+    },
+    {
+      "url": "/assets/img/Bildschirmfoto-2024-05-27-um-15.40.45.png",
+      "alt": "Bild der Applikation"
+    },
+    {
+      "url": "/assets/img/FCN_Logo.png",
+      "alt": "1.FC Nürnberg Logo"
+    },
+    {
+      "url": "/assets/img/exampleImage.png",
+      "alt": "Die Webseite von Alfafood im Browser"
+    },
+    {
+      "url": "/assets/img/Alfafood_Logo.png",
+      "alt": "Alfafood Logo"
+    },
+    {
+      "url": "/assets/img/referenz-sportweber-verleih-2026.png",
+      "alt": "Die Verleihsoftware von Sport-Weber Schnaittach im Browser"
+    },
+    {
+      "url": "/assets/img/SportWeberLogoNeuklein.3caf40cb13b6ecc9538a.png",
+      "alt": "Sport-Weber Schnaittach Logo"
+    },
+    {
+      "url": "/assets/img/referenz-dieschokoecke-2026.png",
+      "alt": "Die Webseite von dieschokoecke im Browser"
+    },
+    {
+      "url": "/assets/img/FullLogo_Transparent_NoBuffer.1a93282d335c16541fb0.png",
+      "alt": "dieschokoecke Logo"
+    },
+    {
+      "url": "/assets/img/referenz-rootd-2026.png",
+      "alt": "Der Online-Shop von ROOTD. im Browser"
+    },
+    {
+      "url": "/assets/img/rootd-logo.webp",
+      "alt": "ROOTD. Logo"
+    },
+    {
+      "url": "/assets/img/referenz-rooted-merch-2026.png",
+      "alt": "Die Webseite von ROOTED Merch im Browser"
+    },
+    {
+      "url": "/assets/img/rooted-merch-logo.png",
+      "alt": "ROOTED Merch Logo"
+    },
+    {
+      "url": "/assets/img/referenz-sportweber-bikeservice.png",
+      "alt": "Die Bikeservice-Plattform von Sport-Weber Schnaittach im Browser"
+    },
+    {
+      "url": "/assets/img/377-5023880.png",
+      "alt": "Tobias Herrmann Logo"
+    },
+    {
+      "url": "/assets/img/1597497751.png",
+      "alt": "LU-BU Asian Food Logo"
+    },
+    {
+      "url": "/assets/img/illustration-hero.svg",
+      "alt": "Illustration einer modernen Webseite und App mit wachsenden Kennzahlen"
+    },
+    {
+      "url": "/assets/img/FCN_Logo.webp",
+      "alt": "1.FC Nürnberg Logo"
+    },
+    {
+      "url": "/assets/img/Alfafood_Logo.webp",
+      "alt": "Alfafood Logo"
+    },
+    {
+      "url": "/assets/img/maxrundohne-rand.webp",
+      "alt": "Bild des Geschäftsführers von Sport-Weber Schnaittach"
+    }
+  ]
+}

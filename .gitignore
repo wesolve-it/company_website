@@ -1,3 +1,14 @@
 node_modules/
+.next/
+out/
+.env*
+!.env.example
+*.tsbuildinfo
+payload.db*
+media/
+playwright-report/
+test-results/
+
+.test-data/
 .DS_Store
 .claude/settings.local.json
