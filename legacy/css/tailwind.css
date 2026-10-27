@@ -40,6 +40,10 @@
   p, blockquote, li {
     text-wrap: pretty;
   }
+  ::selection {
+    background-color: theme('colors.wesolve-accent.200');
+    color: theme('colors.wesolve-green.950');
+  }
   @media (prefers-reduced-motion: no-preference) {
     html {
       scroll-behavior: smooth;
@@ -148,7 +152,7 @@ button svg[x-show="open"] {
   @apply relative grid grid-cols-[2rem_1fr] gap-5 md:block;
 }
 .timeline-node {
-  @apply relative z-10 grid h-8 w-8 place-items-center rounded-full border border-wesolve-accent-300 bg-wesolve-green-950 font-mono text-[11px] font-semibold text-wesolve-accent-300 md:mx-auto;
+  @apply relative z-10 grid h-8 w-8 place-items-center rounded-full border border-wesolve-accent-300 bg-wesolve-green-950 text-xs font-semibold tabular-nums text-wesolve-accent-300 md:mx-auto;
 }
 .timeline-content {
   @apply pb-3 md:mt-8 md:border-t md:border-white/10 md:px-5 md:pt-7 md:text-center;

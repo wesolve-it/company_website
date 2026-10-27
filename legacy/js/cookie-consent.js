@@ -67,7 +67,7 @@
         translations: {
           de: {
             consentModal: {
-              title: "Wir verwenden Cookies 🍪",
+              title: "Wir verwenden Cookies",
               description:
                 "Wir setzen Cookies und ähnliche Technologien ein. Notwendige sind für den Betrieb der Website erforderlich. " +
                 "Optionale Analyse- und Optimierungstools (Microsoft Clarity, ABlyft) helfen uns, die Seite zu verbessern – " +

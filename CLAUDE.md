@@ -11,3 +11,4 @@ Next.js App Router und Payload CMS. Setup und Betrieb stehen in README.md.
 - `.env`, Datenbanken, Medienuploads und Testdaten nicht committen.
 - Datenbankadapter getrennte Migrationen geben. PostgreSQL-Support nicht mit SQLite-Migrationen ausliefern.
 - Nach Änderungen: Typecheck, relevante Tests und Produktionsbuild. Browserprüfungen nutzen `.test-data/`.
+- Zielgruppe und Positionierung: `PRODUCT.md`. `DESIGN.md` dokumentiert das visuelle System der ursprünglichen Website in `legacy/`.
