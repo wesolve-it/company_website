@@ -1146,7 +1146,7 @@
       "slug": "sportweber-schnaittach",
       "heading": "Verleihsoftware mit eigener Pflege",
       "intro": "Ein Online-Verleihsystem mit Warenkorb, Admin-Bereich und automatischer Rechnungserstellung – komplett in Eigenregie pflegbar.",
-      "image": "/assets/img/Bildschirmfoto-2024-04-30-um-15.05.05.png",
+      "image": "/assets/img/referenz-sportweber-verleih-2026.png",
       "order": 2,
       "featured": false,
       "sections": [
@@ -1266,7 +1266,7 @@
       "slug": "dieschokoecke",
       "heading": "Webseite mit Selbstverwaltung",
       "intro": "Eine moderne Webseite für die belgische Pralinen-Manufaktur – Sortiment, Texte und FAQ verwaltet dieschokoecke komplett selbst.",
-      "image": "/assets/img/dieschokoecke.png",
+      "image": "/assets/img/referenz-dieschokoecke-2026.png",
       "order": 3,
       "featured": false,
       "sections": [
@@ -1370,7 +1370,7 @@
       "slug": "rootd",
       "heading": "Online-Shop für Streetwear",
       "intro": "Ein kompletter E-Commerce-Auftritt für das nachhaltige Streetwear-Label aus Schnaittach: lokal bedruckte Mode, online bestellbar mit wenigen Klicks.",
-      "image": "/assets/img/referenz-rootd.png",
+      "image": "/assets/img/referenz-rootd-2026.png",
       "order": 4,
       "featured": false,
       "sections": [
@@ -1490,7 +1490,7 @@
       "slug": "rooted-merch",
       "heading": "Webseite für Vereins- & Firmen-Merch",
       "intro": "Eine fokussierte B2B-Webseite mit einem klaren Ziel: Vereine und Unternehmen fragen ihr Musterdesign an – lokal bedruckt in der Region Nürnberg.",
-      "image": "/assets/img/referenz-rooted-merch.png",
+      "image": "/assets/img/referenz-rooted-merch-2026.png",
       "order": 5,
       "featured": false,
       "sections": [
@@ -4301,7 +4301,7 @@
       "alt": "Alfafood Logo"
     },
     {
-      "url": "/assets/img/Bildschirmfoto-2024-04-30-um-15.05.05.png",
+      "url": "/assets/img/referenz-sportweber-verleih-2026.png",
       "alt": "Die Verleihsoftware von Sport-Weber Schnaittach im Browser"
     },
     {
@@ -4309,7 +4309,7 @@
       "alt": "Sport-Weber Schnaittach Logo"
     },
     {
-      "url": "/assets/img/dieschokoecke.png",
+      "url": "/assets/img/referenz-dieschokoecke-2026.png",
       "alt": "Die Webseite von dieschokoecke im Browser"
     },
     {
@@ -4317,7 +4317,7 @@
       "alt": "dieschokoecke Logo"
     },
     {
-      "url": "/assets/img/referenz-rootd.png",
+      "url": "/assets/img/referenz-rootd-2026.png",
       "alt": "Der Online-Shop von ROOTD. im Browser"
     },
     {
@@ -4325,7 +4325,7 @@
       "alt": "ROOTD. Logo"
     },
     {
-      "url": "/assets/img/referenz-rooted-merch.png",
+      "url": "/assets/img/referenz-rooted-merch-2026.png",
       "alt": "Die Webseite von ROOTED Merch im Browser"
     },
     {
