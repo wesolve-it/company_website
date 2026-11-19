@@ -1,6 +1,9 @@
 <div
   x-data="{ open: false, isScrolled: false }"
-  x-init="window.addEventListener('scroll', () => { isScrolled = window.scrollY > 10 })"
+  x-init="isScrolled = window.scrollY > 10"
+  @scroll.window.passive="isScrolled = window.scrollY > 10"
+  data-nav-scrolled="false"
+  :data-nav-scrolled="isScrolled.toString()"
   x-effect="document.body.classList.toggle('overflow-hidden', open)"
   @keydown.escape.window="open = false"
   @click.away="open = false"
@@ -11,20 +14,20 @@
        Element zum Anker für fixed-Kinder und würde das Mobile-Overlay auf Leistenhöhe einfangen -->
   <div
     :class="isScrolled ? 'bg-white/90 shadow-sm backdrop-blur-md dark:bg-wesolve-green-950/90' : 'bg-transparent'"
-    class="transition-all duration-300 ease-in-out"
+    class="nav-bar transition-all duration-300 ease-in-out"
   >
     <div
       :class="isScrolled ? 'py-3' : 'py-5'"
       class="container mx-auto flex max-w-screen-xl items-center justify-between px-4 transition-all duration-300 ease-in-out"
     >
       <!-- Logo -->
-      <a href="/" onclick="navigateTo(event, '/')" class="focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-wesolve-accent-400">
-        <img src="/assets/img/wesolve_green.svg" alt="wesolve-IT" class="nav-logo h-8 w-auto dark:brightness-0 dark:invert">
+      <a href="/" class="nav-brand focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-wesolve-accent-400">
+        <img data-home-logo="/assets/img/wesolve-schriftzug.svg" src="/assets/img/wesolve_green.svg" alt="wesolve-IT" class="nav-logo h-8 w-auto dark:brightness-0 dark:invert">
       </a>
 
       <!-- Navigation Links + Theme Toggle -->
       <div class="flex items-center gap-4">
-        <nav class="hidden items-center gap-8 text-[15px] font-semibold md:flex">
+        <nav aria-label="Hauptnavigation" class="hidden items-center gap-8 text-[15px] font-semibold md:flex">
           <a href="/" class="nav-link nav-underline text-neutral-900 transition-colors duration-200 hover:text-wesolve-green-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-wesolve-green-500 dark:text-neutral-100">Home</a>
           <a href="/referenzen" class="nav-link nav-underline text-neutral-900 transition-colors duration-200 hover:text-wesolve-green-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-wesolve-green-500 dark:text-neutral-100">Referenzen</a>
           <a href="/leistungen" class="nav-link nav-underline text-neutral-900 transition-colors duration-200 hover:text-wesolve-green-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-wesolve-green-500 dark:text-neutral-100">Leistungen</a>
@@ -67,10 +70,10 @@
   <!-- Mobile Overlay Menu -->
   <div
     class="pointer-events-none fixed inset-0 z-40 md:hidden"
-    aria-hidden="true"
   >
     <!-- Semi-transparent background -->
     <div
+      style="display: none"
       x-show="open"
       x-transition.opacity
       class="pointer-events-auto absolute inset-0 bg-neutral-900/40 backdrop-blur-sm"
@@ -82,7 +85,9 @@
       id="mobile-menu"
       role="dialog"
       aria-modal="true"
+      aria-label="Hauptnavigation"
       tabindex="-1"
+      style="display: none"
       x-show="open"
       x-transition:enter="transform transition ease-out duration-300"
       x-transition:enter-start="translate-x-full"
@@ -106,7 +111,7 @@
           <span class="h-1.5 w-1.5 bg-wesolve-accent-400 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></span>Kontakt
         </a>
       </nav>
-      <a data-umami-event="nav-kontakt" href="/kontakt" class="mt-auto inline-flex items-center justify-center rounded-lg bg-wesolve-green-700 px-6 py-3.5 text-lg font-semibold text-white dark:bg-wesolve-green-200 dark:text-wesolve-green-950">
+      <a data-umami-event="nav-kontakt" href="/kontakt" class="nav-cta mt-auto inline-flex items-center justify-center rounded-lg bg-wesolve-green-700 px-6 py-3.5 text-lg font-semibold text-white dark:bg-wesolve-green-200 dark:text-wesolve-green-950">
         Erstgespräch vereinbaren
       </a>
     </div>

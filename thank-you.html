@@ -4,25 +4,31 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Danke für deine Anfrage | wesolve-IT</title>
+  <meta name="description" content="Danke für deine Anfrage bei wesolve-IT. Wir melden uns in der Regel innerhalb von 24 Stunden.">
   <!-- Umami Analytics (cookielos, DSGVO-freundlich, ohne Consent-Banner) -->
   <script defer src="https://cloud.umami.is/script.js" data-website-id="9ae829dd-0d21-44d1-b913-58b2c74faf32" data-domains="wesolve-it.com"></script>
   <link rel="preload" href="/assets/fonts/onest-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link href="./dist/styles.css" rel="stylesheet">
+  <link href="./css/home.css" rel="stylesheet">
   <script src="/js/theme.js"></script>
-  <link rel="icon" type="image/x-icon" href="./assets/img/Wesolveit_loigo.svg" />
+  <link rel="icon" type="image/svg+xml" href="./assets/img/wesolve-codewinkel.svg">
   <meta name="robots" content="noindex">
   <script src="/js/navigation.js" defer></script><script defer src="/js/vendor/alpine-3.14.8.min.js"></script>
 </head>
-<body data-hero="dark" class="overflow-x-hidden bg-white font-text text-wesolve-green-950 antialiased dark:bg-wesolve-green-950 dark:text-wesolve-green-50">
+<body class="brand-page overflow-x-hidden font-text antialiased">
 <main>
-  <!-- Bestätigung: der Haken zeichnet sich einmal und bestätigt das Absenden -->
-  <section class="hero-panel relative flex min-h-[80vh] items-center bg-wesolve-green-950 px-4 pb-20 pt-32 text-white sm:px-6" aria-labelledby="thanks-title">
-    <div class="mx-auto w-full max-w-screen-xl">
-      <svg class="success-check h-20 w-20" viewBox="0 0 80 80" fill="none" aria-hidden="true"><circle cx="40" cy="40" r="36" stroke="currentColor" stroke-width="3" class="success-ring text-wesolve-accent-400"/><path d="m25 41 10 10 21-22" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" class="success-tick text-wesolve-accent-300"/></svg>
-      <h1 id="thanks-title" style="--d:3" class="hero-in mt-10 max-w-3xl font-text text-[clamp(2.5rem,5.4vw,4.75rem)] font-bold leading-[1] tracking-[-0.04em]">Danke, deine Anfrage ist bei uns angekommen.</h1>
-      <p style="--d:4" class="hero-in mt-7 max-w-xl text-lg leading-relaxed text-wesolve-green-100">Wir melden uns in der Regel innerhalb von 24 Stunden bei dir – per E-Mail oder telefonisch.</p>
-      <div style="--d:5" class="hero-in mt-10 flex flex-col gap-3 sm:flex-row"><a href="/referenzen" class="btn-primary">Referenzen ansehen <svg class="h-4 w-4" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="/" class="btn-secondary-dark">Zur Startseite</a></div>
-      <p style="--d:6" class="hero-in mt-12 text-wesolve-green-200">Eilig? Schreib uns direkt per <a data-umami-event="whatsapp-klick" href="https://wa.me/4915202721146" target="_blank" rel="noopener" class="font-semibold text-white underline decoration-wesolve-accent-400 decoration-2 underline-offset-4">WhatsApp</a> oder ruf an: <a data-umami-event="kontakt-telefon" href="tel:+4915202721146" class="font-semibold text-white underline decoration-wesolve-accent-400 decoration-2 underline-offset-4">0152 02721146</a></p>
+  <section class="references-hero status-hero px-4 sm:px-6" aria-labelledby="thanks-title">
+    <div class="home-orbits" aria-hidden="true">
+      <div class="home-orbit home-orbit-inner"></div>
+      <div class="home-orbit home-orbit-middle"></div>
+      <div class="home-orbit home-orbit-outer"></div>
+    </div>
+    <div class="mx-auto max-w-screen-xl">
+      <svg class="success-check" viewBox="0 0 80 80" fill="none" aria-hidden="true"><circle cx="40" cy="40" r="36" stroke="currentColor" stroke-width="3" class="success-ring"/><path d="m25 41 10 10 21-22" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" class="success-tick"/></svg>
+      <h1 id="thanks-title">Danke, deine Anfrage <span>ist bei uns angekommen.</span></h1>
+      <p>Wir melden uns in der Regel innerhalb von 24 Stunden bei dir – per E-Mail oder telefonisch.</p>
+      <div class="status-actions"><a href="/referenzen" class="btn-primary">Referenzen ansehen <svg class="h-4 w-4" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="/" class="btn-secondary">Zur Startseite</a></div>
+      <p class="status-note">Eilig? Schreib uns direkt per <a data-umami-event="whatsapp-klick" href="https://wa.me/4915202721146" target="_blank" rel="noopener">WhatsApp</a> oder ruf an: <a data-umami-event="kontakt-telefon" href="tel:+4915202721146">0152 02721146</a></p>
     </div>
   </section>
 </main>

@@ -20,87 +20,122 @@
   <meta name="description" content="Case Study: Wie Alfafood seine Webseite komplett selbst pflegt – inklusive geschütztem Franchise-Bereich mit automatischer Kategorisierung.">
   <link rel="preload" href="/assets/fonts/onest-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link href="../dist/styles.css" rel="stylesheet">
+  <link href="../css/home.css" rel="stylesheet">
   <script src="/js/theme.js"></script>
-  <link rel="icon" type="image/x-icon" href="../assets/img/Wesolveit_loigo.svg" />
+  <link rel="icon" type="image/svg+xml" href="../assets/img/wesolve-codewinkel.svg" />
   <script defer src="/js/vendor/alpine-3.14.8.min.js"></script>
   <script src="/js/navigation.js" defer></script>
 </head>
-<body data-hero="dark" class="overflow-x-hidden bg-white font-text text-wesolve-green-950 antialiased dark:bg-wesolve-green-950 dark:text-wesolve-green-50">
+<body class="brand-page case-page overflow-x-hidden font-text antialiased">
 <main>
-  <!-- Kopf: Kunde, Aufgabe und Eckdaten auf einen Blick -->
-  <section class="hero-panel relative bg-wesolve-green-950 px-4 pb-40 pt-28 text-white sm:px-6 lg:pb-56 lg:pt-36" aria-labelledby="case-title">
+  <section class="references-hero case-hero px-4 sm:px-6" aria-labelledby="case-title">
+    <div class="home-orbits" aria-hidden="true">
+      <div class="home-orbit home-orbit-inner"></div>
+      <div class="home-orbit home-orbit-middle"></div>
+      <div class="home-orbit home-orbit-outer"></div>
+    </div>
     <div class="mx-auto max-w-screen-xl">
-      <a href="/referenzen" class="hero-in back-link inline-flex items-center gap-2 text-sm font-semibold text-wesolve-green-200 hover:text-white" style="--d:0"><svg class="h-4 w-4 rotate-180" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Alle Referenzen</a>
-      <div class="mt-10 grid gap-10 lg:grid-cols-12 lg:items-end">
-        <div class="lg:col-span-7">
-          <img width="450" height="500" src="../assets/img/Alfafood_Logo.png" alt="Alfafood" style="--d:1" class="hero-in h-10 w-auto brightness-0 invert">
-          <h1 id="case-title" style="--d:2" class="hero-in mt-8 font-text text-[clamp(2.4rem,5vw,4.25rem)] font-bold leading-[1.02] tracking-[-0.04em]">Webseite mit Franchise-Bereich.</h1>
-          <p style="--d:3" class="hero-in mt-6 max-w-xl text-lg leading-relaxed text-wesolve-green-100">Ein Webauftritt, den das Alfafood-Team komplett selbst pflegt – inklusive geschütztem Franchise-Bereich mit automatischer Kategorisierung der Inhalte.</p>
+      <a href="/referenzen" class="home-text-link case-back"><span aria-hidden="true">←</span> Alle Referenzen</a>
+      <div class="case-hero-layout">
+        <div>
+          <div class="case-client">
+            <img width="450" height="500" src="../assets/img/Alfafood_Logo.png" alt="">
+            <span>Alfafood</span>
+          </div>
+          <h1 id="case-title">Webseite mit Franchise-Bereich<span>.</span></h1>
+          <p>Ein Webauftritt, den das Alfafood-Team komplett selbst pflegt – inklusive geschütztem Franchise-Bereich mit automatischer Kategorisierung der Inhalte.</p>
         </div>
-        <dl style="--d:4" class="hero-in grid gap-5 border-t border-white/10 pt-6 sm:grid-cols-3 sm:gap-6 lg:col-span-5 lg:grid-cols-1 lg:gap-5 lg:border-l lg:border-t-0 lg:pl-10 lg:pt-0"><div><dt class="text-sm text-wesolve-green-300">Branche</dt><dd class="mt-1 font-semibold">Lebensmittel-Großhandel</dd></div><div><dt class="text-sm text-wesolve-green-300">Leistung</dt><dd class="mt-1 font-semibold">Webentwicklung</dd></div><div><dt class="text-sm text-wesolve-green-300">Besonderheit</dt><dd class="mt-1 font-semibold">100 % Selbstpflege</dd></div></dl>
+        <figure class="case-tablet case-shot"><img class="case-shot-img" width="1600" height="771" src="../assets/img/exampleImage.webp" alt="Die Webseite von Alfafood im Browser"></figure>
       </div>
+      <dl class="case-facts">
+        <div><dt>Branche</dt><dd>Lebensmittel-Großhandel</dd></div>
+        <div><dt>Leistung</dt><dd>Webentwicklung</dd></div>
+        <div><dt>Besonderheit</dt><dd>100 % Selbstpflege</dd></div>
+      </dl>
     </div>
   </section>
 
-  <!-- Bild ragt aus dem dunklen Kopf in den hellen Inhalt -->
-  <div class="relative z-10 -mt-28 px-4 sm:px-6 lg:-mt-40">
-    <figure style="--d:4" class="hero-in mx-auto max-w-5xl overflow-hidden rounded-2xl bg-white shadow-[0_50px_100px_-40px_rgba(8,28,22,0.7)] ring-1 ring-wesolve-green-950/10"><div class="flex gap-1.5 border-b border-wesolve-green-100 px-4 py-3" aria-hidden="true"><span class="h-2.5 w-2.5 rounded-full bg-wesolve-green-200"></span><span class="h-2.5 w-2.5 rounded-full bg-wesolve-green-200"></span><span class="h-2.5 w-2.5 rounded-full bg-wesolve-green-200"></span></div><img width="1600" height="771" src="../assets/img/exampleImage.webp" alt="Die Webseite von Alfafood im Browser" class="w-full"></figure>
-  </div>
-
-  <!-- Geschichte: echte Abfolge, daher nummeriert -->
-  <section class="px-4 py-20 sm:px-6 lg:py-28" aria-label="Projektverlauf">
-    <ol data-reveal class="case-story mx-auto max-w-screen-xl border-b border-wesolve-green-200 dark:border-wesolve-green-800">
-        <li class="case-step grid gap-4 border-t border-wesolve-green-200 py-10 dark:border-wesolve-green-800 lg:grid-cols-12 lg:gap-10"><h2 class="flex items-baseline gap-4 text-2xl font-semibold tracking-[-0.025em] lg:col-span-4"><span class="text-base font-semibold text-wesolve-green-600 dark:text-wesolve-accent-300">1.</span>Die Ausgangslage</h2><p class="max-w-2xl text-lg leading-relaxed text-wesolve-green-800 dark:text-wesolve-green-100 lg:col-span-7 lg:col-start-6">Alfafood wächst: Neue Filialen kommen dazu, seit 2023 läuft zusätzlich das Franchise-Geschäft. Der Webauftritt sollte da mithalten – ohne dass für jede Textänderung oder jede neue Filiale eine Agentur beauftragt werden muss.</p></li>
-        <li class="case-step grid gap-4 border-t border-wesolve-green-200 py-10 dark:border-wesolve-green-800 lg:grid-cols-12 lg:gap-10"><h2 class="flex items-baseline gap-4 text-2xl font-semibold tracking-[-0.025em] lg:col-span-4"><span class="text-base font-semibold text-wesolve-green-600 dark:text-wesolve-accent-300">2.</span>Unsere Lösung</h2><p class="max-w-2xl text-lg leading-relaxed text-wesolve-green-800 dark:text-wesolve-green-100 lg:col-span-7 lg:col-start-6">Ein komplett neuer Webauftritt, dessen Herzstück die Selbstpflege ist: Texte, Bilder und ganze Filialen verwaltet das Team ohne Hilfe Dritter. Dazu ein geschützter Franchise-Bereich für Mitglieder, in dem beliebige Dateitypen bereitgestellt werden – automatisch nach Kategorien gegliedert.</p></li>
-        <li class="case-step grid gap-4 border-t border-wesolve-green-200 py-10 dark:border-wesolve-green-800 lg:grid-cols-12 lg:gap-10"><h2 class="flex items-baseline gap-4 text-2xl font-semibold tracking-[-0.025em] lg:col-span-4"><span class="text-base font-semibold text-wesolve-green-600 dark:text-wesolve-accent-300">3.</span>Das Ergebnis</h2><p class="max-w-2xl text-lg leading-relaxed text-wesolve-green-800 dark:text-wesolve-green-100 lg:col-span-7 lg:col-start-6">Keine Wartezeiten mehr: Neue Inhalte und Filialen sind in Minuten online, die Franchise-Partner werden zentral mit aktuellen Unterlagen versorgt – und Alfafood konzentriert sich voll auf das Tagesgeschäft.</p></li>
-    </ol>
+  <section class="case-section px-4 sm:px-6" aria-labelledby="case-story-title">
+    <div class="case-story-layout mx-auto max-w-screen-xl">
+      <div>
+        <h2 id="case-story-title" class="section-title">Webseite in Eigenregie</h2>
+        <div class="case-key-result">
+          <strong>Filialen selbst verwalten</strong>
+          <p>Inhalte, Bilder und ganze Filialen verwaltet das Team komplett selbst.</p>
+        </div>
+      </div>
+      <ol class="case-story-list">
+        <li>
+          <h3>Die Ausgangslage</h3>
+          <p>Alfafood wächst: Neue Filialen kommen dazu, seit 2023 läuft zusätzlich das Franchise-Geschäft. Der Webauftritt sollte da mithalten – ohne dass für jede Textänderung oder jede neue Filiale eine Agentur beauftragt werden muss.</p>
+        </li>
+        <li>
+          <h3>Unsere Lösung</h3>
+          <p>Ein komplett neuer Webauftritt, dessen Herzstück die Selbstpflege ist: Texte, Bilder und ganze Filialen verwaltet das Team ohne Hilfe Dritter. Dazu ein geschützter Franchise-Bereich für Mitglieder, in dem beliebige Dateitypen bereitgestellt werden – automatisch nach Kategorien gegliedert.</p>
+        </li>
+        <li>
+          <h3>Das Ergebnis</h3>
+          <p>Keine Wartezeiten mehr: Neue Inhalte und Filialen sind in Minuten online, die Franchise-Partner werden zentral mit aktuellen Unterlagen versorgt – und Alfafood konzentriert sich voll auf das Tagesgeschäft.</p>
+        </li>
+      </ol>
+    </div>
   </section>
 
-  <!-- Kundenstimme -->
-  <section class="px-4 py-20 sm:px-6 lg:py-28" aria-label="Kundenstimme">
-    <figure data-reveal class="mx-auto max-w-4xl">
-      <blockquote class="text-[clamp(1.45rem,2.6vw,2.25rem)] font-medium leading-snug tracking-[-0.02em]">„Die Erstellung meiner Webseite war ein absoluter Erfolg! Das Team lieferte nicht nur ein ansprechendes Design, sondern ermöglichte mir auch mühelose Selbstpflege. Perfekte Lösung für mein Business!“</blockquote>
-      <figcaption class="mt-8"><span class="block font-semibold">Roni Burcak</span><span class="mt-1 block text-sm text-wesolve-green-600 dark:text-wesolve-green-300">Geschäftsführer Alfafood GmbH</span></figcaption>
-    </figure>
-  </section>
-
-  <!-- Funktionen -->
-  <section class="bg-wesolve-green-50 px-4 py-20 dark:bg-wesolve-green-900/60 sm:px-6 lg:py-28" aria-labelledby="features-title">
+  <section class="home-work px-4 sm:px-6" aria-labelledby="features-title">
     <div class="mx-auto max-w-screen-xl">
       <h2 id="features-title" class="section-title mt-0">Das steckt drin</h2>
-      <ul data-reveal class="feature-grid mt-12 grid gap-px overflow-hidden rounded-2xl border border-wesolve-green-200 bg-wesolve-green-200 dark:border-wesolve-green-800 dark:bg-wesolve-green-800 sm:grid-cols-2 lg:grid-cols-3">
-        <li class="feature-item flex items-center gap-4"><span class="grid h-11 w-11 place-items-center rounded-xl bg-wesolve-green-950 text-wesolve-accent-300 dark:bg-wesolve-green-800" aria-hidden="true"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none"><path d="M4 20h4L19 9l-4-4L4 16v4ZM13.5 6.5l4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3 class="font-semibold">Texte &amp; Bilder ohne Technikkenntnisse pflegen</h3></li>
-        <li class="feature-item flex items-center gap-4"><span class="grid h-11 w-11 place-items-center rounded-xl bg-wesolve-green-950 text-wesolve-accent-300 dark:bg-wesolve-green-800" aria-hidden="true"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3 class="font-semibold">Neue Filialen ohne Programmierer anlegen</h3></li>
-        <li class="feature-item flex items-center gap-4"><span class="grid h-11 w-11 place-items-center rounded-xl bg-wesolve-green-950 text-wesolve-accent-300 dark:bg-wesolve-green-800" aria-hidden="true"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none"><rect x="5" y="10.5" width="14" height="10" rx="2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3 class="font-semibold">Geschützter Franchise-Bereich für Mitglieder</h3></li>
-        <li class="feature-item flex items-center gap-4"><span class="grid h-11 w-11 place-items-center rounded-xl bg-wesolve-green-950 text-wesolve-accent-300 dark:bg-wesolve-green-800" aria-hidden="true"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none"><path d="M12 15V4m-4 4 4-4 4 4M5 15v4h14v-4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3 class="font-semibold">Alle Dateitypen hochladbar</h3></li>
-        <li class="feature-item flex items-center gap-4"><span class="grid h-11 w-11 place-items-center rounded-xl bg-wesolve-green-950 text-wesolve-accent-300 dark:bg-wesolve-green-800" aria-hidden="true"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none"><path d="M3.5 12.5V4.5h8l9 9-8 8Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><circle cx="8" cy="9" r="1.3" fill="currentColor"/></svg></span><h3 class="font-semibold">Automatische Kategorisierung der Inhalte</h3></li>
-        <li class="feature-item flex items-center gap-4"><span class="grid h-11 w-11 place-items-center rounded-xl bg-wesolve-green-950 text-wesolve-accent-300 dark:bg-wesolve-green-800" aria-hidden="true"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="16" rx="2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="m3 16 5-5 4 4 3-3 6 6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3 class="font-semibold">Modernes Design im Stil der Marke</h3></li>
+      <ul class="case-features">
+        <li>
+          <span class="home-service-icon" aria-hidden="true"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none"><path d="M4 20h4L19 9l-4-4L4 16v4ZM13.5 6.5l4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <h3>Texte &amp; Bilder ohne Technikkenntnisse pflegen</h3>
+        </li>
+        <li>
+          <span class="home-service-icon" aria-hidden="true"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <h3>Neue Filialen ohne Programmierer anlegen</h3>
+        </li>
+        <li>
+          <span class="home-service-icon" aria-hidden="true"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none"><rect x="5" y="10.5" width="14" height="10" rx="2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <h3>Geschützter Franchise-Bereich für Mitglieder</h3>
+        </li>
+        <li>
+          <span class="home-service-icon" aria-hidden="true"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none"><path d="M12 15V4m-4 4 4-4 4 4M5 15v4h14v-4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <h3>Alle Dateitypen hochladbar</h3>
+        </li>
+        <li>
+          <span class="home-service-icon" aria-hidden="true"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none"><path d="M3.5 12.5V4.5h8l9 9-8 8Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><circle cx="8" cy="9" r="1.3" fill="currentColor"/></svg></span>
+          <h3>Automatische Kategorisierung der Inhalte</h3>
+        </li>
+        <li>
+          <span class="home-service-icon" aria-hidden="true"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="16" rx="2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="m3 16 5-5 4 4 3-3 6 6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <h3>Modernes Design im Stil der Marke</h3>
+        </li>
       </ul>
     </div>
   </section>
 
-  <!-- Weiterblättern -->
-  <section class="px-4 py-16 sm:px-6" aria-label="Nächste Referenz">
-    <a href="/referenzen/lubu-restaurant" class="next-case group mx-auto flex max-w-screen-xl flex-col gap-2 border-y border-wesolve-green-200 py-10 dark:border-wesolve-green-800 sm:flex-row sm:items-center sm:justify-between">
-      <span><span class="block text-sm text-wesolve-green-600 dark:text-wesolve-green-300">Nächste Referenz</span><span class="mt-1 block text-3xl font-semibold tracking-[-0.03em] lg:text-4xl">LU-BU Asian Food</span></span>
-      <span class="grid h-14 w-14 place-items-center rounded-full bg-wesolve-green-950 text-wesolve-accent-300 transition-transform duration-300 group-hover:translate-x-2 dark:bg-wesolve-green-800" aria-hidden="true"><svg class="h-5 w-5" viewBox="0 0 20 20" fill="none"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-    </a>
+  <section class="case-section px-4 sm:px-6" aria-label="Kundenstimme">
+    <figure class="case-testimonial mx-auto max-w-screen-xl">
+      <blockquote>„Die Erstellung meiner Webseite war ein absoluter Erfolg! Das Team lieferte nicht nur ein ansprechendes Design, sondern ermöglichte mir auch mühelose Selbstpflege. Perfekte Lösung für mein Business!“</blockquote>
+      <figcaption><strong>Roni Burcak</strong><span>Geschäftsführer Alfafood GmbH</span></figcaption>
+    </figure>
   </section>
 
-  <section class="border-y border-wesolve-green-200 bg-wesolve-green-100 px-4 py-20 dark:border-wesolve-green-800 dark:bg-wesolve-green-900 sm:px-6 lg:py-24" aria-labelledby="contact-title">
-    <div class="mx-auto flex max-w-screen-xl flex-col gap-10 lg:flex-row lg:items-end lg:justify-between"><div><h2 id="contact-title" class="section-title mt-0 max-w-3xl">Dein Projekt könnte das nächste sein</h2><p class="mt-5 max-w-2xl text-lg leading-relaxed text-wesolve-green-700 dark:text-wesolve-green-200">Erzähl uns von deiner Idee – wir sagen dir ehrlich, was möglich ist.</p></div><div class="flex flex-col gap-3 sm:flex-row lg:flex-col xl:flex-row"><a data-umami-event="cta-erstgespraech" href="/kontakt" class="btn-primary">Erstgespräch vereinbaren <svg class="h-4 w-4" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="/referenzen" class="btn-secondary">Alle Referenzen</a></div></div>
+  <section class="case-end px-4 sm:px-6" aria-label="Weiterführende Links">
+    <div class="mx-auto max-w-screen-xl">
+      <div class="home-work-contact home-dark">
+        <div>
+          <h2>Dein Projekt könnte das nächste sein.</h2>
+          <p>Erzähl uns von deiner Idee. Im kostenlosen Erstgespräch klären wir, was sich für dein Team verbessern lässt.</p>
+        </div>
+        <a href="/kontakt" class="btn-primary" data-umami-event="cta-erstgespraech">Projekt besprechen <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="case-end-links">
+        <a href="/referenzen" class="home-text-link"><span aria-hidden="true">←</span> Alle Referenzen</a>
+        <a href="/referenzen/lubu-restaurant" class="home-text-link">Nächste Referenz: LU-BU Asian Food <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
   </section>
 </main>
 <div id="footer-placeholder"></div>
-<script>
-  // Inhalte einmalig einblenden, sobald sie ins Bild scrollen
-  if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    document.documentElement.classList.add('js-reveal');
-    const io = new IntersectionObserver(entries => entries.forEach(e => {
-      if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); }
-    }), { threshold: 0.15, rootMargin: '0px 0px -8% 0px' });
-    document.querySelectorAll('[data-reveal]').forEach(el => io.observe(el));
-  }
-</script>
 </body>
 </html>
