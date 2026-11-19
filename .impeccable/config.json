@@ -36,6 +36,156 @@
         ],
         "createdAt": "2026-11-19T15:39:36.720Z",
         "reason": "Claude audit 2026-11-19: rendered check shows service cards, timeline and contact steps have visible 16px+ insets; detector misreads bordered rows"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "barlow condensed",
+        "createdAt": "2026-11-19T15:50:33.884Z",
+        "reason": "Claude audit 2026-11-19: tailwind.css base rule, overridden; computed h1 font is Onest on every page"
+      },
+      {
+        "rule": "cream-palette",
+        "value": "*",
+        "files": [
+          "thank-you.html"
+        ],
+        "createdAt": "2026-11-19T15:50:33.899Z",
+        "reason": "Claude audit 2026-11-19: shared home.css; paper bg and hero glow are DESIGN.md tokens, marquee rule only applies to homepage logo strip (pausable)"
+      },
+      {
+        "rule": "marquee",
+        "value": "*",
+        "files": [
+          "thank-you.html"
+        ],
+        "createdAt": "2026-11-19T15:50:33.912Z",
+        "reason": "Claude audit 2026-11-19: shared home.css; paper bg and hero glow are DESIGN.md tokens, marquee rule only applies to homepage logo strip (pausable)"
+      },
+      {
+        "rule": "dark-glow",
+        "value": "*",
+        "files": [
+          "thank-you.html"
+        ],
+        "createdAt": "2026-11-19T15:50:33.925Z",
+        "reason": "Claude audit 2026-11-19: shared home.css; paper bg and hero glow are DESIGN.md tokens, marquee rule only applies to homepage logo strip (pausable)"
+      },
+      {
+        "rule": "radial-halo",
+        "value": "*",
+        "files": [
+          "thank-you.html"
+        ],
+        "createdAt": "2026-11-19T15:50:33.938Z",
+        "reason": "Claude audit 2026-11-19: shared home.css; paper bg and hero glow are DESIGN.md tokens, marquee rule only applies to homepage logo strip (pausable)"
+      },
+      {
+        "rule": "cream-palette",
+        "value": "*",
+        "files": [
+          "404.html"
+        ],
+        "createdAt": "2026-11-19T15:50:33.952Z",
+        "reason": "Claude audit 2026-11-19: shared home.css; paper bg and hero glow are DESIGN.md tokens, marquee rule only applies to homepage logo strip (pausable)"
+      },
+      {
+        "rule": "marquee",
+        "value": "*",
+        "files": [
+          "404.html"
+        ],
+        "createdAt": "2026-11-19T15:50:33.965Z",
+        "reason": "Claude audit 2026-11-19: shared home.css; paper bg and hero glow are DESIGN.md tokens, marquee rule only applies to homepage logo strip (pausable)"
+      },
+      {
+        "rule": "dark-glow",
+        "value": "*",
+        "files": [
+          "404.html"
+        ],
+        "createdAt": "2026-11-19T15:50:33.979Z",
+        "reason": "Claude audit 2026-11-19: shared home.css; paper bg and hero glow are DESIGN.md tokens, marquee rule only applies to homepage logo strip (pausable)"
+      },
+      {
+        "rule": "radial-halo",
+        "value": "*",
+        "files": [
+          "404.html"
+        ],
+        "createdAt": "2026-11-19T15:50:33.992Z",
+        "reason": "Claude audit 2026-11-19: shared home.css; paper bg and hero glow are DESIGN.md tokens, marquee rule only applies to homepage logo strip (pausable)"
+      },
+      {
+        "rule": "cream-palette",
+        "value": "*",
+        "files": [
+          "datenschutz.html"
+        ],
+        "createdAt": "2026-11-19T15:50:34.004Z",
+        "reason": "Claude audit 2026-11-19: shared home.css; paper bg and hero glow are DESIGN.md tokens, marquee rule only applies to homepage logo strip (pausable)"
+      },
+      {
+        "rule": "marquee",
+        "value": "*",
+        "files": [
+          "datenschutz.html"
+        ],
+        "createdAt": "2026-11-19T15:50:34.017Z",
+        "reason": "Claude audit 2026-11-19: shared home.css; paper bg and hero glow are DESIGN.md tokens, marquee rule only applies to homepage logo strip (pausable)"
+      },
+      {
+        "rule": "dark-glow",
+        "value": "*",
+        "files": [
+          "datenschutz.html"
+        ],
+        "createdAt": "2026-11-19T15:50:34.030Z",
+        "reason": "Claude audit 2026-11-19: shared home.css; paper bg and hero glow are DESIGN.md tokens, marquee rule only applies to homepage logo strip (pausable)"
+      },
+      {
+        "rule": "radial-halo",
+        "value": "*",
+        "files": [
+          "datenschutz.html"
+        ],
+        "createdAt": "2026-11-19T15:50:34.042Z",
+        "reason": "Claude audit 2026-11-19: shared home.css; paper bg and hero glow are DESIGN.md tokens, marquee rule only applies to homepage logo strip (pausable)"
+      },
+      {
+        "rule": "cream-palette",
+        "value": "*",
+        "files": [
+          "impressum.html"
+        ],
+        "createdAt": "2026-11-19T15:50:34.055Z",
+        "reason": "Claude audit 2026-11-19: shared home.css; paper bg and hero glow are DESIGN.md tokens, marquee rule only applies to homepage logo strip (pausable)"
+      },
+      {
+        "rule": "marquee",
+        "value": "*",
+        "files": [
+          "impressum.html"
+        ],
+        "createdAt": "2026-11-19T15:50:34.068Z",
+        "reason": "Claude audit 2026-11-19: shared home.css; paper bg and hero glow are DESIGN.md tokens, marquee rule only applies to homepage logo strip (pausable)"
+      },
+      {
+        "rule": "dark-glow",
+        "value": "*",
+        "files": [
+          "impressum.html"
+        ],
+        "createdAt": "2026-11-19T15:50:34.081Z",
+        "reason": "Claude audit 2026-11-19: shared home.css; paper bg and hero glow are DESIGN.md tokens, marquee rule only applies to homepage logo strip (pausable)"
+      },
+      {
+        "rule": "radial-halo",
+        "value": "*",
+        "files": [
+          "impressum.html"
+        ],
+        "createdAt": "2026-11-19T15:50:34.094Z",
+        "reason": "Claude audit 2026-11-19: shared home.css; paper bg and hero glow are DESIGN.md tokens, marquee rule only applies to homepage logo strip (pausable)"
       }
     ]
   }
