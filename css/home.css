@@ -14,6 +14,11 @@
   --ink-hover: #364569;
   --coral-soft: #ff9f8d;
   --coral-soft-hover: #ffc0aa;
+  --night-glow: #382d48;
+  --node-text: #ffbf9a;
+  --panel-glow: #45537b;
+  --panel-line: #465472;
+  --panel-line-strong: #5c698a;
   background: var(--paper);
   color: var(--heading);
 }
@@ -53,17 +58,14 @@
   text-align: center;
 }
 
+/* Codewinkel frei über der Überschrift, ohne Kachel */
 .home-hero-mark {
   display: grid;
-  width: 3.75rem;
-  height: 3.75rem;
-  margin: 0 auto 1.5rem;
+  margin: 0 auto 1.25rem;
   place-items: center;
-  border: 1px solid var(--line);
-  border-radius: 1.125rem;
-  background: var(--surface);
-  box-shadow: 0 8px 24px #242f4d12;
 }
+
+.home-hero-mark img { width: clamp(3.25rem, 6vw, 4.5rem); height: auto; }
 
 .home-hero h1 {
   margin-inline: auto;
@@ -363,6 +365,28 @@
   filter: brightness(0) invert(1);
 }
 
+.home-client-logo-chocolate { min-width: 0; }
+.home-client-logo-chocolate-wordmark { display: none; }
+
+.dark .home-client-logo-chocolate {
+  display: grid;
+  place-items: center;
+}
+
+.dark .home-client-logo-chocolate img {
+  grid-area: 1 / 1;
+  max-height: 2.25rem;
+  clip-path: inset(0 0 24% 0);
+  filter: brightness(1.65) saturate(.85);
+}
+
+/* Das Original hat zwischen Bildmarke und Schriftzug einen transparenten Streifen. */
+.dark .home-client-logo-chocolate .home-client-logo-chocolate-wordmark {
+  display: block;
+  clip-path: inset(76% 0 0 0);
+  filter: brightness(0) invert(.93) sepia(.22);
+}
+
 .home-muted { color: var(--muted); }
 .home-accent-border { border-color: var(--coral); }
 
@@ -382,15 +406,7 @@
   text-wrap: balance;
 }
 
-.home-services-intro p {
-  max-width: 36ch;
-  margin-top: 1.125rem;
-  color: var(--muted);
-  font-size: 1.0625rem;
-  line-height: 1.65;
-}
-
-.home-services-contact { margin-top: 1.375rem; }
+.home-services-all { margin-top: 1.125rem; }
 
 .home-service-list {
   display: grid;
@@ -404,6 +420,14 @@
   border: 1px solid var(--line);
   border-radius: 1rem;
   background: var(--surface);
+}
+
+.home-situation {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: start;
+  gap: var(--service-gap);
+  padding: var(--service-padding);
 }
 
 .home-service-item[open] {
@@ -612,7 +636,7 @@
   margin-top: clamp(1.5rem, 4vw, 3rem);
   padding: clamp(1.25rem, 4vw, 3rem);
   border-radius: 1.125rem;
-  background-image: radial-gradient(ellipse at right top, #382d48, transparent 70%);
+  background-image: radial-gradient(ellipse at right top, var(--night-glow), transparent 70%);
 }
 
 .home-work-contact :is(h2, h3) {
@@ -631,6 +655,7 @@
 
 @media (min-width: 740px) {
   .home-projects { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .home-page .home-projects { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 
   .home-project-featured {
     display: grid;
@@ -657,7 +682,7 @@
 .brand-page .timeline-node {
   border-color: var(--orange);
   background: var(--night);
-  color: #ffbf9a;
+  color: var(--node-text);
 }
 
 .js-reveal .brand-page .timeline.is-visible .timeline-node {
@@ -679,7 +704,7 @@
 
 /* Rezension: ein Zitat, groß gesetzt, mit Absender aus dem Projekt */
 .home-review { padding-block: clamp(4rem, 9vw, 7.5rem); }
-.home-review-title { color: var(--muted); font-size: 1rem; font-weight: 650; }
+.home-review-title { color: var(--heading); font-size: clamp(1.375rem, 2.4vw, 1.75rem); font-weight: 700; letter-spacing: -.025em; }
 .home-review-figure { position: relative; max-width: 58rem; margin-top: 1.75rem; }
 .home-review-mark { width: clamp(2.75rem, 5vw, 4rem); height: auto; fill: var(--coral); }
 .home-review-figure blockquote {
@@ -1019,7 +1044,7 @@
   place-items: start center;
   overflow: hidden;
   padding: 1.25rem 1.25rem 0;
-  background: radial-gradient(ellipse at top, #45537b, var(--night));
+  background: radial-gradient(ellipse at top, var(--panel-glow), var(--night));
 }
 
 .references-media-app .device-tablet { width: min(100%, 32rem); align-self: center; }
@@ -1076,9 +1101,9 @@
 
 .case-tablet {
   padding: clamp(1rem, 3vw, 2rem);
-  border: 1px solid #465472;
+  border: 1px solid var(--panel-line);
   border-radius: 1.25rem;
-  background: radial-gradient(ellipse at top, #45537b, var(--night));
+  background: radial-gradient(ellipse at top, var(--panel-glow), var(--night));
 }
 
 .case-tablet .device-tablet { margin-inline: auto; }
@@ -1409,16 +1434,70 @@
 
 .contact-actions-row .btn-primary { white-space: normal; }
 
+.quickcheck-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+.quickcheck-page > #footer-placeholder { margin-top: auto; }
+
+.quickcheck-panel {
+  padding: clamp(1rem, 3.5vw, 2rem);
+  border: 1px solid var(--line);
+  border-radius: 1.125rem;
+  background: var(--surface);
+}
+
+.quickcheck-panel > * + * { margin-top: 1rem; }
+.quickcheck-panel .btn-primary { white-space: normal; }
+
+.quickcheck-fields,
+.quickcheck-results {
+  display: grid;
+  gap: 1rem;
+}
+
+.quickcheck-results { margin-top: 1.5rem; }
+.quickcheck-result { scroll-margin-top: 6rem; }
+
+.quickcheck-stats {
+  display: grid;
+  gap: .75rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.quickcheck-stats > div {
+  padding-block: .75rem;
+  border-block-start: 1px solid var(--line);
+}
+
+.quickcheck-stats dd {
+  margin-top: .25rem;
+  color: var(--accent-text);
+  font-size: clamp(1.25rem, 2.5vw, 2rem);
+  font-weight: 750;
+}
+
+@media (min-width: 520px) {
+  .quickcheck-fields { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (min-width: 768px) {
+  .quickcheck-results { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
 .case-browser {
   padding: clamp(.875rem, 3vw, 1.75rem);
-  border: 1px solid #465472;
+  border: 1px solid var(--panel-line);
   border-radius: 1.25rem;
-  background: radial-gradient(ellipse at top, #45537b, var(--night));
+  background: radial-gradient(ellipse at top, var(--panel-glow), var(--night));
 }
 
 .case-browser-frame {
   overflow: hidden;
-  border: 1px solid #5c698a;
+  border: 1px solid var(--panel-line-strong);
   border-radius: .75rem;
   background: var(--ink);
 }
@@ -1442,6 +1521,7 @@
 .case-browser figcaption { margin-top: .75rem; color: #e2e6f0; font-size: .8125rem; }
 
 .service-detail-benefit { border-color: var(--line); }
+.search-service-section { scroll-margin-top: 6rem; }
 .home-dark .service-detail-accent { color: var(--orange); }
 .service-detail-icon { width: 2.75rem; }
 .service-detail-included .service-detail-included-item { display: block; }

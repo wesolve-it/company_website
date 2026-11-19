@@ -10,11 +10,11 @@ web
 Owners and decision-makers of small and mid-sized businesses of any sector, mainly in the Nuremberg / Franconia region (agency based in Schnaittach). Typically no in-house IT. They arrive with a concrete pain (outdated or missing website, not found on Google, processes eaten up by paperwork and Excel, wish to reach repeat customers by app) and want to know whether a digital solution is worth it and what it would take. Non-technical; copy addresses them with "du".
 
 ## Product Purpose
-Marketing site for wesolve-IT, a small digital agency building websites and shops, mobile apps, custom software and SEO. The site exists to turn a visitor's problem into first contact. Success is any contact: a call, WhatsApp message, contact form, free initial call (Erstgespräch) or Quick-Check request. All channels count equally.
+Marketing site for wesolve-IT, a small digital agency building websites and shops, mobile apps, custom software and SEO. The site exists to turn a visitor's problem into first contact. Success is any contact: a call, WhatsApp message, contact form, free initial call (Erstgespräch) or follow-up after using the Quick-Check. All channels count equally.
 
 ## Positioning
 - **Direct contact:** clients talk to the people who conceive and build the project (Michael Reinert), not account managers.
-- **Honest advice:** wesolve-IT says plainly what is worth doing and what is not; the free Quick-Check gives an honest assessment of effort, tech and approach within 48 hours.
+- **Honest advice:** wesolve-IT says plainly what is worth doing and what is not; the free Quick-Check calculates the current time spent on a recurring task and suggests a first digital step.
 - **Ongoing support:** stays reachable after launch; solutions are built so clients can maintain content themselves.
 
 ## Operating Context
@@ -33,6 +33,7 @@ Visitors evaluate from a phone or desktop, often comparing local agencies. The s
 ## Evidence on Hand
 - Nine real case studies in `referenzen/`: 1. FC Nürnberg (Business Seating tablet app), Alfafood, LU-BU Asian Food (#1 Google for "Sushi Catering Nürnberg"), Sport-Weber Verleih and Bikeservice, ROOTD., ROOTED Merch, dieschokoecke, Tobias Herrmann (ManifeSTATE app).
 - One testimonial: Henrik Brüggen, Vermarktung und Marketing, 1. FC Nürnberg.
+- Track record (confirmed by owner, 2026-11-19): 7+ years experience, 10+ clients, 15+ projects.
 - Phone 0152 02721146; WhatsApp contact.
 - Do not fabricate further testimonials, client logos, metrics, team size or prices.
 

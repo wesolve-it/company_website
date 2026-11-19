@@ -27,6 +27,15 @@
         ],
         "createdAt": "2026-10-26T12:30:18.508Z",
         "reason": "Agent: monospace only on literal cookie names inside <code>"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-11-19T15:39:36.720Z",
+        "reason": "Claude audit 2026-11-19: rendered check shows service cards, timeline and contact steps have visible 16px+ insets; detector misreads bordered rows"
       }
     ]
   }
