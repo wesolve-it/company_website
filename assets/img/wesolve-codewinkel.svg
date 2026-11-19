@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="54 18 43 43" width="215" height="215"><defs><linearGradient id="accent-tinte-koralle" x1="0%" y1="100%" x2="65%" y2="0%"><stop offset="0" stop-color="#F15256" /><stop offset="1" stop-color="#FF9B58" /></linearGradient></defs>
+    <g transform="matrix(1,0,0,1,93.7157,42.1907)">
+                <path d="M0,-5.04C1.38,-3.65 1.38,-1.41 0,-0.03L-8.94,8.9L-12.19,5.64L-4.55,-2C-4.25,-2.3 -4.24,-2.79 -4.54,-3.1L-12.14,-10.7L-8.89,-13.94L0,-5.04Z" style="fill:url(#accent-tinte-koralle);fill-rule:nonzero;" />
+            </g>
+            <g transform="matrix(1,0,0,1,60.9258,39.3107)">
+                <path d="M0,0.75L15.75,16.57L12.48,19.82L-4.12,3.16C-4.12,3.16 -4.13,3.15 -4.14,3.14C-5.69,1.56 -5.67,-0.98 -4.09,-2.53L12.48,-19.07L15.75,-15.95L-0.01,-0.22C-0.27,0.05 -0.27,0.48 -0.01,0.75L0,0.75Z" style="fill:#3D54B3;fill-rule:nonzero;" />
+            </g>
+        </svg>

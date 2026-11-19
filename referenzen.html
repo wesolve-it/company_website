@@ -20,146 +20,141 @@
   <meta name="description" content="Echte Projekte statt Versprechen: Webseiten, Apps und Individual-Software für kleine Unternehmen – vom Familienbetrieb bis zum 1. FC Nürnberg.">
   <link rel="preload" href="/assets/fonts/onest-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link href="./dist/styles.css" rel="stylesheet">
+  <link href="./css/home.css" rel="stylesheet">
   <script src="/js/theme.js"></script>
-  <link rel="icon" type="image/x-icon" href="./assets/img/Wesolveit_loigo.svg" />
+  <link rel="icon" type="image/svg+xml" href="./assets/img/wesolve-codewinkel.svg" />
   <script defer src="/js/vendor/alpine-3.14.8.min.js"></script>
   <script src="/js/navigation.js" defer></script>
 </head>
-<body data-hero="dark" class="overflow-x-hidden bg-white font-text text-wesolve-green-950 antialiased dark:bg-wesolve-green-950 dark:text-wesolve-green-50">
-<main x-data="{ filter: 'alle', show(t) { return this.filter === 'alle' || t.includes(this.filter) } }">
-  <!-- Kopf: Aussage links, Belege direkt darunter statt am Seitenende -->
-  <section class="hero-panel relative overflow-hidden bg-wesolve-green-950 px-4 pb-12 pt-28 text-white sm:px-6 lg:pb-16 lg:pt-40" aria-labelledby="ref-title">
-    <div class="mx-auto max-w-screen-xl">
-      <div class="grid gap-8 lg:grid-cols-12 lg:items-end">
-        <div class="lg:col-span-7">
-          <h1 id="ref-title" style="--d:1" class="hero-in font-text text-[clamp(2.5rem,5.6vw,4.75rem)] font-bold leading-[1] tracking-[-0.04em]">Vom Familienbetrieb bis zum Bundesliga-Verein.</h1>
-        </div>
-        <p style="--d:2" class="hero-in max-w-xl text-lg leading-relaxed text-wesolve-green-100 lg:col-span-5 lg:pb-2">Webseiten, Apps und Software, die im Alltag echter Betriebe funktionieren. Schau dir an, was wir umgesetzt haben.</p>
-      </div>
-      <dl style="--d:3" class="hero-in mt-14 grid gap-8 border-t border-white/10 pt-8 sm:grid-cols-3">
-        <div><dt class="sr-only">Google-Ranking</dt><dd class="text-3xl font-bold tracking-[-0.04em] text-wesolve-accent-300 lg:text-4xl">Platz 1</dd><dd class="mt-2 text-wesolve-green-200">bei Google für das Sushi-Catering von LU-BU</dd></div>
-        <div><dt class="sr-only">Größter Kunde</dt><dd class="text-3xl font-bold tracking-[-0.04em] text-wesolve-accent-300 lg:text-4xl">Bundesliga</dd><dd class="mt-2 text-wesolve-green-200">der 1. FC Nürnberg setzt am Spieltag auf unsere App</dd></div>
-        <div><dt class="sr-only">Projekte</dt><dd class="text-3xl font-bold tracking-[-0.04em] text-wesolve-accent-300 lg:text-4xl">9 Projekte</dd><dd class="mt-2 text-wesolve-green-200">aus Web, App, SEO und Individualsoftware</dd></div>
-      </dl>
+<body class="brand-page references-page overflow-x-hidden font-text antialiased">
+<main x-data="{ filter: 'alle', show(types) { return this.filter === 'alle' || types.includes(this.filter) } }">
+  <section class="references-hero px-4 sm:px-6" aria-labelledby="ref-title">
+    <div class="home-orbits" aria-hidden="true">
+      <div class="home-orbit home-orbit-inner"><span class="home-orbit-dot"></span></div>
+      <div class="home-orbit home-orbit-middle"></div>
+      <div class="home-orbit home-orbit-outer"><span class="home-orbit-dot"></span></div>
+    </div>
+    <div class="references-hero-content mx-auto max-w-screen-xl">
+      <h1 id="ref-title">Digitale Projekte, die <span>im Alltag wirken.</span></h1>
+      <p>Vom Familienbetrieb bis zum Profifußball. Entdecke, wie wir mit Webentwicklung, Apps und Individualsoftware konkrete Aufgaben gelöst haben.</p>
     </div>
   </section>
 
-  <!-- Filter bleibt beim Scrollen erreichbar -->
-  <div class="sticky top-[60px] z-30 border-b border-wesolve-green-100 bg-white/90 px-4 backdrop-blur-md dark:border-wesolve-green-800 dark:bg-wesolve-green-950/90 sm:px-6">
-    <div class="mx-auto flex max-w-screen-xl gap-1 overflow-x-auto py-3" role="group" aria-label="Projekte filtern">
-        <button type="button" @click="filter = 'alle'" :aria-pressed="(filter === 'alle').toString()" :class="filter === 'alle' ? 'bg-wesolve-green-950 text-white dark:bg-wesolve-accent-400 dark:text-wesolve-green-950' : 'text-wesolve-green-800 hover:bg-wesolve-green-100 dark:text-wesolve-green-100 dark:hover:bg-wesolve-green-800'" class="filter-pill">Alle <span class="ml-1 opacity-60">9</span></button>
-        <button type="button" @click="filter = 'web'" :aria-pressed="(filter === 'web').toString()" :class="filter === 'web' ? 'bg-wesolve-green-950 text-white dark:bg-wesolve-accent-400 dark:text-wesolve-green-950' : 'text-wesolve-green-800 hover:bg-wesolve-green-100 dark:text-wesolve-green-100 dark:hover:bg-wesolve-green-800'" class="filter-pill">Webseiten <span class="ml-1 opacity-60">6</span></button>
-        <button type="button" @click="filter = 'app'" :aria-pressed="(filter === 'app').toString()" :class="filter === 'app' ? 'bg-wesolve-green-950 text-white dark:bg-wesolve-accent-400 dark:text-wesolve-green-950' : 'text-wesolve-green-800 hover:bg-wesolve-green-100 dark:text-wesolve-green-100 dark:hover:bg-wesolve-green-800'" class="filter-pill">Apps <span class="ml-1 opacity-60">2</span></button>
-        <button type="button" @click="filter = 'seo'" :aria-pressed="(filter === 'seo').toString()" :class="filter === 'seo' ? 'bg-wesolve-green-950 text-white dark:bg-wesolve-accent-400 dark:text-wesolve-green-950' : 'text-wesolve-green-800 hover:bg-wesolve-green-100 dark:text-wesolve-green-100 dark:hover:bg-wesolve-green-800'" class="filter-pill">SEO <span class="ml-1 opacity-60">1</span></button>
-        <button type="button" @click="filter = 'software'" :aria-pressed="(filter === 'software').toString()" :class="filter === 'software' ? 'bg-wesolve-green-950 text-white dark:bg-wesolve-accent-400 dark:text-wesolve-green-950' : 'text-wesolve-green-800 hover:bg-wesolve-green-100 dark:text-wesolve-green-100 dark:hover:bg-wesolve-green-800'" class="filter-pill">Software <span class="ml-1 opacity-60">3</span></button>
-    </div>
-  </div>
-
-  <section class="px-4 py-16 sm:px-6 lg:py-24" aria-label="Projekte">
+  <section class="home-work references-projects px-4 sm:px-6" aria-label="Projekte">
     <div class="mx-auto max-w-screen-xl">
-      <!-- Flaggschiff: groß und zuerst -->
-      <a href="/referenzen/fc-nuernberg" x-show="show(['app', 'software'])" x-transition.opacity.duration.300ms data-reveal class="ref-feature group">
-        <div class="hero-panel flex items-center justify-center overflow-hidden bg-wesolve-green-950 p-8 sm:p-12 lg:col-span-7 lg:p-14"><div class="device-tablet ref-shot w-full max-w-2xl"><img width="1468" height="960" src="./assets/img/Bildschirmfoto-2024-05-27-um-15.40.45.webp" alt="Business Seating App des 1. FC Nürnberg auf einem Tablet" class="device-screen"></div></div>
-        <div class="flex flex-col justify-center p-7 sm:p-10 lg:col-span-5 lg:p-12">
-          <div class="flex flex-wrap gap-2"><span class="tag">App</span><span class="tag">Software</span></div>
-          <h2 class="mt-5 text-3xl font-semibold tracking-[-0.03em] xl:text-5xl">1. FC Nürnberg</h2>
-          <p class="mt-4 leading-relaxed text-wesolve-green-700 dark:text-wesolve-green-200">Business Seating App für den VIP-Bereich: Platzvergabe, Zutrittsberechtigungen und kurzfristige Änderungen – direkt auf dem Tablet, an jedem Heimspieltag im Einsatz.</p>
-          <blockquote class="mt-8 border-l-2 border-wesolve-accent-400 pl-5 text-wesolve-green-900 dark:text-wesolve-green-100">„Durch die Zusammenarbeit sparen wir uns viel Zeit und die Arbeit wird deutlich einfacher.“<footer class="mt-2 text-sm text-wesolve-green-600 dark:text-wesolve-green-300">Henrik Brüggen, Vermarktung und Marketing</footer></blockquote>
-          <span class="ref-more mt-8 inline-flex items-center gap-2 font-semibold text-wesolve-green-800 dark:text-wesolve-green-100">Projekt ansehen <svg class="h-4 w-4" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      <div class="references-filters" role="group" aria-label="Projekte filtern">
+        <button type="button" @click="filter = 'alle'" aria-pressed="true" :aria-pressed="(filter === 'alle').toString()">Alle <span>9</span></button>
+        <button type="button" @click="filter = 'web'" aria-pressed="false" :aria-pressed="(filter === 'web').toString()">Webseiten <span>6</span></button>
+        <button type="button" @click="filter = 'app'" aria-pressed="false" :aria-pressed="(filter === 'app').toString()">Apps <span>2</span></button>
+        <button type="button" @click="filter = 'seo'" aria-pressed="false" :aria-pressed="(filter === 'seo').toString()">SEO <span>1</span></button>
+        <button type="button" @click="filter = 'software'" aria-pressed="false" :aria-pressed="(filter === 'software').toString()">Software <span>3</span></button>
+      </div>
+      <div class="home-projects">
+        <article class="home-project home-project-featured" x-show="show(['app', 'software'])">
+          <div class="home-project-image references-media-app"><div class="device-tablet"><img width="1468" height="960" src="./assets/img/Bildschirmfoto-2024-05-27-um-15.40.45.webp" alt="Business Seating App des 1. FC Nürnberg auf einem Tablet"></div></div>
+          <div class="home-project-content">
+            <div class="references-tags"><span>App</span><span>Software</span></div>
+            <h2>1. FC Nürnberg</h2>
+            <p class="home-project-result">Minuten statt Stunden</p>
+            <p class="home-project-description">Die Business-Seating-App bündelt Platzvergabe und Zutritt auf dem Tablet. Laut Fallstudie lassen sich Probleme am Spieltag in Minuten statt Stunden lösen.</p>
+            <blockquote class="references-quote">„Durch die Zusammenarbeit sparen wir uns viel Zeit und die Arbeit wird deutlich einfacher.“ <cite>Henrik Brüggen, 1. FC Nürnberg</cite></blockquote>
+            <a href="/referenzen/fc-nuernberg" class="home-project-link" aria-label="Fallstudie zu 1. FC Nürnberg lesen">Fallstudie lesen <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+        <article class="home-project" x-show="show(['web'])">
+          <div class="home-project-image"><img width="1600" height="771" src="./assets/img/exampleImage.webp" alt="Webseite von Alfafood" loading="lazy"></div>
+          <div class="home-project-content">
+            <div class="references-tags"><span>Website</span></div>
+            <h2>Alfafood</h2>
+            <p class="home-project-result">Filialen selbst verwalten</p>
+            <p class="home-project-description">Webseite mit Selbstpflege und geschütztem Franchise-Bereich: Inhalte, Bilder und ganze Filialen verwaltet das Team komplett selbst.</p>
+            <a href="/referenzen/alfafood" class="home-project-link" aria-label="Fallstudie zu Alfafood lesen">Fallstudie lesen <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+        <article class="home-project" x-show="show(['web', 'seo'])">
+          <div class="home-project-image"><img width="1600" height="913" src="./assets/img/Bildschirmfoto-2024-04-30-um-14.56.41.webp" alt="Webseite von LU-BU Asian Food" loading="lazy"></div>
+          <div class="home-project-content">
+            <div class="references-tags"><span>Website</span><span>SEO</span></div>
+            <h2>LU-BU Asian Food</h2>
+            <p class="home-project-result">Platz 1 bei Google</p>
+            <p class="home-project-description">Catering-Landingpage mit laufender SEO-Betreuung. Laut Fallstudie erreichte sie Platz 1 der unbezahlten Google-Ergebnisse für „Sushi Catering Nürnberg“.</p>
+            <a href="/referenzen/lubu-restaurant" class="home-project-link" aria-label="Fallstudie zu LU-BU Asian Food lesen">Fallstudie lesen <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+        <article class="home-project" x-show="show(['software'])">
+          <div class="home-project-image"><img width="1440" height="900" src="./assets/img/referenz-sportweber-verleih-2026.webp" alt="Verleihsoftware von Sport-Weber Schnaittach" loading="lazy"></div>
+          <div class="home-project-content">
+            <div class="references-tags"><span>Software</span></div>
+            <h2>Sport-Weber Verleih</h2>
+            <p class="home-project-result">Automatische Rechnungen</p>
+            <p class="home-project-description">Online-Verleihsystem mit Warenkorb und Admin-Bereich – inklusive automatischer Rechnungserstellung bei jeder Buchung.</p>
+            <a href="/referenzen/sportweber-schnaittach" class="home-project-link" aria-label="Fallstudie zu Sport-Weber Verleih lesen">Fallstudie lesen <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+        <article class="home-project" x-show="show(['web', 'software'])">
+          <div class="home-project-image"><img width="1440" height="1000" src="./assets/img/referenz-sportweber-bikeservice.webp" alt="Bikeservice-Plattform von Sport-Weber Schnaittach" loading="lazy"></div>
+          <div class="home-project-content">
+            <div class="references-tags"><span>Website</span><span>Software</span></div>
+            <h2>Sport-Weber Bikeservice</h2>
+            <p class="home-project-result">24/7 buchbar</p>
+            <p class="home-project-description">Service-Plattform für die Fahrradwerkstatt mit Online-Terminbuchung, Service-Paketen und FAQ.</p>
+            <a href="/referenzen/sportweber-bikeservice" class="home-project-link" aria-label="Fallstudie zu Sport-Weber Bikeservice lesen">Fallstudie lesen <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+        <article class="home-project" x-show="show(['web'])">
+          <div class="home-project-image"><img width="1440" height="900" src="./assets/img/referenz-rootd-2026.webp" alt="Online-Shop von ROOTD." loading="lazy"></div>
+          <div class="home-project-content">
+            <div class="references-tags"><span>Website</span></div>
+            <h2>ROOTD.</h2>
+            <p class="home-project-result">Eigener Vertriebskanal</p>
+            <p class="home-project-description">Online-Shop für das nachhaltige Streetwear-Label aus Schnaittach – mit Produktkatalog, Warenkorb und Klarna-Rechnungskauf.</p>
+            <a href="/referenzen/rootd" class="home-project-link" aria-label="Fallstudie zu ROOTD. lesen">Fallstudie lesen <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+        <article class="home-project" x-show="show(['app'])">
+          <div class="home-project-image references-media-app"><div class="phone-pair" role="img" aria-label="ManifeSTATE-App: Startbildschirm und Historie"><div class="device-phone"><div class="device-phone-screen"><img width="600" height="1300" src="./assets/img/referenz-manifestate-start.webp" alt="" loading="lazy"></div></div><div class="device-phone phone-pair-offset"><div class="device-phone-screen"><img width="600" height="1300" src="./assets/img/referenz-manifestate-historie.webp" alt="" loading="lazy"></div></div></div></div>
+          <div class="home-project-content">
+            <div class="references-tags"><span>App</span></div>
+            <h2>Tobias Herrmann</h2>
+            <p class="home-project-result">30-Tage-Challenges</p>
+            <p class="home-project-description">ManifeSTATE: App für iOS und Android mit 30-Tage-Challenges, Punktesystem und Notizen für die tägliche Begleitung.</p>
+            <a href="/referenzen/tobias-herrmann" class="home-project-link" aria-label="Fallstudie zu Tobias Herrmann lesen">Fallstudie lesen <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+        <article class="home-project" x-show="show(['web'])">
+          <div class="home-project-image"><img width="1440" height="900" src="./assets/img/referenz-dieschokoecke-2026.webp" alt="Webseite von dieschokoecke" loading="lazy"></div>
+          <div class="home-project-content">
+            <div class="references-tags"><span>Website</span></div>
+            <h2>dieschokoecke</h2>
+            <p class="home-project-result">Sortiment selbst pflegen</p>
+            <p class="home-project-description">Webseite mit Selbstverwaltung für die Pralinen-Manufaktur: Sortiment, Texte und FAQ bleiben ohne Technikwissen aktuell.</p>
+            <a href="/referenzen/dieschokoecke" class="home-project-link" aria-label="Fallstudie zu dieschokoecke lesen">Fallstudie lesen <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+        <article class="home-project" x-show="show(['web'])">
+          <div class="home-project-image"><img width="1440" height="900" src="./assets/img/referenz-rooted-merch-2026.webp" alt="B2B-Webseite von ROOTED Merch" loading="lazy"></div>
+          <div class="home-project-content">
+            <div class="references-tags"><span>Website</span></div>
+            <h2>ROOTED Merch</h2>
+            <p class="home-project-result">Direkter Weg zum Musterdesign</p>
+            <p class="home-project-description">B2B-Webseite für bedruckte Vereins- und Firmenkleidung – mit klarem Anfrageweg für Musterdesigns.</p>
+            <a href="/referenzen/rooted-merch" class="home-project-link" aria-label="Fallstudie zu ROOTED Merch lesen">Fallstudie lesen <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+      </div>
+      <div class="home-work-contact home-dark">
+        <div>
+          <h2>Dein Projekt könnte das nächste sein.</h2>
+          <p>Erzähl uns von deiner Idee. Im kostenlosen Erstgespräch schauen wir gemeinsam, welche Lösung zu deinem Vorhaben passt.</p>
         </div>
-      </a>
-
-      <div class="mt-6 grid gap-6 md:grid-cols-2">
-        <a href="/referenzen/alfafood" x-show="show(['web'])" x-transition.opacity.duration.300ms data-reveal class="ref-tile group">
-          <div class="hero-panel aspect-[16/10] overflow-hidden bg-wesolve-green-950 px-6 pt-6 sm:px-8 sm:pt-8"><div class="ref-shot flex h-full flex-col overflow-hidden rounded-t-xl bg-white shadow-[0_24px_60px_-30px_rgba(0,0,0,0.8)]"><div class="flex shrink-0 gap-1.5 border-b border-wesolve-green-100 px-3.5 py-2" aria-hidden="true"><span class="h-2 w-2 rounded-full bg-wesolve-green-200"></span><span class="h-2 w-2 rounded-full bg-wesolve-green-200"></span><span class="h-2 w-2 rounded-full bg-wesolve-green-200"></span></div><div class="min-h-0 flex-1 overflow-hidden"><img width="1600" height="771" src="./assets/img/exampleImage.webp" alt="Webseite von Alfafood" loading="lazy" class="h-full w-full object-cover object-top"></div></div></div>
-          <div class="flex flex-1 flex-col p-6 sm:p-8">
-            <div class="flex flex-wrap gap-2"><span class="tag">Website</span></div>
-            <h3 class="mt-4 text-2xl font-semibold tracking-[-0.025em]">Alfafood</h3>
-            <p class="mt-3 leading-relaxed text-wesolve-green-700 dark:text-wesolve-green-200">Webseite mit Selbstpflege und geschütztem Franchise-Bereich: Inhalte, Bilder und ganze Filialen verwaltet das Team komplett selbst.</p>
-            <span class="ref-more mt-auto inline-flex items-center gap-2 pt-6 font-semibold text-wesolve-green-800 dark:text-wesolve-green-100">Projekt ansehen <svg class="h-4 w-4" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-          </div>
-        </a>
-        <a href="/referenzen/lubu-restaurant" x-show="show(['web', 'seo'])" x-transition.opacity.duration.300ms data-reveal class="ref-tile group">
-          <div class="hero-panel aspect-[16/10] overflow-hidden bg-wesolve-green-950 px-6 pt-6 sm:px-8 sm:pt-8"><div class="ref-shot flex h-full flex-col overflow-hidden rounded-t-xl bg-white shadow-[0_24px_60px_-30px_rgba(0,0,0,0.8)]"><div class="flex shrink-0 gap-1.5 border-b border-wesolve-green-100 px-3.5 py-2" aria-hidden="true"><span class="h-2 w-2 rounded-full bg-wesolve-green-200"></span><span class="h-2 w-2 rounded-full bg-wesolve-green-200"></span><span class="h-2 w-2 rounded-full bg-wesolve-green-200"></span></div><div class="min-h-0 flex-1 overflow-hidden"><img width="1600" height="913" src="./assets/img/Bildschirmfoto-2024-04-30-um-14.56.41.webp" alt="Webseite von LU-BU Asian Food" loading="lazy" class="h-full w-full object-cover object-top"></div></div></div>
-          <div class="flex flex-1 flex-col p-6 sm:p-8">
-            <div class="flex flex-wrap gap-2"><span class="tag">Website</span><span class="tag">SEO</span></div>
-            <h3 class="mt-4 text-2xl font-semibold tracking-[-0.025em]">LU-BU Asian Food</h3>
-            <p class="mt-3 leading-relaxed text-wesolve-green-700 dark:text-wesolve-green-200">Catering-Landingpage plus laufende SEO-Betreuung – Platz 1 der unbezahlten Google-Ergebnisse für „Sushi Catering Nürnberg“.</p>
-            <span class="ref-more mt-auto inline-flex items-center gap-2 pt-6 font-semibold text-wesolve-green-800 dark:text-wesolve-green-100">Projekt ansehen <svg class="h-4 w-4" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-          </div>
-        </a>
-        <a href="/referenzen/sportweber-schnaittach" x-show="show(['software'])" x-transition.opacity.duration.300ms data-reveal class="ref-tile group">
-          <div class="hero-panel aspect-[16/10] overflow-hidden bg-wesolve-green-950 px-6 pt-6 sm:px-8 sm:pt-8"><div class="ref-shot flex h-full flex-col overflow-hidden rounded-t-xl bg-white shadow-[0_24px_60px_-30px_rgba(0,0,0,0.8)]"><div class="flex shrink-0 gap-1.5 border-b border-wesolve-green-100 px-3.5 py-2" aria-hidden="true"><span class="h-2 w-2 rounded-full bg-wesolve-green-200"></span><span class="h-2 w-2 rounded-full bg-wesolve-green-200"></span><span class="h-2 w-2 rounded-full bg-wesolve-green-200"></span></div><div class="min-h-0 flex-1 overflow-hidden"><img width="1440" height="900" src="./assets/img/referenz-sportweber-verleih-2026.webp" alt="Verleihsoftware von Sport-Weber Schnaittach" loading="lazy" class="h-full w-full object-cover object-top"></div></div></div>
-          <div class="flex flex-1 flex-col p-6 sm:p-8">
-            <div class="flex flex-wrap gap-2"><span class="tag">Software</span></div>
-            <h3 class="mt-4 text-2xl font-semibold tracking-[-0.025em]">Sport-Weber Verleih</h3>
-            <p class="mt-3 leading-relaxed text-wesolve-green-700 dark:text-wesolve-green-200">Online-Verleihsystem mit Warenkorb und Admin-Bereich – inklusive automatischer Rechnungserstellung bei jeder Buchung.</p>
-            <span class="ref-more mt-auto inline-flex items-center gap-2 pt-6 font-semibold text-wesolve-green-800 dark:text-wesolve-green-100">Projekt ansehen <svg class="h-4 w-4" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-          </div>
-        </a>
-        <a href="/referenzen/sportweber-bikeservice" x-show="show(['web', 'software'])" x-transition.opacity.duration.300ms data-reveal class="ref-tile group">
-          <div class="hero-panel aspect-[16/10] overflow-hidden bg-wesolve-green-950 px-6 pt-6 sm:px-8 sm:pt-8"><div class="ref-shot flex h-full flex-col overflow-hidden rounded-t-xl bg-white shadow-[0_24px_60px_-30px_rgba(0,0,0,0.8)]"><div class="flex shrink-0 gap-1.5 border-b border-wesolve-green-100 px-3.5 py-2" aria-hidden="true"><span class="h-2 w-2 rounded-full bg-wesolve-green-200"></span><span class="h-2 w-2 rounded-full bg-wesolve-green-200"></span><span class="h-2 w-2 rounded-full bg-wesolve-green-200"></span></div><div class="min-h-0 flex-1 overflow-hidden"><img width="1440" height="1000" src="./assets/img/referenz-sportweber-bikeservice.webp" alt="Bikeservice-Plattform von Sport-Weber Schnaittach" loading="lazy" class="h-full w-full object-cover object-top"></div></div></div>
-          <div class="flex flex-1 flex-col p-6 sm:p-8">
-            <div class="flex flex-wrap gap-2"><span class="tag">Website</span><span class="tag">Software</span></div>
-            <h3 class="mt-4 text-2xl font-semibold tracking-[-0.025em]">Sport-Weber Bikeservice</h3>
-            <p class="mt-3 leading-relaxed text-wesolve-green-700 dark:text-wesolve-green-200">Service-Plattform für die Fahrradwerkstatt mit Online-Terminbuchung, Service-Paketen und FAQ.</p>
-            <span class="ref-more mt-auto inline-flex items-center gap-2 pt-6 font-semibold text-wesolve-green-800 dark:text-wesolve-green-100">Projekt ansehen <svg class="h-4 w-4" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-          </div>
-        </a>
-        <a href="/referenzen/rootd" x-show="show(['web'])" x-transition.opacity.duration.300ms data-reveal class="ref-tile group">
-          <div class="hero-panel aspect-[16/10] overflow-hidden bg-wesolve-green-950 px-6 pt-6 sm:px-8 sm:pt-8"><div class="ref-shot flex h-full flex-col overflow-hidden rounded-t-xl bg-white shadow-[0_24px_60px_-30px_rgba(0,0,0,0.8)]"><div class="flex shrink-0 gap-1.5 border-b border-wesolve-green-100 px-3.5 py-2" aria-hidden="true"><span class="h-2 w-2 rounded-full bg-wesolve-green-200"></span><span class="h-2 w-2 rounded-full bg-wesolve-green-200"></span><span class="h-2 w-2 rounded-full bg-wesolve-green-200"></span></div><div class="min-h-0 flex-1 overflow-hidden"><img width="1440" height="900" src="./assets/img/referenz-rootd-2026.webp" alt="Online-Shop von ROOTD." loading="lazy" class="h-full w-full object-cover object-top"></div></div></div>
-          <div class="flex flex-1 flex-col p-6 sm:p-8">
-            <div class="flex flex-wrap gap-2"><span class="tag">Website</span></div>
-            <h3 class="mt-4 text-2xl font-semibold tracking-[-0.025em]">ROOTD.</h3>
-            <p class="mt-3 leading-relaxed text-wesolve-green-700 dark:text-wesolve-green-200">Online-Shop für das nachhaltige Streetwear-Label aus Schnaittach – mit Produktkatalog, Warenkorb und Klarna-Rechnungskauf.</p>
-            <span class="ref-more mt-auto inline-flex items-center gap-2 pt-6 font-semibold text-wesolve-green-800 dark:text-wesolve-green-100">Projekt ansehen <svg class="h-4 w-4" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-          </div>
-        </a>
-        <a href="/referenzen/tobias-herrmann" x-show="show(['app'])" x-transition.opacity.duration.300ms data-reveal class="ref-tile group">
-          <div class="hero-panel aspect-[16/10] overflow-hidden bg-wesolve-green-950 px-6 pt-8 sm:pt-10"><div class="phone-pair ref-shot w-[62%] max-w-sm" role="img" aria-label="ManifeSTATE App von Tobias Herrmann: Startbildschirm und Historie"><div class="device-phone "><div class="device-phone-screen"><img width="600" height="1300" src="./assets/img/referenz-manifestate-start.webp" alt="" loading="lazy"></div></div><div class="device-phone phone-pair-offset"><div class="device-phone-screen"><img width="600" height="1300" src="./assets/img/referenz-manifestate-historie.webp" alt="" loading="lazy"></div></div></div></div>
-          <div class="flex flex-1 flex-col p-6 sm:p-8">
-            <div class="flex flex-wrap gap-2"><span class="tag">App</span></div>
-            <h3 class="mt-4 text-2xl font-semibold tracking-[-0.025em]">Tobias Herrmann</h3>
-            <p class="mt-3 leading-relaxed text-wesolve-green-700 dark:text-wesolve-green-200">ManifeSTATE: App für iOS und Android mit 30-Tage-Challenges, Punktesystem und Notizen für die tägliche Begleitung.</p>
-            <span class="ref-more mt-auto inline-flex items-center gap-2 pt-6 font-semibold text-wesolve-green-800 dark:text-wesolve-green-100">Projekt ansehen <svg class="h-4 w-4" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-          </div>
-        </a>
-        <a href="/referenzen/dieschokoecke" x-show="show(['web'])" x-transition.opacity.duration.300ms data-reveal class="ref-tile group">
-          <div class="hero-panel aspect-[16/10] overflow-hidden bg-wesolve-green-950 px-6 pt-6 sm:px-8 sm:pt-8"><div class="ref-shot flex h-full flex-col overflow-hidden rounded-t-xl bg-white shadow-[0_24px_60px_-30px_rgba(0,0,0,0.8)]"><div class="flex shrink-0 gap-1.5 border-b border-wesolve-green-100 px-3.5 py-2" aria-hidden="true"><span class="h-2 w-2 rounded-full bg-wesolve-green-200"></span><span class="h-2 w-2 rounded-full bg-wesolve-green-200"></span><span class="h-2 w-2 rounded-full bg-wesolve-green-200"></span></div><div class="min-h-0 flex-1 overflow-hidden"><img width="1440" height="900" src="./assets/img/referenz-dieschokoecke-2026.webp" alt="Webseite von dieschokoecke" loading="lazy" class="h-full w-full object-cover object-top"></div></div></div>
-          <div class="flex flex-1 flex-col p-6 sm:p-8">
-            <div class="flex flex-wrap gap-2"><span class="tag">Website</span></div>
-            <h3 class="mt-4 text-2xl font-semibold tracking-[-0.025em]">dieschokoecke</h3>
-            <p class="mt-3 leading-relaxed text-wesolve-green-700 dark:text-wesolve-green-200">Webseite mit Selbstverwaltung für die Pralinen-Manufaktur: Sortiment, Texte und FAQ bleiben ohne Technikwissen aktuell.</p>
-            <span class="ref-more mt-auto inline-flex items-center gap-2 pt-6 font-semibold text-wesolve-green-800 dark:text-wesolve-green-100">Projekt ansehen <svg class="h-4 w-4" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-          </div>
-        </a>
-        <a href="/referenzen/rooted-merch" x-show="show(['web'])" x-transition.opacity.duration.300ms data-reveal class="ref-tile group">
-          <div class="hero-panel aspect-[16/10] overflow-hidden bg-wesolve-green-950 px-6 pt-6 sm:px-8 sm:pt-8"><div class="ref-shot flex h-full flex-col overflow-hidden rounded-t-xl bg-white shadow-[0_24px_60px_-30px_rgba(0,0,0,0.8)]"><div class="flex shrink-0 gap-1.5 border-b border-wesolve-green-100 px-3.5 py-2" aria-hidden="true"><span class="h-2 w-2 rounded-full bg-wesolve-green-200"></span><span class="h-2 w-2 rounded-full bg-wesolve-green-200"></span><span class="h-2 w-2 rounded-full bg-wesolve-green-200"></span></div><div class="min-h-0 flex-1 overflow-hidden"><img width="1440" height="900" src="./assets/img/referenz-rooted-merch-2026.webp" alt="B2B-Webseite von ROOTED Merch" loading="lazy" class="h-full w-full object-cover object-top"></div></div></div>
-          <div class="flex flex-1 flex-col p-6 sm:p-8">
-            <div class="flex flex-wrap gap-2"><span class="tag">Website</span></div>
-            <h3 class="mt-4 text-2xl font-semibold tracking-[-0.025em]">ROOTED Merch</h3>
-            <p class="mt-3 leading-relaxed text-wesolve-green-700 dark:text-wesolve-green-200">B2B-Webseite für bedruckte Vereins- und Firmenkleidung – mit klarem Anfrageweg für Musterdesigns.</p>
-            <span class="ref-more mt-auto inline-flex items-center gap-2 pt-6 font-semibold text-wesolve-green-800 dark:text-wesolve-green-100">Projekt ansehen <svg class="h-4 w-4" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-          </div>
-        </a>
+        <div class="references-contact-actions">
+          <a href="/kontakt" class="btn-primary" data-umami-event="cta-erstgespraech">Projekt besprechen <span aria-hidden="true">↗</span></a>
+          <a href="tel:+4915202721146" class="btn-secondary" data-umami-event="kontakt-telefon">0152 02721146</a>
+        </div>
       </div>
     </div>
-  </section>
-
-  <section class="border-y border-wesolve-green-200 bg-wesolve-green-100 px-4 py-20 dark:border-wesolve-green-800 dark:bg-wesolve-green-900 sm:px-6 lg:py-24" aria-labelledby="contact-title">
-    <div class="mx-auto flex max-w-screen-xl flex-col gap-10 lg:flex-row lg:items-end lg:justify-between"><div><h2 id="contact-title" class="section-title max-w-3xl">Dein Projekt könnte das nächste sein.</h2><p class="mt-5 max-w-2xl text-lg leading-relaxed text-wesolve-green-700 dark:text-wesolve-green-200">Erzähl uns von deiner Idee. Im kostenlosen Erstgespräch klären wir, was sinnvoll ist und welcher Rahmen realistisch ist.</p></div><div class="flex flex-col gap-3 sm:flex-row lg:flex-col xl:flex-row"><a data-umami-event="cta-erstgespraech" href="/kontakt" class="btn-primary">Erstgespräch vereinbaren <svg class="h-4 w-4" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a data-umami-event="kontakt-telefon" href="tel:+4915202721146" class="btn-secondary">0152 02721146</a></div></div>
   </section>
 </main>
 <div id="footer-placeholder"></div>
-<script>
-  // Karten einmalig einblenden, sobald sie ins Bild scrollen
-  if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    document.documentElement.classList.add('js-reveal');
-    const io = new IntersectionObserver(entries => entries.forEach(e => {
-      if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); }
-    }), { threshold: 0.15, rootMargin: '0px 0px -8% 0px' });
-    document.querySelectorAll('[data-reveal]').forEach(el => io.observe(el));
-  }
-</script>
 </body>
 </html>

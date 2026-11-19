@@ -20,43 +20,55 @@
   <meta name="description" content="Maßgeschneiderte Software statt Excel-Chaos: Wir digitalisieren und automatisieren deine Abläufe – von Rechnungen bis Buchungsverwaltung. Alles aus einer Hand.">
   <link rel="preload" href="/assets/fonts/onest-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link href="../dist/styles.css" rel="stylesheet">
+  <link href="../css/home.css" rel="stylesheet">
   <script src="/js/theme.js"></script>
-  <link rel="icon" type="image/x-icon" href="../assets/img/Wesolveit_loigo.svg" />
+  <link rel="icon" type="image/svg+xml" href="../assets/img/wesolve-codewinkel.svg" />
   <script defer src="/js/vendor/alpine-3.14.8.min.js"></script>
   <script src="/js/navigation.js" defer></script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Lohnt sich Individual-Software für einen kleinen Betrieb?", "acceptedAnswer": {"@type": "Answer", "text": "Rechne selbst: Wenn ein Ablauf dich oder dein Team ein paar Stunden pro Woche kostet, summiert sich das übers Jahr auf Wochen an Arbeitszeit. Genau solche Abläufe automatisieren wir. Ob es sich in deinem Fall rechnet, sagen wir dir ehrlich im Erstgespräch."}}, {"@type": "Question", "name": "Was kostet eine individuelle Lösung?", "acceptedAnswer": {"@type": "Answer", "text": "Das hängt vom Umfang ab – eine schlanke Lösung für einen einzelnen Ablauf ist deutlich günstiger, als viele erwarten. Nach dem Kennenlernen bekommst du ein Festpreis-Angebot, oft mit einem Vorschlag für eine kleine erste Ausbaustufe."}}, {"@type": "Question", "name": "Wie lange dauert die Entwicklung?", "acceptedAnswer": {"@type": "Answer", "text": "Eine erste nutzbare Version steht je nach Umfang oft nach wenigen Wochen. Danach entwickeln wir in Etappen weiter – so arbeitest du früh mit der Lösung und sie wächst an deinem echten Alltag."}}, {"@type": "Question", "name": "Was ist, wenn sich meine Abläufe später ändern?", "acceptedAnswer": {"@type": "Answer", "text": "Genau dafür ist Individual-Software da: Sie passt sich deinem Betrieb an, nicht umgekehrt. Neue Funktionen oder geänderte Abläufe bauen wir ein, sobald du sie brauchst."}}, {"@type": "Question", "name": "Muss mein Team technikaffin sein?", "acceptedAnswer": {"@type": "Answer", "text": "Nein. Wir gestalten die Bedienung so einfach, dass dein Team ohne Schulungsmarathon damit arbeiten kann – und weisen alle persönlich ein."}}]}</script>
 </head>
-<body data-hero="dark" class="overflow-x-hidden bg-white font-text text-wesolve-green-950 antialiased dark:bg-wesolve-green-950 dark:text-wesolve-green-50">
+<body class="brand-page case-page overflow-x-hidden font-text antialiased">
 <main>
-  <!-- Kopf: Nutzen als Überschrift, echtes Projekt als Bild -->
-  <section class="hero-panel relative overflow-hidden bg-wesolve-green-950 px-4 pb-20 pt-28 text-white sm:px-6 lg:pb-28 lg:pt-36" aria-labelledby="page-title">
+  <section class="references-hero case-hero px-4 sm:px-6" aria-labelledby="page-title">
+    <div class="home-orbits" aria-hidden="true">
+      <div class="home-orbit home-orbit-inner"></div>
+      <div class="home-orbit home-orbit-middle"></div>
+      <div class="home-orbit home-orbit-outer"></div>
+    </div>
     <div class="mx-auto max-w-screen-xl">
-      <a href="/leistungen" class="hero-in back-link inline-flex items-center gap-2 text-sm font-semibold text-wesolve-green-200 hover:text-white" style="--d:0"><svg class="h-4 w-4 rotate-180" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Alle Leistungen</a>
-      <div class="mt-10 grid items-center gap-12 lg:grid-cols-12 lg:gap-10">
-        <div class="lg:col-span-6">
-          <h1 id="page-title" style="--d:1" class="hero-in font-text text-[clamp(2.5rem,5.2vw,4.5rem)] font-bold leading-[1] tracking-[-0.04em]">Software, die zu deinen Abläufen passt.</h1>
-          <p style="--d:2" class="hero-in mt-7 max-w-xl text-lg leading-relaxed text-wesolve-green-100">Wenn keine fertige Software zu deinen Abläufen passt, bauen wir dir eine, die es tut. Wir digitalisieren und automatisieren, was dich heute Zeit kostet – praxisnah, verständlich und gemeinsam mit dir entwickelt.</p>
-          <div style="--d:3" class="hero-in mt-9 flex flex-col gap-3 sm:flex-row"><a data-umami-event="cta-erstgespraech" href="/kontakt" class="btn-primary">Kostenloses Erstgespräch <svg class="h-4 w-4" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="/referenzen" class="btn-secondary-dark">Unsere Referenzen</a></div>
+      <a href="/leistungen" class="home-text-link case-back"><span aria-hidden="true">←</span> Alle Leistungen</a>
+      <div class="case-hero-layout">
+        <div>
+          <div class="case-client">Individualsoftware</div>
+          <h1 id="page-title">Software, die zu <span>deinen Abläufen passt.</span></h1>
+          <p>Wir entwickeln Software für die Abläufe, die dein Team heute Zeit kosten. So kannst du Buchungen, Rechnungen oder Freigaben zentral verwalten und wiederkehrende Aufgaben automatisieren.</p>
+          <div class="contact-actions-row mt-6">
+            <a href="/kontakt" class="btn-primary" data-umami-event="cta-erstgespraech">Kostenloses Erstgespräch <span aria-hidden="true">↗</span></a>
+            <a href="/referenzen" class="home-text-link">Referenzen ansehen</a>
+          </div>
         </div>
-        <figure style="--d:3" class="hero-in lg:col-span-6">
-          <div class="overflow-hidden rounded-2xl bg-white shadow-[0_50px_100px_-40px_rgba(0,0,0,0.7)]"><div class="flex gap-1.5 border-b border-wesolve-green-100 px-4 py-3" aria-hidden="true"><span class="h-2.5 w-2.5 rounded-full bg-wesolve-green-200"></span><span class="h-2.5 w-2.5 rounded-full bg-wesolve-green-200"></span><span class="h-2.5 w-2.5 rounded-full bg-wesolve-green-200"></span></div><img width="1440" height="900" src="../assets/img/referenz-sportweber-verleih-2026.webp" alt="Verleihsoftware von Sport-Weber Schnaittach" class="aspect-[16/10] w-full object-cover object-top" fetchpriority="high"></div>
-          <figcaption class="mt-4 text-sm text-wesolve-green-300">Beispiel: Sport-Weber Schnaittach</figcaption>
+        <figure class="case-browser">
+          <div class="case-browser-frame">
+            <div class="case-browser-bar" aria-hidden="true"><span></span><span></span><span></span></div>
+            <img width="1440" height="900" src="../assets/img/referenz-sportweber-verleih-2026.webp" alt="Verleihsoftware von Sport-Weber Schnaittach" fetchpriority="high">
+          </div>
+          <figcaption>Verleihsoftware für Sport-Weber Schnaittach</figcaption>
         </figure>
       </div>
     </div>
   </section>
 
   <!-- Wiedererkennen: typische Sätze von Kunden -->
-  <section class="px-4 py-20 sm:px-6 lg:py-28" aria-labelledby="problem-title">
+  <section class="case-section px-4 sm:px-6" aria-labelledby="problem-title">
     <div class="mx-auto max-w-screen-xl">
       <h2 id="problem-title" class="section-title mt-0 max-w-3xl">Wenn Abläufe mehr Zeit kosten als das eigentliche Geschäft</h2>
-      <ul data-reveal class="mt-12 grid gap-8 md:grid-cols-3"><li class="border-l-2 border-wesolve-accent-400 pl-5 text-lg leading-relaxed text-wesolve-green-900 dark:text-wesolve-green-100">„Rechnungen, Listen, Termine – vieles läuft bei mir doppelt und von Hand.“</li><li class="border-l-2 border-wesolve-accent-400 pl-5 text-lg leading-relaxed text-wesolve-green-900 dark:text-wesolve-green-100">„Meine Daten stecken in Excel-Tabellen, die nur eine Person wirklich versteht.“</li><li class="border-l-2 border-wesolve-accent-400 pl-5 text-lg leading-relaxed text-wesolve-green-900 dark:text-wesolve-green-100">„Standardsoftware habe ich probiert – sie passt einfach nicht zu meinen Abläufen.“</li></ul>
+      <ul data-reveal class="mt-12 grid gap-8 md:grid-cols-3"><li class="border-l-2 home-accent-border pl-5 text-lg leading-relaxed">„Rechnungen, Listen, Termine – vieles läuft bei mir doppelt und von Hand.“</li><li class="border-l-2 home-accent-border pl-5 text-lg leading-relaxed">„Meine Daten stecken in Excel-Tabellen, die nur eine Person wirklich versteht.“</li><li class="border-l-2 home-accent-border pl-5 text-lg leading-relaxed">„Standardsoftware habe ich probiert – sie passt einfach nicht zu meinen Abläufen.“</li></ul>
       <p class="mt-12 text-xl font-semibold">Kommt dir bekannt vor? Dann bist du hier richtig.</p>
     </div>
   </section>
 
   <!-- Angebot -->
-  <section class="bg-wesolve-green-50 px-4 py-20 dark:bg-wesolve-green-900/60 sm:px-6 lg:py-28" aria-labelledby="offer-title">
+  <section class="home-work px-4 sm:px-6" aria-labelledby="offer-title">
     <div class="mx-auto max-w-screen-xl">
       <div class="grid items-center gap-10 lg:grid-cols-12">
         <h2 id="offer-title" class="section-title mt-0 lg:col-span-6">Weniger Handarbeit, mehr Überblick</h2>
@@ -74,77 +86,108 @@
 <path d="M360 214h50M360 232h62M360 250h40"/>
 <rect x="386" y="266" width="40" height="18" rx="9" class="ill-accent"/></svg></div>
       </div>
-      <ul data-reveal class="mt-12 grid gap-10 md:grid-cols-3"><li class="border-t-2 border-wesolve-green-200 pt-6 dark:border-wesolve-green-700"><span class="grid h-11 w-11 place-items-center rounded-xl bg-wesolve-green-950 text-wesolve-accent-300 dark:bg-wesolve-green-800" aria-hidden="true"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none"><path d="M13 3 5 13.5h6L10 21l8-10.5h-6Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3 class="mt-5 text-xl font-semibold tracking-[-0.02em]">Automatisierung</h3><p class="mt-3 leading-relaxed text-wesolve-green-700 dark:text-wesolve-green-200">Rechnungen schreiben, Termine koordinieren, Bestände pflegen: Vieles davon läuft in kleinen Betrieben noch von Hand. Wir automatisieren diese Abläufe, damit du deine Zeit wieder für dein eigentliches Geschäft hast.</p></li><li class="border-t-2 border-wesolve-green-200 pt-6 dark:border-wesolve-green-700"><span class="grid h-11 w-11 place-items-center rounded-xl bg-wesolve-green-950 text-wesolve-accent-300 dark:bg-wesolve-green-800" aria-hidden="true"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none"><path d="M7 3.5h7l4 4V20a.5.5 0 0 1-.5.5h-10A.5.5 0 0 1 7 20Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="M10 12h5M10 15.5h5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3 class="mt-5 text-xl font-semibold tracking-[-0.02em]">Digitalisierung deiner Abläufe</h3><p class="mt-3 leading-relaxed text-wesolve-green-700 dark:text-wesolve-green-200">Zettel, Excel-Listen und Insellösungen ersetzen wir durch ein System, das zu deinem Betrieb passt – vom Verleihsystem mit automatischer Rechnung bis zur Buchungsverwaltung.</p></li><li class="border-t-2 border-wesolve-green-200 pt-6 dark:border-wesolve-green-700"><span class="grid h-11 w-11 place-items-center rounded-xl bg-wesolve-green-950 text-wesolve-accent-300 dark:bg-wesolve-green-800" aria-hidden="true"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none"><path d="M4 19h16M7 15v-3m5 3V9m5 6V5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3 class="mt-5 text-xl font-semibold tracking-[-0.02em]">Wächst mit deinem Unternehmen</h3><p class="mt-3 leading-relaxed text-wesolve-green-700 dark:text-wesolve-green-200">Deine Software läuft sicher in der Cloud, ist von überall erreichbar und lässt sich jederzeit erweitern. Neue Funktion, neue Schnittstelle, mehr Nutzer? Bauen wir ein, sobald du so weit bist.</p></li></ul>
+      <ul data-reveal class="mt-12 grid gap-10 md:grid-cols-3"><li class="service-detail-benefit border-t-2 pt-6"><span class="home-service-icon service-detail-icon" aria-hidden="true"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none"><path d="M13 3 5 13.5h6L10 21l8-10.5h-6Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3 class="mt-5 text-xl font-semibold tracking-[-0.02em]">Automatisierung</h3><p class="mt-3 leading-relaxed home-muted">Rechnungen schreiben, Termine koordinieren, Bestände pflegen: Vieles davon läuft in kleinen Betrieben noch von Hand. Wir automatisieren diese Abläufe, damit du deine Zeit wieder für dein eigentliches Geschäft hast.</p></li><li class="service-detail-benefit border-t-2 pt-6"><span class="home-service-icon service-detail-icon" aria-hidden="true"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none"><path d="M7 3.5h7l4 4V20a.5.5 0 0 1-.5.5h-10A.5.5 0 0 1 7 20Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="M10 12h5M10 15.5h5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3 class="mt-5 text-xl font-semibold tracking-[-0.02em]">Digitalisierung deiner Abläufe</h3><p class="mt-3 leading-relaxed home-muted">Zettel, Excel-Listen und Insellösungen ersetzen wir durch ein System, das zu deinem Betrieb passt – vom Verleihsystem mit automatischer Rechnung bis zur Buchungsverwaltung.</p></li><li class="service-detail-benefit border-t-2 pt-6"><span class="home-service-icon service-detail-icon" aria-hidden="true"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none"><path d="M4 19h16M7 15v-3m5 3V9m5 6V5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3 class="mt-5 text-xl font-semibold tracking-[-0.02em]">Wächst mit deinem Unternehmen</h3><p class="mt-3 leading-relaxed home-muted">Deine Software läuft sicher in der Cloud, ist von überall erreichbar und lässt sich jederzeit erweitern. Neue Funktion, neue Schnittstelle, mehr Nutzer? Bauen wir ein, sobald du so weit bist.</p></li></ul>
     </div>
   </section>
 
   <!-- Ablauf mit Zeitangaben: echte Abfolge -->
-  <section class="bg-wesolve-green-950 px-4 py-24 text-white sm:px-6 lg:py-32" aria-labelledby="process-title">
+  <section class="home-dark case-section px-4 sm:px-6" aria-labelledby="process-title">
     <div class="mx-auto max-w-screen-xl">
-      <div class="max-w-3xl"><h2 id="process-title" class="section-title mt-0">Vom Zeitfresser zur fertigen Lösung</h2><p class="mt-6 max-w-2xl text-lg leading-relaxed text-wesolve-green-200">Ein typisches Software-Projekt – der genaue Zeitplan hängt vom Umfang ab.</p></div>
-      <ol data-reveal class="timeline timeline-4" aria-label="Ablauf"><li class="timeline-step"><span class="timeline-node">01</span><div class="timeline-content"><p class="text-sm font-semibold text-wesolve-accent-300">Woche 1</p><h3 class="mt-2 text-xl font-semibold">Abläufe verstehen</h3><p class="mt-3 leading-relaxed text-wesolve-green-200">Wir schauen uns deine Arbeitsabläufe an – am liebsten vor Ort – und finden die Zeitfresser.</p></div></li><li class="timeline-step"><span class="timeline-node">02</span><div class="timeline-content"><p class="text-sm font-semibold text-wesolve-accent-300">Woche 2</p><h3 class="mt-2 text-xl font-semibold">Konzept &amp; Festpreis</h3><p class="mt-3 leading-relaxed text-wesolve-green-200">Du bekommst einen konkreten Vorschlag – verständlich erklärt und mit klarem Preis.</p></div></li><li class="timeline-step"><span class="timeline-node">03</span><div class="timeline-content"><p class="text-sm font-semibold text-wesolve-accent-300">ab Woche 3</p><h3 class="mt-2 text-xl font-semibold">Entwicklung in Etappen</h3><p class="mt-3 leading-relaxed text-wesolve-green-200">Wir bauen die Lösung Schritt für Schritt – du testest früh mit echten Daten aus deinem Alltag.</p></div></li><li class="timeline-step"><span class="timeline-node">04</span><div class="timeline-content"><p class="text-sm font-semibold text-wesolve-accent-300">Livegang</p><h3 class="mt-2 text-xl font-semibold">Livegang &amp; Betreuung</h3><p class="mt-3 leading-relaxed text-wesolve-green-200">Dein Team wird eingewiesen – und wir bleiben für Fragen und Erweiterungen an Bord.</p></div></li></ol>
+      <div class="max-w-3xl"><h2 id="process-title" class="section-title mt-0">Vom Zeitfresser zur fertigen Lösung</h2><p class="mt-6 max-w-2xl text-lg leading-relaxed home-muted">Ein typisches Software-Projekt – der genaue Zeitplan hängt vom Umfang ab.</p></div>
+      <ol data-reveal class="timeline timeline-4" aria-label="Ablauf"><li class="timeline-step"><span class="timeline-node">01</span><div class="timeline-content"><p class="text-sm font-semibold service-detail-accent">Woche 1</p><h3 class="mt-2 text-xl font-semibold">Abläufe verstehen</h3><p class="mt-3 leading-relaxed home-muted">Wir schauen uns deine Arbeitsabläufe an – am liebsten vor Ort – und finden die Zeitfresser.</p></div></li><li class="timeline-step"><span class="timeline-node">02</span><div class="timeline-content"><p class="text-sm font-semibold service-detail-accent">Woche 2</p><h3 class="mt-2 text-xl font-semibold">Konzept &amp; Festpreis</h3><p class="mt-3 leading-relaxed home-muted">Du bekommst einen konkreten Vorschlag – verständlich erklärt und mit klarem Preis.</p></div></li><li class="timeline-step"><span class="timeline-node">03</span><div class="timeline-content"><p class="text-sm font-semibold service-detail-accent">ab Woche 3</p><h3 class="mt-2 text-xl font-semibold">Entwicklung in Etappen</h3><p class="mt-3 leading-relaxed home-muted">Wir bauen die Lösung Schritt für Schritt – du testest früh mit echten Daten aus deinem Alltag.</p></div></li><li class="timeline-step"><span class="timeline-node">04</span><div class="timeline-content"><p class="text-sm font-semibold service-detail-accent">Livegang</p><h3 class="mt-2 text-xl font-semibold">Livegang &amp; Betreuung</h3><p class="mt-3 leading-relaxed home-muted">Dein Team wird eingewiesen – und wir bleiben für Fragen und Erweiterungen an Bord.</p></div></li></ol>
     </div>
   </section>
 
-  <section class="px-4 py-20 sm:px-6 lg:py-28" aria-label="Kundenstimme">
+  <section class="case-section px-4 sm:px-6" aria-label="Kundenstimme">
     <div class="mx-auto grid max-w-screen-xl items-center gap-12 lg:grid-cols-12 lg:gap-16">
-      <figure class="lg:col-span-7">
+      <figure class="case-testimonial lg:col-span-7">
         <blockquote class="text-[clamp(1.45rem,2.6vw,2.25rem)] font-medium leading-snug tracking-[-0.02em]">„Wir haben unseren Rent-Shop zusammen mit wesolve-IT entworfen und sind mit Planung und Umsetzung sehr zufrieden. Herr Reinert hat unsere Wünsche bei uns vor Ort aufgenommen und uns oft sogar funktionellere Lösungen gezeigt, die uns Arbeitsschritte ersparen.“</blockquote>
-        <figcaption class="mt-8"><span class="block font-semibold">Max Schorn</span><span class="mt-1 block text-sm text-wesolve-green-600 dark:text-wesolve-green-300">Geschäftsführer Sport-Weber Schnaittach</span></figcaption>
+        <figcaption class="mt-8"><span class="block font-semibold">Max Schorn</span><span class="mt-1 block text-sm home-muted">Geschäftsführer Sport-Weber Schnaittach</span></figcaption>
       </figure>
-      <a href="/referenzen/sportweber-schnaittach" data-reveal class="ref-tile group lg:col-span-5">
-        <div class="hero-panel aspect-[16/10] overflow-hidden bg-wesolve-green-950 px-6 pt-6 sm:px-8 sm:pt-8"><div class="ref-shot h-full overflow-hidden rounded-t-xl bg-white"><img width="1440" height="900" src="../assets/img/referenz-sportweber-verleih-2026.webp" alt="" loading="lazy" class="h-full w-full object-cover object-top"></div></div>
-        <div class="p-6 sm:p-7"><h3 class="text-xl font-semibold tracking-[-0.02em]">Sport-Weber Schnaittach</h3><p class="mt-2 leading-relaxed text-wesolve-green-700 dark:text-wesolve-green-200">Verleihsoftware mit automatischer Rechnungserstellung – spart bei jeder einzelnen Ausleihe Zeit und Papierkram.</p><span class="ref-more mt-5 inline-flex items-center gap-2 font-semibold text-wesolve-green-800 dark:text-wesolve-green-100">Projekt ansehen <svg class="h-4 w-4" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
-      </a>
+      <article class="home-project lg:col-span-5">
+        <div class="home-project-image"><img width="1440" height="900" src="../assets/img/referenz-sportweber-verleih-2026.webp" alt="Online-Verleihsoftware von Sport-Weber" loading="lazy"></div>
+        <div class="home-project-content">
+          <h3>Sport-Weber Schnaittach</h3>
+          <p class="home-project-result">Automatische Rechnungen</p>
+          <p class="home-project-description">Bei jeder Online-Buchung erstellt die Verleihsoftware automatisch eine Rechnung.</p>
+          <a href="/referenzen/sportweber-schnaittach" class="home-project-link">Fallstudie lesen <span aria-hidden="true">↗</span></a>
+        </div>
+      </article>
     </div>
   </section>
 
   <!-- Inklusive -->
-  <section class="bg-wesolve-green-50 px-4 py-20 dark:bg-wesolve-green-900/60 sm:px-6 lg:py-28" aria-labelledby="included-title">
+  <section class="home-work px-4 sm:px-6" aria-labelledby="included-title">
     <div class="mx-auto max-w-screen-xl">
       <h2 id="included-title" class="section-title mt-0 max-w-3xl">Immer dabei – ohne Aufpreis</h2>
-      <ul data-reveal class="feature-grid mt-12 grid gap-px overflow-hidden rounded-2xl border border-wesolve-green-200 bg-wesolve-green-200 dark:border-wesolve-green-800 dark:bg-wesolve-green-800 sm:grid-cols-2 lg:grid-cols-3">
-        <li class="feature-item"><span class="grid h-11 w-11 place-items-center rounded-xl bg-wesolve-green-950 text-wesolve-accent-300 dark:bg-wesolve-green-800" aria-hidden="true"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none"><path d="M17 6.5A6.5 6.5 0 1 0 17 17.5M4 10.5h9M4 13.5h9" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3 class="mt-5 text-lg font-semibold">Festpreis-Angebot</h3><p class="mt-2 leading-relaxed text-wesolve-green-700 dark:text-wesolve-green-200">Keine versteckten Kosten, keine Überraschungen.</p></li>
-        <li class="feature-item"><span class="grid h-11 w-11 place-items-center rounded-xl bg-wesolve-green-950 text-wesolve-accent-300 dark:bg-wesolve-green-800" aria-hidden="true"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8.5" r="3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 20c1.2-3.5 4-5 7-5s5.8 1.5 7 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3 class="mt-5 text-lg font-semibold">Einweisung deines Teams</h3><p class="mt-2 leading-relaxed text-wesolve-green-700 dark:text-wesolve-green-200">Wir zeigen allen alles, bis die Lösung im Alltag sitzt.</p></li>
-        <li class="feature-item"><span class="grid h-11 w-11 place-items-center rounded-xl bg-wesolve-green-950 text-wesolve-accent-300 dark:bg-wesolve-green-800" aria-hidden="true"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="16" height="7" rx="1.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><rect x="4" y="13" width="16" height="7" rx="1.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 7.5h.01M8 16.5h.01" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3 class="mt-5 text-lg font-semibold">Hosting &amp; Betrieb</h3><p class="mt-2 leading-relaxed text-wesolve-green-700 dark:text-wesolve-green-200">Deine Software läuft sicher – wir kümmern uns um die Technik.</p></li>
-        <li class="feature-item"><span class="grid h-11 w-11 place-items-center rounded-xl bg-wesolve-green-950 text-wesolve-accent-300 dark:bg-wesolve-green-800" aria-hidden="true"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none"><path d="M12 3.5 5 6v5.5c0 4.2 3 7.5 7 9 4-1.5 7-4.8 7-9V6Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="m9 12 2 2 4-4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3 class="mt-5 text-lg font-semibold">DSGVO-konform</h3><p class="mt-2 leading-relaxed text-wesolve-green-700 dark:text-wesolve-green-200">Deine Daten und die deiner Kunden sind geschützt.</p></li>
-        <li class="feature-item"><span class="grid h-11 w-11 place-items-center rounded-xl bg-wesolve-green-950 text-wesolve-accent-300 dark:bg-wesolve-green-800" aria-hidden="true"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none"><path d="M4 19h16M7 15v-3m5 3V9m5 6V5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3 class="mt-5 text-lg font-semibold">Jederzeit erweiterbar</h3><p class="mt-2 leading-relaxed text-wesolve-green-700 dark:text-wesolve-green-200">Neue Funktionen kommen dazu, wenn dein Betrieb sie braucht.</p></li>
-        <li class="feature-item"><span class="grid h-11 w-11 place-items-center rounded-xl bg-wesolve-green-950 text-wesolve-accent-300 dark:bg-wesolve-green-800" aria-hidden="true"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none"><path d="M4 6.5A2.5 2.5 0 0 1 6.5 4h11A2.5 2.5 0 0 1 20 6.5v7a2.5 2.5 0 0 1-2.5 2.5H10l-4 4v-4A2 2 0 0 1 4 14Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3 class="mt-5 text-lg font-semibold">Direkter Draht</h3><p class="mt-2 leading-relaxed text-wesolve-green-700 dark:text-wesolve-green-200">Du sprichst mit dem Entwickler – nicht mit einer Hotline.</p></li>
+      <ul data-reveal class="case-features service-detail-included">
+        <li class="service-detail-included-item"><span class="home-service-icon service-detail-icon" aria-hidden="true"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none"><path d="M17 6.5A6.5 6.5 0 1 0 17 17.5M4 10.5h9M4 13.5h9" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3 class="mt-5 text-lg font-semibold">Festpreis-Angebot</h3><p class="mt-2 leading-relaxed home-muted">Keine versteckten Kosten, keine Überraschungen.</p></li>
+        <li class="service-detail-included-item"><span class="home-service-icon service-detail-icon" aria-hidden="true"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8.5" r="3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 20c1.2-3.5 4-5 7-5s5.8 1.5 7 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3 class="mt-5 text-lg font-semibold">Einweisung deines Teams</h3><p class="mt-2 leading-relaxed home-muted">Wir zeigen allen alles, bis die Lösung im Alltag sitzt.</p></li>
+        <li class="service-detail-included-item"><span class="home-service-icon service-detail-icon" aria-hidden="true"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="16" height="7" rx="1.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><rect x="4" y="13" width="16" height="7" rx="1.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 7.5h.01M8 16.5h.01" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3 class="mt-5 text-lg font-semibold">Hosting &amp; Betrieb</h3><p class="mt-2 leading-relaxed home-muted">Deine Software läuft sicher – wir kümmern uns um die Technik.</p></li>
+        <li class="service-detail-included-item"><span class="home-service-icon service-detail-icon" aria-hidden="true"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none"><path d="M12 3.5 5 6v5.5c0 4.2 3 7.5 7 9 4-1.5 7-4.8 7-9V6Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="m9 12 2 2 4-4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3 class="mt-5 text-lg font-semibold">DSGVO-konform</h3><p class="mt-2 leading-relaxed home-muted">Deine Daten und die deiner Kunden sind geschützt.</p></li>
+        <li class="service-detail-included-item"><span class="home-service-icon service-detail-icon" aria-hidden="true"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none"><path d="M4 19h16M7 15v-3m5 3V9m5 6V5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3 class="mt-5 text-lg font-semibold">Jederzeit erweiterbar</h3><p class="mt-2 leading-relaxed home-muted">Neue Funktionen kommen dazu, wenn dein Betrieb sie braucht.</p></li>
+        <li class="service-detail-included-item"><span class="home-service-icon service-detail-icon" aria-hidden="true"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none"><path d="M4 6.5A2.5 2.5 0 0 1 6.5 4h11A2.5 2.5 0 0 1 20 6.5v7a2.5 2.5 0 0 1-2.5 2.5H10l-4 4v-4A2 2 0 0 1 4 14Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3 class="mt-5 text-lg font-semibold">Direkter Draht</h3><p class="mt-2 leading-relaxed home-muted">Du sprichst mit dem Entwickler – nicht mit einer Hotline.</p></li>
       </ul>
     </div>
   </section>
 
   <!-- FAQ -->
-  <section class="px-4 py-20 sm:px-6 lg:py-28" aria-labelledby="faq-title">
+  <section class="case-section px-4 sm:px-6" aria-labelledby="faq-title">
     <div class="mx-auto grid max-w-screen-xl gap-10 lg:grid-cols-12 lg:gap-16">
-      <div class="lg:col-span-4"><div class="lg:sticky lg:top-28"><h2 id="faq-title" class="section-title mt-0">Häufige Fragen</h2><p class="mt-5 leading-relaxed text-wesolve-green-700 dark:text-wesolve-green-200">Deine Frage ist nicht dabei? <a href="/kontakt" class="font-semibold underline underline-offset-4">Schreib uns einfach.</a></p></div></div>
-      <div class="border-t border-wesolve-green-200 dark:border-wesolve-green-800 lg:col-span-8">
-          <div x-data="{ open: false }" class="border-b border-wesolve-green-200 dark:border-wesolve-green-800">
-            <h3><button type="button" @click="open = !open" :aria-expanded="open.toString()" aria-controls="faq-0" class="faq-btn flex w-full items-center justify-between gap-6 py-6 text-left text-lg font-semibold">Lohnt sich Individual-Software für einen kleinen Betrieb?<span class="faq-icon grid h-8 w-8 shrink-0 place-items-center rounded-full border border-wesolve-green-300 dark:border-wesolve-green-600" :class="open && 'is-open'" aria-hidden="true"><svg class="h-4 w-4" viewBox="0 0 16 16" fill="none"><path d="M8 3v10M3 8h10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span></button></h3>
-            <div id="faq-0" x-show="open" x-transition.opacity.duration.200ms style="display: none;"><p class="max-w-2xl pb-6 leading-relaxed text-wesolve-green-700 dark:text-wesolve-green-200">Rechne selbst: Wenn ein Ablauf dich oder dein Team ein paar Stunden pro Woche kostet, summiert sich das übers Jahr auf Wochen an Arbeitszeit. Genau solche Abläufe automatisieren wir. Ob es sich in deinem Fall rechnet, sagen wir dir ehrlich im Erstgespräch.</p></div>
-          </div>
-          <div x-data="{ open: false }" class="border-b border-wesolve-green-200 dark:border-wesolve-green-800">
-            <h3><button type="button" @click="open = !open" :aria-expanded="open.toString()" aria-controls="faq-1" class="faq-btn flex w-full items-center justify-between gap-6 py-6 text-left text-lg font-semibold">Was kostet eine individuelle Lösung?<span class="faq-icon grid h-8 w-8 shrink-0 place-items-center rounded-full border border-wesolve-green-300 dark:border-wesolve-green-600" :class="open && 'is-open'" aria-hidden="true"><svg class="h-4 w-4" viewBox="0 0 16 16" fill="none"><path d="M8 3v10M3 8h10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span></button></h3>
-            <div id="faq-1" x-show="open" x-transition.opacity.duration.200ms style="display: none;"><p class="max-w-2xl pb-6 leading-relaxed text-wesolve-green-700 dark:text-wesolve-green-200">Das hängt vom Umfang ab – eine schlanke Lösung für einen einzelnen Ablauf ist deutlich günstiger, als viele erwarten. Nach dem Kennenlernen bekommst du ein Festpreis-Angebot, oft mit einem Vorschlag für eine kleine erste Ausbaustufe.</p></div>
-          </div>
-          <div x-data="{ open: false }" class="border-b border-wesolve-green-200 dark:border-wesolve-green-800">
-            <h3><button type="button" @click="open = !open" :aria-expanded="open.toString()" aria-controls="faq-2" class="faq-btn flex w-full items-center justify-between gap-6 py-6 text-left text-lg font-semibold">Wie lange dauert die Entwicklung?<span class="faq-icon grid h-8 w-8 shrink-0 place-items-center rounded-full border border-wesolve-green-300 dark:border-wesolve-green-600" :class="open && 'is-open'" aria-hidden="true"><svg class="h-4 w-4" viewBox="0 0 16 16" fill="none"><path d="M8 3v10M3 8h10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span></button></h3>
-            <div id="faq-2" x-show="open" x-transition.opacity.duration.200ms style="display: none;"><p class="max-w-2xl pb-6 leading-relaxed text-wesolve-green-700 dark:text-wesolve-green-200">Eine erste nutzbare Version steht je nach Umfang oft nach wenigen Wochen. Danach entwickeln wir in Etappen weiter – so arbeitest du früh mit der Lösung und sie wächst an deinem echten Alltag.</p></div>
-          </div>
-          <div x-data="{ open: false }" class="border-b border-wesolve-green-200 dark:border-wesolve-green-800">
-            <h3><button type="button" @click="open = !open" :aria-expanded="open.toString()" aria-controls="faq-3" class="faq-btn flex w-full items-center justify-between gap-6 py-6 text-left text-lg font-semibold">Was ist, wenn sich meine Abläufe später ändern?<span class="faq-icon grid h-8 w-8 shrink-0 place-items-center rounded-full border border-wesolve-green-300 dark:border-wesolve-green-600" :class="open && 'is-open'" aria-hidden="true"><svg class="h-4 w-4" viewBox="0 0 16 16" fill="none"><path d="M8 3v10M3 8h10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span></button></h3>
-            <div id="faq-3" x-show="open" x-transition.opacity.duration.200ms style="display: none;"><p class="max-w-2xl pb-6 leading-relaxed text-wesolve-green-700 dark:text-wesolve-green-200">Genau dafür ist Individual-Software da: Sie passt sich deinem Betrieb an, nicht umgekehrt. Neue Funktionen oder geänderte Abläufe bauen wir ein, sobald du sie brauchst.</p></div>
-          </div>
-          <div x-data="{ open: false }" class="border-b border-wesolve-green-200 dark:border-wesolve-green-800">
-            <h3><button type="button" @click="open = !open" :aria-expanded="open.toString()" aria-controls="faq-4" class="faq-btn flex w-full items-center justify-between gap-6 py-6 text-left text-lg font-semibold">Muss mein Team technikaffin sein?<span class="faq-icon grid h-8 w-8 shrink-0 place-items-center rounded-full border border-wesolve-green-300 dark:border-wesolve-green-600" :class="open && 'is-open'" aria-hidden="true"><svg class="h-4 w-4" viewBox="0 0 16 16" fill="none"><path d="M8 3v10M3 8h10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span></button></h3>
-            <div id="faq-4" x-show="open" x-transition.opacity.duration.200ms style="display: none;"><p class="max-w-2xl pb-6 leading-relaxed text-wesolve-green-700 dark:text-wesolve-green-200">Nein. Wir gestalten die Bedienung so einfach, dass dein Team ohne Schulungsmarathon damit arbeiten kann – und weisen alle persönlich ein.</p></div>
-          </div>
+      <div class="lg:col-span-4"><div class="lg:sticky lg:top-28"><h2 id="faq-title" class="section-title mt-0">Häufige Fragen</h2><p class="mt-5 leading-relaxed home-muted">Deine Frage ist nicht dabei? <a href="/kontakt" class="font-semibold underline underline-offset-4">Schreib uns einfach.</a></p></div></div>
+      <div class="home-service-list service-detail-faq lg:col-span-8">
+        <details class="home-service-item">
+          <summary class="home-service">
+            <span class="home-service-title">Lohnt sich Individual-Software für einen kleinen Betrieb?</span>
+            <span class="home-service-toggle" aria-hidden="true"></span>
+          </summary>
+          <div class="home-service-detail"><p>Rechne selbst: Wenn ein Ablauf dich oder dein Team ein paar Stunden pro Woche kostet, summiert sich das übers Jahr auf Wochen an Arbeitszeit. Genau solche Abläufe automatisieren wir. Ob es sich in deinem Fall rechnet, sagen wir dir ehrlich im Erstgespräch.</p></div>
+        </details>
+        <details class="home-service-item">
+          <summary class="home-service">
+            <span class="home-service-title">Was kostet eine individuelle Lösung?</span>
+            <span class="home-service-toggle" aria-hidden="true"></span>
+          </summary>
+          <div class="home-service-detail"><p>Das hängt vom Umfang ab – eine schlanke Lösung für einen einzelnen Ablauf ist deutlich günstiger, als viele erwarten. Nach dem Kennenlernen bekommst du ein Festpreis-Angebot, oft mit einem Vorschlag für eine kleine erste Ausbaustufe.</p></div>
+        </details>
+        <details class="home-service-item">
+          <summary class="home-service">
+            <span class="home-service-title">Wie lange dauert die Entwicklung?</span>
+            <span class="home-service-toggle" aria-hidden="true"></span>
+          </summary>
+          <div class="home-service-detail"><p>Eine erste nutzbare Version steht je nach Umfang oft nach wenigen Wochen. Danach entwickeln wir in Etappen weiter – so arbeitest du früh mit der Lösung und sie wächst an deinem echten Alltag.</p></div>
+        </details>
+        <details class="home-service-item">
+          <summary class="home-service">
+            <span class="home-service-title">Was ist, wenn sich meine Abläufe später ändern?</span>
+            <span class="home-service-toggle" aria-hidden="true"></span>
+          </summary>
+          <div class="home-service-detail"><p>Genau dafür ist Individual-Software da: Sie passt sich deinem Betrieb an, nicht umgekehrt. Neue Funktionen oder geänderte Abläufe bauen wir ein, sobald du sie brauchst.</p></div>
+        </details>
+        <details class="home-service-item">
+          <summary class="home-service">
+            <span class="home-service-title">Muss mein Team technikaffin sein?</span>
+            <span class="home-service-toggle" aria-hidden="true"></span>
+          </summary>
+          <div class="home-service-detail"><p>Nein. Wir gestalten die Bedienung so einfach, dass dein Team ohne Schulungsmarathon damit arbeiten kann – und weisen alle persönlich ein.</p></div>
+        </details>
       </div>
     </div>
   </section>
 
-  <section class="border-y border-wesolve-green-200 bg-wesolve-green-100 px-4 py-20 dark:border-wesolve-green-800 dark:bg-wesolve-green-900 sm:px-6 lg:py-24" aria-labelledby="contact-title">
-    <div class="mx-auto flex max-w-screen-xl flex-col gap-10 lg:flex-row lg:items-end lg:justify-between"><div><h2 id="contact-title" class="section-title mt-0 max-w-3xl">Welcher Ablauf kostet dich gerade am meisten Zeit?</h2><p class="mt-5 max-w-2xl text-lg leading-relaxed text-wesolve-green-700 dark:text-wesolve-green-200">Erzähl uns davon – wir sagen dir ehrlich, ob und wie sich eine individuelle Lösung für dich lohnt.</p></div><div class="flex flex-col gap-3 sm:flex-row lg:flex-col xl:flex-row"><a data-umami-event="cta-erstgespraech" href="/kontakt" class="btn-primary">Erstgespräch vereinbaren <svg class="h-4 w-4" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a data-umami-event="cta-quick-check" href="/quick-check" class="btn-secondary">Zum Quick-Check</a></div></div>
+  <section class="case-end px-4 sm:px-6" aria-labelledby="contact-title">
+    <div class="mx-auto max-w-screen-xl">
+      <div class="home-work-contact home-dark">
+        <div>
+          <h2 id="contact-title">Welcher Ablauf kostet dich am meisten Zeit?</h2>
+          <p>Im Erstgespräch klären wir, ob und wie eine individuelle Lösung deinem Team helfen kann.</p>
+        </div>
+        <div class="references-contact-actions">
+          <a href="/kontakt" class="btn-primary" data-umami-event="cta-erstgespraech">Erstgespräch vereinbaren <span aria-hidden="true">↗</span></a>
+          <a href="/quick-check" class="btn-secondary" data-umami-event="cta-quick-check">Zum Quick-Check</a>
+        </div>
+      </div>
+    </div>
   </section>
 </main>
 <div id="footer-placeholder"></div>

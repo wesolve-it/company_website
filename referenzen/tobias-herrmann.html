@@ -20,79 +20,115 @@
   <meta name="description" content="Case Study: Eine iOS- und Android-App im Corporate Design – mit 30-Tage-Challenges, Punktesystem und Notizen für die Community von Tobias Herrmann.">
   <link rel="preload" href="/assets/fonts/onest-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link href="../dist/styles.css" rel="stylesheet">
+  <link href="../css/home.css" rel="stylesheet">
   <script src="/js/theme.js"></script>
-  <link rel="icon" type="image/x-icon" href="../assets/img/Wesolveit_loigo.svg" />
+  <link rel="icon" type="image/svg+xml" href="../assets/img/wesolve-codewinkel.svg" />
   <script defer src="/js/vendor/alpine-3.14.8.min.js"></script>
   <script src="/js/navigation.js" defer></script>
 </head>
-<body data-hero="dark" class="overflow-x-hidden bg-white font-text text-wesolve-green-950 antialiased dark:bg-wesolve-green-950 dark:text-wesolve-green-50">
+<body class="brand-page case-page overflow-x-hidden font-text antialiased">
 <main>
-  <!-- Kopf: Kunde, Aufgabe und Eckdaten auf einen Blick -->
-  <section class="hero-panel relative bg-wesolve-green-950 px-4 pb-40 pt-28 text-white sm:px-6 lg:pb-56 lg:pt-36" aria-labelledby="case-title">
+  <section class="references-hero case-hero px-4 sm:px-6" aria-labelledby="case-title">
+    <div class="home-orbits" aria-hidden="true">
+      <div class="home-orbit home-orbit-inner"></div>
+      <div class="home-orbit home-orbit-middle"></div>
+      <div class="home-orbit home-orbit-outer"></div>
+    </div>
     <div class="mx-auto max-w-screen-xl">
-      <a href="/referenzen" class="hero-in back-link inline-flex items-center gap-2 text-sm font-semibold text-wesolve-green-200 hover:text-white" style="--d:0"><svg class="h-4 w-4 rotate-180" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Alle Referenzen</a>
-      <div class="mt-10 grid gap-10 lg:grid-cols-12 lg:items-end">
-        <div class="lg:col-span-7">
-          <img width="377" height="101" src="../assets/img/377-5023880.png" alt="Tobias Herrmann" style="--d:1" class="hero-in h-10 w-auto brightness-0 invert">
-          <h1 id="case-title" style="--d:2" class="hero-in mt-8 font-text text-[clamp(2.4rem,5vw,4.25rem)] font-bold leading-[1.02] tracking-[-0.04em]">ManifeSTATE App.</h1>
-          <p style="--d:3" class="hero-in mt-6 max-w-xl text-lg leading-relaxed text-wesolve-green-100">Eine App für iOS und Android im Corporate Design – mit 30-Tage-Challenges, Punktesystem und Notizen, die Nutzer täglich beim Manifestieren begleitet.</p>
+      <a href="/referenzen" class="home-text-link case-back"><span aria-hidden="true">←</span> Alle Referenzen</a>
+      <div class="case-hero-layout">
+        <div>
+          <div class="case-client">
+            <img width="377" height="101" src="../assets/img/377-5023880.png" alt="" class="case-client-mark">
+            <span>Tobias Herrmann</span>
+          </div>
+          <h1 id="case-title">ManifeSTATE App<span>.</span></h1>
+          <p>Eine App für iOS und Android im Corporate Design – mit 30-Tage-Challenges, Punktesystem und Notizen, die Nutzer täglich beim Manifestieren begleitet.</p>
         </div>
-        <dl style="--d:4" class="hero-in grid gap-5 border-t border-white/10 pt-6 sm:grid-cols-3 sm:gap-6 lg:col-span-5 lg:grid-cols-1 lg:gap-5 lg:border-l lg:border-t-0 lg:pl-10 lg:pt-0"><div><dt class="text-sm text-wesolve-green-300">Branche</dt><dd class="mt-1 font-semibold">Coaching &amp; Social Media</dd></div><div><dt class="text-sm text-wesolve-green-300">Leistung</dt><dd class="mt-1 font-semibold">App-Entwicklung</dd></div><div><dt class="text-sm text-wesolve-green-300">Plattformen</dt><dd class="mt-1 font-semibold">iOS &amp; Android</dd></div></dl>
+        <figure class="case-tablet case-phones"><div class="phone-pair" role="img" aria-label="Die ManifeSTATE App: Startbildschirm und Historie"><div class="device-phone "><div class="device-phone-screen"><img width="600" height="1300" src="../assets/img/referenz-manifestate-start.webp" alt=""></div></div><div class="device-phone phone-pair-offset"><div class="device-phone-screen"><img width="600" height="1300" src="../assets/img/referenz-manifestate-historie.webp" alt=""></div></div></div></figure>
       </div>
+      <dl class="case-facts">
+        <div><dt>Branche</dt><dd>Coaching &amp; Social Media</dd></div>
+        <div><dt>Leistung</dt><dd>App-Entwicklung</dd></div>
+        <div><dt>Plattformen</dt><dd>iOS &amp; Android</dd></div>
+      </dl>
     </div>
   </section>
 
-  <!-- Bild ragt aus dem dunklen Kopf in den hellen Inhalt -->
-  <div class="relative z-10 -mt-28 px-4 sm:px-6 lg:-mt-40">
-    <figure style="--d:4" class="hero-in hero-panel mx-auto max-h-[44rem] max-w-5xl overflow-hidden rounded-2xl bg-wesolve-green-950 px-6 pt-10 shadow-[0_50px_100px_-40px_rgba(8,28,22,0.7)] ring-1 ring-white/10 sm:pt-14"><div class="phone-pair w-[78%] max-w-xl sm:w-[60%]" role="img" aria-label="Die ManifeSTATE App: Startbildschirm und Historie"><div class="device-phone "><div class="device-phone-screen"><img width="600" height="1300" src="../assets/img/referenz-manifestate-start.webp" alt=""></div></div><div class="device-phone phone-pair-offset"><div class="device-phone-screen"><img width="600" height="1300" src="../assets/img/referenz-manifestate-historie.webp" alt=""></div></div></div></figure>
-  </div>
-
-  <!-- Geschichte: echte Abfolge, daher nummeriert -->
-  <section class="px-4 py-20 sm:px-6 lg:py-28" aria-label="Projektverlauf">
-    <ol data-reveal class="case-story mx-auto max-w-screen-xl border-b border-wesolve-green-200 dark:border-wesolve-green-800">
-        <li class="case-step grid gap-4 border-t border-wesolve-green-200 py-10 dark:border-wesolve-green-800 lg:grid-cols-12 lg:gap-10"><h2 class="flex items-baseline gap-4 text-2xl font-semibold tracking-[-0.025em] lg:col-span-4"><span class="text-base font-semibold text-wesolve-green-600 dark:text-wesolve-accent-300">1.</span>Die Ausgangslage</h2><p class="max-w-2xl text-lg leading-relaxed text-wesolve-green-800 dark:text-wesolve-green-100 lg:col-span-7 lg:col-start-6">Tobias Herrmann erreicht mit seinen Inhalten rund um Manifestation über 40.000 Menschen auf Social Media. Was fehlte: ein Werkzeug, das seine Kunden im Alltag begleitet – täglich, direkt auf dem Smartphone, in seinem eigenen Look.</p></li>
-        <li class="case-step grid gap-4 border-t border-wesolve-green-200 py-10 dark:border-wesolve-green-800 lg:grid-cols-12 lg:gap-10"><h2 class="flex items-baseline gap-4 text-2xl font-semibold tracking-[-0.025em] lg:col-span-4"><span class="text-base font-semibold text-wesolve-green-600 dark:text-wesolve-accent-300">2.</span>Unsere Lösung</h2><p class="max-w-2xl text-lg leading-relaxed text-wesolve-green-800 dark:text-wesolve-green-100 lg:col-span-7 lg:col-start-6">Eine App für iOS und Android im Corporate Design – vom ersten Designvorschlag gemeinsam ausgearbeitet. Nutzer halten ihren Zustand dreimal täglich fest, sammeln Punkte, absolvieren 30-Tage-Challenges und dokumentieren mit Notizen, was ihnen guttut.</p></li>
-        <li class="case-step grid gap-4 border-t border-wesolve-green-200 py-10 dark:border-wesolve-green-800 lg:grid-cols-12 lg:gap-10"><h2 class="flex items-baseline gap-4 text-2xl font-semibold tracking-[-0.025em] lg:col-span-4"><span class="text-base font-semibold text-wesolve-green-600 dark:text-wesolve-accent-300">3.</span>Das Ergebnis</h2><p class="max-w-2xl text-lg leading-relaxed text-wesolve-green-800 dark:text-wesolve-green-100 lg:col-span-7 lg:col-start-6">Die App ist für iPhone und Android verfügbar und begleitet die Community jeden Tag. Und sie wächst weiter: Als Nächstes ist eine Funktion geplant, mit der sich Nutzer mit Freunden vernetzen können.</p></li>
-    </ol>
+  <section class="case-section px-4 sm:px-6" aria-labelledby="case-story-title">
+    <div class="case-story-layout mx-auto max-w-screen-xl">
+      <div>
+        <h2 id="case-story-title" class="section-title">Tägliche Begleitung per App</h2>
+        <div class="case-key-result">
+          <strong>30-Tage-Challenges</strong>
+          <p>Die App begleitet täglich mit Challenges, Punktesystem und Notizen.</p>
+        </div>
+      </div>
+      <ol class="case-story-list">
+        <li>
+          <h3>Die Ausgangslage</h3>
+          <p>Tobias Herrmann erreicht mit seinen Inhalten rund um Manifestation über 40.000 Menschen auf Social Media. Was fehlte: ein Werkzeug, das seine Kunden im Alltag begleitet – täglich, direkt auf dem Smartphone, in seinem eigenen Look.</p>
+        </li>
+        <li>
+          <h3>Unsere Lösung</h3>
+          <p>Eine App für iOS und Android im Corporate Design – vom ersten Designvorschlag gemeinsam ausgearbeitet. Nutzer halten ihren Zustand dreimal täglich fest, sammeln Punkte, absolvieren 30-Tage-Challenges und dokumentieren mit Notizen, was ihnen guttut.</p>
+        </li>
+        <li>
+          <h3>Das Ergebnis</h3>
+          <p>Die App ist für iPhone und Android verfügbar und begleitet die Community jeden Tag. Und sie wächst weiter: Als Nächstes ist eine Funktion geplant, mit der sich Nutzer mit Freunden vernetzen können.</p>
+        </li>
+      </ol>
+    </div>
   </section>
 
-  <!-- Funktionen -->
-  <section class="bg-wesolve-green-50 px-4 py-20 dark:bg-wesolve-green-900/60 sm:px-6 lg:py-28" aria-labelledby="features-title">
+  <section class="home-work px-4 sm:px-6" aria-labelledby="features-title">
     <div class="mx-auto max-w-screen-xl">
       <h2 id="features-title" class="section-title mt-0">Das steckt drin</h2>
-      <ul data-reveal class="feature-grid mt-12 grid gap-px overflow-hidden rounded-2xl border border-wesolve-green-200 bg-wesolve-green-200 dark:border-wesolve-green-800 dark:bg-wesolve-green-800 sm:grid-cols-2 lg:grid-cols-3">
-        <li class="feature-item flex items-center gap-4"><span class="grid h-11 w-11 place-items-center rounded-xl bg-wesolve-green-950 text-wesolve-accent-300 dark:bg-wesolve-green-800" aria-hidden="true"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none"><rect x="7" y="2.5" width="10" height="19" rx="2.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="M11 18.5h2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3 class="font-semibold">iOS &amp; Android aus einer Entwicklung</h3></li>
-        <li class="feature-item flex items-center gap-4"><span class="grid h-11 w-11 place-items-center rounded-xl bg-wesolve-green-950 text-wesolve-accent-300 dark:bg-wesolve-green-800" aria-hidden="true"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="16" rx="2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="m3 16 5-5 4 4 3-3 6 6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3 class="font-semibold">Komplett im Corporate Design des Kunden</h3></li>
-        <li class="feature-item flex items-center gap-4"><span class="grid h-11 w-11 place-items-center rounded-xl bg-wesolve-green-950 text-wesolve-accent-300 dark:bg-wesolve-green-800" aria-hidden="true"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none"><path d="M8 4h8v5a4 4 0 0 1-8 0ZM8 6H5a3 3 0 0 0 3 4M16 6h3a3 3 0 0 1-3 4M12 13v4M8.5 20h7" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3 class="font-semibold">30-Tage-Challenges mit Punktesystem</h3></li>
-        <li class="feature-item flex items-center gap-4"><span class="grid h-11 w-11 place-items-center rounded-xl bg-wesolve-green-950 text-wesolve-accent-300 dark:bg-wesolve-green-800" aria-hidden="true"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none"><path d="M4 4v16h16M8 15l3.5-4 3 2.5L19 8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3 class="font-semibold">Tägliche Zustandseingabe mit Punkten</h3></li>
-        <li class="feature-item flex items-center gap-4"><span class="grid h-11 w-11 place-items-center rounded-xl bg-wesolve-green-950 text-wesolve-accent-300 dark:bg-wesolve-green-800" aria-hidden="true"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none"><path d="M4 20h4L19 9l-4-4L4 16v4Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3 class="font-semibold">Notizen &amp; Rückblick auf die eigene Entwicklung</h3></li>
-        <li class="feature-item flex items-center gap-4"><span class="grid h-11 w-11 place-items-center rounded-xl bg-wesolve-green-950 text-wesolve-accent-300 dark:bg-wesolve-green-800" aria-hidden="true"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8.5" r="3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 20c1.2-3.5 4-5 7-5s5.8 1.5 7 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3 class="font-semibold">Weiterentwicklung geplant: Freunde-Funktion</h3></li>
+      <ul class="case-features">
+        <li>
+          <span class="home-service-icon" aria-hidden="true"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none"><rect x="7" y="2.5" width="10" height="19" rx="2.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="M11 18.5h2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <h3>iOS &amp; Android aus einer Entwicklung</h3>
+        </li>
+        <li>
+          <span class="home-service-icon" aria-hidden="true"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="16" rx="2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="m3 16 5-5 4 4 3-3 6 6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <h3>Komplett im Corporate Design des Kunden</h3>
+        </li>
+        <li>
+          <span class="home-service-icon" aria-hidden="true"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none"><path d="M8 4h8v5a4 4 0 0 1-8 0ZM8 6H5a3 3 0 0 0 3 4M16 6h3a3 3 0 0 1-3 4M12 13v4M8.5 20h7" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <h3>30-Tage-Challenges mit Punktesystem</h3>
+        </li>
+        <li>
+          <span class="home-service-icon" aria-hidden="true"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none"><path d="M4 4v16h16M8 15l3.5-4 3 2.5L19 8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <h3>Tägliche Zustandseingabe mit Punkten</h3>
+        </li>
+        <li>
+          <span class="home-service-icon" aria-hidden="true"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none"><path d="M4 20h4L19 9l-4-4L4 16v4Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <h3>Notizen &amp; Rückblick auf die eigene Entwicklung</h3>
+        </li>
+        <li>
+          <span class="home-service-icon" aria-hidden="true"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8.5" r="3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 20c1.2-3.5 4-5 7-5s5.8 1.5 7 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <h3>Weiterentwicklung geplant: Freunde-Funktion</h3>
+        </li>
       </ul>
     </div>
   </section>
 
-  <!-- Weiterblättern -->
-  <section class="px-4 py-16 sm:px-6" aria-label="Nächste Referenz">
-    <a href="/referenzen/dieschokoecke" class="next-case group mx-auto flex max-w-screen-xl flex-col gap-2 border-y border-wesolve-green-200 py-10 dark:border-wesolve-green-800 sm:flex-row sm:items-center sm:justify-between">
-      <span><span class="block text-sm text-wesolve-green-600 dark:text-wesolve-green-300">Nächste Referenz</span><span class="mt-1 block text-3xl font-semibold tracking-[-0.03em] lg:text-4xl">dieschokoecke</span></span>
-      <span class="grid h-14 w-14 place-items-center rounded-full bg-wesolve-green-950 text-wesolve-accent-300 transition-transform duration-300 group-hover:translate-x-2 dark:bg-wesolve-green-800" aria-hidden="true"><svg class="h-5 w-5" viewBox="0 0 20 20" fill="none"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-    </a>
-  </section>
-
-  <section class="border-y border-wesolve-green-200 bg-wesolve-green-100 px-4 py-20 dark:border-wesolve-green-800 dark:bg-wesolve-green-900 sm:px-6 lg:py-24" aria-labelledby="contact-title">
-    <div class="mx-auto flex max-w-screen-xl flex-col gap-10 lg:flex-row lg:items-end lg:justify-between"><div><h2 id="contact-title" class="section-title mt-0 max-w-3xl">Du hast auch eine App-Idee?</h2><p class="mt-5 max-w-2xl text-lg leading-relaxed text-wesolve-green-700 dark:text-wesolve-green-200">Lass sie uns kostenlos checken – innerhalb von 48 Stunden bekommst du unsere ehrliche Einschätzung.</p></div><div class="flex flex-col gap-3 sm:flex-row lg:flex-col xl:flex-row"><a data-umami-event="cta-erstgespraech" href="/kontakt" class="btn-primary">Erstgespräch vereinbaren <svg class="h-4 w-4" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="/referenzen" class="btn-secondary">Alle Referenzen</a></div></div>
+  <section class="case-end px-4 sm:px-6" aria-label="Weiterführende Links">
+    <div class="mx-auto max-w-screen-xl">
+      <div class="home-work-contact home-dark">
+        <div>
+          <h2>Dein Projekt könnte das nächste sein.</h2>
+          <p>Erzähl uns von deiner Idee. Im kostenlosen Erstgespräch klären wir, was sich für dein Team verbessern lässt.</p>
+        </div>
+        <a href="/kontakt" class="btn-primary" data-umami-event="cta-erstgespraech">Projekt besprechen <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="case-end-links">
+        <a href="/referenzen" class="home-text-link"><span aria-hidden="true">←</span> Alle Referenzen</a>
+        <a href="/referenzen/dieschokoecke" class="home-text-link">Nächste Referenz: dieschokoecke <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
   </section>
 </main>
 <div id="footer-placeholder"></div>
-<script>
-  // Inhalte einmalig einblenden, sobald sie ins Bild scrollen
-  if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    document.documentElement.classList.add('js-reveal');
-    const io = new IntersectionObserver(entries => entries.forEach(e => {
-      if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); }
-    }), { threshold: 0.15, rootMargin: '0px 0px -8% 0px' });
-    document.querySelectorAll('[data-reveal]').forEach(el => io.observe(el));
-  }
-</script>
 </body>
 </html>
