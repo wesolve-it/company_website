@@ -94,16 +94,21 @@
         <div class="home-logo-track">
           <ul class="home-client-logos">
             <li><a href="/referenzen/fc-nuernberg"><img src="./assets/img/FCN_Logo.webp" width="567" height="567" alt="1. FC Nürnberg" class="home-client-logo-crest"></a></li>
-            <li><a href="/referenzen/sportweber-schnaittach"><img src="./assets/img/SportWeberLogoNeuklein.3caf40cb13b6ecc9538a.webp" width="1280" height="720" alt="Sport-Weber" class="home-client-logo-sport"></a></li>
-            <li><a href="/referenzen/lubu-restaurant"><img src="./assets/img/1597497751.png" width="1119" height="281" alt="LU-BU Asian Food" class="home-client-logo-light"></a></li>
-            <li><a href="/referenzen/rootd"><img src="./assets/img/rootd-logo.webp" width="3673" height="1168" alt="ROOTD."></a></li>
+            <li><a href="/referenzen/sportweber-schnaittach"><img src="./assets/img/kundenlogos/SportWeberLogoNeuklein.png" width="360" height="202" alt="Sport-Weber" class="home-client-logo-sport"></a></li>
+            <li><a href="/referenzen/lubu-restaurant"><img src="./assets/img/kundenlogos/1597497751.png" width="360" height="90" alt="LU-BU Asian Food" class="home-client-logo-light"></a></li>
+            <li><a href="/referenzen/rootd"><img src="./assets/img/kundenlogos/rootd-logo.png" width="360" height="114" alt="ROOTD."></a></li>
             <li><a href="/referenzen/alfafood"><img src="./assets/img/Alfafood_Logo.png" width="450" height="500" alt="Alfafood" class="home-client-logo-crest"></a></li>
-            <li><a href="/referenzen/rooted-merch"><img src="./assets/img/rooted-merch-logo.webp" width="1600" height="672" alt="ROOTED Merch"></a></li>
-            <li><a href="/referenzen/dieschokoecke"><img src="./assets/img/FullLogo_Transparent_NoBuffer.1a93282d335c16541fb0.webp" width="1280" height="630" alt="dieschokoecke"></a></li>
+            <li><a href="/referenzen/rooted-merch"><img src="./assets/img/kundenlogos/rooted-merch-logo.png" width="360" height="151" alt="ROOTED Merch"></a></li>
+            <li><a href="/referenzen/dieschokoecke"><img src="./assets/img/kundenlogos/FullLogo_Transparent_NoBuffer.png" width="360" height="177" alt="dieschokoecke"></a></li>
             <li><a href="/referenzen/tobias-herrmann"><img src="./assets/img/377-5023880.png" width="377" height="101" alt="Tobias Herrmann" class="home-client-logo-gold"></a></li>
           </ul>
         </div>
       </div>
+      <button type="button" class="home-logo-toggle" aria-controls="client-logo-strip" aria-pressed="false" hidden>
+        <svg class="home-logo-toggle-pause" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M7 4.5v11M13 4.5v11" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <svg class="home-logo-toggle-play" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M7 4.5v11l8.5-5.5z" fill="currentColor"/></svg>
+        <span>Laufband anhalten</span>
+      </button>
       <ul class="home-trust-metrics" aria-label="Erfahrung, Kunden und Projekte in Zahlen">
         <li><strong>6+</strong><span>Jahre Erfahrung</span></li>
         <li><strong>8+</strong><span>Kunden betreut</span></li>
@@ -339,6 +344,18 @@
   logoTrack.append(logoCopy);
   logoTrack.style.setProperty('--logo-duration', `${logoList.children.length * 4}s`);
   logoStrip.classList.add('home-logo-animated');
+
+  // Laufband anhalten/fortsetzen (WCAG 2.2.2), nur sichtbar, wenn es sich bewegt
+  const logoToggle = document.querySelector('.home-logo-toggle');
+  if (matchMedia('(prefers-reduced-motion: no-preference)').matches) {
+    logoToggle.hidden = false;
+    logoToggle.addEventListener('click', () => {
+      const paused = logoToggle.getAttribute('aria-pressed') !== 'true';
+      logoToggle.setAttribute('aria-pressed', String(paused));
+      logoStrip.classList.toggle('is-paused', paused);
+      logoToggle.querySelector('span').textContent = paused ? 'Laufband fortsetzen' : 'Laufband anhalten';
+    });
+  }
 
   // Karten und Zeitleiste einmalig einblenden, sobald sie ins Bild scrollen
   if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
