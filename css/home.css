@@ -1699,3 +1699,41 @@
 #cc-main .cc__link,
 #cc-main a { text-decoration-color: var(--coral); text-decoration-thickness: 2px; text-underline-offset: 3px; }
 #cc-main :focus-visible { outline: 2px solid var(--coral); outline-offset: 2px; }
+
+/* Fallstudie: Problem, Vorher/Nachher, Mehrwert */
+.case-problem p { color: var(--muted); font-size: 1.0625rem; line-height: 1.7; }
+.case-problem p + p { margin-top: 1rem; }
+
+.case-compare { margin-top: clamp(1.75rem, 4vw, 2.75rem); border-top: 1px solid var(--line); }
+
+.case-compare-row {
+  display: grid;
+  gap: .75rem;
+  padding-block: 1.5rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.case-compare-row h3 { color: var(--heading); font-size: 1.125rem; font-weight: 700; line-height: 1.3; }
+
+.case-compare-row p { font-size: 1rem; line-height: 1.6; }
+.case-compare-row p span { display: block; margin-bottom: .2rem; font-size: .8125rem; font-weight: 650; }
+.case-compare-before { color: var(--muted); }
+.case-compare-before span { color: var(--muted); }
+.case-compare-after { color: var(--heading); font-weight: 550; }
+.case-compare-after span { color: var(--accent-text); }
+
+@media (min-width: 860px) {
+  .case-compare-row { grid-template-columns: 14rem 1fr 1fr; gap: 2.5rem; align-items: start; }
+  .case-compare-after { padding-left: 1.25rem; border-left: 2px solid var(--coral); }
+}
+
+.case-values {
+  display: grid;
+  gap: 1.5rem 2.5rem;
+  margin-top: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+@media (min-width: 760px) { .case-values { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+
+.case-values strong { display: block; color: var(--heading); font-size: 1.25rem; font-weight: 700; letter-spacing: -.02em; line-height: 1.3; }
+.case-values p { margin-top: .5rem; color: var(--muted); line-height: 1.6; }
