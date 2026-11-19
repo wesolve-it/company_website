@@ -19,6 +19,7 @@
   --panel-glow: #45537b;
   --panel-line: #465472;
   --panel-line-strong: #5c698a;
+  --device: #0d1210;
   background: var(--paper);
   color: var(--heading);
 }
@@ -456,7 +457,7 @@
   aspect-ratio: 1;
   place-items: center;
   border: 1px solid var(--line);
-  border-radius: .75rem;
+  border-radius: .625rem;
   background: var(--paper);
   color: var(--accent-text);
 }
@@ -469,7 +470,7 @@
   font-size: clamp(1.0625rem, 1.8vw, 1.35rem);
   font-weight: 700;
   letter-spacing: -.025em;
-  line-height: 1.2;
+  line-height: 1.3;
   overflow-wrap: anywhere;
 }
 
@@ -1031,7 +1032,7 @@
 }
 
 .references-tags span {
-  border-radius: .375rem;
+  border-radius: .5rem;
   background: var(--warm);
   padding: .1875rem .5rem;
   color: var(--muted);
@@ -1301,7 +1302,7 @@
 .services-offer-examples {
   padding: clamp(.875rem, 2.5vw, 1.5rem);
   border: 1px solid var(--line);
-  border-radius: .875rem;
+  border-radius: 1rem;
   background: var(--paper);
 }
 
@@ -1366,7 +1367,7 @@
   gap: .75rem;
   padding: .625rem .75rem;
   border: 1px solid var(--line);
-  border-radius: .875rem;
+  border-radius: 1rem;
   background: var(--surface);
   overflow-wrap: anywhere;
 }
@@ -1498,7 +1499,7 @@
 .case-browser-frame {
   overflow: hidden;
   border: 1px solid var(--panel-line-strong);
-  border-radius: .75rem;
+  border-radius: .625rem;
   background: var(--ink);
 }
 
@@ -1518,7 +1519,7 @@
 .case-browser-bar span:nth-child(2) { background: var(--orange); }
 .case-browser-bar span:nth-child(3) { background: #b9c5e6; }
 .case-browser-frame img { width: 100%; height: auto; }
-.case-browser figcaption { margin-top: .75rem; color: #e2e6f0; font-size: .8125rem; }
+.case-browser figcaption { margin-top: .75rem; color: #c6cddd; font-size: .8125rem; }
 
 .service-detail-benefit { border-color: var(--line); }
 .search-service-section { scroll-margin-top: 6rem; }

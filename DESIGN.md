@@ -17,6 +17,13 @@ colors:
   line: "#eaddd7"
   muted: "#526079"
   hero-glow: "#ffebe2"
+  night-glow: "#382d48"
+  node-text: "#ffbf9a"
+  panel-glow: "#45537b"
+  panel-line: "#465472"
+  panel-line-strong: "#5c698a"
+  device: "#0d1210"
+  whatsapp: "#18764a"
   dark-heading: "#fff9f5"
   dark-accent-text: "#ff9f92"
   dark-muted: "#c6cddd"
@@ -62,6 +69,7 @@ rounded:
   md: "0.625rem"
   lg: "1rem"
   xl: "1.125rem"
+  frame: "1.25rem"
   pill: "999px"
 spacing:
   gutter: "1rem"
@@ -193,7 +201,7 @@ Mostly flat with tonal layering: depth comes from paper → warm → surface →
 
 ## Shapes
 
-Soft, consistent rounding: small controls at 0.5–0.625rem, cards and bands at 1.125rem, logo strip and media frames around 1–1.25rem, tags as pills. Circles are reserved for step numbers, orbit dots and icon badges. The orbit ellipses (1px Blush Line rings) and the code bracket are the recurring brand geometry.
+Soft, consistent rounding: small controls at 0.5–0.625rem, cards and bands at 1.125rem, logo strip at 1rem, media and device frames at 1.25rem (`frame`), tags as pills. Circles are reserved for step numbers, orbit dots and icon badges. The orbit ellipses (1px Blush Line rings) and the code bracket are the recurring brand geometry.
 
 ## Components
 

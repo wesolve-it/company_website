@@ -523,10 +523,6 @@ video {
   display: none;
 }
 
-h1 {
-  font-family: "Barlow Condensed", sans-serif;
-}
-
 body {
   font-family: Montserrat, sans-serif;
 }
@@ -748,7 +744,7 @@ p, blockquote, li {
   position: relative;
   margin-left: auto;
   margin-right: auto;
-  border-radius: 1.6rem;
+  border-radius: 1.25rem;
   --tw-bg-opacity: 1;
   background-color: rgb(13 18 16 / var(--tw-bg-opacity, 1));
   padding: 2.4%;
@@ -763,7 +759,7 @@ p, blockquote, li {
 .device-screen {
   display: block;
   width: 100%;
-  border-radius: 0.8rem;
+  border-radius: 0.625rem;
 }
 .phone-pair {
   margin-left: auto;
@@ -1620,8 +1616,6 @@ button svg[x-show="open"] {
 .js-reveal [data-reveal].stats { opacity: 1; transform: none; }
 @media (prefers-reduced-motion: reduce) { .ref-shot, .ref-more svg { transition: none !important; } }
 
-.guide-link svg { transition: transform .25s ease; }
-.guide-link:hover svg { transform: translateY(3px) rotate(90deg); }
 
 /* Referenz-Detail: Schritte der Geschichte nacheinander einblenden */
 .js-reveal [data-reveal].case-story { opacity: 1; transform: none; }
@@ -1800,7 +1794,6 @@ button svg[x-show="open"] {
 @keyframes draw { to { stroke-dashoffset: 0; } }
 @media (prefers-reduced-motion: reduce) { .success-ring, .success-tick { animation: none; stroke-dashoffset: 0; } }
 
-.guide-link.is-page:hover svg { transform: translateX(4px); }
 
 /* Linien-Illustrationen (Leistungsseiten): Farben über Klassen, damit Hell/Dunkel stimmt */
 .ill {
