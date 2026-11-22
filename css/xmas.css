@@ -382,3 +382,45 @@
 @media (max-width: 640px) {
   .xmas-garland span:nth-of-type(2n) { display: none; }
 }
+
+/* Schneewehen an den Abschnittsgrenzen */
+.home-page .home-hero, .home-page .home-dark { position: relative; }
+.xmas-drift {
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  height: clamp(1.25rem, 3vw, 2.5rem);
+  fill: var(--xmas-drift, #f4f6fb);
+  pointer-events: none;
+  z-index: 1;
+}
+.home-page .home-hero .xmas-drift { --xmas-drift: #fffcf9; }
+.home-page .home-dark .xmas-drift { --xmas-drift: #fffcf9; }
+html.dark .home-page .xmas-drift { --xmas-drift: #dfe5f2; opacity: .9; }
+
+/* Projekt-Karte als Geschenk: Band über die Ecke, Schleife obendrauf */
+.home-page .home-work-contact { position: relative; overflow: hidden; }
+.xmas-ribbon {
+  position: absolute;
+  top: 1.9rem;
+  right: -3.25rem;
+  width: 13rem;
+  height: 1.35rem;
+  background: #f15256;
+  box-shadow: inset 0 3px 0 #ff6b6e, inset 0 -3px 0 #c43c44;
+  transform: rotate(45deg);
+  pointer-events: none;
+}
+.xmas-bow {
+  position: absolute;
+  top: .35rem;
+  right: .35rem;
+  width: 4.75rem;
+  height: auto;
+  transform: rotate(45deg);
+  pointer-events: none;
+}
+@media (max-width: 640px) {
+  .home-page .home-work-contact > div { padding-right: 3.5rem; }
+}
