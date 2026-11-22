@@ -1,0 +1,294 @@
+/* Weihnachtszeit – im Januar diese Datei und die markierten Stellen in index.html entfernen
+   (und die Einträge pulsing-dot / dark-glow in .impeccable/config.json). */
+
+/* Winterabend: Hero in beiden Farbmodi dunkel, warmes Licht von unten */
+.home-page .home-hero {
+  --paper: #141c33;
+  --heading: #fff9f5;
+  --accent-text: #ffb08f;
+  --muted: #cdd3e3;
+  --surface: #222c4a;
+  --warm: #1c2541;
+  --line: #3a4566;
+  background:
+    radial-gradient(ellipse 70% 45% at 50% 108%, #7a3f3a 0%, #3a2a44 45%, transparent 100%),
+    linear-gradient(180deg, #0f1730 0%, #18213d 100%);
+  color: var(--heading);
+}
+
+/* Die transparente Navigation liegt auch im Light Mode über dem dunklen Winter-Hero. */
+.home-page [data-nav-scrolled="false"] .nav-bar {
+  --heading: #fff9f5;
+  --accent-text: #ffb08f;
+  --warm: #ffffff14;
+  --line: #ffffff40;
+}
+
+.home-page [data-nav-scrolled="false"] .nav-logo { filter: brightness(0) invert(1); }
+
+.home-page [data-nav-scrolled="false"] .nav-bar .nav-cta {
+  background: #ff9f8d;
+  color: #141c33;
+}
+
+.home-page [data-nav-scrolled="false"] .nav-bar .nav-cta:hover { background: #ffc0aa; }
+
+.home-page .home-hero .btn-primary { background: #ff9f8d; color: #141c33; }
+.home-page .home-hero .btn-primary:hover { background: #ffc0aa; }
+.home-page .home-hero .home-text-link:hover { color: #ffd2b8; }
+.home-page .home-hero :focus-visible { outline-color: #ff9f8d; }
+.home-page .home-hero .home-orbit-dot { box-shadow: 0 0 0 5px #141c33; }
+
+/* Schneekappen auf den Illustrationen */
+.xmas-snowcap { fill: #f4f6fb; }
+
+/* Stern statt Codewinkel */
+.home-page .home-hero-mark {
+  border-color: #ff9b5866;
+  background: #222c4a;
+  box-shadow: 0 0 0 6px #ff9b5814, 0 0 28px 4px #ff9b5840;
+}
+.home-hero-mark img { display: none; }
+.xmas-hero-star { width: 2.4rem; height: 2.4rem; color: #fff1e4; }
+
+/* Gruß unter den Buttons */
+.xmas-greeting {
+  margin: 1.25rem auto 0;
+  color: #ffd2b8;
+  font-size: .95rem;
+}
+
+/* Lichterkette auf der inneren Umlaufbahn */
+.home-page .home-orbit-inner { border-color: #5a6588; }
+.xmas-lights { position: absolute; inset: 0; }
+.xmas-lights span {
+  position: absolute;
+  top: var(--y);
+  left: var(--x);
+  width: .7rem;
+  height: .95rem;
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  transform: translate(-50%, -20%);
+  background: #ffe0b0;
+  opacity: .6;
+  box-shadow: 0 0 10px 2px #ffd9a866;
+  animation: xmas-twinkle 4.5s ease-in-out infinite;
+  animation-delay: calc(var(--i) * -.75s);
+}
+.xmas-lights span::before {
+  content: "";
+  position: absolute;
+  top: -.22rem;
+  left: 50%;
+  width: .32rem;
+  height: .3rem;
+  transform: translateX(-50%);
+  border-radius: 1px;
+  background: #5a6588;
+}
+.xmas-lights span:nth-child(3n+1) { background: #ff6b6e; box-shadow: 0 0 12px 3px #f1525666; }
+.xmas-lights span:nth-child(3n+2) { background: #ffab70; box-shadow: 0 0 12px 3px #ff9b5866; }
+
+@keyframes xmas-twinkle {
+  0%, 100% { opacity: 1; }
+  50% { opacity: .45; }
+}
+
+/* Wenige langsam fallende Lichtpunkte */
+.xmas-snow { position: absolute; inset: 0; z-index: -1; overflow: hidden; pointer-events: none; }
+.xmas-snow span {
+  position: absolute;
+  top: -2%;
+  left: var(--x);
+  width: var(--s);
+  height: var(--s);
+  border-radius: 50%;
+  background: #f4f6fb;
+  opacity: .55;
+  animation: xmas-fall var(--d) linear infinite;
+  animation-delay: var(--t);
+}
+@keyframes xmas-fall {
+  to { transform: translate(2.5rem, 105vh); }
+}
+
+/* Erreichbarkeit im Kontaktbereich */
+.xmas-note {
+  display: flex;
+  align-items: flex-start;
+  gap: .75rem;
+  max-width: 36rem;
+  margin-bottom: 1.75rem;
+  color: #e2e6f0;
+  font-size: .95rem;
+  line-height: 1.55;
+}
+.xmas-star {
+  flex: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-top: .05rem;
+  color: #ffbf9a;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .xmas-lights span { animation: none; }
+  .xmas-snow span { animation: none; top: calc(var(--s) * 13%); }
+}
+
+/* Auf schmalen Bildschirmen liegt die Umlaufbahn hinter dem Text – dort nur Stern und Lichtpunkte */
+@media (max-width: 767px) {
+  .xmas-lights { display: none; }
+}
+
+/* Weihnachts-Modal */
+.xmas-modal {
+  width: min(28rem, calc(100% - 2rem));
+  max-height: calc(100dvh - 2rem);
+  margin: auto;
+  padding: 2.25rem 1.75rem 1.75rem;
+  border: 1px solid #3a4566;
+  border-radius: 1.5rem;
+  background:
+    radial-gradient(ellipse 90% 55% at 50% 115%, #5a3238 0%, transparent 100%),
+    #141c33;
+  color: #fff9f5;
+  text-align: center;
+  box-shadow: 0 24px 60px #0a0f1f80;
+}
+.xmas-modal[open] { animation: xmas-modal-in .35s ease-out; }
+.xmas-modal::backdrop { background: #0a0f1fb3; }
+
+@keyframes xmas-modal-in {
+  from { opacity: 0; transform: translateY(12px) scale(.98); }
+}
+
+.xmas-modal-close-form { position: absolute; top: .75rem; right: .75rem; }
+.xmas-modal-close {
+  display: grid;
+  width: 44px;
+  height: 44px;
+  place-items: center;
+  border-radius: 50%;
+  color: #cdd3e3;
+}
+.xmas-modal-close:hover { color: #fff; background: #ffffff14; }
+.xmas-modal-close svg { width: 1.1rem; height: 1.1rem; }
+
+.xmas-modal-star { width: 3rem; height: 3rem; margin: 0 auto 1rem; color: #fff1e4; }
+
+.xmas-modal h2 {
+  font-size: clamp(1.75rem, 5vw, 2.25rem);
+  font-weight: 750;
+  letter-spacing: -.04em;
+  line-height: 1.1;
+}
+
+.xmas-modal-text { margin-top: .75rem; color: #cdd3e3; line-height: 1.6; }
+
+.xmas-modal-countdown {
+  margin-top: 1.25rem;
+  color: #ffd2b8;
+  font-weight: 650;
+}
+
+.xmas-modal-times {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: .75rem;
+  margin-top: 1rem;
+  text-align: left;
+}
+.xmas-modal-times div {
+  padding: .75rem 1rem;
+  border: 1px solid #3a4566;
+  border-radius: .875rem;
+  background: #1c2541;
+}
+.xmas-modal-times dt { color: #cdd3e3; font-size: .85rem; }
+.xmas-modal-times dd { margin-top: .2rem; font-weight: 650; }
+
+.xmas-modal-hint { margin-top: 1rem; color: #cdd3e3; font-size: .9rem; line-height: 1.5; }
+
+.xmas-modal-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .25rem;
+  margin-top: 1.5rem;
+}
+.home-page .xmas-modal .btn-primary { background: #ff9f8d; color: #141c33; }
+.home-page .xmas-modal .btn-primary:hover { background: #ffc0aa; }
+.home-page .xmas-modal .home-text-link { color: #fff9f5; }
+.home-page .xmas-modal :focus-visible { outline-color: #ff9f8d; }
+
+@media (max-width: 400px) {
+  .xmas-modal-times { grid-template-columns: 1fr; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .xmas-modal[open] { animation: none; }
+}
+
+/* Fliegender Schlitten oben im Modal */
+.xmas-modal { overflow-x: clip; padding-top: 4.25rem; }
+.xmas-sleigh-lane {
+  position: absolute;
+  top: .9rem;
+  left: 0;
+  right: 0;
+  height: 3.25rem;
+  pointer-events: none;
+}
+.xmas-sleigh {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10.5rem;
+  height: auto;
+  transform: translateX(-11rem);
+}
+.xmas-modal[open] .xmas-sleigh {
+  animation:
+    xmas-fly 9s cubic-bezier(.45, .05, .55, .95) .6s infinite,
+    xmas-bob 1.4s ease-in-out infinite alternate;
+}
+@keyframes xmas-fly {
+  0% { left: 0; transform: translateX(-11rem); }
+  55%, 100% { left: 100%; transform: translateX(.5rem); }
+}
+@keyframes xmas-bob {
+  from { top: 0; }
+  to { top: .45rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .xmas-modal[open] .xmas-sleigh { animation: none; left: 1.25rem; transform: none; }
+}
+
+/* Leichter Schneefall im Modal (hinter dem Inhalt) */
+.xmas-modal-snow {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  border-radius: inherit;
+  pointer-events: none;
+}
+.xmas-modal-snow span {
+  position: absolute;
+  top: -1rem;
+  left: var(--x);
+  width: var(--s);
+  height: var(--s);
+  border-radius: 50%;
+  background: #f4f6fb;
+  opacity: var(--o);
+  animation: xmas-modal-snow var(--d) linear infinite;
+  animation-delay: var(--t);
+}
+@keyframes xmas-modal-snow {
+  to { transform: translate(1.5rem, 48rem); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .xmas-modal-snow { display: none; }
+}
