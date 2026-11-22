@@ -292,3 +292,93 @@
 @media (prefers-reduced-motion: reduce) {
   .xmas-modal-snow { display: none; }
 }
+
+/* ---- Unterhalb des Heros ---- */
+
+/* Stern frei stehend, ohne Kasten dahinter */
+.home-page .home-hero-mark { border: 0; background: none; box-shadow: none; }
+.xmas-hero-star { width: clamp(2.75rem, 5vw, 3.5rem); height: auto; }
+
+/* Dunkler Ablauf-Abschnitt: Lichterkette oben, leiser Schneefall */
+.home-page .home-dark { position: relative; isolation: isolate; padding-top: clamp(6.5rem, 11vw, 8.5rem); }
+.xmas-garland {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: clamp(2.5rem, 5vw, 4rem);
+  pointer-events: none;
+}
+.xmas-garland svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+.xmas-garland path { fill: none; stroke: #5a6588; stroke-width: 1.5; vector-effect: non-scaling-stroke; }
+.xmas-garland span {
+  position: absolute;
+  top: var(--y);
+  left: var(--x);
+  width: .7rem;
+  height: .95rem;
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  transform: translate(-50%, -10%);
+  background: #ffe0b0;
+  animation: xmas-twinkle 4.5s ease-in-out infinite;
+  animation-delay: calc(var(--i) * -.6s);
+}
+.xmas-garland span::before {
+  content: "";
+  position: absolute;
+  top: -.22rem;
+  left: 50%;
+  width: .32rem;
+  height: .3rem;
+  transform: translateX(-50%);
+  border-radius: 1px;
+  background: #5a6588;
+}
+.xmas-garland span:nth-child(3n) { background: #ff6b6e; }
+.xmas-garland span:nth-child(3n+1) { background: #ffab70; }
+.home-dark .xmas-snow span { opacity: .35; }
+
+/* Ablauf-Schritte als Christbaumkugeln */
+.home-page .home-dark .timeline-node { overflow: visible; }
+.home-page .home-dark .timeline-node::before {
+  content: "";
+  position: absolute;
+  top: -.4rem;
+  left: 50%;
+  width: .6rem;
+  height: .38rem;
+  transform: translateX(-50%);
+  border-radius: 2px 2px 0 0;
+  background: #c9a06a;
+}
+.home-page .home-dark .timeline-node::after {
+  content: "";
+  position: absolute;
+  top: -.75rem;
+  left: 50%;
+  width: .4rem;
+  height: .4rem;
+  transform: translateX(-50%);
+  border: 1.5px solid #c9a06a;
+  border-radius: 50%;
+}
+
+/* Schneekappe auf der Quick-Check-Karte */
+.home-page .home-quickcheck { position: relative; }
+.xmas-card-cap {
+  position: absolute;
+  top: -.55rem;
+  left: 1.5rem;
+  right: 1.5rem;
+  width: calc(100% - 3rem);
+  height: .75rem;
+  fill: #f4f6fb;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .xmas-garland span { animation: none; }
+}
+
+@media (max-width: 640px) {
+  .xmas-garland span:nth-of-type(2n) { display: none; }
+}
