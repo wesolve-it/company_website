@@ -395,8 +395,8 @@
   pointer-events: none;
   z-index: 1;
 }
-.home-page .home-hero .xmas-drift { --xmas-drift: #fffcf9; }
-.home-page .home-dark .xmas-drift { --xmas-drift: #fffcf9; }
+.home-page .home-hero .xmas-drift,
+.home-page .home-dark .xmas-drift { --xmas-drift: #f7f9fc; }
 html.dark .home-page .xmas-drift { --xmas-drift: #dfe5f2; opacity: .9; }
 
 /* Projekt-Karte als Geschenk: Band über die Ecke, Schleife obendrauf */
@@ -423,4 +423,15 @@ html.dark .home-page .xmas-drift { --xmas-drift: #dfe5f2; opacity: .9; }
 }
 @media (max-width: 640px) {
   .home-page .home-work-contact > div { padding-right: 3.5rem; }
+}
+
+/* Winterpalette für die hellen Abschnitte (nur Light Mode):
+   kühles Schnee-Weiß statt warmem Papier, tieferes Weihnachtsrot für Akzenttext.
+   Kontrast: #a3202c auf #f7f9fc 7,1:1, auf #edf1f7 6,6:1. */
+html:not(.dark) .home-page {
+  --paper: #f7f9fc;
+  --warm: #edf1f7;
+  --line: #dbe2ee;
+  --hero-glow: #e4ebf6;
+  --accent-text: #a3202c;
 }
