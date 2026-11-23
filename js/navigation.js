@@ -40,3 +40,19 @@ document.addEventListener("DOMContentLoaded", function () {
   script.src = "/js/cookie-consent.js";
   document.head.appendChild(script);
 });
+
+// PostHog is configured at build time from environment variables and initializes
+// after the consent manager has decided whether analytics are permitted.
+document.addEventListener("DOMContentLoaded", function () {
+  if (document.getElementById("posthog-config-loader")) return;
+
+  var configScript = document.createElement("script");
+  configScript.id = "posthog-config-loader";
+  configScript.src = "/js/posthog-config.js";
+  configScript.onload = configScript.onerror = function () {
+    var posthogScript = document.createElement("script");
+    posthogScript.src = "/js/posthog.js";
+    document.head.appendChild(posthogScript);
+  };
+  document.head.appendChild(configScript);
+});

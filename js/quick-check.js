@@ -72,6 +72,13 @@
       `Fallstudie: https://wesolve-it.com${recommendation.caseUrl}`,
     ].join('\n');
 
+    window.posthog?.capture('quick_check_completed', {
+      process_type: process.value,
+    });
+    window.posthog?.logger?.info('quick_check_completed', {
+      process_type: process.value,
+    });
+
     result.hidden = false;
     resultTitle.focus({ preventScroll: true });
     result.scrollIntoView({ block: 'start' });
@@ -83,6 +90,9 @@
   });
 
   downloadButton.addEventListener('click', () => {
+    window.posthog?.capture('quick_check_result_downloaded');
+    window.posthog?.logger?.info('quick_check_result_downloaded');
+
     const file = new Blob([summary], { type: 'text/plain;charset=utf-8' });
     const url = URL.createObjectURL(file);
     const link = document.createElement('a');

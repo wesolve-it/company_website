@@ -40,9 +40,9 @@
         <p class="contact-intro">Das Erstgespräch ist kostenlos und unverbindlich. Wir melden uns in der Regel innerhalb von 24 Stunden.</p>
 
         <ul class="contact-channels">
-          <li><a data-umami-event="whatsapp-klick" href="https://wa.me/4915202721146" target="_blank" rel="noopener" class="contact-method"><span class="contact-method-icon contact-method-whatsapp"><img width="360" height="362" src="./assets/img/whatsapp.png" alt="" class="h-5 w-5 brightness-0 invert"></span><span><span class="block font-semibold">WhatsApp</span><span class="block text-sm home-muted">Am schnellsten – schreib einfach los</span></span><svg class="h-4 w-4" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
-          <li><a data-umami-event="kontakt-telefon" href="tel:+4915202721146" class="contact-method"><span class="contact-method-icon"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1 1A16 16 0 0 1 4 5a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></span><span><span class="block font-semibold">0152 02721146</span><span class="block text-sm home-muted">Anrufen</span></span><svg class="h-4 w-4" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
-          <li><a data-umami-event="kontakt-mail" href="mailto:info@wesolve-it.com" class="contact-method"><span class="contact-method-icon"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.7"/><path d="m4 7 8 6 8-6" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></span><span><span class="block font-semibold">info@wesolve-it.com</span><span class="block text-sm home-muted">E-Mail schreiben</span></span><svg class="h-4 w-4" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+          <li><a data-umami-event="whatsapp-klick" data-contact-channel="whatsapp" href="https://wa.me/4915202721146" target="_blank" rel="noopener" class="contact-method"><span class="contact-method-icon contact-method-whatsapp"><img width="360" height="362" src="./assets/img/whatsapp.png" alt="" class="h-5 w-5 brightness-0 invert"></span><span><span class="block font-semibold">WhatsApp</span><span class="block text-sm home-muted">Am schnellsten – schreib einfach los</span></span><svg class="h-4 w-4" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+          <li><a data-umami-event="kontakt-telefon" data-contact-channel="phone" href="tel:+4915202721146" class="contact-method"><span class="contact-method-icon"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1 1A16 16 0 0 1 4 5a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></span><span><span class="block font-semibold">0152 02721146</span><span class="block text-sm home-muted">Anrufen</span></span><svg class="h-4 w-4" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+          <li><a data-umami-event="kontakt-mail" data-contact-channel="email" href="mailto:info@wesolve-it.com" class="contact-method"><span class="contact-method-icon"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.7"/><path d="m4 7 8 6 8-6" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></span><span><span class="block font-semibold">info@wesolve-it.com</span><span class="block text-sm home-muted">E-Mail schreiben</span></span><svg class="h-4 w-4" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
         </ul>
       </div>
 
@@ -119,7 +119,19 @@
     const consent = document.getElementById('consent');
     const error = document.getElementById('error-message');
     if (!consent.checked) { event.preventDefault(); error.classList.remove('hidden'); consent.focus(); }
-    else { error.classList.add('hidden'); }
+    else {
+      error.classList.add('hidden');
+      window.posthog?.capture('contact_form_submitted');
+      window.posthog?.logger?.info('contact_form_submitted');
+    }
+  });
+
+  document.querySelectorAll('[data-contact-channel]').forEach(function (link) {
+    link.addEventListener('click', function () {
+      window.posthog?.capture('contact_channel_selected', {
+        channel: link.dataset.contactChannel,
+      });
+    });
   });
 </script>
 </body>
