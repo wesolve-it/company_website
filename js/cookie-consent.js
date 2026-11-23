@@ -30,10 +30,21 @@
     attributeFilter: ["class"],
   });
 
+  function updatePostHogConsent() {
+    if (CookieConsent.acceptedCategory("analytics")) {
+      if (window.posthog) window.posthog.opt_in_capturing();
+      document.dispatchEvent(new Event("posthog:consent-granted"));
+    } else if (window.posthog) {
+      window.posthog.opt_out_capturing();
+    }
+  }
+
   function init() {
     if (!window.CookieConsent) return;
 
     CookieConsent.run({
+      onConsent: updatePostHogConsent,
+      onChange: updatePostHogConsent,
       guiOptions: {
         consentModal: { layout: "box", position: "bottom left", flipButtons: false, equalWeightButtons: true },
         preferencesModal: { layout: "box", position: "right", flipButtons: false, equalWeightButtons: true },
@@ -53,11 +64,13 @@
               { name: /^MUID/ },    // Microsoft Clarity
               { name: /^ablyft/ },  // ABlyft
               { name: /^_ablyft/ }, // ABlyft
+              { name: /^ph_/ },     // PostHog
             ],
           },
           services: {
             clarity: { label: "Microsoft Clarity" },
             ablyft: { label: "ABlyft (A/B-Testing)" },
+            posthog: { label: "PostHog" },
           },
         },
       },
@@ -70,7 +83,7 @@
               title: "Wir verwenden Cookies",
               description:
                 "Wir setzen Cookies und ähnliche Technologien ein. Notwendige sind für den Betrieb der Website erforderlich. " +
-                "Optionale Analyse- und Optimierungstools (Microsoft Clarity, ABlyft) helfen uns, die Seite zu verbessern – " +
+                "Optionale Analyse- und Optimierungstools (Microsoft Clarity, ABlyft, PostHog) helfen uns, die Seite zu verbessern – " +
                 "sie werden ausschließlich mit deiner Einwilligung geladen. Details in unserer " +
                 '<a href="/datenschutz.html" class="cc__link">Datenschutzerklärung</a>.',
               acceptAllBtn: "Alle akzeptieren",
@@ -118,6 +131,10 @@
                       {
                         name: "ABlyft",
                         desc: "A/B-Testing zur Optimierung von Inhalten und Nutzererlebnis.",
+                      },
+                      {
+                        name: "PostHog",
+                        desc: "Analyse des Nutzerverhaltens und Session-Aufzeichnungen.",
                       },
                     ],
                   },
