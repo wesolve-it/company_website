@@ -72,7 +72,7 @@
   margin-inline: auto;
   max-width: 18ch;
   font-family: inherit;
-  font-size: clamp(2.125rem, 5.7vw, 5rem);
+  font-size: clamp(2.125rem, 4.6vw, 4.25rem);
   font-weight: 750;
   letter-spacing: -.058em;
   line-height: 1.04;
@@ -1075,9 +1075,12 @@
 
 .case-hero h1,
 .case-hero p { margin-inline: 0; }
-.case-hero h1 { text-wrap: initial; }
+/* Detail-Hero steht in einer halben Spalte neben dem Bild: kleinere Skala als die zentrierten Heros */
+.case-hero h1 { text-wrap: initial; font-size: clamp(2.125rem, 4.2vw, 3.75rem); }
 .case-back,
 .case-end-links .home-text-link { gap: .5rem; }
+/* Zurück-Link plus Branchen-Link: bündig umbrechen statt eingerückt */
+.case-back-row { display: flex; flex-wrap: wrap; column-gap: 1.5rem; }
 
 .case-hero-layout,
 .case-story-layout {
@@ -1119,7 +1122,7 @@
 }
 
 .case-facts dt { color: var(--muted); font-size: .8125rem; }
-.case-facts dd { margin-top: .25rem; font-weight: 650; overflow-wrap: anywhere; }
+.case-facts dd { margin-top: .25rem; font-weight: 650; hyphens: auto; overflow-wrap: anywhere; }
 
 .case-section { padding-block: clamp(3.25rem, 7vw, 6rem); }
 .case-story-layout h2 { margin-top: 0; }
@@ -1299,11 +1302,10 @@
 
 .services-offer .home-muted { max-width: 58ch; line-height: 1.6; }
 
+/* Beispiele als zweite Spalte der Karte, nur durch eine Linie getrennt (keine Karte in der Karte) */
 .services-offer-examples {
-  padding: clamp(.875rem, 2.5vw, 1.5rem);
-  border: 1px solid var(--line);
-  border-radius: 1rem;
-  background: var(--paper);
+  padding-top: clamp(1rem, 3vw, 1.5rem);
+  border-top: 1px solid var(--line);
 }
 
 .services-offer-examples h3 { font-weight: 700; }
@@ -1335,6 +1337,12 @@
 
 @media (min-width: 850px) {
   .services-offer { grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); }
+  .services-offer-examples {
+    padding-top: 0;
+    padding-left: clamp(1.5rem, 3vw, 2.5rem);
+    border-top: 0;
+    border-left: 1px solid var(--line);
+  }
 }
 
 .contact-hero {
@@ -1519,12 +1527,11 @@
 .case-browser-bar span:nth-child(2) { background: var(--orange); }
 .case-browser-bar span:nth-child(3) { background: #b9c5e6; }
 .case-browser-frame img { width: 100%; height: auto; }
-.case-browser figcaption { margin-top: .75rem; color: #c6cddd; font-size: .8125rem; }
+.case-browser figcaption { margin-top: .75rem; color: #c6cddd; font-size: .8125rem; text-wrap: balance; }
 
 .service-detail-benefit { border-color: var(--line); }
 .search-service-section { scroll-margin-top: 6rem; }
 .home-dark .service-detail-accent { color: var(--orange); }
-.service-detail-icon { width: 2.75rem; }
 .service-detail-included .service-detail-included-item { display: block; }
 .service-detail-faq .home-service { grid-template-columns: minmax(0, 1fr) auto; }
 .service-detail-faq .home-service-detail { margin-inline: var(--service-padding); }
@@ -1738,3 +1745,30 @@
 
 .case-values strong { display: block; color: var(--heading); font-size: 1.25rem; font-weight: 700; letter-spacing: -.02em; line-height: 1.3; }
 .case-values p { margin-top: .5rem; color: var(--muted); line-height: 1.6; }
+
+/* Über mich */
+.about-hero { display: grid; gap: 2.5rem; align-items: center; }
+@media (min-width: 1024px) { .about-hero { grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.75fr); gap: 4rem; } }
+.about-portrait { margin: 0; max-width: 26rem; }
+.about-portrait img,
+.about-portrait-placeholder { display: block; width: 100%; aspect-ratio: 4 / 5; border-radius: 1.25rem; object-fit: cover; }
+.about-portrait-placeholder {
+  display: grid; place-content: center; justify-items: center; gap: .75rem;
+  background: var(--warm); border: 1px dashed var(--line); color: var(--muted); font-size: .8125rem; font-weight: 650;
+}
+.about-portrait-placeholder svg { width: 4rem; height: 4rem; }
+.about-portrait figcaption { margin-top: .875rem; color: var(--muted); font-size: .875rem; }
+.about-prose { max-width: 65ch; color: var(--muted); font-size: clamp(1rem, 1.6vw, 1.2rem); line-height: 1.65; }
+.about-prose p + p { margin-top: 1.25rem; }
+.about-prose strong { color: var(--heading); font-weight: 650; }
+.about-prose a { color: var(--accent-text); text-decoration: underline; text-decoration-color: var(--coral); text-underline-offset: .2em; }
+.about-prose a:hover { color: var(--heading); }
+.about-todo { padding: 1rem 1.25rem; border: 1px dashed var(--coral); border-radius: .625rem; }
+.about-stack { margin: 0; border-top: 1px solid var(--line); }
+.about-stack-row { display: grid; gap: .75rem; padding: 1.25rem 0; border-bottom: 1px solid var(--line); }
+@media (min-width: 640px) { .about-stack-row { grid-template-columns: 12rem 1fr; align-items: baseline; gap: 2rem; } }
+.about-stack dt { color: var(--heading); font-weight: 650; }
+.about-stack dd { margin: 0; }
+.about-stack ul { display: flex; flex-wrap: wrap; gap: .5rem; list-style: none; margin: 0; padding: 0; }
+.about-stack li { padding: .375rem .875rem; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); color: var(--heading); font-size: .9375rem; line-height: 1.4; }
+.about-stack-cta { padding-top: 1.75rem; }

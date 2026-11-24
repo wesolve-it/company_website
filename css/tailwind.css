@@ -208,7 +208,7 @@ button svg[x-show="open"] {
 .js-reveal .timeline::before { transform: scaleY(0); transform-origin: top; transition: transform 1.3s cubic-bezier(.6,0,.3,1); }
 @media (min-width: 768px) { .js-reveal .timeline::before { transform: scaleX(0); transform-origin: left; } }
 .js-reveal .timeline.is-visible::before { transform: none; }
-.js-reveal .timeline .timeline-node { opacity: .25; transform: scale(.6); transition: opacity .4s ease, transform .5s cubic-bezier(.3,1.6,.5,1), box-shadow .6s ease; }
+.js-reveal .timeline .timeline-node { opacity: .25; transform: scale(.6); transition: opacity .4s ease, transform .5s cubic-bezier(.22,1,.36,1), box-shadow .6s ease; }
 .js-reveal .timeline .timeline-content { opacity: 0; transform: translateY(12px); transition: opacity .6s ease, transform .6s ease; }
 .js-reveal .timeline.is-visible .timeline-node { opacity: 1; transform: none; box-shadow: 0 0 0 6px rgba(54, 201, 154, .15); }
 .js-reveal .timeline.is-visible .timeline-content { opacity: 1; transform: none; }
@@ -273,7 +273,7 @@ button svg[x-show="open"] {
   .timeline-4::before { left: 12.5%; right: 12.5%; }
 }
 /* FAQ: Plus dreht sich zum Kreuz */
-.faq-icon svg { transition: transform .3s cubic-bezier(.3,1.4,.5,1); }
+.faq-icon svg { transition: transform .3s cubic-bezier(.22,1,.36,1); }
 .faq-icon.is-open svg { transform: rotate(45deg); }
 .faq-btn:focus-visible { outline: 2px solid theme('colors.wesolve-green.500'); outline-offset: 4px; border-radius: 4px; }
 
@@ -308,7 +308,7 @@ button svg[x-show="open"] {
 .dark .ill .ill-soft { fill: theme('colors.wesolve-green.800'); }
 .dark .ill .ill-accent { fill: theme('colors.wesolve-accent.700'); }
 /* Akzentflächen ploppen beim Einblenden kurz auf */
-.js-reveal .ill-wrap .ill-accent { transform-box: fill-box; transform-origin: center; transform: scale(.6); opacity: 0; transition: transform .5s cubic-bezier(.3,1.6,.5,1) .4s, opacity .3s ease .4s; }
+.js-reveal .ill-wrap .ill-accent { transform-box: fill-box; transform-origin: center; transform: scale(.6); opacity: 0; transition: transform .5s cubic-bezier(.22,1,.36,1) .4s, opacity .3s ease .4s; }
 .js-reveal .ill-wrap.is-visible .ill-accent { transform: none; opacity: 1; }
 @media (prefers-reduced-motion: reduce) { .js-reveal .ill-wrap .ill-accent { transform: none; opacity: 1; transition: none; } }
 
@@ -318,6 +318,6 @@ button svg[x-show="open"] {
 .ill.ill-on-dark .ill-paper { fill: theme('colors.wesolve-green.900'); }
 .ill.ill-on-dark .ill-soft { fill: theme('colors.wesolve-green.800'); }
 .ill.ill-on-dark .ill-accent { fill: theme('colors.wesolve-accent.700'); }
-.card-ill { transition: transform .4s cubic-bezier(.3,1.4,.5,1); transform-origin: top right; }
+.card-ill { transition: transform .4s cubic-bezier(.22,1,.36,1); transform-origin: top right; }
 .service-card:hover .card-ill { transform: rotate(-3deg) scale(1.05); }
 @media (prefers-reduced-motion: reduce) { .card-ill { transition: none; } }
