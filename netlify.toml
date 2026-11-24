@@ -1,0 +1,14 @@
+[build]
+  command = "npm run build && node scripts/configure-recaptcha.js"
+  publish = "."
+
+# Alte GEO-Seite wurde in die SEO-Seite integriert
+[[redirects]]
+  from = "/leistungen/geo"
+  to = "/leistungen/suchmaschinenoptimierung#geo"
+  status = 301
+
+[[redirects]]
+  from = "/leistungen/geo.html"
+  to = "/leistungen/suchmaschinenoptimierung#geo"
+  status = 301

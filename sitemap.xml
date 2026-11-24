@@ -17,12 +17,17 @@
   </url>
   <url>
     <loc>https://wesolve-it.com/leistungen/app-entwicklung</loc>
-    <lastmod>2026-07-07</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://wesolve-it.com/leistungen/suchmaschinenoptimierung</loc>
     <lastmod>2026-11-19</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://wesolve-it.com/leistungen/webapp-entwicklung</loc>
+    <lastmod>2026-11-24</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
@@ -46,13 +51,28 @@
     <priority>0.80</priority>
   </url>
   <url>
+    <loc>https://wesolve-it.com/branchen/sport-und-vereine</loc>
+    <lastmod>2026-11-24</lastmod>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://wesolve-it.com/branchen/gastronomie</loc>
+    <lastmod>2026-11-24</lastmod>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://wesolve-it.com/branchen/handel-und-verleih</loc>
+    <lastmod>2026-11-24</lastmod>
+    <priority>0.70</priority>
+  </url>
+  <url>
     <loc>https://wesolve-it.com/referenzen</loc>
     <lastmod>2026-07-07</lastmod>
     <priority>0.90</priority>
   </url>
   <url>
     <loc>https://wesolve-it.com/referenzen/fc-nuernberg</loc>
-    <lastmod>2026-07-07</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <priority>0.70</priority>
   </url>
   <url>
@@ -104,5 +124,10 @@
     <loc>https://wesolve-it.com/kontakt</loc>
     <lastmod>2026-07-07</lastmod>
     <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://wesolve-it.com/ueber-mich</loc>
+    <lastmod>2026-11-19</lastmod>
+    <priority>0.60</priority>
   </url>
 </urlset>

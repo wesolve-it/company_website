@@ -21,12 +21,16 @@
   <link rel="preload" href="/assets/fonts/onest-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link href="./dist/styles.css" rel="stylesheet">
   <link href="./css/home.css" rel="stylesheet">
+  <link id="cc-style" href="/js/vendor/cookieconsent-3.1.0/cookieconsent.css" rel="stylesheet">
   <script src="/js/theme.js"></script>
+  <script defer src="/js/vendor/cookieconsent-3.1.0/cookieconsent.umd.js"></script>
+  <script defer id="cookie-consent-loader" src="/js/cookie-consent.js"></script>
   <link rel="icon" type="image/svg+xml" href="./assets/img/wesolve-codewinkel.svg" />
   <script defer src="/js/vendor/alpine-3.14.8.min.js"></script>
   <script src="/js/navigation.js" defer></script>
+  <script src="/js/contact-recaptcha.js" defer></script>
 </head>
-<body class="brand-page overflow-x-hidden font-text antialiased">
+<body class="brand-page contact-page overflow-x-hidden font-text antialiased">
 <main>
   <section class="references-hero contact-hero px-4 sm:px-6" aria-labelledby="kontakt-title">
     <div class="home-orbits" aria-hidden="true">
@@ -77,7 +81,9 @@
             <label for="consent" class="text-sm leading-relaxed home-muted">Ich bin einverstanden, dass ihr meine Angaben speichert und mich per E-Mail kontaktiert. Mehr dazu in der <a href="/datenschutz.html" class="underline underline-offset-2">Datenschutzerklärung</a>.</label>
           </div>
           <p id="error-message" class="mt-3 hidden text-sm font-semibold text-red-600 dark:text-red-400" role="alert">Bitte bestätige die Einwilligung, damit wir deine Anfrage bearbeiten dürfen.</p>
+          <!-- recaptcha:start -->
           <div class="mt-6" data-netlify-recaptcha="true"></div>
+          <!-- recaptcha:end -->
           <button type="submit" class="btn-primary mt-6 w-full sm:w-auto">Anfrage senden <svg class="h-4 w-4" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
         </form>
       </div>
