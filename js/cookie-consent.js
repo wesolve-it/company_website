@@ -77,6 +77,7 @@
 
       language: {
         default: "de",
+        autoDetect: "document", // Sprache aus <html lang="…">: /en/-Seiten bekommen Englisch
         translations: {
           de: {
             consentModal: {
@@ -144,6 +145,67 @@
                   description:
                     'Bei Fragen zu unserer Cookie-Richtlinie kontaktiere uns gerne über das ' +
                     '<a href="/kontakt.html" class="cc__link">Kontaktformular</a>.',
+                },
+              ],
+            },
+          },
+          en: {
+            consentModal: {
+              title: "We use cookies",
+              description:
+                "We use cookies and similar technologies. Necessary ones are required for the website to work. " +
+                "Optional analytics and optimisation tools (Microsoft Clarity, ABlyft, PostHog) help us improve the site – " +
+                "they are only loaded with your consent. Details in our " +
+                '<a href="/datenschutz.html" hreflang="de" class="cc__link">privacy policy (in German)</a>.',
+              acceptAllBtn: "Accept all",
+              acceptNecessaryBtn: "Reject",
+              showPreferencesBtn: "Settings",
+              footer:
+                '<a href="/datenschutz.html" hreflang="de" class="cc__link">Privacy policy (DE)</a>' +
+                '<a href="/impressum.html" hreflang="de" class="cc__link">Legal notice (DE)</a>',
+            },
+            preferencesModal: {
+              title: "Cookie settings",
+              acceptAllBtn: "Accept all",
+              acceptNecessaryBtn: "Reject all",
+              savePreferencesBtn: "Save selection",
+              closeIconLabel: "Close",
+              serviceCounterLabel: "Service(s)",
+              sections: [
+                {
+                  title: "Your privacy",
+                  description:
+                    "Here you decide which categories you allow. You can withdraw or change your choice at any time " +
+                    'via the "Cookie settings" link in the footer.',
+                },
+                {
+                  title: "Necessary",
+                  description:
+                    "These cookies and technologies are required to run the website and to protect the contact form " +
+                    "(spam protection via reCAPTCHA). We also use Umami, a cookieless analytics tool that stores no " +
+                    "personal data. This category is always active.",
+                  linkedCategory: "necessary",
+                },
+                {
+                  title: "Analytics & optimisation",
+                  description:
+                    "These tools help us understand how visitors use the website so we can improve content and user " +
+                    "experience. They are only loaded after you consent.",
+                  linkedCategory: "analytics",
+                  cookieTable: {
+                    headers: { name: "Service", desc: "Purpose" },
+                    body: [
+                      { name: "Microsoft Clarity", desc: "Analysis of user behaviour (heatmaps, session recordings)." },
+                      { name: "ABlyft", desc: "A/B testing to optimise content and user experience." },
+                      { name: "PostHog", desc: "Analysis of user behaviour and session recordings." },
+                    ],
+                  },
+                },
+                {
+                  title: "More information",
+                  description:
+                    "If you have questions about our cookie policy, feel free to reach us via the " +
+                    '<a href="/en/contact" class="cc__link">contact form</a>.',
                 },
               ],
             },

@@ -4,13 +4,26 @@ function applyHomeBrand(container) {
   if (logo) logo.src = logo.dataset.homeLogo || "/assets/img/wesolve-tinte-koralle.svg";
 }
 
+// Englische Seiten liegen unter /en/ und nutzen eigene Partials.
+const partialBase = location.pathname.startsWith("/en/") || location.pathname === "/en" ? "/en" : "";
+
+// Sprachumschalter auf das Gegenstück der aktuellen Seite zeigen lassen
+// (aus <link rel="alternate" hreflang="..."> im <head>), sonst Startseite der anderen Sprache.
+function applyLanguageSwitch(container) {
+  const link = container.querySelector("[data-lang-switch]");
+  if (!link) return;
+  const alt = document.querySelector(`link[rel="alternate"][hreflang="${link.getAttribute("hreflang")}"]`);
+  if (alt) link.href = new URL(alt.href).pathname;
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   const nav = document.createElement("div");
-  fetch("/navigation.html")
+  fetch(partialBase + "/navigation.html")
   .then(response => response.text())
   .then(html => {
     nav.innerHTML = html;
     applyHomeBrand(nav);
+    applyLanguageSwitch(nav);
     if (document.body.classList.contains("brand-page")) {
       const currentPath = location.pathname.replace(/\.html$/, "").replace(/\/$/, "") || "/";
       nav.querySelectorAll("nav a").forEach(link => {
@@ -23,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 
 document.addEventListener("DOMContentLoaded", function() {
-  fetch("/footer.html")
+  fetch(partialBase + "/footer.html")
     .then(response => response.text())
     .then(data => {
       const footer = document.getElementById("footer-placeholder");
